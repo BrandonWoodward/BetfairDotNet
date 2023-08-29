@@ -22,7 +22,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BetfairDotNet.Tests", "test
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "demos", "demos", "{F93E30DB-3F14-4EFD-95F5-40500FBF0249}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BetfairDotNet.Demo.StreamingAPI", "demos\BetfairDotNet.Demo.StreamingAPI\BetfairDotNet.Demo.StreamingAPI.csproj", "{5B54366B-39AF-43BF-91B7-21867C4A8A76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BetfairDotNet.Demos", "demos\BetfairDotNet.Demo.StreamingAPI\BetfairDotNet.Demos.csproj", "{5B54366B-39AF-43BF-91B7-21867C4A8A76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

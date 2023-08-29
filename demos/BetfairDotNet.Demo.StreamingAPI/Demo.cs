@@ -1,5 +1,5 @@
 ﻿using BetfairDotNet;
-using BetfairDotNet.Demo.StreamingAPI;
+using BetfairDotNet.Demos;
 using BetfairDotNet.Enums.Betting;
 using BetfairDotNet.Enums.Streaming;
 using BetfairDotNet.Models.Betting;
@@ -53,7 +53,8 @@ var orderSubscription = new OrderSubscription(
 // Connect to the streaming service
 using var stream = await client.Streaming.CreateStream(
     session.SessionToken,
-    marketSubscription
+    marketSubscription,
+    orderSubscription
 );
 
 

@@ -3,7 +3,7 @@ using BetfairDotNet.Models.Betting;
 using BetfairDotNet.Models.Streaming;
 using Spectre.Console;
 
-namespace BetfairDotNet.Demo.StreamingAPI;
+namespace BetfairDotNet.Demos;
 
 
 internal static class Display {
@@ -22,13 +22,9 @@ internal static class Display {
             AnsiConsole.MarkupLine($"[bold]{mc.MarketStartTime.Value.ToShortTimeString()} {mc.Event?.Venue}: {mc.MarketName}[/]");
             AnsiConsole.WriteLine();
             AnsiConsole.WriteLine();
-            foreach(var runner in _runners) {
-                AnsiConsole.WriteLine(runner.RunnerName.PadRight(30) + "-".PadRight(30) + "-");
-            }
+            foreach(var runner in _runners) AnsiConsole.WriteLine(runner.RunnerName.PadRight(30) + "-".PadRight(30) + "-");
         }
-        else {
-            UpdateLiveTable(ms);
-        }
+        else UpdateLiveTable(ms);
     }
 
     private static void UpdateLiveTable(MarketSnapshot ms) {
@@ -64,10 +60,10 @@ internal static class Display {
             var backSizeDisplay = string.Join(" ", backData.Select(b => b.Size));
             var laySizeDisplay = string.Join(" ", layData.Select(l => l.Size));
 
-            AnsiConsole.Cursor.SetPosition(0, _tableStartRow + (i * 2));
+            AnsiConsole.Cursor.SetPosition(0, _tableStartRow + i * 2);
             AnsiConsole.MarkupLine($"{_runners[i].RunnerName,-30} {backDisplay}  {layDisplay}");
 
-            AnsiConsole.Cursor.SetPosition(0, _tableStartRow + (i * 2) + 1);
+            AnsiConsole.Cursor.SetPosition(0, _tableStartRow + i * 2 + 1);
             AnsiConsole.MarkupLine($"{"",-30} {backSizeDisplay}  {laySizeDisplay}");
         }
     }

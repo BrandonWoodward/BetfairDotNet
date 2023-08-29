@@ -5,5 +5,4 @@ internal static class AccountEndpoints {
     internal const string GetAccountFunds = "/AccountAPING/v1.0/getAccountFunds";
     internal const string GetAccountStatement = "/AccountAPING/v1.0/getAccountStatement";
     internal const string ListCurrencyRates = "/AccountAPING/v1.0/listCurrencyRates";
-    internal const string TransferFunds = "/AccountAPING/v1.0/transferFunds";
 }

@@ -1,9 +1,6 @@
-# ⚡BetfairDotNet
+# BetfairDotNet
 
-[![Build Status](https://travis-ci.org/yourusername/yourrepository.svg?branch=master)](https://travis-ci.org/yourusername/yourrepository)
-[![NuGet Version](https://badge.fury.io/nu/your-package-name.svg)](https://www.nuget.org/packages/Your-Package-Name/)
-
-Provides a simplified and easy-to-use interface for working with the Betfair API using C#.
+A simple and easy to use client for the Betfair API-NG and Streaming API.
 
 ## Table of Contents
 
@@ -13,3 +10,49 @@ Provides a simplified and easy-to-use interface for working with the Betfair API
 - [Examples](#examples)
 - [Contributing](#contributing)
 - [License](#license)
+
+
+## Features
+
+Methods and abstractions are currently provided for the following functionalites:
+
+### Login API
+
+- Interactive Login
+- Certificate Login
+
+### Account API
+
+- /getAccountDetails
+- /getAccountFunds
+- /getAccountStatement
+- /listCurrencyRates
+
+### Betting API
+
+- /listCompetitions
+- /listCountries
+- /listCurrentOrders
+- /listClearedOrders
+- /listEventTypes
+- /listEvents
+- /listMarketCatalogue
+- /listMarketBook
+- /listMarketProfitAndLoss
+- /listMarketTypes
+- /listRunnerBook
+- /listTimeRanges
+- /listVenues
+- /placeOrders
+- /cancelOrders
+- /replaceOrders
+- /updateOrders
+
+### Heartbeat API
+
+- /heartbeat
+
+### Streaming API
+
+- A fluent interface for order and market subscriptions based on System.Reactive.
+- Easy error handling / reconnection.

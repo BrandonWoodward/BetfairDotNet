@@ -13,15 +13,6 @@
 <br>
 <br>
 
-
-## 📚 Table of Contents
-
-- [📦 Installation](#installation)
-- [🛠️ Requirements](#requirements)
-- [📖 Basic Usage](#examples)
-
-<br>
-
 ## 📦 Installation
 
 <br>

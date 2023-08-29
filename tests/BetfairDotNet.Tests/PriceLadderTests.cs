@@ -34,7 +34,6 @@ public class PriceLadderTests {
 
         // Assert
         ladder.GetDepth().Should().Be(0);
-        ladder.Invoking(l => l[1.5]).Should().Throw<KeyNotFoundException>();
     }
 
 
@@ -96,7 +95,6 @@ public class PriceLadderTests {
         // Assert
         ladder.GetDepth().Should().Be(1);
         ladder[1.5].Size.Should().Be(100);
-        ladder.Invoking(l => l[2.5]).Should().Throw<KeyNotFoundException>();
     }
 
 

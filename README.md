@@ -46,7 +46,6 @@ To run the demo, you also need to provide a `credentials.json` file in the root 
 ```
 
 <br>
-<br>
 
 
 ## 📖 Basic Usage

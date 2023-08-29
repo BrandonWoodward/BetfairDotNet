@@ -63,8 +63,8 @@ public sealed class StreamingService {
     /// <returns></returns>
     public async Task<StreamSubscriptionHandler> CreateStream(
         string sessionToken,
-        OrderSubscription orderSubscription,
-        MarketSubscription marketSubscription) {
+        MarketSubscription marketSubscription,
+        OrderSubscription orderSubscription) {
 
         await AuthenticateConnection(sessionToken);
         await _tcpClient.SendLine(orderSubscription);

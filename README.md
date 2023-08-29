@@ -2,7 +2,7 @@
 
 <div align="left">
 
-  [![Build Status](https://travis-ci.com/yourusername/yourrepository.svg?branch=main)](https://travis-ci.com/yourusername/yourrepository)
+[![Tests](https://github.com/BrandonWoodward/BetfairDotNet/actions/workflows/dotnet.yml/badge.svg)](https://github.com/BrandonWoodward/BetfairDotNet/actions/workflows/dotnet.yml)
   [![NuGet Version](https://img.shields.io/nuget/v/BetfairDotNet.svg?style=flat)](https://www.nuget.org/packages/BetfairDotNet/)
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yourusername/yourrepository/blob/main/LICENSE)
 </div>

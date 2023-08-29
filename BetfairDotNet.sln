@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{424F26AB-A79F-4866-9F4A-C58EC87F7898}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{CD95BAE7-0C50-4B8D-B93E-7E3AD5C91964}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9484376E-6C5B-4AB5-B902-BABEC5039A2D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BetfairDotNet", "BetfairDotNet", "{2FE436FB-5886-49B9-A4E8-122EEA3B774C}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE.md = LICENSE.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BetfairDotNet", "src\BetfairDotNet\BetfairDotNet.csproj", "{C5A23823-2294-4BCB-A32A-D3A7092A4E73}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BetfairDotNet.Tests", "tests\BetfairDotNet.Tests\BetfairDotNet.Tests.csproj", "{F369E322-2317-4FA3-86C6-FA92A2B2EEF5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "demos", "demos", "{F93E30DB-3F14-4EFD-95F5-40500FBF0249}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BetfairDotNet.Demo.StreamingAPI", "demos\BetfairDotNet.Demo.StreamingAPI\BetfairDotNet.Demo.StreamingAPI.csproj", "{5B54366B-39AF-43BF-91B7-21867C4A8A76}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5A23823-2294-4BCB-A32A-D3A7092A4E73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5A23823-2294-4BCB-A32A-D3A7092A4E73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5A23823-2294-4BCB-A32A-D3A7092A4E73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5A23823-2294-4BCB-A32A-D3A7092A4E73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F369E322-2317-4FA3-86C6-FA92A2B2EEF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F369E322-2317-4FA3-86C6-FA92A2B2EEF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F369E322-2317-4FA3-86C6-FA92A2B2EEF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F369E322-2317-4FA3-86C6-FA92A2B2EEF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B54366B-39AF-43BF-91B7-21867C4A8A76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B54366B-39AF-43BF-91B7-21867C4A8A76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B54366B-39AF-43BF-91B7-21867C4A8A76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B54366B-39AF-43BF-91B7-21867C4A8A76}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{424F26AB-A79F-4866-9F4A-C58EC87F7898} = {2FE436FB-5886-49B9-A4E8-122EEA3B774C}
+		{CD95BAE7-0C50-4B8D-B93E-7E3AD5C91964} = {2FE436FB-5886-49B9-A4E8-122EEA3B774C}
+		{9484376E-6C5B-4AB5-B902-BABEC5039A2D} = {2FE436FB-5886-49B9-A4E8-122EEA3B774C}
+		{C5A23823-2294-4BCB-A32A-D3A7092A4E73} = {424F26AB-A79F-4866-9F4A-C58EC87F7898}
+		{F369E322-2317-4FA3-86C6-FA92A2B2EEF5} = {9484376E-6C5B-4AB5-B902-BABEC5039A2D}
+		{F93E30DB-3F14-4EFD-95F5-40500FBF0249} = {2FE436FB-5886-49B9-A4E8-122EEA3B774C}
+		{5B54366B-39AF-43BF-91B7-21867C4A8A76} = {F93E30DB-3F14-4EFD-95F5-40500FBF0249}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {92D2D7D9-E337-4ACF-A1F5-C5858BB82C20}
+	EndGlobalSection
+EndGlobal

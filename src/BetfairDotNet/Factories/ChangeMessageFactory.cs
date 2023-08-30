@@ -1,6 +1,6 @@
-﻿using BetfairDotNet.Interfaces;
+﻿using BetfairDotNet.Converters;
+using BetfairDotNet.Interfaces;
 using BetfairDotNet.Models.Streaming;
-using BetfairDotNet.Utils;
 using System.Text;
 using System.Text.Json;
 

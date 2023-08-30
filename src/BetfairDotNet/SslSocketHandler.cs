@@ -1,9 +1,8 @@
-﻿using BetfairDotNet.Interfaces;
+﻿using BetfairDotNet.Converters;
+using BetfairDotNet.Interfaces;
 using BetfairDotNet.Models.Exceptions;
 using BetfairDotNet.Models.Streaming;
-using BetfairDotNet.Utils;
 using System.Buffers;
-using System.Net.Security;
 using System.Net.Sockets;
 using System.Reactive.Linq;
 using System.Reactive.Subjects;
@@ -14,15 +13,14 @@ namespace BetfairDotNet;
 
 internal sealed class SslSocketHandler : ISslSocketHandler {
 
-
+    private readonly ITcpClient _client;
+    private readonly ISslStream _sslStream;
     private readonly Subject<ReadOnlyMemory<byte>> _messageSubject = new();
     private readonly object _stopLock = new();
     private readonly string _endpoint;
     private readonly int _port = 443;
 
     private int _incrementId;
-    private TcpClient _client;
-    private SslStream _sslStream;
     private Thread _listener;
     private CancellationTokenSource _cts;
 
@@ -31,17 +29,17 @@ internal sealed class SslSocketHandler : ISslSocketHandler {
         => _messageSubject.AsObservable();
 
 
-    internal SslSocketHandler(string endpoint) {
+    internal SslSocketHandler(ITcpClient tcpClient, ISslStream sslStream, string endpoint) {
+        _client = tcpClient;
+        _sslStream = sslStream;
         _endpoint = endpoint;
     }
 
 
     public async Task Start() {
-        _client = new();
-        _cts = new(); // used to shutdown background thread
+        _cts = new(); // Used to shutdown background thread
         try {
             await _client.ConnectAsync(_endpoint, _port);
-            _sslStream = new SslStream(_client.GetStream(), false);
             await _sslStream.AuthenticateAsClientAsync(_endpoint);
             _listener = new Thread(() => ReceiveLines(_cts.Token));
             _listener.Start();
@@ -56,7 +54,7 @@ internal sealed class SslSocketHandler : ISslSocketHandler {
 
 
     public void Stop() {
-        lock(_stopLock) { // stop race condition
+        lock(_stopLock) { // Stop race condition
             _cts.Cancel();
             _cts.Dispose();
             _sslStream?.Close();
@@ -73,7 +71,6 @@ internal sealed class SslSocketHandler : ISslSocketHandler {
             var messageJson = JsonConvert.Serialize(message);
             var messageBytes = Encoding.UTF8.GetBytes(messageJson + "\r\n"); // CRLF is required
             await _sslStream.WriteAsync(messageBytes);
-            await _sslStream.FlushAsync();
         }
         catch(IOException ex) {
             _messageSubject.OnError(

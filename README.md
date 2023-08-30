@@ -61,7 +61,8 @@ To run the demo, you also need to provide a `credentials.json` file in the root 
 
 ###  Login
 
-The recommended and most secure login flow uses a self-signed SSL certificate. More info [here](https://docs.developer.betfair.com/display/1smk3cen4v3lu3yomq5qye0ni/Non-Interactive+%28bot%29+login)
+The recommended and most secure login flow uses a self-signed SSL certificate. 
+You can find more information about creating a certificate [here](https://docs.developer.betfair.com/display/1smk3cen4v3lu3yomq5qye0ni/Non-Interactive+%28bot%29+login)
 
 ```csharp
 // Enter your credentials here
@@ -69,11 +70,10 @@ var client = new BetfairClient(apiKey, username, password, certPath)
 
 // Returns the SessionToken and the error code if unsuccessful
 var session = await client.Login.CertificateLogin();
-
 ```
 
 
-You can also provide just your username and password:
+You can also provide just your username and password. This is recommended if you're creating your own login form.
 
 ```csharp
 // Enter your credentials here
@@ -116,9 +116,9 @@ var placeInstructions = new List<PlaceInstruction> {
 };
 
 var report await client.Betting.PlaceOrders(
-    "someMarketId", 
+    /* market id */, 
     placeInstructions,
-    "myCustomerRef"
+    /* optional customer ref */
 );
 ```
 

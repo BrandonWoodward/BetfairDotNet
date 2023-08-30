@@ -3,6 +3,7 @@
 <div align="left">
 
 [![Tests](https://github.com/BrandonWoodward/BetfairDotNet/actions/workflows/dotnet.yml/badge.svg)](https://github.com/BrandonWoodward/BetfairDotNet/actions/workflows/dotnet.yml)
+[![codecov](https://codecov.io/gh/BrandonWoodward/BetfairDotNet/branch/main/graph/badge.svg)](https://codecov.io/gh/BrandonWoodward/BetfairDotNet)
 [![NuGet Version](https://img.shields.io/nuget/v/BetfairDotNet.svg?style=flat)](https://www.nuget.org/packages/BetfairDotNet/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yourusername/yourrepository/blob/main/LICENSE)
 

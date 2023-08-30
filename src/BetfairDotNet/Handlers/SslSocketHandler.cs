@@ -8,7 +8,7 @@ using System.Reactive.Linq;
 using System.Reactive.Subjects;
 using System.Text;
 
-namespace BetfairDotNet;
+namespace BetfairDotNet.Handlers;
 
 
 internal sealed class SslSocketHandler : ISslSocketHandler {

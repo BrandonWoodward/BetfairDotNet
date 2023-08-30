@@ -1,4 +1,5 @@
-﻿using BetfairDotNet.Interfaces;
+﻿using BetfairDotNet.Handlers;
+using BetfairDotNet.Interfaces;
 using BetfairDotNet.Models.Exceptions;
 using BetfairDotNet.Models.Streaming;
 using FluentAssertions;

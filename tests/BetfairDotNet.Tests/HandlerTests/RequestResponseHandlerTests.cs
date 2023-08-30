@@ -1,10 +1,10 @@
-﻿using BetfairDotNet.Enums.Account;
+﻿using BetfairDotNet.Converters;
+using BetfairDotNet.Enums.Account;
 using BetfairDotNet.Handlers;
 using BetfairDotNet.Interfaces;
 using BetfairDotNet.Models;
 using BetfairDotNet.Models.Exceptions;
 using BetfairDotNet.Models.Login;
-using BetfairDotNet.Utils;
 using NSubstitute;
 using NSubstitute.ExceptionExtensions;
 using System.Net;
@@ -19,11 +19,11 @@ namespace BetfairDotNet.Tests.HandlerTests;
 /// </summary>
 public class RequestResponseHandlerTests {
 
-    private readonly IBetfairHttpClient _mockNetwork;
+    private readonly IHttpClient _mockNetwork;
     private readonly IRequestResponseHandler _processor;
 
     public RequestResponseHandlerTests() {
-        _mockNetwork = Substitute.For<IBetfairHttpClient>();
+        _mockNetwork = Substitute.For<IHttpClient>();
         _processor = new RequestResponseHandler(_mockNetwork);
     }
 

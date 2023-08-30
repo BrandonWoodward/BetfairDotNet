@@ -1,6 +1,6 @@
 ﻿namespace BetfairDotNet.Interfaces;
 
-internal interface IBetfairHttpClient {
+internal interface IHttpClient {
     void AddClientCertifcate(string certificatePath);
     void AddDefaultRequestHeader(string name, string value);
 

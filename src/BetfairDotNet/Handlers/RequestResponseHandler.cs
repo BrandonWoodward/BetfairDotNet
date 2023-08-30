@@ -1,8 +1,8 @@
-﻿using BetfairDotNet.Enums.Account;
+﻿using BetfairDotNet.Converters;
+using BetfairDotNet.Enums.Account;
 using BetfairDotNet.Interfaces;
 using BetfairDotNet.Models;
 using BetfairDotNet.Models.Exceptions;
-using BetfairDotNet.Utils;
 using System.Security.Cryptography;
 using System.Text.Json;
 
@@ -12,10 +12,10 @@ namespace BetfairDotNet.Handlers;
 internal class RequestResponseHandler : IRequestResponseHandler {
 
 
-    private readonly IBetfairHttpClient _httpClient;
+    private readonly IHttpClient _httpClient;
 
 
-    public RequestResponseHandler(IBetfairHttpClient httpClient) {
+    public RequestResponseHandler(IHttpClient httpClient) {
         _httpClient = httpClient;
     }
 

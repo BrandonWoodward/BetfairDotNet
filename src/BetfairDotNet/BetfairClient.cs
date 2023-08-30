@@ -1,4 +1,5 @@
-﻿using BetfairDotNet.Endpoints;
+﻿using BetfairDotNet.Adapters;
+using BetfairDotNet.Endpoints;
 using BetfairDotNet.Handlers;
 using BetfairDotNet.Interfaces;
 using BetfairDotNet.Services;
@@ -49,9 +50,13 @@ public sealed class BetfairClient : IBetfairClient {
     /// <param name="password"></param>
     /// <param name="certPath"></param>
     public BetfairClient(string apiKey, string username, string password, string? certPath = null) {
-        var httpClient = new BetfairHttpClient(apiKey, 5000);
+        // These are abstracted away so that they can be mocked for unit testing.
+        var httpClient = new HttpClientAdapter(apiKey, 5000);
+        var tcpClient = new TcpClientAdapter();
+        var sslStream = new SslStreamAdapter(tcpClient.GetStream());
+
         var requestHandler = new RequestResponseHandler(httpClient);
-        var socketHandler = new SslSocketHandler(StreamingEndpoints.Production);
+        var socketHandler = new SslSocketHandler(tcpClient, sslStream, StreamingEndpoints.Production);
 
         Login = new LoginService(requestHandler, username, password, certPath);
         Account = new AccountService(requestHandler);

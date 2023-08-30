@@ -1,4 +1,4 @@
-﻿using BetfairDotNet.Utils;
+﻿using BetfairDotNet.Converters;
 using System.Text.Json.Serialization;
 
 namespace BetfairDotNet.Models.Streaming;

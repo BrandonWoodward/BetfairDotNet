@@ -21,10 +21,10 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal /p:CollectCoverage=true /p:CoverletOutput=tests/BetfairDotNet.Tests/TestResults/ /p:CoverletOutputFormat=cobertura
+      run: dotnet test --no-build --verbosity normal /p:CollectCoverage=true /p:CoverletOutput=./TestResults/ /p:CoverletOutputFormat=cobertura
     - name: Upload coverage to Codecov  
       uses: codecov/codecov-action@v3
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
-        file: tests/BetfairDotNet.Tests/TestResults/coverage.cobertura.xml
+        file: ./tests/BetfairDotNet.Tests/TestResults/coverage.cobertura.xml
         fail_ci_if_error: true

@@ -1,7 +1,6 @@
 ﻿using BetfairDotNet.Enums.Account;
 using BetfairDotNet.Interfaces;
 using BetfairDotNet.Models;
-using BetfairDotNet.Models.Account;
 using BetfairDotNet.Models.Exceptions;
 using BetfairDotNet.Utils;
 using System.Security.Cryptography;
@@ -46,7 +45,10 @@ internal class RequestResponseHandler : IRequestResponseHandler {
     }
 
 
-    public async Task<LoginResponse> Authenticate(string url, string certificatePath, Dictionary<string, string> credentials) {
+    public async Task<T> Authenticate<T>(
+        string url,
+        Dictionary<string, string> credentials,
+        string? certificatePath = null) where T : ILoginResponse {
 
         using var stringContent = new FormUrlEncodedContent(credentials);
 
@@ -55,9 +57,9 @@ internal class RequestResponseHandler : IRequestResponseHandler {
         var stringCredentials = await stringContent.ReadAsStringAsync();
 
         try {
-            _httpClient.AddClientCertifcate(certificatePath);
+            if(!string.IsNullOrEmpty(certificatePath)) _httpClient.AddClientCertifcate(certificatePath);
             var httpResponse = await _httpClient.PostUrlEncodedContent(url, stringContent);
-            var response = JsonConvert.Deserialize<LoginResponse>(httpResponse);
+            var response = JsonConvert.Deserialize<T>(httpResponse);
 
             // Throw exception if the login failed for user to handle
             if(response.Status is not LoginStatusEnum.SUCCESS) {

@@ -48,7 +48,7 @@ public sealed class BetfairClient : IBetfairClient {
     /// <param name="username"></param>
     /// <param name="password"></param>
     /// <param name="certPath"></param>
-    public BetfairClient(string apiKey, string username, string password, string certPath) {
+    public BetfairClient(string apiKey, string username, string password, string? certPath = null) {
         var httpClient = new BetfairHttpClient(apiKey, 5000);
         var requestHandler = new RequestResponseHandler(httpClient);
         var socketHandler = new SslSocketHandler(StreamingEndpoints.Production);

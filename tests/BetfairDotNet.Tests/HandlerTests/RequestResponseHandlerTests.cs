@@ -2,8 +2,8 @@
 using BetfairDotNet.Handlers;
 using BetfairDotNet.Interfaces;
 using BetfairDotNet.Models;
-using BetfairDotNet.Models.Account;
 using BetfairDotNet.Models.Exceptions;
+using BetfairDotNet.Models.Login;
 using BetfairDotNet.Utils;
 using NSubstitute;
 using NSubstitute.ExceptionExtensions;
@@ -35,12 +35,12 @@ public class RequestResponseHandlerTests {
         var sampleUrl = "sampleUrl";
         var sampleCertPath = "sampleCertificatePath";
         var sampleCredentials = new Dictionary<string, string>();
-        var sampleResponse = new LoginResponse { Status = LoginStatusEnum.SUCCESS, SessionToken = "sampleToken" };
+        var sampleResponse = new CertificateLoginResponse { Status = LoginStatusEnum.SUCCESS, SessionToken = "sampleToken" };
 
         // Act
         _mockNetwork.PostUrlEncodedContent(Arg.Any<string>(), Arg.Any<FormUrlEncodedContent>())
             .Returns(JsonConvert.Serialize(sampleResponse));
-        await _processor.Authenticate(sampleUrl, sampleCertPath, sampleCredentials);
+        await _processor.Authenticate<CertificateLoginResponse>(sampleUrl, sampleCredentials, sampleCertPath);
 
         // Assert
         _mockNetwork.Received().AddDefaultRequestHeader("X-Authentication", "sampleToken");
@@ -56,14 +56,14 @@ public class RequestResponseHandlerTests {
             ["username"] = "sampleUsername",
             ["password"] = "samplePassword"
         };
-        var failedResponse = new LoginResponse { Status = LoginStatusEnum.INVALID_USERNAME_OR_PASSWORD, SessionToken = "sampleToken" };
+        var failedResponse = new CertificateLoginResponse { Status = LoginStatusEnum.INVALID_USERNAME_OR_PASSWORD, SessionToken = "sampleToken" };
 
         _mockNetwork.PostUrlEncodedContent(Arg.Any<string>(), Arg.Any<FormUrlEncodedContent>())
             .Returns(JsonConvert.Serialize(failedResponse));
 
         // Act
         var exception = await Assert.ThrowsAsync<BetfairNGException>(()
-            => _processor.Authenticate(sampleUrl, sampleCertPath, sampleCredentials));
+            => _processor.Authenticate<CertificateLoginResponse>(sampleUrl, sampleCredentials, sampleCertPath));
 
         // Assert
         Assert.Equal("INVALID_USERNAME_OR_PASSWORD", exception.Message);
@@ -84,14 +84,14 @@ public class RequestResponseHandlerTests {
             ["password"] = "samplePassword"
         };
 
-        var noTokenResponse = new LoginResponse { Status = LoginStatusEnum.SUCCESS, SessionToken = string.Empty };
+        var noTokenResponse = new CertificateLoginResponse { Status = LoginStatusEnum.SUCCESS, SessionToken = string.Empty };
 
         _mockNetwork.PostUrlEncodedContent(Arg.Any<string>(), Arg.Any<FormUrlEncodedContent>())
             .Returns(JsonConvert.Serialize(noTokenResponse));
 
         // Act
         var exception = await Assert.ThrowsAsync<BetfairNGException>(()
-            => _processor.Authenticate(sampleUrl, sampleCertPath, sampleCredentials));
+            => _processor.Authenticate<CertificateLoginResponse>(sampleUrl, sampleCredentials, sampleCertPath));
 
         // Assert
         Assert.Equal("NO_SESSION_TOKEN_RETURNED", exception.Message);
@@ -117,7 +117,7 @@ public class RequestResponseHandlerTests {
 
         // Act
         var exception = await Assert.ThrowsAsync<BetfairNGException>(()
-            => _processor.Authenticate(sampleUrl, sampleCertPath, sampleCredentials));
+            => _processor.Authenticate<CertificateLoginResponse>(sampleUrl, sampleCredentials, sampleCertPath));
 
         // Assert
         Assert.Equal("CERTIFICATE_NOT_FOUND", exception.Message);
@@ -144,7 +144,7 @@ public class RequestResponseHandlerTests {
 
         // Act
         var exception = await Assert.ThrowsAsync<BetfairNGException>(()
-            => _processor.Authenticate(sampleUrl, sampleCertPath, sampleCredentials));
+            => _processor.Authenticate<CertificateLoginResponse>(sampleUrl, sampleCredentials, sampleCertPath));
 
         // Assert
         Assert.Equal("NETWORK_ERROR (InternalServerError)", exception.Message);
@@ -172,7 +172,7 @@ public class RequestResponseHandlerTests {
 
         // Act
         var exception = await Assert.ThrowsAsync<BetfairNGException>(()
-            => _processor.Authenticate(sampleUrl, sampleCertPath, sampleCredentials));
+            => _processor.Authenticate<CertificateLoginResponse>(sampleUrl, sampleCredentials, sampleCertPath));
 
         // Assert
         Assert.Equal("NETWORK_ERROR (Timeout)", exception.Message);
@@ -199,7 +199,7 @@ public class RequestResponseHandlerTests {
 
         // Act
         var exception = await Assert.ThrowsAsync<BetfairNGException>(()
-            => _processor.Authenticate(sampleUrl, sampleCertPath, sampleCredentials));
+            => _processor.Authenticate<CertificateLoginResponse>(sampleUrl, sampleCredentials, sampleCertPath));
 
         // Assert
         Assert.Equal("JSON_SERIALIZATION_ERROR", exception.Message);

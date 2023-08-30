@@ -1,4 +1,5 @@
 ﻿using BetfairDotNet.Interfaces;
+using BetfairDotNet.Models.Login;
 using BetfairDotNet.Services;
 using NSubstitute;
 using Xunit;
@@ -15,7 +16,7 @@ public class LoginServiceTests {
 
 
     [Fact]
-    public async Task Login_SendsCorrectRequest() {
+    public async Task CertificateLogin_SendsCorrectRequest() {
         // Arrange
         var username = "testuser";
         var password = "testpass";
@@ -26,19 +27,19 @@ public class LoginServiceTests {
         await sut.CertificateLogin();
 
         // Assert
-        await _mockHandler.Received().Authenticate(
+        await _mockHandler.Received().Authenticate<CertificateLoginResponse>(
             "https://identitysso-cert.betfair.com/api/certlogin",
-            certPath,
             Arg.Is<Dictionary<string, string>>(args =>
                 args["username"] == username &&
                 args["password"] == password
-            )
+            ),
+            certPath
         );
     }
 
 
     [Fact]
-    public async Task Login_ThrowsArgumentException_ForEmptyUsername() {
+    public async Task CertificateLogin_ThrowsArgumentException_ForEmptyUsername() {
         // Arrange
         var username = string.Empty;
         var password = "testpass";
@@ -51,7 +52,7 @@ public class LoginServiceTests {
 
 
     [Fact]
-    public async Task Login_ThrowsArgumentException_ForEmptyPassword() {
+    public async Task CertificateLogin_ThrowsArgumentException_ForEmptyPassword() {
         // Arrange
         var username = "testuser";
         var password = string.Empty;
@@ -64,7 +65,7 @@ public class LoginServiceTests {
 
 
     [Fact]
-    public async Task Login_ThrowsArgumentException_ForInvalidCertFileExtension() {
+    public async Task CertificateLogin_ThrowsArgumentException_ForInvalidCertFileExtension() {
         // Arrange
         var username = "testuser";
         var password = "testpass";
@@ -73,5 +74,50 @@ public class LoginServiceTests {
 
         // Act & Assert
         await Assert.ThrowsAsync<ArgumentException>(sut.CertificateLogin);
+    }
+
+
+    [Fact]
+    public async Task InteractiveLogin_SendsCorrectRequest() {
+        // Arrange
+        var username = "testuser";
+        var password = "testpass";
+        var sut = new LoginService(_mockHandler, username, password);
+
+        // Act 
+        await sut.InteractiveLogin();
+
+        // Assert
+        await _mockHandler.Received().Authenticate<InteractiveLoginResponse>(
+            "https://identitysso.betfair.com/api/login",
+            Arg.Is<Dictionary<string, string>>(args =>
+                args["username"] == username &&
+                args["password"] == password
+            )
+        );
+    }
+
+
+    [Fact]
+    public async Task InteractiveLogin_ThrowsArgumentException_ForEmptyUsername() {
+        // Arrange
+        var username = string.Empty;
+        var password = "testpass";
+        var sut = new LoginService(_mockHandler, username, password);
+
+        // Act & Assert
+        await Assert.ThrowsAsync<ArgumentException>(sut.InteractiveLogin);
+    }
+
+
+    [Fact]
+    public async Task InteractiveLogin_ThrowsArgumentException_ForEmptyPassword() {
+        // Arrange
+        var username = "testuser";
+        var password = string.Empty;
+        var sut = new LoginService(_mockHandler, username, password);
+
+        // Act & Assert
+        await Assert.ThrowsAsync<ArgumentException>(sut.InteractiveLogin);
     }
 }

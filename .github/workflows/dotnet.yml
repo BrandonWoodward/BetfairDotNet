@@ -21,7 +21,7 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Test and collect coverage
-      run: dotnet test --collect:"XPlat Code Coverage" --settings .runsettings --no-build
+      run: dotnet test --collect:"XPlat Code Coverage" --no-build
     - name: Move coverage report to known location
       run: mv ./tests/BetfairDotNet.Tests/TestResults/*/coverage.cobertura.xml ./tests/BetfairDotNet.Tests/coverage.cobertura.xml
     - name: Upload coverage to Codecov  

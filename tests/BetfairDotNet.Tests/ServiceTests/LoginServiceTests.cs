@@ -65,6 +65,19 @@ public class LoginServiceTests {
 
 
     [Fact]
+    public async Task CertificateLogin_ThrowsArgumentException_ForEmptyCertifcatePath() {
+        // Arrange
+        var username = "testuser";
+        var password = string.Empty;
+        var certPath = "";
+        var sut = new LoginService(_mockHandler, username, password, certPath);
+
+        // Act & Assert
+        await Assert.ThrowsAsync<ArgumentException>(sut.CertificateLogin);
+    }
+
+
+    [Fact]
     public async Task CertificateLogin_ThrowsArgumentException_ForInvalidCertFileExtension() {
         // Arrange
         var username = "testuser";

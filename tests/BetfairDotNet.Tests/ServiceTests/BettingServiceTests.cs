@@ -105,6 +105,26 @@ public class BettingServiceTests {
 
 
     [Fact]
+    public async Task ListCountries_SendsCorrectRequest() {
+        // Arrange
+        var marketFilter = new MarketFilter();
+        var locale = "testLocale";
+
+        // Act
+        await _bettingService.ListCountries(marketFilter, locale);
+
+        // Assert
+        await _mockNetwork.Received().Request<List<CountryCodeResult>>(
+            "https://api.betfair.com/exchange/betting/json-rpc/v1",
+            "SportsAPING/v1.0/listCountries",
+            Arg.Is<Dictionary<string, object?>>(args =>
+                (MarketFilter?)args["filter"] == marketFilter &&
+                (string?)args["locale"] == locale)
+        );
+    }
+
+
+    [Fact]
     public async Task ListCurrentOrders_SendsCorrectRequest() {
 
         // Arrange

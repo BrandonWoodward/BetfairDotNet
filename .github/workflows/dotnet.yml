@@ -24,8 +24,6 @@ jobs:
       run: dotnet tool install --global coverlet.console
     - name: Test and collect coverage using Coverlet
       run: coverlet ./tests/BetfairDotNet.Tests/bin/Debug/net7.0/BetfairDotNet.Tests.dll --target "dotnet" --targetargs "test ./tests/BetfairDotNet.Tests --no-build" --output ./tests/BetfairDotNet.Tests/coverage.cobertura.xml --format cobertura --exclude-by-file "*/src/BetfairDotNet/Models/*"
-    - name: Move coverage report to known location
-      run: mv ./tests/BetfairDotNet.Tests/coverage.cobertura.xml ./tests/BetfairDotNet.Tests/coverage.cobertura.xml
     - name: Upload coverage to Codecov  
       uses: codecov/codecov-action@v3
       with:

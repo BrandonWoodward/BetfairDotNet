@@ -31,6 +31,7 @@ public sealed class StreamingService {
         string sessionToken,
         MarketSubscription marketSubscription) {
 
+        CheckSessionToken(sessionToken);
         await AuthenticateConnection(sessionToken);
         await _tcpClient.SendLine(marketSubscription);
         return new StreamSubscriptionHandler(_tcpClient.MessageStream);
@@ -48,6 +49,7 @@ public sealed class StreamingService {
         string sessionToken,
         OrderSubscription orderSubscription) {
 
+        CheckSessionToken(sessionToken);
         await AuthenticateConnection(sessionToken);
         await _tcpClient.SendLine(orderSubscription);
         return new StreamSubscriptionHandler(_tcpClient.MessageStream);
@@ -66,10 +68,18 @@ public sealed class StreamingService {
         MarketSubscription marketSubscription,
         OrderSubscription orderSubscription) {
 
+        CheckSessionToken(sessionToken);
         await AuthenticateConnection(sessionToken);
         await _tcpClient.SendLine(orderSubscription);
         await _tcpClient.SendLine(marketSubscription);
         return new StreamSubscriptionHandler(_tcpClient.MessageStream);
+    }
+
+
+    private static void CheckSessionToken(string sessionToken) {
+        if(string.IsNullOrWhiteSpace(sessionToken)) {
+            throw new ArgumentException("Session token not provided.");
+        }
     }
 
 

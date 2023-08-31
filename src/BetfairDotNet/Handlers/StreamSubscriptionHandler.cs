@@ -42,6 +42,7 @@ public sealed class StreamSubscriptionHandler : IDisposable {
 
 
     private void OnMessage(ReadOnlyMemory<byte> message) {
+        if(message.IsEmpty) return; // Should only happen in testing
         var changeMessage = _changeMessageFactory.Process(message);
         switch(changeMessage) {
             case ConnectionMessage connection:

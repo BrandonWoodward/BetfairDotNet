@@ -12,6 +12,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BetfairDotNet", "BetfairDotNet", "{2FE436FB-5886-49B9-A4E8-122EEA3B774C}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		.runsettings = .runsettings
 		LICENSE.md = LICENSE.md
 		README.md = README.md
 	EndProjectSection

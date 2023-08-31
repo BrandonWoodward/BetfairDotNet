@@ -1,4 +1,4 @@
-name: tests
+name: ci/cd
 
 on:
   push:
@@ -18,12 +18,10 @@ jobs:
         dotnet-version: 7.0.x
     - name: Restore dependencies
       run: dotnet restore
-    - name: Build in Debug configuration
-      run: dotnet build --no-restore --configuration Debug
-    - name: Test and collect coverage using Coverlet
-      run: dotnet test --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.ExcludeByFile=./src/BetfairDotNet/Models/*
-    - name: Move coverage report to known location
-      run: mv ./tests/BetfairDotNet.Tests/TestResults/*/coverage.cobertura.xml ./tests/BetfairDotNet.Tests/coverage.cobertura.xml
+    - name: Build
+      run: dotnet build --no-restore
+    - name: Test and collect coverage using Coverlet MSBuild
+      run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:ExcludeByFile="**/Models/*" --no-build
     - name: Upload coverage to Codecov  
       uses: codecov/codecov-action@v3
       with:

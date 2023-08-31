@@ -1,4 +1,4 @@
-name: tests
+name: test
 
 on:
   push:
@@ -20,13 +20,11 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal /p:CollectCoverage=true /p:CoverletOutput=./tests/BetfairDotNet.Tests/ /p:CoverletOutputFormat=cobertura
-    - name: List TestResults directory
-      run: ls -R ./
+    - name: Test with Coverage
+      run: dotnet test --no-build --verbosity normal --collect:"XPlat Code Coverage"
     - name: Upload coverage to Codecov  
       uses: codecov/codecov-action@v3
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
-        file: ./tests/BetfairDotNet.Tests/coverage.cobertura.xml
+        file: ./TestResults/**/coverage.cobertura.xml
         fail_ci_if_error: true

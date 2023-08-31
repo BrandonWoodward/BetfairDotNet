@@ -68,7 +68,7 @@ public class LoginServiceTests {
     public async Task CertificateLogin_ThrowsArgumentException_ForEmptyCertifcatePath() {
         // Arrange
         var username = "testuser";
-        var password = string.Empty;
+        var password = "testpassword";
         var certPath = "";
         var sut = new LoginService(_mockHandler, username, password, certPath);
 

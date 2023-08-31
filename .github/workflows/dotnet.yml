@@ -26,5 +26,5 @@ jobs:
       uses: codecov/codecov-action@v3
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
-        file: ./TestResults/**/coverage.cobertura.xml
+        file: ./tests/BetfairDotNet.Tests/TestResults/**/coverage.cobertura.xml
         fail_ci_if_error: true

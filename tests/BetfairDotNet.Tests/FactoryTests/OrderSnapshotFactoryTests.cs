@@ -11,6 +11,20 @@ namespace BetfairDotNet.Tests.FactoryTests;
 
 public class OrderSnapshotFactoryTests {
 
+    [Fact]
+    public void ProcessImage_ShouldReturnEmpty_WhenMessageIsHeartbeat() {
+        // Arrange
+        var changeMessage = new OrderChangeMessage() { Id = 123, ChangeType = ChangeTypeEnum.HEARTBEAT };
+        var cache = new ConcurrentDictionary<string, OrderMarketSnapshot>();
+
+        // Act
+        var sut = new OrderSnapshotFactory(cache);
+        var actual = sut.GetSnapshots(changeMessage);
+
+        // Assert
+        actual.Should().BeEmpty();
+    }
+
 
     [Fact]
     public void ProcessImage_ShouldReturnOrderMarketSnapshot_WhenMessageIsImage() {

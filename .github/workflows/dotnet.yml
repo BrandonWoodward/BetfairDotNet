@@ -21,7 +21,7 @@ jobs:
     - name: Build in Debug configuration
       run: dotnet build --no-restore --configuration Debug
     - name: Test and collect coverage using Coverlet
-      run: dotnet test --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.ExcludeByFile=**/Models/*
+      run: dotnet test --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.ExcludeByFile=./src/BetfairDotNet/Models/*
     - name: Move coverage report to known location
       run: mv ./tests/BetfairDotNet.Tests/TestResults/*/coverage.cobertura.xml ./tests/BetfairDotNet.Tests/coverage.cobertura.xml
     - name: Upload coverage to Codecov  

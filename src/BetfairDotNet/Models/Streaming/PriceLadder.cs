@@ -30,6 +30,18 @@ public class PriceLadder {
     }
 
 
+    internal PriceLadder(SideEnum side, List<PriceSize> initialLevels) {
+        _byRank = side == SideEnum.BACK
+            ? new(new ReverseComparer())
+            : new();
+        _byPrice = new();
+
+        foreach(var level in initialLevels) {
+            AddLevel(level.Price, level);
+        }
+    }
+
+
     internal void AddLevel(double price, PriceSize priceSize) {
         _byPrice[price] = priceSize;
         _byRank[price] = priceSize;

@@ -22,8 +22,6 @@ jobs:
       run: dotnet build --no-restore
     - name: Test and collect coverage using Coverlet MSBuild
       run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:ExcludeByFile="**/Models/*" --no-build
-    - name: Move coverage report to known location
-      run: mv ./tests/BetfairDotNet.Tests/TestResults/*/coverage.cobertura.xml ./tests/BetfairDotNet.Tests/coverage.cobertura.xml
     - name: Upload coverage to Codecov  
       uses: codecov/codecov-action@v3
       with:

@@ -20,10 +20,12 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
-    - name: Test and collect coverage
-      run: dotnet test --no-build --verbosity normal --collect:"XPlat Code Coverage"
+    - name: Install Coverlet
+      run: dotnet tool install --global coverlet.console
+    - name: Test and collect coverage using Coverlet
+      run: coverlet ./tests/BetfairDotNet.Tests/bin/Debug/net7.0/BetfairDotNet.Tests.dll --target "dotnet" --targetargs "test ./tests/BetfairDotNet.Tests --no-build" --output ./tests/BetfairDotNet.Tests/coverage.cobertura.xml --format cobertura --exclude-by-file "*/src/BetfairDotNet/Models/*"
     - name: Move coverage report to known location
-      run: mv ./tests/BetfairDotNet.Tests/TestResults/*/coverage.cobertura.xml ./tests/BetfairDotNet.Tests/coverage.cobertura.xml
+      run: mv ./tests/BetfairDotNet.Tests/coverage.cobertura.xml ./tests/BetfairDotNet.Tests/coverage.cobertura.xml
     - name: Upload coverage to Codecov  
       uses: codecov/codecov-action@v3
       with:

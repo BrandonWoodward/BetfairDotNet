@@ -1,4 +1,4 @@
-name: ci/cd
+name: tests
 
 on:
   push:
@@ -20,11 +20,13 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
-    - name: Test and collect coverage using Coverlet MSBuild
-      run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:ExcludeByFile="**/Models/*" --no-build
+    - name: Test and collect coverage
+      run: dotnet test --collect:"XPlat Code Coverage" --no-build
+    - name: Move coverage report to known location
+      run: mv ./tests/BetfairDotNet.Tests/TestResults/*/coverage.cobertura.xml ./tests/BetfairDotNet.Tests/coverage.cobertura.xml
     - name: Upload coverage to Codecov  
       uses: codecov/codecov-action@v3
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
         file: ./tests/BetfairDotNet.Tests/coverage.cobertura.xml
-        fail_ci_if_error: true
+        fail_ci_if_error: true`

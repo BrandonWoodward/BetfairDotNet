@@ -22,6 +22,8 @@ jobs:
       run: dotnet build --no-restore
     - name: Test with Coverage
       run: dotnet test --no-build --verbosity normal --collect:"XPlat Code Coverage"
+    - name: List all files recursively from root
+      run: ls -R ./
     - name: Upload coverage to Codecov  
       uses: codecov/codecov-action@v3
       with:

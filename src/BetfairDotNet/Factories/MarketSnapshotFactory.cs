@@ -10,7 +10,12 @@ namespace BetfairDotNet.Factories;
 internal class MarketSnapshotFactory : IMarketSnapshotFactory {
 
 
-    private readonly ConcurrentDictionary<string, MarketSnapshot> _marketCache = new();
+    private readonly ConcurrentDictionary<string, MarketSnapshot> _marketCache;
+
+
+    public MarketSnapshotFactory(ConcurrentDictionary<string, MarketSnapshot> marketCache) {
+        _marketCache = marketCache;
+    }
 
 
     public IEnumerable<MarketSnapshot> GetSnapshots(MarketChangeMessage changeMessage) {
@@ -28,20 +33,39 @@ internal class MarketSnapshotFactory : IMarketSnapshotFactory {
     }
 
 
-    private MarketSnapshot ProcessDelta(MarketChange mc) {
-        var cachedMarket = _marketCache[mc.Id];
-        return cachedMarket with { // MarketDefinition sent in full if changed
-            MarketDefinition = mc.MarketDefinition ?? cachedMarket.MarketDefinition,
-            RunnerSnapshots = ProcessRunnersDelta(mc, cachedMarket.RunnerSnapshots)
-        };
-    }
-
-
     private static MarketSnapshot ProcessImage(MarketChange changeMessage) {
         return new MarketSnapshot() {
             MarketId = changeMessage.Id,
             MarketDefinition = changeMessage.MarketDefinition,
             RunnerSnapshots = ProcessRunnersImage(changeMessage)
+        };
+    }
+
+
+    private static Dictionary<long, RunnerSnapshot> ProcessRunnersImage(MarketChange changeMessage) {
+        var snapshots = new Dictionary<long, RunnerSnapshot>();
+        foreach(var runner in changeMessage.RunnerChanges) {
+            var runnerSnapshot = new RunnerSnapshot {
+                SelectionId = runner.Id,
+                RunnerDefinition = changeMessage.MarketDefinition?.Runners.First(r => r.Id == runner.Id),
+                LastTradedPrice = runner.LastTradedPrice.GetValueOrDefault(),
+                StartingPriceNear = runner.StartingPriceNear.GetValueOrDefault(),
+                StartingPriceFar = runner.StartingPriceFar.GetValueOrDefault(),
+                ToBack = CreateLadder(runner.AvailableToBack ?? runner.BestAvailableToBack, SideEnum.BACK),
+                ToLay = CreateLadder(runner.AvailableToLay ?? runner.BestAvailableToLay, SideEnum.LAY),
+                Traded = CreateLadder(runner.TradedVolume, SideEnum.BACK), // Side doesn't matter here
+            };
+            snapshots[runner.Id] = runnerSnapshot;
+        }
+        return snapshots;
+    }
+
+
+    private MarketSnapshot ProcessDelta(MarketChange mc) {
+        var cachedMarket = _marketCache[mc.Id];
+        return cachedMarket with { // MarketDefinition sent in full if changed
+            MarketDefinition = mc.MarketDefinition ?? cachedMarket.MarketDefinition,
+            RunnerSnapshots = ProcessRunnersDelta(mc, cachedMarket.RunnerSnapshots)
         };
     }
 
@@ -64,25 +88,6 @@ internal class MarketSnapshotFactory : IMarketSnapshotFactory {
             rnrSnaps[runner.Id] = updatedRunnerSnapshot;
         }
         return rnrSnaps;
-    }
-
-
-    private static Dictionary<long, RunnerSnapshot> ProcessRunnersImage(MarketChange changeMessage) {
-        var snapshots = new Dictionary<long, RunnerSnapshot>();
-        foreach(var runner in changeMessage.RunnerChanges) {
-            var runnerSnapshot = new RunnerSnapshot {
-                SelectionId = runner.Id,
-                RunnerDefinition = changeMessage.MarketDefinition?.Runners.First(r => r.Id == runner.Id),
-                LastTradedPrice = runner.LastTradedPrice.GetValueOrDefault(),
-                StartingPriceNear = runner.StartingPriceNear.GetValueOrDefault(),
-                StartingPriceFar = runner.StartingPriceFar.GetValueOrDefault(),
-                ToBack = CreateLadder(runner.AvailableToBack ?? runner.BestAvailableToBack, SideEnum.BACK),
-                ToLay = CreateLadder(runner.AvailableToLay ?? runner.BestAvailableToLay, SideEnum.LAY),
-                Traded = CreateLadder(runner.TradedVolume, SideEnum.BACK), // Side doesn't matter here
-            };
-            snapshots[runner.Id] = runnerSnapshot;
-        }
-        return snapshots;
     }
 
 

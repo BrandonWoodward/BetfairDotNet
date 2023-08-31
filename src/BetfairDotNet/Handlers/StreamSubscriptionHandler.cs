@@ -38,7 +38,7 @@ public sealed class StreamSubscriptionHandler : IDisposable {
         var orderCache = new ConcurrentDictionary<string, OrderMarketSnapshot>();
 
         _changeMessageFactory = new ChangeMessageFactory();
-        _marketSnapshotFactory = new MarketSnapshotFactory();
+        _marketSnapshotFactory = new MarketSnapshotFactory(marketCache);
         _orderSnapshotFactory = new OrderSnapshotFactory(orderCache);
 
         _messageSubscription = messageStream.Subscribe(OnMessage, OnException);

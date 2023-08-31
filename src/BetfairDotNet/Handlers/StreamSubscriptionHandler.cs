@@ -3,6 +3,7 @@ using BetfairDotNet.Factories;
 using BetfairDotNet.Interfaces;
 using BetfairDotNet.Models.Exceptions;
 using BetfairDotNet.Models.Streaming;
+using System.Collections.Concurrent;
 using System.Reactive.Disposables;
 using System.Reactive.Linq;
 using System.Reactive.Subjects;
@@ -24,8 +25,8 @@ public sealed class StreamSubscriptionHandler : IDisposable {
     private readonly IMarketSnapshotFactory _marketSnapshotFactory;
     private readonly IOrderSnapshotFactory _orderSnapshotFactory;
 
-    private Func<MarketSnapshot, bool> _marketPredicate;
-    private Func<OrderMarketSnapshot, bool> _orderPredicate;
+    private Func<MarketSnapshot, bool>? _marketPredicate;
+    private Func<OrderMarketSnapshot, bool>? _orderPredicate;
 
 
     internal StreamSubscriptionHandler(IObservable<ReadOnlyMemory<byte>> messageStream) {
@@ -33,9 +34,12 @@ public sealed class StreamSubscriptionHandler : IDisposable {
         _orderSubject = new();
         _exceptionSubject = new();
 
+        var marketCache = new ConcurrentDictionary<string, MarketSnapshot>();
+        var orderCache = new ConcurrentDictionary<string, OrderMarketSnapshot>();
+
         _changeMessageFactory = new ChangeMessageFactory();
         _marketSnapshotFactory = new MarketSnapshotFactory();
-        _orderSnapshotFactory = new OrderSnapshotFactory();
+        _orderSnapshotFactory = new OrderSnapshotFactory(orderCache);
 
         _messageSubscription = messageStream.Subscribe(OnMessage, OnException);
     }

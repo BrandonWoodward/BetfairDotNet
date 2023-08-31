@@ -12,15 +12,9 @@ namespace BetfairDotNet.Factories;
 internal class OrderSnapshotFactory : IOrderSnapshotFactory {
 
 
-    private readonly ConcurrentDictionary<string, OrderMarketSnapshot> _orderCache = new();
+    private readonly ConcurrentDictionary<string, OrderMarketSnapshot> _orderCache;
 
 
-    public OrderSnapshotFactory() {
-        _orderCache = new();
-    }
-
-
-    // For testing
     public OrderSnapshotFactory(ConcurrentDictionary<string, OrderMarketSnapshot> orderCache) {
         _orderCache = orderCache;
     }

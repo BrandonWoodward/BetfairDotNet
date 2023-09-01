@@ -1,5 +1,6 @@
 ﻿using BetfairDotNet.Converters;
 using BetfairDotNet.Models.Account;
+using FluentAssertions;
 using Xunit;
 
 namespace BetfairDotNet.Tests.ModelsTests.AccountModelTests;

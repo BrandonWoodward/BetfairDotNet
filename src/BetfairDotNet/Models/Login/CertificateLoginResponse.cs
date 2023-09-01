@@ -1,5 +1,4 @@
-﻿using BetfairDotNet.Converters;
-using BetfairDotNet.Enums.Account;
+﻿using BetfairDotNet.Enums.Account;
 using BetfairDotNet.Interfaces;
 using System.Text.Json.Serialization;
 
@@ -21,6 +20,5 @@ public sealed record CertificateLoginResponse : ILoginResponse {
     /// The possible failure and exceptional return codes.
     /// </summary>
     [JsonPropertyName("loginStatus"), JsonRequired]
-    [JsonConverter(typeof(EmptyStringToEnumConverter<LoginStatusEnum>))]
     public required LoginStatusEnum Status { get; init; }
 }

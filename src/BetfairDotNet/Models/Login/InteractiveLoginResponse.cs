@@ -1,5 +1,4 @@
-﻿using BetfairDotNet.Converters;
-using BetfairDotNet.Enums.Account;
+﻿using BetfairDotNet.Enums.Account;
 using BetfairDotNet.Interfaces;
 using System.Text.Json.Serialization;
 
@@ -22,6 +21,5 @@ public sealed record InteractiveLoginResponse : ILoginResponse {
     /// SUCCESS or the error code if unsuccessful.
     /// </summary>
     [JsonPropertyName("error")]
-    [JsonConverter(typeof(EmptyStringToEnumConverter<LoginStatusEnum>))]
     public LoginStatusEnum Status { get; init; }
 }

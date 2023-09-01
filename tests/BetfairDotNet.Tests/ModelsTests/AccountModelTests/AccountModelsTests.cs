@@ -4,11 +4,13 @@ using FluentAssertions;
 using System.Text.Json;
 using Xunit;
 
-namespace BetfairDotNet.Tests.ModelsTests;
-public class AccountModelsTests {
+namespace BetfairDotNet.Tests.ModelsTests.AccountModelTests;
+public class AccountModelsTests
+{
 
     [Fact]
-    public void AccountDetailsResponse_ShouldDeserializeCorrectly() {
+    public void AccountDetailsResponse_ShouldDeserializeCorrectly()
+    {
         // Arrange
         var json = @" 
         {
@@ -28,7 +30,8 @@ public class AccountModelsTests {
 
         // Assert
         deserialized.Should().NotBeNull();
-        deserialized.Should().BeEquivalentTo(new {
+        deserialized.Should().BeEquivalentTo(new
+        {
             CurrencyCode = "USD",
             FirstName = "John",
             LastName = "Doe",
@@ -43,7 +46,8 @@ public class AccountModelsTests {
 
 
     [Fact]
-    public void AccountFundsResponse_ShouldDeserializeCorrectly() {
+    public void AccountFundsResponse_ShouldDeserializeCorrectly()
+    {
         // Arrange
         var json = @"
         {
@@ -60,7 +64,8 @@ public class AccountModelsTests {
 
         // Assert
         deserialized.Should().NotBeNull();
-        deserialized.Should().BeEquivalentTo(new {
+        deserialized.Should().BeEquivalentTo(new
+        {
             Balance = 100.5,
             Exposure = 20.5,
             RetainedCommission = 5.0,
@@ -72,7 +77,8 @@ public class AccountModelsTests {
 
 
     [Fact]
-    public void AccountStatementReport_ShouldDeserializeCorrectly() {
+    public void AccountStatementReport_ShouldDeserializeCorrectly()
+    {
         // Arrange
         var json = @"
         {
@@ -96,7 +102,8 @@ public class AccountModelsTests {
 
         // Assert
         deserialized.Should().NotBeNull();
-        deserialized.Should().BeEquivalentTo(new AccountStatementReport {
+        deserialized.Should().BeEquivalentTo(new AccountStatementReport
+        {
             AccountStatement = new List<StatementItem> {
                 new StatementItem {
                     RefId = "Ref1",
@@ -116,9 +123,11 @@ public class AccountModelsTests {
 
 
     [Fact]
-    public void CurrencyRate_ShouldSerializeCorrectly() {
+    public void CurrencyRate_ShouldSerializeCorrectly()
+    {
         // Arrange
-        var currencyRate = new CurrencyRate {
+        var currencyRate = new CurrencyRate
+        {
             CurrencyCode = "USD",
             Rate = 1.2
         };

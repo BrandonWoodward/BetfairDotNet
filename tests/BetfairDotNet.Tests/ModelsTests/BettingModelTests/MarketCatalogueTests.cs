@@ -3,15 +3,18 @@ using FluentAssertions;
 using System.Text.Json;
 using Xunit;
 
-namespace BetfairDotNet.Tests.ModelsTests;
+namespace BetfairDotNet.Tests.ModelsTests.BettingModelTests;
 
-public class MarketCatalogueTests {
+public class MarketCatalogueTests
+{
 
 
     [Fact]
-    public void TestMarketCatalogueSerialization() {
+    public void TestMarketCatalogueSerialization()
+    {
         // Arrange
-        var marketCatalogue = new MarketCatalogue {
+        var marketCatalogue = new MarketCatalogue
+        {
             MarketId = "1.123456",
             MarketName = "Some Market",
             MarketStartTime = DateTime.Now,

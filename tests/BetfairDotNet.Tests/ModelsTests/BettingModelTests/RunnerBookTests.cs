@@ -4,11 +4,11 @@ using FluentAssertions;
 using System.Text.Json;
 using Xunit;
 
-namespace BetfairDotNet.Tests.ModelsTests;
+namespace BetfairDotNet.Tests.ModelsTests.BettingModelTests;
 public class RunnerBookTests {
 
     [Fact]
-    public void TestRunnerBookSerialization() {
+    public void RunnerBook_ShouldDeserializeCorrectly() {
         var runnerBook = new RunnerBook {
             SelectionId = 123,
             Handicap = 1.2,

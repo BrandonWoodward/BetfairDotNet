@@ -4,11 +4,13 @@ using FluentAssertions;
 using System.Text.Json;
 using Xunit;
 
-namespace BetfairDotNet.Tests.ModelsTests;
-public class ClearedSummaryReportTests {
+namespace BetfairDotNet.Tests.ModelsTests.BettingModelTests;
+public class ClearedSummaryReportTests
+{
 
     [Fact]
-    public void ClearedOrderSummaryReport_ShouldDeserializeProperly() {
+    public void ClearedOrderSummaryReport_ShouldDeserializeProperly()
+    {
         // Arrange
         var json = @"
         {
@@ -43,7 +45,8 @@ public class ClearedSummaryReportTests {
             ""moreAvailable"": true
         }";
 
-        var expectedReport = new ClearedOrderSummaryReport {
+        var expectedReport = new ClearedOrderSummaryReport
+        {
             ClearedOrders = new List<ClearedOrderSummary> {
                 new ClearedOrderSummary {
                         EventTypeId = "1",

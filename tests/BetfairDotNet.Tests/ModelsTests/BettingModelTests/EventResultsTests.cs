@@ -3,16 +3,20 @@ using FluentAssertions;
 using System.Text.Json;
 using Xunit;
 
-namespace BetfairDotNet.Tests.ModelsTests;
+namespace BetfairDotNet.Tests.ModelsTests.BettingModelTests;
 
 
-public class EventResultsTests {
+public class EventResultsTests
+{
 
     [Fact]
-    public void EventResult_ShouldDeserializeCorrectly() {
+    public void EventResult_ShouldDeserializeCorrectly()
+    {
         // Arrange
-        var eventResult = new EventResult {
-            Event = new Event {
+        var eventResult = new EventResult
+        {
+            Event = new Event
+            {
                 Id = "event1",
                 Name = "Football",
                 CountryCode = "GB",

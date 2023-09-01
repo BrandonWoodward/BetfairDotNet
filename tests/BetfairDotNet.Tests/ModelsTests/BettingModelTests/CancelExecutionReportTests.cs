@@ -4,7 +4,7 @@ using FluentAssertions;
 using System.Text.Json;
 using Xunit;
 
-namespace BetfairDotNet.Tests.ModelsTests;
+namespace BetfairDotNet.Tests.ModelsTests.BettingModelTests;
 
 public class CancelExecutionReportTests {
 

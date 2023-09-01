@@ -3,11 +3,13 @@ using FluentAssertions;
 using System.Text.Json;
 using Xunit;
 
-namespace BetfairDotNet.Tests.ModelsTests;
-public class EventTypeResultTests {
+namespace BetfairDotNet.Tests.ModelsTests.BettingModelTests;
+public class EventTypeResultTests
+{
 
     [Fact]
-    public void EventTypeResult_ShouldDeserializeCorrectly() {
+    public void EventTypeResult_ShouldDeserializeCorrectly()
+    {
         // Arrange
         var json = @"
         {
@@ -18,8 +20,10 @@ public class EventTypeResultTests {
             ""marketCount"": 50
         }";
 
-        var expectedEventTypeResult = new EventTypeResult {
-            EventType = new EventType {
+        var expectedEventTypeResult = new EventTypeResult
+        {
+            EventType = new EventType
+            {
                 Id = "1",
                 Name = "Football"
             },

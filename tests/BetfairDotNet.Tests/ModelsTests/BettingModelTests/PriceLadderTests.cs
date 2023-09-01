@@ -4,7 +4,7 @@ using BetfairDotNet.Models.Streaming;
 using FluentAssertions;
 using Xunit;
 
-namespace BetfairDotNet.Tests.ModelsTests;
+namespace BetfairDotNet.Tests.ModelsTests.BettingModelTests;
 public class PriceLadderTests
 {
 

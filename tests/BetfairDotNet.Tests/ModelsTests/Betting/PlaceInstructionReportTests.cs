@@ -2,11 +2,13 @@
 using BetfairDotNet.Models.Betting;
 using FluentAssertions;
 using System.Text.Json;
+using Xunit;
 
-namespace BetfairDotNet.Tests.ModelsTests.BettingModelTests;
+namespace BetfairDotNet.Tests.ModelsTests.Betting;
 
 public class PlaceInstructionReportTests {
 
+    [Fact]
     public void PlaceInstructionReport_ShouldDeserializeCorrectly() {
         // Arrange
         var placeInstructionReport = new PlaceInstructionReport {

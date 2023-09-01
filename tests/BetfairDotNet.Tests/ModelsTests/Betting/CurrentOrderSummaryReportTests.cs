@@ -4,13 +4,11 @@ using FluentAssertions;
 using System.Text.Json;
 using Xunit;
 
-namespace BetfairDotNet.Tests.ModelsTests.BettingModelTests;
-public class CurrentOrderSummaryReportTests
-{
+namespace BetfairDotNet.Tests.ModelsTests.Betting;
+public class CurrentOrderSummaryReportTests {
 
     [Fact]
-    public void CurrentOrderSummaryReport_ShouldDeserializeProperly()
-    {
+    public void CurrentOrderSummaryReport_ShouldDeserializeProperly() {
         // Arrange
         var json = @"
         {
@@ -46,8 +44,7 @@ public class CurrentOrderSummaryReportTests
             ""moreAvailable"": true
         }";
 
-        var expectedReport = new CurrentOrderSummaryReport
-        {
+        var expectedReport = new CurrentOrderSummaryReport {
             CurrentOrders = new List<CurrentOrderSummary> {
                 new CurrentOrderSummary {
                     BetId = "1",

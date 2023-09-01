@@ -3,7 +3,7 @@ using BetfairDotNet.Models.Betting;
 using FluentAssertions;
 using Xunit;
 
-namespace BetfairDotNet.Tests.ModelsTests.BettingModelTests;
+namespace BetfairDotNet.Tests.ModelsTests.Betting;
 
 public class MarketLineRangeInfoTests {
 

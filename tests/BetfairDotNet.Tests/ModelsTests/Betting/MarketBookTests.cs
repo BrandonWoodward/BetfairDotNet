@@ -4,14 +4,12 @@ using FluentAssertions;
 using System.Text.Json;
 using Xunit;
 
-namespace BetfairDotNet.Tests.ModelsTests.BettingModelTests;
+namespace BetfairDotNet.Tests.ModelsTests.Betting;
 
-public class MarketBookTests
-{
+public class MarketBookTests {
 
     [Fact]
-    public void MarketBook_ShouldDeserializeCorrectly()
-    {
+    public void MarketBook_ShouldDeserializeCorrectly() {
         // Arrange
         var json = @"{
                 ""marketId"": ""1.12345"",
@@ -33,8 +31,7 @@ public class MarketBookTests
                 ""runners"": []
             }";
 
-        var expectedMarketBook = new MarketBook
-        {
+        var expectedMarketBook = new MarketBook {
             MarketId = "1.12345",
             IsMarketDataDelayed = true,
             Status = MarketStatusEnum.OPEN,

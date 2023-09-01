@@ -5,23 +5,19 @@ using Newtonsoft.Json.Linq;
 using System.Text.Json;
 using Xunit;
 
-namespace BetfairDotNet.Tests.ModelsTests.BettingModelTests;
+namespace BetfairDotNet.Tests.ModelsTests.Betting;
 
-public class PriceProjectionTests
-{
+public class PriceProjectionTests {
 
     [Fact]
-    public void PriceProjection_ShouldSerializeCorrectly()
-    {
+    public void PriceProjection_ShouldSerializeCorrectly() {
         // Arrange
-        var priceProjection = new PriceProjection
-        {
+        var priceProjection = new PriceProjection {
             PriceData = new List<PriceDataEnum> {
                 PriceDataEnum.EX_BEST_OFFERS,
                 PriceDataEnum.EX_TRADED
             },
-            ExBestOffersOverrides = new ExBestOffersOverrides
-            {
+            ExBestOffersOverrides = new ExBestOffersOverrides {
                 BestPricesDepth = 1,
                 RollUpModel = RollupModelEnum.PAYOUT,
                 RollUpLimit = 2,

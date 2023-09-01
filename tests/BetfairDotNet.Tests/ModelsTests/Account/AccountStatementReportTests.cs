@@ -3,7 +3,7 @@ using BetfairDotNet.Models.Account;
 using FluentAssertions;
 using Xunit;
 
-namespace BetfairDotNet.Tests.ModelsTests.AccountModelTests;
+namespace BetfairDotNet.Tests.ModelsTests.Account;
 public class AccountStatementReportTests {
 
     [Fact]

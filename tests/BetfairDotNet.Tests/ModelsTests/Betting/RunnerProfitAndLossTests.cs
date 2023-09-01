@@ -3,7 +3,7 @@ using FluentAssertions;
 using System.Text.Json;
 using Xunit;
 
-namespace BetfairDotNet.Tests.ModelsTests.BettingModelTests;
+namespace BetfairDotNet.Tests.ModelsTests.Betting;
 
 public class RunnerProfitAndLossTests {
 

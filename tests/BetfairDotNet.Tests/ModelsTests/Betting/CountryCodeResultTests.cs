@@ -3,22 +3,19 @@ using FluentAssertions;
 using System.Text.Json;
 using Xunit;
 
-namespace BetfairDotNet.Tests.ModelsTests.BettingModelTests;
+namespace BetfairDotNet.Tests.ModelsTests.Betting;
 
-public class CountryCodeResultTests
-{
+public class CountryCodeResultTests {
 
     [Fact]
-    public void CountryCodeResult_ShouldDeserializeCorrectly()
-    {
+    public void CountryCodeResult_ShouldDeserializeCorrectly() {
         // Arrange
         var json = @"{
                 ""countryCode"": ""GB"",
                 ""marketCount"": 50
             }";
 
-        var expectedCountryCodeResult = new CountryCodeResult
-        {
+        var expectedCountryCodeResult = new CountryCodeResult {
             CountryCode = "GB",
             MarketCount = 50
         };

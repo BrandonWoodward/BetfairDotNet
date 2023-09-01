@@ -4,16 +4,13 @@ using FluentAssertions;
 using System.Text.Json;
 using Xunit;
 
-namespace BetfairDotNet.Tests.ModelsTests.BettingModelTests;
-public class PlaceExecutionReportTests
-{
+namespace BetfairDotNet.Tests.ModelsTests.Betting;
+public class PlaceExecutionReportTests {
 
     [Fact]
-    public void PlaceExecutionReport_ShouldDeserializeCorrectly()
-    {
+    public void PlaceExecutionReport_ShouldDeserializeCorrectly() {
         //Arrange
-        var placeExecutionReport = new PlaceExecutionReport
-        {
+        var placeExecutionReport = new PlaceExecutionReport {
             CustomerRef = "some-customer-ref",
             Status = ExecutionReportStatusEnum.PROCESSED_WITH_ERRORS,
             ErrorCode = ExecutionReportErrorCodeEnum.INSUFFICIENT_FUNDS,

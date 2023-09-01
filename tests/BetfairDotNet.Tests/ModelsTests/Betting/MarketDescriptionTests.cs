@@ -4,17 +4,14 @@ using FluentAssertions;
 using System.Text.Json;
 using Xunit;
 
-namespace BetfairDotNet.Tests.ModelsTests.BettingModelTests;
+namespace BetfairDotNet.Tests.ModelsTests.Betting;
 
-public class MarketDescriptionTests
-{
+public class MarketDescriptionTests {
 
     [Fact]
-    public void TestMarketDescriptionSerialization()
-    {
+    public void TestMarketDescriptionSerialization() {
         // Arrange
-        var marketDescription = new MarketDescription
-        {
+        var marketDescription = new MarketDescription {
             IsPersistenceEnabled = true,
             IsBspMarket = false,
             MarketTime = DateTime.Now,
@@ -33,8 +30,7 @@ public class MarketDescriptionTests
             Clarifications = "Some clarifications",
             LineRangeInfo = null, // Replace with actual object if needed
             RaceType = "Horse",
-            PriceLadderDescription = new PriceLadderDescription
-            {
+            PriceLadderDescription = new PriceLadderDescription {
                 Type = PriceLadderTypeEnum.FINEST
             }
         };

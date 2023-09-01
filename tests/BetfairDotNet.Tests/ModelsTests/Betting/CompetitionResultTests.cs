@@ -3,15 +3,13 @@ using FluentAssertions;
 using System.Text.Json;
 using Xunit;
 
-namespace BetfairDotNet.Tests.ModelsTests.BettingModelTests;
+namespace BetfairDotNet.Tests.ModelsTests.Betting;
 
-public class CompetitionResultTests
-{
+public class CompetitionResultTests {
 
 
     [Fact]
-    public void CompetitionResult_ShouldDeserializeCorrectly()
-    {
+    public void CompetitionResult_ShouldDeserializeCorrectly() {
         // Arrange
         var json = @"{
                 ""competition"": {
@@ -22,10 +20,8 @@ public class CompetitionResultTests
                 ""competitionRegion"": ""UK""
             }";
 
-        var expectedCompetitionResult = new CompetitionResult
-        {
-            Competition = new Competition
-            {
+        var expectedCompetitionResult = new CompetitionResult {
+            Competition = new Competition {
                 Id = "comp1",
                 Name = "Premier League"
             },

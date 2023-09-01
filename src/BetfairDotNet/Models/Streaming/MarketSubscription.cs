@@ -46,12 +46,12 @@ public sealed record MarketSubscription : BaseMessage {
     /// Filter for fields to include
     /// </summary>
     [JsonPropertyName("marketDataFilter"), JsonRequired]
-    public MarketDataFilter MarketDataFilter { get; set; }
+    public StreamingMarketDataFilter MarketDataFilter { get; set; }
 
 
     public MarketSubscription(
         MarketFilter marketFilter,
-        MarketDataFilter marketDataFilter,
+        StreamingMarketDataFilter marketDataFilter,
         long heartbeatMs = 30000,
         long conflateMs = 0) {
 

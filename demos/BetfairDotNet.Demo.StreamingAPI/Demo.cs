@@ -39,7 +39,7 @@ var todaysHorseRacing = await client.Betting.ListMarketCatalogue(
 // Create a market subscription
 var marketSubscription = new MarketSubscription(
     new MarketFilter() { MarketIds = new List<string> { todaysHorseRacing[0].MarketId } },
-    new MarketDataFilter { Fields = Enum.GetValues(typeof(MarketPriceFilterEnum)).Cast<MarketPriceFilterEnum>().ToList() },
+    new StreamingMarketDataFilter { Fields = Enum.GetValues(typeof(MarketPriceFilterEnum)).Cast<MarketPriceFilterEnum>().ToList() },
     conflateMs: 200
 );
 

@@ -7,7 +7,7 @@ namespace BetfairDotNet.Models.Streaming;
 /// <summary>
 /// Filter the market data returned from a market subscription.
 /// </summary>
-public sealed class MarketDataFilter {
+public sealed class StreamingMarketDataFilter {
 
     /// <summary>
     /// Number of best prices to return each side of the book.

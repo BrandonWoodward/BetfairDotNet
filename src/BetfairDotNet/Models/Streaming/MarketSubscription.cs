@@ -34,7 +34,7 @@ public sealed record MarketSubscription : BaseMessage {
     /// Gets or Sets MarketFilter
     /// </summary>
     [JsonPropertyName("marketFilter"), JsonRequired]
-    public MarketFilter MarketFilter { get; set; }
+    public StreamingMarketFilter MarketFilter { get; set; }
 
     /// <summary>
     /// The conflation rate (looped back on initial image after validation: bounds are 0 to 120000)
@@ -50,7 +50,7 @@ public sealed record MarketSubscription : BaseMessage {
 
 
     public MarketSubscription(
-        MarketFilter marketFilter,
+        StreamingMarketFilter marketFilter,
         StreamingMarketDataFilter marketDataFilter,
         long heartbeatMs = 30000,
         long conflateMs = 0) {

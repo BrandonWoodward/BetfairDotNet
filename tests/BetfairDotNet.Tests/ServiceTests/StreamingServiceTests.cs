@@ -1,6 +1,5 @@
 ﻿using BetfairDotNet.Handlers;
 using BetfairDotNet.Interfaces;
-using BetfairDotNet.Models.Betting;
 using BetfairDotNet.Models.Streaming;
 using BetfairDotNet.Services;
 using FluentAssertions;
@@ -20,7 +19,7 @@ public class StreamingServiceTests {
         // Arrange
         var sut = new StreamingService(_mockSslSocketHandler, "testApiKey");
         var sessionToken = "sessionToken";
-        var marketSubscription = new MarketSubscription(new MarketFilter(), new StreamingMarketDataFilter());
+        var marketSubscription = new MarketSubscription(new StreamingMarketFilter(), new StreamingMarketDataFilter());
 
         // Act
         var result = await sut.CreateStream(sessionToken, marketSubscription);
@@ -61,7 +60,7 @@ public class StreamingServiceTests {
         // Arrange
         var sut = new StreamingService(_mockSslSocketHandler, "testApiKey");
         var sessionToken = "sessionToken";
-        var marketSubscription = new MarketSubscription(new MarketFilter(), new StreamingMarketDataFilter());
+        var marketSubscription = new MarketSubscription(new StreamingMarketFilter(), new StreamingMarketDataFilter());
         var orderSubscription = new OrderSubscription(new OrderFilter());
 
         // Act
@@ -86,7 +85,7 @@ public class StreamingServiceTests {
         var _mockSslSocketHandler = Substitute.For<ISslSocketHandler>();
         var sut = new StreamingService(_mockSslSocketHandler, "testApiKey");
         var sessionToken = "";
-        var marketSubscription = new MarketSubscription(new MarketFilter(), new StreamingMarketDataFilter());
+        var marketSubscription = new MarketSubscription(new StreamingMarketFilter(), new StreamingMarketDataFilter());
 
         // Act & Assert
         await Assert.ThrowsAsync<ArgumentException>(async ()

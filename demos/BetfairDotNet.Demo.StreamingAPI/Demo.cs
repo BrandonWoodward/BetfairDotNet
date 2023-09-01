@@ -2,7 +2,6 @@
 using BetfairDotNet.Demos;
 using BetfairDotNet.Enums.Betting;
 using BetfairDotNet.Enums.Streaming;
-using BetfairDotNet.Models.Betting;
 using BetfairDotNet.Models.Streaming;
 using BetfairDotNet.Utils;
 using Microsoft.Extensions.Configuration;
@@ -38,7 +37,7 @@ var todaysHorseRacing = await client.Betting.ListMarketCatalogue(
 
 // Create a market subscription
 var marketSubscription = new MarketSubscription(
-    new MarketFilter() { MarketIds = new List<string> { todaysHorseRacing[0].MarketId } },
+    new StreamingMarketFilter() { MarketIds = new List<string> { todaysHorseRacing[0].MarketId } },
     new StreamingMarketDataFilter { Fields = Enum.GetValues(typeof(MarketPriceFilterEnum)).Cast<MarketPriceFilterEnum>().ToList() },
     conflateMs: 200
 );

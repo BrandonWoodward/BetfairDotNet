@@ -4,10 +4,11 @@ using System.Text.Json.Serialization;
 
 namespace BetfairDotNet.Models.Betting;
 
+
 /// <summary>
 /// Summary of a current order (unmatched etc)
 /// </summary>
-public sealed class CurrentOrderSummary {
+public sealed record CurrentOrderSummary {
 
     /// <summary>
     /// The bet ID of the original place order.

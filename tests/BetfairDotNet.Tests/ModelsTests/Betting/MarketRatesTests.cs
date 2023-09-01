@@ -8,7 +8,7 @@ namespace BetfairDotNet.Tests.ModelsTests.Betting;
 public class MarketRatesTests {
 
     [Fact]
-    public void TestMarketRatesSerialization() {
+    public void MarketRates_ShouldDeserializeCorrectly() {
         // Arrange
         var marketRates = new MarketRates {
             MarketBaseRate = 5.0,

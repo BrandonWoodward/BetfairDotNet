@@ -37,9 +37,18 @@ public class PlaceInstructionTests {
             { "selectionId", 123456 },
             { "handicap", 1.5 },
             { "side", "BACK" },
-            { "limitOrder", new JObject() },
-            { "limitOnCloseOrder", new JObject() },
-            { "marketOnCloseOrder", new JObject() },
+            { "limitOrder", new JObject {
+                { "price", 1.23 },
+                { "size", 10.0 },
+                { "persistenceType", "LAPSE" }
+            }},
+            { "limitOnCloseOrder", new JObject {
+                { "price", 1.23 },
+                { "liability", 10.0 }
+            }},
+            { "marketOnCloseOrder", new JObject {
+                { "liability", 10.0 }
+            }},
             { "customerOrderRef", "MyRef" }
         };
 

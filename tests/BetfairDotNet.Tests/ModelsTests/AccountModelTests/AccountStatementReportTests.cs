@@ -19,6 +19,6 @@ public class AccountStatementReportTests {
         var deserializedAccountStatementReport = JsonConvert.Deserialize<AccountStatementReport>(json);
 
         // Assert
-        deserializedAccountStatementReport.Should().Be(accountStatementReport);
+        deserializedAccountStatementReport.Should().BeEquivalentTo(accountStatementReport);
     }
 }

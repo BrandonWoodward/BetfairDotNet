@@ -29,6 +29,6 @@ public class StatementItemTests {
         var deserializedStatementItem = JsonConvert.Deserialize<StatementItem>(json);
 
         // Assert
-        deserializedStatementItem.Should().Be(statementItem);
+        deserializedStatementItem.Should().BeEquivalentTo(statementItem);
     }
 }

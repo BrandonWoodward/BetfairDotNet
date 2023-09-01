@@ -1,9 +1,10 @@
 ﻿using BetfairDotNet.Interfaces;
+using System.Diagnostics.CodeAnalysis;
 using System.Net.Sockets;
 
 namespace BetfairDotNet.Adapters;
 
-
+[ExcludeFromCodeCoverage]
 internal sealed class TcpClientAdapter : IDisposable, ITcpClient {
 
     private readonly TcpClient _tcpClient = new();

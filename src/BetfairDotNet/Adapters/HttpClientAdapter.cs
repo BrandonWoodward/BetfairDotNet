@@ -1,11 +1,12 @@
 ﻿using BetfairDotNet.Interfaces;
+using System.Diagnostics.CodeAnalysis;
 using System.Net;
 using System.Security.Authentication;
 using System.Security.Cryptography.X509Certificates;
 
 namespace BetfairDotNet.Adapters;
 
-
+[ExcludeFromCodeCoverage]
 internal sealed class HttpClientAdapter : IHttpClient {
 
 

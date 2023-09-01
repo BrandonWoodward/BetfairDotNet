@@ -1,10 +1,12 @@
 ﻿using BetfairDotNet.Interfaces;
+using System.Diagnostics.CodeAnalysis;
 using System.Net.Security;
 using System.Net.Sockets;
 
 namespace BetfairDotNet.Adapters;
 
 
+[ExcludeFromCodeCoverage]
 internal sealed class SslStreamAdapter : IDisposable, ISslStream {
 
     private readonly SslStream _sslStream;

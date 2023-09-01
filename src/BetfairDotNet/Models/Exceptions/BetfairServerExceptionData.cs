@@ -17,6 +17,7 @@ public sealed class BetfairServerExceptionData {
     /// <summary>
     /// The inner details of the exception
     /// </summary>
+    [JsonIgnore]
     public BetfairServerExceptionDetails? ExceptionDetails { get; set; }
 
 

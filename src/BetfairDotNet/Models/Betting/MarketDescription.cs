@@ -13,27 +13,27 @@ public sealed record MarketDescription {
     /// If 'true' the market supports 'Keep' bets if the market is to be turned in-play
     /// </summary>
     [JsonPropertyName("persistenceEnabled"), JsonRequired]
-    public required bool IsPersistenceEnabled { get; init; }
+    public bool IsPersistenceEnabled { get; init; }
 
     /// <summary>
     /// If 'true' the market supports Betfair SP betting.
     /// </summary>
     [JsonPropertyName("bspMarket"), JsonRequired]
-    public required bool IsBspMarket { get; init; }
+    public bool IsBspMarket { get; init; }
 
     /// <summary>
     /// The market start time. 
     /// This is the scheduled start time of the market e.g. horse race or football match etc.
     /// </summary>
     [JsonPropertyName("marketTime"), JsonRequired]
-    public required DateTime MarketTime { get; init; }
+    public DateTime MarketTime { get; init; }
 
     /// <summary>
     /// The market suspend time. 
     /// This is the next time the market will be suspended for betting and is normally the same as the marketTime.
     /// </summary>
     [JsonPropertyName("suspendTime"), JsonRequired]
-    public required DateTime? SuspendTime { get; init; }
+    public DateTime? SuspendTime { get; init; }
 
     /// <summary>
     /// The market settle time.
@@ -45,39 +45,39 @@ public sealed record MarketDescription {
     /// See <see cref="MarketBettingTypeEnum"/>
     /// </summary>
     [JsonPropertyName("bettingType"), JsonRequired]
-    public required MarketBettingTypeEnum BettingType { get; init; }
+    public MarketBettingTypeEnum BettingType { get; init; }
 
     /// <summary>
     /// If 'true' the market is set to turn in-play
     /// </summary>
     [JsonPropertyName("turnInPlayEnabled"), JsonRequired]
-    public required bool IsTurnInPlayEnabled { get; init; }
+    public bool IsTurnInPlayEnabled { get; init; }
 
     /// <summary>
     /// Market base type.
     /// </summary>
     [JsonPropertyName("marketType"), JsonRequired]
-    public required string MarketType { get; init; }
+    public string MarketType { get; init; } = string.Empty;
 
     /// <summary>
     /// The market regulator. Value include “GIBRALTAR REGULATOR" (.com), 
     /// MR_ESP (Betfair.es markets), MR_IT (Betfair.it). GIBRALTAR REGULATOR = MR_INT in the Stream API
     /// </summary>
     [JsonPropertyName("regulator"), JsonRequired]
-    public required string Regulator { get; init; }
+    public string Regulator { get; init; } = string.Empty;
 
     /// <summary>
     /// The commission rate applicable to the market.
     /// </summary>
     [JsonPropertyName("marketBaseRate"), JsonRequired]
-    public required double MarketBaseRate { get; init; }
+    public double MarketBaseRate { get; init; }
 
     /// <summary>
     /// Indicates whether or not the user's discount rate is taken into account on this market. 
     /// If ‘false’ all users will be charged the same commission rate, regardless of discount rate.
     /// </summary>
     [JsonPropertyName("discountAllowed"), JsonRequired]
-    public required bool IsDiscountAllowed { get; init; }
+    public bool IsDiscountAllowed { get; init; }
 
     /// <summary>
     /// The wallet to which the market belongs.

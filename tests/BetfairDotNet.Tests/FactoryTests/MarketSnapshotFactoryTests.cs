@@ -5,6 +5,7 @@ using BetfairDotNet.Models.Betting;
 using BetfairDotNet.Models.Streaming;
 using FluentAssertions;
 using System.Collections.Concurrent;
+using System.Text.Json;
 using Xunit;
 
 namespace BetfairDotNet.Tests.FactoryTests;
@@ -31,7 +32,7 @@ public class MarketSnapshotFactoryTests {
     [Fact]
     public void ProcessImage_ShouldReturnMarketSnapshot_WhenMessageIsImage() {
         // Arrange
-        var atl = new List<List<double>>() { new() { 1.23, 150 }, new() { 1.24, 300 } };
+        var atl = new List<List<double>>() { new() { 0, 1.23, 150 }, new() { 1, 1.24, 300 } };
         var atb = new List<List<double>>() { new() { 1.25, 150 }, new() { 1.26, 300 } };
         var trd = new List<List<double>>() { new() { 1.27, 100 }, new() { 1.28, 100 } };
         var rnrChange = new RunnerChange() { Id = 12345, LastTradedPrice = 1.29, AvailableToBack = atb, AvailableToLay = atl, TradedVolume = trd };
@@ -43,14 +44,14 @@ public class MarketSnapshotFactoryTests {
         var marketChanges = new List<MarketChange> { marketChange };
         var changeMessage = new MarketChangeMessage() { Id = 123, ChangeType = ChangeTypeEnum.SUB_IMAGE, MarketChanges = marketChanges };
 
-        var expAtl = new PriceLadder(SideEnum.LAY, new List<PriceSize> { new(1.23, 150), new(1.24, 300) });
+        var expAtl = new PriceLadder(SideEnum.LAY, new List<PriceSize> { new(1.24, 150), new(1.23, 300) });
         var expAtb = new PriceLadder(SideEnum.BACK, new List<PriceSize> { new(1.25, 150), new(1.26, 300) });
         var expTrd = new PriceLadder(SideEnum.BACK, new List<PriceSize> { new(1.27, 100), new(1.28, 100) });
         var expRnrDef = new RunnerDefinition() { Id = 12345, SortPriority = 1, Status = RunnerStatusEnum.ACTIVE };
         var expRnrSnap = new RunnerSnapshot() { SelectionId = 12345, LastTradedPrice = 1.29, ToBack = expAtb, ToLay = expAtl, Traded = expTrd, RunnerDefinition = expRnrDef };
         var expRnrSnaps = new Dictionary<long, RunnerSnapshot> { [12345] = expRnrSnap };
         var expMarketDef = new MarketDefinition() { Status = MarketStatusEnum.OPEN, Runners = new List<RunnerDefinition> { expRnrDef } };
-        var expectedSnapshot = new MarketSnapshot() { MarketId = "marketId", MarketDefinition = expMarketDef, RunnerSnapshots = expRnrSnaps };
+        var expSnapshot = new MarketSnapshot() { MarketId = "marketId", MarketDefinition = expMarketDef, RunnerSnapshots = expRnrSnaps };
         var cache = new ConcurrentDictionary<string, MarketSnapshot>();
 
         // Act
@@ -58,7 +59,7 @@ public class MarketSnapshotFactoryTests {
         var actual = sut.GetSnapshots(changeMessage).First();
 
         // Assert
-        actual.Should().BeEquivalentTo(expectedSnapshot);
+        Assert.Equal(JsonSerializer.Serialize(expSnapshot), JsonSerializer.Serialize(actual));
     }
 
 
@@ -70,7 +71,7 @@ public class MarketSnapshotFactoryTests {
         var trd = new List<List<double>>() { new() { 1.28, 100 } };
         var rnrChange = new RunnerChange() { Id = 12345, LastTradedPrice = 1.29, AvailableToBack = atb, AvailableToLay = atl, TradedVolume = trd };
         var rnrChanges = new List<RunnerChange> { rnrChange };
-        var rnrDef = new RunnerDefinition() { Id = 12345, SortPriority = 1, Status = RunnerStatusEnum.ACTIVE };
+        var rnrDef = new RunnerDefinition() { Id = 12345, SortPriority = 1, Status = RunnerStatusEnum.REMOVED };
         var rnrDefs = new List<RunnerDefinition> { rnrDef };
         var marketDef = new MarketDefinition() { Status = MarketStatusEnum.OPEN, Runners = rnrDefs };
         var marketChange = new MarketChange() { Id = "marketId", IsImage = false, RunnerChanges = rnrChanges, MarketDefinition = marketDef };
@@ -90,7 +91,7 @@ public class MarketSnapshotFactoryTests {
         var expAtl = new PriceLadder(SideEnum.LAY, new List<PriceSize> { new(1.23, 150), new(1.24, 300) });
         var expAtb = new PriceLadder(SideEnum.BACK, new List<PriceSize> { new(1.25, 75) });
         var expTrd = new PriceLadder(SideEnum.BACK, new List<PriceSize> { new(1.28, 100), new(1.27, 100) });
-        var expRnrDef = new RunnerDefinition() { Id = 12345, SortPriority = 1, Status = RunnerStatusEnum.ACTIVE };
+        var expRnrDef = new RunnerDefinition() { Id = 12345, SortPriority = 1, Status = RunnerStatusEnum.REMOVED };
         var expRnrSnap = new RunnerSnapshot() { SelectionId = 12345, LastTradedPrice = 1.29, ToBack = expAtb, ToLay = expAtl, Traded = expTrd, RunnerDefinition = expRnrDef };
         var expRnrSnaps = new Dictionary<long, RunnerSnapshot> { [12345] = expRnrSnap };
         var expMarketDef = new MarketDefinition() { Status = MarketStatusEnum.OPEN, Runners = new List<RunnerDefinition> { expRnrDef } };
@@ -101,6 +102,6 @@ public class MarketSnapshotFactoryTests {
         var actual = sut.GetSnapshots(changeMessage).First();
 
         // Assert
-        actual.Should().BeEquivalentTo(expSnapshot);
+        Assert.Equal(JsonSerializer.Serialize(expSnapshot), JsonSerializer.Serialize(actual));
     }
 }

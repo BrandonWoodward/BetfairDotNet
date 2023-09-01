@@ -78,6 +78,7 @@ internal class MarketSnapshotFactory : IMarketSnapshotFactory {
         foreach(var runner in mc.RunnerChanges) {
             var cachedRunner = cachedRunners[runner.Id];
             var updatedRunnerSnapshot = cachedRunner with {
+                RunnerDefinition = mc.MarketDefinition?.Runners.First(r => r.Id == runner.Id) ?? cachedRunner.RunnerDefinition,
                 LastTradedPrice = runner.LastTradedPrice ?? cachedRunner.LastTradedPrice,
                 StartingPriceNear = runner.StartingPriceNear ?? cachedRunner.StartingPriceNear,
                 StartingPriceFar = runner.StartingPriceFar ?? cachedRunner.StartingPriceFar,

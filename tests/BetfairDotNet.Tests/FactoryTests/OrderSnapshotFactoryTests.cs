@@ -5,6 +5,7 @@ using BetfairDotNet.Models.Betting;
 using BetfairDotNet.Models.Streaming;
 using FluentAssertions;
 using System.Collections.Concurrent;
+using System.Text.Json;
 using Xunit;
 
 namespace BetfairDotNet.Tests.FactoryTests;
@@ -39,7 +40,7 @@ public class OrderSnapshotFactoryTests {
         var expUo = new Dictionary<string, ESAOrder> { ["betId"] = new ESAOrder() { Id = "betId", Size = 100, Price = 6.78 } };
         var expRunnerSnapshot = new OrderRunnerSnapshot(12345) { UnmatchedOrders = expUo };
         var expRunnerSnapshots = new Dictionary<long, OrderRunnerSnapshot> { [12345] = expRunnerSnapshot };
-        var expectedSnapshot = new OrderMarketSnapshot() { MarketId = "marketId", OrderRunnerSnapshots = expRunnerSnapshots };
+        var expSnapshot = new OrderMarketSnapshot() { MarketId = "marketId", OrderRunnerSnapshots = expRunnerSnapshots };
 
         var cache = new ConcurrentDictionary<string, OrderMarketSnapshot>();
 
@@ -48,7 +49,7 @@ public class OrderSnapshotFactoryTests {
         var actual = sut.GetSnapshots(changeMessage).First();
 
         // Assert
-        actual.Should().BeEquivalentTo(expectedSnapshot);
+        Assert.Equal(JsonSerializer.Serialize(expSnapshot), JsonSerializer.Serialize(actual));
     }
 
 
@@ -92,6 +93,6 @@ public class OrderSnapshotFactoryTests {
         var actual = sut.GetSnapshots(changeMessage).First();
 
         // Assert
-        actual.Should().BeEquivalentTo(expSnapshot);
+        Assert.Equal(JsonSerializer.Serialize(expSnapshot), JsonSerializer.Serialize(actual));
     }
 }

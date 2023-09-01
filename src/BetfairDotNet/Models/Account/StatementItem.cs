@@ -5,7 +5,7 @@ namespace BetfairDotNet.Models.Account;
 
 
 /// <summary>
-/// Summary of a cleared order.
+/// A item returned in the AccountStatementReport.
 /// </summary>
 public sealed record class StatementItem {
 

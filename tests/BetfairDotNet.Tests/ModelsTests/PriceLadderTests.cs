@@ -4,12 +4,14 @@ using BetfairDotNet.Models.Streaming;
 using FluentAssertions;
 using Xunit;
 
-namespace BetfairDotNet.Tests;
-public class PriceLadderTests {
+namespace BetfairDotNet.Tests.ModelsTests;
+public class PriceLadderTests
+{
 
 
     [Fact]
-    public void AddLevel_AddsPriceAndSize() {
+    public void AddLevel_AddsPriceAndSize()
+    {
         // Arrange
         var ladder = new PriceLadder(SideEnum.BACK);
 
@@ -24,7 +26,8 @@ public class PriceLadderTests {
 
 
     [Fact]
-    public void RemoveLevelByPrice_RemovesLevel_WhenPriceExists() {
+    public void RemoveLevelByPrice_RemovesLevel_WhenPriceExists()
+    {
         // Arrange
         var ladder = new PriceLadder(SideEnum.BACK);
         ladder.AddLevel(1.5, new PriceSize(1.5, 100));
@@ -38,7 +41,8 @@ public class PriceLadderTests {
 
 
     [Fact]
-    public void RemoveLevelByPrice_LeavesLadderUnchanged_WhenPriceNotExists() {
+    public void RemoveLevelByPrice_LeavesLadderUnchanged_WhenPriceNotExists()
+    {
         // Arrange
         var ladder = new PriceLadder(SideEnum.BACK);
         ladder.AddLevel(1.77, new PriceSize(1.5, 100));
@@ -53,7 +57,8 @@ public class PriceLadderTests {
 
 
     [Fact]
-    public void AddOrUpdateLevelByPrice_UpdatesSize_WhenPriceExists() {
+    public void AddOrUpdateLevelByPrice_UpdatesSize_WhenPriceExists()
+    {
         // Arrange
         var ladder = new PriceLadder(SideEnum.BACK);
         ladder.AddLevel(1.5, new PriceSize(1.5, 100));
@@ -68,7 +73,8 @@ public class PriceLadderTests {
 
 
     [Fact]
-    public void AddOrUpdateLevelByPrice_AddsLevel_WhenPriceNotExists() {
+    public void AddOrUpdateLevelByPrice_AddsLevel_WhenPriceNotExists()
+    {
         // Arrange
         var ladder = new PriceLadder(SideEnum.BACK);
 
@@ -83,7 +89,8 @@ public class PriceLadderTests {
 
 
     [Fact]
-    public void RemoveLevelByDepth_RemovesLevel_WhenPriceExists() {
+    public void RemoveLevelByDepth_RemovesLevel_WhenPriceExists()
+    {
         // Arrange
         var ladder = new PriceLadder(SideEnum.BACK);
         ladder.AddLevel(1.5, new PriceSize(1.5, 100));
@@ -99,7 +106,8 @@ public class PriceLadderTests {
 
 
     [Fact]
-    public void RemoveLevelByDepth_LeavesLadderUnchanged_WhenDepthOutOfRange() {
+    public void RemoveLevelByDepth_LeavesLadderUnchanged_WhenDepthOutOfRange()
+    {
         // Arrange
         var ladder = new PriceLadder(SideEnum.BACK);
         ladder.AddLevel(1.5, new PriceSize(1.5, 100));
@@ -116,7 +124,8 @@ public class PriceLadderTests {
 
 
     [Fact]
-    public void AddOrUpdateByDepth_AddsLevel_WhenPriceNotExists() {
+    public void AddOrUpdateByDepth_AddsLevel_WhenPriceNotExists()
+    {
         // Arrange
         var ladder = new PriceLadder(SideEnum.BACK);
         ladder.AddLevel(1.5, new PriceSize(1.5, 100));
@@ -132,7 +141,8 @@ public class PriceLadderTests {
 
 
     [Fact]
-    public void AddOrUpdateByDepth_UpdatesSize_WhenPriceExists() {
+    public void AddOrUpdateByDepth_UpdatesSize_WhenPriceExists()
+    {
         // Arrange
         var ladder = new PriceLadder(SideEnum.BACK);
         ladder.AddLevel(1.5, new PriceSize(1.5, 100));
@@ -148,7 +158,8 @@ public class PriceLadderTests {
 
 
     [Fact]
-    public void PriceLadder_ShouldSortAscending_WhenSideIsBack() {
+    public void PriceLadder_ShouldSortAscending_WhenSideIsBack()
+    {
         // Arrange
         var ladder = new PriceLadder(SideEnum.BACK);
         ladder.AddLevel(2.5, new PriceSize(2.5, 150));
@@ -163,7 +174,8 @@ public class PriceLadderTests {
 
 
     [Fact]
-    public void PriceLadder_ShouldSortDescending_WhenSideIsLay() {
+    public void PriceLadder_ShouldSortDescending_WhenSideIsLay()
+    {
         // Arrange
         var ladder = new PriceLadder(SideEnum.LAY);
         ladder.AddLevel(2.5, new PriceSize(2.5, 150));

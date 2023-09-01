@@ -1,7 +1,10 @@
-﻿namespace BetfairDotNet.Enums.Streaming;
+﻿using BetfairDotNet.Converters;
+using System.Text.Json.Serialization;
+
+namespace BetfairDotNet.Enums.Streaming;
 
 
-
+[JsonConverter(typeof(CustomStringToEnumConverter<MarketPriceFilterEnum>))]
 public enum MarketPriceFilterEnum {
 
     /// <summary>

@@ -1,11 +1,14 @@
-﻿namespace BetfairDotNet.Enums.Betting;
+﻿using BetfairDotNet.Converters;
+using System.Text.Json.Serialization;
+
+namespace BetfairDotNet.Enums.Betting;
 
 
+[JsonConverter(typeof(CustomStringToEnumConverter<BetStatusEnum>))]
 public enum BetStatusEnum {
 
-
     /// <summary>
-    /// 
+    /// The bet is still active and has not been settled.
     /// </summary>
     ACTIVE,
 

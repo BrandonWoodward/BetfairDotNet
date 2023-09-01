@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 namespace BetfairDotNet.Converters;
 
 
-internal class EmptyStringToEnumConverter<TEnum> : JsonConverter<TEnum> where TEnum : Enum {
+internal class CustomStringToEnumConverter<TEnum> : JsonConverter<TEnum> where TEnum : Enum {
 
     public override TEnum Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) {
         var str = reader.GetString();

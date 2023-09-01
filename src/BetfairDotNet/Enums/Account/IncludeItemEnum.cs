@@ -1,6 +1,15 @@
-﻿namespace BetfairDotNet.Enums.Account;
+﻿using BetfairDotNet.Converters;
+using System.Text.Json.Serialization;
 
+namespace BetfairDotNet.Enums.Account;
+
+[JsonConverter(typeof(CustomStringToEnumConverter<IncludeItemEnum>))]
 public enum IncludeItemEnum {
+
+    /// <summary>
+    /// The default value.
+    /// </summary>
+    NONE,
 
     /// <summary>
     /// Include all items.

@@ -1,6 +1,11 @@
-﻿namespace BetfairDotNet.Enums.Account;
+﻿using BetfairDotNet.Converters;
+using System.Text.Json.Serialization;
 
+namespace BetfairDotNet.Enums.Account;
+
+[JsonConverter(typeof(CustomStringToEnumConverter<LoginStatusEnum>))]
 public enum LoginStatusEnum {
+
     /// <summary>
     /// The login was successful.
     /// </summary>

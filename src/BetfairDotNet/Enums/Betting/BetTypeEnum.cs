@@ -1,6 +1,10 @@
-﻿namespace BetfairDotNet.Enums.Betting;
+﻿using BetfairDotNet.Converters;
+using System.Text.Json.Serialization;
+
+namespace BetfairDotNet.Enums.Betting;
 
 
+[JsonConverter(typeof(CustomStringToEnumConverter<BetTypeEnum>))]
 public enum BetTypeEnum {
     /// <summary>
     /// Order by market id, then placed time, then bet id.

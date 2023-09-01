@@ -1,6 +1,10 @@
-﻿namespace BetfairDotNet.Enums.Betting;
+﻿using BetfairDotNet.Converters;
+using System.Text.Json.Serialization;
+
+namespace BetfairDotNet.Enums.Betting;
 
 
+[JsonConverter(typeof(CustomStringToEnumConverter<MarketSortEnum>))]
 public enum MarketSortEnum {
 
     /// <summary>
@@ -32,5 +36,4 @@ public enum MarketSortEnum {
     /// The most distant markets based on their expected start time.
     /// </summary>
     LAST_TO_START,
-
 }

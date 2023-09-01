@@ -1,4 +1,5 @@
 ﻿using BetfairDotNet.Models.Betting;
+using System.Diagnostics.CodeAnalysis;
 
 namespace BetfairDotNet.Utils;
 
@@ -6,6 +7,7 @@ namespace BetfairDotNet.Utils;
 /// <summary>
 /// A collection of common market filters.
 /// </summary>
+[ExcludeFromCodeCoverage]
 public static class MarketFilterHelpers {
 
     /// <summary>

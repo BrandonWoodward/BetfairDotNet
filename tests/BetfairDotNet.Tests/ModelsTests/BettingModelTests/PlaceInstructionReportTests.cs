@@ -8,6 +8,7 @@ namespace BetfairDotNet.Tests.ModelsTests.BettingModelTests;
 public class PlaceInstructionReportTests {
 
     public void PlaceInstructionReport_ShouldDeserializeCorrectly() {
+        // Arrange
         var placeInstructionReport = new PlaceInstructionReport {
             Status = InstructionReportStatusEnum.SUCCESS,
             ErrorCode = InstructionReportErrorCodeEnum.ERROR_IN_MATCHER,
@@ -23,10 +24,11 @@ public class PlaceInstructionReportTests {
             SizeMatched = 100.0
         };
 
+        // Act
         var json = JsonSerializer.Serialize(placeInstructionReport);
         var deserializedPlaceInstructionReport = JsonSerializer.Deserialize<PlaceInstructionReport>(json);
 
-        // Your assertions here to compare 'placeInstructionReport' and 'deserializedPlaceInstructionReport'
+        // Assert
         placeInstructionReport.Should().BeEquivalentTo(deserializedPlaceInstructionReport);
     }
 }

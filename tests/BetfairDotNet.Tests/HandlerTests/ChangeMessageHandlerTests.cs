@@ -1,4 +1,5 @@
-﻿using BetfairDotNet.Handlers;
+﻿using BetfairDotNet.Enums.Streaming;
+using BetfairDotNet.Handlers;
 using BetfairDotNet.Interfaces;
 using BetfairDotNet.Models.Exceptions;
 using BetfairDotNet.Models.Streaming;
@@ -18,7 +19,7 @@ public class ChangeMessageHandlerTests {
     [Fact]
     public void HandleMessage_ShouldNotCallFactories_WhenMessageEmpty() {
         // Arrange
-        var handler = new ChangeMessageHandler(
+        var sut = new ChangeMessageHandler(
             _changeMessageFactory,
             _marketSnapshotFactory,
             _orderSnapshotFactory,
@@ -26,10 +27,30 @@ public class ChangeMessageHandlerTests {
         );
 
         // Act
-        handler.HandleMessage(ReadOnlyMemory<byte>.Empty);
+        sut.HandleMessage(ReadOnlyMemory<byte>.Empty);
 
         // Assert
         _changeMessageFactory.DidNotReceive().Process(Arg.Any<ReadOnlyMemory<byte>>());
+    }
+
+
+    [Fact]
+    public void HandleMessage_ShouldCallSubjectOnExceptionNext_WhenMessageIsStatusAndNotSuccess() {
+        // Arrange
+        var changeMessage = new StatusMessage() { StatusCode = StatusCodeEnum.FAILURE };
+        _changeMessageFactory.Process(Arg.Any<ReadOnlyMemory<byte>>()).Returns(changeMessage);
+        var sut = new ChangeMessageHandler(
+            _changeMessageFactory,
+            _marketSnapshotFactory,
+            _orderSnapshotFactory,
+            _changeMessageSubject
+        );
+
+        // Act
+        sut.HandleMessage(new ReadOnlyMemory<byte>(new byte[1]));
+
+        // Assert
+        _changeMessageSubject.Received(1).OnExceptionNext(Arg.Any<BetfairESAException>());
     }
 
 
@@ -40,7 +61,7 @@ public class ChangeMessageHandlerTests {
         var marketSnapshot = new MarketSnapshot();
         _changeMessageFactory.Process(Arg.Any<ReadOnlyMemory<byte>>()).Returns(changeMessage);
         _marketSnapshotFactory.GetSnapshots(changeMessage).Returns(new List<MarketSnapshot> { marketSnapshot });
-        var handler = new ChangeMessageHandler(
+        var sut = new ChangeMessageHandler(
             _changeMessageFactory,
             _marketSnapshotFactory,
             _orderSnapshotFactory,
@@ -48,7 +69,7 @@ public class ChangeMessageHandlerTests {
         );
 
         // Act
-        handler.HandleMessage(new ReadOnlyMemory<byte>(new byte[1]));
+        sut.HandleMessage(new ReadOnlyMemory<byte>(new byte[1]));
 
         // Assert
         _changeMessageSubject.Received(1).OnMarketNext(marketSnapshot);
@@ -62,7 +83,7 @@ public class ChangeMessageHandlerTests {
         var orderSnapshot = new OrderMarketSnapshot();
         _changeMessageFactory.Process(Arg.Any<ReadOnlyMemory<byte>>()).Returns(changeMessage);
         _orderSnapshotFactory.GetSnapshots(changeMessage).Returns(new List<OrderMarketSnapshot> { orderSnapshot });
-        var handler = new ChangeMessageHandler(
+        var sut = new ChangeMessageHandler(
             _changeMessageFactory,
             _marketSnapshotFactory,
             _orderSnapshotFactory,
@@ -70,7 +91,7 @@ public class ChangeMessageHandlerTests {
         );
 
         // Act
-        handler.HandleMessage(new ReadOnlyMemory<byte>(new byte[1]));
+        sut.HandleMessage(new ReadOnlyMemory<byte>(new byte[1]));
 
         // Assert
         _changeMessageSubject.Received(1).OnOrderNext(orderSnapshot);
@@ -81,7 +102,7 @@ public class ChangeMessageHandlerTests {
     public void HandleException_ShouldCallSubjectOnExceptionNext_WhenBetfairESAExceptionThrown() {
         // Arrange
         var exception = new BetfairESAException(false, "Some message");
-        var handler = new ChangeMessageHandler(
+        var sut = new ChangeMessageHandler(
             _changeMessageFactory,
             _marketSnapshotFactory,
             _orderSnapshotFactory,
@@ -89,7 +110,7 @@ public class ChangeMessageHandlerTests {
         );
 
         // Act
-        handler.HandleException(exception);
+        sut.HandleException(exception);
 
         // Assert
         _changeMessageSubject.Received(1).OnExceptionNext(exception);

@@ -1,5 +1,4 @@
-﻿using BetfairDotNet.Handlers;
-using BetfairDotNet.Interfaces;
+﻿using BetfairDotNet.Interfaces;
 using BetfairDotNet.Models.Streaming;
 
 namespace BetfairDotNet.Services;
@@ -10,13 +9,18 @@ namespace BetfairDotNet.Services;
 /// </summary>
 public sealed class StreamingService {
 
-
     private readonly ISslSocketHandler _tcpClient;
+    private readonly IStreamSubscriptionHandler _streamSubscriptionHandler;
     private readonly string _apiKey;
 
 
-    internal StreamingService(ISslSocketHandler tcpClient, string apiKey) {
+    internal StreamingService(
+        ISslSocketHandler tcpClient,
+        IStreamSubscriptionHandler streamSubscriptionHandler,
+        string apiKey) {
+
         _tcpClient = tcpClient;
+        _streamSubscriptionHandler = streamSubscriptionHandler;
         _apiKey = apiKey;
     }
 
@@ -27,14 +31,14 @@ public sealed class StreamingService {
     /// <param name="sessionToken"></param>
     /// <param name="marketSubscription"></param>
     /// <returns></returns>
-    public async Task<StreamSubscriptionHandler> CreateStream(
+    public async Task<IStreamSubscriptionHandler> CreateStream(
         string sessionToken,
         MarketSubscription marketSubscription) {
 
         CheckSessionToken(sessionToken);
         await AuthenticateConnection(sessionToken);
         await _tcpClient.SendLine(marketSubscription);
-        return new StreamSubscriptionHandler(_tcpClient.MessageStream);
+        return _streamSubscriptionHandler;
     }
 
 
@@ -45,14 +49,14 @@ public sealed class StreamingService {
     /// <param name="marketSubscription"></param>
     /// <param name="orderSubscription"></param>
     /// <returns></returns>
-    public async Task<StreamSubscriptionHandler> CreateStream(
+    public async Task<IStreamSubscriptionHandler> CreateStream(
         string sessionToken,
         OrderSubscription orderSubscription) {
 
         CheckSessionToken(sessionToken);
         await AuthenticateConnection(sessionToken);
         await _tcpClient.SendLine(orderSubscription);
-        return new StreamSubscriptionHandler(_tcpClient.MessageStream);
+        return _streamSubscriptionHandler;
     }
 
 
@@ -63,7 +67,7 @@ public sealed class StreamingService {
     /// <param name="marketSubscription"></param>
     /// <param name="orderSubscription"></param>
     /// <returns></returns>
-    public async Task<StreamSubscriptionHandler> CreateStream(
+    public async Task<IStreamSubscriptionHandler> CreateStream(
         string sessionToken,
         MarketSubscription marketSubscription,
         OrderSubscription orderSubscription) {
@@ -72,7 +76,7 @@ public sealed class StreamingService {
         await AuthenticateConnection(sessionToken);
         await _tcpClient.SendLine(orderSubscription);
         await _tcpClient.SendLine(marketSubscription);
-        return new StreamSubscriptionHandler(_tcpClient.MessageStream);
+        return _streamSubscriptionHandler;
     }
 
 

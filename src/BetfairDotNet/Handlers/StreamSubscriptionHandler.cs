@@ -1,12 +1,7 @@
-﻿using BetfairDotNet.Enums.Streaming;
-using BetfairDotNet.Factories;
-using BetfairDotNet.Interfaces;
-using BetfairDotNet.Models.Exceptions;
+﻿using BetfairDotNet.Interfaces;
 using BetfairDotNet.Models.Streaming;
-using System.Collections.Concurrent;
 using System.Reactive.Disposables;
 using System.Reactive.Linq;
-using System.Reactive.Subjects;
 
 namespace BetfairDotNet.Handlers;
 
@@ -14,90 +9,25 @@ namespace BetfairDotNet.Handlers;
 /// <summary>
 /// Handles subscriptions to the Betfair Streaming API.
 /// </summary>
-public sealed class StreamSubscriptionHandler : IDisposable {
+public sealed class StreamSubscriptionHandler : IDisposable, IStreamSubscriptionHandler {
 
-
-    private readonly Subject<MarketSnapshot> _marketSubject;
-    private readonly Subject<OrderMarketSnapshot> _orderSubject;
-    private readonly Subject<BetfairESAException> _exceptionSubject;
+    private readonly ISubject _changeMessageSubject;
     private readonly IDisposable _messageSubscription;
-    private readonly IChangeMessageFactory _changeMessageFactory;
-    private readonly IMarketSnapshotFactory _marketSnapshotFactory;
-    private readonly IOrderSnapshotFactory _orderSnapshotFactory;
 
     private Func<MarketSnapshot, bool>? _marketPredicate;
     private Func<OrderMarketSnapshot, bool>? _orderPredicate;
 
 
-    internal StreamSubscriptionHandler(IObservable<ReadOnlyMemory<byte>> messageStream) {
-        _marketSubject = new();
-        _orderSubject = new();
-        _exceptionSubject = new();
+    internal StreamSubscriptionHandler(
+        IChangeMessageHandler changeMessageHandler,
+        IObservable<ReadOnlyMemory<byte>> messageStream,
+        ISubject changeMessageSubject) {
 
-        var marketCache = new ConcurrentDictionary<string, MarketSnapshot>();
-        var orderCache = new ConcurrentDictionary<string, OrderMarketSnapshot>();
-
-        _changeMessageFactory = new ChangeMessageFactory();
-        _marketSnapshotFactory = new MarketSnapshotFactory(marketCache);
-        _orderSnapshotFactory = new OrderSnapshotFactory(orderCache);
-
-        _messageSubscription = messageStream.Subscribe(OnMessage, OnException);
-    }
-
-
-    private void OnMessage(ReadOnlyMemory<byte> message) {
-        if(message.IsEmpty) return; // Should only happen in testing
-        var changeMessage = _changeMessageFactory.Process(message);
-        switch(changeMessage) {
-            case ConnectionMessage connection:
-                OnConnection(connection);
-                break;
-            case StatusMessage status:
-                OnStatus(status);
-                break;
-            case MarketChangeMessage marketChange:
-                OnMarket(marketChange);
-                break;
-            case OrderChangeMessage orderChange:
-                OnOrder(orderChange);
-                break;
-        }
-    }
-
-
-    private void OnException(Exception ex) {
-        if(ex is BetfairESAException esaEx) {
-            _exceptionSubject.OnNext(esaEx);
-        }
-    }
-
-
-    private void OnConnection(ConnectionMessage connection) {
-        // TODO: log connection id
-    }
-
-
-    private void OnStatus(StatusMessage statusChange) {
-        if(statusChange.StatusCode == StatusCodeEnum.SUCCESS) return;
-        var message = $"{statusChange.ErrorCode}: {statusChange.ErrorMessage}";
-        var exception = new BetfairESAException(false, message);
-        _exceptionSubject.OnNext(exception);
-    }
-
-
-    private void OnOrder(OrderChangeMessage orderChange) {
-        var orderSnaps = _orderSnapshotFactory.GetSnapshots(orderChange);
-        foreach(var orderSnap in orderSnaps) {
-            _orderSubject.OnNext(orderSnap);
-        }
-    }
-
-
-    private void OnMarket(MarketChangeMessage marketChange) {
-        var marketSnaps = _marketSnapshotFactory.GetSnapshots(marketChange);
-        foreach(var marketSnap in marketSnaps) {
-            _marketSubject.OnNext(marketSnap);
-        }
+        _changeMessageSubject = changeMessageSubject;
+        _messageSubscription = messageStream.Subscribe(
+            changeMessageHandler.HandleMessage,
+            changeMessageHandler.HandleException
+        );
     }
 
 
@@ -175,19 +105,13 @@ public sealed class StreamSubscriptionHandler : IDisposable {
 
         var disposables = new List<IDisposable>();
         if(onMarketChange != null) {
-            var marketObservable = _marketPredicate == null
-                ? _marketSubject.AsObservable()
-                : _marketSubject.Where(_marketPredicate);
-            disposables.Add(marketObservable.Subscribe(onMarketChange));
+            disposables.Add(_changeMessageSubject.SubscribeMarket(onMarketChange, _marketPredicate));
         }
         if(onOrderChange != null) {
-            var orderObservable = _orderPredicate == null
-                ? _orderSubject.AsObservable()
-                : _orderSubject.Where(_orderPredicate);
-            disposables.Add(orderObservable.Subscribe(onOrderChange));
+            disposables.Add(_changeMessageSubject.SubscribeOrder(onOrderChange, _orderPredicate));
         }
         if(onException != null) {
-            disposables.Add(_exceptionSubject.Subscribe(onException));
+            disposables.Add(_changeMessageSubject.SubscribeException(onException));
         }
         return new CompositeDisposable(disposables);
     }
@@ -195,8 +119,6 @@ public sealed class StreamSubscriptionHandler : IDisposable {
 
     public void Dispose() {
         _messageSubscription.Dispose();
-        _marketSubject.Dispose();
-        _orderSubject.Dispose();
-        _exceptionSubject.Dispose();
+        _changeMessageSubject.Dispose();
     }
 }

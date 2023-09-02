@@ -42,8 +42,7 @@ public sealed class BetfairClient : IBetfairClient {
 
     /// <summary>
     /// Create a new BetfairClient instance, which is the top level client for all operations.
-    /// This should be instantiated once per application lifetime. If using a DI container,
-    /// register this as a singleton.
+    /// This should be instantiated once per application lifetime.
     /// </summary>
     /// <param name="apiKey"></param>
     /// <param name="username"></param>
@@ -52,11 +51,10 @@ public sealed class BetfairClient : IBetfairClient {
     public BetfairClient(string apiKey, string username, string password, string? certPath = null) {
         // These are abstracted away so that they can be mocked for unit testing.
         var httpClient = new HttpClientAdapter(apiKey, 5000);
-        var tcpClient = new TcpClientAdapter();
-        var sslStream = new SslStreamAdapter(tcpClient.GetStream());
+        var sslSocket = new SslSocketAdapter();
 
         var requestHandler = new RequestResponseHandler(httpClient);
-        var socketHandler = new SslSocketHandler(tcpClient, sslStream, StreamingEndpoints.Production);
+        var socketHandler = new SslSocketHandler(sslSocket, StreamingEndpoints.Production);
 
         Login = new LoginService(requestHandler, username, password, certPath);
         Account = new AccountService(requestHandler);

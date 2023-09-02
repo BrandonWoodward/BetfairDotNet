@@ -13,25 +13,23 @@ namespace BetfairDotNet.Handlers;
 
 internal sealed class SslSocketHandler : ISslSocketHandler {
 
-    private readonly ITcpClient _client;
-    private readonly ISslStream _sslStream;
+    private readonly ISslSocket _socket;
     private readonly Subject<ReadOnlyMemory<byte>> _messageSubject = new();
     private readonly object _stopLock = new();
     private readonly string _endpoint;
     private readonly int _port = 443;
 
     private int _incrementId;
-    private Thread _listener;
-    private CancellationTokenSource _cts;
+    private Thread? _listener;
+    private CancellationTokenSource? _cts;
 
 
     public IObservable<ReadOnlyMemory<byte>> MessageStream
         => _messageSubject.AsObservable();
 
 
-    internal SslSocketHandler(ITcpClient tcpClient, ISslStream sslStream, string endpoint) {
-        _client = tcpClient;
-        _sslStream = sslStream;
+    internal SslSocketHandler(ISslSocket sslStream, string endpoint) {
+        _socket = sslStream;
         _endpoint = endpoint;
     }
 
@@ -39,8 +37,8 @@ internal sealed class SslSocketHandler : ISslSocketHandler {
     public async Task Start() {
         _cts = new(); // Used to shutdown background thread
         try {
-            await _client.ConnectAsync(_endpoint, _port);
-            await _sslStream.AuthenticateAsClientAsync(_endpoint);
+            await _socket.ConnectAsync(_endpoint, _port);
+            await _socket.AuthenticateAsClientAsync(_endpoint);
             _listener = new Thread(() => ReceiveLines(_cts.Token));
             _listener.Start();
         }
@@ -55,12 +53,10 @@ internal sealed class SslSocketHandler : ISslSocketHandler {
 
     public void Stop() {
         lock(_stopLock) { // Stop race condition
-            _cts.Cancel();
-            _cts.Dispose();
-            _sslStream?.Close();
-            _sslStream?.Dispose();
-            _client?.Close();
-            _client?.Dispose();
+            _cts?.Cancel();
+            _cts?.Dispose();
+            _socket?.Close();
+            _socket?.Dispose();
         }
     }
 
@@ -70,7 +66,7 @@ internal sealed class SslSocketHandler : ISslSocketHandler {
             message.Id = Interlocked.Increment(ref _incrementId);
             var messageJson = JsonConvert.Serialize(message);
             var messageBytes = Encoding.UTF8.GetBytes(messageJson + "\r\n"); // CRLF is required
-            await _sslStream.WriteAsync(messageBytes);
+            await _socket.WriteAsync(messageBytes);
         }
         catch(IOException ex) {
             _messageSubject.OnError(
@@ -85,8 +81,8 @@ internal sealed class SslSocketHandler : ISslSocketHandler {
         var delimiter = "\r\n"u8.ToArray(); // Separate each message to processs individually
         var bufferOffset = 0;
         try {
-            while(_client.Connected && !token.IsCancellationRequested) {
-                var bytesRead = _sslStream.Read(buffer, bufferOffset, buffer.Length - bufferOffset);
+            while(_socket.IsConnected() && !token.IsCancellationRequested) {
+                var bytesRead = _socket.Read(buffer, bufferOffset, buffer.Length - bufferOffset);
                 bufferOffset += bytesRead;
                 var foundIndex = 0;
                 while((foundIndex = buffer.AsSpan(0, bufferOffset).IndexOf(delimiter)) != -1) {

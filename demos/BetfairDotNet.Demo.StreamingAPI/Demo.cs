@@ -50,7 +50,7 @@ var orderSubscription = new OrderSubscription(
 
 
 // Connect to the streaming service
-using var stream = await client.Streaming.CreateStream(
+var stream = await client.Streaming.CreateStream(
     session.SessionToken,
     marketSubscription,
     orderSubscription

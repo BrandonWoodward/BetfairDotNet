@@ -1,11 +1,14 @@
 ﻿using BetfairDotNet.Interfaces;
 using BetfairDotNet.Models.Exceptions;
 using BetfairDotNet.Models.Streaming;
+using System.Diagnostics.CodeAnalysis;
 using System.Reactive.Linq;
 using System.Reactive.Subjects;
 
 namespace BetfairDotNet.Adapters;
 
+
+[ExcludeFromCodeCoverage]
 internal class SubjectAdapter : ISubject {
 
     private readonly Subject<MarketSnapshot> _marketSubject;

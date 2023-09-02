@@ -29,10 +29,8 @@ internal class ChangeMessageHandler : IChangeMessageHandler {
     public void HandleMessage(ReadOnlyMemory<byte> message) {
         if(message.IsEmpty) return; // Should only happen in testing
         var changeMessage = _changeMessageFactory.Process(message);
+        // TODO handle ConnectionMessage and log ConnectionId
         switch(changeMessage) {
-            case ConnectionMessage connection:
-                HandleConnection(connection);
-                break;
             case StatusMessage status:
                 HandleStatus(status);
                 break;
@@ -74,10 +72,5 @@ internal class ChangeMessageHandler : IChangeMessageHandler {
         foreach(var orderSnap in orderSnaps) {
             _changeMessageSubject.OnOrderNext(orderSnap);
         }
-    }
-
-
-    private void HandleConnection(ConnectionMessage connectionMessage) {
-        // TODO log connection id here
     }
 }

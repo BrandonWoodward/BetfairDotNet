@@ -12,29 +12,27 @@ namespace BetfairDotNet.Tests.HandlerTests;
 public class SslSocketHandlerTests {
 
 
-    private readonly ITcpClient _mockTcpClient;
-    private readonly ISslStream _mockSslStream;
+    private readonly ISslSocket _mockSslSocket;
     private readonly SslSocketHandler _handler;
 
 
     public SslSocketHandlerTests() {
-        _mockTcpClient = Substitute.For<ITcpClient>();
-        _mockSslStream = Substitute.For<ISslStream>();
-        _handler = new SslSocketHandler(_mockTcpClient, _mockSslStream, "test-endpoint");
+        _mockSslSocket = Substitute.For<ISslSocket>();
+        _handler = new SslSocketHandler(_mockSslSocket, "test-endpoint");
     }
 
 
     [Fact]
     public async Task Start_ShouldConnectAndAuthenticate() {
         // Arrange
-        _mockTcpClient.Connected.Returns(true);
+        _mockSslSocket.IsConnected().Returns(true);
 
         // Act
         await _handler.Start();
 
         // Assert
-        await _mockTcpClient.Received().ConnectAsync("test-endpoint", 443);
-        await _mockSslStream.Received().AuthenticateAsClientAsync("test-endpoint");
+        await _mockSslSocket.Received().ConnectAsync("test-endpoint", 443);
+        await _mockSslSocket.Received().AuthenticateAsClientAsync("test-endpoint");
     }
 
 
@@ -42,8 +40,8 @@ public class SslSocketHandlerTests {
     public async Task Start_ShouldPropagateCustomException_WhenSocketExceptionIsThrown() {
         // Arrange
         var observedException = new TaskCompletionSource<Exception>();
-        _mockTcpClient.When(x => x.ConnectAsync(Arg.Any<string>(), Arg.Any<int>())).Do(x => throw new SocketException());
-        var handler = new SslSocketHandler(_mockTcpClient, _mockSslStream, "testEndpoint");
+        _mockSslSocket.When(x => x.ConnectAsync(Arg.Any<string>(), Arg.Any<int>())).Do(x => throw new SocketException());
+        var handler = new SslSocketHandler(_mockSslSocket, "testEndpoint");
         handler.MessageStream.Subscribe(_ => { }, observedException.SetResult);
 
         // Act
@@ -67,7 +65,7 @@ public class SslSocketHandlerTests {
         await _handler.SendLine(message);
 
         // Assert
-        await _mockSslStream.Received().WriteAsync(Arg.Any<byte[]>());
+        await _mockSslSocket.Received().WriteAsync(Arg.Any<byte[]>());
     }
 
 
@@ -76,13 +74,13 @@ public class SslSocketHandlerTests {
         // Arrange
         var observedException = new TaskCompletionSource<Exception>();
         var message = new AuthenticationMessage("testToken", "testApiKey");
-        _mockSslStream.When(x => x.WriteAsync(Arg.Any<byte[]>())).Do(x => throw new IOException());
+        _mockSslSocket.When(x => x.WriteAsync(Arg.Any<byte[]>())).Do(x => throw new IOException());
 
-        var handler = new SslSocketHandler(_mockTcpClient, _mockSslStream, "testEndpoint");
+        var handler = new SslSocketHandler(_mockSslSocket, "testEndpoint");
 
         handler.MessageStream.Subscribe(
             _ => { /* Do nothing on next */ },
-            ex => observedException.SetResult(ex) // Set the exception when OnError is called
+            observedException.SetResult // Set the exception when OnError is called
         );
 
         // Act
@@ -90,7 +88,6 @@ public class SslSocketHandlerTests {
 
         // Assert
         var exception = await observedException.Task;
-
         exception.Should().NotBeNull();
         exception.Should().BeOfType<BetfairESAException>();
         ((BetfairESAException)exception).InnerException.Should().BeOfType<IOException>();
@@ -100,14 +97,14 @@ public class SslSocketHandlerTests {
     [Fact]
     public void Stop_ShouldDisposeResources() {
         // Arrange
-        _mockTcpClient.Connected.Returns(true);
+        _mockSslSocket.IsConnected().Returns(true);
 
         // Act
         _handler.Start().Wait();
         _handler.Stop();
 
         // Assert
-        _mockTcpClient.Received().Close();
-        _mockSslStream.Received().Close();
+        _mockSslSocket.Received().Close();
+        _mockSslSocket.Received().Close();
     }
 }

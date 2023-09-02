@@ -9,15 +9,15 @@ public sealed record MarketSnapshot {
     /// <summary>
     /// The unique identifier for the market.
     /// </summary>
-    public required string MarketId { get; init; }
+    public string MarketId { get; init; } = string.Empty;
 
     /// <summary>
     /// The market metadata
     /// </summary>
-    public required MarketDefinition? MarketDefinition { get; init; }
+    public MarketDefinition? MarketDefinition { get; init; }
 
     /// <summary>
     /// The snapshots of each runner in the market.
     /// </summary>
-    public required Dictionary<long, RunnerSnapshot> RunnerSnapshots { get; init; }
+    public Dictionary<long, RunnerSnapshot> RunnerSnapshots { get; init; } = new();
 }

@@ -9,7 +9,7 @@ public record OrderMarketSnapshot {
     /// <summary>
     /// The id of this market.
     /// </summary>
-    public required string MarketId { get; init; }
+    public string MarketId { get; init; } = string.Empty;
 
     /// <summary>
     /// The order snapshots for each runner.

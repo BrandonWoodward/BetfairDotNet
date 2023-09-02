@@ -6,21 +6,76 @@ namespace BetfairDotNet.Tests;
 public class BetfairClientTests {
 
     [Fact]
-    public void BetfairClient_CreatesServicesCorrectly() {
+    public void LoginService_ShouldBeInitialized() {
         // Arrange
-        var apiKey = "YourApiKey";
-        var username = "YourUsername";
-        var password = "YourPassword";
-        string? certPath = null;
+        var apiKey = "someApiKey";
+        var username = "someUsername";
+        var password = "somePassword";
 
         // Act
-        var betfairClient = new BetfairClient(apiKey, username, password, certPath);
+        var client = new BetfairClient(apiKey, username, password);
 
         // Assert
-        betfairClient.Login.Should().NotBeNull("Login service should be initialized");
-        betfairClient.Account.Should().NotBeNull("Account service should be initialized");
-        betfairClient.Betting.Should().NotBeNull("Betting service should be initialized");
-        betfairClient.Heartbeat.Should().NotBeNull("Heartbeat service should be initialized");
-        betfairClient.Streaming.Should().NotBeNull("Streaming service should be initialized");
+        client.Login.Should().NotBeNull();
+    }
+
+
+    [Fact]
+    public void AccountService_ShouldBeInitialized() {
+        // Arrange
+        var apiKey = "someApiKey";
+        var username = "someUsername";
+        var password = "somePassword";
+
+        // Act
+        var client = new BetfairClient(apiKey, username, password);
+
+        // Assert
+        client.Account.Should().NotBeNull();
+    }
+
+
+    [Fact]
+    public void BettingService_ShouldBeInitialized() {
+        // Arrange
+        var apiKey = "someApiKey";
+        var username = "someUsername";
+        var password = "somePassword";
+
+        // Act
+        var client = new BetfairClient(apiKey, username, password);
+
+        // Assert
+        client.Betting.Should().NotBeNull();
+    }
+
+
+    [Fact]
+    public void HeartbeatService_ShouldBeInitialized() {
+        // Arrange
+        var apiKey = "someApiKey";
+        var username = "someUsername";
+        var password = "somePassword";
+
+        // Act
+        var client = new BetfairClient(apiKey, username, password);
+
+        // Assert
+        client.Heartbeat.Should().NotBeNull();
+    }
+
+
+    [Fact]
+    public void StreamingService_ShouldBeInitialized() {
+        // Arrange
+        var apiKey = "someApiKey";
+        var username = "someUsername";
+        var password = "somePassword";
+
+        // Act
+        var client = new BetfairClient(apiKey, username, password);
+
+        // Assert
+        client.Streaming.Should().NotBeNull();
     }
 }

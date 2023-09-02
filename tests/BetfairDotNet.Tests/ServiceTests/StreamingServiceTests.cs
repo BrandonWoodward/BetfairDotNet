@@ -1,5 +1,4 @@
-﻿using BetfairDotNet.Handlers;
-using BetfairDotNet.Interfaces;
+﻿using BetfairDotNet.Interfaces;
 using BetfairDotNet.Models.Streaming;
 using BetfairDotNet.Services;
 using FluentAssertions;
@@ -12,83 +11,77 @@ namespace BetfairDotNet.Tests.ServiceTests;
 public class StreamingServiceTests {
 
     private readonly ISslSocketHandler _mockSslSocketHandler = Substitute.For<ISslSocketHandler>();
+    private readonly IStreamSubscriptionHandler _mockStreamSubscriptionHandler = Substitute.For<IStreamSubscriptionHandler>();
 
 
     [Fact]
     public async Task CreateStream_ShouldReturnSubscriptionHandler_WhenSessionTokenAndMarketSubscriptionProvided() {
         // Arrange
-        var sut = new StreamingService(_mockSslSocketHandler, "testApiKey");
-        var sessionToken = "sessionToken";
+        var apiKey = "someApiKey";
+        var sessionToken = "someToken";
+        var service = new StreamingService(_mockSslSocketHandler, _mockStreamSubscriptionHandler, apiKey);
         var marketSubscription = new MarketSubscription(new StreamingMarketFilter(), new StreamingMarketDataFilter());
 
         // Act
-        var result = await sut.CreateStream(sessionToken, marketSubscription);
+        var result = await service.CreateStream(sessionToken, marketSubscription);
 
         // Assert
-        await _mockSslSocketHandler.Received().Start();
-        await _mockSslSocketHandler.Received().SendLine(Arg.Is<AuthenticationMessage>(msg
-            => msg.SessionToken == sessionToken && msg.ApiKey == "testApiKey"));
-        await _mockSslSocketHandler.Received().SendLine(marketSubscription);
-        result.Should().NotBeNull().And.BeOfType<StreamSubscriptionHandler>();
+        result.Should().Be(_mockStreamSubscriptionHandler);
+        await _mockSslSocketHandler.Received(1).Start();
+        await _mockSslSocketHandler.Received(1).SendLine(new AuthenticationMessage(sessionToken, apiKey));
+        await _mockSslSocketHandler.Received(1).SendLine(marketSubscription);
     }
 
 
     [Fact]
     public async Task CreateStream_ShouldReturnSubscriptionHandler_WhenSessionTokenAndOrderSubscriptionProvided() {
         // Arrange
-        var sut = new StreamingService(_mockSslSocketHandler, "testApiKey");
-        var sessionToken = "sessionToken";
+        var apiKey = "someApiKey";
+        var sessionToken = "someToken";
+        var service = new StreamingService(_mockSslSocketHandler, _mockStreamSubscriptionHandler, apiKey);
         var orderSubscription = new OrderSubscription(new OrderFilter());
 
         // Act
-        var result = await sut.CreateStream(sessionToken, orderSubscription);
+        var result = await service.CreateStream(sessionToken, orderSubscription);
 
         // Assert
-        await _mockSslSocketHandler.Received().Start();
-        await _mockSslSocketHandler.Received().SendLine(Arg.Is<AuthenticationMessage>(msg
-            => msg.SessionToken == sessionToken && msg.ApiKey == "testApiKey"));
-        await _mockSslSocketHandler.Received().SendLine(orderSubscription);
-        result.Should().NotBeNull().And.BeOfType<StreamSubscriptionHandler>();
-
-        // Teardown
-        result.Dispose();
+        result.Should().Be(_mockStreamSubscriptionHandler);
+        await _mockSslSocketHandler.Received(1).Start();
+        await _mockSslSocketHandler.Received(1).SendLine(new AuthenticationMessage(sessionToken, apiKey));
+        await _mockSslSocketHandler.Received(1).SendLine(orderSubscription);
     }
 
 
     [Fact]
     public async Task CreateStream_ShouldReturnSubscriptionHandler_WhenSessionTokenAndBothSubscriptionsProvided() {
         // Arrange
-        var sut = new StreamingService(_mockSslSocketHandler, "testApiKey");
-        var sessionToken = "sessionToken";
+        var apiKey = "someApiKey";
+        var sessionToken = "someToken";
+        var service = new StreamingService(_mockSslSocketHandler, _mockStreamSubscriptionHandler, apiKey);
         var marketSubscription = new MarketSubscription(new StreamingMarketFilter(), new StreamingMarketDataFilter());
         var orderSubscription = new OrderSubscription(new OrderFilter());
 
         // Act
-        var result = await sut.CreateStream(sessionToken, marketSubscription, orderSubscription);
+        var result = await service.CreateStream(sessionToken, marketSubscription, orderSubscription);
 
         // Assert
-        await _mockSslSocketHandler.Received().Start();
-        await _mockSslSocketHandler.Received().SendLine(Arg.Is<AuthenticationMessage>(msg
-            => msg.SessionToken == sessionToken && msg.ApiKey == "testApiKey"));
-        await _mockSslSocketHandler.Received().SendLine(marketSubscription);
-        await _mockSslSocketHandler.Received().SendLine(orderSubscription);
-        result.Should().NotBeNull().And.BeOfType<StreamSubscriptionHandler>();
-
-        // Teardown
-        result.Dispose();
+        result.Should().Be(_mockStreamSubscriptionHandler);
+        await _mockSslSocketHandler.Received(1).Start();
+        await _mockSslSocketHandler.Received(1).SendLine(new AuthenticationMessage(sessionToken, apiKey));
+        await _mockSslSocketHandler.Received(1).SendLine(marketSubscription);
     }
 
 
     [Fact]
-    public async Task CreateStream_ShouldThrowArgumentException_WhenSessionTokenNotProvided() {
+    public void CreateStream_ShouldThrowArgumentException_WhenSessionTokenNotProvided() {
         // Arrange
-        var _mockSslSocketHandler = Substitute.For<ISslSocketHandler>();
-        var sut = new StreamingService(_mockSslSocketHandler, "testApiKey");
+        var apiKey = "someApiKey";
         var sessionToken = "";
+        var service = new StreamingService(_mockSslSocketHandler, _mockStreamSubscriptionHandler, apiKey);
         var marketSubscription = new MarketSubscription(new StreamingMarketFilter(), new StreamingMarketDataFilter());
 
         // Act & Assert
-        await Assert.ThrowsAsync<ArgumentException>(async ()
-            => await sut.CreateStream(sessionToken, marketSubscription));
+        Func<Task> act = async () => await service.CreateStream(sessionToken, marketSubscription);
+        act.Should().ThrowAsync<ArgumentException>().WithMessage("Session token not provided.");
     }
 }

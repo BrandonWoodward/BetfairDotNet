@@ -12,11 +12,16 @@ public abstract record BaseMessage {
     /// The operation type
     /// </summary>
     [JsonPropertyName("op"), JsonRequired]
-    public string Operation { get; init; } = string.Empty;
+    public string Operation { get; init; }
 
     /// <summary>
     /// Client generated unique id to link request with response (like json rpc)    
     /// /// </summary>
     [JsonPropertyName("id")]
     public int? Id { get; set; }
+
+
+    public BaseMessage(string operation) {
+        Operation = operation;
+    }
 }

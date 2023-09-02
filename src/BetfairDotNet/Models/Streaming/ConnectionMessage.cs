@@ -13,4 +13,6 @@ internal sealed record ConnectionMessage : BaseMessage {
     /// </summary>
     [JsonPropertyName("connectionId"), JsonRequired]
     public required string ConnectionId { get; set; }
+
+    public ConnectionMessage() : base("connection") { }
 }

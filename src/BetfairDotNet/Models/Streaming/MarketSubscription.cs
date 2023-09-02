@@ -1,5 +1,4 @@
-﻿using BetfairDotNet.Models.Betting;
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 
 namespace BetfairDotNet.Models.Streaming;
 
@@ -53,9 +52,8 @@ public sealed record MarketSubscription : BaseMessage {
         StreamingMarketFilter marketFilter,
         StreamingMarketDataFilter marketDataFilter,
         long heartbeatMs = 30000,
-        long conflateMs = 0) {
+        long conflateMs = 0) : base("marketSubscription") {
 
-        Operation = "marketSubscription";
         MarketFilter = marketFilter;
         MarketDataFilter = marketDataFilter;
         HeartbeatMs = heartbeatMs;

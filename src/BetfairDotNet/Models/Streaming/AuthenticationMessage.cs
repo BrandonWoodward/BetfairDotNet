@@ -18,8 +18,7 @@ internal sealed record AuthenticationMessage : BaseMessage {
     public string ApiKey { get; set; }
 
 
-    internal AuthenticationMessage(string sessionToken, string apiKey) {
-        Operation = "authentication";
+    internal AuthenticationMessage(string sessionToken, string apiKey) : base("authentication") {
         SessionToken = sessionToken;
         ApiKey = apiKey;
     }

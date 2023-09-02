@@ -47,9 +47,8 @@ public sealed record OrderSubscription : BaseMessage {
     public OrderSubscription(
         OrderFilter orderFilter,
         long heartbeatMs = 30000,
-        long conflateMs = 0) {
+        long conflateMs = 0) : base("orderSubscription") {
 
-        Operation = "orderSubscription";
         OrderFilter = orderFilter;
         HeartbeatMs = heartbeatMs;
         ConflateMs = conflateMs;

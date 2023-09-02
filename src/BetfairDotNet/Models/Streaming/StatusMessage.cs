@@ -35,4 +35,6 @@ internal sealed record StatusMessage : BaseMessage {
     /// </summary>
     [JsonPropertyName("connectionClosed")]
     public bool ConnectionClosed { get; init; }
+
+    public StatusMessage() : base("status") { }
 }

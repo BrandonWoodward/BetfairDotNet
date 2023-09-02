@@ -57,4 +57,7 @@ internal sealed record MarketChangeMessage : BaseMessage {
     /// </summary>
     [JsonPropertyName("conflateMs")]
     public long? ConflateMs { get; set; }
+
+
+    public MarketChangeMessage() : base("mcm") { }
 }

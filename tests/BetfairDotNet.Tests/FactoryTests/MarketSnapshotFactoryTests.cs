@@ -66,7 +66,7 @@ public class MarketSnapshotFactoryTests {
     [Fact]
     public void ProcessImage_ShouldReturnMarketSnapshot_WhenMessageIsDelta() {
         // Arrange
-        var atl = new List<List<double>>() { new() { 1.23, 150 } };
+        var atl = new List<List<double>>() { new() { 0, 1.23, 150 } };
         var atb = new List<List<double>>() { new() { 1.25, 75 }, new() { 1.26, 0 } };
         var trd = new List<List<double>>() { new() { 1.28, 100 } };
         var rnrChange = new RunnerChange() { Id = 12345, LastTradedPrice = 1.29, AvailableToBack = atb, AvailableToLay = atl, TradedVolume = trd };

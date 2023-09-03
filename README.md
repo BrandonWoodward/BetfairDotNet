@@ -1,43 +1,61 @@
-#  BetfairDotNet 
+<h1 align="center">
+  BetfairDotNet
+  <br>
+</h1>
 
-<div align="left">
+<div align="center">
 
-[![Tests](https://github.com/BrandonWoodward/BetfairDotNet/actions/workflows/dotnet.yml/badge.svg)](https://github.com/BrandonWoodward/BetfairDotNet/actions/workflows/dotnet.yml)
+[![build](https://github.com/BrandonWoodward/BetfairDotNet/actions/workflows/dotnet.yml/badge.svg)](https://github.com/BrandonWoodward/BetfairDotNet/actions/workflows/dotnet.yml)
 [![codecov](https://codecov.io/gh/BrandonWoodward/BetfairDotNet/branch/master/graph/badge.svg)](https://codecov.io/gh/BrandonWoodward/BetfairDotNet)
 [![NuGet Version](https://img.shields.io/nuget/v/BetfairDotNet.svg?style=flat)](https://www.nuget.org/packages/BetfairDotNet/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yourusername/yourrepository/blob/main/LICENSE)
 
 </div>
 
----
+<h4 align="center"> 🚀 A fast, easy to use C# client for the <a href="https://docs.developer.betfair.com/display/1smk3cen4v3lu3yomq5qye0ni" target="_blank">Betfair API</a>.</h4>
 
-A fast, easy to use Betfair API client for .NET 7. Includes functionality for login, accounts, betting, heartbeat and streaming.
-
----
+<br>
+<br>
 
 ## Table of Contents
 
-- [📦 Installation](#installation)
-- [📖 Examples](#examples)
-  - [Login](#login)
-  - [List Markets](#list-markets)
-  - [Place Orders](#place-orders)
-  - [Streaming](#streaming)
-
----
-
-## 📦 Installation
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Login](#login)
+- [API-NG](#api-ng)
+- [Streaming](#streaming)
 
 <br>
+
+## Requirements
+
+You will need a Betfair account, an api key and a self-signed SSL certificate.
+<br>
+<br>
+You can obtain an api key by following the instructions [here](https://docs.developer.betfair.com/display/1smk3cen4v3lu3yomq5qye0ni/Application+Keys"). If you want to use a non-interactive login flow, you 
+should follow the instructions [here](https://docs.developer.betfair.com/display/1smk3cen4v3lu3yomq5qye0ni/Non-Interactive+%28bot%29+login) to create an SSL certificate.
+<br>
+<br>
+To run the demo, you will need to create a `credentials.json` file in the root of the demo project:
+```json
+{
+	"API_KEY": "your_api_key_here",
+	"USERNAME": "your_username_here",
+	"PASSWORD": "your_password_here",
+	"CERT_PATH": "full_path_to_.pfx_or_.p12"
+}
+```
+<br>
+
+## Installation
 
 Install via NuGet Package Manager or the .NET CLI:
 
 ```bash
 dotnet add package BetfairDotNet --version x.y.z
 ```
-<br>
 
-To work directly with the source code, clone this repository and build the project locally:
+Or clone this repository and build the project locally:
 
 ```bash
 git clone https://github.com/yourusername/BetfairDotNet.git
@@ -58,12 +76,11 @@ To run the demo, you also need to provide a `credentials.json` file in the root 
 }
 ```
 
-## 📖 Basic Usage
+<br>
 
-###  Login
+##  Login
 
-The recommended and most secure login flow uses a self-signed SSL certificate. 
-You can find more information about creating a certificate [here](https://docs.developer.betfair.com/display/1smk3cen4v3lu3yomq5qye0ni/Non-Interactive+%28bot%29+login)
+The recommended and most secure login flow uses a self-signed SSL certificate:
 
 ```csharp
 // Enter your credentials here
@@ -73,8 +90,7 @@ var client = new BetfairClient(apiKey, username, password, certPath)
 var session = await client.Login.CertificateLogin();
 ```
 
-
-You can also provide just your username and password. This is recommended if you're creating your own login form.
+You can also provide just your username and password. This is recommended if you're creating your own login form:
 
 ```csharp
 // Enter your credentials here
@@ -84,51 +100,44 @@ var client = new BetfairClient(apiKey, username, password)
 var session = await client.Login.InteractiveLogin();
 ```
 
-### List Markets
+<br>
 
-Here's how you can list today's GB/IRE horse racing markets.
-MarketFilterHelpers contains some pre-configured filters for common use cases.
+## API-NG
 
-```csharp
-var todaysHorseRacing = await client.Betting.ListMarketCatalogue(
-    MarketFilterHelpers.TodaysGBAndIREHorseRacingWinOnly(),
-    Enum.GetValues(typeof(MarketProjectionEnum)).Cast<MarketProjectionEnum>().ToList(),
-    MarketSortEnum.FIRST_TO_START,
-    maxResults: 100
-);
-```
+The following functionality is available:
 
-### Place Orders
+- Account
+	- `GetAccountFunds`
+	- `GetAccountDetails`
+	- `GetAccountStatement`
+	- `ListCurrencyRates`	
+- Betting
+	- `ListClearedOrders`
+	- `ListCompetitions`
+	- `ListCountries`
+	- `ListCurrentOrders`
+	- `ListEvents`
+	- `ListEventTypes`
+	- `ListMarketBook`
+	- `ListMarketCatalogue`
+	- `ListMarketProfitAndLoss`
+	- `ListMarketTypes`
+	- `ListRunnerBook`
+	- `ListTimeRanges`
+	- `ListVenues`
+	- `PlaceOrders`
+	- `UpdateOrders`
+	- `ReplaceOrders`
+- Heartbeat
+	- `Heartbeat`
+	- `KeepAlive`
 
-For detailed options on placing orders, see the official Betfair documentation [here](https://docs.developer.betfair.com/display/1smk3cen4v3lu3yomq5qye0ni/placeOrders).
+<br>
 
-```csharp
-var placeInstructions = new List<PlaceInstruction> {
-    new PlaceInstruction {
-        OrderType = OrderTypeEnum.LIMIT,
-        SelectionId = 123456789,
-        Side = SideEnum.BACK,
-        LimitOrder = new LimitOrder {
-            Size = 100,
-            Price = 2.00,
-            PersistenceType = PersistenceTypeEnum.LAPSE,
-        }
-    }
-};
+## Streaming
 
-var report await client.Betting.PlaceOrders(
-    /* market id */, 
-    placeInstructions,
-    /* optional customer ref */
-);
-```
+`BetfairDotNet` produces immutable, atomic snapshots for each market in your subscription so you don't have to worry about implementing a cache yourself. 
 
-
-### Streaming
-
-The streaming functionality was implemented using [Rx.NET](https://github.com/dotnet/reactive). Define your subscription criteria, 
-create the stream using the SessionToken (obtained from login) and subscribe to the events you are interested in. 
-`BetfairDotNet` produces immutable, atomic snapshots for each market in your subscription so you don't have to worry about implementing a cache yourself.
 
 ```csharp
 // Define your subscription criteria
@@ -161,8 +170,8 @@ A fluent interface is also exposed which optionally allows the chaining of predi
 
 ```csharp
 stream
-  .FilterMarkets(ms => /* your condition */)
-  .FilterOrders(os => /* your condition */)
+  .WithMarkets(ms => /* your condition */)
+  .WithOrders(os => /* your condition */)
   .Subscribe(
     ms => { /* handle market snapshots */ },
     os => { /* handle order snapshots */ },

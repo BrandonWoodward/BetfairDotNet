@@ -51,4 +51,17 @@ public sealed class HeartbeatService {
             args
         );
     }
+
+
+    /// <summary>
+    /// You can use Keep Alive to extend the session timeout period. 
+    /// On the international (.com) Exchange the current session time is 12 hours. 
+    /// You should request Keep Alive within this time to prevent session expiry. 
+    /// If you don't call Keep Alive within the specified timeout period, the session will expire. 
+    /// Please note:  Session times aren't determined or extended based on API activity.
+    /// </summary>
+    /// <returns></returns>
+    public Task<KeepAliveResponse> KeepAive() {
+        return _networkService.Request<KeepAliveResponse>(HeartbeatEndpoints.KeepAlive);
+    }
 }

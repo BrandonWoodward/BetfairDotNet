@@ -20,29 +20,42 @@ internal class RequestResponseHandler : IRequestResponseHandler {
     }
 
 
-    public async Task<T> Request<T>(string url, string method, Dictionary<string, object?>? data = null) {
+    public async Task<T> Request<T>(string url, string? method = null, Dictionary<string, object?>? data = null) {
 
-        var requestBody = new BetfairServerRequest() { Method = method, Params = data };
-        var requestJson = JsonConvert.Serialize(requestBody);
+        string requestJson;
+
+        if(string.IsNullOrEmpty(method)) {
+            // Serialize data directly if "method" is not defined
+            requestJson = JsonConvert.Serialize(data);
+        }
+        else {
+            var requestBody = new BetfairServerRequest() { Method = method, Params = data };
+            requestJson = JsonConvert.Serialize(requestBody);
+        }
 
         try {
             var rawResponse = await _httpClient.PostStringContent(url, requestJson);
             var response = JsonConvert.Deserialize<BetfairServerResponse<T>>(rawResponse);
 
+            if(response == null) {
+                throw new BetfairNGException($"{url}{method}", data, requestJson, "NULL_RESPONSE");
+            }
+
             return response.Error is not null
-                ? throw new BetfairNGException(url + method, data, requestJson, response.Error)
+                ? throw new BetfairNGException($"{url}{method}", data, requestJson, response.Error)
                 : response.Response!;
         }
         catch(HttpRequestException e) {
-            throw new BetfairNGException(url + method, data, requestJson, $"NETWORK_ERROR ({e.StatusCode})", e);
+            throw new BetfairNGException($"{url}{method}", data, requestJson, $"NETWORK_ERROR ({e.StatusCode})", e);
         }
         catch(TaskCanceledException e) when(!e.CancellationToken.IsCancellationRequested) {
-            throw new BetfairNGException(url + method, data, requestJson, "NETWORK_ERROR (Timeout)", e);
+            throw new BetfairNGException($"{url}{method}", data, requestJson, "NETWORK_ERROR (Timeout)", e);
         }
         catch(JsonException e) {
-            throw new BetfairNGException(url + method, data, requestJson, "JSON_SERIALIZATION_ERROR", e);
+            throw new BetfairNGException($"{url}{method}", data, requestJson, "JSON_SERIALIZATION_ERROR", e);
         }
     }
+
 
 
     public async Task<T> Authenticate<T>(

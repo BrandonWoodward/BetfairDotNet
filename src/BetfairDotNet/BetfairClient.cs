@@ -94,7 +94,14 @@ public sealed class BetfairClient : IBetfairClient {
 
             // Defines the logic that consumes the stream
             var socketHandler = new SslSocketHandler(sslSocket, StreamingEndpoints.Production);
-            var streamSubscriptionHandler = new StreamSubscriptionHandler(changeMessageHandler, socketHandler.MessageStream, changeMessageSubject);
+
+            var streamSubscriptionHandler = new StreamSubscriptionHandler(
+                socketHandler,
+                changeMessageHandler,
+                socketHandler.MessageStream,
+                changeMessageSubject
+            );
+
             return new StreamingService(socketHandler, streamSubscriptionHandler, apiKey);
         });
     }

@@ -7,6 +7,7 @@ using Xunit;
 namespace BetfairDotNet.Tests.HandlerTests;
 public class StreamSubscriptionHandlerTests {
 
+    private readonly ISslSocketHandler _socketHandler = Substitute.For<ISslSocketHandler>();
     private readonly IChangeMessageHandler _changeMessageHandler = Substitute.For<IChangeMessageHandler>();
     private readonly IObservable<ReadOnlyMemory<byte>> _messageStream = Substitute.For<IObservable<ReadOnlyMemory<byte>>>();
     private readonly ISubject _changeMessageSubject = Substitute.For<ISubject>();
@@ -14,7 +15,7 @@ public class StreamSubscriptionHandlerTests {
 
 
     public StreamSubscriptionHandlerTests() {
-        _streamSubscriptionHandler = new StreamSubscriptionHandler(_changeMessageHandler, _messageStream, _changeMessageSubject);
+        _streamSubscriptionHandler = new StreamSubscriptionHandler(_socketHandler, _changeMessageHandler, _messageStream, _changeMessageSubject);
     }
 
 
@@ -51,7 +52,7 @@ public class StreamSubscriptionHandlerTests {
         Func<MarketSnapshot, bool> predicate = _ => true;
 
         // Act
-        _streamSubscriptionHandler.FilterMarkets(predicate).Subscribe(marketCallback);
+        _streamSubscriptionHandler.WithMarkets(predicate).Subscribe(marketCallback);
 
         // Act & Assert
         _changeMessageSubject.Received().SubscribeMarket(
@@ -67,7 +68,7 @@ public class StreamSubscriptionHandlerTests {
         Func<OrderMarketSnapshot, bool> predicate = _ => true;
 
         // Act
-        _streamSubscriptionHandler.FilterOrders(predicate).Subscribe(orderCallback);
+        _streamSubscriptionHandler.WithOrders(predicate).Subscribe(orderCallback);
 
         // Act & Assert
         _changeMessageSubject.Received().SubscribeOrder(
@@ -80,7 +81,7 @@ public class StreamSubscriptionHandlerTests {
     [Fact]
     public void Dispose_ShouldDisposeResources() {
         // Arrange & Act
-        _streamSubscriptionHandler.Dispose();
+        _streamSubscriptionHandler.Unsubscribe();
 
         // Assert
         _changeMessageSubject.Received(1).Dispose();

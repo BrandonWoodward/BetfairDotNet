@@ -9,8 +9,9 @@ namespace BetfairDotNet.Handlers;
 /// <summary>
 /// Handles subscriptions to the Betfair Streaming API.
 /// </summary>
-public sealed class StreamSubscriptionHandler : IDisposable, IStreamSubscriptionHandler {
+public sealed class StreamSubscriptionHandler : IStreamSubscriptionHandler {
 
+    private readonly ISslSocketHandler _socketHandler;
     private readonly ISubject _changeMessageSubject;
     private readonly IDisposable _messageSubscription;
 
@@ -19,10 +20,12 @@ public sealed class StreamSubscriptionHandler : IDisposable, IStreamSubscription
 
 
     internal StreamSubscriptionHandler(
+        ISslSocketHandler socketHandler,
         IChangeMessageHandler changeMessageHandler,
         IObservable<ReadOnlyMemory<byte>> messageStream,
         ISubject changeMessageSubject) {
 
+        _socketHandler = socketHandler;
         _changeMessageSubject = changeMessageSubject;
         _messageSubscription = messageStream.Subscribe(
             changeMessageHandler.HandleMessage,
@@ -77,11 +80,21 @@ public sealed class StreamSubscriptionHandler : IDisposable, IStreamSubscription
 
 
     /// <summary>
+    /// End the stream. Closes the socket and disposes of the subscription.
+    /// </summary>
+    public void Unsubscribe() {
+        _socketHandler.Stop();
+        _messageSubscription.Dispose();
+        _changeMessageSubject.Dispose();
+    }
+
+
+    /// <summary>
     /// Filter market subscription events based on a predicate.
     /// </summary>
     /// <param name="predicate"></param>
     /// <returns></returns>
-    public StreamSubscriptionHandler FilterMarkets(Func<MarketSnapshot, bool> predicate) {
+    public StreamSubscriptionHandler WithMarkets(Func<MarketSnapshot, bool> predicate) {
         _marketPredicate = predicate;
         return this;
     }
@@ -92,7 +105,7 @@ public sealed class StreamSubscriptionHandler : IDisposable, IStreamSubscription
     /// </summary>
     /// <param name="predicate"></param>
     /// <returns></returns>
-    public StreamSubscriptionHandler FilterOrders(Func<OrderMarketSnapshot, bool> predicate) {
+    public StreamSubscriptionHandler WithOrders(Func<OrderMarketSnapshot, bool> predicate) {
         _orderPredicate = predicate;
         return this;
     }
@@ -114,11 +127,5 @@ public sealed class StreamSubscriptionHandler : IDisposable, IStreamSubscription
             disposables.Add(_changeMessageSubject.SubscribeException(onException));
         }
         return new CompositeDisposable(disposables);
-    }
-
-
-    public void Dispose() {
-        _messageSubscription.Dispose();
-        _changeMessageSubject.Dispose();
     }
 }

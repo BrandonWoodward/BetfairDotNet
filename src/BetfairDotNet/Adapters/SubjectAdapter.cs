@@ -54,7 +54,7 @@ internal class SubjectAdapter : ISubject {
     }
 
 
-    public IDisposable SubscribeException(Action<Exception> onException) {
+    public IDisposable SubscribeException(Action<BetfairESAException> onException) {
         return _exceptionSubject.Subscribe(onException);
     }
 

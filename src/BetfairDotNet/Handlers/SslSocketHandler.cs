@@ -92,6 +92,11 @@ internal sealed class SslSocketHandler : ISslSocketHandler {
                 }
             }
         }
+        catch(IOException ex) {
+            _messageSubject.OnError(
+                new BetfairESAException(true, ex.Message, ex)
+            );
+        }
         catch(SocketException ex) {
             _messageSubject.OnError(
                 new BetfairESAException(true, ex.Message, ex)

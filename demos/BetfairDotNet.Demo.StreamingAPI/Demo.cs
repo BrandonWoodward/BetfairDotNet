@@ -60,7 +60,7 @@ var stream = await client.Streaming.CreateStream(
 // Subscribe to the stream
 // Can easily filter updates for either markets or orders (or both) using a predicate
 stream
-    .FilterMarkets(ms => ms.MarketId == todaysHorseRacing[0].MarketId)
+    .WithMarkets(ms => ms.MarketId == todaysHorseRacing[0].MarketId)
     .Subscribe(
         ms => Display.RenderMarketSnapshot(todaysHorseRacing[0], ms),
         ex => Console.WriteLine($"Exception: {ex.Message}")

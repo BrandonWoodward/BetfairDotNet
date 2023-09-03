@@ -37,4 +37,17 @@ public class HeartbeatServiceTests {
             )
         );
     }
+
+
+    [Fact]
+    public async void KeepAlive_SendCorrectRequest() {
+        // Arrange
+        // Act
+        await _heartbeatService.KeepAive();
+
+        // Assert
+        await _mockNetwork.Received().Request<KeepAliveResponse>(
+            "https://identitysso.betfair.com/api/keepAlive"
+        );
+    }
 }

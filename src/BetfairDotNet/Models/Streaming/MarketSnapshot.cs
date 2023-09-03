@@ -12,6 +12,16 @@ public sealed record MarketSnapshot {
     public string MarketId { get; init; } = string.Empty;
 
     /// <summary>
+    /// The clock value of the initial sub message. Use on reconnect.
+    /// </summary>
+    public string InitialClk { get; init; } = string.Empty;
+
+    /// <summary>
+    /// The clock value of this update. Use on reconnect.
+    /// </summary>
+    public string Clk { get; init; } = string.Empty;
+
+    /// <summary>
     /// The market metadata
     /// </summary>
     public MarketDefinition? MarketDefinition { get; init; }

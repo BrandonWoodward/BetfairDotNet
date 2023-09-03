@@ -29,16 +29,18 @@ internal class OrderSnapshotFactory : IOrderSnapshotFactory {
         }
         foreach(var change in changeMessage.OrderChanges) {
             yield return change.IsImage
-                ? ProcessImage(change) // Replace in cache
-                : ProcessDelta(change); // Merge with cache
+                ? ProcessImage(change, changeMessage.InitialClk, changeMessage.Clk) // Replace in cache
+                : ProcessDelta(change, changeMessage.Clk); // Merge with cache
         }
     }
 
 
-    private static OrderMarketSnapshot ProcessImage(OrderMarketChange changeMessage) {
+    private static OrderMarketSnapshot ProcessImage(OrderMarketChange changeMessage, string initialClk, string clk) {
         var rnrSnaps = changeMessage.OrderRunnerChanges.ToDictionary(rnr => rnr.Id, ProcessRunnerImage);
         return new OrderMarketSnapshot {
             MarketId = changeMessage.Id,
+            InitialClk = initialClk,
+            Clk = clk,
             OrderRunnerSnapshots = rnrSnaps
         };
     }
@@ -53,14 +55,14 @@ internal class OrderSnapshotFactory : IOrderSnapshotFactory {
     }
 
 
-    private OrderMarketSnapshot ProcessDelta(OrderMarketChange changeMessage) {
+    private OrderMarketSnapshot ProcessDelta(OrderMarketChange changeMessage, string clk) {
         var cachedMarket = _orderCache[changeMessage.Id];
         var updatedRunnerSnaps = new Dictionary<long, OrderRunnerSnapshot>(cachedMarket.OrderRunnerSnapshots);
         foreach(var runnerChange in changeMessage.OrderRunnerChanges) {
             var cachedRunner = cachedMarket.OrderRunnerSnapshots[runnerChange.Id];
             updatedRunnerSnaps[runnerChange.Id] = ProcessRunnerDelta(runnerChange, cachedRunner);
         }
-        var updatedMarketSnapshot = cachedMarket with { OrderRunnerSnapshots = updatedRunnerSnaps };
+        var updatedMarketSnapshot = cachedMarket with { OrderRunnerSnapshots = updatedRunnerSnaps, Clk = clk };
         _orderCache[changeMessage.Id] = updatedMarketSnapshot; // Update cache
         return updatedMarketSnapshot;
     }

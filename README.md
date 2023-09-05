@@ -142,39 +142,25 @@ The following functionality is available:
 ```csharp
 // Define your subscription criteria
 var marketSubscription = new MarketSubscription(
-  new MarketFilter() { /* your filter */ },
-  new MarketDataFilter { /* your data filter */ },
-  conflateMs: 200
+    new MarketFilter() { /* your filter */ },
+    new MarketDataFilter { /* your data filter */ },
+    conflateMs: 200
 );
 
 var orderSubscription = new OrderSubscription(
-  new OrderFilter { /* your filter */ }
+    new OrderFilter { /* your filter */ }
 );
 
 // Create the stream using the SessionToken
-var stream = await client.Streaming.CreateStream(
-  session.SessionToken, // Obtained from login
-  marketSubscription,
-  orderSubscription
-);
+var stream = client.Streaming
+    .CreateStream(/* your sessionToken */)
+    .WithMarketSubscription(marketSubscription)
+    .WithOrderSubscription(orderSubscription)
 
 // Provide callbacks for the events you are interested in
-stream.Subscribe(
-  ms => { /* handle market snapshots */ },
-  os => { /* handle order snapshots */ },
-  ex => { /* handle BetfairESAException */ }
-);
-```
-
-A fluent interface is also exposed which optionally allows the chaining of predicates to filter market and order snapshot events.
-
-```csharp
-stream
-  .WithMarkets(ms => /* your condition */)
-  .WithOrders(os => /* your condition */)
-  .Subscribe(
+await stream.Subscribe(
     ms => { /* handle market snapshots */ },
     os => { /* handle order snapshots */ },
     ex => { /* handle BetfairESAException */ }
-  );
+);
 ```

@@ -5,85 +5,72 @@ using NSubstitute;
 using Xunit;
 
 namespace BetfairDotNet.Tests.HandlerTests;
+
 public class StreamSubscriptionHandlerTests {
 
     private readonly ISslSocketHandler _socketHandler = Substitute.For<ISslSocketHandler>();
     private readonly IChangeMessageHandler _changeMessageHandler = Substitute.For<IChangeMessageHandler>();
-    private readonly IObservable<ReadOnlyMemory<byte>> _messageStream = Substitute.For<IObservable<ReadOnlyMemory<byte>>>();
     private readonly ISubject _changeMessageSubject = Substitute.For<ISubject>();
-    private StreamSubscriptionHandler _streamSubscriptionHandler;
-
-
-    public StreamSubscriptionHandlerTests() {
-        _streamSubscriptionHandler = new StreamSubscriptionHandler(_socketHandler, _changeMessageHandler, _messageStream, _changeMessageSubject);
-    }
 
 
     [Fact]
-    public void Subscribe_MarketOnly_ShouldSubscribeMarketCallback() {
+    public async Task Subscribe_ShouldAuthenticateConnection_WithAuthenticationMessage() {
         // Arrange
-        Action<MarketSnapshot> marketCallback = _ => { };
+        var socketHandler = Substitute.For<ISslSocketHandler>();
+        var changeMessageHandler = Substitute.For<IChangeMessageHandler>();
+        var changeMessageSubject = Substitute.For<ISubject>();
+
+        var handler = new StreamSubscriptionHandler(socketHandler, changeMessageHandler, changeMessageSubject);
+
+        var authMessage = new AuthenticationMessage("token", "apiKey");
 
         // Act
-        var disposable = _streamSubscriptionHandler.Subscribe(marketCallback);
+        await handler.Subscribe(authMessage);
 
         // Assert
-        _changeMessageSubject.Received(1).SubscribeMarket(Arg.Is(marketCallback));
+        await socketHandler.Received().Start();
+        await socketHandler.Received().SendLine(authMessage);
     }
 
 
     [Fact]
-    public void Subscribe_OrderOnly_ShouldSubscribeOrderCallback() {
+    public async Task Subscribe_ShouldSubscribeToMarket_WhenMarketSubscriptionAndActionAreProvided() {
         // Arrange
-        Action<OrderMarketSnapshot> orderCallback = _ => { };
+        var socketHandler = Substitute.For<ISslSocketHandler>();
+        var changeMessageHandler = Substitute.For<IChangeMessageHandler>();
+        var changeMessageSubject = Substitute.For<ISubject>();
+        var handler = new StreamSubscriptionHandler(socketHandler, changeMessageHandler, changeMessageSubject);
+        var marketSubscription = new MarketSubscription(new StreamingMarketFilter(), new StreamingMarketDataFilter());
+        Action<MarketSnapshot> action = _ => { };
 
         // Act
-        var disposable = _streamSubscriptionHandler.Subscribe(orderCallback);
+        await handler.Subscribe(new AuthenticationMessage("token", "apiKey"), marketSubscription, null, action);
 
         // Assert
-        _changeMessageSubject.Received(1).SubscribeOrder(Arg.Is(orderCallback));
+        changeMessageSubject.Received().SubscribeMarket(action);
+        await socketHandler.Received().SendLine(marketSubscription);
     }
 
 
     [Fact]
-    public void FilterMarkets_ShouldSetMarketPredicate() {
+    public async Task Resubscribe_ShouldReauthenticateAndResubscribe_WithClocks() {
         // Arrange
-        Action<MarketSnapshot> marketCallback = _ => { };
-        Func<MarketSnapshot, bool> predicate = _ => true;
+        var socketHandler = Substitute.For<ISslSocketHandler>();
+        var changeMessageHandler = Substitute.For<IChangeMessageHandler>();
+        var changeMessageSubject = Substitute.For<ISubject>();
+
+        var handler = new StreamSubscriptionHandler(socketHandler, changeMessageHandler, changeMessageSubject);
+
+        var marketSubscription = new MarketSubscription(new StreamingMarketFilter(), new StreamingMarketDataFilter());
+        var orderSubscription = new OrderSubscription(new OrderFilter());
+
+        changeMessageHandler.GetClocks().Returns(Tuple.Create("initialClk1", "initialClk2", "clk1", "clk2"));
 
         // Act
-        _streamSubscriptionHandler.WithMarkets(predicate).Subscribe(marketCallback);
-
-        // Act & Assert
-        _changeMessageSubject.Received().SubscribeMarket(
-            Arg.Any<Action<MarketSnapshot>>(),
-            Arg.Is<Func<MarketSnapshot, bool>>(p => (Func<MarketSnapshot, bool>)p != null));
-    }
-
-
-    [Fact]
-    public void FilterOrders_ShouldSetOrderPredicate() {
-        // Arrange
-        Action<OrderMarketSnapshot> orderCallback = _ => { };
-        Func<OrderMarketSnapshot, bool> predicate = _ => true;
-
-        // Act
-        _streamSubscriptionHandler.WithOrders(predicate).Subscribe(orderCallback);
-
-        // Act & Assert
-        _changeMessageSubject.Received().SubscribeOrder(
-            Arg.Any<Action<OrderMarketSnapshot>>(),
-            Arg.Is<Func<OrderMarketSnapshot, bool>>(p => (Func<OrderMarketSnapshot, bool>)p != null)
-        );
-    }
-
-
-    [Fact]
-    public void Dispose_ShouldDisposeResources() {
-        // Arrange & Act
-        _streamSubscriptionHandler.Unsubscribe();
+        await handler.Resubscribe(new AuthenticationMessage("token", "apiKey"), marketSubscription, orderSubscription);
 
         // Assert
-        _changeMessageSubject.Received(1).Dispose();
+        await socketHandler.Received().SendLine(Arg.Is<MarketSubscription>(x => x.InitialClk == "initialClk1" && x.Clk == "clk1"));
+        await socketHandler.Received().SendLine(Arg.Is<OrderSubscription>(x => x.InitialClk == "initialClk2" && x.Clk == "clk2"));
     }
 }

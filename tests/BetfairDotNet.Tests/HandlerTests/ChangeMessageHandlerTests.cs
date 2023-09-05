@@ -10,6 +10,7 @@ namespace BetfairDotNet.Tests.HandlerTests;
 
 public class ChangeMessageHandlerTests {
 
+    private readonly ISslSocketHandler _socketHandler = Substitute.For<ISslSocketHandler>();
     private readonly IChangeMessageFactory _changeMessageFactory = Substitute.For<IChangeMessageFactory>();
     private readonly IMarketSnapshotFactory _marketSnapshotFactory = Substitute.For<IMarketSnapshotFactory>();
     private readonly IOrderSnapshotFactory _orderSnapshotFactory = Substitute.For<IOrderSnapshotFactory>();
@@ -20,6 +21,7 @@ public class ChangeMessageHandlerTests {
     public void HandleMessage_ShouldNotCallFactories_WhenMessageEmpty() {
         // Arrange
         var sut = new ChangeMessageHandler(
+            _socketHandler,
             _changeMessageFactory,
             _marketSnapshotFactory,
             _orderSnapshotFactory,
@@ -40,6 +42,7 @@ public class ChangeMessageHandlerTests {
         var changeMessage = new StatusMessage() { StatusCode = StatusCodeEnum.FAILURE };
         _changeMessageFactory.Process(Arg.Any<ReadOnlyMemory<byte>>()).Returns(changeMessage);
         var sut = new ChangeMessageHandler(
+            _socketHandler,
             _changeMessageFactory,
             _marketSnapshotFactory,
             _orderSnapshotFactory,
@@ -62,6 +65,7 @@ public class ChangeMessageHandlerTests {
         _changeMessageFactory.Process(Arg.Any<ReadOnlyMemory<byte>>()).Returns(changeMessage);
         _marketSnapshotFactory.GetSnapshots(changeMessage).Returns(new List<MarketSnapshot> { marketSnapshot });
         var sut = new ChangeMessageHandler(
+            _socketHandler,
             _changeMessageFactory,
             _marketSnapshotFactory,
             _orderSnapshotFactory,
@@ -84,6 +88,7 @@ public class ChangeMessageHandlerTests {
         _changeMessageFactory.Process(Arg.Any<ReadOnlyMemory<byte>>()).Returns(changeMessage);
         _orderSnapshotFactory.GetSnapshots(changeMessage).Returns(new List<OrderMarketSnapshot> { orderSnapshot });
         var sut = new ChangeMessageHandler(
+            _socketHandler,
             _changeMessageFactory,
             _marketSnapshotFactory,
             _orderSnapshotFactory,
@@ -103,6 +108,7 @@ public class ChangeMessageHandlerTests {
         // Arrange
         var exception = new BetfairESAException(false, "Some message");
         var sut = new ChangeMessageHandler(
+            _socketHandler,
             _changeMessageFactory,
             _marketSnapshotFactory,
             _orderSnapshotFactory,

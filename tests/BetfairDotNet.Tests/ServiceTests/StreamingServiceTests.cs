@@ -10,78 +10,83 @@ namespace BetfairDotNet.Tests.ServiceTests;
 
 public class StreamingServiceTests {
 
-    private readonly ISslSocketHandler _mockSslSocketHandler = Substitute.For<ISslSocketHandler>();
-    private readonly IStreamSubscriptionHandler _mockStreamSubscriptionHandler = Substitute.For<IStreamSubscriptionHandler>();
+
+    private readonly IStreamSubscriptionHandler _mockHandler = Substitute.For<IStreamSubscriptionHandler>();
 
 
     [Fact]
-    public async Task CreateStream_ShouldReturnSubscriptionHandler_WhenSessionTokenAndMarketSubscriptionProvided() {
+    public void CreateStream_ThrowsException_WhenSessionTokenIsNullOrWhiteSpace() {
         // Arrange
-        var apiKey = "someApiKey";
-        var sessionToken = "someToken";
-        var service = new StreamingService(_mockSslSocketHandler, _mockStreamSubscriptionHandler, apiKey);
-        var marketSubscription = new MarketSubscription(new StreamingMarketFilter(), new StreamingMarketDataFilter());
+        var service = new StreamingService(_mockHandler, "apiKey");
 
         // Act
-        var result = await service.CreateStream(sessionToken, marketSubscription);
+        Action act = () => service.CreateStream("  "); // Pass a whitespace string to trigger the error condition.
 
         // Assert
-        result.Should().Be(_mockStreamSubscriptionHandler);
-        await _mockSslSocketHandler.Received(1).Start();
-        await _mockSslSocketHandler.Received(1).SendLine(new AuthenticationMessage(sessionToken, apiKey));
-        await _mockSslSocketHandler.Received(1).SendLine(marketSubscription);
+        act.Should().Throw<ArgumentException>().WithMessage("Session token not provided.");
     }
 
 
     [Fact]
-    public async Task CreateStream_ShouldReturnSubscriptionHandler_WhenSessionTokenAndOrderSubscriptionProvided() {
+    public async Task Subscribe_ThrowsException_WhenNoSessionTokenProvided() {
         // Arrange
-        var apiKey = "someApiKey";
-        var sessionToken = "someToken";
-        var service = new StreamingService(_mockSslSocketHandler, _mockStreamSubscriptionHandler, apiKey);
-        var orderSubscription = new OrderSubscription(new OrderFilter());
+        var service = new StreamingService(_mockHandler, "apiKey");
 
         // Act
-        var result = await service.CreateStream(sessionToken, orderSubscription);
+        Func<Task> act = async () => await service.Subscribe(); // Do not call CreateStream before Subscribe.
 
         // Assert
-        result.Should().Be(_mockStreamSubscriptionHandler);
-        await _mockSslSocketHandler.Received(1).Start();
-        await _mockSslSocketHandler.Received(1).SendLine(new AuthenticationMessage(sessionToken, apiKey));
-        await _mockSslSocketHandler.Received(1).SendLine(orderSubscription);
+        await act.Should().ThrowAsync<InvalidOperationException>().WithMessage("Session token not provided.");
     }
 
 
     [Fact]
-    public async Task CreateStream_ShouldReturnSubscriptionHandler_WhenSessionTokenAndBothSubscriptionsProvided() {
+    public async Task Subscribe_ThrowsException_WhenNoSubscriptionCriteriaProvided() {
         // Arrange
-        var apiKey = "someApiKey";
-        var sessionToken = "someToken";
-        var service = new StreamingService(_mockSslSocketHandler, _mockStreamSubscriptionHandler, apiKey);
+        var service = new StreamingService(_mockHandler, "apiKey").CreateStream("token");
+
+        // Act
+        Func<Task> act = async () => await service.Subscribe();
+
+        // Assert
+        await act.Should().ThrowAsync<InvalidOperationException>().WithMessage("No subscription criteria provided.");
+    }
+
+
+    [Fact]
+    public async Task Subscribe_ShouldCallStreamSubscriptionHandler_WithCorrectParameters() {
+        // Arrange
         var marketSubscription = new MarketSubscription(new StreamingMarketFilter(), new StreamingMarketDataFilter());
         var orderSubscription = new OrderSubscription(new OrderFilter());
 
+        var service = new StreamingService(_mockHandler, "apiKey")
+            .CreateStream("token")
+            .WithMarketSubscription(marketSubscription)
+            .WithOrderSubscription(orderSubscription);
+
         // Act
-        var result = await service.CreateStream(sessionToken, marketSubscription, orderSubscription);
+        await service.Subscribe();
 
         // Assert
-        result.Should().Be(_mockStreamSubscriptionHandler);
-        await _mockSslSocketHandler.Received(1).Start();
-        await _mockSslSocketHandler.Received(1).SendLine(new AuthenticationMessage(sessionToken, apiKey));
-        await _mockSslSocketHandler.Received(1).SendLine(marketSubscription);
+        await _mockHandler.Received().Subscribe(
+            Arg.Is<AuthenticationMessage>(x => x.SessionToken == "token" && x.ApiKey == "apiKey"),
+            marketSubscription,
+            orderSubscription,
+            null,
+            null,
+            null);
     }
 
 
     [Fact]
-    public void CreateStream_ShouldThrowArgumentException_WhenSessionTokenNotProvided() {
+    public async Task Resubscribe_ThrowsException_WhenNoSubscriptionsSet() {
         // Arrange
-        var apiKey = "someApiKey";
-        var sessionToken = "";
-        var service = new StreamingService(_mockSslSocketHandler, _mockStreamSubscriptionHandler, apiKey);
-        var marketSubscription = new MarketSubscription(new StreamingMarketFilter(), new StreamingMarketDataFilter());
+        var service = new StreamingService(_mockHandler, "apiKey").CreateStream("token");
 
-        // Act & Assert
-        Func<Task> act = async () => await service.CreateStream(sessionToken, marketSubscription);
-        act.Should().ThrowAsync<ArgumentException>().WithMessage("Session token not provided.");
+        // Act
+        Func<Task> act = service.Resubscribe;
+
+        // Assert
+        await act.Should().ThrowAsync<InvalidOperationException>().WithMessage("No subscriptions set.");
     }
 }

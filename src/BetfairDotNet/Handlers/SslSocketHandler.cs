@@ -39,7 +39,10 @@ internal sealed class SslSocketHandler : ISslSocketHandler {
         try {
             await _socket.ConnectAsync(_endpoint, _port);
             await _socket.AuthenticateAsClientAsync(_endpoint);
-            _listener = new Thread(() => ReceiveLines(_cts.Token));
+            _listener = new Thread(() => ReceiveLines(_cts.Token)) {
+                Name = "ESAListener",
+                IsBackground = true,
+            };
             _listener.Start();
         }
         catch(SocketException ex) {
@@ -55,8 +58,7 @@ internal sealed class SslSocketHandler : ISslSocketHandler {
         lock(_stopLock) { // Stop race condition
             _cts?.Cancel();
             _cts?.Dispose();
-            _socket?.Close();
-            _socket?.Dispose();
+            if(_socket.IsConnected()) _socket?.Close();
         }
     }
 
@@ -69,6 +71,7 @@ internal sealed class SslSocketHandler : ISslSocketHandler {
             await _socket.WriteAsync(messageBytes);
         }
         catch(IOException ex) {
+            Stop();
             _messageSubject.OnError(
                 new BetfairESAException(true, ex.Message, ex)
             );
@@ -93,11 +96,13 @@ internal sealed class SslSocketHandler : ISslSocketHandler {
             }
         }
         catch(IOException ex) {
+            Stop();
             _messageSubject.OnError(
                 new BetfairESAException(true, ex.Message, ex)
             );
         }
         catch(SocketException ex) {
+            Stop();
             _messageSubject.OnError(
                 new BetfairESAException(true, ex.Message, ex)
             );

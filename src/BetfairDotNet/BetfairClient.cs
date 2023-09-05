@@ -72,6 +72,9 @@ public sealed class BetfairClient : IBetfairClient {
             // Wraps Tcp and Ssl operations
             var sslSocket = new SslSocketAdapter();
 
+            // Defines the logic that consumes the stream
+            var socketHandler = new SslSocketHandler(sslSocket, StreamingEndpoints.Production);
+
             // Wraps Rx operations
             var changeMessageSubject = new SubjectAdapter();
 
@@ -86,23 +89,20 @@ public sealed class BetfairClient : IBetfairClient {
 
             // Handler for processing raw messages
             var changeMessageHandler = new ChangeMessageHandler(
+                socketHandler,
                 changeMessageFactory,
                 marketSnapshotFactory,
                 orderSnapshotFactory,
                 changeMessageSubject
             );
 
-            // Defines the logic that consumes the stream
-            var socketHandler = new SslSocketHandler(sslSocket, StreamingEndpoints.Production);
-
             var streamSubscriptionHandler = new StreamSubscriptionHandler(
                 socketHandler,
                 changeMessageHandler,
-                socketHandler.MessageStream,
                 changeMessageSubject
             );
 
-            return new StreamingService(socketHandler, streamSubscriptionHandler, apiKey);
+            return new StreamingService(streamSubscriptionHandler, apiKey);
         });
     }
 }

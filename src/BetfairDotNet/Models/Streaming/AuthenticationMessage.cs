@@ -3,7 +3,7 @@
 namespace BetfairDotNet.Models.Streaming;
 
 
-internal sealed record AuthenticationMessage : BaseMessage {
+public sealed record AuthenticationMessage : BaseMessage {
 
     /// <summary>
     /// The session token from a successful login

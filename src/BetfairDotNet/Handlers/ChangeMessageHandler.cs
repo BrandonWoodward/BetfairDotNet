@@ -7,18 +7,26 @@ namespace BetfairDotNet.Handlers;
 
 internal class ChangeMessageHandler : IChangeMessageHandler {
 
+    private readonly ISslSocketHandler _socketHandler;
     private readonly IChangeMessageFactory _changeMessageFactory;
     private readonly IMarketSnapshotFactory _marketSnapshotFactory;
     private readonly IOrderSnapshotFactory _orderSnapshotFactory;
     private readonly ISubject _changeMessageSubject;
 
+    private string? _marketInitialClk;
+    private string? _orderInitialClk;
+    private string? _marketClk;
+    private string? _orderClk;
+
 
     public ChangeMessageHandler(
+        ISslSocketHandler socketHandler,
         IChangeMessageFactory changeMessageFactory,
         IMarketSnapshotFactory marketSnapshotFactory,
         IOrderSnapshotFactory orderSnapshotFactory,
         ISubject changeMessageSubject) {
 
+        _socketHandler = socketHandler;
         _changeMessageFactory = changeMessageFactory;
         _marketSnapshotFactory = marketSnapshotFactory;
         _orderSnapshotFactory = orderSnapshotFactory;
@@ -46,8 +54,14 @@ internal class ChangeMessageHandler : IChangeMessageHandler {
 
     public void HandleException(Exception ex) {
         if(ex is BetfairESAException esaEx) {
+            _socketHandler.Stop(); // Close socket
             _changeMessageSubject.OnExceptionNext(esaEx);
         }
+    }
+
+
+    public Tuple<string?, string?, string?, string?> GetClocks() {
+        return Tuple.Create(_marketInitialClk, _orderInitialClk, _marketClk, _orderClk);
     }
 
 
@@ -55,11 +69,18 @@ internal class ChangeMessageHandler : IChangeMessageHandler {
         if(statusChange.StatusCode == StatusCodeEnum.SUCCESS) return;
         var message = $"{statusChange.ErrorCode}: {statusChange.ErrorMessage}";
         var exception = new BetfairESAException(false, message);
+        _socketHandler.Stop(); // Close socket
         _changeMessageSubject.OnExceptionNext(exception);
     }
 
 
     private void HandleMarket(MarketChangeMessage marketChange) {
+        if(marketChange.InitialClk != null) {
+            _marketInitialClk = marketChange.InitialClk;
+        }
+        if(marketChange.Clk != null) {
+            _marketClk = marketChange.Clk;
+        }
         var marketSnaps = _marketSnapshotFactory.GetSnapshots(marketChange);
         foreach(var marketSnapshot in marketSnaps) {
             _changeMessageSubject.OnMarketNext(marketSnapshot);
@@ -68,6 +89,12 @@ internal class ChangeMessageHandler : IChangeMessageHandler {
 
 
     private void HandleOrder(OrderChangeMessage orderChange) {
+        if(orderChange.InitialClk != null) {
+            _orderInitialClk = orderChange.InitialClk;
+        }
+        if(orderChange.Clk != null) {
+            _orderClk = orderChange.Clk;
+        }
         var orderSnaps = _orderSnapshotFactory.GetSnapshots(orderChange);
         foreach(var orderSnap in orderSnaps) {
             _changeMessageSubject.OnOrderNext(orderSnap);

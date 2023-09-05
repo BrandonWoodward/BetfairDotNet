@@ -1,13 +1,12 @@
 ﻿using BetfairDotNet.Handlers;
+using BetfairDotNet.Models.Exceptions;
 using BetfairDotNet.Models.Streaming;
 
 namespace BetfairDotNet.Interfaces;
+
 public interface IStreamSubscriptionHandler
 {
-    StreamSubscriptionHandler WithMarkets(Func<MarketSnapshot, bool> predicate);
-    StreamSubscriptionHandler WithOrders(Func<OrderMarketSnapshot, bool> predicate);
-    IDisposable Subscribe(Action<MarketSnapshot> onMarketChange, Action<Exception>? onException = null);
-    IDisposable Subscribe(Action<MarketSnapshot> onMarketChange, Action<OrderMarketSnapshot> onOrderChange, Action<Exception>? onException = null);
-    IDisposable Subscribe(Action<OrderMarketSnapshot> onOrderChange, Action<Exception>? onException = null);
+    Task Subscribe(AuthenticationMessage authenticationMessage, MarketSubscription? marketSubscription = null, OrderSubscription? orderSubscription = null, Action<MarketSnapshot>? onMarketChange = null, Action<OrderMarketSnapshot>? onOrderChange = null, Action<BetfairESAException>? onException = null);
+    Task Resubscribe(AuthenticationMessage authenticationMessage, MarketSubscription? marketSubscription = null, OrderSubscription? orderSubscription = null);
     void Unsubscribe();
 }

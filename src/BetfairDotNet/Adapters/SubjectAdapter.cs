@@ -38,19 +38,13 @@ internal class SubjectAdapter : ISubject {
     }
 
 
-    public IDisposable SubscribeMarket(Action<MarketSnapshot> onMarketChange, Func<MarketSnapshot, bool>? predicate = null) {
-        var marketObservable = predicate == null
-            ? _marketSubject.AsObservable()
-            : _marketSubject.Where(predicate);
-        return marketObservable.Subscribe(onMarketChange);
+    public IDisposable SubscribeMarket(Action<MarketSnapshot> onMarketChange) {
+        return _marketSubject.Subscribe(onMarketChange);
     }
 
 
-    public IDisposable SubscribeOrder(Action<OrderMarketSnapshot> onOrderChange, Func<OrderMarketSnapshot, bool>? predicate = null) {
-        var orderObservable = predicate == null
-            ? _orderSubject.AsObservable()
-            : _orderSubject.Where(predicate);
-        return orderObservable.Subscribe(onOrderChange);
+    public IDisposable SubscribeOrder(Action<OrderMarketSnapshot> onOrderChange) {
+        return _orderSubject.Subscribe(onOrderChange);
     }
 
 

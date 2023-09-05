@@ -30,8 +30,7 @@ var session = await client.Login.CertificateLogin();
 var todaysHorseRacing = await client.Betting.ListMarketCatalogue(
     MarketFilterHelpers.TodaysGBAndIREHorseRacingWinOnly(),
     Enum.GetValues(typeof(MarketProjectionEnum)).Cast<MarketProjectionEnum>().ToList(),
-    MarketSortEnum.FIRST_TO_START,
-    maxResults: 10
+    MarketSortEnum.FIRST_TO_START
 );
 
 
@@ -43,28 +42,17 @@ var marketSubscription = new MarketSubscription(
 );
 
 
-// Create an order subscription
-var orderSubscription = new OrderSubscription(
-    new OrderFilter { IncludeOverallPosition = true }
-);
-
-
 // Connect to the streaming service
-var stream = await client.Streaming.CreateStream(
-    session.SessionToken,
-    marketSubscription,
-    orderSubscription
-);
+var stream = client.Streaming
+    .CreateStream(session.SessionToken)
+    .WithMarketSubscription(marketSubscription);
 
 
 // Subscribe to the stream
-// Can easily filter updates for either markets or orders (or both) using a predicate
-stream
-    .WithMarkets(ms => ms.MarketId == todaysHorseRacing[0].MarketId)
-    .Subscribe(
-        ms => Display.RenderMarketSnapshot(todaysHorseRacing[0], ms),
-        ex => Console.WriteLine($"Exception: {ex.Message}")
-    );
+await stream.Subscribe(
+    onMarketChange: ms => Display.RenderMarketSnapshot(todaysHorseRacing[0], ms),
+    onException: ex => Console.WriteLine($"Exception received: {ex.Message}")
+);
 
 
 // Wait for user input to exit

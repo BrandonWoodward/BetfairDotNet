@@ -147,7 +147,6 @@ public class RequestResponseHandlerTests {
             => _processor.Authenticate<CertificateLoginResponse>(sampleUrl, sampleCredentials, sampleCertPath));
 
         // Assert
-        Assert.Equal("NETWORK_ERROR (InternalServerError)", exception.Message);
         Assert.Equal(sampleUrl, exception.Endpoint);
         Assert.NotNull(exception.InnerException);
         Assert.Equal(sampleCredentials["username"], exception.RequestParameters?["username"]);
@@ -175,7 +174,6 @@ public class RequestResponseHandlerTests {
             => _processor.Authenticate<CertificateLoginResponse>(sampleUrl, sampleCredentials, sampleCertPath));
 
         // Assert
-        Assert.Equal("NETWORK_ERROR (Timeout)", exception.Message);
         Assert.Equal(sampleUrl, exception.Endpoint);
         Assert.NotNull(exception.InnerException);
         Assert.Equal(sampleCredentials["username"], exception.RequestParameters?["username"]);

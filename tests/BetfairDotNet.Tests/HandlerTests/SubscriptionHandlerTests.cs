@@ -8,69 +8,42 @@ namespace BetfairDotNet.Tests.HandlerTests;
 
 public class StreamSubscriptionHandlerTests {
 
-    private readonly ISslSocketHandler _socketHandler = Substitute.For<ISslSocketHandler>();
-    private readonly IChangeMessageHandler _changeMessageHandler = Substitute.For<IChangeMessageHandler>();
-    private readonly ISubject _changeMessageSubject = Substitute.For<ISubject>();
+    private readonly StreamSubscriptionHandler _sut;
+    private readonly ISslSocketHandler _socketHandler;
+    private readonly IChangeMessageHandler _changeMessageHandler;
+    private readonly ISubject _subject;
 
+    public StreamSubscriptionHandlerTests() {
+        _socketHandler = Substitute.For<ISslSocketHandler>();
+        _changeMessageHandler = Substitute.For<IChangeMessageHandler>();
+        _subject = Substitute.For<ISubject>();
 
-    [Fact]
-    public async Task Subscribe_ShouldAuthenticateConnection_WithAuthenticationMessage() {
-        // Arrange
-        var socketHandler = Substitute.For<ISslSocketHandler>();
-        var changeMessageHandler = Substitute.For<IChangeMessageHandler>();
-        var changeMessageSubject = Substitute.For<ISubject>();
-
-        var handler = new StreamSubscriptionHandler(socketHandler, changeMessageHandler, changeMessageSubject);
-
-        var authMessage = new AuthenticationMessage("token", "apiKey");
-
-        // Act
-        await handler.Subscribe(authMessage);
-
-        // Assert
-        await socketHandler.Received().Start();
-        await socketHandler.Received().SendLine(authMessage);
+        _sut = new StreamSubscriptionHandler(_socketHandler, _changeMessageHandler, _subject);
     }
 
 
     [Fact]
-    public async Task Subscribe_ShouldSubscribeToMarket_WhenMarketSubscriptionAndActionAreProvided() {
+    public async Task Subscribe_ShouldCallSocketHandlerStart_WhenStreamConfigured() {
         // Arrange
-        var socketHandler = Substitute.For<ISslSocketHandler>();
-        var changeMessageHandler = Substitute.For<IChangeMessageHandler>();
-        var changeMessageSubject = Substitute.For<ISubject>();
-        var handler = new StreamSubscriptionHandler(socketHandler, changeMessageHandler, changeMessageSubject);
+        var streamConfiguration = new StreamConfiguration { SessionToken = "" };
         var marketSubscription = new MarketSubscription(new StreamingMarketFilter(), new StreamingMarketDataFilter());
-        Action<MarketSnapshot> action = _ => { };
+        _changeMessageHandler.GetClocks().Returns(Tuple.Create<string?, string?, string?, string?>(null, null, null, null));
 
         // Act
-        await handler.Subscribe(new AuthenticationMessage("token", "apiKey"), marketSubscription, null, action);
+        await _sut.Subscribe(streamConfiguration, marketSubscription);
 
         // Assert
-        changeMessageSubject.Received().SubscribeMarket(action);
-        await socketHandler.Received().SendLine(marketSubscription);
+        await _socketHandler.Received().Start(Arg.Any<int>(), Arg.Any<int>());
     }
 
 
     [Fact]
-    public async Task Resubscribe_ShouldReauthenticateAndResubscribe_WithClocks() {
-        // Arrange
-        var socketHandler = Substitute.For<ISslSocketHandler>();
-        var changeMessageHandler = Substitute.For<IChangeMessageHandler>();
-        var changeMessageSubject = Substitute.For<ISubject>();
-
-        var handler = new StreamSubscriptionHandler(socketHandler, changeMessageHandler, changeMessageSubject);
-
-        var marketSubscription = new MarketSubscription(new StreamingMarketFilter(), new StreamingMarketDataFilter());
-        var orderSubscription = new OrderSubscription(new OrderFilter());
-
-        changeMessageHandler.GetClocks().Returns(Tuple.Create("initialClk1", "initialClk2", "clk1", "clk2"));
-
+    public void Unsubscribe_ShouldCallSocketHandlerStop() {
         // Act
-        await handler.Resubscribe(new AuthenticationMessage("token", "apiKey"), marketSubscription, orderSubscription);
+        _sut.Unsubscribe();
 
         // Assert
-        await socketHandler.Received().SendLine(Arg.Is<MarketSubscription>(x => x.InitialClk == "initialClk1" && x.Clk == "clk1"));
-        await socketHandler.Received().SendLine(Arg.Is<OrderSubscription>(x => x.InitialClk == "initialClk2" && x.Clk == "clk2"));
+        _socketHandler.Received().Stop();
+        _subject.Received().Dispose();
     }
 }

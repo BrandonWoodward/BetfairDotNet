@@ -106,7 +106,7 @@ public class ChangeMessageHandlerTests {
     [Fact]
     public void HandleException_ShouldCallSubjectOnExceptionNext_WhenBetfairESAExceptionThrown() {
         // Arrange
-        var exception = new BetfairESAException(false, "Some message");
+        var exception = new BetfairESAException("Some message");
         var sut = new ChangeMessageHandler(
             _socketHandler,
             _changeMessageFactory,

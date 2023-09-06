@@ -91,10 +91,10 @@ internal class RequestResponseHandler : IRequestResponseHandler {
             throw new BetfairNGException(url, objCredentials, stringCredentials, "CERTIFICATE_NOT_FOUND", e);
         }
         catch(HttpRequestException e) {
-            throw new BetfairNGException(url, objCredentials, stringCredentials, $"NETWORK_ERROR ({e.StatusCode})", e);
+            throw new BetfairNGException(url, objCredentials, stringCredentials, $"NETWORK_ERROR", e);
         }
         catch(TaskCanceledException e) when(!e.CancellationToken.IsCancellationRequested) {
-            throw new BetfairNGException(url, objCredentials, stringCredentials, $"NETWORK_ERROR (Timeout)", e);
+            throw new BetfairNGException(url, objCredentials, stringCredentials, $"TIMEOUT", e);
         }
         catch(JsonException e) {
             throw new BetfairNGException(url, objCredentials, stringCredentials, "JSON_SERIALIZATION_ERROR", e);

@@ -6,7 +6,13 @@ namespace BetfairDotNet.Interfaces;
 
 public interface IStreamSubscriptionHandler
 {
-    Task Subscribe(AuthenticationMessage authenticationMessage, MarketSubscription? marketSubscription = null, OrderSubscription? orderSubscription = null, Action<MarketSnapshot>? onMarketChange = null, Action<OrderMarketSnapshot>? onOrderChange = null, Action<BetfairESAException>? onException = null);
-    Task Resubscribe(AuthenticationMessage authenticationMessage, MarketSubscription? marketSubscription = null, OrderSubscription? orderSubscription = null);
+    Task Subscribe(
+        StreamConfiguration streamConfiguration,
+        MarketSubscription? marketSubscription = null, 
+        OrderSubscription? orderSubscription = null, 
+        Action<MarketSnapshot>? onMarketChange = null, 
+        Action<OrderMarketSnapshot>? onOrderChange = null, 
+        Action<BetfairESAException>? onException = null
+    );
     void Unsubscribe();
 }

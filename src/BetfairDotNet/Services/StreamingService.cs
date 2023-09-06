@@ -13,9 +13,9 @@ public sealed class StreamingService {
     private readonly IStreamSubscriptionHandler _streamSubscriptionHandler;
     private readonly string _apiKey;
 
-    private AuthenticationMessage? _authenticationMessage;
     private MarketSubscription? _marketSubscription;
     private OrderSubscription? _orderSubscription;
+    private StreamConfiguration? _streamConfiguration;
 
 
     internal StreamingService(
@@ -32,11 +32,10 @@ public sealed class StreamingService {
     /// </summary>
     /// <param name="sessionToken"></param>
     /// <returns></returns>
-    public StreamingService CreateStream(string sessionToken) {
-        if(string.IsNullOrWhiteSpace(sessionToken)) {
-            throw new ArgumentException("Session token not provided.");
-        }
-        _authenticationMessage = new AuthenticationMessage(sessionToken, _apiKey);
+    public StreamingService CreateStream(StreamConfiguration streamConfiguration) {
+        if(streamConfiguration is null) throw new ArgumentNullException(nameof(streamConfiguration));
+        streamConfiguration.ApiKey = _apiKey;
+        _streamConfiguration = streamConfiguration;
         return this;
     }
 
@@ -78,34 +77,20 @@ public sealed class StreamingService {
         Action<OrderMarketSnapshot>? onOrderChange = null,
         Action<BetfairESAException>? onException = null) {
 
-        if(_authenticationMessage == null) {
-            throw new InvalidOperationException("Session token not provided.");
+        if(_streamConfiguration == null) {
+            throw new InvalidOperationException("No stream configuration set.");
         }
         if(_marketSubscription == null && _orderSubscription == null) {
             throw new InvalidOperationException("No subscription criteria provided.");
         }
+
         await _streamSubscriptionHandler.Subscribe(
-            _authenticationMessage,
+            _streamConfiguration,
             _marketSubscription,
             _orderSubscription,
             onMarketChange,
             onOrderChange,
             onException
-        );
-    }
-
-
-    public async Task Resubscribe() {
-        if(_marketSubscription == null && _orderSubscription == null) {
-            throw new InvalidOperationException("No subscriptions set.");
-        }
-        if(_authenticationMessage == null) {
-            throw new InvalidOperationException("Session token not provided.");
-        }
-        await _streamSubscriptionHandler.Resubscribe(
-            _authenticationMessage,
-            _marketSubscription,
-            _orderSubscription
         );
     }
 }

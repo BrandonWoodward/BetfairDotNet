@@ -15,6 +15,14 @@ public sealed class StreamSubscriptionHandler : IStreamSubscriptionHandler {
     private readonly IChangeMessageHandler _changeMessageHandler;
     private readonly ISubject _changeMessageSubject;
     private readonly IDisposable _messageSubscription;
+    private readonly IDisposable _recoverySubscription;
+
+    private AuthenticationMessage? _authenticationMessage;
+    private StreamConfiguration _streamConfiguration;
+    private MarketSubscription? _marketSubscription;
+    private OrderSubscription? _orderSubscription;
+
+    private bool _exceptionFlag;
 
 
     internal StreamSubscriptionHandler(
@@ -25,81 +33,99 @@ public sealed class StreamSubscriptionHandler : IStreamSubscriptionHandler {
         _socketHandler = socketHandler;
         _changeMessageHandler = changeMessageHandler;
         _changeMessageSubject = changeMessageSubject;
-        _messageSubscription = _socketHandler.MessageStream.Subscribe(
-            changeMessageHandler.HandleMessage,
-            changeMessageHandler.HandleException
+
+        _messageSubscription = _socketHandler.MessageReceived.Subscribe(
+            ForwardMessageToHandler,
+            ForwardExceptionToHandler
+        );
+        _recoverySubscription = _socketHandler.SocketRecovered.Subscribe(
+            async _ => await CheckResubscribe()
         );
     }
 
 
     public async Task Subscribe(
-        AuthenticationMessage authenticationMessage,
+        StreamConfiguration streamConfiguration,
         MarketSubscription? marketSubscription = null,
         OrderSubscription? orderSubscription = null,
         Action<MarketSnapshot>? onMarketChange = null,
         Action<OrderMarketSnapshot>? onOrderChange = null,
         Action<BetfairESAException>? onException = null) {
 
-        await AuthenticateConnection(authenticationMessage);
-        await Task.WhenAll(
-            SubscribeMarket(marketSubscription, onMarketChange),
-            SubscribeOrder(orderSubscription, onOrderChange)
+        _streamConfiguration = streamConfiguration;
+        _marketSubscription = marketSubscription;
+        _orderSubscription = orderSubscription;
+        _authenticationMessage = new AuthenticationMessage(
+            streamConfiguration.SessionToken,
+            streamConfiguration.ApiKey
         );
-        SubscribeException(onException);
-    }
 
+        // Need to subscribe to the observable before sending subscription messages
+        // in order to catch exceptions
+        if(onMarketChange != null) _changeMessageSubject.SubscribeMarket(onMarketChange);
+        if(onOrderChange != null) _changeMessageSubject.SubscribeOrder(onOrderChange);
+        if(onException != null) _changeMessageSubject.SubscribeException(onException);
 
-    public async Task Resubscribe(
-        AuthenticationMessage authenticationMessage,
-        MarketSubscription? marketSubscription = null,
-        OrderSubscription? orderSubscription = null) {
-
-        var (marketInitialClk, orderInitialClk, marketClk, orderClk) = _changeMessageHandler.GetClocks();
-        if(marketSubscription != null) {
-            marketSubscription = marketSubscription with { InitialClk = marketInitialClk, Clk = marketClk };
-        }
-        if(orderSubscription != null) {
-            orderSubscription = orderSubscription with { InitialClk = orderInitialClk, Clk = orderClk };
-        }
-        await AuthenticateConnection(authenticationMessage);
-        if(marketSubscription != null) {
-            await _socketHandler.SendLine(marketSubscription);
-        }
-        if(orderSubscription != null) {
-            await _socketHandler.SendLine(orderSubscription);
-        }
+        await SendSubscriptionMessages();
     }
 
 
     public void Unsubscribe() {
         _socketHandler.Stop();
         _messageSubscription.Dispose();
+        _recoverySubscription.Dispose();
         _changeMessageSubject.Dispose();
     }
 
 
-    private async Task AuthenticateConnection(AuthenticationMessage message) {
-        await _socketHandler.Start();
-        await _socketHandler.SendLine(message);
+    private async Task SendSubscriptionMessages() {
+        // Clocks will be null on initial subscription, that's ok;
+        var (marketInitialClk, orderInitialClk, marketClk, orderClk) = _changeMessageHandler.GetClocks();
+        await AuthenticateConnection();
+        await SubscribeMarket(marketInitialClk, marketClk);
+        await SubscribeOrder(orderInitialClk, orderClk);
     }
 
 
-    private async Task SubscribeMarket(MarketSubscription? message, Action<MarketSnapshot>? action) {
-        if(message == null || action == null) return;
-        _changeMessageSubject.SubscribeMarket(action);
-        await _socketHandler.SendLine(message);
+    private async Task AuthenticateConnection() {
+        var heartbeatMs = _marketSubscription?.HeartbeatMs ?? _orderSubscription?.HeartbeatMs;
+        await _socketHandler.Start(
+            _streamConfiguration.RecoveryThresholdMs + heartbeatMs!.Value, // Account for heartbeat interval
+            _streamConfiguration.MaxRecoveryWaitMs
+        );
+        if(_exceptionFlag) return; // Don't continue on exception
+        await _socketHandler.SendLine(_authenticationMessage!); // Not null here, set in Subscribe()
     }
 
 
-    private async Task SubscribeOrder(OrderSubscription? message, Action<OrderMarketSnapshot>? action) {
-        if(message == null || action == null) return;
-        _changeMessageSubject.SubscribeOrder(action);
-        await _socketHandler.SendLine(message);
+    private async Task SubscribeMarket(string? initialClk, string? clk) {
+        if(_marketSubscription == null || _exceptionFlag) return; // Don't continue on exception
+        _marketSubscription = _marketSubscription with { InitialClk = initialClk, Clk = clk };
+        await _socketHandler.SendLine(_marketSubscription);
     }
 
 
-    private void SubscribeException(Action<BetfairESAException>? action) {
-        if(action == null) return;
-        _changeMessageSubject.SubscribeException(action);
+    private async Task SubscribeOrder(string? initialClk, string? clk) {
+        if(_orderSubscription == null || _exceptionFlag) return; // Don't continue on exception
+        _orderSubscription = _orderSubscription with { InitialClk = initialClk, Clk = clk };
+        await _socketHandler.SendLine(_orderSubscription);
+    }
+
+
+    private async Task CheckResubscribe() {
+        _socketHandler.Stop();
+        await SendSubscriptionMessages();
+    }
+
+
+    private void ForwardExceptionToHandler(Exception exception) {
+        _exceptionFlag = true;
+        _changeMessageHandler.HandleException(exception);
+    }
+
+
+    private void ForwardMessageToHandler(ReadOnlyMemory<byte> message) {
+        if(_exceptionFlag) _exceptionFlag = false; // Message received, must be ok
+        _changeMessageHandler.HandleMessage(message);
     }
 }

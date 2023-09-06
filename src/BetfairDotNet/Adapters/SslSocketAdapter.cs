@@ -13,8 +13,8 @@ internal sealed class SslSocketAdapter : IDisposable, ISslSocket {
     private SslStream? _sslStream;
 
 
-    public async Task ConnectAsync(string hostname, int port) {
-        _tcpClient = new TcpClient();
+    public async Task ConnectAsync(string hostname, int port, int receiveTimeout) {
+        _tcpClient = new TcpClient { ReceiveTimeout = receiveTimeout, SendTimeout = receiveTimeout };
         await _tcpClient.ConnectAsync(hostname, port);
     }
 

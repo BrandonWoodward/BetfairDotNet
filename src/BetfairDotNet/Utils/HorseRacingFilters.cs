@@ -1,41 +1,37 @@
 ﻿using BetfairDotNet.Models.Betting;
-using System.Diagnostics.CodeAnalysis;
 
 namespace BetfairDotNet.Utils;
 
-
-/// <summary>
-/// A collection of common market filters.
-/// </summary>
-[ExcludeFromCodeCoverage]
-public static class MarketFilterHelpers {
+public static class HorseRacingFilters {
 
     /// <summary>
-    /// A filter for today's horse racing markets in Great Britain and Ireland.
+    /// All UK and Irish horse racing markets for today.
     /// </summary>
-    public static MarketFilter TodaysGBAndIREHorseRacing() {
+    /// <returns></returns>
+    public static MarketFilter GBAndIRE(int days) {
         return new MarketFilter {
             EventTypeIds = new List<string> { "7" },
             MarketCountries = new List<string> { "GB", "IE" },
             MarketStartTime = new TimeRange {
                 From = DateTime.UtcNow,
-                To = DateTime.UtcNow.Date.AddDays(1).AddTicks(-1)
+                To = DateTime.UtcNow.Date.AddDays(days).AddTicks(-1)
             }
         };
     }
 
 
     /// <summary>
-    /// A filter for today's horse racing in Great Britain and Ireland (Win Only).
+    /// All UK and Irish horse racing markets for today (Win Only).
     /// </summary>
-    public static MarketFilter TodaysGBAndIREHorseRacingWinOnly() {
+    /// <returns></returns>
+    public static MarketFilter GBAndIREWinOnly(int days) {
         return new MarketFilter {
             EventTypeIds = new List<string> { "7" },
             MarketCountries = new List<string> { "GB", "IE" },
             MarketTypeCodes = new List<string> { "WIN" },
             MarketStartTime = new TimeRange {
                 From = DateTime.UtcNow,
-                To = DateTime.UtcNow.Date.AddDays(1).AddTicks(-1)
+                To = DateTime.UtcNow.Date.AddDays(days).AddTicks(-1)
             }
         };
     }

@@ -27,6 +27,7 @@ public class StreamSubscriptionHandlerTests {
         // Arrange
         var streamConfiguration = new StreamConfiguration { SessionToken = "" };
         var marketSubscription = new MarketSubscription(new StreamingMarketFilter(), new StreamingMarketDataFilter());
+        var orderSubscription = new OrderSubscription(new OrderFilter());
         _changeMessageHandler.GetClocks().Returns(Tuple.Create<string?, string?, string?, string?>(null, null, null, null));
 
         // Act

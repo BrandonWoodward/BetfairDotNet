@@ -111,6 +111,34 @@ public class SslSocketHandlerTests {
 
 
     [Fact]
+    public async Task SendLine_ShouldPropagateCustomException_WhenSocketExceptionIsThrown() {
+        // Arrange
+        var observedException = new TaskCompletionSource<Exception>();
+        var message = new AuthenticationMessage("testToken", "testApiKey");
+
+        _mockSslSocket
+            .When(x => x.WriteAsync(Arg.Any<byte[]>()))
+            .Do(x => throw new SocketException());
+
+        var handler = new SslSocketHandler(_mockSslSocket, "testEndpoint");
+
+        handler.MessageReceived.Subscribe(
+            _ => { /* Do nothing on next */ },
+            observedException.SetResult
+        );
+
+        // Act
+        await handler.SendLine(message);
+
+        // Assert
+        var exception = await observedException.Task;
+        exception.Should().NotBeNull();
+        exception.Should().BeOfType<BetfairESAException>();
+        ((BetfairESAException)exception).InnerException.Should().BeOfType<SocketException>();
+    }
+
+
+    [Fact]
     public void Stop_ShouldDisposeResources() {
         // Arrange
         _mockSslSocket.IsConnected().Returns(true);

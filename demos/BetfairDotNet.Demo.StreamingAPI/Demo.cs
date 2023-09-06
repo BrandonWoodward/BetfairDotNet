@@ -28,7 +28,7 @@ var session = await client.Login.CertificateLogin();
 // Get todays horse racing markets
 // ListMarketCatalogue returns 1 result if maxResults not specified
 var todaysHorseRacing = await client.Betting.ListMarketCatalogue(
-    MarketFilterHelpers.TodaysGBAndIREHorseRacingWinOnly(),
+    HorseRacingFilters.GBAndIREWinOnly(2),
     Enum.GetValues(typeof(MarketProjectionEnum)).Cast<MarketProjectionEnum>().ToList(),
     MarketSortEnum.FIRST_TO_START
 );

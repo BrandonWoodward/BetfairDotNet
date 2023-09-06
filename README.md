@@ -140,6 +140,13 @@ The following functionality is available:
 
 
 ```csharp
+// Create a streaming configuration
+var streamConfiguration = new StreamConfiguration() {
+    SessionToken = /* your sessionToken */,
+    RecoveryThresholdMs = 3_000,
+    MaxRecoveryWaitMs = 120_000
+};
+
 // Define your subscription criteria
 var marketSubscription = new MarketSubscription(
     new MarketFilter() { /* your filter */ },
@@ -153,7 +160,7 @@ var orderSubscription = new OrderSubscription(
 
 // Create the stream using the SessionToken
 var stream = client.Streaming
-    .CreateStream(/* your sessionToken */)
+    .CreateStream(streamConfiguration)
     .WithMarketSubscription(marketSubscription)
     .WithOrderSubscription(orderSubscription)
 

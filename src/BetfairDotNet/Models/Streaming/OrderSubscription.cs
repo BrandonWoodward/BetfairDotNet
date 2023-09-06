@@ -8,12 +8,6 @@ namespace BetfairDotNet.Models.Streaming;
 public sealed record OrderSubscription : BaseMessage {
 
     /// <summary>
-    /// Allow the server to send large sets of data in segments, instead of a single block
-    /// </summary>
-    [JsonPropertyName("segmentationEnabled"), JsonRequired]
-    public bool SegmentationEnabled { get; set; }
-
-    /// <summary>
     /// Gets or Sets OrderFilter
     /// </summary>
     [JsonPropertyName("orderFilter")]
@@ -26,10 +20,11 @@ public sealed record OrderSubscription : BaseMessage {
     public string? Clk { get; set; }
 
     /// <summary>
-    /// Heartbeat Milliseconds - the heartbeat rate (looped back on initial image after validation: bounds are 500 to 30000)
+    /// The heartbeat rate (looped back on initial image after validation: bounds are 500 to 30000)
+    /// Internal use only
     /// </summary>
     [JsonPropertyName("heartbeatMs"), JsonRequired]
-    public long HeartbeatMs { get; set; }
+    public int HeartbeatMs { get; set; } = 500;
 
     /// <summary>
     /// Token value (received in initial MarketChangeMessage) that should be passed to resume a subscription
@@ -46,11 +41,9 @@ public sealed record OrderSubscription : BaseMessage {
 
     public OrderSubscription(
         OrderFilter orderFilter,
-        long heartbeatMs = 30000,
         long conflateMs = 0) : base("orderSubscription") {
 
         OrderFilter = orderFilter;
-        HeartbeatMs = heartbeatMs;
         ConflateMs = conflateMs;
     }
 }

@@ -26,7 +26,7 @@ internal sealed record MarketChangeMessage : BaseMessage {
     /// to resume subscription (in case of disconnect)
     /// </summary>
     [JsonPropertyName("clk")]
-    public string Clk { get; init; } = string.Empty;
+    public string? Clk { get; init; }
 
     /// <summary>
     /// Heartbeat Milliseconds - the heartbeat rate (may differ from requested: bounds are 500 to 30000)
@@ -44,7 +44,7 @@ internal sealed record MarketChangeMessage : BaseMessage {
     /// Token value (non-null) should be stored and passed in a MarketSubscriptionMessage to resume subscription (in case of disconnect)
     /// </summary>
     [JsonPropertyName("initialClk")]
-    public string InitialClk { get; init; } = string.Empty;
+    public string? InitialClk { get; init; }
 
     /// <summary>
     /// MarketChanges - the modifications to markets (will be null on a heartbeat

@@ -23,7 +23,7 @@ internal sealed record OrderChangeMessage : BaseMessage {
     /// Token value (non-null) should be stored and passed in a MarketSubscriptionMessage to resume subscription (in case of disconnect)
     /// </summary>
     [JsonPropertyName("clk")]
-    public string Clk { get; init; } = string.Empty;
+    public string? Clk { get; init; }
 
     /// <summary>
     /// The heartbeat rate (may differ from requested: bounds are 500 to 30000)
@@ -47,7 +47,7 @@ internal sealed record OrderChangeMessage : BaseMessage {
     /// Token value (non-null) should be stored and passed in a MarketSubscriptionMessage to resume subscription (in case of disconnect)
     /// </summary>
     [JsonPropertyName("initialClk")]
-    public string InitialClk { get; init; } = string.Empty;
+    public string? InitialClk { get; init; }
 
     /// <summary>
     /// The conflation rate (may differ from that requested if subscription is delayed)

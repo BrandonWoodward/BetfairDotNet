@@ -34,24 +34,32 @@ var todaysHorseRacing = await client.Betting.ListMarketCatalogue(
 );
 
 
+// Create a streaming configuration.
+var streamConfiguration = new StreamConfiguration() {
+    SessionToken = session.SessionToken,
+    RecoveryThresholdMs = 3_000,
+    MaxRecoveryWaitMs = 120_000
+};
+
+
 // Create a market subscription
 var marketSubscription = new MarketSubscription(
     new StreamingMarketFilter() { MarketIds = new List<string> { todaysHorseRacing[0].MarketId } },
     new StreamingMarketDataFilter { Fields = Enum.GetValues(typeof(MarketPriceFilterEnum)).Cast<MarketPriceFilterEnum>().ToList() },
-    conflateMs: 200
+    200
 );
 
 
 // Connect to the streaming service
 var stream = client.Streaming
-    .CreateStream(session.SessionToken)
+    .CreateStream(streamConfiguration)
     .WithMarketSubscription(marketSubscription);
 
 
 // Subscribe to the stream
 await stream.Subscribe(
     onMarketChange: ms => Display.RenderMarketSnapshot(todaysHorseRacing[0], ms),
-    onException: ex => Console.WriteLine($"Exception received: {ex.Message}")
+    onException: ex => Console.WriteLine(ex.Message)
 );
 
 

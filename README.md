@@ -136,15 +136,15 @@ The following functionality is available:
 
 ## Streaming
 
-`BetfairDotNet` produces immutable, atomic snapshots for each market in your subscription so you don't have to worry about implementing a cache yourself. 
+`BetfairDotNet` produces immutable, atomic snapshots for each market in your subscription so you don't have to worry about implementing a cache yourself. The stream will automatically attempt to recover in the event of a connection loss.
 
 
 ```csharp
 // Create a streaming configuration
 var streamConfiguration = new StreamConfiguration() {
     SessionToken = /* your sessionToken */,
-    RecoveryThresholdMs = 3_000,
-    MaxRecoveryWaitMs = 120_000
+    RecoveryThresholdMs = 3_000, // How long before attempting to recover
+    MaxRecoveryWaitMs = 120_000 // If can't recover in this time, the socket closes and is disposed
 };
 
 // Define your subscription criteria

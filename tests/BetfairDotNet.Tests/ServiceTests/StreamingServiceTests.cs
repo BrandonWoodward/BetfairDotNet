@@ -11,20 +11,28 @@ namespace BetfairDotNet.Tests.ServiceTests;
 public class StreamingServiceTests {
 
 
-    private readonly IStreamSubscriptionHandler _streamSubscriptionHandler = Substitute.For<IStreamSubscriptionHandler>();
-    private readonly string _apiKey = "TestApiKey";
-    private readonly StreamConfiguration _streamConfiguration = new() { SessionToken = "" };
-    private readonly MarketSubscription _marketSubscription = new(new StreamingMarketFilter(), new StreamingMarketDataFilter());
-    private readonly OrderSubscription _orderSubscription = new(new OrderFilter());
+    private readonly IStreamSubscriptionHandler _streamSubscriptionHandler;
+    private readonly StreamConfiguration _streamConfiguration;
+    private readonly MarketSubscription _marketSubscription;
+    private readonly OrderSubscription _orderSubscription;
+    private readonly string _apiKey;
+    private readonly StreamingService _sut;
+
+
+    public StreamingServiceTests() {
+        _streamSubscriptionHandler = Substitute.For<IStreamSubscriptionHandler>();
+        _streamConfiguration = new() { SessionToken = "" };
+        _marketSubscription = new(new StreamingMarketFilter(), new StreamingMarketDataFilter());
+        _orderSubscription = new(new OrderFilter());
+        _apiKey = "TestApiKey";
+        _sut = new(_streamSubscriptionHandler, _apiKey);
+    }
 
 
     [Fact]
     public void CreateStream_ShouldSetStreamConfiguration() {
-        // Arrange
-        var service = new StreamingService(_streamSubscriptionHandler, _apiKey);
-
         // Act
-        service.CreateStream(_streamConfiguration);
+        _sut.CreateStream(_streamConfiguration);
 
         // Assert
         // Here, verify that _streamConfiguration.ApiKey was set to _apiKey
@@ -34,11 +42,8 @@ public class StreamingServiceTests {
 
     [Fact]
     public void CreateStream_ShouldThrowArgumentNullException_WhenStreamConfigurationIsNull() {
-        // Arrange
-        var service = new StreamingService(_streamSubscriptionHandler, _apiKey);
-
         // Act
-        Action act = () => service.CreateStream(null!);
+        var act = () => _sut.CreateStream(null!);
 
         // Assert
         act.Should().Throw<ArgumentNullException>();
@@ -47,11 +52,8 @@ public class StreamingServiceTests {
 
     [Fact]
     public void WithMarketSubscription_ShouldThrowArgumentNullException_WhenMarketSubscriptionIsNull() {
-        // Arrange
-        var service = new StreamingService(_streamSubscriptionHandler, _apiKey);
-
         // Act
-        Action act = () => service.WithMarketSubscription(null!);
+        var act = () => _sut.WithMarketSubscription(null!);
 
         // Assert
         act.Should().Throw<ArgumentNullException>();
@@ -60,11 +62,8 @@ public class StreamingServiceTests {
 
     [Fact]
     public void WithOrderSubscription_ShouldThrowArgumentNullException_WhenOrderSubscriptionIsNull() {
-        // Arrange
-        var service = new StreamingService(_streamSubscriptionHandler, _apiKey);
-
         // Act
-        Action act = () => service.WithOrderSubscription(null!);
+        var act = () => _sut.WithOrderSubscription(null!);
 
         // Assert
         act.Should().Throw<ArgumentNullException>();
@@ -73,11 +72,8 @@ public class StreamingServiceTests {
 
     [Fact]
     public async Task Subscribe_ShouldThrowInvalidOperationException_WhenNoStreamConfigurationSet() {
-        // Arrange
-        var service = new StreamingService(_streamSubscriptionHandler, _apiKey);
-
         // Act
-        Func<Task> act = async () => await service.Subscribe();
+        var act = async () => await _sut.Subscribe();
 
         // Assert
         await act.Should().ThrowAsync<InvalidOperationException>().WithMessage("No stream configuration set.");
@@ -87,10 +83,10 @@ public class StreamingServiceTests {
     [Fact]
     public async Task Subscribe_ShouldThrowInvalidOperationException_WhenNoSubscriptionCriteria() {
         // Arrange
-        var service = new StreamingService(_streamSubscriptionHandler, _apiKey).CreateStream(_streamConfiguration);
+        _sut.CreateStream(_streamConfiguration);
 
         // Act
-        Func<Task> act = async () => await service.Subscribe();
+        var act = async () => await _sut.Subscribe();
 
         // Assert
         await act.Should().ThrowAsync<InvalidOperationException>().WithMessage("No subscription criteria provided.");
@@ -100,12 +96,10 @@ public class StreamingServiceTests {
     [Fact]
     public async Task Subscribe_ShouldCallStreamSubscriptionHandlerSubscribe_WhenMarketSubscriptionSet() {
         // Arrange
-        var service = new StreamingService(_streamSubscriptionHandler, _apiKey)
-            .CreateStream(_streamConfiguration)
-            .WithMarketSubscription(_marketSubscription);
+        _sut.CreateStream(_streamConfiguration).WithMarketSubscription(_marketSubscription);
 
         // Act
-        await service.Subscribe();
+        await _sut.Subscribe();
 
         // Assert
         await _streamSubscriptionHandler.Received().Subscribe(
@@ -122,12 +116,10 @@ public class StreamingServiceTests {
     [Fact]
     public async Task Subscribe_ShouldCallStreamSubscriptionHandlerSubscribe_WhenOrderSubscriptionSet() {
         // Arrange
-        var service = new StreamingService(_streamSubscriptionHandler, _apiKey)
-            .CreateStream(_streamConfiguration)
-            .WithOrderSubscription(_orderSubscription);
+        _sut.CreateStream(_streamConfiguration).WithOrderSubscription(_orderSubscription);
 
         // Act
-        await service.Subscribe();
+        await _sut.Subscribe();
 
         // Assert
         await _streamSubscriptionHandler.Received().Subscribe(

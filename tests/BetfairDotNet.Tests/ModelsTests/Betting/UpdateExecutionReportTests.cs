@@ -9,12 +9,12 @@ namespace BetfairDotNet.Tests.ModelsTests.Betting;
 public class UpdateExecutionReportTests {
 
     [Fact]
-    public void TestUpdateExecutionReportSerialization() {
+    public void UpdateExecutionReport_ShouldSerializeProperly() {
         // Arrange
         var updateExecutionReport = new UpdateExecutionReport {
             CustomerRef = "some-customer-ref",
-            Status = ExecutionReportStatusEnum.SUCCESS, // Replace with an actual enum value
-            ErrorCode = ExecutionReportErrorCodeEnum.BET_ACTION_ERROR, // Replace with an actual enum value
+            Status = ExecutionReportStatusEnum.SUCCESS,
+            ErrorCode = ExecutionReportErrorCodeEnum.BET_ACTION_ERROR,
             MarketId = "some-market-id",
             InstructionReports = new List<UpdateInstructionReport>()
         };

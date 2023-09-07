@@ -10,6 +10,7 @@ using Xunit;
 
 namespace BetfairDotNet.Tests.FactoryTests;
 
+// TODO clean up this mess
 public class OrderSnapshotFactoryTests {
 
     [Fact]

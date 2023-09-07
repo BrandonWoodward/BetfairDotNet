@@ -17,7 +17,6 @@ public class StreamSubscriptionHandlerTests {
         _socketHandler = Substitute.For<ISslSocketHandler>();
         _changeMessageHandler = Substitute.For<IChangeMessageHandler>();
         _subject = Substitute.For<ISubject>();
-
         _sut = new StreamSubscriptionHandler(_socketHandler, _changeMessageHandler, _subject);
     }
 

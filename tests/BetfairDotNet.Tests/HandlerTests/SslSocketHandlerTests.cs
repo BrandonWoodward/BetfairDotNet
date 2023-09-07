@@ -13,12 +13,12 @@ public class SslSocketHandlerTests {
 
 
     private readonly ISslSocket _mockSslSocket;
-    private readonly SslSocketHandler _handler;
+    private readonly SslSocketHandler _sut;
 
 
     public SslSocketHandlerTests() {
         _mockSslSocket = Substitute.For<ISslSocket>();
-        _handler = new SslSocketHandler(_mockSslSocket, "test-endpoint");
+        _sut = new SslSocketHandler(_mockSslSocket, "test-endpoint");
     }
 
 
@@ -28,14 +28,14 @@ public class SslSocketHandlerTests {
         _mockSslSocket.IsConnected().Returns(true);
 
         // Act
-        await _handler.Start(5_000, 5_000);
+        await _sut.Start(5_000, 5_000);
 
         // Assert
         await _mockSslSocket.Received().ConnectAsync("test-endpoint", 443, 5_000);
         await _mockSslSocket.Received().AuthenticateAsClientAsync("test-endpoint");
 
         // Teardown
-        _handler.Stop();
+        _sut.Stop();
     }
 
 
@@ -48,11 +48,10 @@ public class SslSocketHandlerTests {
             .When(x => x.ConnectAsync(Arg.Any<string>(), Arg.Any<int>(), Arg.Any<int>()))
             .Do(x => throw new SocketException());
 
-        var handler = new SslSocketHandler(_mockSslSocket, "testEndpoint");
-        handler.MessageReceived.Subscribe(_ => { }, observedException.SetResult);
+        _sut.MessageReceived.Subscribe(_ => { }, observedException.SetResult);
 
         // Act
-        await handler.Start(5_000, 5_000);
+        await _sut.Start(5_000, 5_000);
 
         // Assert
         var exception = await observedException.Task;
@@ -61,7 +60,7 @@ public class SslSocketHandlerTests {
         ((BetfairESAException)exception).InnerException.Should().BeOfType<SocketException>();
 
         // Teardown
-        _handler.Stop();
+        _sut.Stop();
     }
 
 
@@ -71,14 +70,14 @@ public class SslSocketHandlerTests {
         var message = new AuthenticationMessage("testToken", "testApiKey");
 
         // Act
-        await _handler.Start(5_000, 5_000); // Assume this works based on the first test
-        await _handler.SendLine(message);
+        await _sut.Start(5_000, 5_000); // Assume this works based on the first test
+        await _sut.SendLine(message);
 
         // Assert
         await _mockSslSocket.Received().WriteAsync(Arg.Any<byte[]>());
 
         // Teardown
-        _handler.Stop();
+        _sut.Stop();
     }
 
 
@@ -92,15 +91,14 @@ public class SslSocketHandlerTests {
             .When(x => x.WriteAsync(Arg.Any<byte[]>()))
             .Do(x => throw new IOException());
 
-        var handler = new SslSocketHandler(_mockSslSocket, "testEndpoint");
 
-        handler.MessageReceived.Subscribe(
-            _ => { /* Do nothing on next */ },
+        _sut.MessageReceived.Subscribe(
+            _ => { },
             observedException.SetResult
         );
 
         // Act
-        await handler.SendLine(message);
+        await _sut.SendLine(message);
 
         // Assert
         var exception = await observedException.Task;
@@ -120,15 +118,14 @@ public class SslSocketHandlerTests {
             .When(x => x.WriteAsync(Arg.Any<byte[]>()))
             .Do(x => throw new SocketException());
 
-        var handler = new SslSocketHandler(_mockSslSocket, "testEndpoint");
 
-        handler.MessageReceived.Subscribe(
+        _sut.MessageReceived.Subscribe(
             _ => { /* Do nothing on next */ },
             observedException.SetResult
         );
 
         // Act
-        await handler.SendLine(message);
+        await _sut.SendLine(message);
 
         // Assert
         var exception = await observedException.Task;
@@ -144,11 +141,10 @@ public class SslSocketHandlerTests {
         _mockSslSocket.IsConnected().Returns(true);
 
         // Act
-        _handler.Start(5_000, 5_000).Wait();
-        _handler.Stop();
+        _sut.Start(5_000, 5_000).Wait();
+        _sut.Stop();
 
         // Assert
-        _mockSslSocket.Received().Close();
         _mockSslSocket.Received().Close();
     }
 }

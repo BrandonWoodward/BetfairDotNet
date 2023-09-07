@@ -39,13 +39,13 @@ public class BettingService {
     /// <returns>A task that represents the asynchronous operation. The task result contains a <see cref="ClearedOrderSummaryReport"/></returns>
     public Task<ClearedOrderSummaryReport> ListClearedOrders(
             BetStatusEnum betStatus,
-            List<string>? eventTypeIds = null,
-            List<string>? eventIds = null,
-            List<string>? marketIds = null,
-            List<RunnerId>? runnerIds = null,
-            List<string>? betIds = null,
-            List<string>? customerOrderRefs = null,
-            List<string>? customerStrategyRefs = null,
+            IList<string>? eventTypeIds = null,
+            IList<string>? eventIds = null,
+            IList<string>? marketIds = null,
+            IList<RunnerId>? runnerIds = null,
+            IList<string>? betIds = null,
+            IList<string>? customerOrderRefs = null,
+            IList<string>? customerStrategyRefs = null,
             SideEnum? side = null,
             TimeRange? settledDateRange = null,
             GroupByEnum? groupBy = null,
@@ -88,12 +88,12 @@ public class BettingService {
     /// <param name="locale">The language used for the response. If not specified, the default is returned.</param>
     /// <returns> A task that represents the asynchronous operation. 
     /// The task result contains a list of <see cref="CompetitionResult"/>.</returns>
-    public Task<List<CompetitionResult>> ListCompetitions(MarketFilter marketFilter, string? locale = null) {
+    public Task<IReadOnlyList<CompetitionResult>> ListCompetitions(MarketFilter marketFilter, string? locale = null) {
         var args = new Dictionary<string, object?> {
             ["filter"] = marketFilter,
             ["locale"] = locale,
         };
-        return _networkService.Request<List<CompetitionResult>>(
+        return _networkService.Request<IReadOnlyList<CompetitionResult>>(
             BettingEndpoints.BaseUrl,
             BettingEndpoints.ListCompetitions,
             args
@@ -108,12 +108,12 @@ public class BettingService {
     /// <param name="locale"></param>
     /// <returns> A task that represents the asynchronous operation. 
     /// The task result contains a list of <see cref="CountryCodeResult"/>.</returns>
-    public Task<List<CountryCodeResult>> ListCountries(MarketFilter marketFilter, string? locale = null) {
+    public Task<IReadOnlyList<CountryCodeResult>> ListCountries(MarketFilter marketFilter, string? locale = null) {
         var args = new Dictionary<string, object?> {
             ["filter"] = marketFilter,
             ["locale"] = locale,
         };
-        return _networkService.Request<List<CountryCodeResult>>(
+        return _networkService.Request<IReadOnlyList<CountryCodeResult>>(
             BettingEndpoints.BaseUrl,
             BettingEndpoints.ListCountries,
             args
@@ -140,8 +140,8 @@ public class BettingService {
     /// <returns> A task that represents the asynchronous operation. 
     /// The task result contains a <see cref="CurrentOrderSummaryReport"/>.</returns>
     public Task<CurrentOrderSummaryReport> ListCurrentOrders(
-            List<string>? betIds = null,
-            List<string>? marketIds = null,
+            IList<string>? betIds = null,
+            IList<string>? marketIds = null,
             OrderProjectionEnum? orderProjection = null,
             TimeRange? placedDateRange = null,
             TimeRange? dateRange = null,
@@ -177,12 +177,12 @@ public class BettingService {
     /// <param name="locale">The language used for the response. If not specified, the default is returned.</param>
     /// <returns> A task that represents the asynchronous operation. 
     /// The task result contains a <see cref="BetfairServerResponse{T}"/> containing the list of <see cref="EventResult"/>.</returns>
-    public Task<List<EventResult>> ListEvents(MarketFilter marketFilter, string? locale = null) {
+    public Task<IReadOnlyList<EventResult>> ListEvents(MarketFilter marketFilter, string? locale = null) {
         var args = new Dictionary<string, object?> {
             ["filter"] = marketFilter,
             ["locale"] = locale,
         };
-        return _networkService.Request<List<EventResult>>(
+        return _networkService.Request<IReadOnlyList<EventResult>>(
             BettingEndpoints.BaseUrl,
             BettingEndpoints.ListEvents,
             args
@@ -197,12 +197,12 @@ public class BettingService {
     /// <param name="locale">The language used for the response. If not specified, the default is returned.</param>
     /// <returns> A task that represents the asynchronous operation. 
     /// The task result contains a <see cref="BetfairServerResponse{T}"/> containing the list of <see cref="EventTypeResult"/>.</returns>
-    public Task<List<EventTypeResult>> ListEventTypes(MarketFilter marketFilter, string? locale = null) {
+    public Task<IReadOnlyList<EventTypeResult>> ListEventTypes(MarketFilter marketFilter, string? locale = null) {
         var args = new Dictionary<string, object?> {
             ["filter"] = marketFilter,
             ["locale"] = locale,
         };
-        return _networkService.Request<List<EventTypeResult>>(
+        return _networkService.Request<IReadOnlyList<EventTypeResult>>(
             BettingEndpoints.BaseUrl,
             BettingEndpoints.ListEventTypes,
             args
@@ -231,18 +231,18 @@ public class BettingService {
     /// will be included in the response. A maximum of 250 betId's can be provided at a time.</param>
     /// <returns> A task that represents the asynchronous operation. 
     /// The task result contains a <see cref="BetfairServerResponse{T}"/> containing the list of <see cref="MarketBook"/>.</returns>
-    public Task<List<MarketBook>> ListMarketBook(
-            IEnumerable<string> marketIds,
-            PriceProjection? priceProjection = null,
-            OrderProjectionEnum? orderProjection = null,
-            MatchProjectionEnum? matchProjection = null,
-            bool includeOverallPosition = false,
-            bool partitionMatchedByStrategyRef = false,
-            List<string>? customerStrategyRefs = null,
-            string? currencyCode = null,
-            string? locale = null,
-            DateTime? matchedSince = null,
-            List<string>? betIds = null) {
+    public Task<IReadOnlyList<MarketBook>> ListMarketBook(
+        IEnumerable<string> marketIds,
+        PriceProjection? priceProjection = null,
+        OrderProjectionEnum? orderProjection = null,
+        MatchProjectionEnum? matchProjection = null,
+        bool includeOverallPosition = false,
+        bool partitionMatchedByStrategyRef = false,
+        IList<string>? customerStrategyRefs = null,
+        string? currencyCode = null,
+        string? locale = null,
+        DateTime? matchedSince = null,
+        IList<string>? betIds = null) {
 
         var args = new Dictionary<string, object?> {
             ["marketIds"] = marketIds,
@@ -257,7 +257,7 @@ public class BettingService {
             ["matchedSince"] = matchedSince,
             ["betIds"] = betIds
         };
-        return _networkService.Request<List<MarketBook>>(
+        return _networkService.Request<IReadOnlyList<MarketBook>>(
             BettingEndpoints.BaseUrl,
             BettingEndpoints.ListMarketBook,
             args
@@ -280,9 +280,9 @@ public class BettingService {
     /// <param name="locale">The language used for the response. If not specified, the default is returned.</param>
     /// <returns> A task that represents the asynchronous operation. 
     /// The task result contains a <see cref="BetfairServerResponse{T}"/> containing the list of <see cref="MarketCatalogue"/>.</returns>
-    public Task<List<MarketCatalogue>> ListMarketCatalogue(
+    public Task<IReadOnlyList<MarketCatalogue>> ListMarketCatalogue(
             MarketFilter marketFilter,
-            List<MarketProjectionEnum>? marketProjections = null,
+            IList<MarketProjectionEnum>? marketProjections = null,
             MarketSortEnum? sort = null,
             int maxResults = 1,
             string? locale = null) {
@@ -294,7 +294,7 @@ public class BettingService {
             ["maxResults"] = maxResults,
             ["locale"] = locale
         };
-        return _networkService.Request<List<MarketCatalogue>>(
+        return _networkService.Request<IReadOnlyList<MarketCatalogue>>(
             BettingEndpoints.BaseUrl,
             BettingEndpoints.ListMarketCatalogue,
             args
@@ -312,8 +312,8 @@ public class BettingService {
     /// <param name="netOfCommission">Option to return profit and loss net of users current commission rate for this market including any special tariffs.</param>
     /// <returns> A task that represents the asynchronous operation. 
     /// The task result contains a <see cref="BetfairServerResponse{T}"/> containing the list of <see cref="MarketProfitAndLoss"/>.</returns>
-    public Task<List<MarketProfitAndLoss>> ListMarketProfitAndLoss(
-            List<string> marketIds,
+    public Task<IReadOnlyList<MarketProfitAndLoss>> ListMarketProfitAndLoss(
+            IList<string> marketIds,
             bool includeSettledBets = false,
             bool includeBsbBets = false,
             bool netOfCommission = false) {
@@ -324,7 +324,7 @@ public class BettingService {
             ["includeBspBets"] = includeBsbBets,
             ["netOfCommission"] = netOfCommission
         };
-        return _networkService.Request<List<MarketProfitAndLoss>>(
+        return _networkService.Request<IReadOnlyList<MarketProfitAndLoss>>(
             BettingEndpoints.BaseUrl,
             BettingEndpoints.ListMarketProfitAndLoss,
             args
@@ -340,12 +340,12 @@ public class BettingService {
     /// <param name="locale">The language used for the response. If not specified, the default is returned.</param>
     /// <returns> A task that represents the asynchronous operation. 
     /// The task result contains a <see cref="BetfairServerResponse{T}"/> containing the list of <see cref="MarketTypeResult"/>.</returns>
-    public Task<List<MarketTypeResult>> ListMarketTypes(MarketFilter marketFilter, string? locale = null) {
+    public Task<IReadOnlyList<MarketTypeResult>> ListMarketTypes(MarketFilter marketFilter, string? locale = null) {
         var args = new Dictionary<string, object?> {
             ["filter"] = marketFilter,
             ["locale"] = locale
         };
-        return _networkService.Request<List<MarketTypeResult>>(
+        return _networkService.Request<IReadOnlyList<MarketTypeResult>>(
             BettingEndpoints.BaseUrl,
             BettingEndpoints.ListMarketTypes,
             args
@@ -386,11 +386,11 @@ public class BettingService {
         MatchProjectionEnum? matchProjection = null,
         bool includeOverallPostion = false,
         bool partitionMatchByStrategyRef = false,
-        List<string>? customerStrategyRef = null,
+        IList<string>? customerStrategyRef = null,
         string? currencyCode = null,
         string? locale = null,
         DateTime? matchedSince = null,
-        List<string>? betIds = null) {
+        IList<string>? betIds = null) {
 
         var args = new Dictionary<string, object?> {
             ["marketId"] = marketId,
@@ -425,12 +425,12 @@ public class BettingService {
     /// <param name="timeGranularity">The granularity of time periods that correspond to markets selected by the market filter.</param>
     /// <returns> A task that represents the asynchronous operation. 
     /// The task result contains a <see cref="BetfairServerResponse{T}"/> containing the list of <see cref="TimeRangeResult"/>.</returns>
-    public Task<List<TimeRangeResult>> ListTimeRanges(MarketFilter marketFilter, TimeGranularityEnum timeGranularity) {
+    public Task<IReadOnlyList<TimeRangeResult>> ListTimeRanges(MarketFilter marketFilter, TimeGranularityEnum timeGranularity) {
         var args = new Dictionary<string, object?> {
             ["filter"] = marketFilter,
             ["granularity"] = timeGranularity
         };
-        return _networkService.Request<List<TimeRangeResult>>(
+        return _networkService.Request<IReadOnlyList<TimeRangeResult>>(
             BettingEndpoints.BaseUrl,
             BettingEndpoints.ListTimeRanges,
             args
@@ -446,12 +446,12 @@ public class BettingService {
     /// <param name="locale">The language used for the response. If not specified, the default is returned.</param>
     /// <returns> A task that represents the asynchronous operation. 
     /// The task result contains a <see cref="BetfairServerResponse{T}"/> containing the list of <see cref="VenueResult"/>.</returns>
-    public Task<List<VenueResult>> ListVenues(MarketFilter marketFilter, string? locale = null) {
+    public Task<IReadOnlyList<VenueResult>> ListVenues(MarketFilter marketFilter, string? locale = null) {
         var args = new Dictionary<string, object?> {
             ["filter"] = marketFilter,
             ["locale"] = locale
         };
-        return _networkService.Request<List<VenueResult>>(
+        return _networkService.Request<IReadOnlyList<VenueResult>>(
             BettingEndpoints.BaseUrl,
             BettingEndpoints.ListVenues,
             args
@@ -517,7 +517,7 @@ public class BettingService {
     /// The task result contains a <see cref="BetfairServerResponse{T}"/> containing the <see cref="UpdateExecutionReport"/>.</returns>
     public Task<UpdateExecutionReport> UpdateOrders(
         string marketId,
-        List<UpdateInstruction> instructions,
+        IList<UpdateInstruction> instructions,
         string? customerRef = null) {
 
         var args = new Dictionary<string, object?> {

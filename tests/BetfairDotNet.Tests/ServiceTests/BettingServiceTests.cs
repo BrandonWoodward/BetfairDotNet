@@ -94,7 +94,7 @@ public class BettingServiceTests {
         await _bettingService.ListCompetitions(marketFilter, locale);
 
         // Assert
-        await _mockNetwork.Received().Request<List<CompetitionResult>>(
+        await _mockNetwork.Received().Request<IReadOnlyList<CompetitionResult>>(
             "https://api.betfair.com/exchange/betting/json-rpc/v1",
             "SportsAPING/v1.0/listCompetitions",
             Arg.Is<Dictionary<string, object?>>(args =>
@@ -114,7 +114,7 @@ public class BettingServiceTests {
         await _bettingService.ListCountries(marketFilter, locale);
 
         // Assert
-        await _mockNetwork.Received().Request<List<CountryCodeResult>>(
+        await _mockNetwork.Received().Request<IReadOnlyList<CountryCodeResult>>(
             "https://api.betfair.com/exchange/betting/json-rpc/v1",
             "SportsAPING/v1.0/listCountries",
             Arg.Is<Dictionary<string, object?>>(args =>
@@ -186,7 +186,7 @@ public class BettingServiceTests {
         await _bettingService.ListEvents(marketFilter);
 
         // Assert
-        await _mockNetwork.Received().Request<List<EventResult>>(
+        await _mockNetwork.Received().Request<IReadOnlyList<EventResult>>(
             "https://api.betfair.com/exchange/betting/json-rpc/v1",
             "SportsAPING/v1.0/listEvents",
             Arg.Is<Dictionary<string, object?>>(args =>
@@ -206,7 +206,7 @@ public class BettingServiceTests {
         await _bettingService.ListEventTypes(marketFilter, locale);
 
         // Assert
-        await _mockNetwork.Received().Request<List<EventTypeResult>>(
+        await _mockNetwork.Received().Request<IReadOnlyList<EventTypeResult>>(
             "https://api.betfair.com/exchange/betting/json-rpc/v1",
             "SportsAPING/v1.0/listEventTypes",
             Arg.Is<Dictionary<string, object?>>(args =>
@@ -248,7 +248,7 @@ public class BettingServiceTests {
         );
 
         // Assert
-        await _mockNetwork.Received().Request<List<MarketBook>>(
+        await _mockNetwork.Received().Request<IReadOnlyList<MarketBook>>(
             "https://api.betfair.com/exchange/betting/json-rpc/v1",
             "SportsAPING/v1.0/listMarketBook",
             Arg.Is<Dictionary<string, object?>>(args =>
@@ -288,7 +288,7 @@ public class BettingServiceTests {
         );
 
         // Assert
-        await _mockNetwork.Received().Request<List<MarketCatalogue>>(
+        await _mockNetwork.Received().Request<IReadOnlyList<MarketCatalogue>>(
             "https://api.betfair.com/exchange/betting/json-rpc/v1",
             "SportsAPING/v1.0/listMarketCatalogue",
             Arg.Is<Dictionary<string, object?>>(args =>
@@ -318,7 +318,7 @@ public class BettingServiceTests {
         );
 
         // Assert
-        await _mockNetwork.Received().Request<List<MarketProfitAndLoss>>(
+        await _mockNetwork.Received().Request<IReadOnlyList<MarketProfitAndLoss>>(
             "https://api.betfair.com/exchange/betting/json-rpc/v1",
             "SportsAPING/v1.0/listMarketProfitAndLoss",
             Arg.Is<Dictionary<string, object?>>(args =>
@@ -342,7 +342,7 @@ public class BettingServiceTests {
         await _bettingService.ListMarketTypes(marketFilter, locale);
 
         // Assert
-        await _mockNetwork.Received().Request<List<MarketTypeResult>>(
+        await _mockNetwork.Received().Request<IReadOnlyList<MarketTypeResult>>(
             "https://api.betfair.com/exchange/betting/json-rpc/v1",
             "SportsAPING/v1.0/listMarketTypes",
             Arg.Is<Dictionary<string, object?>>(args =>
@@ -422,7 +422,7 @@ public class BettingServiceTests {
         await _bettingService.ListTimeRanges(marketFilter, granularity);
 
         // Assert
-        await _mockNetwork.Received().Request<List<TimeRangeResult>>(
+        await _mockNetwork.Received().Request<IReadOnlyList<TimeRangeResult>>(
             "https://api.betfair.com/exchange/betting/json-rpc/v1",
             "SportsAPING/v1.0/listTimeRanges",
             Arg.Is<Dictionary<string, object?>>(args =>
@@ -444,7 +444,7 @@ public class BettingServiceTests {
         await _bettingService.ListVenues(marketFilter, locale);
 
         // Assert
-        await _mockNetwork.Received().Request<List<VenueResult>>(
+        await _mockNetwork.Received().Request<IReadOnlyList<VenueResult>>(
             "https://api.betfair.com/exchange/betting/json-rpc/v1",
             "SportsAPING/v1.0/listVenues",
             Arg.Is<Dictionary<string, object?>>(args =>

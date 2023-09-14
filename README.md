@@ -5,8 +5,8 @@
 
 <div align="center">
 
-[![CI](https://github.com/BrandonWoodward/BetfairDotNet/actions/workflows/integration.yml/badge.svg)](https://github.com/BrandonWoodward/BetfairDotNet/actions/workflows/integration.yml)
-[![CD](https://github.com/BrandonWoodward/BetfairDotNet/actions/workflows/deployment.yml/badge.svg)](https://github.com/BrandonWoodward/BetfairDotNet/actions/workflows/deployment.yml)
+[![CI](https://github.com/BrandonWoodward/BetfairDotNet/actions/workflows/CI.yml/badge.svg)](https://github.com/BrandonWoodward/BetfairDotNet/actions/workflows/CI.yml)
+[![CD](https://github.com/BrandonWoodward/BetfairDotNet/actions/workflows/CD.yml/badge.svg)](https://github.com/BrandonWoodward/BetfairDotNet/actions/workflows/CD.yml)
 [![codecov](https://codecov.io/gh/BrandonWoodward/BetfairDotNet/branch/master/graph/badge.svg)](https://codecov.io/gh/BrandonWoodward/BetfairDotNet)
 [![NuGet](https://img.shields.io/nuget/v/BetfairDotNet.svg?style=flat)](https://www.nuget.org/packages/BetfairDotNet/)
 

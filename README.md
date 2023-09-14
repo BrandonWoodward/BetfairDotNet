@@ -5,10 +5,10 @@
 
 <div align="center">
 
-[![build](https://github.com/BrandonWoodward/BetfairDotNet/actions/workflows/dotnet.yml/badge.svg)](https://github.com/BrandonWoodward/BetfairDotNet/actions/workflows/dotnet.yml)
+[![integration](https://github.com/BrandonWoodward/BetfairDotNet/actions/workflows/integration.yml/badge.svg)](https://github.com/BrandonWoodward/BetfairDotNet/actions/workflows/integration.yml)
+[![deployment](https://github.com/BrandonWoodward/BetfairDotNet/actions/workflows/deployment.yml/badge.svg)](https://github.com/BrandonWoodward/BetfairDotNet/actions/workflows/deployment.yml)
 [![codecov](https://codecov.io/gh/BrandonWoodward/BetfairDotNet/branch/master/graph/badge.svg)](https://codecov.io/gh/BrandonWoodward/BetfairDotNet)
-[![NuGet Version](https://img.shields.io/nuget/v/BetfairDotNet.svg?style=flat)](https://www.nuget.org/packages/BetfairDotNet/)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yourusername/yourrepository/blob/main/LICENSE)
+[![NuGet](https://img.shields.io/nuget/v/BetfairDotNet.svg?style=flat)](https://www.nuget.org/packages/BetfairDotNet/)
 
 </div>
 

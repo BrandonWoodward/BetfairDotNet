@@ -19,8 +19,11 @@ jobs:
       with:
         dotnet-version: 7.0.x
 
-    - name: Pack
-      run: dotnet pack ./src/BetfairDotNet/BetfairDotNet.csproj --configuration Release -o ./out
+    - name: Extract version from tag
+      run: echo "PACKAGE_VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
+
+    - name: Pack with tag version
+      run: dotnet pack ./src/BetfairDotNet/BetfairDotNet.csproj --configuration Release -o ./out /p:Version=${{ env.PACKAGE_VERSION }}
   
     - name: Push to NuGet
       run: dotnet nuget push "./out/BetfairDotNet.*.nupkg" -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json

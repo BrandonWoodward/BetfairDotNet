@@ -23,4 +23,4 @@ jobs:
       run: dotnet pack ./src/BetfairDotNet/BetfairDotNet.csproj --configuration Release -o ./out
   
     - name: Push to NuGet
-      run: dotnet nuget push "D:\a\BetfairDotNet\BetfairDotNet\out\BetfairDotNet.1.0.0.nupkg" -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
+      run: dotnet nuget push "./out/BetfairDotNet.*.nupkg" -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json

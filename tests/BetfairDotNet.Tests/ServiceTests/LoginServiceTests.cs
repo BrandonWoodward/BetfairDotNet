@@ -5,26 +5,30 @@ using NSubstitute;
 using Xunit;
 
 namespace BetfairDotNet.Tests.ServiceTests;
-public class LoginServiceTests {
+public class LoginServiceTests
+{
 
     private readonly IRequestResponseHandler _mockHandler;
+    private readonly LoginService _sut;
 
 
-    public LoginServiceTests() {
+    public LoginServiceTests()
+    {
         _mockHandler = Substitute.For<IRequestResponseHandler>();
+        _sut = new LoginService(_mockHandler);
     }
 
 
     [Fact]
-    public async Task CertificateLogin_SendsCorrectRequest() {
+    public async Task CertificateLogin_SendsCorrectRequest()
+    {
         // Arrange
         var username = "testuser";
         var password = "testpass";
         var certPath = "test/path/to/cert.pfx";
-        var sut = new LoginService(_mockHandler, username, password, certPath);
 
         // Act 
-        await sut.CertificateLogin();
+        await _sut.CertificateLogin(username, password, certPath);
 
         // Assert
         await _mockHandler.Received().Authenticate<CertificateLoginResponse>(
@@ -39,66 +43,66 @@ public class LoginServiceTests {
 
 
     [Fact]
-    public async Task CertificateLogin_ThrowsArgumentException_ForEmptyUsername() {
+    public async Task CertificateLogin_ThrowsArgumentException_ForEmptyUsername()
+    {
         // Arrange
         var username = string.Empty;
         var password = "testpass";
         var certPath = "test/path/to/cert.pfx";
-        var sut = new LoginService(_mockHandler, username, password, certPath);
 
         // Act & Assert
-        await Assert.ThrowsAsync<ArgumentException>(sut.CertificateLogin);
+        await Assert.ThrowsAsync<ArgumentException>(() => _sut.CertificateLogin(username, password, certPath));
     }
 
 
     [Fact]
-    public async Task CertificateLogin_ThrowsArgumentException_ForEmptyPassword() {
+    public async Task CertificateLogin_ThrowsArgumentException_ForEmptyPassword()
+    {
         // Arrange
         var username = "testuser";
         var password = string.Empty;
         var certPath = "test/path/to/cert.pfx";
-        var sut = new LoginService(_mockHandler, username, password, certPath);
 
         // Act & Assert
-        await Assert.ThrowsAsync<ArgumentException>(sut.CertificateLogin);
+        await Assert.ThrowsAsync<ArgumentException>(() => _sut.CertificateLogin(username, password, certPath));
     }
 
 
     [Fact]
-    public async Task CertificateLogin_ThrowsArgumentException_ForEmptyCertifcatePath() {
+    public async Task CertificateLogin_ThrowsArgumentException_ForEmptyCertifcatePath()
+    {
         // Arrange
         var username = "testuser";
         var password = "testpassword";
         var certPath = "";
-        var sut = new LoginService(_mockHandler, username, password, certPath);
 
         // Act & Assert
-        await Assert.ThrowsAsync<ArgumentException>(sut.CertificateLogin);
+        await Assert.ThrowsAsync<ArgumentException>(() => _sut.CertificateLogin(username, password, certPath));
     }
 
 
     [Fact]
-    public async Task CertificateLogin_ThrowsArgumentException_ForInvalidCertFileExtension() {
+    public async Task CertificateLogin_ThrowsArgumentException_ForInvalidCertFileExtension()
+    {
         // Arrange
         var username = "testuser";
         var password = "testpass";
         var certPath = "test/path/to/cert.pem";
-        var sut = new LoginService(_mockHandler, username, password, certPath);
 
         // Act & Assert
-        await Assert.ThrowsAsync<ArgumentException>(sut.CertificateLogin);
+        await Assert.ThrowsAsync<ArgumentException>(() => _sut.CertificateLogin(username, password, certPath));
     }
 
 
     [Fact]
-    public async Task InteractiveLogin_SendsCorrectRequest() {
+    public async Task InteractiveLogin_SendsCorrectRequest()
+    {
         // Arrange
         var username = "testuser";
         var password = "testpass";
-        var sut = new LoginService(_mockHandler, username, password);
 
         // Act 
-        await sut.InteractiveLogin();
+        await _sut.InteractiveLogin(username, password);
 
         // Assert
         await _mockHandler.Received().Authenticate<InteractiveLoginResponse>(
@@ -112,25 +116,25 @@ public class LoginServiceTests {
 
 
     [Fact]
-    public async Task InteractiveLogin_ThrowsArgumentException_ForEmptyUsername() {
+    public async Task InteractiveLogin_ThrowsArgumentException_ForEmptyUsername()
+    {
         // Arrange
         var username = string.Empty;
         var password = "testpass";
-        var sut = new LoginService(_mockHandler, username, password);
 
         // Act & Assert
-        await Assert.ThrowsAsync<ArgumentException>(sut.InteractiveLogin);
+        await Assert.ThrowsAsync<ArgumentException>(() => _sut.InteractiveLogin(username, password));
     }
 
 
     [Fact]
-    public async Task InteractiveLogin_ThrowsArgumentException_ForEmptyPassword() {
+    public async Task InteractiveLogin_ThrowsArgumentException_ForEmptyPassword()
+    {
         // Arrange
         var username = "testuser";
         var password = string.Empty;
-        var sut = new LoginService(_mockHandler, username, password);
 
         // Act & Assert
-        await Assert.ThrowsAsync<ArgumentException>(sut.InteractiveLogin);
+        await Assert.ThrowsAsync<ArgumentException>(() => _sut.InteractiveLogin(username, password));
     }
 }

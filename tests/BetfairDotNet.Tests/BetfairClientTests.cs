@@ -3,17 +3,17 @@ using Xunit;
 
 namespace BetfairDotNet.Tests;
 
-public class BetfairClientTests {
+public class BetfairClientTests
+{
 
     [Fact]
-    public void LoginService_ShouldBeInitialized() {
+    public void LoginService_ShouldBeInitialized()
+    {
         // Arrange
         var apiKey = "someApiKey";
-        var username = "someUsername";
-        var password = "somePassword";
 
         // Act
-        var client = new BetfairClient(apiKey, username, password);
+        var client = new BetfairClient(apiKey);
 
         // Assert
         client.Login.Should().NotBeNull();
@@ -21,14 +21,13 @@ public class BetfairClientTests {
 
 
     [Fact]
-    public void AccountService_ShouldBeInitialized() {
+    public void AccountService_ShouldBeInitialized()
+    {
         // Arrange
         var apiKey = "someApiKey";
-        var username = "someUsername";
-        var password = "somePassword";
 
         // Act
-        var client = new BetfairClient(apiKey, username, password);
+        var client = new BetfairClient(apiKey);
 
         // Assert
         client.Account.Should().NotBeNull();
@@ -36,14 +35,13 @@ public class BetfairClientTests {
 
 
     [Fact]
-    public void BettingService_ShouldBeInitialized() {
+    public void BettingService_ShouldBeInitialized()
+    {
         // Arrange
         var apiKey = "someApiKey";
-        var username = "someUsername";
-        var password = "somePassword";
 
         // Act
-        var client = new BetfairClient(apiKey, username, password);
+        var client = new BetfairClient(apiKey);
 
         // Assert
         client.Betting.Should().NotBeNull();
@@ -51,14 +49,13 @@ public class BetfairClientTests {
 
 
     [Fact]
-    public void HeartbeatService_ShouldBeInitialized() {
+    public void HeartbeatService_ShouldBeInitialized()
+    {
         // Arrange
         var apiKey = "someApiKey";
-        var username = "someUsername";
-        var password = "somePassword";
 
         // Act
-        var client = new BetfairClient(apiKey, username, password);
+        var client = new BetfairClient(apiKey);
 
         // Assert
         client.Heartbeat.Should().NotBeNull();
@@ -66,14 +63,13 @@ public class BetfairClientTests {
 
 
     [Fact]
-    public void StreamingService_ShouldBeInitialized() {
+    public void StreamingService_ShouldBeInitialized()
+    {
         // Arrange
         var apiKey = "someApiKey";
-        var username = "someUsername";
-        var password = "somePassword";
 
         // Act
-        var client = new BetfairClient(apiKey, username, password);
+        var client = new BetfairClient(apiKey);
 
         // Assert
         client.Streaming.Should().NotBeNull();

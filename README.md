@@ -80,24 +80,24 @@ To run the demo, you also need to provide a `credentials.json` file in the root 
 
 ##  Login
 
-The recommended and most secure login flow uses a self-signed SSL certificate:
+If you're developing an automated trading algorithm, login with an SSL certificate:
 
 ```csharp
 // Enter your credentials here
-var client = new BetfairClient(apiKey, username, password, certPath)
+var client = new BetfairClient(apiKey)
 
 // Returns the SessionToken and the error code if unsuccessful
-var session = await client.Login.CertificateLogin();
+var session = await client.Login.CertificateLogin(username, password, certPath);
 ```
 
-You can also provide just your username and password. This is recommended if you're creating your own login form:
+Use the `InteractiveLogin` if you're creating a login form:
 
 ```csharp
 // Enter your credentials here
-var client = new BetfairClient(apiKey, username, password)
+var client = new BetfairClient(apiKey)
 
 // Returns the SessionToken and the error code if unsuccessful
-var session = await client.Login.InteractiveLogin();
+var session = await client.Login.InteractiveLogin(username, password);
 ```
 
 <br>

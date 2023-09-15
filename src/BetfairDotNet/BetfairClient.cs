@@ -12,7 +12,8 @@ namespace BetfairDotNet;
 /// <summary>
 /// The top level client containing the services for the different Betfair APIs.
 /// </summary>
-public sealed class BetfairClient : IBetfairClient {
+public sealed class BetfairClient : IBetfairClient
+{
 
     private readonly Lazy<LoginService> _login;
     private readonly Lazy<AccountService> _account;
@@ -57,17 +58,19 @@ public sealed class BetfairClient : IBetfairClient {
     /// <param name="username"></param>
     /// <param name="password"></param>
     /// <param name="certPath"></param>
-    public BetfairClient(string apiKey, string username, string password, string? certPath = null) {
+    public BetfairClient(string apiKey)
+    {
         // Shared services
         var httpClient = new HttpClientAdapter(apiKey, 5000);
         var requestHandler = new RequestResponseHandler(httpClient);
 
-        _login = new Lazy<LoginService>(() => new LoginService(requestHandler, username, password, certPath));
+        _login = new Lazy<LoginService>(() => new LoginService(requestHandler));
         _account = new Lazy<AccountService>(() => new AccountService(requestHandler));
         _betting = new Lazy<BettingService>(() => new BettingService(requestHandler));
         _heartbeat = new Lazy<HeartbeatService>(() => new HeartbeatService(requestHandler));
 
-        _streaming = new Lazy<StreamingService>(() => {
+        _streaming = new Lazy<StreamingService>(() =>
+        {
 
             // Wraps Tcp and Ssl operations
             var sslSocket = new SslSocketAdapter();

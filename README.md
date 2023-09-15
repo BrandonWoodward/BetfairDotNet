@@ -52,7 +52,7 @@ To run the demo, you will need to create a `credentials.json` file in the root o
 Install via NuGet Package Manager or the .NET CLI:
 
 ```bash
-dotnet add package BetfairDotNet --version x.y.z
+dotnet add package BetfairDotNet
 ```
 
 Or clone this repository and build the project locally:

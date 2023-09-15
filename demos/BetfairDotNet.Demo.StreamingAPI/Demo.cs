@@ -21,8 +21,8 @@ var certPath = config["CERT_PATH"] ?? throw new Exception("CERT_PATH not found."
 
 
 // Initialise the client and login
-var client = new BetfairClient(apiKey, username, password, certPath);
-var session = await client.Login.CertificateLogin();
+var client = new BetfairClient(apiKey);
+var session = await client.Login.CertificateLogin(username, password, certPath);
 
 
 // Get todays horse racing markets
@@ -35,7 +35,8 @@ var todaysHorseRacing = await client.Betting.ListMarketCatalogue(
 
 
 // Create a streaming configuration.
-var streamConfiguration = new StreamConfiguration() {
+var streamConfiguration = new StreamConfiguration()
+{
     SessionToken = session.SessionToken,
     RecoveryThresholdMs = 3_000,
     MaxRecoveryWaitMs = 120_000

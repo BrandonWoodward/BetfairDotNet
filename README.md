@@ -5,10 +5,10 @@
 
 <div align="center">
 
-[![build](https://github.com/BrandonWoodward/BetfairDotNet/actions/workflows/dotnet.yml/badge.svg)](https://github.com/BrandonWoodward/BetfairDotNet/actions/workflows/dotnet.yml)
+[![ci](https://github.com/BrandonWoodward/BetfairDotNet/actions/workflows/CI.yml/badge.svg)](https://github.com/BrandonWoodward/BetfairDotNet/actions/workflows/CI.yml)
+[![cd](https://github.com/BrandonWoodward/BetfairDotNet/actions/workflows/CD.yml/badge.svg)](https://github.com/BrandonWoodward/BetfairDotNet/actions/workflows/CD.yml)
 [![codecov](https://codecov.io/gh/BrandonWoodward/BetfairDotNet/branch/master/graph/badge.svg)](https://codecov.io/gh/BrandonWoodward/BetfairDotNet)
-[![NuGet Version](https://img.shields.io/nuget/v/BetfairDotNet.svg?style=flat)](https://www.nuget.org/packages/BetfairDotNet/)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yourusername/yourrepository/blob/main/LICENSE)
+[![NuGet](https://img.shields.io/nuget/v/BetfairDotNet.svg?style=flat)](https://www.nuget.org/packages/BetfairDotNet/)
 
 </div>
 
@@ -141,7 +141,8 @@ The following functionality is available:
 
 ```csharp
 // Create a streaming configuration
-var streamConfiguration = new StreamConfiguration() {
+var streamConfiguration = new StreamConfiguration()
+{
     SessionToken = /* your sessionToken */,
     RecoveryThresholdMs = 3_000, // How long before attempting to recover
     MaxRecoveryWaitMs = 120_000 // If can't recover in this time, the socket closes and is disposed

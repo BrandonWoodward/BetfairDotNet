@@ -10,72 +10,76 @@ namespace BetfairDotNet.Services;
 /// <summary>
 /// Provides functionalities for interacting with account-related services.
 /// </summary>
-public sealed class AccountService {
-
+public sealed class AccountService
+{
 
     private readonly IRequestResponseHandler _networkService;
 
-
-    internal AccountService(IRequestResponseHandler networkService) {
+    internal AccountService(IRequestResponseHandler networkService)
+    {
         _networkService = networkService;
     }
 
-
     /// <summary>
-    /// Asynchronously fetches the current status of the account funds.
+    /// Asynchronously fetches accout funds.
     /// </summary>
-    /// <returns>
-    /// A task that represents the asynchronous operation. The result contains 
-    /// details about the account's funds.
-    /// </returns>
-    public async Task<AccountFundsResponse> GetAccountFunds() {
-        return await _networkService.Request<AccountFundsResponse>(
+    /// <example>
+    /// Usage:
+    /// <code>
+    /// var accountFunds = await client.Account.GetAccountFunds();
+    /// </code>
+    /// </example>
+    /// <returns>A task with the account funds upon completion.</returns>
+    public async Task<AccountFundsResponse> GetAccountFunds() => await _networkService.Request<AccountFundsResponse>(
             AccountEndpoints.BaseUrl,
             AccountEndpoints.GetAccountFunds
         );
-    }
-
 
     /// <summary>
-    /// Asynchronously retrieves detailed information about the account.
+    /// Asynchronously fetches account details.
     /// </summary>
-    /// <returns>
-    /// A task that represents the asynchronous operation. The result contains 
-    /// detailed information about the account.
-    /// </returns>
-    public async Task<AccountDetailsResponse> GetAccountDetails() {
-        return await _networkService.Request<AccountDetailsResponse>(
+    /// <example>
+    /// Usage:
+    /// <code>
+    /// var accountDetails = await client.Account.GetAccountDetails();
+    /// </code>
+    /// </example>
+    /// <returns>A task with the account details upon completion.</returns>
+    public async Task<AccountDetailsResponse> GetAccountDetails() => await _networkService.Request<AccountDetailsResponse>(
             AccountEndpoints.BaseUrl,
             AccountEndpoints.GetAccountDetails
         );
-    }
-
 
     /// <summary>
-    /// Get a statement relating to the account balance including , P/L, commission payments, deposits, withdrawals etc.
+    /// Fetches an account statement with details such as P/L, deposits, withdrawals, and more.
     /// </summary>
-    /// <param name="locale">The language to be used where applicable. If not specified, the customer account default is returned.</param>
-    /// <param name="fromRecord">Specifies the first record that will be returned. Records start at index zero. If not specified then it will default to 0.</param>
-    /// <param name="recordCount">Specifies the maximum number of records to be returned. Note that there is a page size limit of 100.</param>
-    /// <param name="itemDateRange">Return items with an itemDate within this date range. Both from and to date times are inclusive. 
-    /// If from is not specified then the oldest available items will be in range. If to is not specified then the latest items will be in range. 
-    /// This itemDataRange is currently only applied when includeItem is set to ALL or not specified, else items are NOT bound by itemDate.  
-    /// You can only retrieve account statement items for the last 90 days.</param>
-    /// <param name="includeItem">Which items to include, if not specified then defaults to ALL.</param>
-    /// <param name="wallet">Which wallet to return statementItems for. If unspecified then the UK wallet will be selected</param>
-    /// <returns>
-    /// A task that represents the asynchronous operation. The result contains 
-    /// detailed information about the account balance.
-    /// </returns>
+    /// <example>
+    /// Usage:
+    /// <code>
+    /// var statement = await client.Account.GetAccountStatement(
+    ///     locale: "en", 
+    ///     recordCount: 10
+    ///     itemDateRange: new TimeRange(From = new DateTime(...), To = new DateTime(...))
+    /// );
+    /// </code>
+    /// </example>
+    /// <param name="locale">Language used; defaults to account's setting.</param>
+    /// <param name="fromRecord">Start index for records; default is 0.</param>
+    /// <param name="recordCount">Max records to return; max limit is 100.</param>
+    /// <param name="itemDateRange">Date range for items; max range is last 90 days.</param>
+    /// <param name="includeItem">Items to include; default is ALL.</param>
+    /// <param name="wallet">Wallet for statement; default is UK.</param>
+    /// <returns>A task with the account statement details.</returns>
     public async Task<AccountStatementReport> GetAccountStatement(
         string? locale = null,
         int? fromRecord = null,
         int? recordCount = null,
         TimeRange? itemDateRange = null,
         IncludeItemEnum? includeItem = null,
-        WalletEnum? wallet = null) {
-
-        var args = new Dictionary<string, object?>() {
+        WalletEnum? wallet = null)
+    {
+        var args = new Dictionary<string, object?>()
+        {
             ["locale"] = locale,
             ["fromRecord"] = fromRecord,
             ["recordCount"] = recordCount,
@@ -83,7 +87,6 @@ public sealed class AccountService {
             ["includeItem"] = includeItem,
             ["wallet"] = wallet,
         };
-
         return await _networkService.Request<AccountStatementReport>(
             AccountEndpoints.BaseUrl,
             AccountEndpoints.GetAccountStatement,
@@ -91,22 +94,23 @@ public sealed class AccountService {
         );
     }
 
-
     /// <summary>
-    /// Returns a list of currency rates based on given currency. 
-    /// The currency rates are updated once every hour a few seconds after the hour.
+    /// Fetches currency rates, updated hourly, based on a specified currency.
     /// </summary>
-    /// <param name="fromCurrency">The currency from which the rates are computed. Please note: GBP is currently the only based currency support</param>
-    /// <returns>
-    /// A task that represents the asynchronous operation. The result contains 
-    /// detailed information about the account balance.
-    /// </returns>
-    public async Task<CurrencyRate> ListCurrencyRates(string? fromCurrency = null) {
-
-        var args = new Dictionary<string, object?>() {
+    /// <example>
+    /// Usage:
+    /// <code>
+    /// var rates = await client.Account.ListCurrencyRates("GBP");
+    /// </code>
+    /// </example>
+    /// <param name="fromCurrency">Base currency for rates; only "GBP" is currently supported.</param>
+    /// <returns>A task with the currency rates.</returns>
+    public async Task<CurrencyRate> ListCurrencyRates(string? fromCurrency = null)
+    {
+        var args = new Dictionary<string, object?>()
+        {
             ["fromCurrency"] = fromCurrency,
         };
-
         return await _networkService.Request<CurrencyRate>(
             AccountEndpoints.BaseUrl,
             AccountEndpoints.ListCurrencyRates,

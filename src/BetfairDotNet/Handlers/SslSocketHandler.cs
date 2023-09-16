@@ -18,6 +18,7 @@ internal sealed class SslSocketHandler : ISslSocketHandler
 
     private readonly Subject<ReadOnlyMemory<byte>> _messageSubject = new();
     private readonly Subject<Unit> _recoverySubject = new();
+    private readonly object _lockObj;
     private readonly string _endpoint;
     private readonly int _port = 443;
 
@@ -27,7 +28,6 @@ internal sealed class SslSocketHandler : ISslSocketHandler
     private CancellationTokenSource? _cts;
     private TimeSpan? _recoveryThreshold;
     private DateTime? _lastReceivedTime;
-
 
     public IObservable<ReadOnlyMemory<byte>> MessageReceived
         => _messageSubject.AsObservable();
@@ -66,10 +66,13 @@ internal sealed class SslSocketHandler : ISslSocketHandler
 
     public void Stop()
     {
-        _cts?.Cancel();
-        _cts?.Dispose();
-        if(_socket.IsConnected()) _socket?.Close();
-        _socket = new SslSocketAdapter(); // For reconnection       
+        lock(_lockObj)
+        {
+            _cts?.Cancel();
+            _cts?.Dispose();
+            if(_socket.IsConnected()) _socket?.Close();
+            _socket = new SslSocketAdapter(); // For reconnection       
+        }
     }
 
 

@@ -18,7 +18,6 @@ internal sealed class SslSocketHandler : ISslSocketHandler
 
     private readonly Subject<ReadOnlyMemory<byte>> _messageSubject = new();
     private readonly Subject<Unit> _recoverySubject = new();
-    private readonly object _lockObj;
     private readonly string _endpoint;
     private readonly int _port = 443;
 
@@ -53,7 +52,7 @@ internal sealed class SslSocketHandler : ISslSocketHandler
         {
             await _socket.ConnectAsync(_endpoint, _port, maxRecoveryWait);
             await _socket.AuthenticateAsClientAsync(_endpoint);
-            _listener = new Thread(() => ReceiveLines(_cts.Token)) { IsBackground = true };
+            _listener = new Thread(ReceiveLines) { IsBackground = true };
             _listener.Start();
         }
         catch(SocketException ex)
@@ -66,13 +65,10 @@ internal sealed class SslSocketHandler : ISslSocketHandler
 
     public void Stop()
     {
-        lock(_lockObj)
-        {
-            _cts?.Cancel();
-            _cts?.Dispose();
-            if(_socket.IsConnected()) _socket?.Close();
-            _socket = new SslSocketAdapter(); // For reconnection       
-        }
+        _cts?.Cancel();
+        _cts?.Dispose();
+        if(_socket.IsConnected()) _socket?.Close();
+        _socket = new SslSocketAdapter(); // For reconnection               
     }
 
 
@@ -97,7 +93,7 @@ internal sealed class SslSocketHandler : ISslSocketHandler
     }
 
 
-    private void ReceiveLines(CancellationToken token)
+    private void ReceiveLines()
     {
         var buffer = ArrayPool<byte>.Shared.Rent(2 * 1024 * 1024); // Unsure of optimal size
         var delimiter = "\r\n"u8.ToArray(); // Separate each message to processs individually
@@ -105,7 +101,7 @@ internal sealed class SslSocketHandler : ISslSocketHandler
 
         try
         {
-            while(_socket.IsConnected() && !token.IsCancellationRequested)
+            while(_socket.IsConnected() && !(_cts?.IsCancellationRequested ?? true))
             {
                 _lastReceivedTime = DateTime.UtcNow;
 

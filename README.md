@@ -15,7 +15,6 @@
 <h4 align="center"> 🚀 A fast, easy to use C# client for the <a href="https://docs.developer.betfair.com/display/1smk3cen4v3lu3yomq5qye0ni" target="_blank">Betfair API</a>.</h4>
 
 <br>
-<br>
 
 ## Table of Contents
 
@@ -30,21 +29,13 @@
 ## Requirements
 
 You will need a Betfair account, an api key and a self-signed SSL certificate.
+
 <br>
 <br>
+
 You can obtain an api key by following the instructions [here](https://docs.developer.betfair.com/display/1smk3cen4v3lu3yomq5qye0ni/Application+Keys"). If you want to use a non-interactive login flow, you 
 should follow the instructions [here](https://docs.developer.betfair.com/display/1smk3cen4v3lu3yomq5qye0ni/Non-Interactive+%28bot%29+login) to create an SSL certificate.
-<br>
-<br>
-To run the demo, you will need to create a `credentials.json` file in the root of the demo project:
-```json
-{
-	"API_KEY": "your_api_key_here",
-	"USERNAME": "your_username_here",
-	"PASSWORD": "your_password_here",
-	"CERT_PATH": "full_path_to_.pfx_or_.p12"
-}
-```
+
 <br>
 
 ## Installation
@@ -61,19 +52,6 @@ Or clone this repository and build the project locally:
 git clone https://github.com/yourusername/BetfairDotNet.git
 cd BetfairDotNet
 dotnet build
-```
-
-<br>
-
-To run the demo, you also need to provide a `credentials.json` file in the root of the project:
-
-```json
-{
-	"API_KEY": "your_api_key_here",
-	"USERNAME": "your_username_here",
-	"PASSWORD": "your_password_here",
-	"CERT_PATH": "full_path_to_.pfx_or_.p12"
-}
 ```
 
 <br>

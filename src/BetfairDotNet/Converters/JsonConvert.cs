@@ -16,7 +16,6 @@ internal sealed class JsonConvert
     {
         _options = new JsonSerializerOptions
         {
-            Converters = { new JsonStringEnumConverter() },
             DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
             ReadCommentHandling = JsonCommentHandling.Skip,
         };

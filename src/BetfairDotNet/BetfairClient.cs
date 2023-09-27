@@ -14,7 +14,6 @@ namespace BetfairDotNet;
 /// </summary>
 public sealed class BetfairClient : IBetfairClient
 {
-
     private readonly Lazy<LoginService> _login;
     private readonly Lazy<AccountService> _account;
     private readonly Lazy<BettingService> _betting;
@@ -54,24 +53,19 @@ public sealed class BetfairClient : IBetfairClient
     /// Create a new BetfairClient instance, which is the top level client for all operations.
     /// This should be instantiated once per application lifetime.
     /// </summary>
-    /// <param name="apiKey"></param>
-    /// <param name="username"></param>
-    /// <param name="password"></param>
-    /// <param name="certPath"></param>
     public BetfairClient(string apiKey)
     {
         // Shared services
         var httpClient = new HttpClientAdapter(apiKey, 5000);
         var requestHandler = new RequestResponseHandler(httpClient);
 
-        _login = new Lazy<LoginService>(() => new LoginService(requestHandler));
-        _account = new Lazy<AccountService>(() => new AccountService(requestHandler));
-        _betting = new Lazy<BettingService>(() => new BettingService(requestHandler));
-        _heartbeat = new Lazy<HeartbeatService>(() => new HeartbeatService(requestHandler));
+        _login = new(() => new(requestHandler));
+        _account = new(() => new(requestHandler));
+        _betting = new(() => new(requestHandler));
+        _heartbeat = new(() => new(requestHandler));
 
-        _streaming = new Lazy<StreamingService>(() =>
+        _streaming = new(() =>
         {
-
             // Wraps Tcp and Ssl operations
             var sslSocket = new SslSocketAdapter();
 
@@ -105,7 +99,7 @@ public sealed class BetfairClient : IBetfairClient
                 changeMessageSubject
             );
 
-            return new StreamingService(streamSubscriptionHandler, apiKey);
+            return new(streamSubscriptionHandler, apiKey);
         });
     }
 }

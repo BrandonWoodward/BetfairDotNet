@@ -1,4 +1,4 @@
-name: deployment
+name: CD
 
 on:
   release:

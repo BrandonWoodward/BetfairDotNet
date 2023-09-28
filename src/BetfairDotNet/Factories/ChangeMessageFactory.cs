@@ -9,7 +9,6 @@ namespace BetfairDotNet.Factories;
 internal class ChangeMessageFactory : IChangeMessageFactory {
 
     public BaseMessage Process(ReadOnlyMemory<byte> input) {
-        var msg = Encoding.UTF8.GetString(input.Span);
         var operation = GetOperation(input);
         return operation switch {
             "connection" => JsonConvert.Deserialize<ConnectionMessage>(input),
@@ -25,10 +24,9 @@ internal class ChangeMessageFactory : IChangeMessageFactory {
         var reader = new Utf8JsonReader(message.Span);
         while(reader.Read()) {
             if(reader.TokenType != JsonTokenType.PropertyName) continue;
-            if(reader.ValueTextEquals("op")) {
-                reader.Read();
-                return reader.GetString()!; // Only null when TokenType is null
-            }
+            if (!reader.ValueTextEquals("op")) continue;
+            reader.Read();
+            return reader.GetString()!; // Only null when TokenType is null
         }
         throw new InvalidOperationException("Unknown stream operation");
     }

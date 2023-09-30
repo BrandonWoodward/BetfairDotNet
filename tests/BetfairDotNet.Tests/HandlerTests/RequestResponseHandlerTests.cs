@@ -15,171 +15,100 @@ using Xunit;
 
 namespace BetfairDotNet.Tests.HandlerTests;
 
-/// <summary>
-/// Unit tests for the <see cref="RequestResponseHandler"/> class.
-/// </summary>
-public class RequestResponseHandlerTests {
-
+public class RequestResponseHandlerTests 
+{
     private readonly IHttpClient _mockNetwork;
     private readonly RequestResponseHandler _sut;
-
 
     public RequestResponseHandlerTests() {
         _mockNetwork = Substitute.For<IHttpClient>();
         _sut = new(_mockNetwork);
     }
 
-
     [Fact]
-    public async Task Authenticate_SetsDefaultRequestHeader_WhenSuccessfulLogin() {
+    public async Task Request_SetsDefaultRequestHeader_WhenSuccessfulLogin() 
+    {
         // Arrange
-        var response = new CertificateLoginResponse { Status = LoginStatusEnum.SUCCESS, SessionToken = "token" };
+        var response = new InteractiveLoginResponse { Status = LoginStatusEnum.SUCCESS, SessionToken = "token" };
         _mockNetwork
-            .PostUrlEncodedContent(Arg.Any<string>(), Arg.Any<FormUrlEncodedContent>())
+            .Post(Arg.Any<string>(), Arg.Any<FormUrlEncodedContent>())
             .Returns(JsonConvert.Serialize(response));
 
         // Act
-        await _sut.Authenticate<CertificateLoginResponse>("user", new Dictionary<string, string>(), "cert");
+        await _sut.Request<InteractiveLoginResponse>("user", new());
 
         // Assert
         _mockNetwork.Received().AddDefaultRequestHeader("X-Authentication", "token");
     }
 
-
     [Fact]
-    public async Task Authenticate_ThrowsBetfairServerException_WhenLoginFailure() {
+    public async Task Request_ThrowsBetfairServerException_WhenLoginFailure() 
+    {
         // Arrange
         var sampleUrl = "sampleUrl";
         var sampleCertPath = "sampleCertificatePath";
-        var sampleCredentials = new Dictionary<string, string>() {
+        var sampleCredentials = new Dictionary<string, string> {
             ["username"] = "username",
             ["password"] = "password"
         };
         var failedResponse = new CertificateLoginResponse { Status = LoginStatusEnum.INVALID_USERNAME_OR_PASSWORD, SessionToken = "token" };
         _mockNetwork
-            .PostUrlEncodedContent(Arg.Any<string>(), Arg.Any<FormUrlEncodedContent>())
+            .Post(Arg.Any<string>(), Arg.Any<FormUrlEncodedContent>())
             .Returns(JsonConvert.Serialize(failedResponse));
 
         // Act
-        Func<Task> act = async () => await _sut.Authenticate<CertificateLoginResponse>(sampleUrl, sampleCredentials, sampleCertPath);
+        Func<Task> act = async () => await _sut.Request<CertificateLoginResponse>(sampleUrl, sampleCredentials, sampleCertPath);
 
         // Assert
         await act.Should().ThrowAsync<BetfairNGException>();
     }
 
-
     [Fact]
-    public async Task Authenticate_ThrowsBetfairNGException_WhenNoSessionTokenReturned() {
+    public async Task Request_ThrowsBetfairNGException_WhenCryptographicExceptionIsThrown() {
         // Arrange
         var sampleUrl = "sampleUrl";
         var sampleCertPath = "sampleCertificatePath";
-        var sampleCredentials = new Dictionary<string, string>() {
-            ["username"] = "sampleUsername",
-            ["password"] = "samplePassword"
-        };
-        var noTokenResponse = new CertificateLoginResponse { Status = LoginStatusEnum.SUCCESS, SessionToken = string.Empty };
-        _mockNetwork.PostUrlEncodedContent(Arg.Any<string>(), Arg.Any<FormUrlEncodedContent>())
-            .Returns(JsonConvert.Serialize(noTokenResponse));
-
-        // Act
-        Func<Task> act = async () => await _sut.Authenticate<CertificateLoginResponse>(sampleUrl, sampleCredentials, sampleCertPath);
-
-        // Assert
-        await act.Should().ThrowAsync<BetfairNGException>();
-    }
-
-
-    [Fact]
-    public async Task Authenticate_ThrowsBetfairNGException_ForCryptographicErrors() {
-        // Arrange
-        var sampleUrl = "sampleUrl";
-        var sampleCertPath = "sampleCertificatePath";
-        var sampleCredentials = new Dictionary<string, string>() {
+        var sampleCredentials = new Dictionary<string, string> {
             ["username"] = "sampleUsername",
             ["password"] = "samplePassword"
         };
 
         _mockNetwork
-            .When(x => x.AddClientCertifcate(Arg.Any<string>()))
-            .Do(x => throw new CryptographicException());
+            .When(x => x.AddClientCertificate(Arg.Any<string>()))
+            .Do(_ => throw new CryptographicException());
 
         // Act
-        var act = async () => await _sut.Authenticate<CertificateLoginResponse>(sampleUrl, sampleCredentials, sampleCertPath);
+        var act = async () => await _sut.Request<CertificateLoginResponse>(sampleUrl, sampleCredentials, sampleCertPath);
 
         // Assert
         await act.Should().ThrowAsync<BetfairNGException>();
     }
 
-
     [Fact]
-    public async Task Authenticate_ThrowsBetfairNGException_ForNetworkErrors() {
+    public async Task Request_ThrowsBetfairNGException_WhenHttpRequestExceptionIsThrown() 
+    {
         // Arrange
         var sampleUrl = "sampleUrl";
         var sampleCertPath = "sampleCertificatePath";
-        var sampleCredentials = new Dictionary<string, string>() {
+        var sampleCredentials = new Dictionary<string, string> {
             ["username"] = "sampleUsername",
             ["password"] = "samplePassword"
         };
 
         _mockNetwork
-            .PostUrlEncodedContent(Arg.Any<string>(), Arg.Any<FormUrlEncodedContent>())
+            .Post(Arg.Any<string>(), Arg.Any<FormUrlEncodedContent>())
             .Throws(new HttpRequestException("Network error", null, HttpStatusCode.InternalServerError));
 
         // Act
-        var act = async () => await _sut.Authenticate<CertificateLoginResponse>(sampleUrl, sampleCredentials, sampleCertPath);
+        var act = async () => await _sut.Request<CertificateLoginResponse>(sampleUrl, sampleCredentials, sampleCertPath);
 
         // Assert
         await act.Should().ThrowAsync<BetfairNGException>();
     }
 
-
     [Fact]
-    public async Task Authenticate_ThrowsBetfairNGException_WhenTimeoutOccurs() {
-        // Arrange
-        var sampleUrl = "sampleUrl";
-        var sampleCertPath = "sampleCertificatePath";
-        var sampleCredentials = new Dictionary<string, string>() {
-            ["username"] = "sampleUsername",
-            ["password"] = "samplePassword"
-        };
-        var timeoutException = new TaskCanceledException("Request timeout", new Exception(), new CancellationToken(false));
-        _mockNetwork
-            .PostUrlEncodedContent(Arg.Any<string>(), Arg.Any<FormUrlEncodedContent>())
-            .Throws(timeoutException);
-
-        // Act
-        var act = async () => await _sut.Authenticate<CertificateLoginResponse>(sampleUrl, sampleCredentials, sampleCertPath);
-
-
-        // Assert
-        await act.Should().ThrowAsync<BetfairNGException>();
-    }
-
-
-    [Fact]
-    public async Task Authenticate_ThrowsBetfairNGException_WhenJsonSerializationErrorOccurs() {
-        // Arrange
-        var sampleUrl = "sampleUrl";
-        var sampleCertPath = "sampleCertificatePath";
-        var sampleCredentials = new Dictionary<string, string>() {
-            ["username"] = "sampleUsername",
-            ["password"] = "samplePassword"
-        };
-
-        _mockNetwork
-            .PostUrlEncodedContent(Arg.Any<string>(), Arg.Any<FormUrlEncodedContent>())
-            .Returns("{invalidJson");
-
-        // Act
-        var act = async () => await _sut.Authenticate<CertificateLoginResponse>(sampleUrl, sampleCredentials, sampleCertPath);
-
-        // Assert
-        await act.Should().ThrowAsync<BetfairNGException>();
-    }
-
-
-    [Fact]
-    public async Task Request_ReturnsDeserializedResponse_WhenRequestSuccessful() {
+    public async Task Request_ReturnsDeserializedResponse_WhenRequestSuccessful() 
+    {
         // Arrange
         var sampleUrl = "sampleUrl";
         var sampleMethod = "sampleMethod";
@@ -192,7 +121,7 @@ public class RequestResponseHandlerTests {
         };
 
         _mockNetwork
-            .PostStringContent(Arg.Any<string>(), Arg.Any<string>())
+            .Post(Arg.Any<string>(), Arg.Any<string>())
             .Returns(JsonSerializer.Serialize(expectedResponse));
 
         // Act
@@ -204,63 +133,14 @@ public class RequestResponseHandlerTests {
 
 
     [Fact]
-    public async Task Request_ThrowsBetfairNGException_WhenNetworkErrorOccurs() {
+    public async Task Request_ThrowsBetfairNGException_WhenTaskCanceledExceptionIsThrown() {
         // Arrange
         var sampleUrl = "sampleUrl";
-        var sampleMethod = "sampleMethod";
-        var sampleData = new Dictionary<string, object?>() {
-            ["key"] = "value"
-        };
-
-        _mockNetwork
-            .PostStringContent(Arg.Any<string>(), Arg.Any<string>())
-            .Throws(new HttpRequestException("Network error", null, HttpStatusCode.InternalServerError));
+        var timeoutException = new TaskCanceledException("Request timeout", new(), new(false));
+        _mockNetwork.Get(Arg.Any<string>()).Throws(timeoutException);
 
         // Act
-        var act = async () => await _sut.Request<string>(sampleUrl, sampleMethod, sampleData);
-
-        // Assert
-        await act.Should().ThrowAsync<BetfairNGException>();
-    }
-
-
-    [Fact]
-    public async Task Request_ThrowsBetfairNGException_WhenTimeoutOccurs() {
-        // Arrange
-        var sampleUrl = "sampleUrl";
-        var sampleMethod = "sampleMethod";
-        var sampleData = new Dictionary<string, object?>() {
-            ["key"] = "value"
-        };
-
-        var timeoutException = new TaskCanceledException("Request timeout", new Exception(), new CancellationToken(false));
-        _mockNetwork.
-            PostStringContent(Arg.Any<string>(), Arg.Any<string>())
-            .Throws(timeoutException);
-
-        // Act
-        var act = async () => await _sut.Request<string>(sampleUrl, sampleMethod, sampleData);
-
-        // Assert
-        await act.Should().ThrowAsync<BetfairNGException>();
-    }
-
-
-    [Fact]
-    public async Task Request_ThrowsBetfairNGException_WhenJsonSerializationErrorOccurs() {
-        // Arrange
-        var sampleUrl = "sampleUrl";
-        var sampleMethod = "sampleMethod";
-        var sampleData = new Dictionary<string, object?>() {
-            ["key"] = "value"
-        };
-
-        _mockNetwork
-            .PostStringContent(Arg.Any<string>(), Arg.Any<string>())
-            .Throws(new JsonException("JSON serialization error"));
-
-        // Act
-        var act = async () => await _sut.Request<string>(sampleUrl, sampleMethod, sampleData);
+        var act = async () => await _sut.Request<string>(sampleUrl);
 
         // Assert
         await act.Should().ThrowAsync<BetfairNGException>();

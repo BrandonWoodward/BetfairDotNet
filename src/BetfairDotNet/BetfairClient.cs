@@ -16,6 +16,7 @@ public sealed class BetfairClient : IBetfairClient
 {
     private readonly Lazy<LoginService> _login;
     private readonly Lazy<AccountService> _account;
+    private readonly Lazy<NavigationService> _navigation;
     private readonly Lazy<BettingService> _betting;
     private readonly Lazy<HeartbeatService> _heartbeat;
     private readonly Lazy<StreamingService> _streaming;
@@ -30,6 +31,11 @@ public sealed class BetfairClient : IBetfairClient
     /// such as getting account details, funds, statements, etc.
     /// </summary>
     public AccountService Account => _account.Value;
+
+    /// <summary>
+    /// Provides functionality for retrieving navigation data for applications.
+    /// </summary>
+    public NavigationService Navigation => _navigation.Value;
 
     /// <summary>
     /// Provides functionality for the Betfair Betting API.
@@ -61,6 +67,7 @@ public sealed class BetfairClient : IBetfairClient
 
         _login = new(() => new(requestHandler));
         _account = new(() => new(requestHandler));
+        _navigation = new(() => new(requestHandler));
         _betting = new(() => new(requestHandler));
         _heartbeat = new(() => new(requestHandler));
 

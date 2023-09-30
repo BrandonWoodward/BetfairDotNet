@@ -16,14 +16,23 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 7.0.x
+        
     - name: Restore dependencies
-      run: dotnet restore
+      run: |
+        dotnet restore src/BetfairDotNet/BetfairDotNet.csproj
+        dotnet restore test/BetfairDotNet.Tests/BetfairDotNet.Tests.csproj
+      
     - name: Build
-      run: dotnet build --no-restore
+      run: |
+        dotnet build src/BetfairDotNet/BetfairDotNet.csproj --no-restore
+        dotnet build test/BetfairDotNet.Tests/BetfairDotNet.Tests.csproj --no-restore
+      
     - name: Test and collect coverage
       run: dotnet test --collect:"XPlat Code Coverage" --no-build
+      
     - name: Move coverage report to known location
       run: mv ./tests/BetfairDotNet.Tests/TestResults/*/coverage.cobertura.xml ./tests/BetfairDotNet.Tests/coverage.cobertura.xml
+    
     - name: Upload coverage to Codecov  
       uses: codecov/codecov-action@v3
       with:

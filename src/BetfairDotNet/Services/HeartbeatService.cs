@@ -61,7 +61,7 @@ public sealed class HeartbeatService {
     /// Please note:  Session times aren't determined or extended based on API activity.
     /// </summary>
     /// <returns></returns>
-    public Task<KeepAliveResponse> KeepAive() {
+    public Task<KeepAliveResponse> KeepAlive() {
         return _networkService.Request<KeepAliveResponse>(HeartbeatEndpoints.KeepAlive);
     }
 }

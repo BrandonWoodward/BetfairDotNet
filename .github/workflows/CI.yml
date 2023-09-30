@@ -24,8 +24,8 @@ jobs:
       
     - name: Build
       run: |
-        dotnet build src/BetfairDotNet/BetfairDotNet.csproj --no-restore
-        dotnet build tests/BetfairDotNet.Tests/BetfairDotNet.Tests.csproj --no-restore
+        dotnet build ./src/BetfairDotNet/BetfairDotNet.csproj --configuration Release --no-restore
+        dotnet build ./tests/BetfairDotNet.Tests/BetfairDotNet.Tests.csproj --configuration Release --no-restore
       
     - name: Test and collect coverage
       run: dotnet test --collect:"XPlat Code Coverage" --no-build

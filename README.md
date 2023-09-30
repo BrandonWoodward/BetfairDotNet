@@ -82,13 +82,13 @@ var session = await client.Login.InteractiveLogin(username, password);
 
 ## API-NG
 
-The following functionality is available:
+Functionality is provided for the following endpoints:
 
 - Account
 	- `GetAccountFunds`
 	- `GetAccountDetails`
 	- `GetAccountStatement`
-	- `ListCurrencyRates`	
+	- `ListCurrencyRates`
 - Betting
 	- `ListClearedOrders`
 	- `ListCompetitions`
@@ -109,6 +109,8 @@ The following functionality is available:
 - Heartbeat
 	- `Heartbeat`
 	- `KeepAlive`
+- Navigation
+	- `NavigationMenu`
 
 <br>
 

@@ -32,6 +32,20 @@ public class BetfairClientTests
         // Assert
         client.Account.Should().NotBeNull();
     }
+    
+    
+    [Fact]
+    public void NavigationService_ShouldBeInitialized()
+    {
+        // Arrange
+        var apiKey = "someApiKey";
+
+        // Act
+        var client = new BetfairClient(apiKey);
+
+        // Assert
+        client.Navigation.Should().NotBeNull();
+    }
 
 
     [Fact]

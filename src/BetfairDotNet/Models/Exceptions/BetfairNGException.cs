@@ -4,8 +4,8 @@
 /// <summary>
 /// Exception thrown when an error occurs relating to the Betfair API-NG.
 /// </summary>
-public sealed class BetfairNGException : Exception {
-
+public sealed class BetfairNGException : Exception 
+{
     /// <summary>
     /// The time when the exception occurred.
     /// </summary>
@@ -17,40 +17,37 @@ public sealed class BetfairNGException : Exception {
     public string Endpoint { get; init; }
 
     /// <summary>
-    /// The original parameters sent with the request.
+    /// The original request if applicable.
     /// </summary>
-    public Dictionary<string, object?>? RequestParameters { get; init; }
-
-    /// <summary>
-    /// The serialized content sent with the request.
-    /// </summary>
-    public string? RequestJson { get; init; }
-
-
-    // Constructor for exceptions with only a message and request details
-    public BetfairNGException(string endpoint, Dictionary<string, object?>? requestParams, string? requestJson, string message)
-        : base(message) {
+    public BetfairServerRequest? OriginalRequest { get; init; }
+    
+    internal BetfairNGException(string endpoint, string message)
+        : base(message) 
+    {
         Timestamp = DateTime.UtcNow;
         Endpoint = endpoint;
-        RequestParameters = requestParams;
-        RequestJson = requestJson;
     }
-
-    // Constructor for exceptions with an inner exception and request details
-    public BetfairNGException(string endpoint, Dictionary<string, object?>? requestParams, string? requestJson, string message, Exception innerException)
-        : base(message, innerException) {
+    
+    internal BetfairNGException(string endpoint, string message, Exception innerException)
+        : base(message, innerException) 
+    {
         Timestamp = DateTime.UtcNow;
         Endpoint = endpoint;
-        RequestParameters = requestParams;
-        RequestJson = requestJson;
     }
-
-    // Constructor specific for the BetfairServerException
-    public BetfairNGException(string endpoint, Dictionary<string, object?>? requestParams, string? requestJson, BetfairServerException ex)
-        : base($"The request to {endpoint} threw an exception: {(ex.BetfairError?.ExceptionDetails?.ErrorCode ?? ex.JsonRPCErrorCode)}", ex) {
+    
+    internal BetfairNGException(string endpoint, BetfairServerRequest? request, string message, Exception innerException)
+        : base(message, innerException) 
+    {
         Timestamp = DateTime.UtcNow;
         Endpoint = endpoint;
-        RequestParameters = requestParams;
-        RequestJson = requestJson;
+        OriginalRequest = request;
+    }
+    
+    internal BetfairNGException(string endpoint, BetfairServerRequest? request, BetfairServerException ex)
+        : base($"The request to {endpoint} threw an exception: {(ex.BetfairError?.ExceptionDetails?.ErrorCode ?? ex.JsonRPCErrorCode)}", ex) 
+    {
+        Timestamp = DateTime.UtcNow;
+        Endpoint = endpoint;
+        OriginalRequest = request;
     }
 }

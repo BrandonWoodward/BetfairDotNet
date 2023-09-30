@@ -3,8 +3,8 @@
 namespace BetfairDotNet.Models;
 
 
-internal sealed class BetfairServerRequest {
-
+public sealed class BetfairServerRequest 
+{
     [JsonPropertyName("jsonrpc")]
     public string JsonRpc { get; private set; } = "2.0";
 

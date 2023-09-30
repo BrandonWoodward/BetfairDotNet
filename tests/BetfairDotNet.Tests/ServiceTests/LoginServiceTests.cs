@@ -15,7 +15,7 @@ public class LoginServiceTests
     public LoginServiceTests()
     {
         _mockHandler = Substitute.For<IRequestResponseHandler>();
-        _sut = new LoginService(_mockHandler);
+        _sut = new(_mockHandler);
     }
 
 
@@ -31,7 +31,7 @@ public class LoginServiceTests
         await _sut.CertificateLogin(username, password, certPath);
 
         // Assert
-        await _mockHandler.Received().Authenticate<CertificateLoginResponse>(
+        await _mockHandler.Received().Request<CertificateLoginResponse>(
             "https://identitysso-cert.betfair.com/api/certlogin",
             Arg.Is<Dictionary<string, string>>(args =>
                 args["username"] == username &&
@@ -105,7 +105,7 @@ public class LoginServiceTests
         await _sut.InteractiveLogin(username, password);
 
         // Assert
-        await _mockHandler.Received().Authenticate<InteractiveLoginResponse>(
+        await _mockHandler.Received().Request<InteractiveLoginResponse>(
             "https://identitysso.betfair.com/api/login",
             Arg.Is<Dictionary<string, string>>(args =>
                 args["username"] == username &&

@@ -43,7 +43,7 @@ public class HeartbeatServiceTests {
     public async void KeepAlive_SendCorrectRequest() {
         // Arrange
         // Act
-        await _heartbeatService.KeepAive();
+        await _heartbeatService.KeepAlive();
 
         // Assert
         await _mockNetwork.Received().Request<KeepAliveResponse>(

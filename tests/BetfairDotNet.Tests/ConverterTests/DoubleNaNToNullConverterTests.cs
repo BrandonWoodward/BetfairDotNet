@@ -68,7 +68,7 @@ public class DoubleNaNToNullConverterTests {
         _sut = new();
 
         // Act
-        Action action = () => {
+        var action = () => {
             var reader = new Utf8JsonReader(Encoding.UTF8.GetBytes(json));
             reader.Read();
             var value = _sut.Read(ref reader, typeof(double?), new JsonSerializerOptions());
@@ -86,7 +86,7 @@ public class DoubleNaNToNullConverterTests {
         _sut = new();
 
         // Act
-        Action action = () => {
+        var action = () => {
             var reader = new Utf8JsonReader(Encoding.UTF8.GetBytes(json));
             reader.Read();
             var value = _sut.Read(ref reader, typeof(double?), new JsonSerializerOptions());

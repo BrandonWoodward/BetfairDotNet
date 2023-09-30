@@ -1,6 +1,7 @@
 ﻿using BetfairDotNet.Endpoints;
 using BetfairDotNet.Interfaces;
 using BetfairDotNet.Models.Login;
+using CommunityToolkit.Diagnostics;
 
 namespace BetfairDotNet.Services;
 
@@ -10,14 +11,12 @@ namespace BetfairDotNet.Services;
 /// </summary>
 public sealed class LoginService
 {
-
     private readonly IRequestResponseHandler _requestHandler;
 
     internal LoginService(IRequestResponseHandler requestHandler)
     {
         _requestHandler = requestHandler;
     }
-
 
     /// <summary>
     /// Asynchronously attempts to authenticate a user using the provided credentials.
@@ -32,29 +31,24 @@ public sealed class LoginService
     /// </exception>
     public async Task<CertificateLoginResponse> CertificateLogin(string username, string password, string certPath)
     {
-        if(string.IsNullOrWhiteSpace(username))
-        {
-            throw new ArgumentException("Username not provided.");
-        }
-        if(string.IsNullOrWhiteSpace(password))
-        {
-            throw new ArgumentException("Password not provided.");
-        }
-        if(string.IsNullOrWhiteSpace(certPath))
-        {
-            throw new ArgumentException("Certificate path not provided");
-        }
-        if(Path.GetExtension(certPath).ToLowerInvariant() is not ".p12" and not ".pfx")
-        {
-            throw new ArgumentException("The certificate should be a .p12 or .pfx file.");
-        }
-        var args = new Dictionary<string, string>()
+        Guard.IsNotNullOrWhiteSpace(username);
+        Guard.IsNotNullOrWhiteSpace(password);
+        Guard.IsNotNullOrWhiteSpace(certPath);
+
+        var extension = Path.GetExtension(certPath).ToLowerInvariant();
+        Guard.IsTrue(extension is ".p12" or ".pfx", "The certificate should be a .p12 or .pfx file.");
+        
+        var args = new Dictionary<string, string>
         {
             ["username"] = username,
             ["password"] = password,
         };
-        // Sets the X-Authentication header to the ssoid returned by Betfair if successful.
-        return await _requestHandler.Authenticate<CertificateLoginResponse>(LoginEndpoints.CertificateLogin, args, certPath);
+
+        return await _requestHandler.Request<CertificateLoginResponse>(
+            LoginEndpoints.CertificateLogin, 
+            args, 
+            certPath
+        );
     }
 
 
@@ -66,20 +60,18 @@ public sealed class LoginService
     /// <exception cref="ArgumentException"></exception>
     public async Task<InteractiveLoginResponse> InteractiveLogin(string username, string password)
     {
-        if(string.IsNullOrWhiteSpace(username))
-        {
-            throw new ArgumentException("Username not provided.");
-        }
-        if(string.IsNullOrWhiteSpace(password))
-        {
-            throw new ArgumentException("Password not provided.");
-        }
-        var args = new Dictionary<string, string>()
+        Guard.IsNotNullOrWhiteSpace(username);
+        Guard.IsNotNullOrWhiteSpace(password);
+        
+        var args = new Dictionary<string, string>
         {
             ["username"] = username,
             ["password"] = password,
         };
-        // Sets the X-Authentication header to the ssoid returned by Betfair if successful.
-        return await _requestHandler.Authenticate<InteractiveLoginResponse>(LoginEndpoints.InteractiveLogin, args);
+        
+        return await _requestHandler.Request<InteractiveLoginResponse>(
+            LoginEndpoints.InteractiveLogin, 
+            args
+        );
     }
 }

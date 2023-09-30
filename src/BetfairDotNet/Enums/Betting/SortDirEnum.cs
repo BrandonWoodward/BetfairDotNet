@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 namespace BetfairDotNet.Enums.Betting;
 
 
-[JsonConverter(typeof(CustomStringToEnumConverter<SortDirEnum>))]
+[JsonConverter(typeof(EmptyStringToEnumConverter<SortDirEnum>))]
 public enum SortDirEnum {
 
     /// <summary>

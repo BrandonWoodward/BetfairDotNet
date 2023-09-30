@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 namespace BetfairDotNet.Enums.Betting;
 
 
-[JsonConverter(typeof(CustomStringToEnumConverter<TimeGranularityEnum>))]
+[JsonConverter(typeof(EmptyStringToEnumConverter<TimeGranularityEnum>))]
 public enum TimeGranularityEnum {
 
     /// <summary>

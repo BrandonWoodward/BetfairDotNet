@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace BetfairDotNet.Enums.Account;
 
-[JsonConverter(typeof(CustomStringToEnumConverter<LoginStatusEnum>))]
+[JsonConverter(typeof(EmptyStringToEnumConverter<LoginStatusEnum>))]
 public enum LoginStatusEnum {
 
     /// <summary>

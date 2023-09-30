@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 namespace BetfairDotNet.Enums.Betting;
 
 
-[JsonConverter(typeof(CustomStringToEnumConverter<BetTypeEnum>))]
+[JsonConverter(typeof(EmptyStringToEnumConverter<BetTypeEnum>))]
 public enum BetTypeEnum {
     /// <summary>
     /// Order by market id, then placed time, then bet id.

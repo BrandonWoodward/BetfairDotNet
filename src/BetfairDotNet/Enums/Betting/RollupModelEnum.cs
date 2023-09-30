@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 namespace BetfairDotNet.Enums.Betting;
 
 
-[JsonConverter(typeof(CustomStringToEnumConverter<RollupModelEnum>))]
+[JsonConverter(typeof(EmptyStringToEnumConverter<RollupModelEnum>))]
 public enum RollupModelEnum {
 
     /// <summary>

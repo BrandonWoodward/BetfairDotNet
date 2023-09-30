@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 namespace BetfairDotNet.Enums.Betting;
 
 
-[JsonConverter(typeof(CustomStringToEnumConverter<GroupByEnum>))]
+[JsonConverter(typeof(EmptyStringToEnumConverter<GroupByEnum>))]
 public enum GroupByEnum {
 
     /// <summary>

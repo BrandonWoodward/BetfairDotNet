@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace BetfairDotNet.Enums.Betting;
 
-[JsonConverter(typeof(CustomStringToEnumConverter<TimeInForceEnum>))]
+[JsonConverter(typeof(EmptyStringToEnumConverter<TimeInForceEnum>))]
 public enum TimeInForceEnum {
 
     /// <summary>

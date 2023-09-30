@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 namespace BetfairDotNet.Enums.Streaming;
 
 
-[JsonConverter(typeof(CustomStringToEnumConverter<SegmentTypeEnum>))]
+[JsonConverter(typeof(EmptyStringToEnumConverter<SegmentTypeEnum>))]
 internal enum SegmentTypeEnum {
     NONE,
     SEG_START,

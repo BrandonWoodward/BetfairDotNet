@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 namespace BetfairDotNet.Enums.Betting;
 
 
-[JsonConverter(typeof(CustomStringToEnumConverter<RunnerStatusEnum>))]
+[JsonConverter(typeof(EmptyStringToEnumConverter<RunnerStatusEnum>))]
 public enum RunnerStatusEnum {
 
     /// <summary>

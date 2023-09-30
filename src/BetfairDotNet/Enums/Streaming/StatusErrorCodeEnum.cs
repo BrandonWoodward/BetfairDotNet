@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 namespace BetfairDotNet.Enums.Streaming;
 
 
-[JsonConverter(typeof(CustomStringToEnumConverter<StatusErrorCodeEnum>))]
+[JsonConverter(typeof(EmptyStringToEnumConverter<StatusErrorCodeEnum>))]
 internal enum StatusErrorCodeEnum {
 
     /// <summary>

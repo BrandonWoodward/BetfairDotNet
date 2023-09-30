@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 namespace BetfairDotNet.Enums.Account;
 
 
-[JsonConverter(typeof(CustomStringToEnumConverter<ItemClassEnum>))]
+[JsonConverter(typeof(EmptyStringToEnumConverter<ItemClassEnum>))]
 public enum ItemClassEnum {
 
     /// <summary>

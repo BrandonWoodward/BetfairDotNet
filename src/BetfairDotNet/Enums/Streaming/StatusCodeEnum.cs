@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 namespace BetfairDotNet.Enums.Streaming;
 
 
-[JsonConverter(typeof(CustomStringToEnumConverter<StatusCodeEnum>))]
+[JsonConverter(typeof(EmptyStringToEnumConverter<StatusCodeEnum>))]
 internal enum StatusCodeEnum {
 
     SUCCESS,

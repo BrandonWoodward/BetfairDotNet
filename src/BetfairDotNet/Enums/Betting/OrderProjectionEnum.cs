@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 namespace BetfairDotNet.Enums.Betting;
 
 
-[JsonConverter(typeof(CustomStringToEnumConverter<OrderProjectionEnum>))]
+[JsonConverter(typeof(EmptyStringToEnumConverter<OrderProjectionEnum>))]
 public enum OrderProjectionEnum {
 
     /// <summary>

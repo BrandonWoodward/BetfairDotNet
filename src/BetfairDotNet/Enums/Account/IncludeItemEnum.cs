@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace BetfairDotNet.Enums.Account;
 
-[JsonConverter(typeof(CustomStringToEnumConverter<IncludeItemEnum>))]
+[JsonConverter(typeof(EmptyStringToEnumConverter<IncludeItemEnum>))]
 public enum IncludeItemEnum {
 
     /// <summary>

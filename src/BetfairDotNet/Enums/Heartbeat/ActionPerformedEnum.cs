@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 namespace BetfairDotNet.Enums.Heartbeat;
 
 
-[JsonConverter(typeof(CustomStringToEnumConverter<ActionPerformedEnum>))]
+[JsonConverter(typeof(EmptyStringToEnumConverter<ActionPerformedEnum>))]
 public enum ActionPerformedEnum {
 
     /// <summary>

@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 namespace BetfairDotNet.Enums.Streaming;
 
 
-[JsonConverter(typeof(CustomStringToEnumConverter<ChangeTypeEnum>))]
+[JsonConverter(typeof(EmptyStringToEnumConverter<ChangeTypeEnum>))]
 internal enum ChangeTypeEnum {
     DELTA,
     SUB_IMAGE,

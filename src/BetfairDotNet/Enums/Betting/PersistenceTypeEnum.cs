@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 namespace BetfairDotNet.Enums.Betting;
 
 
-[JsonConverter(typeof(CustomStringToEnumConverter<PersistenceTypeEnum>))]
+[JsonConverter(typeof(EmptyStringToEnumConverter<PersistenceTypeEnum>))]
 public enum PersistenceTypeEnum {
 
     /// <summary>

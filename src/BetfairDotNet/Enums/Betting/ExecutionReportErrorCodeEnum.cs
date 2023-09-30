@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 namespace BetfairDotNet.Enums.Betting;
 
 
-[JsonConverter(typeof(CustomStringToEnumConverter<ExecutionReportErrorCodeEnum>))]
+[JsonConverter(typeof(EmptyStringToEnumConverter<ExecutionReportErrorCodeEnum>))]
 public enum ExecutionReportErrorCodeEnum {
 
     /// <summary>

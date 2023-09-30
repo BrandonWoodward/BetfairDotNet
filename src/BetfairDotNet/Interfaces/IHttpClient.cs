@@ -1,9 +1,11 @@
 ﻿namespace BetfairDotNet.Interfaces;
 
-internal interface IHttpClient {
-    void AddClientCertifcate(string certificatePath);
+internal interface IHttpClient 
+{
+    void AddClientCertificate(string certificatePath);
     void AddDefaultRequestHeader(string name, string value);
 
-    Task<string> PostStringContent(string url, string content);
-    Task<string> PostUrlEncodedContent(string url, FormUrlEncodedContent content);
+    Task<string> Get(string url);
+    Task<string> Post(string url, string content);
+    Task<string> Post(string url, FormUrlEncodedContent content);
 }

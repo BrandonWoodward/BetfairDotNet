@@ -1,8 +1,14 @@
-﻿using BetfairDotNet.Models.Login;
+﻿namespace BetfairDotNet.Interfaces;
 
-namespace BetfairDotNet.Interfaces;
+internal interface IRequestResponseHandler 
+{
+    Task<T> Request<T>(string endpoint, string method, Dictionary<string, object?>? data = null);
+    
+    Task<T> Request<T>(string endpoint);
 
-internal interface IRequestResponseHandler {
-    Task<T> Authenticate<T>(string url, Dictionary<string, string> credentials, string? certificatePath = null) where T : ILoginResponse;
-    Task<T> Request<T>(string url, string? method = null, Dictionary<string, object?>? data = null);
+    Task<T> Request<T>(string endpoint, Dictionary<string, string> credentials)
+        where T : ILoginResponse;
+
+    Task<T> Request<T>(string endpoint, Dictionary<string, string> credentials, string certPath)
+        where T : ILoginResponse;
 }

@@ -7,20 +7,25 @@ using System.Security.Cryptography.X509Certificates;
 namespace BetfairDotNet.Adapters;
 
 [ExcludeFromCodeCoverage]
-internal sealed class HttpClientAdapter : IHttpClient {
-
-
+internal sealed class HttpClientAdapter : IHttpClient 
+{
     private readonly HttpClient _httpClient;
     private readonly HttpClientHandler _httpClientHandler;
 
-
-    internal HttpClientAdapter(string apiKey, int timeoutMs) {
+    internal HttpClientAdapter(string apiKey, int timeoutMs) 
+    {
         _httpClientHandler = CreateClientHandler();
         _httpClient = CreateHttpClient(_httpClientHandler, apiKey, timeoutMs);
     }
+    
+    public async Task<string> Get(string url) {
+        var response = await _httpClient.GetAsync(url);
+        response.EnsureSuccessStatusCode();
+        return await response.Content.ReadAsStringAsync();
+    }
 
 
-    public async Task<string> PostStringContent(string url, string content) {
+    public async Task<string> Post(string url, string content) {
         using var stringContent = new StringContent(content);
         var response = await _httpClient.PostAsync(url, stringContent);
         response.EnsureSuccessStatusCode();
@@ -28,7 +33,7 @@ internal sealed class HttpClientAdapter : IHttpClient {
     }
 
 
-    public async Task<string> PostUrlEncodedContent(string url, FormUrlEncodedContent content) {
+    public async Task<string> Post(string url, FormUrlEncodedContent content) {
         var response = await _httpClient.PostAsync(url, content);
         response.EnsureSuccessStatusCode();
         return await response.Content.ReadAsStringAsync();
@@ -44,7 +49,7 @@ internal sealed class HttpClientAdapter : IHttpClient {
 
 
 
-    public void AddClientCertifcate(string certificatePath) {
+    public void AddClientCertificate(string certificatePath) {
         var certificate = new X509Certificate2(certificatePath);
         _httpClientHandler.ClientCertificates.Add(certificate);
     }
@@ -60,7 +65,7 @@ internal sealed class HttpClientAdapter : IHttpClient {
     }
 
 
-    private static HttpClient CreateHttpClient(HttpClientHandler handler, string apiKey, int timeoutMs) {
+    private static HttpClient CreateHttpClient(HttpMessageHandler handler, string apiKey, int timeoutMs) {
         var httpClient = new HttpClient(handler) { Timeout = TimeSpan.FromMilliseconds(timeoutMs) };
         httpClient.DefaultRequestHeaders.Add("X-Application", apiKey);
         httpClient.DefaultRequestHeaders.Add("Connection", "keep-alive");

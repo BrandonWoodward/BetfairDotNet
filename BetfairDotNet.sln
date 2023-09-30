@@ -22,8 +22,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BetfairDotNet.Tests", "test
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "demos", "demos", "{AB522546-2E59-4D05-9145-A80CDBE65B1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetfairDotNet.Demos", "demos\BetfairDotNet.Demo.StreamingAPI\BetfairDotNet.Demos.csproj", "{C05735BF-9D1A-403C-A576-88AB1B8F3E75}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

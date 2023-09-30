@@ -24,7 +24,7 @@ public class ChangeMessageHandlerTests {
         _marketSnapshotFactory = Substitute.For<IMarketSnapshotFactory>();
         _orderSnapshotFactory = Substitute.For<IOrderSnapshotFactory>();
         _changeMessageSubject = Substitute.For<ISubject>();
-        _sut = new ChangeMessageHandler(
+        _sut = new(
             _socketHandler,
             _changeMessageFactory,
             _marketSnapshotFactory,
@@ -47,11 +47,11 @@ public class ChangeMessageHandlerTests {
     [Fact]
     public void HandleMessage_ShouldCallSubjectOnExceptionNext_WhenMessageIsStatusAndNotSuccess() {
         // Arrange
-        var changeMessage = new StatusMessage() { StatusCode = StatusCodeEnum.FAILURE };
+        var changeMessage = new StatusMessage { StatusCode = StatusCodeEnum.FAILURE };
         _changeMessageFactory.Process(Arg.Any<ReadOnlyMemory<byte>>()).Returns(changeMessage);
 
         // Act
-        _sut.HandleMessage(new ReadOnlyMemory<byte>(new byte[1]));
+        _sut.HandleMessage(new(new byte[1]));
 
         // Assert
         _changeMessageSubject.Received(1).OnExceptionNext(Arg.Any<BetfairESAException>());
@@ -61,13 +61,13 @@ public class ChangeMessageHandlerTests {
     [Fact]
     public void HandleMessage_ShouldCallSubjectOnMarketNext_WhenMessageIsMarketChange() {
         // Arrange
-        var changeMessage = new MarketChangeMessage();
+        var changeMessage = new MarketChangeMessage { InitialClk = "123", Clk = "123" };
         var marketSnapshot = new MarketSnapshot();
         _changeMessageFactory.Process(Arg.Any<ReadOnlyMemory<byte>>()).Returns(changeMessage);
         _marketSnapshotFactory.GetSnapshots(changeMessage).Returns(new List<MarketSnapshot> { marketSnapshot });
 
         // Act
-        _sut.HandleMessage(new ReadOnlyMemory<byte>(new byte[1]));
+        _sut.HandleMessage(new(new byte[1]));
 
         // Assert
         _changeMessageSubject.Received(1).OnMarketNext(marketSnapshot);
@@ -77,13 +77,13 @@ public class ChangeMessageHandlerTests {
     [Fact]
     public void HandleMessage_ShouldCallSubjectOnOrderNext_WhenMessageIsOrderChange() {
         // Arrange
-        var changeMessage = new OrderChangeMessage();
+        var changeMessage = new OrderChangeMessage { InitialClk = "123", Clk = "123" };
         var orderSnapshot = new OrderMarketSnapshot();
         _changeMessageFactory.Process(Arg.Any<ReadOnlyMemory<byte>>()).Returns(changeMessage);
         _orderSnapshotFactory.GetSnapshots(changeMessage).Returns(new List<OrderMarketSnapshot> { orderSnapshot });
 
         // Act
-        _sut.HandleMessage(new ReadOnlyMemory<byte>(new byte[1]));
+        _sut.HandleMessage(new(new byte[1]));
 
         // Assert
         _changeMessageSubject.Received(1).OnOrderNext(orderSnapshot);

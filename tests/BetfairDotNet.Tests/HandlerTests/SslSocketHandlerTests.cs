@@ -46,7 +46,7 @@ public class SslSocketHandlerTests {
 
         _mockSslSocket
             .When(x => x.ConnectAsync(Arg.Any<string>(), Arg.Any<int>(), Arg.Any<int>()))
-            .Do(x => throw new SocketException());
+            .Do(_ => throw new SocketException());
 
         _sut.MessageReceived.Subscribe(_ => { }, observedException.SetResult);
 
@@ -89,7 +89,7 @@ public class SslSocketHandlerTests {
 
         _mockSslSocket
             .When(x => x.WriteAsync(Arg.Any<byte[]>()))
-            .Do(x => throw new IOException());
+            .Do(_ => throw new IOException());
 
 
         _sut.MessageReceived.Subscribe(
@@ -116,7 +116,7 @@ public class SslSocketHandlerTests {
 
         _mockSslSocket
             .When(x => x.WriteAsync(Arg.Any<byte[]>()))
-            .Do(x => throw new SocketException());
+            .Do(_ => throw new SocketException());
 
 
         _sut.MessageReceived.Subscribe(

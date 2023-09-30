@@ -4,14 +4,12 @@
 /// <summary>
 /// A collection of helper methods for working with Betfair prices.
 /// </summary>
-public static class PriceHelpers {
-
-
+public static class PriceHelpers 
+{
     /// <summary>
     /// An array representing the price ladder used by Betfair.
     /// </summary>
-    public static double[] PriceLadder = new double[]
-    {
+    public static double[] PriceLadder = {
         1.01, 1.02, 1.03, 1.04, 1.05, 1.06, 1.07, 1.08, 1.09,
         1.1, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19, 1.2,
         1.21, 1.22, 1.23, 1.24, 1.25, 1.26, 1.27, 1.28, 1.29, 1.3, 1.31,
@@ -126,7 +124,7 @@ public static class PriceHelpers {
         if(price >= PriceLadder[^1]) return PriceLadder[^1];
 
         // LINQ isn't the most efficient way to do this, but it's the most readable
-        // Performance shoul be sufficient for small arrays like this
+        // Performance should be sufficient for small arrays like this
         return PriceLadder.OrderBy(p => Math.Abs(p - price)).First();
     }
 }

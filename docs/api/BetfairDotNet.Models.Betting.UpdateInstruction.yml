@@ -1,0 +1,445 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Models.Betting.UpdateInstruction
+  commentId: T:BetfairDotNet.Models.Betting.UpdateInstruction
+  id: UpdateInstruction
+  parent: BetfairDotNet.Models.Betting
+  children:
+  - BetfairDotNet.Models.Betting.UpdateInstruction.BetId
+  - BetfairDotNet.Models.Betting.UpdateInstruction.NewPersistenceType
+  langs:
+  - csharp
+  - vb
+  name: UpdateInstruction
+  nameWithType: UpdateInstruction
+  fullName: BetfairDotNet.Models.Betting.UpdateInstruction
+  type: Class
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/UpdateInstruction.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: UpdateInstruction
+    path: ../src/BetfairDotNet/Models/Betting/UpdateInstruction.cs
+    startLine: 9
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: Instruction to update LIMIT bet's persistence of an order that do not affect exposure.
+  example: []
+  syntax:
+    content: public sealed class UpdateInstruction
+    content.vb: Public NotInheritable Class UpdateInstruction
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BetfairDotNet.Models.Betting.UpdateInstruction.BetId
+  commentId: P:BetfairDotNet.Models.Betting.UpdateInstruction.BetId
+  id: BetId
+  parent: BetfairDotNet.Models.Betting.UpdateInstruction
+  langs:
+  - csharp
+  - vb
+  name: BetId
+  nameWithType: UpdateInstruction.BetId
+  fullName: BetfairDotNet.Models.Betting.UpdateInstruction.BetId
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/UpdateInstruction.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: BetId
+    path: ../src/BetfairDotNet/Models/Betting/UpdateInstruction.cs
+    startLine: 14
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: Unique identifier for the bet.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("betId")]
+
+      [JsonRequired]
+
+      public required string BetId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("betId")>
+
+      <JsonRequired>
+
+      Public Property BetId As String
+  overload: BetfairDotNet.Models.Betting.UpdateInstruction.BetId*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: betId
+  - type: System.Text.Json.Serialization.JsonRequiredAttribute
+    ctor: System.Text.Json.Serialization.JsonRequiredAttribute.#ctor
+    arguments: []
+- uid: BetfairDotNet.Models.Betting.UpdateInstruction.NewPersistenceType
+  commentId: P:BetfairDotNet.Models.Betting.UpdateInstruction.NewPersistenceType
+  id: NewPersistenceType
+  parent: BetfairDotNet.Models.Betting.UpdateInstruction
+  langs:
+  - csharp
+  - vb
+  name: NewPersistenceType
+  nameWithType: UpdateInstruction.NewPersistenceType
+  fullName: BetfairDotNet.Models.Betting.UpdateInstruction.NewPersistenceType
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/UpdateInstruction.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: NewPersistenceType
+    path: ../src/BetfairDotNet/Models/Betting/UpdateInstruction.cs
+    startLine: 20
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The new persistence type to update this bet to.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("newPersistenceType")]
+
+      [JsonRequired]
+
+      public required PersistenceTypeEnum NewPersistenceType { get; set; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Enums.Betting.PersistenceTypeEnum
+    content.vb: >-
+      <JsonPropertyName("newPersistenceType")>
+
+      <JsonRequired>
+
+      Public Property NewPersistenceType As PersistenceTypeEnum
+  overload: BetfairDotNet.Models.Betting.UpdateInstruction.NewPersistenceType*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: newPersistenceType
+  - type: System.Text.Json.Serialization.JsonRequiredAttribute
+    ctor: System.Text.Json.Serialization.JsonRequiredAttribute.#ctor
+    arguments: []
+references:
+- uid: BetfairDotNet.Models.Betting
+  commentId: N:BetfairDotNet.Models.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Betting
+  nameWithType: BetfairDotNet.Models.Betting
+  fullName: BetfairDotNet.Models.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Betting
+    name: Betting
+    href: BetfairDotNet.Models.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Betting
+    name: Betting
+    href: BetfairDotNet.Models.Betting.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BetfairDotNet.Models.Betting.UpdateInstruction.BetId*
+  commentId: Overload:BetfairDotNet.Models.Betting.UpdateInstruction.BetId
+  href: BetfairDotNet.Models.Betting.UpdateInstruction.html#BetfairDotNet.Models.Betting.UpdateInstruction.BetId
+  name: BetId
+  nameWithType: UpdateInstruction.BetId
+  fullName: BetfairDotNet.Models.Betting.UpdateInstruction.BetId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BetfairDotNet.Models.Betting.UpdateInstruction.NewPersistenceType*
+  commentId: Overload:BetfairDotNet.Models.Betting.UpdateInstruction.NewPersistenceType
+  href: BetfairDotNet.Models.Betting.UpdateInstruction.html#BetfairDotNet.Models.Betting.UpdateInstruction.NewPersistenceType
+  name: NewPersistenceType
+  nameWithType: UpdateInstruction.NewPersistenceType
+  fullName: BetfairDotNet.Models.Betting.UpdateInstruction.NewPersistenceType
+- uid: BetfairDotNet.Enums.Betting.PersistenceTypeEnum
+  commentId: T:BetfairDotNet.Enums.Betting.PersistenceTypeEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.PersistenceTypeEnum.html
+  name: PersistenceTypeEnum
+  nameWithType: PersistenceTypeEnum
+  fullName: BetfairDotNet.Enums.Betting.PersistenceTypeEnum
+- uid: BetfairDotNet.Enums.Betting
+  commentId: N:BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Betting
+  nameWithType: BetfairDotNet.Enums.Betting
+  fullName: BetfairDotNet.Enums.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html

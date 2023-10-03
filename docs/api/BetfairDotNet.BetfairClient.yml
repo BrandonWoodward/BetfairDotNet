@@ -1,0 +1,703 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.BetfairClient
+  commentId: T:BetfairDotNet.BetfairClient
+  id: BetfairClient
+  parent: BetfairDotNet
+  children:
+  - BetfairDotNet.BetfairClient.#ctor(System.String)
+  - BetfairDotNet.BetfairClient.Account
+  - BetfairDotNet.BetfairClient.Betting
+  - BetfairDotNet.BetfairClient.Heartbeat
+  - BetfairDotNet.BetfairClient.Login
+  - BetfairDotNet.BetfairClient.Navigation
+  - BetfairDotNet.BetfairClient.Streaming
+  langs:
+  - csharp
+  - vb
+  name: BetfairClient
+  nameWithType: BetfairClient
+  fullName: BetfairDotNet.BetfairClient
+  type: Class
+  source:
+    remote:
+      path: src/BetfairDotNet/BetfairClient.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: BetfairClient
+    path: ../src/BetfairDotNet/BetfairClient.cs
+    startLine: 14
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet
+  summary: The top level client containing the services for the different Betfair APIs.
+  example: []
+  syntax:
+    content: 'public sealed class BetfairClient : IBetfairClient'
+    content.vb: Public NotInheritable Class BetfairClient Implements IBetfairClient
+  inheritance:
+  - System.Object
+  implements:
+  - BetfairDotNet.Interfaces.IBetfairClient
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BetfairDotNet.BetfairClient.Login
+  commentId: P:BetfairDotNet.BetfairClient.Login
+  id: Login
+  parent: BetfairDotNet.BetfairClient
+  langs:
+  - csharp
+  - vb
+  name: Login
+  nameWithType: BetfairClient.Login
+  fullName: BetfairDotNet.BetfairClient.Login
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/BetfairClient.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Login
+    path: ../src/BetfairDotNet/BetfairClient.cs
+    startLine: 26
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet
+  summary: Provides login functionality for interactive and non-interactive workflows.
+  example: []
+  syntax:
+    content: public LoginService Login { get; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Services.LoginService
+    content.vb: Public ReadOnly Property Login As LoginService
+  overload: BetfairDotNet.BetfairClient.Login*
+  implements:
+  - BetfairDotNet.Interfaces.IBetfairClient.Login
+- uid: BetfairDotNet.BetfairClient.Account
+  commentId: P:BetfairDotNet.BetfairClient.Account
+  id: Account
+  parent: BetfairDotNet.BetfairClient
+  langs:
+  - csharp
+  - vb
+  name: Account
+  nameWithType: BetfairClient.Account
+  fullName: BetfairDotNet.BetfairClient.Account
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/BetfairClient.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Account
+    path: ../src/BetfairDotNet/BetfairClient.cs
+    startLine: 32
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet
+  summary: >-
+    Provides functionality for the Betfair Account API
+
+    such as getting account details, funds, statements, etc.
+  example: []
+  syntax:
+    content: public AccountService Account { get; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Services.AccountService
+    content.vb: Public ReadOnly Property Account As AccountService
+  overload: BetfairDotNet.BetfairClient.Account*
+  implements:
+  - BetfairDotNet.Interfaces.IBetfairClient.Account
+- uid: BetfairDotNet.BetfairClient.Navigation
+  commentId: P:BetfairDotNet.BetfairClient.Navigation
+  id: Navigation
+  parent: BetfairDotNet.BetfairClient
+  langs:
+  - csharp
+  - vb
+  name: Navigation
+  nameWithType: BetfairClient.Navigation
+  fullName: BetfairDotNet.BetfairClient.Navigation
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/BetfairClient.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Navigation
+    path: ../src/BetfairDotNet/BetfairClient.cs
+    startLine: 37
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet
+  summary: Provides functionality for retrieving navigation data for applications.
+  example: []
+  syntax:
+    content: public NavigationService Navigation { get; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Services.NavigationService
+    content.vb: Public ReadOnly Property Navigation As NavigationService
+  overload: BetfairDotNet.BetfairClient.Navigation*
+  implements:
+  - BetfairDotNet.Interfaces.IBetfairClient.Navigation
+- uid: BetfairDotNet.BetfairClient.Betting
+  commentId: P:BetfairDotNet.BetfairClient.Betting
+  id: Betting
+  parent: BetfairDotNet.BetfairClient
+  langs:
+  - csharp
+  - vb
+  name: Betting
+  nameWithType: BetfairClient.Betting
+  fullName: BetfairDotNet.BetfairClient.Betting
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/BetfairClient.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Betting
+    path: ../src/BetfairDotNet/BetfairClient.cs
+    startLine: 43
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet
+  summary: >-
+    Provides functionality for the Betfair Betting API.
+
+    Operations include listing markets, placing bets, cancelling bets, etc.
+  example: []
+  syntax:
+    content: public BettingService Betting { get; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Services.BettingService
+    content.vb: Public ReadOnly Property Betting As BettingService
+  overload: BetfairDotNet.BetfairClient.Betting*
+  implements:
+  - BetfairDotNet.Interfaces.IBetfairClient.Betting
+- uid: BetfairDotNet.BetfairClient.Heartbeat
+  commentId: P:BetfairDotNet.BetfairClient.Heartbeat
+  id: Heartbeat
+  parent: BetfairDotNet.BetfairClient
+  langs:
+  - csharp
+  - vb
+  name: Heartbeat
+  nameWithType: BetfairClient.Heartbeat
+  fullName: BetfairDotNet.BetfairClient.Heartbeat
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/BetfairClient.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Heartbeat
+    path: ../src/BetfairDotNet/BetfairClient.cs
+    startLine: 49
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet
+  summary: >-
+    Provides functionality for the Betfair Heartbeat API
+
+    which can perform an action when connection to the Betfair API is lost.
+  example: []
+  syntax:
+    content: public HeartbeatService Heartbeat { get; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Services.HeartbeatService
+    content.vb: Public ReadOnly Property Heartbeat As HeartbeatService
+  overload: BetfairDotNet.BetfairClient.Heartbeat*
+  implements:
+  - BetfairDotNet.Interfaces.IBetfairClient.Heartbeat
+- uid: BetfairDotNet.BetfairClient.Streaming
+  commentId: P:BetfairDotNet.BetfairClient.Streaming
+  id: Streaming
+  parent: BetfairDotNet.BetfairClient
+  langs:
+  - csharp
+  - vb
+  name: Streaming
+  nameWithType: BetfairClient.Streaming
+  fullName: BetfairDotNet.BetfairClient.Streaming
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/BetfairClient.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Streaming
+    path: ../src/BetfairDotNet/BetfairClient.cs
+    startLine: 54
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet
+  summary: Provides a fluent interface for subscribing to the Betfair Streaming API.
+  example: []
+  syntax:
+    content: public StreamingService Streaming { get; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Services.StreamingService
+    content.vb: Public ReadOnly Property Streaming As StreamingService
+  overload: BetfairDotNet.BetfairClient.Streaming*
+  implements:
+  - BetfairDotNet.Interfaces.IBetfairClient.Streaming
+- uid: BetfairDotNet.BetfairClient.#ctor(System.String)
+  commentId: M:BetfairDotNet.BetfairClient.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: BetfairDotNet.BetfairClient
+  langs:
+  - csharp
+  - vb
+  name: BetfairClient(string)
+  nameWithType: BetfairClient.BetfairClient(string)
+  fullName: BetfairDotNet.BetfairClient.BetfairClient(string)
+  type: Constructor
+  source:
+    remote:
+      path: src/BetfairDotNet/BetfairClient.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: .ctor
+    path: ../src/BetfairDotNet/BetfairClient.cs
+    startLine: 61
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet
+  summary: >-
+    Create a new BetfairClient instance, which is the top level client for all operations.
+
+    This should be instantiated once per application lifetime.
+  example: []
+  syntax:
+    content: public BetfairClient(string apiKey)
+    parameters:
+    - id: apiKey
+      type: System.String
+    content.vb: Public Sub New(apiKey As String)
+  overload: BetfairDotNet.BetfairClient.#ctor*
+  nameWithType.vb: BetfairClient.New(String)
+  fullName.vb: BetfairDotNet.BetfairClient.New(String)
+  name.vb: New(String)
+references:
+- uid: BetfairDotNet
+  commentId: N:BetfairDotNet
+  href: BetfairDotNet.html
+  name: BetfairDotNet
+  nameWithType: BetfairDotNet
+  fullName: BetfairDotNet
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: BetfairDotNet.Interfaces.IBetfairClient
+  commentId: T:BetfairDotNet.Interfaces.IBetfairClient
+  parent: BetfairDotNet.Interfaces
+  href: BetfairDotNet.Interfaces.IBetfairClient.html
+  name: IBetfairClient
+  nameWithType: IBetfairClient
+  fullName: BetfairDotNet.Interfaces.IBetfairClient
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BetfairDotNet.Interfaces
+  commentId: N:BetfairDotNet.Interfaces
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Interfaces
+  nameWithType: BetfairDotNet.Interfaces
+  fullName: BetfairDotNet.Interfaces
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Interfaces
+    name: Interfaces
+    href: BetfairDotNet.Interfaces.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Interfaces
+    name: Interfaces
+    href: BetfairDotNet.Interfaces.html
+- uid: BetfairDotNet.BetfairClient.Login*
+  commentId: Overload:BetfairDotNet.BetfairClient.Login
+  href: BetfairDotNet.BetfairClient.html#BetfairDotNet.BetfairClient.Login
+  name: Login
+  nameWithType: BetfairClient.Login
+  fullName: BetfairDotNet.BetfairClient.Login
+- uid: BetfairDotNet.Interfaces.IBetfairClient.Login
+  commentId: P:BetfairDotNet.Interfaces.IBetfairClient.Login
+  parent: BetfairDotNet.Interfaces.IBetfairClient
+  href: BetfairDotNet.Interfaces.IBetfairClient.html#BetfairDotNet.Interfaces.IBetfairClient.Login
+  name: Login
+  nameWithType: IBetfairClient.Login
+  fullName: BetfairDotNet.Interfaces.IBetfairClient.Login
+- uid: BetfairDotNet.Services.LoginService
+  commentId: T:BetfairDotNet.Services.LoginService
+  parent: BetfairDotNet.Services
+  href: BetfairDotNet.Services.LoginService.html
+  name: LoginService
+  nameWithType: LoginService
+  fullName: BetfairDotNet.Services.LoginService
+- uid: BetfairDotNet.Services
+  commentId: N:BetfairDotNet.Services
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Services
+  nameWithType: BetfairDotNet.Services
+  fullName: BetfairDotNet.Services
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Services
+    name: Services
+    href: BetfairDotNet.Services.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Services
+    name: Services
+    href: BetfairDotNet.Services.html
+- uid: BetfairDotNet.BetfairClient.Account*
+  commentId: Overload:BetfairDotNet.BetfairClient.Account
+  href: BetfairDotNet.BetfairClient.html#BetfairDotNet.BetfairClient.Account
+  name: Account
+  nameWithType: BetfairClient.Account
+  fullName: BetfairDotNet.BetfairClient.Account
+- uid: BetfairDotNet.Interfaces.IBetfairClient.Account
+  commentId: P:BetfairDotNet.Interfaces.IBetfairClient.Account
+  parent: BetfairDotNet.Interfaces.IBetfairClient
+  href: BetfairDotNet.Interfaces.IBetfairClient.html#BetfairDotNet.Interfaces.IBetfairClient.Account
+  name: Account
+  nameWithType: IBetfairClient.Account
+  fullName: BetfairDotNet.Interfaces.IBetfairClient.Account
+- uid: BetfairDotNet.Services.AccountService
+  commentId: T:BetfairDotNet.Services.AccountService
+  parent: BetfairDotNet.Services
+  href: BetfairDotNet.Services.AccountService.html
+  name: AccountService
+  nameWithType: AccountService
+  fullName: BetfairDotNet.Services.AccountService
+- uid: BetfairDotNet.BetfairClient.Navigation*
+  commentId: Overload:BetfairDotNet.BetfairClient.Navigation
+  href: BetfairDotNet.BetfairClient.html#BetfairDotNet.BetfairClient.Navigation
+  name: Navigation
+  nameWithType: BetfairClient.Navigation
+  fullName: BetfairDotNet.BetfairClient.Navigation
+- uid: BetfairDotNet.Interfaces.IBetfairClient.Navigation
+  commentId: P:BetfairDotNet.Interfaces.IBetfairClient.Navigation
+  parent: BetfairDotNet.Interfaces.IBetfairClient
+  href: BetfairDotNet.Interfaces.IBetfairClient.html#BetfairDotNet.Interfaces.IBetfairClient.Navigation
+  name: Navigation
+  nameWithType: IBetfairClient.Navigation
+  fullName: BetfairDotNet.Interfaces.IBetfairClient.Navigation
+- uid: BetfairDotNet.Services.NavigationService
+  commentId: T:BetfairDotNet.Services.NavigationService
+  parent: BetfairDotNet.Services
+  href: BetfairDotNet.Services.NavigationService.html
+  name: NavigationService
+  nameWithType: NavigationService
+  fullName: BetfairDotNet.Services.NavigationService
+- uid: BetfairDotNet.BetfairClient.Betting*
+  commentId: Overload:BetfairDotNet.BetfairClient.Betting
+  href: BetfairDotNet.BetfairClient.html#BetfairDotNet.BetfairClient.Betting
+  name: Betting
+  nameWithType: BetfairClient.Betting
+  fullName: BetfairDotNet.BetfairClient.Betting
+- uid: BetfairDotNet.Interfaces.IBetfairClient.Betting
+  commentId: P:BetfairDotNet.Interfaces.IBetfairClient.Betting
+  parent: BetfairDotNet.Interfaces.IBetfairClient
+  href: BetfairDotNet.Interfaces.IBetfairClient.html#BetfairDotNet.Interfaces.IBetfairClient.Betting
+  name: Betting
+  nameWithType: IBetfairClient.Betting
+  fullName: BetfairDotNet.Interfaces.IBetfairClient.Betting
+- uid: BetfairDotNet.Services.BettingService
+  commentId: T:BetfairDotNet.Services.BettingService
+  parent: BetfairDotNet.Services
+  href: BetfairDotNet.Services.BettingService.html
+  name: BettingService
+  nameWithType: BettingService
+  fullName: BetfairDotNet.Services.BettingService
+- uid: BetfairDotNet.BetfairClient.Heartbeat*
+  commentId: Overload:BetfairDotNet.BetfairClient.Heartbeat
+  href: BetfairDotNet.BetfairClient.html#BetfairDotNet.BetfairClient.Heartbeat
+  name: Heartbeat
+  nameWithType: BetfairClient.Heartbeat
+  fullName: BetfairDotNet.BetfairClient.Heartbeat
+- uid: BetfairDotNet.Interfaces.IBetfairClient.Heartbeat
+  commentId: P:BetfairDotNet.Interfaces.IBetfairClient.Heartbeat
+  parent: BetfairDotNet.Interfaces.IBetfairClient
+  href: BetfairDotNet.Interfaces.IBetfairClient.html#BetfairDotNet.Interfaces.IBetfairClient.Heartbeat
+  name: Heartbeat
+  nameWithType: IBetfairClient.Heartbeat
+  fullName: BetfairDotNet.Interfaces.IBetfairClient.Heartbeat
+- uid: BetfairDotNet.Services.HeartbeatService
+  commentId: T:BetfairDotNet.Services.HeartbeatService
+  parent: BetfairDotNet.Services
+  href: BetfairDotNet.Services.HeartbeatService.html
+  name: HeartbeatService
+  nameWithType: HeartbeatService
+  fullName: BetfairDotNet.Services.HeartbeatService
+- uid: BetfairDotNet.BetfairClient.Streaming*
+  commentId: Overload:BetfairDotNet.BetfairClient.Streaming
+  href: BetfairDotNet.BetfairClient.html#BetfairDotNet.BetfairClient.Streaming
+  name: Streaming
+  nameWithType: BetfairClient.Streaming
+  fullName: BetfairDotNet.BetfairClient.Streaming
+- uid: BetfairDotNet.Interfaces.IBetfairClient.Streaming
+  commentId: P:BetfairDotNet.Interfaces.IBetfairClient.Streaming
+  parent: BetfairDotNet.Interfaces.IBetfairClient
+  href: BetfairDotNet.Interfaces.IBetfairClient.html#BetfairDotNet.Interfaces.IBetfairClient.Streaming
+  name: Streaming
+  nameWithType: IBetfairClient.Streaming
+  fullName: BetfairDotNet.Interfaces.IBetfairClient.Streaming
+- uid: BetfairDotNet.Services.StreamingService
+  commentId: T:BetfairDotNet.Services.StreamingService
+  parent: BetfairDotNet.Services
+  href: BetfairDotNet.Services.StreamingService.html
+  name: StreamingService
+  nameWithType: StreamingService
+  fullName: BetfairDotNet.Services.StreamingService
+- uid: BetfairDotNet.BetfairClient.#ctor*
+  commentId: Overload:BetfairDotNet.BetfairClient.#ctor
+  href: BetfairDotNet.BetfairClient.html#BetfairDotNet.BetfairClient.#ctor(System.String)
+  name: BetfairClient
+  nameWithType: BetfairClient.BetfairClient
+  fullName: BetfairDotNet.BetfairClient.BetfairClient
+  nameWithType.vb: BetfairClient.New
+  fullName.vb: BetfairDotNet.BetfairClient.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

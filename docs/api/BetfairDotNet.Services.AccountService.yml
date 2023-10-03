@@ -1,0 +1,808 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Services.AccountService
+  commentId: T:BetfairDotNet.Services.AccountService
+  id: AccountService
+  parent: BetfairDotNet.Services
+  children:
+  - BetfairDotNet.Services.AccountService.GetAccountDetails
+  - BetfairDotNet.Services.AccountService.GetAccountFunds
+  - BetfairDotNet.Services.AccountService.GetAccountStatement(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},BetfairDotNet.Models.Betting.TimeRange,System.Nullable{BetfairDotNet.Enums.Account.IncludeItemEnum},System.Nullable{BetfairDotNet.Enums.Account.WalletEnum})
+  - BetfairDotNet.Services.AccountService.ListCurrencyRates(System.String)
+  langs:
+  - csharp
+  - vb
+  name: AccountService
+  nameWithType: AccountService
+  fullName: BetfairDotNet.Services.AccountService
+  type: Class
+  source:
+    remote:
+      path: src/BetfairDotNet/Services/AccountService.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: AccountService
+    path: ../src/BetfairDotNet/Services/AccountService.cs
+    startLine: 12
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Services
+  summary: Provides functionalities for interacting with account-related services.
+  example: []
+  syntax:
+    content: public sealed class AccountService
+    content.vb: Public NotInheritable Class AccountService
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BetfairDotNet.Services.AccountService.GetAccountFunds
+  commentId: M:BetfairDotNet.Services.AccountService.GetAccountFunds
+  id: GetAccountFunds
+  parent: BetfairDotNet.Services.AccountService
+  langs:
+  - csharp
+  - vb
+  name: GetAccountFunds()
+  nameWithType: AccountService.GetAccountFunds()
+  fullName: BetfairDotNet.Services.AccountService.GetAccountFunds()
+  type: Method
+  source:
+    remote:
+      path: src/BetfairDotNet/Services/AccountService.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: GetAccountFunds
+    path: ../src/BetfairDotNet/Services/AccountService.cs
+    startLine: 32
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Services
+  summary: Asynchronously fetches accout funds.
+  example:
+  - >-
+    Usage:
+
+    <pre><code class="lang-csharp">var accountFunds = await client.Account.GetAccountFunds();</code></pre>
+  syntax:
+    content: public Task<AccountFundsResponse> GetAccountFunds()
+    return:
+      type: System.Threading.Tasks.Task{BetfairDotNet.Models.Account.AccountFundsResponse}
+      description: A task with the account funds upon completion.
+    content.vb: Public Function GetAccountFunds() As Task(Of AccountFundsResponse)
+  overload: BetfairDotNet.Services.AccountService.GetAccountFunds*
+- uid: BetfairDotNet.Services.AccountService.GetAccountDetails
+  commentId: M:BetfairDotNet.Services.AccountService.GetAccountDetails
+  id: GetAccountDetails
+  parent: BetfairDotNet.Services.AccountService
+  langs:
+  - csharp
+  - vb
+  name: GetAccountDetails()
+  nameWithType: AccountService.GetAccountDetails()
+  fullName: BetfairDotNet.Services.AccountService.GetAccountDetails()
+  type: Method
+  source:
+    remote:
+      path: src/BetfairDotNet/Services/AccountService.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: GetAccountDetails
+    path: ../src/BetfairDotNet/Services/AccountService.cs
+    startLine: 47
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Services
+  summary: Asynchronously fetches account details.
+  example:
+  - >-
+    Usage:
+
+    <pre><code class="lang-csharp">var accountDetails = await client.Account.GetAccountDetails();</code></pre>
+  syntax:
+    content: public Task<AccountDetailsResponse> GetAccountDetails()
+    return:
+      type: System.Threading.Tasks.Task{BetfairDotNet.Models.Account.AccountDetailsResponse}
+      description: A task with the account details upon completion.
+    content.vb: Public Function GetAccountDetails() As Task(Of AccountDetailsResponse)
+  overload: BetfairDotNet.Services.AccountService.GetAccountDetails*
+- uid: BetfairDotNet.Services.AccountService.GetAccountStatement(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},BetfairDotNet.Models.Betting.TimeRange,System.Nullable{BetfairDotNet.Enums.Account.IncludeItemEnum},System.Nullable{BetfairDotNet.Enums.Account.WalletEnum})
+  commentId: M:BetfairDotNet.Services.AccountService.GetAccountStatement(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},BetfairDotNet.Models.Betting.TimeRange,System.Nullable{BetfairDotNet.Enums.Account.IncludeItemEnum},System.Nullable{BetfairDotNet.Enums.Account.WalletEnum})
+  id: GetAccountStatement(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},BetfairDotNet.Models.Betting.TimeRange,System.Nullable{BetfairDotNet.Enums.Account.IncludeItemEnum},System.Nullable{BetfairDotNet.Enums.Account.WalletEnum})
+  parent: BetfairDotNet.Services.AccountService
+  langs:
+  - csharp
+  - vb
+  name: GetAccountStatement(string?, int?, int?, TimeRange?, IncludeItemEnum?, WalletEnum?)
+  nameWithType: AccountService.GetAccountStatement(string?, int?, int?, TimeRange?, IncludeItemEnum?, WalletEnum?)
+  fullName: BetfairDotNet.Services.AccountService.GetAccountStatement(string?, int?, int?, BetfairDotNet.Models.Betting.TimeRange?, BetfairDotNet.Enums.Account.IncludeItemEnum?, BetfairDotNet.Enums.Account.WalletEnum?)
+  type: Method
+  source:
+    remote:
+      path: src/BetfairDotNet/Services/AccountService.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: GetAccountStatement
+    path: ../src/BetfairDotNet/Services/AccountService.cs
+    startLine: 72
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Services
+  summary: Fetches an account statement with details such as P/L, deposits, withdrawals, and more.
+  example:
+  - >-
+    Usage:
+
+    <pre><code class="lang-csharp">var statement = await client.Account.GetAccountStatement(
+        locale: "en", 
+        recordCount: 10
+        itemDateRange: new TimeRange(From = new DateTime(...), To = new DateTime(...))
+    );</code></pre>
+  syntax:
+    content: public Task<AccountStatementReport> GetAccountStatement(string? locale = null, int? fromRecord = null, int? recordCount = null, TimeRange? itemDateRange = null, IncludeItemEnum? includeItem = null, WalletEnum? wallet = null)
+    parameters:
+    - id: locale
+      type: System.String
+      description: Language used; defaults to account's setting.
+    - id: fromRecord
+      type: System.Nullable{System.Int32}
+      description: Start index for records; default is 0.
+    - id: recordCount
+      type: System.Nullable{System.Int32}
+      description: Max records to return; max limit is 100.
+    - id: itemDateRange
+      type: BetfairDotNet.Models.Betting.TimeRange
+      description: Date range for items; max range is last 90 days.
+    - id: includeItem
+      type: System.Nullable{BetfairDotNet.Enums.Account.IncludeItemEnum}
+      description: Items to include; default is ALL.
+    - id: wallet
+      type: System.Nullable{BetfairDotNet.Enums.Account.WalletEnum}
+      description: Wallet for statement; default is UK.
+    return:
+      type: System.Threading.Tasks.Task{BetfairDotNet.Models.Account.AccountStatementReport}
+      description: A task with the account statement details.
+    content.vb: Public Function GetAccountStatement(locale As String = Nothing, fromRecord As Integer? = Nothing, recordCount As Integer? = Nothing, itemDateRange As TimeRange = Nothing, includeItem As IncludeItemEnum? = Nothing, wallet As WalletEnum? = Nothing) As Task(Of AccountStatementReport)
+  overload: BetfairDotNet.Services.AccountService.GetAccountStatement*
+  nameWithType.vb: AccountService.GetAccountStatement(String, Integer?, Integer?, TimeRange, IncludeItemEnum?, WalletEnum?)
+  fullName.vb: BetfairDotNet.Services.AccountService.GetAccountStatement(String, Integer?, Integer?, BetfairDotNet.Models.Betting.TimeRange, BetfairDotNet.Enums.Account.IncludeItemEnum?, BetfairDotNet.Enums.Account.WalletEnum?)
+  name.vb: GetAccountStatement(String, Integer?, Integer?, TimeRange, IncludeItemEnum?, WalletEnum?)
+- uid: BetfairDotNet.Services.AccountService.ListCurrencyRates(System.String)
+  commentId: M:BetfairDotNet.Services.AccountService.ListCurrencyRates(System.String)
+  id: ListCurrencyRates(System.String)
+  parent: BetfairDotNet.Services.AccountService
+  langs:
+  - csharp
+  - vb
+  name: ListCurrencyRates(string?)
+  nameWithType: AccountService.ListCurrencyRates(string?)
+  fullName: BetfairDotNet.Services.AccountService.ListCurrencyRates(string?)
+  type: Method
+  source:
+    remote:
+      path: src/BetfairDotNet/Services/AccountService.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ListCurrencyRates
+    path: ../src/BetfairDotNet/Services/AccountService.cs
+    startLine: 107
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Services
+  summary: Fetches currency rates, updated hourly, based on a specified currency.
+  example:
+  - >-
+    Usage:
+
+    <pre><code class="lang-csharp">var rates = await client.Account.ListCurrencyRates("GBP");</code></pre>
+  syntax:
+    content: public Task<CurrencyRate> ListCurrencyRates(string? fromCurrency = null)
+    parameters:
+    - id: fromCurrency
+      type: System.String
+      description: Base currency for rates; only "GBP" is currently supported.
+    return:
+      type: System.Threading.Tasks.Task{BetfairDotNet.Models.Account.CurrencyRate}
+      description: A task with the currency rates.
+    content.vb: Public Function ListCurrencyRates(fromCurrency As String = Nothing) As Task(Of CurrencyRate)
+  overload: BetfairDotNet.Services.AccountService.ListCurrencyRates*
+  nameWithType.vb: AccountService.ListCurrencyRates(String)
+  fullName.vb: BetfairDotNet.Services.AccountService.ListCurrencyRates(String)
+  name.vb: ListCurrencyRates(String)
+references:
+- uid: BetfairDotNet.Services
+  commentId: N:BetfairDotNet.Services
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Services
+  nameWithType: BetfairDotNet.Services
+  fullName: BetfairDotNet.Services
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Services
+    name: Services
+    href: BetfairDotNet.Services.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Services
+    name: Services
+    href: BetfairDotNet.Services.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BetfairDotNet.Services.AccountService.GetAccountFunds*
+  commentId: Overload:BetfairDotNet.Services.AccountService.GetAccountFunds
+  href: BetfairDotNet.Services.AccountService.html#BetfairDotNet.Services.AccountService.GetAccountFunds
+  name: GetAccountFunds
+  nameWithType: AccountService.GetAccountFunds
+  fullName: BetfairDotNet.Services.AccountService.GetAccountFunds
+- uid: System.Threading.Tasks.Task{BetfairDotNet.Models.Account.AccountFundsResponse}
+  commentId: T:System.Threading.Tasks.Task{BetfairDotNet.Models.Account.AccountFundsResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<AccountFundsResponse>
+  nameWithType: Task<AccountFundsResponse>
+  fullName: System.Threading.Tasks.Task<BetfairDotNet.Models.Account.AccountFundsResponse>
+  nameWithType.vb: Task(Of AccountFundsResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of BetfairDotNet.Models.Account.AccountFundsResponse)
+  name.vb: Task(Of AccountFundsResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: BetfairDotNet.Models.Account.AccountFundsResponse
+    name: AccountFundsResponse
+    href: BetfairDotNet.Models.Account.AccountFundsResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Account.AccountFundsResponse
+    name: AccountFundsResponse
+    href: BetfairDotNet.Models.Account.AccountFundsResponse.html
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: BetfairDotNet.Services.AccountService.GetAccountDetails*
+  commentId: Overload:BetfairDotNet.Services.AccountService.GetAccountDetails
+  href: BetfairDotNet.Services.AccountService.html#BetfairDotNet.Services.AccountService.GetAccountDetails
+  name: GetAccountDetails
+  nameWithType: AccountService.GetAccountDetails
+  fullName: BetfairDotNet.Services.AccountService.GetAccountDetails
+- uid: System.Threading.Tasks.Task{BetfairDotNet.Models.Account.AccountDetailsResponse}
+  commentId: T:System.Threading.Tasks.Task{BetfairDotNet.Models.Account.AccountDetailsResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<AccountDetailsResponse>
+  nameWithType: Task<AccountDetailsResponse>
+  fullName: System.Threading.Tasks.Task<BetfairDotNet.Models.Account.AccountDetailsResponse>
+  nameWithType.vb: Task(Of AccountDetailsResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of BetfairDotNet.Models.Account.AccountDetailsResponse)
+  name.vb: Task(Of AccountDetailsResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: BetfairDotNet.Models.Account.AccountDetailsResponse
+    name: AccountDetailsResponse
+    href: BetfairDotNet.Models.Account.AccountDetailsResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Account.AccountDetailsResponse
+    name: AccountDetailsResponse
+    href: BetfairDotNet.Models.Account.AccountDetailsResponse.html
+  - name: )
+- uid: BetfairDotNet.Services.AccountService.GetAccountStatement*
+  commentId: Overload:BetfairDotNet.Services.AccountService.GetAccountStatement
+  href: BetfairDotNet.Services.AccountService.html#BetfairDotNet.Services.AccountService.GetAccountStatement(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},BetfairDotNet.Models.Betting.TimeRange,System.Nullable{BetfairDotNet.Enums.Account.IncludeItemEnum},System.Nullable{BetfairDotNet.Enums.Account.WalletEnum})
+  name: GetAccountStatement
+  nameWithType: AccountService.GetAccountStatement
+  fullName: BetfairDotNet.Services.AccountService.GetAccountStatement
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: BetfairDotNet.Models.Betting.TimeRange
+  commentId: T:BetfairDotNet.Models.Betting.TimeRange
+  parent: BetfairDotNet.Models.Betting
+  href: BetfairDotNet.Models.Betting.TimeRange.html
+  name: TimeRange
+  nameWithType: TimeRange
+  fullName: BetfairDotNet.Models.Betting.TimeRange
+- uid: System.Nullable{BetfairDotNet.Enums.Account.IncludeItemEnum}
+  commentId: T:System.Nullable{BetfairDotNet.Enums.Account.IncludeItemEnum}
+  parent: System
+  definition: System.Nullable`1
+  href: BetfairDotNet.Enums.Account.IncludeItemEnum.html
+  name: IncludeItemEnum?
+  nameWithType: IncludeItemEnum?
+  fullName: BetfairDotNet.Enums.Account.IncludeItemEnum?
+  spec.csharp:
+  - uid: BetfairDotNet.Enums.Account.IncludeItemEnum
+    name: IncludeItemEnum
+    href: BetfairDotNet.Enums.Account.IncludeItemEnum.html
+  - name: '?'
+  spec.vb:
+  - uid: BetfairDotNet.Enums.Account.IncludeItemEnum
+    name: IncludeItemEnum
+    href: BetfairDotNet.Enums.Account.IncludeItemEnum.html
+  - name: '?'
+- uid: System.Nullable{BetfairDotNet.Enums.Account.WalletEnum}
+  commentId: T:System.Nullable{BetfairDotNet.Enums.Account.WalletEnum}
+  parent: System
+  definition: System.Nullable`1
+  href: BetfairDotNet.Enums.Account.WalletEnum.html
+  name: WalletEnum?
+  nameWithType: WalletEnum?
+  fullName: BetfairDotNet.Enums.Account.WalletEnum?
+  spec.csharp:
+  - uid: BetfairDotNet.Enums.Account.WalletEnum
+    name: WalletEnum
+    href: BetfairDotNet.Enums.Account.WalletEnum.html
+  - name: '?'
+  spec.vb:
+  - uid: BetfairDotNet.Enums.Account.WalletEnum
+    name: WalletEnum
+    href: BetfairDotNet.Enums.Account.WalletEnum.html
+  - name: '?'
+- uid: System.Threading.Tasks.Task{BetfairDotNet.Models.Account.AccountStatementReport}
+  commentId: T:System.Threading.Tasks.Task{BetfairDotNet.Models.Account.AccountStatementReport}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<AccountStatementReport>
+  nameWithType: Task<AccountStatementReport>
+  fullName: System.Threading.Tasks.Task<BetfairDotNet.Models.Account.AccountStatementReport>
+  nameWithType.vb: Task(Of AccountStatementReport)
+  fullName.vb: System.Threading.Tasks.Task(Of BetfairDotNet.Models.Account.AccountStatementReport)
+  name.vb: Task(Of AccountStatementReport)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: BetfairDotNet.Models.Account.AccountStatementReport
+    name: AccountStatementReport
+    href: BetfairDotNet.Models.Account.AccountStatementReport.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Account.AccountStatementReport
+    name: AccountStatementReport
+    href: BetfairDotNet.Models.Account.AccountStatementReport.html
+  - name: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BetfairDotNet.Models.Betting
+  commentId: N:BetfairDotNet.Models.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Betting
+  nameWithType: BetfairDotNet.Models.Betting
+  fullName: BetfairDotNet.Models.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Betting
+    name: Betting
+    href: BetfairDotNet.Models.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Betting
+    name: Betting
+    href: BetfairDotNet.Models.Betting.html
+- uid: BetfairDotNet.Services.AccountService.ListCurrencyRates*
+  commentId: Overload:BetfairDotNet.Services.AccountService.ListCurrencyRates
+  href: BetfairDotNet.Services.AccountService.html#BetfairDotNet.Services.AccountService.ListCurrencyRates(System.String)
+  name: ListCurrencyRates
+  nameWithType: AccountService.ListCurrencyRates
+  fullName: BetfairDotNet.Services.AccountService.ListCurrencyRates
+- uid: System.Threading.Tasks.Task{BetfairDotNet.Models.Account.CurrencyRate}
+  commentId: T:System.Threading.Tasks.Task{BetfairDotNet.Models.Account.CurrencyRate}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<CurrencyRate>
+  nameWithType: Task<CurrencyRate>
+  fullName: System.Threading.Tasks.Task<BetfairDotNet.Models.Account.CurrencyRate>
+  nameWithType.vb: Task(Of CurrencyRate)
+  fullName.vb: System.Threading.Tasks.Task(Of BetfairDotNet.Models.Account.CurrencyRate)
+  name.vb: Task(Of CurrencyRate)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: BetfairDotNet.Models.Account.CurrencyRate
+    name: CurrencyRate
+    href: BetfairDotNet.Models.Account.CurrencyRate.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Account.CurrencyRate
+    name: CurrencyRate
+    href: BetfairDotNet.Models.Account.CurrencyRate.html
+  - name: )

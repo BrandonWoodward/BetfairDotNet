@@ -1,0 +1,250 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Betting.OrderByEnum
+  commentId: T:BetfairDotNet.Enums.Betting.OrderByEnum
+  id: OrderByEnum
+  parent: BetfairDotNet.Enums.Betting
+  children:
+  - BetfairDotNet.Enums.Betting.OrderByEnum.BY_MARKET
+  - BetfairDotNet.Enums.Betting.OrderByEnum.BY_MATCH_TIME
+  - BetfairDotNet.Enums.Betting.OrderByEnum.BY_PLACE_TIME
+  - BetfairDotNet.Enums.Betting.OrderByEnum.BY_SETTLED_TIME
+  - BetfairDotNet.Enums.Betting.OrderByEnum.BY_VOID_TIME
+  langs:
+  - csharp
+  - vb
+  name: OrderByEnum
+  nameWithType: OrderByEnum
+  fullName: BetfairDotNet.Enums.Betting.OrderByEnum
+  type: Enum
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/OrderByEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: OrderByEnum
+    path: ../src/BetfairDotNet/Enums/Betting/OrderByEnum.cs
+    startLine: 6
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EmptyStringToEnumConverter<OrderByEnum>))]
+
+      public enum OrderByEnum
+    content.vb: >-
+      <JsonConverter(GetType(EmptyStringToEnumConverter(Of OrderByEnum)))>
+
+      Public Enum OrderByEnum
+- uid: BetfairDotNet.Enums.Betting.OrderByEnum.BY_MARKET
+  commentId: F:BetfairDotNet.Enums.Betting.OrderByEnum.BY_MARKET
+  id: BY_MARKET
+  parent: BetfairDotNet.Enums.Betting.OrderByEnum
+  langs:
+  - csharp
+  - vb
+  name: BY_MARKET
+  nameWithType: OrderByEnum.BY_MARKET
+  fullName: BetfairDotNet.Enums.Betting.OrderByEnum.BY_MARKET
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/OrderByEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: BY_MARKET
+    path: ../src/BetfairDotNet/Enums/Betting/OrderByEnum.cs
+    startLine: 18
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: >-
+    Represents the ordering by market ID.
+
+    Orders are prioritized by:
+
+    <ul><li>Market ID</li><li>Placement time</li><li>Bet ID</li></ul>
+  example: []
+  syntax:
+    content: BY_MARKET = 0
+    return:
+      type: BetfairDotNet.Enums.Betting.OrderByEnum
+- uid: BetfairDotNet.Enums.Betting.OrderByEnum.BY_MATCH_TIME
+  commentId: F:BetfairDotNet.Enums.Betting.OrderByEnum.BY_MATCH_TIME
+  id: BY_MATCH_TIME
+  parent: BetfairDotNet.Enums.Betting.OrderByEnum
+  langs:
+  - csharp
+  - vb
+  name: BY_MATCH_TIME
+  nameWithType: OrderByEnum.BY_MATCH_TIME
+  fullName: BetfairDotNet.Enums.Betting.OrderByEnum.BY_MATCH_TIME
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/OrderByEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: BY_MATCH_TIME
+    path: ../src/BetfairDotNet/Enums/Betting/OrderByEnum.cs
+    startLine: 30
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: >-
+    Represents the ordering by the time of the last matched fragment.
+
+    Orders are prioritized by:
+
+    <ul><li>Time of last matched fragment (if any)</li><li>Placement time</li><li>Bet ID</li></ul>
+
+    Note: Orders without a matched date are filtered out. If a date range filter is specified, it is applied to the matched date.
+  example: []
+  syntax:
+    content: BY_MATCH_TIME = 1
+    return:
+      type: BetfairDotNet.Enums.Betting.OrderByEnum
+- uid: BetfairDotNet.Enums.Betting.OrderByEnum.BY_PLACE_TIME
+  commentId: F:BetfairDotNet.Enums.Betting.OrderByEnum.BY_PLACE_TIME
+  id: BY_PLACE_TIME
+  parent: BetfairDotNet.Enums.Betting.OrderByEnum
+  langs:
+  - csharp
+  - vb
+  name: BY_PLACE_TIME
+  nameWithType: OrderByEnum.BY_PLACE_TIME
+  fullName: BetfairDotNet.Enums.Betting.OrderByEnum.BY_PLACE_TIME
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/OrderByEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: BY_PLACE_TIME
+    path: ../src/BetfairDotNet/Enums/Betting/OrderByEnum.cs
+    startLine: 41
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: >-
+    Represents the ordering by placement time (alias for the deprecated "BY_BET").
+
+    Orders are prioritized by:
+
+    <ul><li>Placement time</li><li>Bet ID</li></ul>
+
+    Note: If a date range filter is specified, it is applied to the placed date.
+  example: []
+  syntax:
+    content: BY_PLACE_TIME = 2
+    return:
+      type: BetfairDotNet.Enums.Betting.OrderByEnum
+- uid: BetfairDotNet.Enums.Betting.OrderByEnum.BY_SETTLED_TIME
+  commentId: F:BetfairDotNet.Enums.Betting.OrderByEnum.BY_SETTLED_TIME
+  id: BY_SETTLED_TIME
+  parent: BetfairDotNet.Enums.Betting.OrderByEnum
+  langs:
+  - csharp
+  - vb
+  name: BY_SETTLED_TIME
+  nameWithType: OrderByEnum.BY_SETTLED_TIME
+  fullName: BetfairDotNet.Enums.Betting.OrderByEnum.BY_SETTLED_TIME
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/OrderByEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: BY_SETTLED_TIME
+    path: ../src/BetfairDotNet/Enums/Betting/OrderByEnum.cs
+    startLine: 54
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: >-
+    Represents the ordering by the time of the last settled fragment.
+
+    Orders are prioritized by:
+
+    <ul><li>Time of last settled fragment (if partially settled)</li><li>Last match time</li><li>Placement time</li><li>Bet ID</li></ul>
+
+    Note: Orders not yet settled are filtered out. If a date range filter is specified, it is applied to the settled date.
+  example: []
+  syntax:
+    content: BY_SETTLED_TIME = 3
+    return:
+      type: BetfairDotNet.Enums.Betting.OrderByEnum
+- uid: BetfairDotNet.Enums.Betting.OrderByEnum.BY_VOID_TIME
+  commentId: F:BetfairDotNet.Enums.Betting.OrderByEnum.BY_VOID_TIME
+  id: BY_VOID_TIME
+  parent: BetfairDotNet.Enums.Betting.OrderByEnum
+  langs:
+  - csharp
+  - vb
+  name: BY_VOID_TIME
+  nameWithType: OrderByEnum.BY_VOID_TIME
+  fullName: BetfairDotNet.Enums.Betting.OrderByEnum.BY_VOID_TIME
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/OrderByEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: BY_VOID_TIME
+    path: ../src/BetfairDotNet/Enums/Betting/OrderByEnum.cs
+    startLine: 67
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: >-
+    Represents the ordering by the time of the last voided fragment.
+
+    Orders are prioritized by:
+
+    <ul><li>Time of last voided fragment (if any)</li><li>Last match time</li><li>Placement time</li><li>Bet ID</li></ul>
+
+    Note: Orders not voided are filtered out. If a date range filter is specified, it is applied to the voided date.
+  example: []
+  syntax:
+    content: BY_VOID_TIME = 4
+    return:
+      type: BetfairDotNet.Enums.Betting.OrderByEnum
+references:
+- uid: BetfairDotNet.Enums.Betting
+  commentId: N:BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Betting
+  nameWithType: BetfairDotNet.Enums.Betting
+  fullName: BetfairDotNet.Enums.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+- uid: BetfairDotNet.Enums.Betting.OrderByEnum
+  commentId: T:BetfairDotNet.Enums.Betting.OrderByEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.OrderByEnum.html
+  name: OrderByEnum
+  nameWithType: OrderByEnum
+  fullName: BetfairDotNet.Enums.Betting.OrderByEnum

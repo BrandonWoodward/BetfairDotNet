@@ -1,0 +1,532 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Models.Streaming.StreamingMarketDataFilter
+  commentId: T:BetfairDotNet.Models.Streaming.StreamingMarketDataFilter
+  id: StreamingMarketDataFilter
+  parent: BetfairDotNet.Models.Streaming
+  children:
+  - BetfairDotNet.Models.Streaming.StreamingMarketDataFilter.Fields
+  - BetfairDotNet.Models.Streaming.StreamingMarketDataFilter.LadderLevels
+  langs:
+  - csharp
+  - vb
+  name: StreamingMarketDataFilter
+  nameWithType: StreamingMarketDataFilter
+  fullName: BetfairDotNet.Models.Streaming.StreamingMarketDataFilter
+  type: Class
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/StreamingMarketDataFilter.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: StreamingMarketDataFilter
+    path: ../src/BetfairDotNet/Models/Streaming/StreamingMarketDataFilter.cs
+    startLine: 9
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: Filter the market data returned from a market subscription.
+  example: []
+  syntax:
+    content: public sealed class StreamingMarketDataFilter
+    content.vb: Public NotInheritable Class StreamingMarketDataFilter
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BetfairDotNet.Models.Streaming.StreamingMarketDataFilter.LadderLevels
+  commentId: P:BetfairDotNet.Models.Streaming.StreamingMarketDataFilter.LadderLevels
+  id: LadderLevels
+  parent: BetfairDotNet.Models.Streaming.StreamingMarketDataFilter
+  langs:
+  - csharp
+  - vb
+  name: LadderLevels
+  nameWithType: StreamingMarketDataFilter.LadderLevels
+  fullName: BetfairDotNet.Models.Streaming.StreamingMarketDataFilter.LadderLevels
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/StreamingMarketDataFilter.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: LadderLevels
+    path: ../src/BetfairDotNet/Models/Streaming/StreamingMarketDataFilter.cs
+    startLine: 14
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: Number of best prices to return each side of the book.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("ladderLevels")]
+
+      public int? LadderLevels { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: >-
+      <JsonPropertyName("ladderLevels")>
+
+      Public Property LadderLevels As Integer?
+  overload: BetfairDotNet.Models.Streaming.StreamingMarketDataFilter.LadderLevels*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: ladderLevels
+- uid: BetfairDotNet.Models.Streaming.StreamingMarketDataFilter.Fields
+  commentId: P:BetfairDotNet.Models.Streaming.StreamingMarketDataFilter.Fields
+  id: Fields
+  parent: BetfairDotNet.Models.Streaming.StreamingMarketDataFilter
+  langs:
+  - csharp
+  - vb
+  name: Fields
+  nameWithType: StreamingMarketDataFilter.Fields
+  fullName: BetfairDotNet.Models.Streaming.StreamingMarketDataFilter.Fields
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/StreamingMarketDataFilter.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Fields
+    path: ../src/BetfairDotNet/Models/Streaming/StreamingMarketDataFilter.cs
+    startLine: 20
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: The price filter fields.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("fields")]
+
+      public List<MarketPriceFilterEnum>? Fields { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum}
+    content.vb: >-
+      <JsonPropertyName("fields")>
+
+      Public Property Fields As List(Of MarketPriceFilterEnum)
+  overload: BetfairDotNet.Models.Streaming.StreamingMarketDataFilter.Fields*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: fields
+references:
+- uid: BetfairDotNet.Models.Streaming
+  commentId: N:BetfairDotNet.Models.Streaming
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Streaming
+  nameWithType: BetfairDotNet.Models.Streaming
+  fullName: BetfairDotNet.Models.Streaming
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Streaming
+    name: Streaming
+    href: BetfairDotNet.Models.Streaming.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Streaming
+    name: Streaming
+    href: BetfairDotNet.Models.Streaming.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BetfairDotNet.Models.Streaming.StreamingMarketDataFilter.LadderLevels*
+  commentId: Overload:BetfairDotNet.Models.Streaming.StreamingMarketDataFilter.LadderLevels
+  href: BetfairDotNet.Models.Streaming.StreamingMarketDataFilter.html#BetfairDotNet.Models.Streaming.StreamingMarketDataFilter.LadderLevels
+  name: LadderLevels
+  nameWithType: StreamingMarketDataFilter.LadderLevels
+  fullName: BetfairDotNet.Models.Streaming.StreamingMarketDataFilter.LadderLevels
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BetfairDotNet.Models.Streaming.StreamingMarketDataFilter.Fields*
+  commentId: Overload:BetfairDotNet.Models.Streaming.StreamingMarketDataFilter.Fields
+  href: BetfairDotNet.Models.Streaming.StreamingMarketDataFilter.html#BetfairDotNet.Models.Streaming.StreamingMarketDataFilter.Fields
+  name: Fields
+  nameWithType: StreamingMarketDataFilter.Fields
+  fullName: BetfairDotNet.Models.Streaming.StreamingMarketDataFilter.Fields
+- uid: System.Collections.Generic.List{BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum}
+  commentId: T:System.Collections.Generic.List{BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<MarketPriceFilterEnum>
+  nameWithType: List<MarketPriceFilterEnum>
+  fullName: System.Collections.Generic.List<BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum>
+  nameWithType.vb: List(Of MarketPriceFilterEnum)
+  fullName.vb: System.Collections.Generic.List(Of BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum)
+  name.vb: List(Of MarketPriceFilterEnum)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum
+    name: MarketPriceFilterEnum
+    href: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum
+    name: MarketPriceFilterEnum
+    href: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

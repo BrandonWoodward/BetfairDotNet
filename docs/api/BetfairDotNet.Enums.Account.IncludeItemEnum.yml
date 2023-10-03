@@ -1,0 +1,217 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Account.IncludeItemEnum
+  commentId: T:BetfairDotNet.Enums.Account.IncludeItemEnum
+  id: IncludeItemEnum
+  parent: BetfairDotNet.Enums.Account
+  children:
+  - BetfairDotNet.Enums.Account.IncludeItemEnum.ALL
+  - BetfairDotNet.Enums.Account.IncludeItemEnum.DEPOSITS_WITHDRAWALS
+  - BetfairDotNet.Enums.Account.IncludeItemEnum.EXCHANGE
+  - BetfairDotNet.Enums.Account.IncludeItemEnum.NONE
+  - BetfairDotNet.Enums.Account.IncludeItemEnum.POKER_ROOM
+  langs:
+  - csharp
+  - vb
+  name: IncludeItemEnum
+  nameWithType: IncludeItemEnum
+  fullName: BetfairDotNet.Enums.Account.IncludeItemEnum
+  type: Enum
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/IncludeItemEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: IncludeItemEnum
+    path: ../src/BetfairDotNet/Enums/Account/IncludeItemEnum.cs
+    startLine: 5
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EmptyStringToEnumConverter<IncludeItemEnum>))]
+
+      public enum IncludeItemEnum
+    content.vb: >-
+      <JsonConverter(GetType(EmptyStringToEnumConverter(Of IncludeItemEnum)))>
+
+      Public Enum IncludeItemEnum
+- uid: BetfairDotNet.Enums.Account.IncludeItemEnum.NONE
+  commentId: F:BetfairDotNet.Enums.Account.IncludeItemEnum.NONE
+  id: NONE
+  parent: BetfairDotNet.Enums.Account.IncludeItemEnum
+  langs:
+  - csharp
+  - vb
+  name: NONE
+  nameWithType: IncludeItemEnum.NONE
+  fullName: BetfairDotNet.Enums.Account.IncludeItemEnum.NONE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/IncludeItemEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: NONE
+    path: ../src/BetfairDotNet/Enums/Account/IncludeItemEnum.cs
+    startLine: 11
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: The default value.
+  example: []
+  syntax:
+    content: NONE = 0
+    return:
+      type: BetfairDotNet.Enums.Account.IncludeItemEnum
+- uid: BetfairDotNet.Enums.Account.IncludeItemEnum.ALL
+  commentId: F:BetfairDotNet.Enums.Account.IncludeItemEnum.ALL
+  id: ALL
+  parent: BetfairDotNet.Enums.Account.IncludeItemEnum
+  langs:
+  - csharp
+  - vb
+  name: ALL
+  nameWithType: IncludeItemEnum.ALL
+  fullName: BetfairDotNet.Enums.Account.IncludeItemEnum.ALL
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/IncludeItemEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ALL
+    path: ../src/BetfairDotNet/Enums/Account/IncludeItemEnum.cs
+    startLine: 16
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: Include all items.
+  example: []
+  syntax:
+    content: ALL = 1
+    return:
+      type: BetfairDotNet.Enums.Account.IncludeItemEnum
+- uid: BetfairDotNet.Enums.Account.IncludeItemEnum.DEPOSITS_WITHDRAWALS
+  commentId: F:BetfairDotNet.Enums.Account.IncludeItemEnum.DEPOSITS_WITHDRAWALS
+  id: DEPOSITS_WITHDRAWALS
+  parent: BetfairDotNet.Enums.Account.IncludeItemEnum
+  langs:
+  - csharp
+  - vb
+  name: DEPOSITS_WITHDRAWALS
+  nameWithType: IncludeItemEnum.DEPOSITS_WITHDRAWALS
+  fullName: BetfairDotNet.Enums.Account.IncludeItemEnum.DEPOSITS_WITHDRAWALS
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/IncludeItemEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: DEPOSITS_WITHDRAWALS
+    path: ../src/BetfairDotNet/Enums/Account/IncludeItemEnum.cs
+    startLine: 21
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: Include payments only.
+  example: []
+  syntax:
+    content: DEPOSITS_WITHDRAWALS = 2
+    return:
+      type: BetfairDotNet.Enums.Account.IncludeItemEnum
+- uid: BetfairDotNet.Enums.Account.IncludeItemEnum.EXCHANGE
+  commentId: F:BetfairDotNet.Enums.Account.IncludeItemEnum.EXCHANGE
+  id: EXCHANGE
+  parent: BetfairDotNet.Enums.Account.IncludeItemEnum
+  langs:
+  - csharp
+  - vb
+  name: EXCHANGE
+  nameWithType: IncludeItemEnum.EXCHANGE
+  fullName: BetfairDotNet.Enums.Account.IncludeItemEnum.EXCHANGE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/IncludeItemEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: EXCHANGE
+    path: ../src/BetfairDotNet/Enums/Account/IncludeItemEnum.cs
+    startLine: 26
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: Include exchange bets only.
+  example: []
+  syntax:
+    content: EXCHANGE = 3
+    return:
+      type: BetfairDotNet.Enums.Account.IncludeItemEnum
+- uid: BetfairDotNet.Enums.Account.IncludeItemEnum.POKER_ROOM
+  commentId: F:BetfairDotNet.Enums.Account.IncludeItemEnum.POKER_ROOM
+  id: POKER_ROOM
+  parent: BetfairDotNet.Enums.Account.IncludeItemEnum
+  langs:
+  - csharp
+  - vb
+  name: POKER_ROOM
+  nameWithType: IncludeItemEnum.POKER_ROOM
+  fullName: BetfairDotNet.Enums.Account.IncludeItemEnum.POKER_ROOM
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/IncludeItemEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: POKER_ROOM
+    path: ../src/BetfairDotNet/Enums/Account/IncludeItemEnum.cs
+    startLine: 31
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: Include poker transactions only.
+  example: []
+  syntax:
+    content: POKER_ROOM = 4
+    return:
+      type: BetfairDotNet.Enums.Account.IncludeItemEnum
+references:
+- uid: BetfairDotNet.Enums.Account
+  commentId: N:BetfairDotNet.Enums.Account
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Account
+  nameWithType: BetfairDotNet.Enums.Account
+  fullName: BetfairDotNet.Enums.Account
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Account
+    name: Account
+    href: BetfairDotNet.Enums.Account.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Account
+    name: Account
+    href: BetfairDotNet.Enums.Account.html
+- uid: BetfairDotNet.Enums.Account.IncludeItemEnum
+  commentId: T:BetfairDotNet.Enums.Account.IncludeItemEnum
+  parent: BetfairDotNet.Enums.Account
+  href: BetfairDotNet.Enums.Account.IncludeItemEnum.html
+  name: IncludeItemEnum
+  nameWithType: IncludeItemEnum
+  fullName: BetfairDotNet.Enums.Account.IncludeItemEnum

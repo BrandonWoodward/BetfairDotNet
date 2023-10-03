@@ -1,0 +1,693 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Models.Streaming.RunnerSnapshot
+  commentId: T:BetfairDotNet.Models.Streaming.RunnerSnapshot
+  id: RunnerSnapshot
+  parent: BetfairDotNet.Models.Streaming
+  children:
+  - BetfairDotNet.Models.Streaming.RunnerSnapshot.LastTradedPrice
+  - BetfairDotNet.Models.Streaming.RunnerSnapshot.RunnerDefinition
+  - BetfairDotNet.Models.Streaming.RunnerSnapshot.SelectionId
+  - BetfairDotNet.Models.Streaming.RunnerSnapshot.StartingPriceFar
+  - BetfairDotNet.Models.Streaming.RunnerSnapshot.StartingPriceNear
+  - BetfairDotNet.Models.Streaming.RunnerSnapshot.ToBack
+  - BetfairDotNet.Models.Streaming.RunnerSnapshot.ToLay
+  - BetfairDotNet.Models.Streaming.RunnerSnapshot.Traded
+  langs:
+  - csharp
+  - vb
+  name: RunnerSnapshot
+  nameWithType: RunnerSnapshot
+  fullName: BetfairDotNet.Models.Streaming.RunnerSnapshot
+  type: Class
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/RunnerSnapshot.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: RunnerSnapshot
+    path: ../src/BetfairDotNet/Models/Streaming/RunnerSnapshot.cs
+    startLine: 6
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: An immutable atomic snapshot of a runner.
+  example: []
+  syntax:
+    content: 'public sealed record RunnerSnapshot : IEquatable<RunnerSnapshot>'
+    content.vb: Public NotInheritable Class RunnerSnapshot Implements IEquatable(Of RunnerSnapshot)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{BetfairDotNet.Models.Streaming.RunnerSnapshot}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BetfairDotNet.Models.Streaming.RunnerSnapshot.SelectionId
+  commentId: P:BetfairDotNet.Models.Streaming.RunnerSnapshot.SelectionId
+  id: SelectionId
+  parent: BetfairDotNet.Models.Streaming.RunnerSnapshot
+  langs:
+  - csharp
+  - vb
+  name: SelectionId
+  nameWithType: RunnerSnapshot.SelectionId
+  fullName: BetfairDotNet.Models.Streaming.RunnerSnapshot.SelectionId
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/RunnerSnapshot.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SelectionId
+    path: ../src/BetfairDotNet/Models/Streaming/RunnerSnapshot.cs
+    startLine: 11
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: The unique identifier for the selection.
+  example: []
+  syntax:
+    content: public long SelectionId { get; init; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property SelectionId As Long
+  overload: BetfairDotNet.Models.Streaming.RunnerSnapshot.SelectionId*
+- uid: BetfairDotNet.Models.Streaming.RunnerSnapshot.RunnerDefinition
+  commentId: P:BetfairDotNet.Models.Streaming.RunnerSnapshot.RunnerDefinition
+  id: RunnerDefinition
+  parent: BetfairDotNet.Models.Streaming.RunnerSnapshot
+  langs:
+  - csharp
+  - vb
+  name: RunnerDefinition
+  nameWithType: RunnerSnapshot.RunnerDefinition
+  fullName: BetfairDotNet.Models.Streaming.RunnerSnapshot.RunnerDefinition
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/RunnerSnapshot.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: RunnerDefinition
+    path: ../src/BetfairDotNet/Models/Streaming/RunnerSnapshot.cs
+    startLine: 16
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: The selection's metadata if requested.
+  example: []
+  syntax:
+    content: public RunnerDefinition? RunnerDefinition { get; init; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Models.Streaming.RunnerDefinition
+    content.vb: Public Property RunnerDefinition As RunnerDefinition
+  overload: BetfairDotNet.Models.Streaming.RunnerSnapshot.RunnerDefinition*
+- uid: BetfairDotNet.Models.Streaming.RunnerSnapshot.ToLay
+  commentId: P:BetfairDotNet.Models.Streaming.RunnerSnapshot.ToLay
+  id: ToLay
+  parent: BetfairDotNet.Models.Streaming.RunnerSnapshot
+  langs:
+  - csharp
+  - vb
+  name: ToLay
+  nameWithType: RunnerSnapshot.ToLay
+  fullName: BetfairDotNet.Models.Streaming.RunnerSnapshot.ToLay
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/RunnerSnapshot.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ToLay
+    path: ../src/BetfairDotNet/Models/Streaming/RunnerSnapshot.cs
+    startLine: 21
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: Amounts available to lay by distinct price. Filtered as per <xref href="BetfairDotNet.Models.Streaming.StreamingMarketDataFilter" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public PriceLadder ToLay { get; init; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Models.Streaming.PriceLadder
+    content.vb: Public Property ToLay As PriceLadder
+  overload: BetfairDotNet.Models.Streaming.RunnerSnapshot.ToLay*
+- uid: BetfairDotNet.Models.Streaming.RunnerSnapshot.ToBack
+  commentId: P:BetfairDotNet.Models.Streaming.RunnerSnapshot.ToBack
+  id: ToBack
+  parent: BetfairDotNet.Models.Streaming.RunnerSnapshot
+  langs:
+  - csharp
+  - vb
+  name: ToBack
+  nameWithType: RunnerSnapshot.ToBack
+  fullName: BetfairDotNet.Models.Streaming.RunnerSnapshot.ToBack
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/RunnerSnapshot.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ToBack
+    path: ../src/BetfairDotNet/Models/Streaming/RunnerSnapshot.cs
+    startLine: 26
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: Amounts available to back by distinct price. Filtered as per <xref href="BetfairDotNet.Models.Streaming.StreamingMarketDataFilter" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public PriceLadder ToBack { get; init; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Models.Streaming.PriceLadder
+    content.vb: Public Property ToBack As PriceLadder
+  overload: BetfairDotNet.Models.Streaming.RunnerSnapshot.ToBack*
+- uid: BetfairDotNet.Models.Streaming.RunnerSnapshot.Traded
+  commentId: P:BetfairDotNet.Models.Streaming.RunnerSnapshot.Traded
+  id: Traded
+  parent: BetfairDotNet.Models.Streaming.RunnerSnapshot
+  langs:
+  - csharp
+  - vb
+  name: Traded
+  nameWithType: RunnerSnapshot.Traded
+  fullName: BetfairDotNet.Models.Streaming.RunnerSnapshot.Traded
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/RunnerSnapshot.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Traded
+    path: ../src/BetfairDotNet/Models/Streaming/RunnerSnapshot.cs
+    startLine: 31
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: The traded volume by distinct price, if requested. See <xref href="BetfairDotNet.Models.Streaming.StreamingMarketDataFilter" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public PriceLadder Traded { get; init; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Models.Streaming.PriceLadder
+    content.vb: Public Property Traded As PriceLadder
+  overload: BetfairDotNet.Models.Streaming.RunnerSnapshot.Traded*
+- uid: BetfairDotNet.Models.Streaming.RunnerSnapshot.LastTradedPrice
+  commentId: P:BetfairDotNet.Models.Streaming.RunnerSnapshot.LastTradedPrice
+  id: LastTradedPrice
+  parent: BetfairDotNet.Models.Streaming.RunnerSnapshot
+  langs:
+  - csharp
+  - vb
+  name: LastTradedPrice
+  nameWithType: RunnerSnapshot.LastTradedPrice
+  fullName: BetfairDotNet.Models.Streaming.RunnerSnapshot.LastTradedPrice
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/RunnerSnapshot.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: LastTradedPrice
+    path: ../src/BetfairDotNet/Models/Streaming/RunnerSnapshot.cs
+    startLine: 36
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: Last price traded on this selection. Only returned if requested with <xref href="BetfairDotNet.Models.Streaming.StreamingMarketDataFilter" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public double LastTradedPrice { get; init; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property LastTradedPrice As Double
+  overload: BetfairDotNet.Models.Streaming.RunnerSnapshot.LastTradedPrice*
+- uid: BetfairDotNet.Models.Streaming.RunnerSnapshot.StartingPriceNear
+  commentId: P:BetfairDotNet.Models.Streaming.RunnerSnapshot.StartingPriceNear
+  id: StartingPriceNear
+  parent: BetfairDotNet.Models.Streaming.RunnerSnapshot
+  langs:
+  - csharp
+  - vb
+  name: StartingPriceNear
+  nameWithType: RunnerSnapshot.StartingPriceNear
+  fullName: BetfairDotNet.Models.Streaming.RunnerSnapshot.StartingPriceNear
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/RunnerSnapshot.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: StartingPriceNear
+    path: ../src/BetfairDotNet/Models/Streaming/RunnerSnapshot.cs
+    startLine: 41
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: ''
+  example: []
+  syntax:
+    content: public double StartingPriceNear { get; init; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property StartingPriceNear As Double
+  overload: BetfairDotNet.Models.Streaming.RunnerSnapshot.StartingPriceNear*
+- uid: BetfairDotNet.Models.Streaming.RunnerSnapshot.StartingPriceFar
+  commentId: P:BetfairDotNet.Models.Streaming.RunnerSnapshot.StartingPriceFar
+  id: StartingPriceFar
+  parent: BetfairDotNet.Models.Streaming.RunnerSnapshot
+  langs:
+  - csharp
+  - vb
+  name: StartingPriceFar
+  nameWithType: RunnerSnapshot.StartingPriceFar
+  fullName: BetfairDotNet.Models.Streaming.RunnerSnapshot.StartingPriceFar
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/RunnerSnapshot.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: StartingPriceFar
+    path: ../src/BetfairDotNet/Models/Streaming/RunnerSnapshot.cs
+    startLine: 46
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: ''
+  example: []
+  syntax:
+    content: public double StartingPriceFar { get; init; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property StartingPriceFar As Double
+  overload: BetfairDotNet.Models.Streaming.RunnerSnapshot.StartingPriceFar*
+references:
+- uid: BetfairDotNet.Models.Streaming
+  commentId: N:BetfairDotNet.Models.Streaming
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Streaming
+  nameWithType: BetfairDotNet.Models.Streaming
+  fullName: BetfairDotNet.Models.Streaming
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Streaming
+    name: Streaming
+    href: BetfairDotNet.Models.Streaming.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Streaming
+    name: Streaming
+    href: BetfairDotNet.Models.Streaming.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{BetfairDotNet.Models.Streaming.RunnerSnapshot}
+  commentId: T:System.IEquatable{BetfairDotNet.Models.Streaming.RunnerSnapshot}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<RunnerSnapshot>
+  nameWithType: IEquatable<RunnerSnapshot>
+  fullName: System.IEquatable<BetfairDotNet.Models.Streaming.RunnerSnapshot>
+  nameWithType.vb: IEquatable(Of RunnerSnapshot)
+  fullName.vb: System.IEquatable(Of BetfairDotNet.Models.Streaming.RunnerSnapshot)
+  name.vb: IEquatable(Of RunnerSnapshot)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: BetfairDotNet.Models.Streaming.RunnerSnapshot
+    name: RunnerSnapshot
+    href: BetfairDotNet.Models.Streaming.RunnerSnapshot.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Streaming.RunnerSnapshot
+    name: RunnerSnapshot
+    href: BetfairDotNet.Models.Streaming.RunnerSnapshot.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BetfairDotNet.Models.Streaming.RunnerSnapshot.SelectionId*
+  commentId: Overload:BetfairDotNet.Models.Streaming.RunnerSnapshot.SelectionId
+  href: BetfairDotNet.Models.Streaming.RunnerSnapshot.html#BetfairDotNet.Models.Streaming.RunnerSnapshot.SelectionId
+  name: SelectionId
+  nameWithType: RunnerSnapshot.SelectionId
+  fullName: BetfairDotNet.Models.Streaming.RunnerSnapshot.SelectionId
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: BetfairDotNet.Models.Streaming.RunnerSnapshot.RunnerDefinition*
+  commentId: Overload:BetfairDotNet.Models.Streaming.RunnerSnapshot.RunnerDefinition
+  href: BetfairDotNet.Models.Streaming.RunnerSnapshot.html#BetfairDotNet.Models.Streaming.RunnerSnapshot.RunnerDefinition
+  name: RunnerDefinition
+  nameWithType: RunnerSnapshot.RunnerDefinition
+  fullName: BetfairDotNet.Models.Streaming.RunnerSnapshot.RunnerDefinition
+- uid: BetfairDotNet.Models.Streaming.RunnerDefinition
+  commentId: T:BetfairDotNet.Models.Streaming.RunnerDefinition
+  parent: BetfairDotNet.Models.Streaming
+  href: BetfairDotNet.Models.Streaming.RunnerDefinition.html
+  name: RunnerDefinition
+  nameWithType: RunnerDefinition
+  fullName: BetfairDotNet.Models.Streaming.RunnerDefinition
+- uid: BetfairDotNet.Models.Streaming.StreamingMarketDataFilter
+  commentId: T:BetfairDotNet.Models.Streaming.StreamingMarketDataFilter
+  parent: BetfairDotNet.Models.Streaming
+  href: BetfairDotNet.Models.Streaming.StreamingMarketDataFilter.html
+  name: StreamingMarketDataFilter
+  nameWithType: StreamingMarketDataFilter
+  fullName: BetfairDotNet.Models.Streaming.StreamingMarketDataFilter
+- uid: BetfairDotNet.Models.Streaming.RunnerSnapshot.ToLay*
+  commentId: Overload:BetfairDotNet.Models.Streaming.RunnerSnapshot.ToLay
+  href: BetfairDotNet.Models.Streaming.RunnerSnapshot.html#BetfairDotNet.Models.Streaming.RunnerSnapshot.ToLay
+  name: ToLay
+  nameWithType: RunnerSnapshot.ToLay
+  fullName: BetfairDotNet.Models.Streaming.RunnerSnapshot.ToLay
+- uid: BetfairDotNet.Models.Streaming.PriceLadder
+  commentId: T:BetfairDotNet.Models.Streaming.PriceLadder
+  parent: BetfairDotNet.Models.Streaming
+  href: BetfairDotNet.Models.Streaming.PriceLadder.html
+  name: PriceLadder
+  nameWithType: PriceLadder
+  fullName: BetfairDotNet.Models.Streaming.PriceLadder
+- uid: BetfairDotNet.Models.Streaming.RunnerSnapshot.ToBack*
+  commentId: Overload:BetfairDotNet.Models.Streaming.RunnerSnapshot.ToBack
+  href: BetfairDotNet.Models.Streaming.RunnerSnapshot.html#BetfairDotNet.Models.Streaming.RunnerSnapshot.ToBack
+  name: ToBack
+  nameWithType: RunnerSnapshot.ToBack
+  fullName: BetfairDotNet.Models.Streaming.RunnerSnapshot.ToBack
+- uid: BetfairDotNet.Models.Streaming.RunnerSnapshot.Traded*
+  commentId: Overload:BetfairDotNet.Models.Streaming.RunnerSnapshot.Traded
+  href: BetfairDotNet.Models.Streaming.RunnerSnapshot.html#BetfairDotNet.Models.Streaming.RunnerSnapshot.Traded
+  name: Traded
+  nameWithType: RunnerSnapshot.Traded
+  fullName: BetfairDotNet.Models.Streaming.RunnerSnapshot.Traded
+- uid: BetfairDotNet.Models.Streaming.RunnerSnapshot.LastTradedPrice*
+  commentId: Overload:BetfairDotNet.Models.Streaming.RunnerSnapshot.LastTradedPrice
+  href: BetfairDotNet.Models.Streaming.RunnerSnapshot.html#BetfairDotNet.Models.Streaming.RunnerSnapshot.LastTradedPrice
+  name: LastTradedPrice
+  nameWithType: RunnerSnapshot.LastTradedPrice
+  fullName: BetfairDotNet.Models.Streaming.RunnerSnapshot.LastTradedPrice
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: BetfairDotNet.Models.Streaming.RunnerSnapshot.StartingPriceNear*
+  commentId: Overload:BetfairDotNet.Models.Streaming.RunnerSnapshot.StartingPriceNear
+  href: BetfairDotNet.Models.Streaming.RunnerSnapshot.html#BetfairDotNet.Models.Streaming.RunnerSnapshot.StartingPriceNear
+  name: StartingPriceNear
+  nameWithType: RunnerSnapshot.StartingPriceNear
+  fullName: BetfairDotNet.Models.Streaming.RunnerSnapshot.StartingPriceNear
+- uid: BetfairDotNet.Models.Streaming.RunnerSnapshot.StartingPriceFar*
+  commentId: Overload:BetfairDotNet.Models.Streaming.RunnerSnapshot.StartingPriceFar
+  href: BetfairDotNet.Models.Streaming.RunnerSnapshot.html#BetfairDotNet.Models.Streaming.RunnerSnapshot.StartingPriceFar
+  name: StartingPriceFar
+  nameWithType: RunnerSnapshot.StartingPriceFar
+  fullName: BetfairDotNet.Models.Streaming.RunnerSnapshot.StartingPriceFar

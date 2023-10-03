@@ -1,0 +1,605 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Models.BetfairServerRequest
+  commentId: T:BetfairDotNet.Models.BetfairServerRequest
+  id: BetfairServerRequest
+  parent: BetfairDotNet.Models
+  children:
+  - BetfairDotNet.Models.BetfairServerRequest.Id
+  - BetfairDotNet.Models.BetfairServerRequest.JsonRpc
+  - BetfairDotNet.Models.BetfairServerRequest.Method
+  - BetfairDotNet.Models.BetfairServerRequest.Params
+  langs:
+  - csharp
+  - vb
+  name: BetfairServerRequest
+  nameWithType: BetfairServerRequest
+  fullName: BetfairDotNet.Models.BetfairServerRequest
+  type: Class
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/BetfairServerRequest.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: BetfairServerRequest
+    path: ../src/BetfairDotNet/Models/BetfairServerRequest.cs
+    startLine: 5
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models
+  syntax:
+    content: public sealed class BetfairServerRequest
+    content.vb: Public NotInheritable Class BetfairServerRequest
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BetfairDotNet.Models.BetfairServerRequest.JsonRpc
+  commentId: P:BetfairDotNet.Models.BetfairServerRequest.JsonRpc
+  id: JsonRpc
+  parent: BetfairDotNet.Models.BetfairServerRequest
+  langs:
+  - csharp
+  - vb
+  name: JsonRpc
+  nameWithType: BetfairServerRequest.JsonRpc
+  fullName: BetfairDotNet.Models.BetfairServerRequest.JsonRpc
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/BetfairServerRequest.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: JsonRpc
+    path: ../src/BetfairDotNet/Models/BetfairServerRequest.cs
+    startLine: 7
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models
+  syntax:
+    content: >-
+      [JsonPropertyName("jsonrpc")]
+
+      public string JsonRpc { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("jsonrpc")>
+
+      Public Property JsonRpc As String
+  overload: BetfairDotNet.Models.BetfairServerRequest.JsonRpc*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: jsonrpc
+- uid: BetfairDotNet.Models.BetfairServerRequest.Method
+  commentId: P:BetfairDotNet.Models.BetfairServerRequest.Method
+  id: Method
+  parent: BetfairDotNet.Models.BetfairServerRequest
+  langs:
+  - csharp
+  - vb
+  name: Method
+  nameWithType: BetfairServerRequest.Method
+  fullName: BetfairDotNet.Models.BetfairServerRequest.Method
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/BetfairServerRequest.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Method
+    path: ../src/BetfairDotNet/Models/BetfairServerRequest.cs
+    startLine: 10
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models
+  syntax:
+    content: >-
+      [JsonPropertyName("method")]
+
+      public required string Method { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("method")>
+
+      Public Property Method As String
+  overload: BetfairDotNet.Models.BetfairServerRequest.Method*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: method
+- uid: BetfairDotNet.Models.BetfairServerRequest.Params
+  commentId: P:BetfairDotNet.Models.BetfairServerRequest.Params
+  id: Params
+  parent: BetfairDotNet.Models.BetfairServerRequest
+  langs:
+  - csharp
+  - vb
+  name: Params
+  nameWithType: BetfairServerRequest.Params
+  fullName: BetfairDotNet.Models.BetfairServerRequest.Params
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/BetfairServerRequest.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Params
+    path: ../src/BetfairDotNet/Models/BetfairServerRequest.cs
+    startLine: 13
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models
+  syntax:
+    content: >-
+      [JsonPropertyName("params")]
+
+      public Dictionary<string, object?>? Params { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+    content.vb: >-
+      <JsonPropertyName("params")>
+
+      Public Property Params As Dictionary(Of String, Object)
+  overload: BetfairDotNet.Models.BetfairServerRequest.Params*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: params
+- uid: BetfairDotNet.Models.BetfairServerRequest.Id
+  commentId: P:BetfairDotNet.Models.BetfairServerRequest.Id
+  id: Id
+  parent: BetfairDotNet.Models.BetfairServerRequest
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: BetfairServerRequest.Id
+  fullName: BetfairDotNet.Models.BetfairServerRequest.Id
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/BetfairServerRequest.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Id
+    path: ../src/BetfairDotNet/Models/BetfairServerRequest.cs
+    startLine: 16
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models
+  syntax:
+    content: >-
+      [JsonPropertyName("id")]
+
+      public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <JsonPropertyName("id")>
+
+      Public Property Id As Integer
+  overload: BetfairDotNet.Models.BetfairServerRequest.Id*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: id
+references:
+- uid: BetfairDotNet.Models
+  commentId: N:BetfairDotNet.Models
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models
+  nameWithType: BetfairDotNet.Models
+  fullName: BetfairDotNet.Models
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BetfairDotNet.Models.BetfairServerRequest.JsonRpc*
+  commentId: Overload:BetfairDotNet.Models.BetfairServerRequest.JsonRpc
+  href: BetfairDotNet.Models.BetfairServerRequest.html#BetfairDotNet.Models.BetfairServerRequest.JsonRpc
+  name: JsonRpc
+  nameWithType: BetfairServerRequest.JsonRpc
+  fullName: BetfairDotNet.Models.BetfairServerRequest.JsonRpc
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BetfairDotNet.Models.BetfairServerRequest.Method*
+  commentId: Overload:BetfairDotNet.Models.BetfairServerRequest.Method
+  href: BetfairDotNet.Models.BetfairServerRequest.html#BetfairDotNet.Models.BetfairServerRequest.Method
+  name: Method
+  nameWithType: BetfairServerRequest.Method
+  fullName: BetfairDotNet.Models.BetfairServerRequest.Method
+- uid: BetfairDotNet.Models.BetfairServerRequest.Params*
+  commentId: Overload:BetfairDotNet.Models.BetfairServerRequest.Params
+  href: BetfairDotNet.Models.BetfairServerRequest.html#BetfairDotNet.Models.BetfairServerRequest.Params
+  name: Params
+  nameWithType: BetfairServerRequest.Params
+  fullName: BetfairDotNet.Models.BetfairServerRequest.Params
+- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, object>
+  nameWithType: Dictionary<string, object>
+  fullName: System.Collections.Generic.Dictionary<string, object>
+  nameWithType.vb: Dictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Object)
+  name.vb: Dictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: BetfairDotNet.Models.BetfairServerRequest.Id*
+  commentId: Overload:BetfairDotNet.Models.BetfairServerRequest.Id
+  href: BetfairDotNet.Models.BetfairServerRequest.html#BetfairDotNet.Models.BetfairServerRequest.Id
+  name: Id
+  nameWithType: BetfairServerRequest.Id
+  fullName: BetfairDotNet.Models.BetfairServerRequest.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

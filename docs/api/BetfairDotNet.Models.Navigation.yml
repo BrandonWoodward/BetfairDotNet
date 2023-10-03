@@ -1,0 +1,97 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Models.Navigation
+  commentId: N:BetfairDotNet.Models.Navigation
+  id: Navigation
+  parent: BetfairDotNet.Models
+  children:
+  - BetfairDotNet.Models.Navigation.NavigationEvent
+  - BetfairDotNet.Models.Navigation.NavigationEventType
+  - BetfairDotNet.Models.Navigation.NavigationGroup
+  - BetfairDotNet.Models.Navigation.NavigationItem
+  - BetfairDotNet.Models.Navigation.NavigationMarket
+  - BetfairDotNet.Models.Navigation.NavigationRace
+  - BetfairDotNet.Models.Navigation.NavigationRoot
+  langs:
+  - csharp
+  - vb
+  name: BetfairDotNet.Models.Navigation
+  nameWithType: BetfairDotNet.Models.Navigation
+  fullName: BetfairDotNet.Models.Navigation
+  type: Namespace
+  assemblies:
+  - BetfairDotNet
+references:
+- uid: BetfairDotNet.Models.Navigation.NavigationEvent
+  commentId: T:BetfairDotNet.Models.Navigation.NavigationEvent
+  href: BetfairDotNet.Models.Navigation.NavigationEvent.html
+  name: NavigationEvent
+  nameWithType: NavigationEvent
+  fullName: BetfairDotNet.Models.Navigation.NavigationEvent
+- uid: BetfairDotNet.Models.Navigation.NavigationEventType
+  commentId: T:BetfairDotNet.Models.Navigation.NavigationEventType
+  href: BetfairDotNet.Models.Navigation.NavigationEventType.html
+  name: NavigationEventType
+  nameWithType: NavigationEventType
+  fullName: BetfairDotNet.Models.Navigation.NavigationEventType
+- uid: BetfairDotNet.Models.Navigation.NavigationGroup
+  commentId: T:BetfairDotNet.Models.Navigation.NavigationGroup
+  href: BetfairDotNet.Models.Navigation.NavigationGroup.html
+  name: NavigationGroup
+  nameWithType: NavigationGroup
+  fullName: BetfairDotNet.Models.Navigation.NavigationGroup
+- uid: BetfairDotNet.Models.Navigation.NavigationItem
+  commentId: T:BetfairDotNet.Models.Navigation.NavigationItem
+  parent: BetfairDotNet.Models.Navigation
+  href: BetfairDotNet.Models.Navigation.NavigationItem.html
+  name: NavigationItem
+  nameWithType: NavigationItem
+  fullName: BetfairDotNet.Models.Navigation.NavigationItem
+- uid: BetfairDotNet.Models.Navigation.NavigationMarket
+  commentId: T:BetfairDotNet.Models.Navigation.NavigationMarket
+  href: BetfairDotNet.Models.Navigation.NavigationMarket.html
+  name: NavigationMarket
+  nameWithType: NavigationMarket
+  fullName: BetfairDotNet.Models.Navigation.NavigationMarket
+- uid: BetfairDotNet.Models.Navigation.NavigationRace
+  commentId: T:BetfairDotNet.Models.Navigation.NavigationRace
+  href: BetfairDotNet.Models.Navigation.NavigationRace.html
+  name: NavigationRace
+  nameWithType: NavigationRace
+  fullName: BetfairDotNet.Models.Navigation.NavigationRace
+- uid: BetfairDotNet.Models.Navigation.NavigationRoot
+  commentId: T:BetfairDotNet.Models.Navigation.NavigationRoot
+  href: BetfairDotNet.Models.Navigation.NavigationRoot.html
+  name: NavigationRoot
+  nameWithType: NavigationRoot
+  fullName: BetfairDotNet.Models.Navigation.NavigationRoot
+- uid: BetfairDotNet.Models.Navigation
+  commentId: N:BetfairDotNet.Models.Navigation
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Navigation
+  nameWithType: BetfairDotNet.Models.Navigation
+  fullName: BetfairDotNet.Models.Navigation
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Navigation
+    name: Navigation
+    href: BetfairDotNet.Models.Navigation.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Navigation
+    name: Navigation
+    href: BetfairDotNet.Models.Navigation.html

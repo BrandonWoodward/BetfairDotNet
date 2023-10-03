@@ -1,0 +1,195 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum
+  commentId: T:BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum
+  id: ExecutionReportStatusEnum
+  parent: BetfairDotNet.Enums.Betting
+  children:
+  - BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum.FAILURE
+  - BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum.PROCESSED_WITH_ERRORS
+  - BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum.SUCCESS
+  - BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum.TIMEOUT
+  langs:
+  - csharp
+  - vb
+  name: ExecutionReportStatusEnum
+  nameWithType: ExecutionReportStatusEnum
+  fullName: BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum
+  type: Enum
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/ExecutionReportStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ExecutionReportStatusEnum
+    path: ../src/BetfairDotNet/Enums/Betting/ExecutionReportStatusEnum.cs
+    startLine: 6
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EmptyStringToEnumConverter<ExecutionReportStatusEnum>))]
+
+      public enum ExecutionReportStatusEnum
+    content.vb: >-
+      <JsonConverter(GetType(EmptyStringToEnumConverter(Of ExecutionReportStatusEnum)))>
+
+      Public Enum ExecutionReportStatusEnum
+- uid: BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum.SUCCESS
+  commentId: F:BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum.SUCCESS
+  id: SUCCESS
+  parent: BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: SUCCESS
+  nameWithType: ExecutionReportStatusEnum.SUCCESS
+  fullName: BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum.SUCCESS
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/ExecutionReportStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SUCCESS
+    path: ../src/BetfairDotNet/Enums/Betting/ExecutionReportStatusEnum.cs
+    startLine: 12
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Order processed successfully
+  example: []
+  syntax:
+    content: SUCCESS = 0
+    return:
+      type: BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum
+- uid: BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum.FAILURE
+  commentId: F:BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum.FAILURE
+  id: FAILURE
+  parent: BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: FAILURE
+  nameWithType: ExecutionReportStatusEnum.FAILURE
+  fullName: BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum.FAILURE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/ExecutionReportStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: FAILURE
+    path: ../src/BetfairDotNet/Enums/Betting/ExecutionReportStatusEnum.cs
+    startLine: 17
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Order failed.
+  example: []
+  syntax:
+    content: FAILURE = 1
+    return:
+      type: BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum
+- uid: BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum.PROCESSED_WITH_ERRORS
+  commentId: F:BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum.PROCESSED_WITH_ERRORS
+  id: PROCESSED_WITH_ERRORS
+  parent: BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: PROCESSED_WITH_ERRORS
+  nameWithType: ExecutionReportStatusEnum.PROCESSED_WITH_ERRORS
+  fullName: BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum.PROCESSED_WITH_ERRORS
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/ExecutionReportStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: PROCESSED_WITH_ERRORS
+    path: ../src/BetfairDotNet/Enums/Betting/ExecutionReportStatusEnum.cs
+    startLine: 26
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: >-
+    The order itself has been accepted, but at least one (possibly all) actions have generated errors. 
+
+    This error only occurs for replaceOrders, cancelOrders and updateOrders operations.
+
+    In normal circumstances the placeOrders operation will not return PROCESSED_WITH_ERRORS status as it is an atomic operation. 
+
+    PLEASE NOTE: if the 'Best Execution' features is switched off, placeOrders can return ‘PROCESSED_WITH_ERRORS’ meaning 
+
+    that some bets can be rejected and other placed when submitted in the same PlaceInstruction
+  example: []
+  syntax:
+    content: PROCESSED_WITH_ERRORS = 2
+    return:
+      type: BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum
+- uid: BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum.TIMEOUT
+  commentId: F:BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum.TIMEOUT
+  id: TIMEOUT
+  parent: BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: TIMEOUT
+  nameWithType: ExecutionReportStatusEnum.TIMEOUT
+  fullName: BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum.TIMEOUT
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/ExecutionReportStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: TIMEOUT
+    path: ../src/BetfairDotNet/Enums/Betting/ExecutionReportStatusEnum.cs
+    startLine: 35
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  syntax:
+    content: TIMEOUT = 3
+    return:
+      type: BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum
+references:
+- uid: BetfairDotNet.Enums.Betting
+  commentId: N:BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Betting
+  nameWithType: BetfairDotNet.Enums.Betting
+  fullName: BetfairDotNet.Enums.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+- uid: BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum
+  commentId: T:BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum.html
+  name: ExecutionReportStatusEnum
+  nameWithType: ExecutionReportStatusEnum
+  fullName: BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum

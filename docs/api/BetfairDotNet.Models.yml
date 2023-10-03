@@ -1,0 +1,264 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Models
+  commentId: N:BetfairDotNet.Models
+  id: Models
+  parent: BetfairDotNet
+  children:
+  - BetfairDotNet.Models.Account
+  - BetfairDotNet.Models.BetfairServerRequest
+  - BetfairDotNet.Models.Betting
+  - BetfairDotNet.Models.Exceptions
+  - BetfairDotNet.Models.Heartbeat
+  - BetfairDotNet.Models.Login
+  - BetfairDotNet.Models.Navigation
+  - BetfairDotNet.Models.Streaming
+  langs:
+  - csharp
+  - vb
+  name: BetfairDotNet.Models
+  nameWithType: BetfairDotNet.Models
+  fullName: BetfairDotNet.Models
+  type: Namespace
+  assemblies:
+  - BetfairDotNet
+references:
+- uid: BetfairDotNet.Models.Account
+  commentId: N:BetfairDotNet.Models.Account
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Account
+  nameWithType: BetfairDotNet.Models.Account
+  fullName: BetfairDotNet.Models.Account
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Account
+    name: Account
+    href: BetfairDotNet.Models.Account.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Account
+    name: Account
+    href: BetfairDotNet.Models.Account.html
+- uid: BetfairDotNet.Models.Betting
+  commentId: N:BetfairDotNet.Models.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Betting
+  nameWithType: BetfairDotNet.Models.Betting
+  fullName: BetfairDotNet.Models.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Betting
+    name: Betting
+    href: BetfairDotNet.Models.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Betting
+    name: Betting
+    href: BetfairDotNet.Models.Betting.html
+- uid: BetfairDotNet.Models.Exceptions
+  commentId: N:BetfairDotNet.Models.Exceptions
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Exceptions
+  nameWithType: BetfairDotNet.Models.Exceptions
+  fullName: BetfairDotNet.Models.Exceptions
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Exceptions
+    name: Exceptions
+    href: BetfairDotNet.Models.Exceptions.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Exceptions
+    name: Exceptions
+    href: BetfairDotNet.Models.Exceptions.html
+- uid: BetfairDotNet.Models.Heartbeat
+  commentId: N:BetfairDotNet.Models.Heartbeat
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Heartbeat
+  nameWithType: BetfairDotNet.Models.Heartbeat
+  fullName: BetfairDotNet.Models.Heartbeat
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Heartbeat
+    name: Heartbeat
+    href: BetfairDotNet.Models.Heartbeat.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Heartbeat
+    name: Heartbeat
+    href: BetfairDotNet.Models.Heartbeat.html
+- uid: BetfairDotNet.Models.Login
+  commentId: N:BetfairDotNet.Models.Login
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Login
+  nameWithType: BetfairDotNet.Models.Login
+  fullName: BetfairDotNet.Models.Login
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Login
+    name: Login
+    href: BetfairDotNet.Models.Login.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Login
+    name: Login
+    href: BetfairDotNet.Models.Login.html
+- uid: BetfairDotNet.Models.Navigation
+  commentId: N:BetfairDotNet.Models.Navigation
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Navigation
+  nameWithType: BetfairDotNet.Models.Navigation
+  fullName: BetfairDotNet.Models.Navigation
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Navigation
+    name: Navigation
+    href: BetfairDotNet.Models.Navigation.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Navigation
+    name: Navigation
+    href: BetfairDotNet.Models.Navigation.html
+- uid: BetfairDotNet.Models.Streaming
+  commentId: N:BetfairDotNet.Models.Streaming
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Streaming
+  nameWithType: BetfairDotNet.Models.Streaming
+  fullName: BetfairDotNet.Models.Streaming
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Streaming
+    name: Streaming
+    href: BetfairDotNet.Models.Streaming.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Streaming
+    name: Streaming
+    href: BetfairDotNet.Models.Streaming.html
+- uid: BetfairDotNet.Models.BetfairServerRequest
+  commentId: T:BetfairDotNet.Models.BetfairServerRequest
+  parent: BetfairDotNet.Models
+  href: BetfairDotNet.Models.BetfairServerRequest.html
+  name: BetfairServerRequest
+  nameWithType: BetfairServerRequest
+  fullName: BetfairDotNet.Models.BetfairServerRequest
+- uid: BetfairDotNet.Models
+  commentId: N:BetfairDotNet.Models
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models
+  nameWithType: BetfairDotNet.Models
+  fullName: BetfairDotNet.Models
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html

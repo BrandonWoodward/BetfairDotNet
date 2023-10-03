@@ -1,0 +1,609 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Models.Betting.PriceProjection
+  commentId: T:BetfairDotNet.Models.Betting.PriceProjection
+  id: PriceProjection
+  parent: BetfairDotNet.Models.Betting
+  children:
+  - BetfairDotNet.Models.Betting.PriceProjection.ExBestOffersOverrides
+  - BetfairDotNet.Models.Betting.PriceProjection.PriceData
+  - BetfairDotNet.Models.Betting.PriceProjection.RolloverStakes
+  - BetfairDotNet.Models.Betting.PriceProjection.Virtualise
+  langs:
+  - csharp
+  - vb
+  name: PriceProjection
+  nameWithType: PriceProjection
+  fullName: BetfairDotNet.Models.Betting.PriceProjection
+  type: Class
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/PriceProjection.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: PriceProjection
+    path: ../src/BetfairDotNet/Models/Betting/PriceProjection.cs
+    startLine: 9
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: Selection criteria of the returning price data.
+  example: []
+  syntax:
+    content: public sealed class PriceProjection
+    content.vb: Public NotInheritable Class PriceProjection
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BetfairDotNet.Models.Betting.PriceProjection.PriceData
+  commentId: P:BetfairDotNet.Models.Betting.PriceProjection.PriceData
+  id: PriceData
+  parent: BetfairDotNet.Models.Betting.PriceProjection
+  langs:
+  - csharp
+  - vb
+  name: PriceData
+  nameWithType: PriceProjection.PriceData
+  fullName: BetfairDotNet.Models.Betting.PriceProjection.PriceData
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/PriceProjection.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: PriceData
+    path: ../src/BetfairDotNet/Models/Betting/PriceProjection.cs
+    startLine: 14
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The basic price data you want to receive in the response.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("priceData")]
+
+      public List<PriceDataEnum>? PriceData { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{BetfairDotNet.Enums.Betting.PriceDataEnum}
+    content.vb: >-
+      <JsonPropertyName("priceData")>
+
+      Public Property PriceData As List(Of PriceDataEnum)
+  overload: BetfairDotNet.Models.Betting.PriceProjection.PriceData*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: priceData
+- uid: BetfairDotNet.Models.Betting.PriceProjection.ExBestOffersOverrides
+  commentId: P:BetfairDotNet.Models.Betting.PriceProjection.ExBestOffersOverrides
+  id: ExBestOffersOverrides
+  parent: BetfairDotNet.Models.Betting.PriceProjection
+  langs:
+  - csharp
+  - vb
+  name: ExBestOffersOverrides
+  nameWithType: PriceProjection.ExBestOffersOverrides
+  fullName: BetfairDotNet.Models.Betting.PriceProjection.ExBestOffersOverrides
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/PriceProjection.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ExBestOffersOverrides
+    path: ../src/BetfairDotNet/Models/Betting/PriceProjection.cs
+    startLine: 20
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: Options to alter the default representation of best offer prices Applicable to EX_BEST_OFFERS priceData selection
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("exBestOffersOverrides")]
+
+      public ExBestOffersOverrides? ExBestOffersOverrides { get; set; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Models.Betting.ExBestOffersOverrides
+    content.vb: >-
+      <JsonPropertyName("exBestOffersOverrides")>
+
+      Public Property ExBestOffersOverrides As ExBestOffersOverrides
+  overload: BetfairDotNet.Models.Betting.PriceProjection.ExBestOffersOverrides*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: exBestOffersOverrides
+- uid: BetfairDotNet.Models.Betting.PriceProjection.Virtualise
+  commentId: P:BetfairDotNet.Models.Betting.PriceProjection.Virtualise
+  id: Virtualise
+  parent: BetfairDotNet.Models.Betting.PriceProjection
+  langs:
+  - csharp
+  - vb
+  name: Virtualise
+  nameWithType: PriceProjection.Virtualise
+  fullName: BetfairDotNet.Models.Betting.PriceProjection.Virtualise
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/PriceProjection.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Virtualise
+    path: ../src/BetfairDotNet/Models/Betting/PriceProjection.cs
+    startLine: 28
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: >-
+    Indicates if the returned prices should include virtual prices. 
+
+    Applicable to EX_BEST_OFFERS and EX_ALL_OFFERS priceData selections, default value is false.
+
+    <p>Should be set to true to replicate prices shown on the Betfair Exchange website.</p>
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("virtualise")]
+
+      public bool Virtualise { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <JsonPropertyName("virtualise")>
+
+      Public Property Virtualise As Boolean
+  overload: BetfairDotNet.Models.Betting.PriceProjection.Virtualise*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: virtualise
+- uid: BetfairDotNet.Models.Betting.PriceProjection.RolloverStakes
+  commentId: P:BetfairDotNet.Models.Betting.PriceProjection.RolloverStakes
+  id: RolloverStakes
+  parent: BetfairDotNet.Models.Betting.PriceProjection
+  langs:
+  - csharp
+  - vb
+  name: RolloverStakes
+  nameWithType: PriceProjection.RolloverStakes
+  fullName: BetfairDotNet.Models.Betting.PriceProjection.RolloverStakes
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/PriceProjection.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: RolloverStakes
+    path: ../src/BetfairDotNet/Models/Betting/PriceProjection.cs
+    startLine: 36
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: >-
+    Indicates if the volume returned at each price point should be the absolute value or a 
+
+    cumulative sum of volumes available at the price and all better prices. If unspecified defaults to false. 
+
+    <p>Applicable to EX_BEST_OFFERS and EX_ALL_OFFERS price projections. Not supported as yet.</p>
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("rolloverStakes")]
+
+      public bool RolloverStakes { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <JsonPropertyName("rolloverStakes")>
+
+      Public Property RolloverStakes As Boolean
+  overload: BetfairDotNet.Models.Betting.PriceProjection.RolloverStakes*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: rolloverStakes
+references:
+- uid: BetfairDotNet.Models.Betting
+  commentId: N:BetfairDotNet.Models.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Betting
+  nameWithType: BetfairDotNet.Models.Betting
+  fullName: BetfairDotNet.Models.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Betting
+    name: Betting
+    href: BetfairDotNet.Models.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Betting
+    name: Betting
+    href: BetfairDotNet.Models.Betting.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BetfairDotNet.Models.Betting.PriceProjection.PriceData*
+  commentId: Overload:BetfairDotNet.Models.Betting.PriceProjection.PriceData
+  href: BetfairDotNet.Models.Betting.PriceProjection.html#BetfairDotNet.Models.Betting.PriceProjection.PriceData
+  name: PriceData
+  nameWithType: PriceProjection.PriceData
+  fullName: BetfairDotNet.Models.Betting.PriceProjection.PriceData
+- uid: System.Collections.Generic.List{BetfairDotNet.Enums.Betting.PriceDataEnum}
+  commentId: T:System.Collections.Generic.List{BetfairDotNet.Enums.Betting.PriceDataEnum}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<PriceDataEnum>
+  nameWithType: List<PriceDataEnum>
+  fullName: System.Collections.Generic.List<BetfairDotNet.Enums.Betting.PriceDataEnum>
+  nameWithType.vb: List(Of PriceDataEnum)
+  fullName.vb: System.Collections.Generic.List(Of BetfairDotNet.Enums.Betting.PriceDataEnum)
+  name.vb: List(Of PriceDataEnum)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: BetfairDotNet.Enums.Betting.PriceDataEnum
+    name: PriceDataEnum
+    href: BetfairDotNet.Enums.Betting.PriceDataEnum.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Enums.Betting.PriceDataEnum
+    name: PriceDataEnum
+    href: BetfairDotNet.Enums.Betting.PriceDataEnum.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: BetfairDotNet.Models.Betting.PriceProjection.ExBestOffersOverrides*
+  commentId: Overload:BetfairDotNet.Models.Betting.PriceProjection.ExBestOffersOverrides
+  href: BetfairDotNet.Models.Betting.PriceProjection.html#BetfairDotNet.Models.Betting.PriceProjection.ExBestOffersOverrides
+  name: ExBestOffersOverrides
+  nameWithType: PriceProjection.ExBestOffersOverrides
+  fullName: BetfairDotNet.Models.Betting.PriceProjection.ExBestOffersOverrides
+- uid: BetfairDotNet.Models.Betting.ExBestOffersOverrides
+  commentId: T:BetfairDotNet.Models.Betting.ExBestOffersOverrides
+  parent: BetfairDotNet.Models.Betting
+  href: BetfairDotNet.Models.Betting.ExBestOffersOverrides.html
+  name: ExBestOffersOverrides
+  nameWithType: ExBestOffersOverrides
+  fullName: BetfairDotNet.Models.Betting.ExBestOffersOverrides
+- uid: BetfairDotNet.Models.Betting.PriceProjection.Virtualise*
+  commentId: Overload:BetfairDotNet.Models.Betting.PriceProjection.Virtualise
+  href: BetfairDotNet.Models.Betting.PriceProjection.html#BetfairDotNet.Models.Betting.PriceProjection.Virtualise
+  name: Virtualise
+  nameWithType: PriceProjection.Virtualise
+  fullName: BetfairDotNet.Models.Betting.PriceProjection.Virtualise
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: BetfairDotNet.Models.Betting.PriceProjection.RolloverStakes*
+  commentId: Overload:BetfairDotNet.Models.Betting.PriceProjection.RolloverStakes
+  href: BetfairDotNet.Models.Betting.PriceProjection.html#BetfairDotNet.Models.Betting.PriceProjection.RolloverStakes
+  name: RolloverStakes
+  nameWithType: PriceProjection.RolloverStakes
+  fullName: BetfairDotNet.Models.Betting.PriceProjection.RolloverStakes

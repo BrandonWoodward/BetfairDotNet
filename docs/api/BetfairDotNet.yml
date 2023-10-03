@@ -1,0 +1,141 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet
+  commentId: N:BetfairDotNet
+  id: BetfairDotNet
+  children:
+  - BetfairDotNet.BetfairClient
+  - BetfairDotNet.Enums
+  - BetfairDotNet.Handlers
+  - BetfairDotNet.Interfaces
+  - BetfairDotNet.Models
+  - BetfairDotNet.Services
+  - BetfairDotNet.Utils
+  langs:
+  - csharp
+  - vb
+  name: BetfairDotNet
+  nameWithType: BetfairDotNet
+  fullName: BetfairDotNet
+  type: Namespace
+  assemblies:
+  - BetfairDotNet
+references:
+- uid: BetfairDotNet.Enums
+  isExternal: true
+- uid: BetfairDotNet.Handlers
+  commentId: N:BetfairDotNet.Handlers
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Handlers
+  nameWithType: BetfairDotNet.Handlers
+  fullName: BetfairDotNet.Handlers
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Handlers
+    name: Handlers
+    href: BetfairDotNet.Handlers.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Handlers
+    name: Handlers
+    href: BetfairDotNet.Handlers.html
+- uid: BetfairDotNet.Interfaces
+  commentId: N:BetfairDotNet.Interfaces
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Interfaces
+  nameWithType: BetfairDotNet.Interfaces
+  fullName: BetfairDotNet.Interfaces
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Interfaces
+    name: Interfaces
+    href: BetfairDotNet.Interfaces.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Interfaces
+    name: Interfaces
+    href: BetfairDotNet.Interfaces.html
+- uid: BetfairDotNet.Models
+  commentId: N:BetfairDotNet.Models
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models
+  nameWithType: BetfairDotNet.Models
+  fullName: BetfairDotNet.Models
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+- uid: BetfairDotNet.Services
+  commentId: N:BetfairDotNet.Services
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Services
+  nameWithType: BetfairDotNet.Services
+  fullName: BetfairDotNet.Services
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Services
+    name: Services
+    href: BetfairDotNet.Services.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Services
+    name: Services
+    href: BetfairDotNet.Services.html
+- uid: BetfairDotNet.Utils
+  commentId: N:BetfairDotNet.Utils
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Utils
+  nameWithType: BetfairDotNet.Utils
+  fullName: BetfairDotNet.Utils
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Utils
+    name: Utils
+    href: BetfairDotNet.Utils.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Utils
+    name: Utils
+    href: BetfairDotNet.Utils.html
+- uid: BetfairDotNet.BetfairClient
+  commentId: T:BetfairDotNet.BetfairClient
+  href: BetfairDotNet.BetfairClient.html
+  name: BetfairClient
+  nameWithType: BetfairClient
+  fullName: BetfairDotNet.BetfairClient

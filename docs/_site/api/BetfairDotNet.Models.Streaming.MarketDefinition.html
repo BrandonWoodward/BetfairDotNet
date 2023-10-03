@@ -1,0 +1,1139 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class MarketDefinition
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class MarketDefinition
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BrandonWoodward/BetfairDotNet/new/master/apiSpec/new?filename=BetfairDotNet_Models_Streaming_MarketDefinition.md&amp;value=---%0Auid%3A%20BetfairDotNet.Models.Streaming.MarketDefinition%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="BetfairDotNet.Models.Streaming.MarketDefinition">
+
+
+
+  <h1 id="BetfairDotNet_Models_Streaming_MarketDefinition" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition" class="text-break">
+    Class MarketDefinition
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Streaming/MarketDefinition.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="BetfairDotNet.html">BetfairDotNet</a>.<a class="xref" href="BetfairDotNet.Models.html">Models</a>.<a class="xref" href="BetfairDotNet.Models.Streaming.html">Streaming</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>BetfairDotNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The market metadata.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed record MarketDefinition : IEquatable&lt;MarketDefinition&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">MarketDefinition</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="BetfairDotNet.Models.Streaming.MarketDefinition.html">MarketDefinition</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="BetfairDotNet_Models_Streaming_MarketDefinition_BetDelay_" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.BetDelay*"></a>
+
+  <h3 id="BetfairDotNet_Models_Streaming_MarketDefinition_BetDelay" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.BetDelay">
+  BetDelay
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Streaming/MarketDefinition.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or Sets BetDelay</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;betDelay&quot;)]
+public int BetDelay { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Streaming_MarketDefinition_BettingType_" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.BettingType*"></a>
+
+  <h3 id="BetfairDotNet_Models_Streaming_MarketDefinition_BettingType" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.BettingType">
+  BettingType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Streaming/MarketDefinition.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The type of betting offered by this market.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;bettingType&quot;)]
+public MarketBettingTypeEnum BettingType { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BetfairDotNet.Enums.Betting.MarketBettingTypeEnum.html">MarketBettingTypeEnum</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Streaming_MarketDefinition_BspMarket_" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.BspMarket*"></a>
+
+  <h3 id="BetfairDotNet_Models_Streaming_MarketDefinition_BspMarket" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.BspMarket">
+  BspMarket
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Streaming/MarketDefinition.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Is the BSP offered in this market?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;bspMarket&quot;)]
+public bool BspMarket { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Streaming_MarketDefinition_BspReconciled_" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.BspReconciled*"></a>
+
+  <h3 id="BetfairDotNet_Models_Streaming_MarketDefinition_BspReconciled" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.BspReconciled">
+  BspReconciled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Streaming/MarketDefinition.cs/#L185"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Has the BSP been resolved?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;bspReconciled&quot;)]
+public bool BspReconciled { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Streaming_MarketDefinition_Complete_" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.Complete*"></a>
+
+  <h3 id="BetfairDotNet_Models_Streaming_MarketDefinition_Complete" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.Complete">
+  Complete
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Streaming/MarketDefinition.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;complete&quot;)]
+public bool Complete { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Streaming_MarketDefinition_CountryCode_" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.CountryCode*"></a>
+
+  <h3 id="BetfairDotNet_Models_Streaming_MarketDefinition_CountryCode" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.CountryCode">
+  CountryCode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Streaming/MarketDefinition.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The code of the country where the market is taking place.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;countryCode&quot;)]
+public string CountryCode { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Streaming_MarketDefinition_CrossMatching_" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.CrossMatching*"></a>
+
+  <h3 id="BetfairDotNet_Models_Streaming_MarketDefinition_CrossMatching" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.CrossMatching">
+  CrossMatching
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Streaming/MarketDefinition.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Is the cross matcher active currently?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;crossMatching&quot;)]
+public bool CrossMatching { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Streaming_MarketDefinition_DiscountAllowed_" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.DiscountAllowed*"></a>
+
+  <h3 id="BetfairDotNet_Models_Streaming_MarketDefinition_DiscountAllowed" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.DiscountAllowed">
+  DiscountAllowed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Streaming/MarketDefinition.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;discountAllowed&quot;)]
+public bool DiscountAllowed { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Streaming_MarketDefinition_EachWayDivisor_" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.EachWayDivisor*"></a>
+
+  <h3 id="BetfairDotNet_Models_Streaming_MarketDefinition_EachWayDivisor" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.EachWayDivisor">
+  EachWayDivisor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Streaming/MarketDefinition.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Each way divisor used for calculating place bets.
+This value is effective for marketTypes EACH_WAY only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;eachWayDivisor&quot;)]
+public double EachWayDivisor { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Streaming_MarketDefinition_EventId_" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.EventId*"></a>
+
+  <h3 id="BetfairDotNet_Models_Streaming_MarketDefinition_EventId" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.EventId">
+  EventId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Streaming/MarketDefinition.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or Sets EventId</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;eventId&quot;)]
+public string EventId { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Streaming_MarketDefinition_EventTypeId_" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.EventTypeId*"></a>
+
+  <h3 id="BetfairDotNet_Models_Streaming_MarketDefinition_EventTypeId" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.EventTypeId">
+  EventTypeId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Streaming/MarketDefinition.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The Event Type the market is contained within.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;eventTypeId&quot;)]
+public string EventTypeId { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Streaming_MarketDefinition_InPlay_" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.InPlay*"></a>
+
+  <h3 id="BetfairDotNet_Models_Streaming_MarketDefinition_InPlay" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.InPlay">
+  InPlay
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Streaming/MarketDefinition.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Is the market in play or not?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;inPlay&quot;)]
+public bool InPlay { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Streaming_MarketDefinition_MarketBaseRate_" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.MarketBaseRate*"></a>
+
+  <h3 id="BetfairDotNet_Models_Streaming_MarketDefinition_MarketBaseRate" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.MarketBaseRate">
+  MarketBaseRate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Streaming/MarketDefinition.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The base rate of commission applied to this market.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;marketBaseRate&quot;)]
+public double MarketBaseRate { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Streaming_MarketDefinition_MarketTime_" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.MarketTime*"></a>
+
+  <h3 id="BetfairDotNet_Models_Streaming_MarketDefinition_MarketTime" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.MarketTime">
+  MarketTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Streaming/MarketDefinition.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The time of this market.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;marketTime&quot;)]
+public DateTime? MarketTime { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Streaming_MarketDefinition_MarketType_" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.MarketType*"></a>
+
+  <h3 id="BetfairDotNet_Models_Streaming_MarketDefinition_MarketType" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.MarketType">
+  MarketType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Streaming/MarketDefinition.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or Sets MarketType</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;marketType&quot;)]
+public string MarketType { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Streaming_MarketDefinition_NumberOfActiveRunners_" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.NumberOfActiveRunners*"></a>
+
+  <h3 id="BetfairDotNet_Models_Streaming_MarketDefinition_NumberOfActiveRunners" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.NumberOfActiveRunners">
+  NumberOfActiveRunners
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Streaming/MarketDefinition.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The number of runners (selections) active in the market.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;numberOfActiveRunners&quot;)]
+public int NumberOfActiveRunners { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Streaming_MarketDefinition_NumberOfWinners_" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.NumberOfWinners*"></a>
+
+  <h3 id="BetfairDotNet_Models_Streaming_MarketDefinition_NumberOfWinners" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.NumberOfWinners">
+  NumberOfWinners
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Streaming/MarketDefinition.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Number of winners for this market.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;numberOfWinners&quot;)]
+public int NumberOfWinners { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Streaming_MarketDefinition_OpenDate_" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.OpenDate*"></a>
+
+  <h3 id="BetfairDotNet_Models_Streaming_MarketDefinition_OpenDate" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.OpenDate">
+  OpenDate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Streaming/MarketDefinition.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The date this market opened.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;openDate&quot;)]
+public DateTime? OpenDate { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Streaming_MarketDefinition_PersistenceEnabled_" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.PersistenceEnabled*"></a>
+
+  <h3 id="BetfairDotNet_Models_Streaming_MarketDefinition_PersistenceEnabled" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.PersistenceEnabled">
+  PersistenceEnabled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Streaming/MarketDefinition.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Keep bets allowed?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;persistenceEnabled&quot;)]
+public bool PersistenceEnabled { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Streaming_MarketDefinition_Regulators_" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.Regulators*"></a>
+
+  <h3 id="BetfairDotNet_Models_Streaming_MarketDefinition_Regulators" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.Regulators">
+  Regulators
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Streaming/MarketDefinition.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The market regulators.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;regulators&quot;)]
+public List&lt;string&gt; Regulators { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Streaming_MarketDefinition_Runners_" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.Runners*"></a>
+
+  <h3 id="BetfairDotNet_Models_Streaming_MarketDefinition_Runners" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.Runners">
+  Runners
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Streaming/MarketDefinition.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Infomation about individual runners (selections) in the market.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;runners&quot;)]
+public List&lt;RunnerDefinition&gt; Runners { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="BetfairDotNet.Models.Streaming.RunnerDefinition.html">RunnerDefinition</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Streaming_MarketDefinition_RunnersVoidable_" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.RunnersVoidable*"></a>
+
+  <h3 id="BetfairDotNet_Models_Streaming_MarketDefinition_RunnersVoidable" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.RunnersVoidable">
+  RunnersVoidable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Streaming/MarketDefinition.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;runnersVoidable&quot;)]
+public bool RunnersVoidable { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Streaming_MarketDefinition_SettledTime_" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.SettledTime*"></a>
+
+  <h3 id="BetfairDotNet_Models_Streaming_MarketDefinition_SettledTime" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.SettledTime">
+  SettledTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Streaming/MarketDefinition.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The time the market was settled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;settledTime&quot;)]
+public DateTime? SettledTime { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Streaming_MarketDefinition_Status_" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.Status*"></a>
+
+  <h3 id="BetfairDotNet_Models_Streaming_MarketDefinition_Status" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.Status">
+  Status
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Streaming/MarketDefinition.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The status of the market.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;status&quot;)]
+public MarketStatusEnum Status { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BetfairDotNet.Enums.Betting.MarketStatusEnum.html">MarketStatusEnum</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Streaming_MarketDefinition_SuspendTime_" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.SuspendTime*"></a>
+
+  <h3 id="BetfairDotNet_Models_Streaming_MarketDefinition_SuspendTime" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.SuspendTime">
+  SuspendTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Streaming/MarketDefinition.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The time of suspension for this market.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;suspendTime&quot;)]
+public DateTime? SuspendTime { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Streaming_MarketDefinition_Timezone_" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.Timezone*"></a>
+
+  <h3 id="BetfairDotNet_Models_Streaming_MarketDefinition_Timezone" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.Timezone">
+  Timezone
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Streaming/MarketDefinition.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The timezone in which the market is taking place.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;timezone&quot;)]
+public string Timezone { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Streaming_MarketDefinition_TurnInPlayEnabled_" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.TurnInPlayEnabled*"></a>
+
+  <h3 id="BetfairDotNet_Models_Streaming_MarketDefinition_TurnInPlayEnabled" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.TurnInPlayEnabled">
+  TurnInPlayEnabled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Streaming/MarketDefinition.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Is in play betting offered on this market?</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;turnInPlayEnabled&quot;)]
+public bool TurnInPlayEnabled { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Streaming_MarketDefinition_Venue_" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.Venue*"></a>
+
+  <h3 id="BetfairDotNet_Models_Streaming_MarketDefinition_Venue" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.Venue">
+  Venue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Streaming/MarketDefinition.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Venue at which the market is taking place.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;venue&quot;)]
+public string Venue { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Streaming_MarketDefinition_Version_" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.Version*"></a>
+
+  <h3 id="BetfairDotNet_Models_Streaming_MarketDefinition_Version" data-uid="BetfairDotNet.Models.Streaming.MarketDefinition.Version">
+  Version
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Streaming/MarketDefinition.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A non-monotically increasing value indicating changes to the market.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;version&quot;)]
+public long Version { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Streaming/MarketDefinition.cs/#L10" class="edit-link">Edit this page</a>
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,159 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Betting.OrderProjectionEnum
+  commentId: T:BetfairDotNet.Enums.Betting.OrderProjectionEnum
+  id: OrderProjectionEnum
+  parent: BetfairDotNet.Enums.Betting
+  children:
+  - BetfairDotNet.Enums.Betting.OrderProjectionEnum.ALL
+  - BetfairDotNet.Enums.Betting.OrderProjectionEnum.EXECUTABLE
+  - BetfairDotNet.Enums.Betting.OrderProjectionEnum.EXECUTION_COMPLETE
+  langs:
+  - csharp
+  - vb
+  name: OrderProjectionEnum
+  nameWithType: OrderProjectionEnum
+  fullName: BetfairDotNet.Enums.Betting.OrderProjectionEnum
+  type: Enum
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/OrderProjectionEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: OrderProjectionEnum
+    path: ../src/BetfairDotNet/Enums/Betting/OrderProjectionEnum.cs
+    startLine: 6
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EmptyStringToEnumConverter<OrderProjectionEnum>))]
+
+      public enum OrderProjectionEnum
+    content.vb: >-
+      <JsonConverter(GetType(EmptyStringToEnumConverter(Of OrderProjectionEnum)))>
+
+      Public Enum OrderProjectionEnum
+- uid: BetfairDotNet.Enums.Betting.OrderProjectionEnum.ALL
+  commentId: F:BetfairDotNet.Enums.Betting.OrderProjectionEnum.ALL
+  id: ALL
+  parent: BetfairDotNet.Enums.Betting.OrderProjectionEnum
+  langs:
+  - csharp
+  - vb
+  name: ALL
+  nameWithType: OrderProjectionEnum.ALL
+  fullName: BetfairDotNet.Enums.Betting.OrderProjectionEnum.ALL
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/OrderProjectionEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ALL
+    path: ../src/BetfairDotNet/Enums/Betting/OrderProjectionEnum.cs
+    startLine: 12
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: EXECUTABLE and EXECUTION_COMPLETE orders
+  example: []
+  syntax:
+    content: ALL = 0
+    return:
+      type: BetfairDotNet.Enums.Betting.OrderProjectionEnum
+- uid: BetfairDotNet.Enums.Betting.OrderProjectionEnum.EXECUTABLE
+  commentId: F:BetfairDotNet.Enums.Betting.OrderProjectionEnum.EXECUTABLE
+  id: EXECUTABLE
+  parent: BetfairDotNet.Enums.Betting.OrderProjectionEnum
+  langs:
+  - csharp
+  - vb
+  name: EXECUTABLE
+  nameWithType: OrderProjectionEnum.EXECUTABLE
+  fullName: BetfairDotNet.Enums.Betting.OrderProjectionEnum.EXECUTABLE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/OrderProjectionEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: EXECUTABLE
+    path: ../src/BetfairDotNet/Enums/Betting/OrderProjectionEnum.cs
+    startLine: 17
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: An order that has a remaining unmatched portion. This is either a fully unmatched or partially matched bet (order).
+  example: []
+  syntax:
+    content: EXECUTABLE = 1
+    return:
+      type: BetfairDotNet.Enums.Betting.OrderProjectionEnum
+- uid: BetfairDotNet.Enums.Betting.OrderProjectionEnum.EXECUTION_COMPLETE
+  commentId: F:BetfairDotNet.Enums.Betting.OrderProjectionEnum.EXECUTION_COMPLETE
+  id: EXECUTION_COMPLETE
+  parent: BetfairDotNet.Enums.Betting.OrderProjectionEnum
+  langs:
+  - csharp
+  - vb
+  name: EXECUTION_COMPLETE
+  nameWithType: OrderProjectionEnum.EXECUTION_COMPLETE
+  fullName: BetfairDotNet.Enums.Betting.OrderProjectionEnum.EXECUTION_COMPLETE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/OrderProjectionEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: EXECUTION_COMPLETE
+    path: ../src/BetfairDotNet/Enums/Betting/OrderProjectionEnum.cs
+    startLine: 22
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: An order that does not have any remaining unmatched portion.  This is a fully matched bet (order).
+  example: []
+  syntax:
+    content: EXECUTION_COMPLETE = 2
+    return:
+      type: BetfairDotNet.Enums.Betting.OrderProjectionEnum
+references:
+- uid: BetfairDotNet.Enums.Betting
+  commentId: N:BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Betting
+  nameWithType: BetfairDotNet.Enums.Betting
+  fullName: BetfairDotNet.Enums.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+- uid: BetfairDotNet.Enums.Betting.OrderProjectionEnum
+  commentId: T:BetfairDotNet.Enums.Betting.OrderProjectionEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.OrderProjectionEnum.html
+  name: OrderProjectionEnum
+  nameWithType: OrderProjectionEnum
+  fullName: BetfairDotNet.Enums.Betting.OrderProjectionEnum

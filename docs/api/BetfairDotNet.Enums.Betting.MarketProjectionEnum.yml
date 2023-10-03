@@ -1,0 +1,280 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Betting.MarketProjectionEnum
+  commentId: T:BetfairDotNet.Enums.Betting.MarketProjectionEnum
+  id: MarketProjectionEnum
+  parent: BetfairDotNet.Enums.Betting
+  children:
+  - BetfairDotNet.Enums.Betting.MarketProjectionEnum.COMPETITION
+  - BetfairDotNet.Enums.Betting.MarketProjectionEnum.EVENT
+  - BetfairDotNet.Enums.Betting.MarketProjectionEnum.EVENT_TYPE
+  - BetfairDotNet.Enums.Betting.MarketProjectionEnum.MARKET_DESCRIPTION
+  - BetfairDotNet.Enums.Betting.MarketProjectionEnum.MARKET_START_TIME
+  - BetfairDotNet.Enums.Betting.MarketProjectionEnum.RUNNER_DESCRIPTION
+  - BetfairDotNet.Enums.Betting.MarketProjectionEnum.RUNNER_METADATA
+  langs:
+  - csharp
+  - vb
+  name: MarketProjectionEnum
+  nameWithType: MarketProjectionEnum
+  fullName: BetfairDotNet.Enums.Betting.MarketProjectionEnum
+  type: Enum
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/MarketProjectionEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MarketProjectionEnum
+    path: ../src/BetfairDotNet/Enums/Betting/MarketProjectionEnum.cs
+    startLine: 6
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EmptyStringToEnumConverter<MarketProjectionEnum>))]
+
+      public enum MarketProjectionEnum
+    content.vb: >-
+      <JsonConverter(GetType(EmptyStringToEnumConverter(Of MarketProjectionEnum)))>
+
+      Public Enum MarketProjectionEnum
+- uid: BetfairDotNet.Enums.Betting.MarketProjectionEnum.COMPETITION
+  commentId: F:BetfairDotNet.Enums.Betting.MarketProjectionEnum.COMPETITION
+  id: COMPETITION
+  parent: BetfairDotNet.Enums.Betting.MarketProjectionEnum
+  langs:
+  - csharp
+  - vb
+  name: COMPETITION
+  nameWithType: MarketProjectionEnum.COMPETITION
+  fullName: BetfairDotNet.Enums.Betting.MarketProjectionEnum.COMPETITION
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/MarketProjectionEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: COMPETITION
+    path: ../src/BetfairDotNet/Enums/Betting/MarketProjectionEnum.cs
+    startLine: 12
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: If not selected then the competition will not be returned with marketCatalogue
+  example: []
+  syntax:
+    content: COMPETITION = 0
+    return:
+      type: BetfairDotNet.Enums.Betting.MarketProjectionEnum
+- uid: BetfairDotNet.Enums.Betting.MarketProjectionEnum.EVENT
+  commentId: F:BetfairDotNet.Enums.Betting.MarketProjectionEnum.EVENT
+  id: EVENT
+  parent: BetfairDotNet.Enums.Betting.MarketProjectionEnum
+  langs:
+  - csharp
+  - vb
+  name: EVENT
+  nameWithType: MarketProjectionEnum.EVENT
+  fullName: BetfairDotNet.Enums.Betting.MarketProjectionEnum.EVENT
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/MarketProjectionEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: EVENT
+    path: ../src/BetfairDotNet/Enums/Betting/MarketProjectionEnum.cs
+    startLine: 17
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: If not selected then the event will not be returned with marketCatalogue
+  example: []
+  syntax:
+    content: EVENT = 1
+    return:
+      type: BetfairDotNet.Enums.Betting.MarketProjectionEnum
+- uid: BetfairDotNet.Enums.Betting.MarketProjectionEnum.EVENT_TYPE
+  commentId: F:BetfairDotNet.Enums.Betting.MarketProjectionEnum.EVENT_TYPE
+  id: EVENT_TYPE
+  parent: BetfairDotNet.Enums.Betting.MarketProjectionEnum
+  langs:
+  - csharp
+  - vb
+  name: EVENT_TYPE
+  nameWithType: MarketProjectionEnum.EVENT_TYPE
+  fullName: BetfairDotNet.Enums.Betting.MarketProjectionEnum.EVENT_TYPE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/MarketProjectionEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: EVENT_TYPE
+    path: ../src/BetfairDotNet/Enums/Betting/MarketProjectionEnum.cs
+    startLine: 22
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: If not selected then the eventType will not be returned with marketCatalogue
+  example: []
+  syntax:
+    content: EVENT_TYPE = 2
+    return:
+      type: BetfairDotNet.Enums.Betting.MarketProjectionEnum
+- uid: BetfairDotNet.Enums.Betting.MarketProjectionEnum.RUNNER_DESCRIPTION
+  commentId: F:BetfairDotNet.Enums.Betting.MarketProjectionEnum.RUNNER_DESCRIPTION
+  id: RUNNER_DESCRIPTION
+  parent: BetfairDotNet.Enums.Betting.MarketProjectionEnum
+  langs:
+  - csharp
+  - vb
+  name: RUNNER_DESCRIPTION
+  nameWithType: MarketProjectionEnum.RUNNER_DESCRIPTION
+  fullName: BetfairDotNet.Enums.Betting.MarketProjectionEnum.RUNNER_DESCRIPTION
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/MarketProjectionEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: RUNNER_DESCRIPTION
+    path: ../src/BetfairDotNet/Enums/Betting/MarketProjectionEnum.cs
+    startLine: 27
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: If not selected then the runners will not be returned with marketCatalogue
+  example: []
+  syntax:
+    content: RUNNER_DESCRIPTION = 3
+    return:
+      type: BetfairDotNet.Enums.Betting.MarketProjectionEnum
+- uid: BetfairDotNet.Enums.Betting.MarketProjectionEnum.MARKET_START_TIME
+  commentId: F:BetfairDotNet.Enums.Betting.MarketProjectionEnum.MARKET_START_TIME
+  id: MARKET_START_TIME
+  parent: BetfairDotNet.Enums.Betting.MarketProjectionEnum
+  langs:
+  - csharp
+  - vb
+  name: MARKET_START_TIME
+  nameWithType: MarketProjectionEnum.MARKET_START_TIME
+  fullName: BetfairDotNet.Enums.Betting.MarketProjectionEnum.MARKET_START_TIME
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/MarketProjectionEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MARKET_START_TIME
+    path: ../src/BetfairDotNet/Enums/Betting/MarketProjectionEnum.cs
+    startLine: 32
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: If not selected then the start time will not be returned with marketCatalogue
+  example: []
+  syntax:
+    content: MARKET_START_TIME = 4
+    return:
+      type: BetfairDotNet.Enums.Betting.MarketProjectionEnum
+- uid: BetfairDotNet.Enums.Betting.MarketProjectionEnum.MARKET_DESCRIPTION
+  commentId: F:BetfairDotNet.Enums.Betting.MarketProjectionEnum.MARKET_DESCRIPTION
+  id: MARKET_DESCRIPTION
+  parent: BetfairDotNet.Enums.Betting.MarketProjectionEnum
+  langs:
+  - csharp
+  - vb
+  name: MARKET_DESCRIPTION
+  nameWithType: MarketProjectionEnum.MARKET_DESCRIPTION
+  fullName: BetfairDotNet.Enums.Betting.MarketProjectionEnum.MARKET_DESCRIPTION
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/MarketProjectionEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MARKET_DESCRIPTION
+    path: ../src/BetfairDotNet/Enums/Betting/MarketProjectionEnum.cs
+    startLine: 37
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: If not selected then the description will not be returned with marketCatalogue
+  example: []
+  syntax:
+    content: MARKET_DESCRIPTION = 5
+    return:
+      type: BetfairDotNet.Enums.Betting.MarketProjectionEnum
+- uid: BetfairDotNet.Enums.Betting.MarketProjectionEnum.RUNNER_METADATA
+  commentId: F:BetfairDotNet.Enums.Betting.MarketProjectionEnum.RUNNER_METADATA
+  id: RUNNER_METADATA
+  parent: BetfairDotNet.Enums.Betting.MarketProjectionEnum
+  langs:
+  - csharp
+  - vb
+  name: RUNNER_METADATA
+  nameWithType: MarketProjectionEnum.RUNNER_METADATA
+  fullName: BetfairDotNet.Enums.Betting.MarketProjectionEnum.RUNNER_METADATA
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/MarketProjectionEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: RUNNER_METADATA
+    path: ../src/BetfairDotNet/Enums/Betting/MarketProjectionEnum.cs
+    startLine: 44
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: >-
+    If not selected then the runner metadata will not be returned with marketCatalogue. 
+
+    If selected then RUNNER_DESCRIPTION will also be returned regardless of 
+
+    whether it is included as a market projection.
+  example: []
+  syntax:
+    content: RUNNER_METADATA = 6
+    return:
+      type: BetfairDotNet.Enums.Betting.MarketProjectionEnum
+references:
+- uid: BetfairDotNet.Enums.Betting
+  commentId: N:BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Betting
+  nameWithType: BetfairDotNet.Enums.Betting
+  fullName: BetfairDotNet.Enums.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+- uid: BetfairDotNet.Enums.Betting.MarketProjectionEnum
+  commentId: T:BetfairDotNet.Enums.Betting.MarketProjectionEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.MarketProjectionEnum.html
+  name: MarketProjectionEnum
+  nameWithType: MarketProjectionEnum
+  fullName: BetfairDotNet.Enums.Betting.MarketProjectionEnum

@@ -1,0 +1,357 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Interfaces.IBetfairClient
+  commentId: T:BetfairDotNet.Interfaces.IBetfairClient
+  id: IBetfairClient
+  parent: BetfairDotNet.Interfaces
+  children:
+  - BetfairDotNet.Interfaces.IBetfairClient.Account
+  - BetfairDotNet.Interfaces.IBetfairClient.Betting
+  - BetfairDotNet.Interfaces.IBetfairClient.Heartbeat
+  - BetfairDotNet.Interfaces.IBetfairClient.Login
+  - BetfairDotNet.Interfaces.IBetfairClient.Navigation
+  - BetfairDotNet.Interfaces.IBetfairClient.Streaming
+  langs:
+  - csharp
+  - vb
+  name: IBetfairClient
+  nameWithType: IBetfairClient
+  fullName: BetfairDotNet.Interfaces.IBetfairClient
+  type: Interface
+  source:
+    remote:
+      path: src/BetfairDotNet/Interfaces/IBetfairClient.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: IBetfairClient
+    path: ../src/BetfairDotNet/Interfaces/IBetfairClient.cs
+    startLine: 7
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Interfaces
+  summary: The top level client containing the services for the different Betfair APIs.
+  example: []
+  syntax:
+    content: public interface IBetfairClient
+    content.vb: Public Interface IBetfairClient
+- uid: BetfairDotNet.Interfaces.IBetfairClient.Login
+  commentId: P:BetfairDotNet.Interfaces.IBetfairClient.Login
+  id: Login
+  parent: BetfairDotNet.Interfaces.IBetfairClient
+  langs:
+  - csharp
+  - vb
+  name: Login
+  nameWithType: IBetfairClient.Login
+  fullName: BetfairDotNet.Interfaces.IBetfairClient.Login
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Interfaces/IBetfairClient.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Login
+    path: ../src/BetfairDotNet/Interfaces/IBetfairClient.cs
+    startLine: 12
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Interfaces
+  summary: Login functionality for interactive and non-interactive workflows.
+  example: []
+  syntax:
+    content: LoginService Login { get; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Services.LoginService
+    content.vb: ReadOnly Property Login As LoginService
+  overload: BetfairDotNet.Interfaces.IBetfairClient.Login*
+- uid: BetfairDotNet.Interfaces.IBetfairClient.Account
+  commentId: P:BetfairDotNet.Interfaces.IBetfairClient.Account
+  id: Account
+  parent: BetfairDotNet.Interfaces.IBetfairClient
+  langs:
+  - csharp
+  - vb
+  name: Account
+  nameWithType: IBetfairClient.Account
+  fullName: BetfairDotNet.Interfaces.IBetfairClient.Account
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Interfaces/IBetfairClient.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Account
+    path: ../src/BetfairDotNet/Interfaces/IBetfairClient.cs
+    startLine: 18
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Interfaces
+  summary: >-
+    Functionality for the Betfair Account API
+
+    such as getting account details, funds, statements, etc.
+  example: []
+  syntax:
+    content: AccountService Account { get; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Services.AccountService
+    content.vb: ReadOnly Property Account As AccountService
+  overload: BetfairDotNet.Interfaces.IBetfairClient.Account*
+- uid: BetfairDotNet.Interfaces.IBetfairClient.Navigation
+  commentId: P:BetfairDotNet.Interfaces.IBetfairClient.Navigation
+  id: Navigation
+  parent: BetfairDotNet.Interfaces.IBetfairClient
+  langs:
+  - csharp
+  - vb
+  name: Navigation
+  nameWithType: IBetfairClient.Navigation
+  fullName: BetfairDotNet.Interfaces.IBetfairClient.Navigation
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Interfaces/IBetfairClient.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Navigation
+    path: ../src/BetfairDotNet/Interfaces/IBetfairClient.cs
+    startLine: 23
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Interfaces
+  summary: Functionality for retrieving navigation data for applications.
+  example: []
+  syntax:
+    content: NavigationService Navigation { get; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Services.NavigationService
+    content.vb: ReadOnly Property Navigation As NavigationService
+  overload: BetfairDotNet.Interfaces.IBetfairClient.Navigation*
+- uid: BetfairDotNet.Interfaces.IBetfairClient.Betting
+  commentId: P:BetfairDotNet.Interfaces.IBetfairClient.Betting
+  id: Betting
+  parent: BetfairDotNet.Interfaces.IBetfairClient
+  langs:
+  - csharp
+  - vb
+  name: Betting
+  nameWithType: IBetfairClient.Betting
+  fullName: BetfairDotNet.Interfaces.IBetfairClient.Betting
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Interfaces/IBetfairClient.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Betting
+    path: ../src/BetfairDotNet/Interfaces/IBetfairClient.cs
+    startLine: 29
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Interfaces
+  summary: >-
+    Functionality for the Betfair Betting API.
+
+    Operations include listing markets, placing bets, cancelling bets, etc.
+  example: []
+  syntax:
+    content: BettingService Betting { get; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Services.BettingService
+    content.vb: ReadOnly Property Betting As BettingService
+  overload: BetfairDotNet.Interfaces.IBetfairClient.Betting*
+- uid: BetfairDotNet.Interfaces.IBetfairClient.Heartbeat
+  commentId: P:BetfairDotNet.Interfaces.IBetfairClient.Heartbeat
+  id: Heartbeat
+  parent: BetfairDotNet.Interfaces.IBetfairClient
+  langs:
+  - csharp
+  - vb
+  name: Heartbeat
+  nameWithType: IBetfairClient.Heartbeat
+  fullName: BetfairDotNet.Interfaces.IBetfairClient.Heartbeat
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Interfaces/IBetfairClient.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Heartbeat
+    path: ../src/BetfairDotNet/Interfaces/IBetfairClient.cs
+    startLine: 35
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Interfaces
+  summary: >-
+    Functionality for the Betfair Heartbeat API
+
+    which can perform an action when connection to the Betfair API is lost.
+  example: []
+  syntax:
+    content: HeartbeatService Heartbeat { get; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Services.HeartbeatService
+    content.vb: ReadOnly Property Heartbeat As HeartbeatService
+  overload: BetfairDotNet.Interfaces.IBetfairClient.Heartbeat*
+- uid: BetfairDotNet.Interfaces.IBetfairClient.Streaming
+  commentId: P:BetfairDotNet.Interfaces.IBetfairClient.Streaming
+  id: Streaming
+  parent: BetfairDotNet.Interfaces.IBetfairClient
+  langs:
+  - csharp
+  - vb
+  name: Streaming
+  nameWithType: IBetfairClient.Streaming
+  fullName: BetfairDotNet.Interfaces.IBetfairClient.Streaming
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Interfaces/IBetfairClient.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Streaming
+    path: ../src/BetfairDotNet/Interfaces/IBetfairClient.cs
+    startLine: 41
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Interfaces
+  summary: >-
+    Provides a fluent interface for subscribing to the Betfair Streaming API
+
+    using a reactive approach. Includes built in error handling.
+  example: []
+  syntax:
+    content: StreamingService Streaming { get; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Services.StreamingService
+    content.vb: ReadOnly Property Streaming As StreamingService
+  overload: BetfairDotNet.Interfaces.IBetfairClient.Streaming*
+references:
+- uid: BetfairDotNet.Interfaces
+  commentId: N:BetfairDotNet.Interfaces
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Interfaces
+  nameWithType: BetfairDotNet.Interfaces
+  fullName: BetfairDotNet.Interfaces
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Interfaces
+    name: Interfaces
+    href: BetfairDotNet.Interfaces.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Interfaces
+    name: Interfaces
+    href: BetfairDotNet.Interfaces.html
+- uid: BetfairDotNet.Interfaces.IBetfairClient.Login*
+  commentId: Overload:BetfairDotNet.Interfaces.IBetfairClient.Login
+  href: BetfairDotNet.Interfaces.IBetfairClient.html#BetfairDotNet.Interfaces.IBetfairClient.Login
+  name: Login
+  nameWithType: IBetfairClient.Login
+  fullName: BetfairDotNet.Interfaces.IBetfairClient.Login
+- uid: BetfairDotNet.Services.LoginService
+  commentId: T:BetfairDotNet.Services.LoginService
+  parent: BetfairDotNet.Services
+  href: BetfairDotNet.Services.LoginService.html
+  name: LoginService
+  nameWithType: LoginService
+  fullName: BetfairDotNet.Services.LoginService
+- uid: BetfairDotNet.Services
+  commentId: N:BetfairDotNet.Services
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Services
+  nameWithType: BetfairDotNet.Services
+  fullName: BetfairDotNet.Services
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Services
+    name: Services
+    href: BetfairDotNet.Services.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Services
+    name: Services
+    href: BetfairDotNet.Services.html
+- uid: BetfairDotNet.Interfaces.IBetfairClient.Account*
+  commentId: Overload:BetfairDotNet.Interfaces.IBetfairClient.Account
+  href: BetfairDotNet.Interfaces.IBetfairClient.html#BetfairDotNet.Interfaces.IBetfairClient.Account
+  name: Account
+  nameWithType: IBetfairClient.Account
+  fullName: BetfairDotNet.Interfaces.IBetfairClient.Account
+- uid: BetfairDotNet.Services.AccountService
+  commentId: T:BetfairDotNet.Services.AccountService
+  parent: BetfairDotNet.Services
+  href: BetfairDotNet.Services.AccountService.html
+  name: AccountService
+  nameWithType: AccountService
+  fullName: BetfairDotNet.Services.AccountService
+- uid: BetfairDotNet.Interfaces.IBetfairClient.Navigation*
+  commentId: Overload:BetfairDotNet.Interfaces.IBetfairClient.Navigation
+  href: BetfairDotNet.Interfaces.IBetfairClient.html#BetfairDotNet.Interfaces.IBetfairClient.Navigation
+  name: Navigation
+  nameWithType: IBetfairClient.Navigation
+  fullName: BetfairDotNet.Interfaces.IBetfairClient.Navigation
+- uid: BetfairDotNet.Services.NavigationService
+  commentId: T:BetfairDotNet.Services.NavigationService
+  parent: BetfairDotNet.Services
+  href: BetfairDotNet.Services.NavigationService.html
+  name: NavigationService
+  nameWithType: NavigationService
+  fullName: BetfairDotNet.Services.NavigationService
+- uid: BetfairDotNet.Interfaces.IBetfairClient.Betting*
+  commentId: Overload:BetfairDotNet.Interfaces.IBetfairClient.Betting
+  href: BetfairDotNet.Interfaces.IBetfairClient.html#BetfairDotNet.Interfaces.IBetfairClient.Betting
+  name: Betting
+  nameWithType: IBetfairClient.Betting
+  fullName: BetfairDotNet.Interfaces.IBetfairClient.Betting
+- uid: BetfairDotNet.Services.BettingService
+  commentId: T:BetfairDotNet.Services.BettingService
+  parent: BetfairDotNet.Services
+  href: BetfairDotNet.Services.BettingService.html
+  name: BettingService
+  nameWithType: BettingService
+  fullName: BetfairDotNet.Services.BettingService
+- uid: BetfairDotNet.Interfaces.IBetfairClient.Heartbeat*
+  commentId: Overload:BetfairDotNet.Interfaces.IBetfairClient.Heartbeat
+  href: BetfairDotNet.Interfaces.IBetfairClient.html#BetfairDotNet.Interfaces.IBetfairClient.Heartbeat
+  name: Heartbeat
+  nameWithType: IBetfairClient.Heartbeat
+  fullName: BetfairDotNet.Interfaces.IBetfairClient.Heartbeat
+- uid: BetfairDotNet.Services.HeartbeatService
+  commentId: T:BetfairDotNet.Services.HeartbeatService
+  parent: BetfairDotNet.Services
+  href: BetfairDotNet.Services.HeartbeatService.html
+  name: HeartbeatService
+  nameWithType: HeartbeatService
+  fullName: BetfairDotNet.Services.HeartbeatService
+- uid: BetfairDotNet.Interfaces.IBetfairClient.Streaming*
+  commentId: Overload:BetfairDotNet.Interfaces.IBetfairClient.Streaming
+  href: BetfairDotNet.Interfaces.IBetfairClient.html#BetfairDotNet.Interfaces.IBetfairClient.Streaming
+  name: Streaming
+  nameWithType: IBetfairClient.Streaming
+  fullName: BetfairDotNet.Interfaces.IBetfairClient.Streaming
+- uid: BetfairDotNet.Services.StreamingService
+  commentId: T:BetfairDotNet.Services.StreamingService
+  parent: BetfairDotNet.Services
+  href: BetfairDotNet.Services.StreamingService.html
+  name: StreamingService
+  nameWithType: StreamingService
+  fullName: BetfairDotNet.Services.StreamingService

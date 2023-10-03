@@ -1,0 +1,1687 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary
+  commentId: T:BetfairDotNet.Models.Betting.CurrentOrderSummary
+  id: CurrentOrderSummary
+  parent: BetfairDotNet.Models.Betting
+  children:
+  - BetfairDotNet.Models.Betting.CurrentOrderSummary.AveragePriceMatched
+  - BetfairDotNet.Models.Betting.CurrentOrderSummary.BetId
+  - BetfairDotNet.Models.Betting.CurrentOrderSummary.BspLiability
+  - BetfairDotNet.Models.Betting.CurrentOrderSummary.CurrentItemDescription
+  - BetfairDotNet.Models.Betting.CurrentOrderSummary.CustomerOrderRef
+  - BetfairDotNet.Models.Betting.CurrentOrderSummary.CustomerStrategyRef
+  - BetfairDotNet.Models.Betting.CurrentOrderSummary.Handicap
+  - BetfairDotNet.Models.Betting.CurrentOrderSummary.MarketId
+  - BetfairDotNet.Models.Betting.CurrentOrderSummary.MatchedDate
+  - BetfairDotNet.Models.Betting.CurrentOrderSummary.OrderType
+  - BetfairDotNet.Models.Betting.CurrentOrderSummary.PersistenceType
+  - BetfairDotNet.Models.Betting.CurrentOrderSummary.PlacedDate
+  - BetfairDotNet.Models.Betting.CurrentOrderSummary.PriceSize
+  - BetfairDotNet.Models.Betting.CurrentOrderSummary.RegulatorAuthCode
+  - BetfairDotNet.Models.Betting.CurrentOrderSummary.RegulatorCode
+  - BetfairDotNet.Models.Betting.CurrentOrderSummary.SelectionId
+  - BetfairDotNet.Models.Betting.CurrentOrderSummary.Side
+  - BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeCancelled
+  - BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeLapsed
+  - BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeMatched
+  - BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeRemaining
+  - BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeVoided
+  - BetfairDotNet.Models.Betting.CurrentOrderSummary.Status
+  langs:
+  - csharp
+  - vb
+  name: CurrentOrderSummary
+  nameWithType: CurrentOrderSummary
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary
+  type: Class
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: CurrentOrderSummary
+    path: ../src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+    startLine: 10
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: Summary of a current order (unmatched etc)
+  example: []
+  syntax:
+    content: 'public sealed record CurrentOrderSummary : IEquatable<CurrentOrderSummary>'
+    content.vb: Public NotInheritable Class CurrentOrderSummary Implements IEquatable(Of CurrentOrderSummary)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{BetfairDotNet.Models.Betting.CurrentOrderSummary}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.BetId
+  commentId: P:BetfairDotNet.Models.Betting.CurrentOrderSummary.BetId
+  id: BetId
+  parent: BetfairDotNet.Models.Betting.CurrentOrderSummary
+  langs:
+  - csharp
+  - vb
+  name: BetId
+  nameWithType: CurrentOrderSummary.BetId
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.BetId
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: BetId
+    path: ../src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+    startLine: 15
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The bet ID of the original place order.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("betId")]
+
+      [JsonRequired]
+
+      public required string BetId { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("betId")>
+
+      <JsonRequired>
+
+      Public Property BetId As String
+  overload: BetfairDotNet.Models.Betting.CurrentOrderSummary.BetId*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: betId
+  - type: System.Text.Json.Serialization.JsonRequiredAttribute
+    ctor: System.Text.Json.Serialization.JsonRequiredAttribute.#ctor
+    arguments: []
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.MarketId
+  commentId: P:BetfairDotNet.Models.Betting.CurrentOrderSummary.MarketId
+  id: MarketId
+  parent: BetfairDotNet.Models.Betting.CurrentOrderSummary
+  langs:
+  - csharp
+  - vb
+  name: MarketId
+  nameWithType: CurrentOrderSummary.MarketId
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.MarketId
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MarketId
+    path: ../src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+    startLine: 21
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The market id the order is for.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("marketId")]
+
+      [JsonRequired]
+
+      public required string MarketId { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("marketId")>
+
+      <JsonRequired>
+
+      Public Property MarketId As String
+  overload: BetfairDotNet.Models.Betting.CurrentOrderSummary.MarketId*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: marketId
+  - type: System.Text.Json.Serialization.JsonRequiredAttribute
+    ctor: System.Text.Json.Serialization.JsonRequiredAttribute.#ctor
+    arguments: []
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.SelectionId
+  commentId: P:BetfairDotNet.Models.Betting.CurrentOrderSummary.SelectionId
+  id: SelectionId
+  parent: BetfairDotNet.Models.Betting.CurrentOrderSummary
+  langs:
+  - csharp
+  - vb
+  name: SelectionId
+  nameWithType: CurrentOrderSummary.SelectionId
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.SelectionId
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SelectionId
+    path: ../src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+    startLine: 27
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The selection id the order is for.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("selectionId")]
+
+      public long SelectionId { get; init; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: >-
+      <JsonPropertyName("selectionId")>
+
+      Public Property SelectionId As Long
+  overload: BetfairDotNet.Models.Betting.CurrentOrderSummary.SelectionId*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: selectionId
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.Handicap
+  commentId: P:BetfairDotNet.Models.Betting.CurrentOrderSummary.Handicap
+  id: Handicap
+  parent: BetfairDotNet.Models.Betting.CurrentOrderSummary
+  langs:
+  - csharp
+  - vb
+  name: Handicap
+  nameWithType: CurrentOrderSummary.Handicap
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.Handicap
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Handicap
+    path: ../src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+    startLine: 33
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The handicap associated with the runner in case of Asian handicap markets, null otherwise.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("handicap")]
+
+      [JsonRequired]
+
+      public required double Handicap { get; init; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonPropertyName("handicap")>
+
+      <JsonRequired>
+
+      Public Property Handicap As Double
+  overload: BetfairDotNet.Models.Betting.CurrentOrderSummary.Handicap*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: handicap
+  - type: System.Text.Json.Serialization.JsonRequiredAttribute
+    ctor: System.Text.Json.Serialization.JsonRequiredAttribute.#ctor
+    arguments: []
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.PriceSize
+  commentId: P:BetfairDotNet.Models.Betting.CurrentOrderSummary.PriceSize
+  id: PriceSize
+  parent: BetfairDotNet.Models.Betting.CurrentOrderSummary
+  langs:
+  - csharp
+  - vb
+  name: PriceSize
+  nameWithType: CurrentOrderSummary.PriceSize
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.PriceSize
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: PriceSize
+    path: ../src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+    startLine: 39
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The price and size of the bet.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("priceSize")]
+
+      [JsonRequired]
+
+      public required PriceSize PriceSize { get; init; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Models.Betting.PriceSize
+    content.vb: >-
+      <JsonPropertyName("priceSize")>
+
+      <JsonRequired>
+
+      Public Property PriceSize As PriceSize
+  overload: BetfairDotNet.Models.Betting.CurrentOrderSummary.PriceSize*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: priceSize
+  - type: System.Text.Json.Serialization.JsonRequiredAttribute
+    ctor: System.Text.Json.Serialization.JsonRequiredAttribute.#ctor
+    arguments: []
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.BspLiability
+  commentId: P:BetfairDotNet.Models.Betting.CurrentOrderSummary.BspLiability
+  id: BspLiability
+  parent: BetfairDotNet.Models.Betting.CurrentOrderSummary
+  langs:
+  - csharp
+  - vb
+  name: BspLiability
+  nameWithType: CurrentOrderSummary.BspLiability
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.BspLiability
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: BspLiability
+    path: ../src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+    startLine: 45
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: Not to be confused with size. This is the liability of a given BSP bet.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("bspLiability")]
+
+      [JsonRequired]
+
+      public required double BspLiability { get; init; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonPropertyName("bspLiability")>
+
+      <JsonRequired>
+
+      Public Property BspLiability As Double
+  overload: BetfairDotNet.Models.Betting.CurrentOrderSummary.BspLiability*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: bspLiability
+  - type: System.Text.Json.Serialization.JsonRequiredAttribute
+    ctor: System.Text.Json.Serialization.JsonRequiredAttribute.#ctor
+    arguments: []
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.Side
+  commentId: P:BetfairDotNet.Models.Betting.CurrentOrderSummary.Side
+  id: Side
+  parent: BetfairDotNet.Models.Betting.CurrentOrderSummary
+  langs:
+  - csharp
+  - vb
+  name: Side
+  nameWithType: CurrentOrderSummary.Side
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.Side
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Side
+    path: ../src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+    startLine: 51
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: BACK or LAY
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("side")]
+
+      [JsonRequired]
+
+      public required SideEnum Side { get; init; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Enums.Betting.SideEnum
+    content.vb: >-
+      <JsonPropertyName("side")>
+
+      <JsonRequired>
+
+      Public Property Side As SideEnum
+  overload: BetfairDotNet.Models.Betting.CurrentOrderSummary.Side*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: side
+  - type: System.Text.Json.Serialization.JsonRequiredAttribute
+    ctor: System.Text.Json.Serialization.JsonRequiredAttribute.#ctor
+    arguments: []
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.Status
+  commentId: P:BetfairDotNet.Models.Betting.CurrentOrderSummary.Status
+  id: Status
+  parent: BetfairDotNet.Models.Betting.CurrentOrderSummary
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: CurrentOrderSummary.Status
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.Status
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Status
+    path: ../src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+    startLine: 57
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: Either EXECUTABLE (an unmatched amount remains) or EXECUTION_COMPLETE (no unmatched amount remains).
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("status")]
+
+      [JsonRequired]
+
+      public required OrderStatusEnum Status { get; init; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Enums.Betting.OrderStatusEnum
+    content.vb: >-
+      <JsonPropertyName("status")>
+
+      <JsonRequired>
+
+      Public Property Status As OrderStatusEnum
+  overload: BetfairDotNet.Models.Betting.CurrentOrderSummary.Status*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: status
+  - type: System.Text.Json.Serialization.JsonRequiredAttribute
+    ctor: System.Text.Json.Serialization.JsonRequiredAttribute.#ctor
+    arguments: []
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.PersistenceType
+  commentId: P:BetfairDotNet.Models.Betting.CurrentOrderSummary.PersistenceType
+  id: PersistenceType
+  parent: BetfairDotNet.Models.Betting.CurrentOrderSummary
+  langs:
+  - csharp
+  - vb
+  name: PersistenceType
+  nameWithType: CurrentOrderSummary.PersistenceType
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.PersistenceType
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: PersistenceType
+    path: ../src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+    startLine: 63
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: What to do with the order at turn-in-play.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("persistenceType")]
+
+      [JsonRequired]
+
+      public required PersistenceTypeEnum PersistenceType { get; init; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Enums.Betting.PersistenceTypeEnum
+    content.vb: >-
+      <JsonPropertyName("persistenceType")>
+
+      <JsonRequired>
+
+      Public Property PersistenceType As PersistenceTypeEnum
+  overload: BetfairDotNet.Models.Betting.CurrentOrderSummary.PersistenceType*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: persistenceType
+  - type: System.Text.Json.Serialization.JsonRequiredAttribute
+    ctor: System.Text.Json.Serialization.JsonRequiredAttribute.#ctor
+    arguments: []
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.OrderType
+  commentId: P:BetfairDotNet.Models.Betting.CurrentOrderSummary.OrderType
+  id: OrderType
+  parent: BetfairDotNet.Models.Betting.CurrentOrderSummary
+  langs:
+  - csharp
+  - vb
+  name: OrderType
+  nameWithType: CurrentOrderSummary.OrderType
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.OrderType
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: OrderType
+    path: ../src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+    startLine: 69
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: BSP Order type.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("orderType")]
+
+      [JsonRequired]
+
+      public required OrderTypeEnum OrderType { get; init; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Enums.Betting.OrderTypeEnum
+    content.vb: >-
+      <JsonPropertyName("orderType")>
+
+      <JsonRequired>
+
+      Public Property OrderType As OrderTypeEnum
+  overload: BetfairDotNet.Models.Betting.CurrentOrderSummary.OrderType*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: orderType
+  - type: System.Text.Json.Serialization.JsonRequiredAttribute
+    ctor: System.Text.Json.Serialization.JsonRequiredAttribute.#ctor
+    arguments: []
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.PlacedDate
+  commentId: P:BetfairDotNet.Models.Betting.CurrentOrderSummary.PlacedDate
+  id: PlacedDate
+  parent: BetfairDotNet.Models.Betting.CurrentOrderSummary
+  langs:
+  - csharp
+  - vb
+  name: PlacedDate
+  nameWithType: CurrentOrderSummary.PlacedDate
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.PlacedDate
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: PlacedDate
+    path: ../src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+    startLine: 75
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The date, to the second, the bet was placed.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("placedDate")]
+
+      [JsonRequired]
+
+      public required DateTime PlacedDate { get; init; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: >-
+      <JsonPropertyName("placedDate")>
+
+      <JsonRequired>
+
+      Public Property PlacedDate As Date
+  overload: BetfairDotNet.Models.Betting.CurrentOrderSummary.PlacedDate*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: placedDate
+  - type: System.Text.Json.Serialization.JsonRequiredAttribute
+    ctor: System.Text.Json.Serialization.JsonRequiredAttribute.#ctor
+    arguments: []
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.MatchedDate
+  commentId: P:BetfairDotNet.Models.Betting.CurrentOrderSummary.MatchedDate
+  id: MatchedDate
+  parent: BetfairDotNet.Models.Betting.CurrentOrderSummary
+  langs:
+  - csharp
+  - vb
+  name: MatchedDate
+  nameWithType: CurrentOrderSummary.MatchedDate
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.MatchedDate
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MatchedDate
+    path: ../src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+    startLine: 81
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The date, to the second, of the last matched bet fragment (where applicable)
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("matchedDate")]
+
+      [JsonRequired]
+
+      public required DateTime MatchedDate { get; init; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: >-
+      <JsonPropertyName("matchedDate")>
+
+      <JsonRequired>
+
+      Public Property MatchedDate As Date
+  overload: BetfairDotNet.Models.Betting.CurrentOrderSummary.MatchedDate*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: matchedDate
+  - type: System.Text.Json.Serialization.JsonRequiredAttribute
+    ctor: System.Text.Json.Serialization.JsonRequiredAttribute.#ctor
+    arguments: []
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.AveragePriceMatched
+  commentId: P:BetfairDotNet.Models.Betting.CurrentOrderSummary.AveragePriceMatched
+  id: AveragePriceMatched
+  parent: BetfairDotNet.Models.Betting.CurrentOrderSummary
+  langs:
+  - csharp
+  - vb
+  name: AveragePriceMatched
+  nameWithType: CurrentOrderSummary.AveragePriceMatched
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.AveragePriceMatched
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: AveragePriceMatched
+    path: ../src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+    startLine: 89
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: >-
+    The average price matched at. Voided match fragments are removed from this average calculation. 
+
+    The price is automatically adjusted in the event of non runners being declared with applicable reduction factors.
+
+    This value is not meaningful for activity on LINE markets and is not guaranteed to be returned or maintained for these markets.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("averagePriceMatched")]
+
+      public double AveragePriceMatched { get; init; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonPropertyName("averagePriceMatched")>
+
+      Public Property AveragePriceMatched As Double
+  overload: BetfairDotNet.Models.Betting.CurrentOrderSummary.AveragePriceMatched*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: averagePriceMatched
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeMatched
+  commentId: P:BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeMatched
+  id: SizeMatched
+  parent: BetfairDotNet.Models.Betting.CurrentOrderSummary
+  langs:
+  - csharp
+  - vb
+  name: SizeMatched
+  nameWithType: CurrentOrderSummary.SizeMatched
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeMatched
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SizeMatched
+    path: ../src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+    startLine: 95
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The current amount of this bet that was matched.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("sizeMatched")]
+
+      public double SizeMatched { get; init; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonPropertyName("sizeMatched")>
+
+      Public Property SizeMatched As Double
+  overload: BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeMatched*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: sizeMatched
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeRemaining
+  commentId: P:BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeRemaining
+  id: SizeRemaining
+  parent: BetfairDotNet.Models.Betting.CurrentOrderSummary
+  langs:
+  - csharp
+  - vb
+  name: SizeRemaining
+  nameWithType: CurrentOrderSummary.SizeRemaining
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeRemaining
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SizeRemaining
+    path: ../src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+    startLine: 101
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The current amount of this bet that is unmatched.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("sizeRemaining")]
+
+      public double SizeRemaining { get; init; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonPropertyName("sizeRemaining")>
+
+      Public Property SizeRemaining As Double
+  overload: BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeRemaining*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: sizeRemaining
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeLapsed
+  commentId: P:BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeLapsed
+  id: SizeLapsed
+  parent: BetfairDotNet.Models.Betting.CurrentOrderSummary
+  langs:
+  - csharp
+  - vb
+  name: SizeLapsed
+  nameWithType: CurrentOrderSummary.SizeLapsed
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeLapsed
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SizeLapsed
+    path: ../src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+    startLine: 107
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The current amount of this bet that was lapsed.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("sizeLapsed")]
+
+      public double SizeLapsed { get; init; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonPropertyName("sizeLapsed")>
+
+      Public Property SizeLapsed As Double
+  overload: BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeLapsed*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: sizeLapsed
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeCancelled
+  commentId: P:BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeCancelled
+  id: SizeCancelled
+  parent: BetfairDotNet.Models.Betting.CurrentOrderSummary
+  langs:
+  - csharp
+  - vb
+  name: SizeCancelled
+  nameWithType: CurrentOrderSummary.SizeCancelled
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeCancelled
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SizeCancelled
+    path: ../src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+    startLine: 113
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The current amount of this bet that was cancelled.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("sizeCancelled")]
+
+      public double SizeCancelled { get; init; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonPropertyName("sizeCancelled")>
+
+      Public Property SizeCancelled As Double
+  overload: BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeCancelled*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: sizeCancelled
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeVoided
+  commentId: P:BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeVoided
+  id: SizeVoided
+  parent: BetfairDotNet.Models.Betting.CurrentOrderSummary
+  langs:
+  - csharp
+  - vb
+  name: SizeVoided
+  nameWithType: CurrentOrderSummary.SizeVoided
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeVoided
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SizeVoided
+    path: ../src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+    startLine: 119
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The current amount of this bet that was voided.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("sizeVoided")]
+
+      public double SizeVoided { get; init; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonPropertyName("sizeVoided")>
+
+      Public Property SizeVoided As Double
+  overload: BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeVoided*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: sizeVoided
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.RegulatorAuthCode
+  commentId: P:BetfairDotNet.Models.Betting.CurrentOrderSummary.RegulatorAuthCode
+  id: RegulatorAuthCode
+  parent: BetfairDotNet.Models.Betting.CurrentOrderSummary
+  langs:
+  - csharp
+  - vb
+  name: RegulatorAuthCode
+  nameWithType: CurrentOrderSummary.RegulatorAuthCode
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.RegulatorAuthCode
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: RegulatorAuthCode
+    path: ../src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+    startLine: 125
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The regulator authorisation code.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("regulatorAuthCode")]
+
+      public string RegulatorAuthCode { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("regulatorAuthCode")>
+
+      Public Property RegulatorAuthCode As String
+  overload: BetfairDotNet.Models.Betting.CurrentOrderSummary.RegulatorAuthCode*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: regulatorAuthCode
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.RegulatorCode
+  commentId: P:BetfairDotNet.Models.Betting.CurrentOrderSummary.RegulatorCode
+  id: RegulatorCode
+  parent: BetfairDotNet.Models.Betting.CurrentOrderSummary
+  langs:
+  - csharp
+  - vb
+  name: RegulatorCode
+  nameWithType: CurrentOrderSummary.RegulatorCode
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.RegulatorCode
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: RegulatorCode
+    path: ../src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+    startLine: 131
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The regulator Code.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("regulatorCode")]
+
+      public string RegulatorCode { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("regulatorCode")>
+
+      Public Property RegulatorCode As String
+  overload: BetfairDotNet.Models.Betting.CurrentOrderSummary.RegulatorCode*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: regulatorCode
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.CustomerOrderRef
+  commentId: P:BetfairDotNet.Models.Betting.CurrentOrderSummary.CustomerOrderRef
+  id: CustomerOrderRef
+  parent: BetfairDotNet.Models.Betting.CurrentOrderSummary
+  langs:
+  - csharp
+  - vb
+  name: CustomerOrderRef
+  nameWithType: CurrentOrderSummary.CustomerOrderRef
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.CustomerOrderRef
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: CustomerOrderRef
+    path: ../src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+    startLine: 137
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The order reference defined by the customer for this bet.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("customerOrderRef")]
+
+      public string CustomerOrderRef { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("customerOrderRef")>
+
+      Public Property CustomerOrderRef As String
+  overload: BetfairDotNet.Models.Betting.CurrentOrderSummary.CustomerOrderRef*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: customerOrderRef
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.CustomerStrategyRef
+  commentId: P:BetfairDotNet.Models.Betting.CurrentOrderSummary.CustomerStrategyRef
+  id: CustomerStrategyRef
+  parent: BetfairDotNet.Models.Betting.CurrentOrderSummary
+  langs:
+  - csharp
+  - vb
+  name: CustomerStrategyRef
+  nameWithType: CurrentOrderSummary.CustomerStrategyRef
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.CustomerStrategyRef
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: CustomerStrategyRef
+    path: ../src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+    startLine: 143
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The strategy reference defined by the customer for this bet.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("customerStrategyRef")]
+
+      public string CustomerStrategyRef { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("customerStrategyRef")>
+
+      Public Property CustomerStrategyRef As String
+  overload: BetfairDotNet.Models.Betting.CurrentOrderSummary.CustomerStrategyRef*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: customerStrategyRef
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.CurrentItemDescription
+  commentId: P:BetfairDotNet.Models.Betting.CurrentOrderSummary.CurrentItemDescription
+  id: CurrentItemDescription
+  parent: BetfairDotNet.Models.Betting.CurrentOrderSummary
+  langs:
+  - csharp
+  - vb
+  name: CurrentItemDescription
+  nameWithType: CurrentOrderSummary.CurrentItemDescription
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.CurrentItemDescription
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: CurrentItemDescription
+    path: ../src/BetfairDotNet/Models/Betting/CurrentOrderSummary.cs
+    startLine: 149
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: A container for all the ancillary data for this Item.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("currentItemDescription")]
+
+      public string CurrentItemDescription { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("currentItemDescription")>
+
+      Public Property CurrentItemDescription As String
+  overload: BetfairDotNet.Models.Betting.CurrentOrderSummary.CurrentItemDescription*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: currentItemDescription
+references:
+- uid: BetfairDotNet.Models.Betting
+  commentId: N:BetfairDotNet.Models.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Betting
+  nameWithType: BetfairDotNet.Models.Betting
+  fullName: BetfairDotNet.Models.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Betting
+    name: Betting
+    href: BetfairDotNet.Models.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Betting
+    name: Betting
+    href: BetfairDotNet.Models.Betting.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{BetfairDotNet.Models.Betting.CurrentOrderSummary}
+  commentId: T:System.IEquatable{BetfairDotNet.Models.Betting.CurrentOrderSummary}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<CurrentOrderSummary>
+  nameWithType: IEquatable<CurrentOrderSummary>
+  fullName: System.IEquatable<BetfairDotNet.Models.Betting.CurrentOrderSummary>
+  nameWithType.vb: IEquatable(Of CurrentOrderSummary)
+  fullName.vb: System.IEquatable(Of BetfairDotNet.Models.Betting.CurrentOrderSummary)
+  name.vb: IEquatable(Of CurrentOrderSummary)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: BetfairDotNet.Models.Betting.CurrentOrderSummary
+    name: CurrentOrderSummary
+    href: BetfairDotNet.Models.Betting.CurrentOrderSummary.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Betting.CurrentOrderSummary
+    name: CurrentOrderSummary
+    href: BetfairDotNet.Models.Betting.CurrentOrderSummary.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.BetId*
+  commentId: Overload:BetfairDotNet.Models.Betting.CurrentOrderSummary.BetId
+  href: BetfairDotNet.Models.Betting.CurrentOrderSummary.html#BetfairDotNet.Models.Betting.CurrentOrderSummary.BetId
+  name: BetId
+  nameWithType: CurrentOrderSummary.BetId
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.BetId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.MarketId*
+  commentId: Overload:BetfairDotNet.Models.Betting.CurrentOrderSummary.MarketId
+  href: BetfairDotNet.Models.Betting.CurrentOrderSummary.html#BetfairDotNet.Models.Betting.CurrentOrderSummary.MarketId
+  name: MarketId
+  nameWithType: CurrentOrderSummary.MarketId
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.MarketId
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.SelectionId*
+  commentId: Overload:BetfairDotNet.Models.Betting.CurrentOrderSummary.SelectionId
+  href: BetfairDotNet.Models.Betting.CurrentOrderSummary.html#BetfairDotNet.Models.Betting.CurrentOrderSummary.SelectionId
+  name: SelectionId
+  nameWithType: CurrentOrderSummary.SelectionId
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.SelectionId
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.Handicap*
+  commentId: Overload:BetfairDotNet.Models.Betting.CurrentOrderSummary.Handicap
+  href: BetfairDotNet.Models.Betting.CurrentOrderSummary.html#BetfairDotNet.Models.Betting.CurrentOrderSummary.Handicap
+  name: Handicap
+  nameWithType: CurrentOrderSummary.Handicap
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.Handicap
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.PriceSize*
+  commentId: Overload:BetfairDotNet.Models.Betting.CurrentOrderSummary.PriceSize
+  href: BetfairDotNet.Models.Betting.CurrentOrderSummary.html#BetfairDotNet.Models.Betting.CurrentOrderSummary.PriceSize
+  name: PriceSize
+  nameWithType: CurrentOrderSummary.PriceSize
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.PriceSize
+- uid: BetfairDotNet.Models.Betting.PriceSize
+  commentId: T:BetfairDotNet.Models.Betting.PriceSize
+  parent: BetfairDotNet.Models.Betting
+  href: BetfairDotNet.Models.Betting.PriceSize.html
+  name: PriceSize
+  nameWithType: PriceSize
+  fullName: BetfairDotNet.Models.Betting.PriceSize
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.BspLiability*
+  commentId: Overload:BetfairDotNet.Models.Betting.CurrentOrderSummary.BspLiability
+  href: BetfairDotNet.Models.Betting.CurrentOrderSummary.html#BetfairDotNet.Models.Betting.CurrentOrderSummary.BspLiability
+  name: BspLiability
+  nameWithType: CurrentOrderSummary.BspLiability
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.BspLiability
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.Side*
+  commentId: Overload:BetfairDotNet.Models.Betting.CurrentOrderSummary.Side
+  href: BetfairDotNet.Models.Betting.CurrentOrderSummary.html#BetfairDotNet.Models.Betting.CurrentOrderSummary.Side
+  name: Side
+  nameWithType: CurrentOrderSummary.Side
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.Side
+- uid: BetfairDotNet.Enums.Betting.SideEnum
+  commentId: T:BetfairDotNet.Enums.Betting.SideEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.SideEnum.html
+  name: SideEnum
+  nameWithType: SideEnum
+  fullName: BetfairDotNet.Enums.Betting.SideEnum
+- uid: BetfairDotNet.Enums.Betting
+  commentId: N:BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Betting
+  nameWithType: BetfairDotNet.Enums.Betting
+  fullName: BetfairDotNet.Enums.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.Status*
+  commentId: Overload:BetfairDotNet.Models.Betting.CurrentOrderSummary.Status
+  href: BetfairDotNet.Models.Betting.CurrentOrderSummary.html#BetfairDotNet.Models.Betting.CurrentOrderSummary.Status
+  name: Status
+  nameWithType: CurrentOrderSummary.Status
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.Status
+- uid: BetfairDotNet.Enums.Betting.OrderStatusEnum
+  commentId: T:BetfairDotNet.Enums.Betting.OrderStatusEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.OrderStatusEnum.html
+  name: OrderStatusEnum
+  nameWithType: OrderStatusEnum
+  fullName: BetfairDotNet.Enums.Betting.OrderStatusEnum
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.PersistenceType*
+  commentId: Overload:BetfairDotNet.Models.Betting.CurrentOrderSummary.PersistenceType
+  href: BetfairDotNet.Models.Betting.CurrentOrderSummary.html#BetfairDotNet.Models.Betting.CurrentOrderSummary.PersistenceType
+  name: PersistenceType
+  nameWithType: CurrentOrderSummary.PersistenceType
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.PersistenceType
+- uid: BetfairDotNet.Enums.Betting.PersistenceTypeEnum
+  commentId: T:BetfairDotNet.Enums.Betting.PersistenceTypeEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.PersistenceTypeEnum.html
+  name: PersistenceTypeEnum
+  nameWithType: PersistenceTypeEnum
+  fullName: BetfairDotNet.Enums.Betting.PersistenceTypeEnum
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.OrderType*
+  commentId: Overload:BetfairDotNet.Models.Betting.CurrentOrderSummary.OrderType
+  href: BetfairDotNet.Models.Betting.CurrentOrderSummary.html#BetfairDotNet.Models.Betting.CurrentOrderSummary.OrderType
+  name: OrderType
+  nameWithType: CurrentOrderSummary.OrderType
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.OrderType
+- uid: BetfairDotNet.Enums.Betting.OrderTypeEnum
+  commentId: T:BetfairDotNet.Enums.Betting.OrderTypeEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.OrderTypeEnum.html
+  name: OrderTypeEnum
+  nameWithType: OrderTypeEnum
+  fullName: BetfairDotNet.Enums.Betting.OrderTypeEnum
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.PlacedDate*
+  commentId: Overload:BetfairDotNet.Models.Betting.CurrentOrderSummary.PlacedDate
+  href: BetfairDotNet.Models.Betting.CurrentOrderSummary.html#BetfairDotNet.Models.Betting.CurrentOrderSummary.PlacedDate
+  name: PlacedDate
+  nameWithType: CurrentOrderSummary.PlacedDate
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.PlacedDate
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.MatchedDate*
+  commentId: Overload:BetfairDotNet.Models.Betting.CurrentOrderSummary.MatchedDate
+  href: BetfairDotNet.Models.Betting.CurrentOrderSummary.html#BetfairDotNet.Models.Betting.CurrentOrderSummary.MatchedDate
+  name: MatchedDate
+  nameWithType: CurrentOrderSummary.MatchedDate
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.MatchedDate
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.AveragePriceMatched*
+  commentId: Overload:BetfairDotNet.Models.Betting.CurrentOrderSummary.AveragePriceMatched
+  href: BetfairDotNet.Models.Betting.CurrentOrderSummary.html#BetfairDotNet.Models.Betting.CurrentOrderSummary.AveragePriceMatched
+  name: AveragePriceMatched
+  nameWithType: CurrentOrderSummary.AveragePriceMatched
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.AveragePriceMatched
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeMatched*
+  commentId: Overload:BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeMatched
+  href: BetfairDotNet.Models.Betting.CurrentOrderSummary.html#BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeMatched
+  name: SizeMatched
+  nameWithType: CurrentOrderSummary.SizeMatched
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeMatched
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeRemaining*
+  commentId: Overload:BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeRemaining
+  href: BetfairDotNet.Models.Betting.CurrentOrderSummary.html#BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeRemaining
+  name: SizeRemaining
+  nameWithType: CurrentOrderSummary.SizeRemaining
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeRemaining
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeLapsed*
+  commentId: Overload:BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeLapsed
+  href: BetfairDotNet.Models.Betting.CurrentOrderSummary.html#BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeLapsed
+  name: SizeLapsed
+  nameWithType: CurrentOrderSummary.SizeLapsed
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeLapsed
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeCancelled*
+  commentId: Overload:BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeCancelled
+  href: BetfairDotNet.Models.Betting.CurrentOrderSummary.html#BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeCancelled
+  name: SizeCancelled
+  nameWithType: CurrentOrderSummary.SizeCancelled
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeCancelled
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeVoided*
+  commentId: Overload:BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeVoided
+  href: BetfairDotNet.Models.Betting.CurrentOrderSummary.html#BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeVoided
+  name: SizeVoided
+  nameWithType: CurrentOrderSummary.SizeVoided
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.SizeVoided
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.RegulatorAuthCode*
+  commentId: Overload:BetfairDotNet.Models.Betting.CurrentOrderSummary.RegulatorAuthCode
+  href: BetfairDotNet.Models.Betting.CurrentOrderSummary.html#BetfairDotNet.Models.Betting.CurrentOrderSummary.RegulatorAuthCode
+  name: RegulatorAuthCode
+  nameWithType: CurrentOrderSummary.RegulatorAuthCode
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.RegulatorAuthCode
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.RegulatorCode*
+  commentId: Overload:BetfairDotNet.Models.Betting.CurrentOrderSummary.RegulatorCode
+  href: BetfairDotNet.Models.Betting.CurrentOrderSummary.html#BetfairDotNet.Models.Betting.CurrentOrderSummary.RegulatorCode
+  name: RegulatorCode
+  nameWithType: CurrentOrderSummary.RegulatorCode
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.RegulatorCode
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.CustomerOrderRef*
+  commentId: Overload:BetfairDotNet.Models.Betting.CurrentOrderSummary.CustomerOrderRef
+  href: BetfairDotNet.Models.Betting.CurrentOrderSummary.html#BetfairDotNet.Models.Betting.CurrentOrderSummary.CustomerOrderRef
+  name: CustomerOrderRef
+  nameWithType: CurrentOrderSummary.CustomerOrderRef
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.CustomerOrderRef
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.CustomerStrategyRef*
+  commentId: Overload:BetfairDotNet.Models.Betting.CurrentOrderSummary.CustomerStrategyRef
+  href: BetfairDotNet.Models.Betting.CurrentOrderSummary.html#BetfairDotNet.Models.Betting.CurrentOrderSummary.CustomerStrategyRef
+  name: CustomerStrategyRef
+  nameWithType: CurrentOrderSummary.CustomerStrategyRef
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.CustomerStrategyRef
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummary.CurrentItemDescription*
+  commentId: Overload:BetfairDotNet.Models.Betting.CurrentOrderSummary.CurrentItemDescription
+  href: BetfairDotNet.Models.Betting.CurrentOrderSummary.html#BetfairDotNet.Models.Betting.CurrentOrderSummary.CurrentItemDescription
+  name: CurrentItemDescription
+  nameWithType: CurrentOrderSummary.CurrentItemDescription
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummary.CurrentItemDescription

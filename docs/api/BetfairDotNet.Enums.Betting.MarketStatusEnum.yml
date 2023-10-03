@@ -1,0 +1,217 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Betting.MarketStatusEnum
+  commentId: T:BetfairDotNet.Enums.Betting.MarketStatusEnum
+  id: MarketStatusEnum
+  parent: BetfairDotNet.Enums.Betting
+  children:
+  - BetfairDotNet.Enums.Betting.MarketStatusEnum.CLOSED
+  - BetfairDotNet.Enums.Betting.MarketStatusEnum.INACTIVE
+  - BetfairDotNet.Enums.Betting.MarketStatusEnum.OPEN
+  - BetfairDotNet.Enums.Betting.MarketStatusEnum.SUSPENDED
+  - BetfairDotNet.Enums.Betting.MarketStatusEnum.UNKNOWN
+  langs:
+  - csharp
+  - vb
+  name: MarketStatusEnum
+  nameWithType: MarketStatusEnum
+  fullName: BetfairDotNet.Enums.Betting.MarketStatusEnum
+  type: Enum
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/MarketStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MarketStatusEnum
+    path: ../src/BetfairDotNet/Enums/Betting/MarketStatusEnum.cs
+    startLine: 6
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EmptyStringToEnumConverter<MarketStatusEnum>))]
+
+      public enum MarketStatusEnum
+    content.vb: >-
+      <JsonConverter(GetType(EmptyStringToEnumConverter(Of MarketStatusEnum)))>
+
+      Public Enum MarketStatusEnum
+- uid: BetfairDotNet.Enums.Betting.MarketStatusEnum.UNKNOWN
+  commentId: F:BetfairDotNet.Enums.Betting.MarketStatusEnum.UNKNOWN
+  id: UNKNOWN
+  parent: BetfairDotNet.Enums.Betting.MarketStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: UNKNOWN
+  nameWithType: MarketStatusEnum.UNKNOWN
+  fullName: BetfairDotNet.Enums.Betting.MarketStatusEnum.UNKNOWN
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/MarketStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: UNKNOWN
+    path: ../src/BetfairDotNet/Enums/Betting/MarketStatusEnum.cs
+    startLine: 12
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: An unknown market state.
+  example: []
+  syntax:
+    content: UNKNOWN = 0
+    return:
+      type: BetfairDotNet.Enums.Betting.MarketStatusEnum
+- uid: BetfairDotNet.Enums.Betting.MarketStatusEnum.INACTIVE
+  commentId: F:BetfairDotNet.Enums.Betting.MarketStatusEnum.INACTIVE
+  id: INACTIVE
+  parent: BetfairDotNet.Enums.Betting.MarketStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: INACTIVE
+  nameWithType: MarketStatusEnum.INACTIVE
+  fullName: BetfairDotNet.Enums.Betting.MarketStatusEnum.INACTIVE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/MarketStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: INACTIVE
+    path: ../src/BetfairDotNet/Enums/Betting/MarketStatusEnum.cs
+    startLine: 17
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: The market has been created but isn't yet available.
+  example: []
+  syntax:
+    content: INACTIVE = 1
+    return:
+      type: BetfairDotNet.Enums.Betting.MarketStatusEnum
+- uid: BetfairDotNet.Enums.Betting.MarketStatusEnum.OPEN
+  commentId: F:BetfairDotNet.Enums.Betting.MarketStatusEnum.OPEN
+  id: OPEN
+  parent: BetfairDotNet.Enums.Betting.MarketStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: OPEN
+  nameWithType: MarketStatusEnum.OPEN
+  fullName: BetfairDotNet.Enums.Betting.MarketStatusEnum.OPEN
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/MarketStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: OPEN
+    path: ../src/BetfairDotNet/Enums/Betting/MarketStatusEnum.cs
+    startLine: 22
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: The market is open for betting.
+  example: []
+  syntax:
+    content: OPEN = 2
+    return:
+      type: BetfairDotNet.Enums.Betting.MarketStatusEnum
+- uid: BetfairDotNet.Enums.Betting.MarketStatusEnum.SUSPENDED
+  commentId: F:BetfairDotNet.Enums.Betting.MarketStatusEnum.SUSPENDED
+  id: SUSPENDED
+  parent: BetfairDotNet.Enums.Betting.MarketStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: SUSPENDED
+  nameWithType: MarketStatusEnum.SUSPENDED
+  fullName: BetfairDotNet.Enums.Betting.MarketStatusEnum.SUSPENDED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/MarketStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SUSPENDED
+    path: ../src/BetfairDotNet/Enums/Betting/MarketStatusEnum.cs
+    startLine: 27
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: The market is suspended and not available for betting.
+  example: []
+  syntax:
+    content: SUSPENDED = 3
+    return:
+      type: BetfairDotNet.Enums.Betting.MarketStatusEnum
+- uid: BetfairDotNet.Enums.Betting.MarketStatusEnum.CLOSED
+  commentId: F:BetfairDotNet.Enums.Betting.MarketStatusEnum.CLOSED
+  id: CLOSED
+  parent: BetfairDotNet.Enums.Betting.MarketStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: CLOSED
+  nameWithType: MarketStatusEnum.CLOSED
+  fullName: BetfairDotNet.Enums.Betting.MarketStatusEnum.CLOSED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/MarketStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: CLOSED
+    path: ../src/BetfairDotNet/Enums/Betting/MarketStatusEnum.cs
+    startLine: 32
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: The market has been settled and is no longer available for betting.
+  example: []
+  syntax:
+    content: CLOSED = 4
+    return:
+      type: BetfairDotNet.Enums.Betting.MarketStatusEnum
+references:
+- uid: BetfairDotNet.Enums.Betting
+  commentId: N:BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Betting
+  nameWithType: BetfairDotNet.Enums.Betting
+  fullName: BetfairDotNet.Enums.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+- uid: BetfairDotNet.Enums.Betting.MarketStatusEnum
+  commentId: T:BetfairDotNet.Enums.Betting.MarketStatusEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.MarketStatusEnum.html
+  name: MarketStatusEnum
+  nameWithType: MarketStatusEnum
+  fullName: BetfairDotNet.Enums.Betting.MarketStatusEnum

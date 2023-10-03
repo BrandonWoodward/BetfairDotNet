@@ -1,0 +1,104 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Betting.TimeInForceEnum
+  commentId: T:BetfairDotNet.Enums.Betting.TimeInForceEnum
+  id: TimeInForceEnum
+  parent: BetfairDotNet.Enums.Betting
+  children:
+  - BetfairDotNet.Enums.Betting.TimeInForceEnum.FILL_OR_KILL
+  langs:
+  - csharp
+  - vb
+  name: TimeInForceEnum
+  nameWithType: TimeInForceEnum
+  fullName: BetfairDotNet.Enums.Betting.TimeInForceEnum
+  type: Enum
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/TimeInForceEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: TimeInForceEnum
+    path: ../src/BetfairDotNet/Enums/Betting/TimeInForceEnum.cs
+    startLine: 5
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EmptyStringToEnumConverter<TimeInForceEnum>))]
+
+      public enum TimeInForceEnum
+    content.vb: >-
+      <JsonConverter(GetType(EmptyStringToEnumConverter(Of TimeInForceEnum)))>
+
+      Public Enum TimeInForceEnum
+- uid: BetfairDotNet.Enums.Betting.TimeInForceEnum.FILL_OR_KILL
+  commentId: F:BetfairDotNet.Enums.Betting.TimeInForceEnum.FILL_OR_KILL
+  id: FILL_OR_KILL
+  parent: BetfairDotNet.Enums.Betting.TimeInForceEnum
+  langs:
+  - csharp
+  - vb
+  name: FILL_OR_KILL
+  nameWithType: TimeInForceEnum.FILL_OR_KILL
+  fullName: BetfairDotNet.Enums.Betting.TimeInForceEnum.FILL_OR_KILL
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/TimeInForceEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: FILL_OR_KILL
+    path: ../src/BetfairDotNet/Enums/Betting/TimeInForceEnum.cs
+    startLine: 12
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: >-
+    Execute the transaction immediately and completely (filled to size or between minFillSize and size) or not at all (cancelled).
+
+    For LINE markets Volume Weighted Average Price (VWAP) functionality is disabled.
+  example: []
+  syntax:
+    content: FILL_OR_KILL = 0
+    return:
+      type: BetfairDotNet.Enums.Betting.TimeInForceEnum
+references:
+- uid: BetfairDotNet.Enums.Betting
+  commentId: N:BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Betting
+  nameWithType: BetfairDotNet.Enums.Betting
+  fullName: BetfairDotNet.Enums.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+- uid: BetfairDotNet.Enums.Betting.TimeInForceEnum
+  commentId: T:BetfairDotNet.Enums.Betting.TimeInForceEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.TimeInForceEnum.html
+  name: TimeInForceEnum
+  nameWithType: TimeInForceEnum
+  fullName: BetfairDotNet.Enums.Betting.TimeInForceEnum

@@ -1,0 +1,233 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Betting.MarketBettingTypeEnum
+  commentId: T:BetfairDotNet.Enums.Betting.MarketBettingTypeEnum
+  id: MarketBettingTypeEnum
+  parent: BetfairDotNet.Enums.Betting
+  children:
+  - BetfairDotNet.Enums.Betting.MarketBettingTypeEnum.ASIAN_HANDICAP_DOUBLE_LINE
+  - BetfairDotNet.Enums.Betting.MarketBettingTypeEnum.ASIAN_HANDICAP_SINGLE_LINE
+  - BetfairDotNet.Enums.Betting.MarketBettingTypeEnum.FIXED_ODDS
+  - BetfairDotNet.Enums.Betting.MarketBettingTypeEnum.LINE
+  - BetfairDotNet.Enums.Betting.MarketBettingTypeEnum.ODDS
+  langs:
+  - csharp
+  - vb
+  name: MarketBettingTypeEnum
+  nameWithType: MarketBettingTypeEnum
+  fullName: BetfairDotNet.Enums.Betting.MarketBettingTypeEnum
+  type: Enum
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/MarketBettingTypeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MarketBettingTypeEnum
+    path: ../src/BetfairDotNet/Enums/Betting/MarketBettingTypeEnum.cs
+    startLine: 6
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EmptyStringToEnumConverter<MarketBettingTypeEnum>))]
+
+      public enum MarketBettingTypeEnum
+    content.vb: >-
+      <JsonConverter(GetType(EmptyStringToEnumConverter(Of MarketBettingTypeEnum)))>
+
+      Public Enum MarketBettingTypeEnum
+- uid: BetfairDotNet.Enums.Betting.MarketBettingTypeEnum.ODDS
+  commentId: F:BetfairDotNet.Enums.Betting.MarketBettingTypeEnum.ODDS
+  id: ODDS
+  parent: BetfairDotNet.Enums.Betting.MarketBettingTypeEnum
+  langs:
+  - csharp
+  - vb
+  name: ODDS
+  nameWithType: MarketBettingTypeEnum.ODDS
+  fullName: BetfairDotNet.Enums.Betting.MarketBettingTypeEnum.ODDS
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/MarketBettingTypeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ODDS
+    path: ../src/BetfairDotNet/Enums/Betting/MarketBettingTypeEnum.cs
+    startLine: 12
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Odds Market - Any market that doesn't fit any any of the below categories.
+  example: []
+  syntax:
+    content: ODDS = 0
+    return:
+      type: BetfairDotNet.Enums.Betting.MarketBettingTypeEnum
+- uid: BetfairDotNet.Enums.Betting.MarketBettingTypeEnum.LINE
+  commentId: F:BetfairDotNet.Enums.Betting.MarketBettingTypeEnum.LINE
+  id: LINE
+  parent: BetfairDotNet.Enums.Betting.MarketBettingTypeEnum
+  langs:
+  - csharp
+  - vb
+  name: LINE
+  nameWithType: MarketBettingTypeEnum.LINE
+  fullName: BetfairDotNet.Enums.Betting.MarketBettingTypeEnum.LINE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/MarketBettingTypeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: LINE
+    path: ../src/BetfairDotNet/Enums/Betting/MarketBettingTypeEnum.cs
+    startLine: 22
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: >-
+    Line Market - LINE markets operate at even-money odds of 2.0. 
+
+    However, price for these markets refers to the line positions available as
+
+    defined by the markets min-max range and interval steps. 
+
+    Customers either Buy a line (LAY bet, winning if outcome is greater than the 
+
+    taken line (price)) or Sell a line (BACK bet, winning if outcome is less than the taken line (price)). 
+
+    If settled outcome equals the taken line, stake is returned.
+  example: []
+  syntax:
+    content: LINE = 1
+    return:
+      type: BetfairDotNet.Enums.Betting.MarketBettingTypeEnum
+- uid: BetfairDotNet.Enums.Betting.MarketBettingTypeEnum.ASIAN_HANDICAP_DOUBLE_LINE
+  commentId: F:BetfairDotNet.Enums.Betting.MarketBettingTypeEnum.ASIAN_HANDICAP_DOUBLE_LINE
+  id: ASIAN_HANDICAP_DOUBLE_LINE
+  parent: BetfairDotNet.Enums.Betting.MarketBettingTypeEnum
+  langs:
+  - csharp
+  - vb
+  name: ASIAN_HANDICAP_DOUBLE_LINE
+  nameWithType: MarketBettingTypeEnum.ASIAN_HANDICAP_DOUBLE_LINE
+  fullName: BetfairDotNet.Enums.Betting.MarketBettingTypeEnum.ASIAN_HANDICAP_DOUBLE_LINE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/MarketBettingTypeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ASIAN_HANDICAP_DOUBLE_LINE
+    path: ../src/BetfairDotNet/Enums/Betting/MarketBettingTypeEnum.cs
+    startLine: 27
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Asian Handicap Market - A traditional Asian handicap market. Can be identified by marketType ASIAN_HANDICAP
+  example: []
+  syntax:
+    content: ASIAN_HANDICAP_DOUBLE_LINE = 2
+    return:
+      type: BetfairDotNet.Enums.Betting.MarketBettingTypeEnum
+- uid: BetfairDotNet.Enums.Betting.MarketBettingTypeEnum.ASIAN_HANDICAP_SINGLE_LINE
+  commentId: F:BetfairDotNet.Enums.Betting.MarketBettingTypeEnum.ASIAN_HANDICAP_SINGLE_LINE
+  id: ASIAN_HANDICAP_SINGLE_LINE
+  parent: BetfairDotNet.Enums.Betting.MarketBettingTypeEnum
+  langs:
+  - csharp
+  - vb
+  name: ASIAN_HANDICAP_SINGLE_LINE
+  nameWithType: MarketBettingTypeEnum.ASIAN_HANDICAP_SINGLE_LINE
+  fullName: BetfairDotNet.Enums.Betting.MarketBettingTypeEnum.ASIAN_HANDICAP_SINGLE_LINE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/MarketBettingTypeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ASIAN_HANDICAP_SINGLE_LINE
+    path: ../src/BetfairDotNet/Enums/Betting/MarketBettingTypeEnum.cs
+    startLine: 32
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Asian Single Line Market - A market in which there can be 0 or multiple winners. e,.g marketType TOTAL_GOALS
+  example: []
+  syntax:
+    content: ASIAN_HANDICAP_SINGLE_LINE = 3
+    return:
+      type: BetfairDotNet.Enums.Betting.MarketBettingTypeEnum
+- uid: BetfairDotNet.Enums.Betting.MarketBettingTypeEnum.FIXED_ODDS
+  commentId: F:BetfairDotNet.Enums.Betting.MarketBettingTypeEnum.FIXED_ODDS
+  id: FIXED_ODDS
+  parent: BetfairDotNet.Enums.Betting.MarketBettingTypeEnum
+  langs:
+  - csharp
+  - vb
+  name: FIXED_ODDS
+  nameWithType: MarketBettingTypeEnum.FIXED_ODDS
+  fullName: BetfairDotNet.Enums.Betting.MarketBettingTypeEnum.FIXED_ODDS
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/MarketBettingTypeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: FIXED_ODDS
+    path: ../src/BetfairDotNet/Enums/Betting/MarketBettingTypeEnum.cs
+    startLine: 39
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: >-
+    Sportsbook Odds Market. 
+
+    This type is deprecated and will be removed in future releases, 
+
+    when Sportsbook markets will be represented as ODDS market but with a different product type.
+  example: []
+  syntax:
+    content: FIXED_ODDS = 4
+    return:
+      type: BetfairDotNet.Enums.Betting.MarketBettingTypeEnum
+references:
+- uid: BetfairDotNet.Enums.Betting
+  commentId: N:BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Betting
+  nameWithType: BetfairDotNet.Enums.Betting
+  fullName: BetfairDotNet.Enums.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+- uid: BetfairDotNet.Enums.Betting.MarketBettingTypeEnum
+  commentId: T:BetfairDotNet.Enums.Betting.MarketBettingTypeEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.MarketBettingTypeEnum.html
+  name: MarketBettingTypeEnum
+  nameWithType: MarketBettingTypeEnum
+  fullName: BetfairDotNet.Enums.Betting.MarketBettingTypeEnum

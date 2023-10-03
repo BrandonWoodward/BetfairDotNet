@@ -1,0 +1,464 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Models.Betting.TimeRangeResult
+  commentId: T:BetfairDotNet.Models.Betting.TimeRangeResult
+  id: TimeRangeResult
+  parent: BetfairDotNet.Models.Betting
+  children:
+  - BetfairDotNet.Models.Betting.TimeRangeResult.MarketCount
+  - BetfairDotNet.Models.Betting.TimeRangeResult.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: TimeRangeResult
+  nameWithType: TimeRangeResult
+  fullName: BetfairDotNet.Models.Betting.TimeRangeResult
+  type: Class
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/TimeRangeResult.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: TimeRangeResult
+    path: ../src/BetfairDotNet/Models/Betting/TimeRangeResult.cs
+    startLine: 8
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The result of an associated TimeRange.
+  example: []
+  syntax:
+    content: 'public sealed record TimeRangeResult : IEquatable<TimeRangeResult>'
+    content.vb: Public NotInheritable Class TimeRangeResult Implements IEquatable(Of TimeRangeResult)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{BetfairDotNet.Models.Betting.TimeRangeResult}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BetfairDotNet.Models.Betting.TimeRangeResult.TimeRange
+  commentId: P:BetfairDotNet.Models.Betting.TimeRangeResult.TimeRange
+  id: TimeRange
+  parent: BetfairDotNet.Models.Betting.TimeRangeResult
+  langs:
+  - csharp
+  - vb
+  name: TimeRange
+  nameWithType: TimeRangeResult.TimeRange
+  fullName: BetfairDotNet.Models.Betting.TimeRangeResult.TimeRange
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/TimeRangeResult.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: TimeRange
+    path: ../src/BetfairDotNet/Models/Betting/TimeRangeResult.cs
+    startLine: 13
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The TimeRange associated with this result.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("timeRange")]
+
+      public TimeRange? TimeRange { get; init; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Models.Betting.TimeRange
+    content.vb: >-
+      <JsonPropertyName("timeRange")>
+
+      Public Property TimeRange As TimeRange
+  overload: BetfairDotNet.Models.Betting.TimeRangeResult.TimeRange*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: timeRange
+- uid: BetfairDotNet.Models.Betting.TimeRangeResult.MarketCount
+  commentId: P:BetfairDotNet.Models.Betting.TimeRangeResult.MarketCount
+  id: MarketCount
+  parent: BetfairDotNet.Models.Betting.TimeRangeResult
+  langs:
+  - csharp
+  - vb
+  name: MarketCount
+  nameWithType: TimeRangeResult.MarketCount
+  fullName: BetfairDotNet.Models.Betting.TimeRangeResult.MarketCount
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/TimeRangeResult.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MarketCount
+    path: ../src/BetfairDotNet/Models/Betting/TimeRangeResult.cs
+    startLine: 19
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: Count of markets associated with this TimeRange
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("marketCount")]
+
+      public int MarketCount { get; init; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <JsonPropertyName("marketCount")>
+
+      Public Property MarketCount As Integer
+  overload: BetfairDotNet.Models.Betting.TimeRangeResult.MarketCount*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: marketCount
+references:
+- uid: BetfairDotNet.Models.Betting
+  commentId: N:BetfairDotNet.Models.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Betting
+  nameWithType: BetfairDotNet.Models.Betting
+  fullName: BetfairDotNet.Models.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Betting
+    name: Betting
+    href: BetfairDotNet.Models.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Betting
+    name: Betting
+    href: BetfairDotNet.Models.Betting.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{BetfairDotNet.Models.Betting.TimeRangeResult}
+  commentId: T:System.IEquatable{BetfairDotNet.Models.Betting.TimeRangeResult}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<TimeRangeResult>
+  nameWithType: IEquatable<TimeRangeResult>
+  fullName: System.IEquatable<BetfairDotNet.Models.Betting.TimeRangeResult>
+  nameWithType.vb: IEquatable(Of TimeRangeResult)
+  fullName.vb: System.IEquatable(Of BetfairDotNet.Models.Betting.TimeRangeResult)
+  name.vb: IEquatable(Of TimeRangeResult)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: BetfairDotNet.Models.Betting.TimeRangeResult
+    name: TimeRangeResult
+    href: BetfairDotNet.Models.Betting.TimeRangeResult.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Betting.TimeRangeResult
+    name: TimeRangeResult
+    href: BetfairDotNet.Models.Betting.TimeRangeResult.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BetfairDotNet.Models.Betting.TimeRangeResult.TimeRange*
+  commentId: Overload:BetfairDotNet.Models.Betting.TimeRangeResult.TimeRange
+  href: BetfairDotNet.Models.Betting.TimeRangeResult.html#BetfairDotNet.Models.Betting.TimeRangeResult.TimeRange
+  name: TimeRange
+  nameWithType: TimeRangeResult.TimeRange
+  fullName: BetfairDotNet.Models.Betting.TimeRangeResult.TimeRange
+- uid: BetfairDotNet.Models.Betting.TimeRange
+  commentId: T:BetfairDotNet.Models.Betting.TimeRange
+  parent: BetfairDotNet.Models.Betting
+  href: BetfairDotNet.Models.Betting.TimeRange.html
+  name: TimeRange
+  nameWithType: TimeRange
+  fullName: BetfairDotNet.Models.Betting.TimeRange
+- uid: BetfairDotNet.Models.Betting.TimeRangeResult.MarketCount*
+  commentId: Overload:BetfairDotNet.Models.Betting.TimeRangeResult.MarketCount
+  href: BetfairDotNet.Models.Betting.TimeRangeResult.html#BetfairDotNet.Models.Betting.TimeRangeResult.MarketCount
+  name: MarketCount
+  nameWithType: TimeRangeResult.MarketCount
+  fullName: BetfairDotNet.Models.Betting.TimeRangeResult.MarketCount
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

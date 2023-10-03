@@ -1,0 +1,333 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum
+  commentId: T:BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum
+  id: MarketPriceFilterEnum
+  parent: BetfairDotNet.Enums.Streaming
+  children:
+  - BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.EX_ALL_OFFERS
+  - BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.EX_BEST_OFFERS
+  - BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.EX_BEST_OFFERS_DISP
+  - BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.EX_LTP
+  - BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.EX_MARKET_DEF
+  - BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.EX_TRADED
+  - BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.EX_TRADED_VOL
+  - BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.SP_PROJECTED
+  - BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.SP_TRADED
+  langs:
+  - csharp
+  - vb
+  name: MarketPriceFilterEnum
+  nameWithType: MarketPriceFilterEnum
+  fullName: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum
+  type: Enum
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Streaming/MarketPriceFilterEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MarketPriceFilterEnum
+    path: ../src/BetfairDotNet/Enums/Streaming/MarketPriceFilterEnum.cs
+    startLine: 6
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Streaming
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EmptyStringToEnumConverter<MarketPriceFilterEnum>))]
+
+      public enum MarketPriceFilterEnum
+    content.vb: >-
+      <JsonConverter(GetType(EmptyStringToEnumConverter(Of MarketPriceFilterEnum)))>
+
+      Public Enum MarketPriceFilterEnum
+- uid: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.EX_BEST_OFFERS_DISP
+  commentId: F:BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.EX_BEST_OFFERS_DISP
+  id: EX_BEST_OFFERS_DISP
+  parent: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum
+  langs:
+  - csharp
+  - vb
+  name: EX_BEST_OFFERS_DISP
+  nameWithType: MarketPriceFilterEnum.EX_BEST_OFFERS_DISP
+  fullName: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.EX_BEST_OFFERS_DISP
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Streaming/MarketPriceFilterEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: EX_BEST_OFFERS_DISP
+    path: ../src/BetfairDotNet/Enums/Streaming/MarketPriceFilterEnum.cs
+    startLine: 12
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Streaming
+  summary: Depth based ladders, including virtual prices. This is what you will see on the exchange website.
+  example: []
+  syntax:
+    content: EX_BEST_OFFERS_DISP = 0
+    return:
+      type: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum
+- uid: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.EX_BEST_OFFERS
+  commentId: F:BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.EX_BEST_OFFERS
+  id: EX_BEST_OFFERS
+  parent: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum
+  langs:
+  - csharp
+  - vb
+  name: EX_BEST_OFFERS
+  nameWithType: MarketPriceFilterEnum.EX_BEST_OFFERS
+  fullName: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.EX_BEST_OFFERS
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Streaming/MarketPriceFilterEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: EX_BEST_OFFERS
+    path: ../src/BetfairDotNet/Enums/Streaming/MarketPriceFilterEnum.cs
+    startLine: 17
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Streaming
+  summary: Depth based ladders, no virtual bets.
+  example: []
+  syntax:
+    content: EX_BEST_OFFERS = 1
+    return:
+      type: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum
+- uid: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.EX_ALL_OFFERS
+  commentId: F:BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.EX_ALL_OFFERS
+  id: EX_ALL_OFFERS
+  parent: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum
+  langs:
+  - csharp
+  - vb
+  name: EX_ALL_OFFERS
+  nameWithType: MarketPriceFilterEnum.EX_ALL_OFFERS
+  fullName: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.EX_ALL_OFFERS
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Streaming/MarketPriceFilterEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: EX_ALL_OFFERS
+    path: ../src/BetfairDotNet/Enums/Streaming/MarketPriceFilterEnum.cs
+    startLine: 22
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Streaming
+  summary: Price based ladders, no virtual bets.
+  example: []
+  syntax:
+    content: EX_ALL_OFFERS = 2
+    return:
+      type: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum
+- uid: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.EX_TRADED
+  commentId: F:BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.EX_TRADED
+  id: EX_TRADED
+  parent: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum
+  langs:
+  - csharp
+  - vb
+  name: EX_TRADED
+  nameWithType: MarketPriceFilterEnum.EX_TRADED
+  fullName: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.EX_TRADED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Streaming/MarketPriceFilterEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: EX_TRADED
+    path: ../src/BetfairDotNet/Enums/Streaming/MarketPriceFilterEnum.cs
+    startLine: 27
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Streaming
+  summary: Traded volume by distinct price.
+  example: []
+  syntax:
+    content: EX_TRADED = 3
+    return:
+      type: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum
+- uid: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.EX_TRADED_VOL
+  commentId: F:BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.EX_TRADED_VOL
+  id: EX_TRADED_VOL
+  parent: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum
+  langs:
+  - csharp
+  - vb
+  name: EX_TRADED_VOL
+  nameWithType: MarketPriceFilterEnum.EX_TRADED_VOL
+  fullName: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.EX_TRADED_VOL
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Streaming/MarketPriceFilterEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: EX_TRADED_VOL
+    path: ../src/BetfairDotNet/Enums/Streaming/MarketPriceFilterEnum.cs
+    startLine: 32
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Streaming
+  summary: ''
+  example: []
+  syntax:
+    content: EX_TRADED_VOL = 4
+    return:
+      type: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum
+- uid: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.EX_LTP
+  commentId: F:BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.EX_LTP
+  id: EX_LTP
+  parent: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum
+  langs:
+  - csharp
+  - vb
+  name: EX_LTP
+  nameWithType: MarketPriceFilterEnum.EX_LTP
+  fullName: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.EX_LTP
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Streaming/MarketPriceFilterEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: EX_LTP
+    path: ../src/BetfairDotNet/Enums/Streaming/MarketPriceFilterEnum.cs
+    startLine: 37
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Streaming
+  summary: Last traded price.
+  example: []
+  syntax:
+    content: EX_LTP = 5
+    return:
+      type: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum
+- uid: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.EX_MARKET_DEF
+  commentId: F:BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.EX_MARKET_DEF
+  id: EX_MARKET_DEF
+  parent: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum
+  langs:
+  - csharp
+  - vb
+  name: EX_MARKET_DEF
+  nameWithType: MarketPriceFilterEnum.EX_MARKET_DEF
+  fullName: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.EX_MARKET_DEF
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Streaming/MarketPriceFilterEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: EX_MARKET_DEF
+    path: ../src/BetfairDotNet/Enums/Streaming/MarketPriceFilterEnum.cs
+    startLine: 42
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Streaming
+  summary: Metadata about the market including status of the runners etc.
+  example: []
+  syntax:
+    content: EX_MARKET_DEF = 6
+    return:
+      type: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum
+- uid: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.SP_TRADED
+  commentId: F:BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.SP_TRADED
+  id: SP_TRADED
+  parent: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum
+  langs:
+  - csharp
+  - vb
+  name: SP_TRADED
+  nameWithType: MarketPriceFilterEnum.SP_TRADED
+  fullName: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.SP_TRADED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Streaming/MarketPriceFilterEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SP_TRADED
+    path: ../src/BetfairDotNet/Enums/Streaming/MarketPriceFilterEnum.cs
+    startLine: 47
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Streaming
+  summary: Traded volume by distinct price for the SP auction.
+  example: []
+  syntax:
+    content: SP_TRADED = 7
+    return:
+      type: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum
+- uid: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.SP_PROJECTED
+  commentId: F:BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.SP_PROJECTED
+  id: SP_PROJECTED
+  parent: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum
+  langs:
+  - csharp
+  - vb
+  name: SP_PROJECTED
+  nameWithType: MarketPriceFilterEnum.SP_PROJECTED
+  fullName: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.SP_PROJECTED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Streaming/MarketPriceFilterEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SP_PROJECTED
+    path: ../src/BetfairDotNet/Enums/Streaming/MarketPriceFilterEnum.cs
+    startLine: 52
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Streaming
+  summary: ''
+  example: []
+  syntax:
+    content: SP_PROJECTED = 8
+    return:
+      type: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum
+references:
+- uid: BetfairDotNet.Enums.Streaming
+  commentId: N:BetfairDotNet.Enums.Streaming
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Streaming
+  nameWithType: BetfairDotNet.Enums.Streaming
+  fullName: BetfairDotNet.Enums.Streaming
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Streaming
+    name: Streaming
+    href: BetfairDotNet.Enums.Streaming.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Streaming
+    name: Streaming
+    href: BetfairDotNet.Enums.Streaming.html
+- uid: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum
+  commentId: T:BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum
+  parent: BetfairDotNet.Enums.Streaming
+  href: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.html
+  name: MarketPriceFilterEnum
+  nameWithType: MarketPriceFilterEnum
+  fullName: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum

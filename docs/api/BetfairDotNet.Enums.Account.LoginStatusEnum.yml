@@ -1,0 +1,1325 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum
+  commentId: T:BetfairDotNet.Enums.Account.LoginStatusEnum
+  id: LoginStatusEnum
+  parent: BetfairDotNet.Enums.Account
+  children:
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.ACCOUNT_ALREADY_LOCKED
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.ACCOUNT_NOW_LOCKED
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.ACCOUNT_PENDING_PASSWORD_CHANGE
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.ACTIONS_REQUIRED
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.AGENT_CLIENT_MASTER
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.AGENT_CLIENT_MASTER_SUSPENDED
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.AUTHORIZED_ONLY_FOR_DOMAIN_RO
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.AUTHORIZED_ONLY_FOR_DOMAIN_SE
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.BETTING_RESTRICTED_LOCATION
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.CERT_AUTH_REQUIRED
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.CHANGE_PASSWORD_REQUIRED
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.CLOSED
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.DANISH_AUTHORIZATION_REQUIRED
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.DENMARK_MIGRATION_REQUIRED
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.DUPLICATE_CARDS
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.EMAIL_LOGIN_NOT_ALLOWED
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.INPUT_VALIDATION_ERROR
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.INTERNATIONAL_TERMS_ACCEPTANCE_REQUIRED
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.INVALID_CONNECTIVITY_TO_REGULATOR_DK
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.INVALID_CONNECTIVITY_TO_REGULATOR_IT
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.INVALID_USERNAME_OR_PASSWORD
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.ITALIAN_CONTRACT_ACCEPTANCE_REQUIRED
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.ITALIAN_PROFILING_ACCEPTANCE_REQUIRED
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.KYC_SUSPEND
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.MULTIPLE_USERS_WITH_SAME_CREDENTIALS
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.NOT_AUTHORISED_BY_REGULATOR_DK
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.NOT_AUTHORISED_BY_REGULATOR_IT
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.PENDING_AUTH
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.PERSONAL_MESSAGE_REQUIRED
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.SECURITY_QUESTION_WRONG_3X
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.SECURITY_RESTRICTED_LOCATION
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.SELF_EXCLUDED
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.SPAIN_MIGRATION_REQUIRED
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.SPANISH_TERMS_ACCEPTANCE_REQUIRED
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.SUCCESS
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.SUSPENDED
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.SWEDEN_BANK_ID_VERIFICATION_REQUIRED
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.SWEDEN_NATIONAL_IDENTIFIER_REQUIRED
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.TELBET_TERMS_CONDITIONS_NA
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.TEMPORARY_BAN_TOO_MANY_REQUESTS
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.TRADING_MASTER
+  - BetfairDotNet.Enums.Account.LoginStatusEnum.TRADING_MASTER_SUSPENDED
+  langs:
+  - csharp
+  - vb
+  name: LoginStatusEnum
+  nameWithType: LoginStatusEnum
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum
+  type: Enum
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: LoginStatusEnum
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 5
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EmptyStringToEnumConverter<LoginStatusEnum>))]
+
+      public enum LoginStatusEnum
+    content.vb: >-
+      <JsonConverter(GetType(EmptyStringToEnumConverter(Of LoginStatusEnum)))>
+
+      Public Enum LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.SUCCESS
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.SUCCESS
+  id: SUCCESS
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: SUCCESS
+  nameWithType: LoginStatusEnum.SUCCESS
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.SUCCESS
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SUCCESS
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 11
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: The login was successful.
+  example: []
+  syntax:
+    content: SUCCESS = 0
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.INVALID_USERNAME_OR_PASSWORD
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.INVALID_USERNAME_OR_PASSWORD
+  id: INVALID_USERNAME_OR_PASSWORD
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: INVALID_USERNAME_OR_PASSWORD
+  nameWithType: LoginStatusEnum.INVALID_USERNAME_OR_PASSWORD
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.INVALID_USERNAME_OR_PASSWORD
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: INVALID_USERNAME_OR_PASSWORD
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 16
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: The username or password are invalid.
+  example: []
+  syntax:
+    content: INVALID_USERNAME_OR_PASSWORD = 1
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.ACCOUNT_NOW_LOCKED
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.ACCOUNT_NOW_LOCKED
+  id: ACCOUNT_NOW_LOCKED
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: ACCOUNT_NOW_LOCKED
+  nameWithType: LoginStatusEnum.ACCOUNT_NOW_LOCKED
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.ACCOUNT_NOW_LOCKED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ACCOUNT_NOW_LOCKED
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 21
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: The account was just locked.
+  example: []
+  syntax:
+    content: ACCOUNT_NOW_LOCKED = 2
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.ACCOUNT_ALREADY_LOCKED
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.ACCOUNT_ALREADY_LOCKED
+  id: ACCOUNT_ALREADY_LOCKED
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: ACCOUNT_ALREADY_LOCKED
+  nameWithType: LoginStatusEnum.ACCOUNT_ALREADY_LOCKED
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.ACCOUNT_ALREADY_LOCKED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ACCOUNT_ALREADY_LOCKED
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 26
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: The account is already locked.
+  example: []
+  syntax:
+    content: ACCOUNT_ALREADY_LOCKED = 3
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.PENDING_AUTH
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.PENDING_AUTH
+  id: PENDING_AUTH
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: PENDING_AUTH
+  nameWithType: LoginStatusEnum.PENDING_AUTH
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.PENDING_AUTH
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: PENDING_AUTH
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 31
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: Pending authentication.
+  example: []
+  syntax:
+    content: PENDING_AUTH = 4
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.TELBET_TERMS_CONDITIONS_NA
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.TELBET_TERMS_CONDITIONS_NA
+  id: TELBET_TERMS_CONDITIONS_NA
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: TELBET_TERMS_CONDITIONS_NA
+  nameWithType: LoginStatusEnum.TELBET_TERMS_CONDITIONS_NA
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.TELBET_TERMS_CONDITIONS_NA
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: TELBET_TERMS_CONDITIONS_NA
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 36
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: Telbet terms and conditions rejected.
+  example: []
+  syntax:
+    content: TELBET_TERMS_CONDITIONS_NA = 5
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.DUPLICATE_CARDS
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.DUPLICATE_CARDS
+  id: DUPLICATE_CARDS
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: DUPLICATE_CARDS
+  nameWithType: LoginStatusEnum.DUPLICATE_CARDS
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.DUPLICATE_CARDS
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: DUPLICATE_CARDS
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 41
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: Duplicate cards.
+  example: []
+  syntax:
+    content: DUPLICATE_CARDS = 6
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.SECURITY_QUESTION_WRONG_3X
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.SECURITY_QUESTION_WRONG_3X
+  id: SECURITY_QUESTION_WRONG_3X
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: SECURITY_QUESTION_WRONG_3X
+  nameWithType: LoginStatusEnum.SECURITY_QUESTION_WRONG_3X
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.SECURITY_QUESTION_WRONG_3X
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SECURITY_QUESTION_WRONG_3X
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 46
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: The user has entered wrong the security answer 3 times.
+  example: []
+  syntax:
+    content: SECURITY_QUESTION_WRONG_3X = 7
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.KYC_SUSPEND
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.KYC_SUSPEND
+  id: KYC_SUSPEND
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: KYC_SUSPEND
+  nameWithType: LoginStatusEnum.KYC_SUSPEND
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.KYC_SUSPEND
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: KYC_SUSPEND
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 51
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: KYC suspended.
+  example: []
+  syntax:
+    content: KYC_SUSPEND = 8
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.SUSPENDED
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.SUSPENDED
+  id: SUSPENDED
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: SUSPENDED
+  nameWithType: LoginStatusEnum.SUSPENDED
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.SUSPENDED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SUSPENDED
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 56
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: The account is suspended
+  example: []
+  syntax:
+    content: SUSPENDED = 9
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.CLOSED
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.CLOSED
+  id: CLOSED
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: CLOSED
+  nameWithType: LoginStatusEnum.CLOSED
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.CLOSED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: CLOSED
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 61
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: The account is closed.
+  example: []
+  syntax:
+    content: CLOSED = 10
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.SELF_EXCLUDED
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.SELF_EXCLUDED
+  id: SELF_EXCLUDED
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: SELF_EXCLUDED
+  nameWithType: LoginStatusEnum.SELF_EXCLUDED
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.SELF_EXCLUDED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SELF_EXCLUDED
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 66
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: The account is self-excluded.
+  example: []
+  syntax:
+    content: SELF_EXCLUDED = 11
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.INVALID_CONNECTIVITY_TO_REGULATOR_DK
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.INVALID_CONNECTIVITY_TO_REGULATOR_DK
+  id: INVALID_CONNECTIVITY_TO_REGULATOR_DK
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: INVALID_CONNECTIVITY_TO_REGULATOR_DK
+  nameWithType: LoginStatusEnum.INVALID_CONNECTIVITY_TO_REGULATOR_DK
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.INVALID_CONNECTIVITY_TO_REGULATOR_DK
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: INVALID_CONNECTIVITY_TO_REGULATOR_DK
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 72
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: >-
+    the DK regulator cannot be accessed due to some internal problems 
+
+    in the system behind or in at regulator; timeout cases included.
+  example: []
+  syntax:
+    content: INVALID_CONNECTIVITY_TO_REGULATOR_DK = 12
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.NOT_AUTHORISED_BY_REGULATOR_DK
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.NOT_AUTHORISED_BY_REGULATOR_DK
+  id: NOT_AUTHORISED_BY_REGULATOR_DK
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: NOT_AUTHORISED_BY_REGULATOR_DK
+  nameWithType: LoginStatusEnum.NOT_AUTHORISED_BY_REGULATOR_DK
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.NOT_AUTHORISED_BY_REGULATOR_DK
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: NOT_AUTHORISED_BY_REGULATOR_DK
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 79
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: >-
+    The user identified by the given credentials is not authorized in the DK's 
+
+    jurisdictions due to the regulators' policies. Ex: the user for which 
+
+    this session should be created is not allowed to act(play, bet) in the DK's jurisdiction.
+  example: []
+  syntax:
+    content: NOT_AUTHORISED_BY_REGULATOR_DK = 13
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.INVALID_CONNECTIVITY_TO_REGULATOR_IT
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.INVALID_CONNECTIVITY_TO_REGULATOR_IT
+  id: INVALID_CONNECTIVITY_TO_REGULATOR_IT
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: INVALID_CONNECTIVITY_TO_REGULATOR_IT
+  nameWithType: LoginStatusEnum.INVALID_CONNECTIVITY_TO_REGULATOR_IT
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.INVALID_CONNECTIVITY_TO_REGULATOR_IT
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: INVALID_CONNECTIVITY_TO_REGULATOR_IT
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 85
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: >-
+    The IT regulator cannot be accessed due to some internal problems in the system 
+
+    behind or in at regulator; timeout cases included.
+  example: []
+  syntax:
+    content: INVALID_CONNECTIVITY_TO_REGULATOR_IT = 14
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.NOT_AUTHORISED_BY_REGULATOR_IT
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.NOT_AUTHORISED_BY_REGULATOR_IT
+  id: NOT_AUTHORISED_BY_REGULATOR_IT
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: NOT_AUTHORISED_BY_REGULATOR_IT
+  nameWithType: LoginStatusEnum.NOT_AUTHORISED_BY_REGULATOR_IT
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.NOT_AUTHORISED_BY_REGULATOR_IT
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: NOT_AUTHORISED_BY_REGULATOR_IT
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 92
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: >-
+    The user identified by the given credentials is not authorized in the IT's 
+
+    jurisdictions due to the regulators' policies. Ex: the user for which this 
+
+    session should be created is not allowed to act(play, bet) in the IT's jurisdiction.
+  example: []
+  syntax:
+    content: NOT_AUTHORISED_BY_REGULATOR_IT = 15
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.SECURITY_RESTRICTED_LOCATION
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.SECURITY_RESTRICTED_LOCATION
+  id: SECURITY_RESTRICTED_LOCATION
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: SECURITY_RESTRICTED_LOCATION
+  nameWithType: LoginStatusEnum.SECURITY_RESTRICTED_LOCATION
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.SECURITY_RESTRICTED_LOCATION
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SECURITY_RESTRICTED_LOCATION
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 97
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: The account is restricted due to security concerns.
+  example: []
+  syntax:
+    content: SECURITY_RESTRICTED_LOCATION = 16
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.BETTING_RESTRICTED_LOCATION
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.BETTING_RESTRICTED_LOCATION
+  id: BETTING_RESTRICTED_LOCATION
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: BETTING_RESTRICTED_LOCATION
+  nameWithType: LoginStatusEnum.BETTING_RESTRICTED_LOCATION
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.BETTING_RESTRICTED_LOCATION
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: BETTING_RESTRICTED_LOCATION
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 102
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: The account is accessed from a location where betting is restricted.
+  example: []
+  syntax:
+    content: BETTING_RESTRICTED_LOCATION = 17
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.TRADING_MASTER
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.TRADING_MASTER
+  id: TRADING_MASTER
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: TRADING_MASTER
+  nameWithType: LoginStatusEnum.TRADING_MASTER
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.TRADING_MASTER
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: TRADING_MASTER
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 107
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: Trading Master Account.
+  example: []
+  syntax:
+    content: TRADING_MASTER = 18
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.TRADING_MASTER_SUSPENDED
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.TRADING_MASTER_SUSPENDED
+  id: TRADING_MASTER_SUSPENDED
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: TRADING_MASTER_SUSPENDED
+  nameWithType: LoginStatusEnum.TRADING_MASTER_SUSPENDED
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.TRADING_MASTER_SUSPENDED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: TRADING_MASTER_SUSPENDED
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 112
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: Suspended Trading Master Account.
+  example: []
+  syntax:
+    content: TRADING_MASTER_SUSPENDED = 19
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.AGENT_CLIENT_MASTER
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.AGENT_CLIENT_MASTER
+  id: AGENT_CLIENT_MASTER
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: AGENT_CLIENT_MASTER
+  nameWithType: LoginStatusEnum.AGENT_CLIENT_MASTER
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.AGENT_CLIENT_MASTER
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: AGENT_CLIENT_MASTER
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 117
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: Agent Client Master.
+  example: []
+  syntax:
+    content: AGENT_CLIENT_MASTER = 20
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.AGENT_CLIENT_MASTER_SUSPENDED
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.AGENT_CLIENT_MASTER_SUSPENDED
+  id: AGENT_CLIENT_MASTER_SUSPENDED
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: AGENT_CLIENT_MASTER_SUSPENDED
+  nameWithType: LoginStatusEnum.AGENT_CLIENT_MASTER_SUSPENDED
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.AGENT_CLIENT_MASTER_SUSPENDED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: AGENT_CLIENT_MASTER_SUSPENDED
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 122
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: Suspended Agent Client Master.
+  example: []
+  syntax:
+    content: AGENT_CLIENT_MASTER_SUSPENDED = 21
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.DANISH_AUTHORIZATION_REQUIRED
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.DANISH_AUTHORIZATION_REQUIRED
+  id: DANISH_AUTHORIZATION_REQUIRED
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: DANISH_AUTHORIZATION_REQUIRED
+  nameWithType: LoginStatusEnum.DANISH_AUTHORIZATION_REQUIRED
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.DANISH_AUTHORIZATION_REQUIRED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: DANISH_AUTHORIZATION_REQUIRED
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 127
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: Danish authorization required.
+  example: []
+  syntax:
+    content: DANISH_AUTHORIZATION_REQUIRED = 22
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.SPAIN_MIGRATION_REQUIRED
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.SPAIN_MIGRATION_REQUIRED
+  id: SPAIN_MIGRATION_REQUIRED
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: SPAIN_MIGRATION_REQUIRED
+  nameWithType: LoginStatusEnum.SPAIN_MIGRATION_REQUIRED
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.SPAIN_MIGRATION_REQUIRED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SPAIN_MIGRATION_REQUIRED
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 132
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: Spain migration required.
+  example: []
+  syntax:
+    content: SPAIN_MIGRATION_REQUIRED = 23
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.DENMARK_MIGRATION_REQUIRED
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.DENMARK_MIGRATION_REQUIRED
+  id: DENMARK_MIGRATION_REQUIRED
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: DENMARK_MIGRATION_REQUIRED
+  nameWithType: LoginStatusEnum.DENMARK_MIGRATION_REQUIRED
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.DENMARK_MIGRATION_REQUIRED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: DENMARK_MIGRATION_REQUIRED
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 137
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: Denmark migration required.
+  example: []
+  syntax:
+    content: DENMARK_MIGRATION_REQUIRED = 24
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.SPANISH_TERMS_ACCEPTANCE_REQUIRED
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.SPANISH_TERMS_ACCEPTANCE_REQUIRED
+  id: SPANISH_TERMS_ACCEPTANCE_REQUIRED
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: SPANISH_TERMS_ACCEPTANCE_REQUIRED
+  nameWithType: LoginStatusEnum.SPANISH_TERMS_ACCEPTANCE_REQUIRED
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.SPANISH_TERMS_ACCEPTANCE_REQUIRED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SPANISH_TERMS_ACCEPTANCE_REQUIRED
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 143
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: >-
+    The latest Spanish terms and conditions version must be accepted. 
+
+    You must login to the website to accept the new conditions.
+  example: []
+  syntax:
+    content: SPANISH_TERMS_ACCEPTANCE_REQUIRED = 25
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.ITALIAN_CONTRACT_ACCEPTANCE_REQUIRED
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.ITALIAN_CONTRACT_ACCEPTANCE_REQUIRED
+  id: ITALIAN_CONTRACT_ACCEPTANCE_REQUIRED
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: ITALIAN_CONTRACT_ACCEPTANCE_REQUIRED
+  nameWithType: LoginStatusEnum.ITALIAN_CONTRACT_ACCEPTANCE_REQUIRED
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.ITALIAN_CONTRACT_ACCEPTANCE_REQUIRED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ITALIAN_CONTRACT_ACCEPTANCE_REQUIRED
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 149
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: >-
+    The latest Italian contract version must be accepted. 
+
+    You must login to the website to accept the new conditions.
+  example: []
+  syntax:
+    content: ITALIAN_CONTRACT_ACCEPTANCE_REQUIRED = 26
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.CERT_AUTH_REQUIRED
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.CERT_AUTH_REQUIRED
+  id: CERT_AUTH_REQUIRED
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: CERT_AUTH_REQUIRED
+  nameWithType: LoginStatusEnum.CERT_AUTH_REQUIRED
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.CERT_AUTH_REQUIRED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: CERT_AUTH_REQUIRED
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 157
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: >-
+    Certificate required or certificate present but could not authenticate with it.  
+
+    Please check that the correct file path is specified and ensure you are entering the correct password. 
+
+    You should ensure that your username and password values are encoded before being sent to the API; 
+
+    if your password contains special characters and isn't encoded, the login request will fail
+  example: []
+  syntax:
+    content: CERT_AUTH_REQUIRED = 27
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.CHANGE_PASSWORD_REQUIRED
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.CHANGE_PASSWORD_REQUIRED
+  id: CHANGE_PASSWORD_REQUIRED
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: CHANGE_PASSWORD_REQUIRED
+  nameWithType: LoginStatusEnum.CHANGE_PASSWORD_REQUIRED
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.CHANGE_PASSWORD_REQUIRED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: CHANGE_PASSWORD_REQUIRED
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 162
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: Change password required.
+  example: []
+  syntax:
+    content: CHANGE_PASSWORD_REQUIRED = 28
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.PERSONAL_MESSAGE_REQUIRED
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.PERSONAL_MESSAGE_REQUIRED
+  id: PERSONAL_MESSAGE_REQUIRED
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: PERSONAL_MESSAGE_REQUIRED
+  nameWithType: LoginStatusEnum.PERSONAL_MESSAGE_REQUIRED
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.PERSONAL_MESSAGE_REQUIRED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: PERSONAL_MESSAGE_REQUIRED
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 167
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: Personal message required for the user.
+  example: []
+  syntax:
+    content: PERSONAL_MESSAGE_REQUIRED = 29
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.INTERNATIONAL_TERMS_ACCEPTANCE_REQUIRED
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.INTERNATIONAL_TERMS_ACCEPTANCE_REQUIRED
+  id: INTERNATIONAL_TERMS_ACCEPTANCE_REQUIRED
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: INTERNATIONAL_TERMS_ACCEPTANCE_REQUIRED
+  nameWithType: LoginStatusEnum.INTERNATIONAL_TERMS_ACCEPTANCE_REQUIRED
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.INTERNATIONAL_TERMS_ACCEPTANCE_REQUIRED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: INTERNATIONAL_TERMS_ACCEPTANCE_REQUIRED
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 172
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: The latest international terms and conditions must be accepted prior to logging in.
+  example: []
+  syntax:
+    content: INTERNATIONAL_TERMS_ACCEPTANCE_REQUIRED = 30
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.EMAIL_LOGIN_NOT_ALLOWED
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.EMAIL_LOGIN_NOT_ALLOWED
+  id: EMAIL_LOGIN_NOT_ALLOWED
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: EMAIL_LOGIN_NOT_ALLOWED
+  nameWithType: LoginStatusEnum.EMAIL_LOGIN_NOT_ALLOWED
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.EMAIL_LOGIN_NOT_ALLOWED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: EMAIL_LOGIN_NOT_ALLOWED
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 177
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: This account has not opted in to log in with the email.
+  example: []
+  syntax:
+    content: EMAIL_LOGIN_NOT_ALLOWED = 31
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.MULTIPLE_USERS_WITH_SAME_CREDENTIALS
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.MULTIPLE_USERS_WITH_SAME_CREDENTIALS
+  id: MULTIPLE_USERS_WITH_SAME_CREDENTIALS
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: MULTIPLE_USERS_WITH_SAME_CREDENTIALS
+  nameWithType: LoginStatusEnum.MULTIPLE_USERS_WITH_SAME_CREDENTIALS
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.MULTIPLE_USERS_WITH_SAME_CREDENTIALS
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MULTIPLE_USERS_WITH_SAME_CREDENTIALS
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 182
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: There is more than one account with the same credential.
+  example: []
+  syntax:
+    content: MULTIPLE_USERS_WITH_SAME_CREDENTIALS = 32
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.ACCOUNT_PENDING_PASSWORD_CHANGE
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.ACCOUNT_PENDING_PASSWORD_CHANGE
+  id: ACCOUNT_PENDING_PASSWORD_CHANGE
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: ACCOUNT_PENDING_PASSWORD_CHANGE
+  nameWithType: LoginStatusEnum.ACCOUNT_PENDING_PASSWORD_CHANGE
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.ACCOUNT_PENDING_PASSWORD_CHANGE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ACCOUNT_PENDING_PASSWORD_CHANGE
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 187
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: The account must undergo password recovery to reactivate via https://identitysso.betfair.com/view/recoverpassword
+  example: []
+  syntax:
+    content: ACCOUNT_PENDING_PASSWORD_CHANGE = 33
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.TEMPORARY_BAN_TOO_MANY_REQUESTS
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.TEMPORARY_BAN_TOO_MANY_REQUESTS
+  id: TEMPORARY_BAN_TOO_MANY_REQUESTS
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: TEMPORARY_BAN_TOO_MANY_REQUESTS
+  nameWithType: LoginStatusEnum.TEMPORARY_BAN_TOO_MANY_REQUESTS
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.TEMPORARY_BAN_TOO_MANY_REQUESTS
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: TEMPORARY_BAN_TOO_MANY_REQUESTS
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 193
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: >-
+    The limit for successful login requests per minute has been exceeded. 
+
+    New login attempts will be banned for 20 minutes
+  example: []
+  syntax:
+    content: TEMPORARY_BAN_TOO_MANY_REQUESTS = 34
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.ITALIAN_PROFILING_ACCEPTANCE_REQUIRED
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.ITALIAN_PROFILING_ACCEPTANCE_REQUIRED
+  id: ITALIAN_PROFILING_ACCEPTANCE_REQUIRED
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: ITALIAN_PROFILING_ACCEPTANCE_REQUIRED
+  nameWithType: LoginStatusEnum.ITALIAN_PROFILING_ACCEPTANCE_REQUIRED
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.ITALIAN_PROFILING_ACCEPTANCE_REQUIRED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ITALIAN_PROFILING_ACCEPTANCE_REQUIRED
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 198
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: You must login to the website to accept the new conditions.
+  example: []
+  syntax:
+    content: ITALIAN_PROFILING_ACCEPTANCE_REQUIRED = 35
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.AUTHORIZED_ONLY_FOR_DOMAIN_RO
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.AUTHORIZED_ONLY_FOR_DOMAIN_RO
+  id: AUTHORIZED_ONLY_FOR_DOMAIN_RO
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: AUTHORIZED_ONLY_FOR_DOMAIN_RO
+  nameWithType: LoginStatusEnum.AUTHORIZED_ONLY_FOR_DOMAIN_RO
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.AUTHORIZED_ONLY_FOR_DOMAIN_RO
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: AUTHORIZED_ONLY_FOR_DOMAIN_RO
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 203
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: You are attempting to login to the Betfair Romania domain with a non .ro account.
+  example: []
+  syntax:
+    content: AUTHORIZED_ONLY_FOR_DOMAIN_RO = 36
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.AUTHORIZED_ONLY_FOR_DOMAIN_SE
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.AUTHORIZED_ONLY_FOR_DOMAIN_SE
+  id: AUTHORIZED_ONLY_FOR_DOMAIN_SE
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: AUTHORIZED_ONLY_FOR_DOMAIN_SE
+  nameWithType: LoginStatusEnum.AUTHORIZED_ONLY_FOR_DOMAIN_SE
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.AUTHORIZED_ONLY_FOR_DOMAIN_SE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: AUTHORIZED_ONLY_FOR_DOMAIN_SE
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 208
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: You are attempting to login to the Betfair Swedish domain with a non .se account.
+  example: []
+  syntax:
+    content: AUTHORIZED_ONLY_FOR_DOMAIN_SE = 37
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.SWEDEN_NATIONAL_IDENTIFIER_REQUIRED
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.SWEDEN_NATIONAL_IDENTIFIER_REQUIRED
+  id: SWEDEN_NATIONAL_IDENTIFIER_REQUIRED
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: SWEDEN_NATIONAL_IDENTIFIER_REQUIRED
+  nameWithType: LoginStatusEnum.SWEDEN_NATIONAL_IDENTIFIER_REQUIRED
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.SWEDEN_NATIONAL_IDENTIFIER_REQUIRED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SWEDEN_NATIONAL_IDENTIFIER_REQUIRED
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 213
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: You must provided your Swedish National identifier via Betfair.se before proceeding.
+  example: []
+  syntax:
+    content: SWEDEN_NATIONAL_IDENTIFIER_REQUIRED = 38
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.SWEDEN_BANK_ID_VERIFICATION_REQUIRED
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.SWEDEN_BANK_ID_VERIFICATION_REQUIRED
+  id: SWEDEN_BANK_ID_VERIFICATION_REQUIRED
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: SWEDEN_BANK_ID_VERIFICATION_REQUIRED
+  nameWithType: LoginStatusEnum.SWEDEN_BANK_ID_VERIFICATION_REQUIRED
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.SWEDEN_BANK_ID_VERIFICATION_REQUIRED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SWEDEN_BANK_ID_VERIFICATION_REQUIRED
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 218
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: You must provided your Swedish bank id via Betfair.se before proceeding.
+  example: []
+  syntax:
+    content: SWEDEN_BANK_ID_VERIFICATION_REQUIRED = 39
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.ACTIONS_REQUIRED
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.ACTIONS_REQUIRED
+  id: ACTIONS_REQUIRED
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: ACTIONS_REQUIRED
+  nameWithType: LoginStatusEnum.ACTIONS_REQUIRED
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.ACTIONS_REQUIRED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ACTIONS_REQUIRED
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 223
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: You must login to https://www.betfair.com to provide the missing information.
+  example: []
+  syntax:
+    content: ACTIONS_REQUIRED = 40
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum.INPUT_VALIDATION_ERROR
+  commentId: F:BetfairDotNet.Enums.Account.LoginStatusEnum.INPUT_VALIDATION_ERROR
+  id: INPUT_VALIDATION_ERROR
+  parent: BetfairDotNet.Enums.Account.LoginStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: INPUT_VALIDATION_ERROR
+  nameWithType: LoginStatusEnum.INPUT_VALIDATION_ERROR
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum.INPUT_VALIDATION_ERROR
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: INPUT_VALIDATION_ERROR
+    path: ../src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs
+    startLine: 229
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: >-
+    There is a problem with the data validity contained within the request. 
+
+    Please check that the request (including headers) is in the correct format,
+  example: []
+  syntax:
+    content: INPUT_VALIDATION_ERROR = 41
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+references:
+- uid: BetfairDotNet.Enums.Account
+  commentId: N:BetfairDotNet.Enums.Account
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Account
+  nameWithType: BetfairDotNet.Enums.Account
+  fullName: BetfairDotNet.Enums.Account
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Account
+    name: Account
+    href: BetfairDotNet.Enums.Account.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Account
+    name: Account
+    href: BetfairDotNet.Enums.Account.html
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum
+  commentId: T:BetfairDotNet.Enums.Account.LoginStatusEnum
+  parent: BetfairDotNet.Enums.Account
+  href: BetfairDotNet.Enums.Account.LoginStatusEnum.html
+  name: LoginStatusEnum
+  nameWithType: LoginStatusEnum
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum

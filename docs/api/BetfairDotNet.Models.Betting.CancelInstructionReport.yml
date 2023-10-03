@@ -1,0 +1,723 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Models.Betting.CancelInstructionReport
+  commentId: T:BetfairDotNet.Models.Betting.CancelInstructionReport
+  id: CancelInstructionReport
+  parent: BetfairDotNet.Models.Betting
+  children:
+  - BetfairDotNet.Models.Betting.CancelInstructionReport.CancelledDate
+  - BetfairDotNet.Models.Betting.CancelInstructionReport.ErrorCode
+  - BetfairDotNet.Models.Betting.CancelInstructionReport.Instruction
+  - BetfairDotNet.Models.Betting.CancelInstructionReport.SizeCancelled
+  - BetfairDotNet.Models.Betting.CancelInstructionReport.Status
+  langs:
+  - csharp
+  - vb
+  name: CancelInstructionReport
+  nameWithType: CancelInstructionReport
+  fullName: BetfairDotNet.Models.Betting.CancelInstructionReport
+  type: Class
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/CancelInstructionReport.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: CancelInstructionReport
+    path: ../src/BetfairDotNet/Models/Betting/CancelInstructionReport.cs
+    startLine: 9
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The response to a cancelInstructions request.
+  example: []
+  syntax:
+    content: 'public sealed record CancelInstructionReport : IEquatable<CancelInstructionReport>'
+    content.vb: Public NotInheritable Class CancelInstructionReport Implements IEquatable(Of CancelInstructionReport)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{BetfairDotNet.Models.Betting.CancelInstructionReport}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BetfairDotNet.Models.Betting.CancelInstructionReport.Status
+  commentId: P:BetfairDotNet.Models.Betting.CancelInstructionReport.Status
+  id: Status
+  parent: BetfairDotNet.Models.Betting.CancelInstructionReport
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: CancelInstructionReport.Status
+  fullName: BetfairDotNet.Models.Betting.CancelInstructionReport.Status
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/CancelInstructionReport.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Status
+    path: ../src/BetfairDotNet/Models/Betting/CancelInstructionReport.cs
+    startLine: 14
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: Whether the command succeeded or failed.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("status")]
+
+      [JsonRequired]
+
+      public required InstructionReportStatusEnum Status { get; init; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportStatusEnum
+    content.vb: >-
+      <JsonPropertyName("status")>
+
+      <JsonRequired>
+
+      Public Property Status As InstructionReportStatusEnum
+  overload: BetfairDotNet.Models.Betting.CancelInstructionReport.Status*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: status
+  - type: System.Text.Json.Serialization.JsonRequiredAttribute
+    ctor: System.Text.Json.Serialization.JsonRequiredAttribute.#ctor
+    arguments: []
+- uid: BetfairDotNet.Models.Betting.CancelInstructionReport.ErrorCode
+  commentId: P:BetfairDotNet.Models.Betting.CancelInstructionReport.ErrorCode
+  id: ErrorCode
+  parent: BetfairDotNet.Models.Betting.CancelInstructionReport
+  langs:
+  - csharp
+  - vb
+  name: ErrorCode
+  nameWithType: CancelInstructionReport.ErrorCode
+  fullName: BetfairDotNet.Models.Betting.CancelInstructionReport.ErrorCode
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/CancelInstructionReport.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ErrorCode
+    path: ../src/BetfairDotNet/Models/Betting/CancelInstructionReport.cs
+    startLine: 20
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: Cause of failure, or null if command succeeds.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("errorCode")]
+
+      public InstructionReportErrorCodeEnum ErrorCode { get; init; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+    content.vb: >-
+      <JsonPropertyName("errorCode")>
+
+      Public Property ErrorCode As InstructionReportErrorCodeEnum
+  overload: BetfairDotNet.Models.Betting.CancelInstructionReport.ErrorCode*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: errorCode
+- uid: BetfairDotNet.Models.Betting.CancelInstructionReport.Instruction
+  commentId: P:BetfairDotNet.Models.Betting.CancelInstructionReport.Instruction
+  id: Instruction
+  parent: BetfairDotNet.Models.Betting.CancelInstructionReport
+  langs:
+  - csharp
+  - vb
+  name: Instruction
+  nameWithType: CancelInstructionReport.Instruction
+  fullName: BetfairDotNet.Models.Betting.CancelInstructionReport.Instruction
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/CancelInstructionReport.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Instruction
+    path: ../src/BetfairDotNet/Models/Betting/CancelInstructionReport.cs
+    startLine: 26
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The instruction that was requested.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("instruction")]
+
+      public CancelInstruction? Instruction { get; init; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Models.Betting.CancelInstruction
+    content.vb: >-
+      <JsonPropertyName("instruction")>
+
+      Public Property Instruction As CancelInstruction
+  overload: BetfairDotNet.Models.Betting.CancelInstructionReport.Instruction*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: instruction
+- uid: BetfairDotNet.Models.Betting.CancelInstructionReport.SizeCancelled
+  commentId: P:BetfairDotNet.Models.Betting.CancelInstructionReport.SizeCancelled
+  id: SizeCancelled
+  parent: BetfairDotNet.Models.Betting.CancelInstructionReport
+  langs:
+  - csharp
+  - vb
+  name: SizeCancelled
+  nameWithType: CancelInstructionReport.SizeCancelled
+  fullName: BetfairDotNet.Models.Betting.CancelInstructionReport.SizeCancelled
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/CancelInstructionReport.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SizeCancelled
+    path: ../src/BetfairDotNet/Models/Betting/CancelInstructionReport.cs
+    startLine: 32
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The proportion of the bet that was cancelled.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("sizeCancelled")]
+
+      [JsonRequired]
+
+      public double SizeCancelled { get; init; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonPropertyName("sizeCancelled")>
+
+      <JsonRequired>
+
+      Public Property SizeCancelled As Double
+  overload: BetfairDotNet.Models.Betting.CancelInstructionReport.SizeCancelled*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: sizeCancelled
+  - type: System.Text.Json.Serialization.JsonRequiredAttribute
+    ctor: System.Text.Json.Serialization.JsonRequiredAttribute.#ctor
+    arguments: []
+- uid: BetfairDotNet.Models.Betting.CancelInstructionReport.CancelledDate
+  commentId: P:BetfairDotNet.Models.Betting.CancelInstructionReport.CancelledDate
+  id: CancelledDate
+  parent: BetfairDotNet.Models.Betting.CancelInstructionReport
+  langs:
+  - csharp
+  - vb
+  name: CancelledDate
+  nameWithType: CancelInstructionReport.CancelledDate
+  fullName: BetfairDotNet.Models.Betting.CancelInstructionReport.CancelledDate
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/CancelInstructionReport.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: CancelledDate
+    path: ../src/BetfairDotNet/Models/Betting/CancelInstructionReport.cs
+    startLine: 38
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The time the bet was cancelled.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("cancelledDate")]
+
+      public DateTime? CancelledDate { get; init; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: >-
+      <JsonPropertyName("cancelledDate")>
+
+      Public Property CancelledDate As Date?
+  overload: BetfairDotNet.Models.Betting.CancelInstructionReport.CancelledDate*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: cancelledDate
+references:
+- uid: BetfairDotNet.Models.Betting
+  commentId: N:BetfairDotNet.Models.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Betting
+  nameWithType: BetfairDotNet.Models.Betting
+  fullName: BetfairDotNet.Models.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Betting
+    name: Betting
+    href: BetfairDotNet.Models.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Betting
+    name: Betting
+    href: BetfairDotNet.Models.Betting.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{BetfairDotNet.Models.Betting.CancelInstructionReport}
+  commentId: T:System.IEquatable{BetfairDotNet.Models.Betting.CancelInstructionReport}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<CancelInstructionReport>
+  nameWithType: IEquatable<CancelInstructionReport>
+  fullName: System.IEquatable<BetfairDotNet.Models.Betting.CancelInstructionReport>
+  nameWithType.vb: IEquatable(Of CancelInstructionReport)
+  fullName.vb: System.IEquatable(Of BetfairDotNet.Models.Betting.CancelInstructionReport)
+  name.vb: IEquatable(Of CancelInstructionReport)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: BetfairDotNet.Models.Betting.CancelInstructionReport
+    name: CancelInstructionReport
+    href: BetfairDotNet.Models.Betting.CancelInstructionReport.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Betting.CancelInstructionReport
+    name: CancelInstructionReport
+    href: BetfairDotNet.Models.Betting.CancelInstructionReport.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BetfairDotNet.Models.Betting.CancelInstructionReport.Status*
+  commentId: Overload:BetfairDotNet.Models.Betting.CancelInstructionReport.Status
+  href: BetfairDotNet.Models.Betting.CancelInstructionReport.html#BetfairDotNet.Models.Betting.CancelInstructionReport.Status
+  name: Status
+  nameWithType: CancelInstructionReport.Status
+  fullName: BetfairDotNet.Models.Betting.CancelInstructionReport.Status
+- uid: BetfairDotNet.Enums.Betting.InstructionReportStatusEnum
+  commentId: T:BetfairDotNet.Enums.Betting.InstructionReportStatusEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.InstructionReportStatusEnum.html
+  name: InstructionReportStatusEnum
+  nameWithType: InstructionReportStatusEnum
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportStatusEnum
+- uid: BetfairDotNet.Enums.Betting
+  commentId: N:BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Betting
+  nameWithType: BetfairDotNet.Enums.Betting
+  fullName: BetfairDotNet.Enums.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+- uid: BetfairDotNet.Models.Betting.CancelInstructionReport.ErrorCode*
+  commentId: Overload:BetfairDotNet.Models.Betting.CancelInstructionReport.ErrorCode
+  href: BetfairDotNet.Models.Betting.CancelInstructionReport.html#BetfairDotNet.Models.Betting.CancelInstructionReport.ErrorCode
+  name: ErrorCode
+  nameWithType: CancelInstructionReport.ErrorCode
+  fullName: BetfairDotNet.Models.Betting.CancelInstructionReport.ErrorCode
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  commentId: T:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.html
+  name: InstructionReportErrorCodeEnum
+  nameWithType: InstructionReportErrorCodeEnum
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+- uid: BetfairDotNet.Models.Betting.CancelInstructionReport.Instruction*
+  commentId: Overload:BetfairDotNet.Models.Betting.CancelInstructionReport.Instruction
+  href: BetfairDotNet.Models.Betting.CancelInstructionReport.html#BetfairDotNet.Models.Betting.CancelInstructionReport.Instruction
+  name: Instruction
+  nameWithType: CancelInstructionReport.Instruction
+  fullName: BetfairDotNet.Models.Betting.CancelInstructionReport.Instruction
+- uid: BetfairDotNet.Models.Betting.CancelInstruction
+  commentId: T:BetfairDotNet.Models.Betting.CancelInstruction
+  parent: BetfairDotNet.Models.Betting
+  href: BetfairDotNet.Models.Betting.CancelInstruction.html
+  name: CancelInstruction
+  nameWithType: CancelInstruction
+  fullName: BetfairDotNet.Models.Betting.CancelInstruction
+- uid: BetfairDotNet.Models.Betting.CancelInstructionReport.SizeCancelled*
+  commentId: Overload:BetfairDotNet.Models.Betting.CancelInstructionReport.SizeCancelled
+  href: BetfairDotNet.Models.Betting.CancelInstructionReport.html#BetfairDotNet.Models.Betting.CancelInstructionReport.SizeCancelled
+  name: SizeCancelled
+  nameWithType: CancelInstructionReport.SizeCancelled
+  fullName: BetfairDotNet.Models.Betting.CancelInstructionReport.SizeCancelled
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: BetfairDotNet.Models.Betting.CancelInstructionReport.CancelledDate*
+  commentId: Overload:BetfairDotNet.Models.Betting.CancelInstructionReport.CancelledDate
+  href: BetfairDotNet.Models.Betting.CancelInstructionReport.html#BetfairDotNet.Models.Betting.CancelInstructionReport.CancelledDate
+  name: CancelledDate
+  nameWithType: CancelInstructionReport.CancelledDate
+  fullName: BetfairDotNet.Models.Betting.CancelInstructionReport.CancelledDate
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime?
+  nameWithType: DateTime?
+  fullName: System.DateTime?
+  nameWithType.vb: Date?
+  fullName.vb: Date?
+  name.vb: Date?
+  spec.csharp:
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+  spec.vb:
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

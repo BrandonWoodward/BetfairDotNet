@@ -1,0 +1,620 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Models.Betting.ExBestOffersOverrides
+  commentId: T:BetfairDotNet.Models.Betting.ExBestOffersOverrides
+  id: ExBestOffersOverrides
+  parent: BetfairDotNet.Models.Betting
+  children:
+  - BetfairDotNet.Models.Betting.ExBestOffersOverrides.BestPricesDepth
+  - BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLiabilityFactor
+  - BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLiabilityThreshold
+  - BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLimit
+  - BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpModel
+  langs:
+  - csharp
+  - vb
+  name: ExBestOffersOverrides
+  nameWithType: ExBestOffersOverrides
+  fullName: BetfairDotNet.Models.Betting.ExBestOffersOverrides
+  type: Class
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/ExBestOffersOverrides.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ExBestOffersOverrides
+    path: ../src/BetfairDotNet/Models/Betting/ExBestOffersOverrides.cs
+    startLine: 9
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: Options to alter the default representation of best offer prices.
+  example: []
+  syntax:
+    content: public sealed class ExBestOffersOverrides
+    content.vb: Public NotInheritable Class ExBestOffersOverrides
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BetfairDotNet.Models.Betting.ExBestOffersOverrides.BestPricesDepth
+  commentId: P:BetfairDotNet.Models.Betting.ExBestOffersOverrides.BestPricesDepth
+  id: BestPricesDepth
+  parent: BetfairDotNet.Models.Betting.ExBestOffersOverrides
+  langs:
+  - csharp
+  - vb
+  name: BestPricesDepth
+  nameWithType: ExBestOffersOverrides.BestPricesDepth
+  fullName: BetfairDotNet.Models.Betting.ExBestOffersOverrides.BestPricesDepth
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/ExBestOffersOverrides.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: BestPricesDepth
+    path: ../src/BetfairDotNet/Models/Betting/ExBestOffersOverrides.cs
+    startLine: 17
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: Represents the maximum number of prices to return on each side for each runner.
+  remarks: Defaults to 3 if unspecified. The maximum depth returned is 10.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("bestPricesDepth")]
+
+      public int BestPricesDepth { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <JsonPropertyName("bestPricesDepth")>
+
+      Public Property BestPricesDepth As Integer
+  overload: BetfairDotNet.Models.Betting.ExBestOffersOverrides.BestPricesDepth*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: bestPricesDepth
+- uid: BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpModel
+  commentId: P:BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpModel
+  id: RollUpModel
+  parent: BetfairDotNet.Models.Betting.ExBestOffersOverrides
+  langs:
+  - csharp
+  - vb
+  name: RollUpModel
+  nameWithType: ExBestOffersOverrides.RollUpModel
+  fullName: BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpModel
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/ExBestOffersOverrides.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: RollUpModel
+    path: ../src/BetfairDotNet/Models/Betting/ExBestOffersOverrides.cs
+    startLine: 26
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: Represents the model used for rolling up available sizes.
+  remarks: Defaults to the STAKE rollup model with a rollupLimit equivalent to the minimum stake in the specified currency if unspecified.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("rollupModel")]
+
+      public RollupModelEnum RollUpModel { get; set; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Enums.Betting.RollupModelEnum
+    content.vb: >-
+      <JsonPropertyName("rollupModel")>
+
+      Public Property RollUpModel As RollupModelEnum
+  overload: BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpModel*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: rollupModel
+- uid: BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLimit
+  commentId: P:BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLimit
+  id: RollUpLimit
+  parent: BetfairDotNet.Models.Betting.ExBestOffersOverrides
+  langs:
+  - csharp
+  - vb
+  name: RollUpLimit
+  nameWithType: ExBestOffersOverrides.RollUpLimit
+  fullName: BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLimit
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/ExBestOffersOverrides.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: RollUpLimit
+    path: ../src/BetfairDotNet/Models/Betting/ExBestOffersOverrides.cs
+    startLine: 36
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: Indicates the volume limit when rolling up returned sizes.
+  remarks: >-
+    The definition of the limit varies based on the <xref href="BetfairDotNet.Enums.Betting.RollupModelEnum" data-throw-if-not-resolved="false"></xref>. Defaults to the minimum stake if not provided. 
+
+    This value is ignored if no rollup model is specified.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("rollupLimit")]
+
+      public int RollUpLimit { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <JsonPropertyName("rollupLimit")>
+
+      Public Property RollUpLimit As Integer
+  overload: BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLimit*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: rollupLimit
+- uid: BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLiabilityThreshold
+  commentId: P:BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLiabilityThreshold
+  id: RollUpLiabilityThreshold
+  parent: BetfairDotNet.Models.Betting.ExBestOffersOverrides
+  langs:
+  - csharp
+  - vb
+  name: RollUpLiabilityThreshold
+  nameWithType: ExBestOffersOverrides.RollUpLiabilityThreshold
+  fullName: BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLiabilityThreshold
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/ExBestOffersOverrides.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: RollUpLiabilityThreshold
+    path: ../src/BetfairDotNet/Models/Betting/ExBestOffersOverrides.cs
+    startLine: 46
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The threshold at which the rollup model switches from stake-based to liability-based.
+  remarks: >-
+    Only applicable when <xref href="BetfairDotNet.Enums.Betting.RollupModelEnum" data-throw-if-not-resolved="false"></xref> is MANAGED_LIABILITY. The rollup switches at the smallest lay price 
+
+    greater than or equal to this threshold. The exact service level default is TBD. Not yet supported.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("rollupLiabilityThreshold")]
+
+      public double RollUpLiabilityThreshold { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonPropertyName("rollupLiabilityThreshold")>
+
+      Public Property RollUpLiabilityThreshold As Double
+  overload: BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLiabilityThreshold*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: rollupLiabilityThreshold
+- uid: BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLiabilityFactor
+  commentId: P:BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLiabilityFactor
+  id: RollUpLiabilityFactor
+  parent: BetfairDotNet.Models.Betting.ExBestOffersOverrides
+  langs:
+  - csharp
+  - vb
+  name: RollUpLiabilityFactor
+  nameWithType: ExBestOffersOverrides.RollUpLiabilityFactor
+  fullName: BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLiabilityFactor
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/ExBestOffersOverrides.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: RollUpLiabilityFactor
+    path: ../src/BetfairDotNet/Models/Betting/ExBestOffersOverrides.cs
+    startLine: 57
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: Represents the factor of liability deemed acceptable by the user.
+  remarks: >-
+    Only applicable when <xref href="BetfairDotNet.Enums.Betting.RollupModelEnum" data-throw-if-not-resolved="false"></xref> is MANAGED_LIABILITY. After reaching the <xref href="BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLiabilityThreshold" data-throw-if-not-resolved="false"></xref> price,
+
+    subsequent volumes will be rolled up to a minimum value where the liability meets or exceeds this factor times the <xref href="BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLimit" data-throw-if-not-resolved="false"></xref>.
+
+    The service level default is 5. Not yet supported.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("rollupLiabilityFactor")]
+
+      public int RollUpLiabilityFactor { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <JsonPropertyName("rollupLiabilityFactor")>
+
+      Public Property RollUpLiabilityFactor As Integer
+  overload: BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLiabilityFactor*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: rollupLiabilityFactor
+references:
+- uid: BetfairDotNet.Models.Betting
+  commentId: N:BetfairDotNet.Models.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Betting
+  nameWithType: BetfairDotNet.Models.Betting
+  fullName: BetfairDotNet.Models.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Betting
+    name: Betting
+    href: BetfairDotNet.Models.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Betting
+    name: Betting
+    href: BetfairDotNet.Models.Betting.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BetfairDotNet.Models.Betting.ExBestOffersOverrides.BestPricesDepth*
+  commentId: Overload:BetfairDotNet.Models.Betting.ExBestOffersOverrides.BestPricesDepth
+  href: BetfairDotNet.Models.Betting.ExBestOffersOverrides.html#BetfairDotNet.Models.Betting.ExBestOffersOverrides.BestPricesDepth
+  name: BestPricesDepth
+  nameWithType: ExBestOffersOverrides.BestPricesDepth
+  fullName: BetfairDotNet.Models.Betting.ExBestOffersOverrides.BestPricesDepth
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpModel*
+  commentId: Overload:BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpModel
+  href: BetfairDotNet.Models.Betting.ExBestOffersOverrides.html#BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpModel
+  name: RollUpModel
+  nameWithType: ExBestOffersOverrides.RollUpModel
+  fullName: BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpModel
+- uid: BetfairDotNet.Enums.Betting.RollupModelEnum
+  commentId: T:BetfairDotNet.Enums.Betting.RollupModelEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.RollupModelEnum.html
+  name: RollupModelEnum
+  nameWithType: RollupModelEnum
+  fullName: BetfairDotNet.Enums.Betting.RollupModelEnum
+- uid: BetfairDotNet.Enums.Betting
+  commentId: N:BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Betting
+  nameWithType: BetfairDotNet.Enums.Betting
+  fullName: BetfairDotNet.Enums.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+- uid: BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLimit*
+  commentId: Overload:BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLimit
+  href: BetfairDotNet.Models.Betting.ExBestOffersOverrides.html#BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLimit
+  name: RollUpLimit
+  nameWithType: ExBestOffersOverrides.RollUpLimit
+  fullName: BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLimit
+- uid: BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLiabilityThreshold*
+  commentId: Overload:BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLiabilityThreshold
+  href: BetfairDotNet.Models.Betting.ExBestOffersOverrides.html#BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLiabilityThreshold
+  name: RollUpLiabilityThreshold
+  nameWithType: ExBestOffersOverrides.RollUpLiabilityThreshold
+  fullName: BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLiabilityThreshold
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLiabilityThreshold
+  commentId: P:BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLiabilityThreshold
+  href: BetfairDotNet.Models.Betting.ExBestOffersOverrides.html#BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLiabilityThreshold
+  name: RollUpLiabilityThreshold
+  nameWithType: ExBestOffersOverrides.RollUpLiabilityThreshold
+  fullName: BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLiabilityThreshold
+- uid: BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLimit
+  commentId: P:BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLimit
+  href: BetfairDotNet.Models.Betting.ExBestOffersOverrides.html#BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLimit
+  name: RollUpLimit
+  nameWithType: ExBestOffersOverrides.RollUpLimit
+  fullName: BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLimit
+- uid: BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLiabilityFactor*
+  commentId: Overload:BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLiabilityFactor
+  href: BetfairDotNet.Models.Betting.ExBestOffersOverrides.html#BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLiabilityFactor
+  name: RollUpLiabilityFactor
+  nameWithType: ExBestOffersOverrides.RollUpLiabilityFactor
+  fullName: BetfairDotNet.Models.Betting.ExBestOffersOverrides.RollUpLiabilityFactor

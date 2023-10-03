@@ -1,0 +1,323 @@
+### YamlMime:TableOfContent
+items:
+- uid: BetfairDotNet
+  name: BetfairDotNet
+  items:
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    items:
+    - uid: BetfairDotNet.Enums.Account
+      name: Account
+      items:
+      - uid: BetfairDotNet.Enums.Account.IncludeItemEnum
+        name: IncludeItemEnum
+      - uid: BetfairDotNet.Enums.Account.ItemClassEnum
+        name: ItemClassEnum
+      - uid: BetfairDotNet.Enums.Account.LoginStatusEnum
+        name: LoginStatusEnum
+      - uid: BetfairDotNet.Enums.Account.WalletEnum
+        name: WalletEnum
+    - uid: BetfairDotNet.Enums.Betting
+      name: Betting
+      items:
+      - uid: BetfairDotNet.Enums.Betting.BetStatusEnum
+        name: BetStatusEnum
+      - uid: BetfairDotNet.Enums.Betting.BetTargetTypeEnum
+        name: BetTargetTypeEnum
+      - uid: BetfairDotNet.Enums.Betting.BetTypeEnum
+        name: BetTypeEnum
+      - uid: BetfairDotNet.Enums.Betting.ExecutionReportErrorCodeEnum
+        name: ExecutionReportErrorCodeEnum
+      - uid: BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum
+        name: ExecutionReportStatusEnum
+      - uid: BetfairDotNet.Enums.Betting.GroupByEnum
+        name: GroupByEnum
+      - uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+        name: InstructionReportErrorCodeEnum
+      - uid: BetfairDotNet.Enums.Betting.InstructionReportStatusEnum
+        name: InstructionReportStatusEnum
+      - uid: BetfairDotNet.Enums.Betting.MarketBettingTypeEnum
+        name: MarketBettingTypeEnum
+      - uid: BetfairDotNet.Enums.Betting.MarketProjectionEnum
+        name: MarketProjectionEnum
+      - uid: BetfairDotNet.Enums.Betting.MarketSortEnum
+        name: MarketSortEnum
+      - uid: BetfairDotNet.Enums.Betting.MarketStatusEnum
+        name: MarketStatusEnum
+      - uid: BetfairDotNet.Enums.Betting.MatchProjectionEnum
+        name: MatchProjectionEnum
+      - uid: BetfairDotNet.Enums.Betting.OrderByEnum
+        name: OrderByEnum
+      - uid: BetfairDotNet.Enums.Betting.OrderProjectionEnum
+        name: OrderProjectionEnum
+      - uid: BetfairDotNet.Enums.Betting.OrderStatusEnum
+        name: OrderStatusEnum
+      - uid: BetfairDotNet.Enums.Betting.OrderTypeEnum
+        name: OrderTypeEnum
+      - uid: BetfairDotNet.Enums.Betting.PersistenceTypeEnum
+        name: PersistenceTypeEnum
+      - uid: BetfairDotNet.Enums.Betting.PriceDataEnum
+        name: PriceDataEnum
+      - uid: BetfairDotNet.Enums.Betting.PriceLadderTypeEnum
+        name: PriceLadderTypeEnum
+      - uid: BetfairDotNet.Enums.Betting.RollupModelEnum
+        name: RollupModelEnum
+      - uid: BetfairDotNet.Enums.Betting.RunnerStatusEnum
+        name: RunnerStatusEnum
+      - uid: BetfairDotNet.Enums.Betting.SideEnum
+        name: SideEnum
+      - uid: BetfairDotNet.Enums.Betting.SortDirEnum
+        name: SortDirEnum
+      - uid: BetfairDotNet.Enums.Betting.TimeGranularityEnum
+        name: TimeGranularityEnum
+      - uid: BetfairDotNet.Enums.Betting.TimeInForceEnum
+        name: TimeInForceEnum
+    - uid: BetfairDotNet.Enums.Heartbeat
+      name: Heartbeat
+      items:
+      - uid: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum
+        name: ActionPerformedEnum
+    - uid: BetfairDotNet.Enums.Streaming
+      name: Streaming
+      items:
+      - uid: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum
+        name: MarketPriceFilterEnum
+  - uid: BetfairDotNet.Handlers
+    name: Handlers
+    items:
+    - uid: BetfairDotNet.Handlers.StreamSubscriptionHandler
+      name: StreamSubscriptionHandler
+  - uid: BetfairDotNet.Interfaces
+    name: Interfaces
+    items:
+    - uid: BetfairDotNet.Interfaces.IBetfairClient
+      name: IBetfairClient
+  - uid: BetfairDotNet.Models
+    name: Models
+    items:
+    - uid: BetfairDotNet.Models.Account
+      name: Account
+      items:
+      - uid: BetfairDotNet.Models.Account.AccountDetailsResponse
+        name: AccountDetailsResponse
+      - uid: BetfairDotNet.Models.Account.AccountFundsResponse
+        name: AccountFundsResponse
+      - uid: BetfairDotNet.Models.Account.AccountStatementReport
+        name: AccountStatementReport
+      - uid: BetfairDotNet.Models.Account.CurrencyRate
+        name: CurrencyRate
+      - uid: BetfairDotNet.Models.Account.StatementItem
+        name: StatementItem
+    - uid: BetfairDotNet.Models.Betting
+      name: Betting
+      items:
+      - uid: BetfairDotNet.Models.Betting.CancelExecutionReport
+        name: CancelExecutionReport
+      - uid: BetfairDotNet.Models.Betting.CancelInstruction
+        name: CancelInstruction
+      - uid: BetfairDotNet.Models.Betting.CancelInstructionReport
+        name: CancelInstructionReport
+      - uid: BetfairDotNet.Models.Betting.ClearedOrderSummary
+        name: ClearedOrderSummary
+      - uid: BetfairDotNet.Models.Betting.ClearedOrderSummaryReport
+        name: ClearedOrderSummaryReport
+      - uid: BetfairDotNet.Models.Betting.Competition
+        name: Competition
+      - uid: BetfairDotNet.Models.Betting.CompetitionResult
+        name: CompetitionResult
+      - uid: BetfairDotNet.Models.Betting.CountryCodeResult
+        name: CountryCodeResult
+      - uid: BetfairDotNet.Models.Betting.CurrentOrderSummary
+        name: CurrentOrderSummary
+      - uid: BetfairDotNet.Models.Betting.CurrentOrderSummaryReport
+        name: CurrentOrderSummaryReport
+      - uid: BetfairDotNet.Models.Betting.Event
+        name: Event
+      - uid: BetfairDotNet.Models.Betting.EventResult
+        name: EventResult
+      - uid: BetfairDotNet.Models.Betting.EventType
+        name: EventType
+      - uid: BetfairDotNet.Models.Betting.EventTypeResult
+        name: EventTypeResult
+      - uid: BetfairDotNet.Models.Betting.ExBestOffersOverrides
+        name: ExBestOffersOverrides
+      - uid: BetfairDotNet.Models.Betting.ExchangePrices
+        name: ExchangePrices
+      - uid: BetfairDotNet.Models.Betting.ItemDescription
+        name: ItemDescription
+      - uid: BetfairDotNet.Models.Betting.KeyLineDescription
+        name: KeyLineDescription
+      - uid: BetfairDotNet.Models.Betting.KeyLineSelection
+        name: KeyLineSelection
+      - uid: BetfairDotNet.Models.Betting.LimitOnCloseOrder
+        name: LimitOnCloseOrder
+      - uid: BetfairDotNet.Models.Betting.LimitOrder
+        name: LimitOrder
+      - uid: BetfairDotNet.Models.Betting.MarketBook
+        name: MarketBook
+      - uid: BetfairDotNet.Models.Betting.MarketCatalogue
+        name: MarketCatalogue
+      - uid: BetfairDotNet.Models.Betting.MarketDescription
+        name: MarketDescription
+      - uid: BetfairDotNet.Models.Betting.MarketFilter
+        name: MarketFilter
+      - uid: BetfairDotNet.Models.Betting.MarketLineRangeInfo
+        name: MarketLineRangeInfo
+      - uid: BetfairDotNet.Models.Betting.MarketOnCloseOrder
+        name: MarketOnCloseOrder
+      - uid: BetfairDotNet.Models.Betting.MarketProfitAndLoss
+        name: MarketProfitAndLoss
+      - uid: BetfairDotNet.Models.Betting.MarketRates
+        name: MarketRates
+      - uid: BetfairDotNet.Models.Betting.MarketTypeResult
+        name: MarketTypeResult
+      - uid: BetfairDotNet.Models.Betting.MarketVersion
+        name: MarketVersion
+      - uid: BetfairDotNet.Models.Betting.Match
+        name: Match
+      - uid: BetfairDotNet.Models.Betting.Order
+        name: Order
+      - uid: BetfairDotNet.Models.Betting.PlaceExecutionReport
+        name: PlaceExecutionReport
+      - uid: BetfairDotNet.Models.Betting.PlaceInstruction
+        name: PlaceInstruction
+      - uid: BetfairDotNet.Models.Betting.PlaceInstructionReport
+        name: PlaceInstructionReport
+      - uid: BetfairDotNet.Models.Betting.PriceLadderDescription
+        name: PriceLadderDescription
+      - uid: BetfairDotNet.Models.Betting.PriceProjection
+        name: PriceProjection
+      - uid: BetfairDotNet.Models.Betting.PriceSize
+        name: PriceSize
+      - uid: BetfairDotNet.Models.Betting.ReplaceExecutionReport
+        name: ReplaceExecutionReport
+      - uid: BetfairDotNet.Models.Betting.ReplaceInstruction
+        name: ReplaceInstruction
+      - uid: BetfairDotNet.Models.Betting.ReplaceInstructionReport
+        name: ReplaceInstructionReport
+      - uid: BetfairDotNet.Models.Betting.RunnerBook
+        name: RunnerBook
+      - uid: BetfairDotNet.Models.Betting.RunnerCatalog
+        name: RunnerCatalog
+      - uid: BetfairDotNet.Models.Betting.RunnerId
+        name: RunnerId
+      - uid: BetfairDotNet.Models.Betting.RunnerProfitAndLoss
+        name: RunnerProfitAndLoss
+      - uid: BetfairDotNet.Models.Betting.StartingPrices
+        name: StartingPrices
+      - uid: BetfairDotNet.Models.Betting.TimeRange
+        name: TimeRange
+      - uid: BetfairDotNet.Models.Betting.TimeRangeResult
+        name: TimeRangeResult
+      - uid: BetfairDotNet.Models.Betting.UpdateExecutionReport
+        name: UpdateExecutionReport
+      - uid: BetfairDotNet.Models.Betting.UpdateInstruction
+        name: UpdateInstruction
+      - uid: BetfairDotNet.Models.Betting.UpdateInstructionReport
+        name: UpdateInstructionReport
+      - uid: BetfairDotNet.Models.Betting.VenueResult
+        name: VenueResult
+    - uid: BetfairDotNet.Models.Exceptions
+      name: Exceptions
+      items:
+      - uid: BetfairDotNet.Models.Exceptions.BetfairESAException
+        name: BetfairESAException
+      - uid: BetfairDotNet.Models.Exceptions.BetfairNGException
+        name: BetfairNGException
+      - uid: BetfairDotNet.Models.Exceptions.BetfairServerException
+        name: BetfairServerException
+      - uid: BetfairDotNet.Models.Exceptions.BetfairServerExceptionData
+        name: BetfairServerExceptionData
+      - uid: BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails
+        name: BetfairServerExceptionDetails
+    - uid: BetfairDotNet.Models.Heartbeat
+      name: Heartbeat
+      items:
+      - uid: BetfairDotNet.Models.Heartbeat.HeartbeatReport
+        name: HeartbeatReport
+      - uid: BetfairDotNet.Models.Heartbeat.KeepAliveResponse
+        name: KeepAliveResponse
+    - uid: BetfairDotNet.Models.Login
+      name: Login
+      items:
+      - uid: BetfairDotNet.Models.Login.CertificateLoginResponse
+        name: CertificateLoginResponse
+      - uid: BetfairDotNet.Models.Login.InteractiveLoginResponse
+        name: InteractiveLoginResponse
+    - uid: BetfairDotNet.Models.Navigation
+      name: Navigation
+      items:
+      - uid: BetfairDotNet.Models.Navigation.NavigationEvent
+        name: NavigationEvent
+      - uid: BetfairDotNet.Models.Navigation.NavigationEventType
+        name: NavigationEventType
+      - uid: BetfairDotNet.Models.Navigation.NavigationGroup
+        name: NavigationGroup
+      - uid: BetfairDotNet.Models.Navigation.NavigationItem
+        name: NavigationItem
+      - uid: BetfairDotNet.Models.Navigation.NavigationMarket
+        name: NavigationMarket
+      - uid: BetfairDotNet.Models.Navigation.NavigationRace
+        name: NavigationRace
+      - uid: BetfairDotNet.Models.Navigation.NavigationRoot
+        name: NavigationRoot
+    - uid: BetfairDotNet.Models.Streaming
+      name: Streaming
+      items:
+      - uid: BetfairDotNet.Models.Streaming.AuthenticationMessage
+        name: AuthenticationMessage
+      - uid: BetfairDotNet.Models.Streaming.BaseMessage
+        name: BaseMessage
+      - uid: BetfairDotNet.Models.Streaming.ESAOrder
+        name: ESAOrder
+      - uid: BetfairDotNet.Models.Streaming.MarketDefinition
+        name: MarketDefinition
+      - uid: BetfairDotNet.Models.Streaming.MarketSnapshot
+        name: MarketSnapshot
+      - uid: BetfairDotNet.Models.Streaming.MarketSubscription
+        name: MarketSubscription
+      - uid: BetfairDotNet.Models.Streaming.OrderFilter
+        name: OrderFilter
+      - uid: BetfairDotNet.Models.Streaming.OrderMarketSnapshot
+        name: OrderMarketSnapshot
+      - uid: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot
+        name: OrderRunnerSnapshot
+      - uid: BetfairDotNet.Models.Streaming.OrderSubscription
+        name: OrderSubscription
+      - uid: BetfairDotNet.Models.Streaming.PriceLadder
+        name: PriceLadder
+      - uid: BetfairDotNet.Models.Streaming.RunnerDefinition
+        name: RunnerDefinition
+      - uid: BetfairDotNet.Models.Streaming.RunnerSnapshot
+        name: RunnerSnapshot
+      - uid: BetfairDotNet.Models.Streaming.StreamConfiguration
+        name: StreamConfiguration
+      - uid: BetfairDotNet.Models.Streaming.StreamingMarketDataFilter
+        name: StreamingMarketDataFilter
+      - uid: BetfairDotNet.Models.Streaming.StreamingMarketFilter
+        name: StreamingMarketFilter
+    - uid: BetfairDotNet.Models.BetfairServerRequest
+      name: BetfairServerRequest
+  - uid: BetfairDotNet.Services
+    name: Services
+    items:
+    - uid: BetfairDotNet.Services.AccountService
+      name: AccountService
+    - uid: BetfairDotNet.Services.BettingService
+      name: BettingService
+    - uid: BetfairDotNet.Services.HeartbeatService
+      name: HeartbeatService
+    - uid: BetfairDotNet.Services.LoginService
+      name: LoginService
+    - uid: BetfairDotNet.Services.NavigationService
+      name: NavigationService
+    - uid: BetfairDotNet.Services.StreamingService
+      name: StreamingService
+  - uid: BetfairDotNet.Utils
+    name: Utils
+    items:
+    - uid: BetfairDotNet.Utils.PriceHelpers
+      name: PriceHelpers
+  - uid: BetfairDotNet.BetfairClient
+    name: BetfairClient
+memberLayout: SamePage

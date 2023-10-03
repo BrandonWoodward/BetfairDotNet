@@ -1,0 +1,159 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Betting.TimeGranularityEnum
+  commentId: T:BetfairDotNet.Enums.Betting.TimeGranularityEnum
+  id: TimeGranularityEnum
+  parent: BetfairDotNet.Enums.Betting
+  children:
+  - BetfairDotNet.Enums.Betting.TimeGranularityEnum.DAYS
+  - BetfairDotNet.Enums.Betting.TimeGranularityEnum.HOURS
+  - BetfairDotNet.Enums.Betting.TimeGranularityEnum.MINUTES
+  langs:
+  - csharp
+  - vb
+  name: TimeGranularityEnum
+  nameWithType: TimeGranularityEnum
+  fullName: BetfairDotNet.Enums.Betting.TimeGranularityEnum
+  type: Enum
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/TimeGranularityEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: TimeGranularityEnum
+    path: ../src/BetfairDotNet/Enums/Betting/TimeGranularityEnum.cs
+    startLine: 6
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EmptyStringToEnumConverter<TimeGranularityEnum>))]
+
+      public enum TimeGranularityEnum
+    content.vb: >-
+      <JsonConverter(GetType(EmptyStringToEnumConverter(Of TimeGranularityEnum)))>
+
+      Public Enum TimeGranularityEnum
+- uid: BetfairDotNet.Enums.Betting.TimeGranularityEnum.DAYS
+  commentId: F:BetfairDotNet.Enums.Betting.TimeGranularityEnum.DAYS
+  id: DAYS
+  parent: BetfairDotNet.Enums.Betting.TimeGranularityEnum
+  langs:
+  - csharp
+  - vb
+  name: DAYS
+  nameWithType: TimeGranularityEnum.DAYS
+  fullName: BetfairDotNet.Enums.Betting.TimeGranularityEnum.DAYS
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/TimeGranularityEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: DAYS
+    path: ../src/BetfairDotNet/Enums/Betting/TimeGranularityEnum.cs
+    startLine: 12
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Days.
+  example: []
+  syntax:
+    content: DAYS = 0
+    return:
+      type: BetfairDotNet.Enums.Betting.TimeGranularityEnum
+- uid: BetfairDotNet.Enums.Betting.TimeGranularityEnum.HOURS
+  commentId: F:BetfairDotNet.Enums.Betting.TimeGranularityEnum.HOURS
+  id: HOURS
+  parent: BetfairDotNet.Enums.Betting.TimeGranularityEnum
+  langs:
+  - csharp
+  - vb
+  name: HOURS
+  nameWithType: TimeGranularityEnum.HOURS
+  fullName: BetfairDotNet.Enums.Betting.TimeGranularityEnum.HOURS
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/TimeGranularityEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: HOURS
+    path: ../src/BetfairDotNet/Enums/Betting/TimeGranularityEnum.cs
+    startLine: 17
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Hours.
+  example: []
+  syntax:
+    content: HOURS = 1
+    return:
+      type: BetfairDotNet.Enums.Betting.TimeGranularityEnum
+- uid: BetfairDotNet.Enums.Betting.TimeGranularityEnum.MINUTES
+  commentId: F:BetfairDotNet.Enums.Betting.TimeGranularityEnum.MINUTES
+  id: MINUTES
+  parent: BetfairDotNet.Enums.Betting.TimeGranularityEnum
+  langs:
+  - csharp
+  - vb
+  name: MINUTES
+  nameWithType: TimeGranularityEnum.MINUTES
+  fullName: BetfairDotNet.Enums.Betting.TimeGranularityEnum.MINUTES
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/TimeGranularityEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MINUTES
+    path: ../src/BetfairDotNet/Enums/Betting/TimeGranularityEnum.cs
+    startLine: 22
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Minutes.
+  example: []
+  syntax:
+    content: MINUTES = 2
+    return:
+      type: BetfairDotNet.Enums.Betting.TimeGranularityEnum
+references:
+- uid: BetfairDotNet.Enums.Betting
+  commentId: N:BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Betting
+  nameWithType: BetfairDotNet.Enums.Betting
+  fullName: BetfairDotNet.Enums.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+- uid: BetfairDotNet.Enums.Betting.TimeGranularityEnum
+  commentId: T:BetfairDotNet.Enums.Betting.TimeGranularityEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.TimeGranularityEnum.html
+  name: TimeGranularityEnum
+  nameWithType: TimeGranularityEnum
+  fullName: BetfairDotNet.Enums.Betting.TimeGranularityEnum

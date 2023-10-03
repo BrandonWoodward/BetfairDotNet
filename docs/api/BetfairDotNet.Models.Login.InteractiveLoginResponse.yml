@@ -1,0 +1,494 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Models.Login.InteractiveLoginResponse
+  commentId: T:BetfairDotNet.Models.Login.InteractiveLoginResponse
+  id: InteractiveLoginResponse
+  parent: BetfairDotNet.Models.Login
+  children:
+  - BetfairDotNet.Models.Login.InteractiveLoginResponse.SessionToken
+  - BetfairDotNet.Models.Login.InteractiveLoginResponse.Status
+  langs:
+  - csharp
+  - vb
+  name: InteractiveLoginResponse
+  nameWithType: InteractiveLoginResponse
+  fullName: BetfairDotNet.Models.Login.InteractiveLoginResponse
+  type: Class
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Login/InteractiveLoginResponse.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: InteractiveLoginResponse
+    path: ../src/BetfairDotNet/Models/Login/InteractiveLoginResponse.cs
+    startLine: 10
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Login
+  summary: The resposne from the interactive login request.
+  example: []
+  syntax:
+    content: 'public sealed record InteractiveLoginResponse : IEquatable<InteractiveLoginResponse>'
+    content.vb: Public NotInheritable Class InteractiveLoginResponse Implements IEquatable(Of InteractiveLoginResponse)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{BetfairDotNet.Models.Login.InteractiveLoginResponse}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BetfairDotNet.Models.Login.InteractiveLoginResponse.SessionToken
+  commentId: P:BetfairDotNet.Models.Login.InteractiveLoginResponse.SessionToken
+  id: SessionToken
+  parent: BetfairDotNet.Models.Login.InteractiveLoginResponse
+  langs:
+  - csharp
+  - vb
+  name: SessionToken
+  nameWithType: InteractiveLoginResponse.SessionToken
+  fullName: BetfairDotNet.Models.Login.InteractiveLoginResponse.SessionToken
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Login/InteractiveLoginResponse.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SessionToken
+    path: ../src/BetfairDotNet/Models/Login/InteractiveLoginResponse.cs
+    startLine: 15
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Login
+  summary: The session token if successful, otherwise empty.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("token")]
+
+      public string SessionToken { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("token")>
+
+      Public Property SessionToken As String
+  overload: BetfairDotNet.Models.Login.InteractiveLoginResponse.SessionToken*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: token
+- uid: BetfairDotNet.Models.Login.InteractiveLoginResponse.Status
+  commentId: P:BetfairDotNet.Models.Login.InteractiveLoginResponse.Status
+  id: Status
+  parent: BetfairDotNet.Models.Login.InteractiveLoginResponse
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: InteractiveLoginResponse.Status
+  fullName: BetfairDotNet.Models.Login.InteractiveLoginResponse.Status
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Login/InteractiveLoginResponse.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Status
+    path: ../src/BetfairDotNet/Models/Login/InteractiveLoginResponse.cs
+    startLine: 22
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Login
+  summary: SUCCESS or the error code if unsuccessful.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("error")]
+
+      public LoginStatusEnum Status { get; init; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Enums.Account.LoginStatusEnum
+    content.vb: >-
+      <JsonPropertyName("error")>
+
+      Public Property Status As LoginStatusEnum
+  overload: BetfairDotNet.Models.Login.InteractiveLoginResponse.Status*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: error
+references:
+- uid: BetfairDotNet.Models.Login
+  commentId: N:BetfairDotNet.Models.Login
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Login
+  nameWithType: BetfairDotNet.Models.Login
+  fullName: BetfairDotNet.Models.Login
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Login
+    name: Login
+    href: BetfairDotNet.Models.Login.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Login
+    name: Login
+    href: BetfairDotNet.Models.Login.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{BetfairDotNet.Models.Login.InteractiveLoginResponse}
+  commentId: T:System.IEquatable{BetfairDotNet.Models.Login.InteractiveLoginResponse}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<InteractiveLoginResponse>
+  nameWithType: IEquatable<InteractiveLoginResponse>
+  fullName: System.IEquatable<BetfairDotNet.Models.Login.InteractiveLoginResponse>
+  nameWithType.vb: IEquatable(Of InteractiveLoginResponse)
+  fullName.vb: System.IEquatable(Of BetfairDotNet.Models.Login.InteractiveLoginResponse)
+  name.vb: IEquatable(Of InteractiveLoginResponse)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: BetfairDotNet.Models.Login.InteractiveLoginResponse
+    name: InteractiveLoginResponse
+    href: BetfairDotNet.Models.Login.InteractiveLoginResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Login.InteractiveLoginResponse
+    name: InteractiveLoginResponse
+    href: BetfairDotNet.Models.Login.InteractiveLoginResponse.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BetfairDotNet.Models.Login.InteractiveLoginResponse.SessionToken*
+  commentId: Overload:BetfairDotNet.Models.Login.InteractiveLoginResponse.SessionToken
+  href: BetfairDotNet.Models.Login.InteractiveLoginResponse.html#BetfairDotNet.Models.Login.InteractiveLoginResponse.SessionToken
+  name: SessionToken
+  nameWithType: InteractiveLoginResponse.SessionToken
+  fullName: BetfairDotNet.Models.Login.InteractiveLoginResponse.SessionToken
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BetfairDotNet.Models.Login.InteractiveLoginResponse.Status*
+  commentId: Overload:BetfairDotNet.Models.Login.InteractiveLoginResponse.Status
+  href: BetfairDotNet.Models.Login.InteractiveLoginResponse.html#BetfairDotNet.Models.Login.InteractiveLoginResponse.Status
+  name: Status
+  nameWithType: InteractiveLoginResponse.Status
+  fullName: BetfairDotNet.Models.Login.InteractiveLoginResponse.Status
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum
+  commentId: T:BetfairDotNet.Enums.Account.LoginStatusEnum
+  parent: BetfairDotNet.Enums.Account
+  href: BetfairDotNet.Enums.Account.LoginStatusEnum.html
+  name: LoginStatusEnum
+  nameWithType: LoginStatusEnum
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account
+  commentId: N:BetfairDotNet.Enums.Account
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Account
+  nameWithType: BetfairDotNet.Enums.Account
+  fullName: BetfairDotNet.Enums.Account
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Account
+    name: Account
+    href: BetfairDotNet.Enums.Account.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Account
+    name: Account
+    href: BetfairDotNet.Enums.Account.html

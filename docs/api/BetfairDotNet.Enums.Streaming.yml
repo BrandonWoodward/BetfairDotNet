@@ -1,0 +1,55 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Streaming
+  commentId: N:BetfairDotNet.Enums.Streaming
+  id: Streaming
+  parent: BetfairDotNet.Enums
+  children:
+  - BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum
+  langs:
+  - csharp
+  - vb
+  name: BetfairDotNet.Enums.Streaming
+  nameWithType: BetfairDotNet.Enums.Streaming
+  fullName: BetfairDotNet.Enums.Streaming
+  type: Namespace
+  assemblies:
+  - BetfairDotNet
+references:
+- uid: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum
+  commentId: T:BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum
+  parent: BetfairDotNet.Enums.Streaming
+  href: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.html
+  name: MarketPriceFilterEnum
+  nameWithType: MarketPriceFilterEnum
+  fullName: BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum
+- uid: BetfairDotNet.Enums.Streaming
+  commentId: N:BetfairDotNet.Enums.Streaming
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Streaming
+  nameWithType: BetfairDotNet.Enums.Streaming
+  fullName: BetfairDotNet.Enums.Streaming
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Streaming
+    name: Streaming
+    href: BetfairDotNet.Enums.Streaming.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Streaming
+    name: Streaming
+    href: BetfairDotNet.Enums.Streaming.html

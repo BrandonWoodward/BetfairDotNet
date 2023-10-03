@@ -1,0 +1,157 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Betting.InstructionReportStatusEnum
+  commentId: T:BetfairDotNet.Enums.Betting.InstructionReportStatusEnum
+  id: InstructionReportStatusEnum
+  parent: BetfairDotNet.Enums.Betting
+  children:
+  - BetfairDotNet.Enums.Betting.InstructionReportStatusEnum.FAILURE
+  - BetfairDotNet.Enums.Betting.InstructionReportStatusEnum.SUCCESS
+  - BetfairDotNet.Enums.Betting.InstructionReportStatusEnum.TIMEOUT
+  langs:
+  - csharp
+  - vb
+  name: InstructionReportStatusEnum
+  nameWithType: InstructionReportStatusEnum
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportStatusEnum
+  type: Enum
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: InstructionReportStatusEnum
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportStatusEnum.cs
+    startLine: 6
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EmptyStringToEnumConverter<InstructionReportStatusEnum>))]
+
+      public enum InstructionReportStatusEnum
+    content.vb: >-
+      <JsonConverter(GetType(EmptyStringToEnumConverter(Of InstructionReportStatusEnum)))>
+
+      Public Enum InstructionReportStatusEnum
+- uid: BetfairDotNet.Enums.Betting.InstructionReportStatusEnum.SUCCESS
+  commentId: F:BetfairDotNet.Enums.Betting.InstructionReportStatusEnum.SUCCESS
+  id: SUCCESS
+  parent: BetfairDotNet.Enums.Betting.InstructionReportStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: SUCCESS
+  nameWithType: InstructionReportStatusEnum.SUCCESS
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportStatusEnum.SUCCESS
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SUCCESS
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportStatusEnum.cs
+    startLine: 12
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: The instruction was successful.
+  example: []
+  syntax:
+    content: SUCCESS = 0
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportStatusEnum
+- uid: BetfairDotNet.Enums.Betting.InstructionReportStatusEnum.FAILURE
+  commentId: F:BetfairDotNet.Enums.Betting.InstructionReportStatusEnum.FAILURE
+  id: FAILURE
+  parent: BetfairDotNet.Enums.Betting.InstructionReportStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: FAILURE
+  nameWithType: InstructionReportStatusEnum.FAILURE
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportStatusEnum.FAILURE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: FAILURE
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportStatusEnum.cs
+    startLine: 17
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: The instruction failed.
+  example: []
+  syntax:
+    content: FAILURE = 1
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportStatusEnum
+- uid: BetfairDotNet.Enums.Betting.InstructionReportStatusEnum.TIMEOUT
+  commentId: F:BetfairDotNet.Enums.Betting.InstructionReportStatusEnum.TIMEOUT
+  id: TIMEOUT
+  parent: BetfairDotNet.Enums.Betting.InstructionReportStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: TIMEOUT
+  nameWithType: InstructionReportStatusEnum.TIMEOUT
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportStatusEnum.TIMEOUT
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: TIMEOUT
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportStatusEnum.cs
+    startLine: 28
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  syntax:
+    content: TIMEOUT = 2
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportStatusEnum
+references:
+- uid: BetfairDotNet.Enums.Betting
+  commentId: N:BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Betting
+  nameWithType: BetfairDotNet.Enums.Betting
+  fullName: BetfairDotNet.Enums.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+- uid: BetfairDotNet.Enums.Betting.InstructionReportStatusEnum
+  commentId: T:BetfairDotNet.Enums.Betting.InstructionReportStatusEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.InstructionReportStatusEnum.html
+  name: InstructionReportStatusEnum
+  nameWithType: InstructionReportStatusEnum
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportStatusEnum

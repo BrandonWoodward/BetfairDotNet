@@ -1,0 +1,287 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Enum LoginStatusEnum
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Enum LoginStatusEnum
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BrandonWoodward/BetfairDotNet/new/master/apiSpec/new?filename=BetfairDotNet_Enums_Account_LoginStatusEnum.md&amp;value=---%0Auid%3A%20BetfairDotNet.Enums.Account.LoginStatusEnum%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="BetfairDotNet.Enums.Account.LoginStatusEnum">
+
+
+
+
+  <h1 id="BetfairDotNet_Enums_Account_LoginStatusEnum" data-uid="BetfairDotNet.Enums.Account.LoginStatusEnum" class="text-break">
+    Enum LoginStatusEnum
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs/#L6"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="BetfairDotNet.html">BetfairDotNet</a>.<a class="xref" href="BetfairDotNet.Enums.html">Enums</a>.<a class="xref" href="BetfairDotNet.Enums.Account.html">Account</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>BetfairDotNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(EmptyStringToEnumConverter&lt;LoginStatusEnum&gt;))]
+public enum LoginStatusEnum</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h2 id="fields">Fields
+</h2>
+  <dl class="parameters">
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_ACCOUNT_ALREADY_LOCKED"><code>ACCOUNT_ALREADY_LOCKED = 3</code></dt>
+    <dd><p>The account is already locked.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_ACCOUNT_NOW_LOCKED"><code>ACCOUNT_NOW_LOCKED = 2</code></dt>
+    <dd><p>The account was just locked.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_ACCOUNT_PENDING_PASSWORD_CHANGE"><code>ACCOUNT_PENDING_PASSWORD_CHANGE = 33</code></dt>
+    <dd><p>The account must undergo password recovery to reactivate via <a href="https://identitysso.betfair.com/view/recoverpassword">https://identitysso.betfair.com/view/recoverpassword</a></p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_ACTIONS_REQUIRED"><code>ACTIONS_REQUIRED = 40</code></dt>
+    <dd><p>You must login to <a href="https://www.betfair.com">https://www.betfair.com</a> to provide the missing information.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_AGENT_CLIENT_MASTER"><code>AGENT_CLIENT_MASTER = 20</code></dt>
+    <dd><p>Agent Client Master.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_AGENT_CLIENT_MASTER_SUSPENDED"><code>AGENT_CLIENT_MASTER_SUSPENDED = 21</code></dt>
+    <dd><p>Suspended Agent Client Master.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_AUTHORIZED_ONLY_FOR_DOMAIN_RO"><code>AUTHORIZED_ONLY_FOR_DOMAIN_RO = 36</code></dt>
+    <dd><p>You are attempting to login to the Betfair Romania domain with a non .ro account.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_AUTHORIZED_ONLY_FOR_DOMAIN_SE"><code>AUTHORIZED_ONLY_FOR_DOMAIN_SE = 37</code></dt>
+    <dd><p>You are attempting to login to the Betfair Swedish domain with a non .se account.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_BETTING_RESTRICTED_LOCATION"><code>BETTING_RESTRICTED_LOCATION = 17</code></dt>
+    <dd><p>The account is accessed from a location where betting is restricted.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_CERT_AUTH_REQUIRED"><code>CERT_AUTH_REQUIRED = 27</code></dt>
+    <dd><p>Certificate required or certificate present but could not authenticate with it.<br>
+Please check that the correct file path is specified and ensure you are entering the correct password.
+You should ensure that your username and password values are encoded before being sent to the API;
+if your password contains special characters and isn't encoded, the login request will fail</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_CHANGE_PASSWORD_REQUIRED"><code>CHANGE_PASSWORD_REQUIRED = 28</code></dt>
+    <dd><p>Change password required.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_CLOSED"><code>CLOSED = 10</code></dt>
+    <dd><p>The account is closed.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_DANISH_AUTHORIZATION_REQUIRED"><code>DANISH_AUTHORIZATION_REQUIRED = 22</code></dt>
+    <dd><p>Danish authorization required.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_DENMARK_MIGRATION_REQUIRED"><code>DENMARK_MIGRATION_REQUIRED = 24</code></dt>
+    <dd><p>Denmark migration required.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_DUPLICATE_CARDS"><code>DUPLICATE_CARDS = 6</code></dt>
+    <dd><p>Duplicate cards.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_EMAIL_LOGIN_NOT_ALLOWED"><code>EMAIL_LOGIN_NOT_ALLOWED = 31</code></dt>
+    <dd><p>This account has not opted in to log in with the email.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_INPUT_VALIDATION_ERROR"><code>INPUT_VALIDATION_ERROR = 41</code></dt>
+    <dd><p>There is a problem with the data validity contained within the request.
+Please check that the request (including headers) is in the correct format,</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_INTERNATIONAL_TERMS_ACCEPTANCE_REQUIRED"><code>INTERNATIONAL_TERMS_ACCEPTANCE_REQUIRED = 30</code></dt>
+    <dd><p>The latest international terms and conditions must be accepted prior to logging in.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_INVALID_CONNECTIVITY_TO_REGULATOR_DK"><code>INVALID_CONNECTIVITY_TO_REGULATOR_DK = 12</code></dt>
+    <dd><p>the DK regulator cannot be accessed due to some internal problems
+in the system behind or in at regulator; timeout cases included.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_INVALID_CONNECTIVITY_TO_REGULATOR_IT"><code>INVALID_CONNECTIVITY_TO_REGULATOR_IT = 14</code></dt>
+    <dd><p>The IT regulator cannot be accessed due to some internal problems in the system
+behind or in at regulator; timeout cases included.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_INVALID_USERNAME_OR_PASSWORD"><code>INVALID_USERNAME_OR_PASSWORD = 1</code></dt>
+    <dd><p>The username or password are invalid.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_ITALIAN_CONTRACT_ACCEPTANCE_REQUIRED"><code>ITALIAN_CONTRACT_ACCEPTANCE_REQUIRED = 26</code></dt>
+    <dd><p>The latest Italian contract version must be accepted.
+You must login to the website to accept the new conditions.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_ITALIAN_PROFILING_ACCEPTANCE_REQUIRED"><code>ITALIAN_PROFILING_ACCEPTANCE_REQUIRED = 35</code></dt>
+    <dd><p>You must login to the website to accept the new conditions.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_KYC_SUSPEND"><code>KYC_SUSPEND = 8</code></dt>
+    <dd><p>KYC suspended.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_MULTIPLE_USERS_WITH_SAME_CREDENTIALS"><code>MULTIPLE_USERS_WITH_SAME_CREDENTIALS = 32</code></dt>
+    <dd><p>There is more than one account with the same credential.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_NOT_AUTHORISED_BY_REGULATOR_DK"><code>NOT_AUTHORISED_BY_REGULATOR_DK = 13</code></dt>
+    <dd><p>The user identified by the given credentials is not authorized in the DK's
+jurisdictions due to the regulators' policies. Ex: the user for which
+this session should be created is not allowed to act(play, bet) in the DK's jurisdiction.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_NOT_AUTHORISED_BY_REGULATOR_IT"><code>NOT_AUTHORISED_BY_REGULATOR_IT = 15</code></dt>
+    <dd><p>The user identified by the given credentials is not authorized in the IT's
+jurisdictions due to the regulators' policies. Ex: the user for which this
+session should be created is not allowed to act(play, bet) in the IT's jurisdiction.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_PENDING_AUTH"><code>PENDING_AUTH = 4</code></dt>
+    <dd><p>Pending authentication.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_PERSONAL_MESSAGE_REQUIRED"><code>PERSONAL_MESSAGE_REQUIRED = 29</code></dt>
+    <dd><p>Personal message required for the user.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_SECURITY_QUESTION_WRONG_3X"><code>SECURITY_QUESTION_WRONG_3X = 7</code></dt>
+    <dd><p>The user has entered wrong the security answer 3 times.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_SECURITY_RESTRICTED_LOCATION"><code>SECURITY_RESTRICTED_LOCATION = 16</code></dt>
+    <dd><p>The account is restricted due to security concerns.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_SELF_EXCLUDED"><code>SELF_EXCLUDED = 11</code></dt>
+    <dd><p>The account is self-excluded.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_SPAIN_MIGRATION_REQUIRED"><code>SPAIN_MIGRATION_REQUIRED = 23</code></dt>
+    <dd><p>Spain migration required.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_SPANISH_TERMS_ACCEPTANCE_REQUIRED"><code>SPANISH_TERMS_ACCEPTANCE_REQUIRED = 25</code></dt>
+    <dd><p>The latest Spanish terms and conditions version must be accepted.
+You must login to the website to accept the new conditions.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_SUCCESS"><code>SUCCESS = 0</code></dt>
+    <dd><p>The login was successful.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_SUSPENDED"><code>SUSPENDED = 9</code></dt>
+    <dd><p>The account is suspended</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_SWEDEN_BANK_ID_VERIFICATION_REQUIRED"><code>SWEDEN_BANK_ID_VERIFICATION_REQUIRED = 39</code></dt>
+    <dd><p>You must provided your Swedish bank id via Betfair.se before proceeding.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_SWEDEN_NATIONAL_IDENTIFIER_REQUIRED"><code>SWEDEN_NATIONAL_IDENTIFIER_REQUIRED = 38</code></dt>
+    <dd><p>You must provided your Swedish National identifier via Betfair.se before proceeding.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_TELBET_TERMS_CONDITIONS_NA"><code>TELBET_TERMS_CONDITIONS_NA = 5</code></dt>
+    <dd><p>Telbet terms and conditions rejected.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_TEMPORARY_BAN_TOO_MANY_REQUESTS"><code>TEMPORARY_BAN_TOO_MANY_REQUESTS = 34</code></dt>
+    <dd><p>The limit for successful login requests per minute has been exceeded.
+New login attempts will be banned for 20 minutes</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_TRADING_MASTER"><code>TRADING_MASTER = 18</code></dt>
+    <dd><p>Trading Master Account.</p>
+</dd>
+    <dt id="BetfairDotNet_Enums_Account_LoginStatusEnum_TRADING_MASTER_SUSPENDED"><code>TRADING_MASTER_SUSPENDED = 19</code></dt>
+    <dd><p>Suspended Trading Master Account.</p>
+</dd>
+  </dl>
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Enums/Account/LoginStatusEnum.cs/#L6" class="edit-link">Edit this page</a>
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

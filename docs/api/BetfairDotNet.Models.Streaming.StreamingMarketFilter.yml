@@ -1,0 +1,980 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Models.Streaming.StreamingMarketFilter
+  commentId: T:BetfairDotNet.Models.Streaming.StreamingMarketFilter
+  id: StreamingMarketFilter
+  parent: BetfairDotNet.Models.Streaming
+  children:
+  - BetfairDotNet.Models.Streaming.StreamingMarketFilter.BettingTypes
+  - BetfairDotNet.Models.Streaming.StreamingMarketFilter.BspMarket
+  - BetfairDotNet.Models.Streaming.StreamingMarketFilter.CountryCodes
+  - BetfairDotNet.Models.Streaming.StreamingMarketFilter.EventIds
+  - BetfairDotNet.Models.Streaming.StreamingMarketFilter.EventTypeIds
+  - BetfairDotNet.Models.Streaming.StreamingMarketFilter.MarketIds
+  - BetfairDotNet.Models.Streaming.StreamingMarketFilter.MarketTypes
+  - BetfairDotNet.Models.Streaming.StreamingMarketFilter.TurnInPlayEnabled
+  - BetfairDotNet.Models.Streaming.StreamingMarketFilter.Venues
+  langs:
+  - csharp
+  - vb
+  name: StreamingMarketFilter
+  nameWithType: StreamingMarketFilter
+  fullName: BetfairDotNet.Models.Streaming.StreamingMarketFilter
+  type: Class
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/StreamingMarketFilter.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: StreamingMarketFilter
+    path: ../src/BetfairDotNet/Models/Streaming/StreamingMarketFilter.cs
+    startLine: 9
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: Filter to select desired markets when subscribing to market changes.
+  example: []
+  syntax:
+    content: 'public sealed record StreamingMarketFilter : IEquatable<StreamingMarketFilter>'
+    content.vb: Public NotInheritable Class StreamingMarketFilter Implements IEquatable(Of StreamingMarketFilter)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{BetfairDotNet.Models.Streaming.StreamingMarketFilter}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BetfairDotNet.Models.Streaming.StreamingMarketFilter.CountryCodes
+  commentId: P:BetfairDotNet.Models.Streaming.StreamingMarketFilter.CountryCodes
+  id: CountryCodes
+  parent: BetfairDotNet.Models.Streaming.StreamingMarketFilter
+  langs:
+  - csharp
+  - vb
+  name: CountryCodes
+  nameWithType: StreamingMarketFilter.CountryCodes
+  fullName: BetfairDotNet.Models.Streaming.StreamingMarketFilter.CountryCodes
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/StreamingMarketFilter.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: CountryCodes
+    path: ../src/BetfairDotNet/Models/Streaming/StreamingMarketFilter.cs
+    startLine: 14
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: The countries in which the markets are taking place.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("countryCodes")]
+
+      public List<string>? CountryCodes { get; init; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: >-
+      <JsonPropertyName("countryCodes")>
+
+      Public Property CountryCodes As List(Of String)
+  overload: BetfairDotNet.Models.Streaming.StreamingMarketFilter.CountryCodes*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: countryCodes
+- uid: BetfairDotNet.Models.Streaming.StreamingMarketFilter.BettingTypes
+  commentId: P:BetfairDotNet.Models.Streaming.StreamingMarketFilter.BettingTypes
+  id: BettingTypes
+  parent: BetfairDotNet.Models.Streaming.StreamingMarketFilter
+  langs:
+  - csharp
+  - vb
+  name: BettingTypes
+  nameWithType: StreamingMarketFilter.BettingTypes
+  fullName: BetfairDotNet.Models.Streaming.StreamingMarketFilter.BettingTypes
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/StreamingMarketFilter.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: BettingTypes
+    path: ../src/BetfairDotNet/Models/Streaming/StreamingMarketFilter.cs
+    startLine: 21
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: The betting types to filter on. If empty then returns all markets.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("bettingTypes")]
+
+      public List<MarketBettingTypeEnum>? BettingTypes { get; init; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{BetfairDotNet.Enums.Betting.MarketBettingTypeEnum}
+    content.vb: >-
+      <JsonPropertyName("bettingTypes")>
+
+      Public Property BettingTypes As List(Of MarketBettingTypeEnum)
+  overload: BetfairDotNet.Models.Streaming.StreamingMarketFilter.BettingTypes*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: bettingTypes
+- uid: BetfairDotNet.Models.Streaming.StreamingMarketFilter.TurnInPlayEnabled
+  commentId: P:BetfairDotNet.Models.Streaming.StreamingMarketFilter.TurnInPlayEnabled
+  id: TurnInPlayEnabled
+  parent: BetfairDotNet.Models.Streaming.StreamingMarketFilter
+  langs:
+  - csharp
+  - vb
+  name: TurnInPlayEnabled
+  nameWithType: StreamingMarketFilter.TurnInPlayEnabled
+  fullName: BetfairDotNet.Models.Streaming.StreamingMarketFilter.TurnInPlayEnabled
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/StreamingMarketFilter.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: TurnInPlayEnabled
+    path: ../src/BetfairDotNet/Models/Streaming/StreamingMarketFilter.cs
+    startLine: 27
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: Filter on markets that will turn in-play
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("turnInPlayEnabled")]
+
+      public bool? TurnInPlayEnabled { get; init; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonPropertyName("turnInPlayEnabled")>
+
+      Public Property TurnInPlayEnabled As Boolean?
+  overload: BetfairDotNet.Models.Streaming.StreamingMarketFilter.TurnInPlayEnabled*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: turnInPlayEnabled
+- uid: BetfairDotNet.Models.Streaming.StreamingMarketFilter.MarketTypes
+  commentId: P:BetfairDotNet.Models.Streaming.StreamingMarketFilter.MarketTypes
+  id: MarketTypes
+  parent: BetfairDotNet.Models.Streaming.StreamingMarketFilter
+  langs:
+  - csharp
+  - vb
+  name: MarketTypes
+  nameWithType: StreamingMarketFilter.MarketTypes
+  fullName: BetfairDotNet.Models.Streaming.StreamingMarketFilter.MarketTypes
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/StreamingMarketFilter.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MarketTypes
+    path: ../src/BetfairDotNet/Models/Streaming/StreamingMarketFilter.cs
+    startLine: 33
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: Filter on market types.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("marketTypes")]
+
+      public List<string>? MarketTypes { get; init; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: >-
+      <JsonPropertyName("marketTypes")>
+
+      Public Property MarketTypes As List(Of String)
+  overload: BetfairDotNet.Models.Streaming.StreamingMarketFilter.MarketTypes*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: marketTypes
+- uid: BetfairDotNet.Models.Streaming.StreamingMarketFilter.Venues
+  commentId: P:BetfairDotNet.Models.Streaming.StreamingMarketFilter.Venues
+  id: Venues
+  parent: BetfairDotNet.Models.Streaming.StreamingMarketFilter
+  langs:
+  - csharp
+  - vb
+  name: Venues
+  nameWithType: StreamingMarketFilter.Venues
+  fullName: BetfairDotNet.Models.Streaming.StreamingMarketFilter.Venues
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/StreamingMarketFilter.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Venues
+    path: ../src/BetfairDotNet/Models/Streaming/StreamingMarketFilter.cs
+    startLine: 39
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: The venue to filter on.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("venues")]
+
+      public List<string>? Venues { get; init; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: >-
+      <JsonPropertyName("venues")>
+
+      Public Property Venues As List(Of String)
+  overload: BetfairDotNet.Models.Streaming.StreamingMarketFilter.Venues*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: venues
+- uid: BetfairDotNet.Models.Streaming.StreamingMarketFilter.MarketIds
+  commentId: P:BetfairDotNet.Models.Streaming.StreamingMarketFilter.MarketIds
+  id: MarketIds
+  parent: BetfairDotNet.Models.Streaming.StreamingMarketFilter
+  langs:
+  - csharp
+  - vb
+  name: MarketIds
+  nameWithType: StreamingMarketFilter.MarketIds
+  fullName: BetfairDotNet.Models.Streaming.StreamingMarketFilter.MarketIds
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/StreamingMarketFilter.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MarketIds
+    path: ../src/BetfairDotNet/Models/Streaming/StreamingMarketFilter.cs
+    startLine: 45
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: Filter on specific market ids.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("marketIds")]
+
+      public List<string>? MarketIds { get; init; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: >-
+      <JsonPropertyName("marketIds")>
+
+      Public Property MarketIds As List(Of String)
+  overload: BetfairDotNet.Models.Streaming.StreamingMarketFilter.MarketIds*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: marketIds
+- uid: BetfairDotNet.Models.Streaming.StreamingMarketFilter.EventTypeIds
+  commentId: P:BetfairDotNet.Models.Streaming.StreamingMarketFilter.EventTypeIds
+  id: EventTypeIds
+  parent: BetfairDotNet.Models.Streaming.StreamingMarketFilter
+  langs:
+  - csharp
+  - vb
+  name: EventTypeIds
+  nameWithType: StreamingMarketFilter.EventTypeIds
+  fullName: BetfairDotNet.Models.Streaming.StreamingMarketFilter.EventTypeIds
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/StreamingMarketFilter.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: EventTypeIds
+    path: ../src/BetfairDotNet/Models/Streaming/StreamingMarketFilter.cs
+    startLine: 51
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: Filter on event type ids.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("eventTypeIds")]
+
+      public List<string>? EventTypeIds { get; init; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: >-
+      <JsonPropertyName("eventTypeIds")>
+
+      Public Property EventTypeIds As List(Of String)
+  overload: BetfairDotNet.Models.Streaming.StreamingMarketFilter.EventTypeIds*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: eventTypeIds
+- uid: BetfairDotNet.Models.Streaming.StreamingMarketFilter.EventIds
+  commentId: P:BetfairDotNet.Models.Streaming.StreamingMarketFilter.EventIds
+  id: EventIds
+  parent: BetfairDotNet.Models.Streaming.StreamingMarketFilter
+  langs:
+  - csharp
+  - vb
+  name: EventIds
+  nameWithType: StreamingMarketFilter.EventIds
+  fullName: BetfairDotNet.Models.Streaming.StreamingMarketFilter.EventIds
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/StreamingMarketFilter.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: EventIds
+    path: ../src/BetfairDotNet/Models/Streaming/StreamingMarketFilter.cs
+    startLine: 57
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: Filter on event ids.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("eventIds")]
+
+      public List<string>? EventIds { get; init; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: >-
+      <JsonPropertyName("eventIds")>
+
+      Public Property EventIds As List(Of String)
+  overload: BetfairDotNet.Models.Streaming.StreamingMarketFilter.EventIds*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: eventIds
+- uid: BetfairDotNet.Models.Streaming.StreamingMarketFilter.BspMarket
+  commentId: P:BetfairDotNet.Models.Streaming.StreamingMarketFilter.BspMarket
+  id: BspMarket
+  parent: BetfairDotNet.Models.Streaming.StreamingMarketFilter
+  langs:
+  - csharp
+  - vb
+  name: BspMarket
+  nameWithType: StreamingMarketFilter.BspMarket
+  fullName: BetfairDotNet.Models.Streaming.StreamingMarketFilter.BspMarket
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/StreamingMarketFilter.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: BspMarket
+    path: ../src/BetfairDotNet/Models/Streaming/StreamingMarketFilter.cs
+    startLine: 63
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: Filter on whether the market offers bsp.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("bspMarket")]
+
+      public bool? BspMarket { get; init; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonPropertyName("bspMarket")>
+
+      Public Property BspMarket As Boolean?
+  overload: BetfairDotNet.Models.Streaming.StreamingMarketFilter.BspMarket*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: bspMarket
+references:
+- uid: BetfairDotNet.Models.Streaming
+  commentId: N:BetfairDotNet.Models.Streaming
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Streaming
+  nameWithType: BetfairDotNet.Models.Streaming
+  fullName: BetfairDotNet.Models.Streaming
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Streaming
+    name: Streaming
+    href: BetfairDotNet.Models.Streaming.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Streaming
+    name: Streaming
+    href: BetfairDotNet.Models.Streaming.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{BetfairDotNet.Models.Streaming.StreamingMarketFilter}
+  commentId: T:System.IEquatable{BetfairDotNet.Models.Streaming.StreamingMarketFilter}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<StreamingMarketFilter>
+  nameWithType: IEquatable<StreamingMarketFilter>
+  fullName: System.IEquatable<BetfairDotNet.Models.Streaming.StreamingMarketFilter>
+  nameWithType.vb: IEquatable(Of StreamingMarketFilter)
+  fullName.vb: System.IEquatable(Of BetfairDotNet.Models.Streaming.StreamingMarketFilter)
+  name.vb: IEquatable(Of StreamingMarketFilter)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: BetfairDotNet.Models.Streaming.StreamingMarketFilter
+    name: StreamingMarketFilter
+    href: BetfairDotNet.Models.Streaming.StreamingMarketFilter.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Streaming.StreamingMarketFilter
+    name: StreamingMarketFilter
+    href: BetfairDotNet.Models.Streaming.StreamingMarketFilter.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BetfairDotNet.Models.Streaming.StreamingMarketFilter.CountryCodes*
+  commentId: Overload:BetfairDotNet.Models.Streaming.StreamingMarketFilter.CountryCodes
+  href: BetfairDotNet.Models.Streaming.StreamingMarketFilter.html#BetfairDotNet.Models.Streaming.StreamingMarketFilter.CountryCodes
+  name: CountryCodes
+  nameWithType: StreamingMarketFilter.CountryCodes
+  fullName: BetfairDotNet.Models.Streaming.StreamingMarketFilter.CountryCodes
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: BetfairDotNet.Models.Streaming.StreamingMarketFilter.BettingTypes*
+  commentId: Overload:BetfairDotNet.Models.Streaming.StreamingMarketFilter.BettingTypes
+  href: BetfairDotNet.Models.Streaming.StreamingMarketFilter.html#BetfairDotNet.Models.Streaming.StreamingMarketFilter.BettingTypes
+  name: BettingTypes
+  nameWithType: StreamingMarketFilter.BettingTypes
+  fullName: BetfairDotNet.Models.Streaming.StreamingMarketFilter.BettingTypes
+- uid: System.Collections.Generic.List{BetfairDotNet.Enums.Betting.MarketBettingTypeEnum}
+  commentId: T:System.Collections.Generic.List{BetfairDotNet.Enums.Betting.MarketBettingTypeEnum}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<MarketBettingTypeEnum>
+  nameWithType: List<MarketBettingTypeEnum>
+  fullName: System.Collections.Generic.List<BetfairDotNet.Enums.Betting.MarketBettingTypeEnum>
+  nameWithType.vb: List(Of MarketBettingTypeEnum)
+  fullName.vb: System.Collections.Generic.List(Of BetfairDotNet.Enums.Betting.MarketBettingTypeEnum)
+  name.vb: List(Of MarketBettingTypeEnum)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: BetfairDotNet.Enums.Betting.MarketBettingTypeEnum
+    name: MarketBettingTypeEnum
+    href: BetfairDotNet.Enums.Betting.MarketBettingTypeEnum.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Enums.Betting.MarketBettingTypeEnum
+    name: MarketBettingTypeEnum
+    href: BetfairDotNet.Enums.Betting.MarketBettingTypeEnum.html
+  - name: )
+- uid: BetfairDotNet.Models.Streaming.StreamingMarketFilter.TurnInPlayEnabled*
+  commentId: Overload:BetfairDotNet.Models.Streaming.StreamingMarketFilter.TurnInPlayEnabled
+  href: BetfairDotNet.Models.Streaming.StreamingMarketFilter.html#BetfairDotNet.Models.Streaming.StreamingMarketFilter.TurnInPlayEnabled
+  name: TurnInPlayEnabled
+  nameWithType: StreamingMarketFilter.TurnInPlayEnabled
+  fullName: BetfairDotNet.Models.Streaming.StreamingMarketFilter.TurnInPlayEnabled
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BetfairDotNet.Models.Streaming.StreamingMarketFilter.MarketTypes*
+  commentId: Overload:BetfairDotNet.Models.Streaming.StreamingMarketFilter.MarketTypes
+  href: BetfairDotNet.Models.Streaming.StreamingMarketFilter.html#BetfairDotNet.Models.Streaming.StreamingMarketFilter.MarketTypes
+  name: MarketTypes
+  nameWithType: StreamingMarketFilter.MarketTypes
+  fullName: BetfairDotNet.Models.Streaming.StreamingMarketFilter.MarketTypes
+- uid: BetfairDotNet.Models.Streaming.StreamingMarketFilter.Venues*
+  commentId: Overload:BetfairDotNet.Models.Streaming.StreamingMarketFilter.Venues
+  href: BetfairDotNet.Models.Streaming.StreamingMarketFilter.html#BetfairDotNet.Models.Streaming.StreamingMarketFilter.Venues
+  name: Venues
+  nameWithType: StreamingMarketFilter.Venues
+  fullName: BetfairDotNet.Models.Streaming.StreamingMarketFilter.Venues
+- uid: BetfairDotNet.Models.Streaming.StreamingMarketFilter.MarketIds*
+  commentId: Overload:BetfairDotNet.Models.Streaming.StreamingMarketFilter.MarketIds
+  href: BetfairDotNet.Models.Streaming.StreamingMarketFilter.html#BetfairDotNet.Models.Streaming.StreamingMarketFilter.MarketIds
+  name: MarketIds
+  nameWithType: StreamingMarketFilter.MarketIds
+  fullName: BetfairDotNet.Models.Streaming.StreamingMarketFilter.MarketIds
+- uid: BetfairDotNet.Models.Streaming.StreamingMarketFilter.EventTypeIds*
+  commentId: Overload:BetfairDotNet.Models.Streaming.StreamingMarketFilter.EventTypeIds
+  href: BetfairDotNet.Models.Streaming.StreamingMarketFilter.html#BetfairDotNet.Models.Streaming.StreamingMarketFilter.EventTypeIds
+  name: EventTypeIds
+  nameWithType: StreamingMarketFilter.EventTypeIds
+  fullName: BetfairDotNet.Models.Streaming.StreamingMarketFilter.EventTypeIds
+- uid: BetfairDotNet.Models.Streaming.StreamingMarketFilter.EventIds*
+  commentId: Overload:BetfairDotNet.Models.Streaming.StreamingMarketFilter.EventIds
+  href: BetfairDotNet.Models.Streaming.StreamingMarketFilter.html#BetfairDotNet.Models.Streaming.StreamingMarketFilter.EventIds
+  name: EventIds
+  nameWithType: StreamingMarketFilter.EventIds
+  fullName: BetfairDotNet.Models.Streaming.StreamingMarketFilter.EventIds
+- uid: BetfairDotNet.Models.Streaming.StreamingMarketFilter.BspMarket*
+  commentId: Overload:BetfairDotNet.Models.Streaming.StreamingMarketFilter.BspMarket
+  href: BetfairDotNet.Models.Streaming.StreamingMarketFilter.html#BetfairDotNet.Models.Streaming.StreamingMarketFilter.BspMarket
+  name: BspMarket
+  nameWithType: StreamingMarketFilter.BspMarket
+  fullName: BetfairDotNet.Models.Streaming.StreamingMarketFilter.BspMarket

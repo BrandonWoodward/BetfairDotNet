@@ -1,0 +1,207 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Betting.GroupByEnum
+  commentId: T:BetfairDotNet.Enums.Betting.GroupByEnum
+  id: GroupByEnum
+  parent: BetfairDotNet.Enums.Betting
+  children:
+  - BetfairDotNet.Enums.Betting.GroupByEnum.BET
+  - BetfairDotNet.Enums.Betting.GroupByEnum.EVENT
+  - BetfairDotNet.Enums.Betting.GroupByEnum.EVENT_TYPE
+  - BetfairDotNet.Enums.Betting.GroupByEnum.MARKET
+  - BetfairDotNet.Enums.Betting.GroupByEnum.SIDE
+  langs:
+  - csharp
+  - vb
+  name: GroupByEnum
+  nameWithType: GroupByEnum
+  fullName: BetfairDotNet.Enums.Betting.GroupByEnum
+  type: Enum
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/GroupByEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: GroupByEnum
+    path: ../src/BetfairDotNet/Enums/Betting/GroupByEnum.cs
+    startLine: 6
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EmptyStringToEnumConverter<GroupByEnum>))]
+
+      public enum GroupByEnum
+    content.vb: >-
+      <JsonConverter(GetType(EmptyStringToEnumConverter(Of GroupByEnum)))>
+
+      Public Enum GroupByEnum
+- uid: BetfairDotNet.Enums.Betting.GroupByEnum.EVENT_TYPE
+  commentId: F:BetfairDotNet.Enums.Betting.GroupByEnum.EVENT_TYPE
+  id: EVENT_TYPE
+  parent: BetfairDotNet.Enums.Betting.GroupByEnum
+  langs:
+  - csharp
+  - vb
+  name: EVENT_TYPE
+  nameWithType: GroupByEnum.EVENT_TYPE
+  fullName: BetfairDotNet.Enums.Betting.GroupByEnum.EVENT_TYPE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/GroupByEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: EVENT_TYPE
+    path: ../src/BetfairDotNet/Enums/Betting/GroupByEnum.cs
+    startLine: 12
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  syntax:
+    content: EVENT_TYPE = 0
+    return:
+      type: BetfairDotNet.Enums.Betting.GroupByEnum
+- uid: BetfairDotNet.Enums.Betting.GroupByEnum.EVENT
+  commentId: F:BetfairDotNet.Enums.Betting.GroupByEnum.EVENT
+  id: EVENT
+  parent: BetfairDotNet.Enums.Betting.GroupByEnum
+  langs:
+  - csharp
+  - vb
+  name: EVENT
+  nameWithType: GroupByEnum.EVENT
+  fullName: BetfairDotNet.Enums.Betting.GroupByEnum.EVENT
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/GroupByEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: EVENT
+    path: ../src/BetfairDotNet/Enums/Betting/GroupByEnum.cs
+    startLine: 17
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  syntax:
+    content: EVENT = 1
+    return:
+      type: BetfairDotNet.Enums.Betting.GroupByEnum
+- uid: BetfairDotNet.Enums.Betting.GroupByEnum.MARKET
+  commentId: F:BetfairDotNet.Enums.Betting.GroupByEnum.MARKET
+  id: MARKET
+  parent: BetfairDotNet.Enums.Betting.GroupByEnum
+  langs:
+  - csharp
+  - vb
+  name: MARKET
+  nameWithType: GroupByEnum.MARKET
+  fullName: BetfairDotNet.Enums.Betting.GroupByEnum.MARKET
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/GroupByEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MARKET
+    path: ../src/BetfairDotNet/Enums/Betting/GroupByEnum.cs
+    startLine: 22
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  syntax:
+    content: MARKET = 2
+    return:
+      type: BetfairDotNet.Enums.Betting.GroupByEnum
+- uid: BetfairDotNet.Enums.Betting.GroupByEnum.SIDE
+  commentId: F:BetfairDotNet.Enums.Betting.GroupByEnum.SIDE
+  id: SIDE
+  parent: BetfairDotNet.Enums.Betting.GroupByEnum
+  langs:
+  - csharp
+  - vb
+  name: SIDE
+  nameWithType: GroupByEnum.SIDE
+  fullName: BetfairDotNet.Enums.Betting.GroupByEnum.SIDE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/GroupByEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SIDE
+    path: ../src/BetfairDotNet/Enums/Betting/GroupByEnum.cs
+    startLine: 28
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  syntax:
+    content: SIDE = 3
+    return:
+      type: BetfairDotNet.Enums.Betting.GroupByEnum
+- uid: BetfairDotNet.Enums.Betting.GroupByEnum.BET
+  commentId: F:BetfairDotNet.Enums.Betting.GroupByEnum.BET
+  id: BET
+  parent: BetfairDotNet.Enums.Betting.GroupByEnum
+  langs:
+  - csharp
+  - vb
+  name: BET
+  nameWithType: GroupByEnum.BET
+  fullName: BetfairDotNet.Enums.Betting.GroupByEnum.BET
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/GroupByEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: BET
+    path: ../src/BetfairDotNet/Enums/Betting/GroupByEnum.cs
+    startLine: 33
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  syntax:
+    content: BET = 4
+    return:
+      type: BetfairDotNet.Enums.Betting.GroupByEnum
+references:
+- uid: BetfairDotNet.Enums.Betting
+  commentId: N:BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Betting
+  nameWithType: BetfairDotNet.Enums.Betting
+  fullName: BetfairDotNet.Enums.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+- uid: BetfairDotNet.Enums.Betting.GroupByEnum
+  commentId: T:BetfairDotNet.Enums.Betting.GroupByEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.GroupByEnum.html
+  name: GroupByEnum
+  nameWithType: GroupByEnum
+  fullName: BetfairDotNet.Enums.Betting.GroupByEnum

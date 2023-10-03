@@ -1,0 +1,55 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Heartbeat
+  commentId: N:BetfairDotNet.Enums.Heartbeat
+  id: Heartbeat
+  parent: BetfairDotNet.Enums
+  children:
+  - BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum
+  langs:
+  - csharp
+  - vb
+  name: BetfairDotNet.Enums.Heartbeat
+  nameWithType: BetfairDotNet.Enums.Heartbeat
+  fullName: BetfairDotNet.Enums.Heartbeat
+  type: Namespace
+  assemblies:
+  - BetfairDotNet
+references:
+- uid: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum
+  commentId: T:BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum
+  parent: BetfairDotNet.Enums.Heartbeat
+  href: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum.html
+  name: ActionPerformedEnum
+  nameWithType: ActionPerformedEnum
+  fullName: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum
+- uid: BetfairDotNet.Enums.Heartbeat
+  commentId: N:BetfairDotNet.Enums.Heartbeat
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Heartbeat
+  nameWithType: BetfairDotNet.Enums.Heartbeat
+  fullName: BetfairDotNet.Enums.Heartbeat
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Heartbeat
+    name: Heartbeat
+    href: BetfairDotNet.Enums.Heartbeat.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Heartbeat
+    name: Heartbeat
+    href: BetfairDotNet.Enums.Heartbeat.html

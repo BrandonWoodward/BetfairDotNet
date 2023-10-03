@@ -1,0 +1,2879 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Services.BettingService
+  commentId: T:BetfairDotNet.Services.BettingService
+  id: BettingService
+  parent: BetfairDotNet.Services
+  children:
+  - BetfairDotNet.Services.BettingService.ListClearedOrders(BetfairDotNet.Enums.Betting.BetStatusEnum,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{BetfairDotNet.Models.Betting.RunnerId},System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Nullable{BetfairDotNet.Enums.Betting.SideEnum},BetfairDotNet.Models.Betting.TimeRange,System.Nullable{BetfairDotNet.Enums.Betting.GroupByEnum},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)
+  - BetfairDotNet.Services.BettingService.ListCompetitions(BetfairDotNet.Models.Betting.MarketFilter,System.String)
+  - BetfairDotNet.Services.BettingService.ListCountries(BetfairDotNet.Models.Betting.MarketFilter,System.String)
+  - BetfairDotNet.Services.BettingService.ListCurrentOrders(System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Nullable{BetfairDotNet.Enums.Betting.OrderProjectionEnum},BetfairDotNet.Models.Betting.TimeRange,BetfairDotNet.Models.Betting.TimeRange,System.Nullable{BetfairDotNet.Enums.Betting.OrderByEnum},System.Nullable{BetfairDotNet.Enums.Betting.SortDirEnum},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  - BetfairDotNet.Services.BettingService.ListEventTypes(BetfairDotNet.Models.Betting.MarketFilter,System.String)
+  - BetfairDotNet.Services.BettingService.ListEvents(BetfairDotNet.Models.Betting.MarketFilter,System.String)
+  - BetfairDotNet.Services.BettingService.ListMarketBook(System.Collections.Generic.IEnumerable{System.String},BetfairDotNet.Models.Betting.PriceProjection,System.Nullable{BetfairDotNet.Enums.Betting.OrderProjectionEnum},System.Nullable{BetfairDotNet.Enums.Betting.MatchProjectionEnum},System.Boolean,System.Boolean,System.Collections.Generic.IList{System.String},System.String,System.String,System.Nullable{System.DateTime},System.Collections.Generic.IList{System.String})
+  - BetfairDotNet.Services.BettingService.ListMarketCatalogue(BetfairDotNet.Models.Betting.MarketFilter,System.Collections.Generic.IList{BetfairDotNet.Enums.Betting.MarketProjectionEnum},System.Nullable{BetfairDotNet.Enums.Betting.MarketSortEnum},System.Int32,System.String)
+  - BetfairDotNet.Services.BettingService.ListMarketProfitAndLoss(System.Collections.Generic.IList{System.String},System.Boolean,System.Boolean,System.Boolean)
+  - BetfairDotNet.Services.BettingService.ListMarketTypes(BetfairDotNet.Models.Betting.MarketFilter,System.String)
+  - BetfairDotNet.Services.BettingService.ListRunnerBook(System.String,System.String,System.Nullable{System.Double},BetfairDotNet.Models.Betting.PriceProjection,System.Nullable{BetfairDotNet.Enums.Betting.OrderProjectionEnum},System.Nullable{BetfairDotNet.Enums.Betting.MatchProjectionEnum},System.Boolean,System.Boolean,System.Collections.Generic.IList{System.String},System.String,System.String,System.Nullable{System.DateTime},System.Collections.Generic.IList{System.String})
+  - BetfairDotNet.Services.BettingService.ListTimeRanges(BetfairDotNet.Models.Betting.MarketFilter,BetfairDotNet.Enums.Betting.TimeGranularityEnum)
+  - BetfairDotNet.Services.BettingService.ListVenues(BetfairDotNet.Models.Betting.MarketFilter,System.String)
+  - BetfairDotNet.Services.BettingService.PlaceOrders(System.String,System.Collections.Generic.IList{BetfairDotNet.Models.Betting.PlaceInstruction},System.String,BetfairDotNet.Models.Betting.MarketVersion,System.String,System.Boolean)
+  - BetfairDotNet.Services.BettingService.ReplaceOrders(System.String,System.Collections.Generic.IList{BetfairDotNet.Models.Betting.ReplaceInstruction},System.String,BetfairDotNet.Models.Betting.MarketVersion,System.Boolean)
+  - BetfairDotNet.Services.BettingService.UpdateOrders(System.String,System.Collections.Generic.IList{BetfairDotNet.Models.Betting.UpdateInstruction},System.String)
+  langs:
+  - csharp
+  - vb
+  name: BettingService
+  nameWithType: BettingService
+  fullName: BetfairDotNet.Services.BettingService
+  type: Class
+  source:
+    remote:
+      path: src/BetfairDotNet/Services/BettingService.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: BettingService
+    path: ../src/BetfairDotNet/Services/BettingService.cs
+    startLine: 9
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Services
+  syntax:
+    content: public class BettingService
+    content.vb: Public Class BettingService
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BetfairDotNet.Services.BettingService.ListClearedOrders(BetfairDotNet.Enums.Betting.BetStatusEnum,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{BetfairDotNet.Models.Betting.RunnerId},System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Nullable{BetfairDotNet.Enums.Betting.SideEnum},BetfairDotNet.Models.Betting.TimeRange,System.Nullable{BetfairDotNet.Enums.Betting.GroupByEnum},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)
+  commentId: M:BetfairDotNet.Services.BettingService.ListClearedOrders(BetfairDotNet.Enums.Betting.BetStatusEnum,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{BetfairDotNet.Models.Betting.RunnerId},System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Nullable{BetfairDotNet.Enums.Betting.SideEnum},BetfairDotNet.Models.Betting.TimeRange,System.Nullable{BetfairDotNet.Enums.Betting.GroupByEnum},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)
+  id: ListClearedOrders(BetfairDotNet.Enums.Betting.BetStatusEnum,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{BetfairDotNet.Models.Betting.RunnerId},System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Nullable{BetfairDotNet.Enums.Betting.SideEnum},BetfairDotNet.Models.Betting.TimeRange,System.Nullable{BetfairDotNet.Enums.Betting.GroupByEnum},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)
+  parent: BetfairDotNet.Services.BettingService
+  langs:
+  - csharp
+  - vb
+  name: ListClearedOrders(BetStatusEnum, IList<string>?, IList<string>?, IList<string>?, IList<RunnerId>?, IList<string>?, IList<string>?, IList<string>?, SideEnum?, TimeRange?, GroupByEnum?, bool?, int?, int?, string?)
+  nameWithType: BettingService.ListClearedOrders(BetStatusEnum, IList<string>?, IList<string>?, IList<string>?, IList<RunnerId>?, IList<string>?, IList<string>?, IList<string>?, SideEnum?, TimeRange?, GroupByEnum?, bool?, int?, int?, string?)
+  fullName: BetfairDotNet.Services.BettingService.ListClearedOrders(BetfairDotNet.Enums.Betting.BetStatusEnum, System.Collections.Generic.IList<string>?, System.Collections.Generic.IList<string>?, System.Collections.Generic.IList<string>?, System.Collections.Generic.IList<BetfairDotNet.Models.Betting.RunnerId>?, System.Collections.Generic.IList<string>?, System.Collections.Generic.IList<string>?, System.Collections.Generic.IList<string>?, BetfairDotNet.Enums.Betting.SideEnum?, BetfairDotNet.Models.Betting.TimeRange?, BetfairDotNet.Enums.Betting.GroupByEnum?, bool?, int?, int?, string?)
+  type: Method
+  source:
+    remote:
+      path: src/BetfairDotNet/Services/BettingService.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ListClearedOrders
+    path: ../src/BetfairDotNet/Services/BettingService.cs
+    startLine: 46
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Services
+  syntax:
+    content: public Task<ClearedOrderSummaryReport> ListClearedOrders(BetStatusEnum betStatus, IList<string>? eventTypeIds = null, IList<string>? eventIds = null, IList<string>? marketIds = null, IList<RunnerId>? runnerIds = null, IList<string>? betIds = null, IList<string>? customerOrderRefs = null, IList<string>? customerStrategyRefs = null, SideEnum? side = null, TimeRange? settledDateRange = null, GroupByEnum? groupBy = null, bool? includeItemDescription = null, int? fromRecord = null, int? recordCount = null, string? locale = null)
+    parameters:
+    - id: betStatus
+      type: BetfairDotNet.Enums.Betting.BetStatusEnum
+    - id: eventTypeIds
+      type: System.Collections.Generic.IList{System.String}
+    - id: eventIds
+      type: System.Collections.Generic.IList{System.String}
+    - id: marketIds
+      type: System.Collections.Generic.IList{System.String}
+    - id: runnerIds
+      type: System.Collections.Generic.IList{BetfairDotNet.Models.Betting.RunnerId}
+    - id: betIds
+      type: System.Collections.Generic.IList{System.String}
+    - id: customerOrderRefs
+      type: System.Collections.Generic.IList{System.String}
+    - id: customerStrategyRefs
+      type: System.Collections.Generic.IList{System.String}
+    - id: side
+      type: System.Nullable{BetfairDotNet.Enums.Betting.SideEnum}
+    - id: settledDateRange
+      type: BetfairDotNet.Models.Betting.TimeRange
+    - id: groupBy
+      type: System.Nullable{BetfairDotNet.Enums.Betting.GroupByEnum}
+    - id: includeItemDescription
+      type: System.Nullable{System.Boolean}
+    - id: fromRecord
+      type: System.Nullable{System.Int32}
+    - id: recordCount
+      type: System.Nullable{System.Int32}
+    - id: locale
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{BetfairDotNet.Models.Betting.ClearedOrderSummaryReport}
+    content.vb: Public Function ListClearedOrders(betStatus As BetStatusEnum, eventTypeIds As IList(Of String) = Nothing, eventIds As IList(Of String) = Nothing, marketIds As IList(Of String) = Nothing, runnerIds As IList(Of RunnerId) = Nothing, betIds As IList(Of String) = Nothing, customerOrderRefs As IList(Of String) = Nothing, customerStrategyRefs As IList(Of String) = Nothing, side As SideEnum? = Nothing, settledDateRange As TimeRange = Nothing, groupBy As GroupByEnum? = Nothing, includeItemDescription As Boolean? = Nothing, fromRecord As Integer? = Nothing, recordCount As Integer? = Nothing, locale As String = Nothing) As Task(Of ClearedOrderSummaryReport)
+  overload: BetfairDotNet.Services.BettingService.ListClearedOrders*
+  nameWithType.vb: BettingService.ListClearedOrders(BetStatusEnum, IList(Of String), IList(Of String), IList(Of String), IList(Of RunnerId), IList(Of String), IList(Of String), IList(Of String), SideEnum?, TimeRange, GroupByEnum?, Boolean?, Integer?, Integer?, String)
+  fullName.vb: BetfairDotNet.Services.BettingService.ListClearedOrders(BetfairDotNet.Enums.Betting.BetStatusEnum, System.Collections.Generic.IList(Of String), System.Collections.Generic.IList(Of String), System.Collections.Generic.IList(Of String), System.Collections.Generic.IList(Of BetfairDotNet.Models.Betting.RunnerId), System.Collections.Generic.IList(Of String), System.Collections.Generic.IList(Of String), System.Collections.Generic.IList(Of String), BetfairDotNet.Enums.Betting.SideEnum?, BetfairDotNet.Models.Betting.TimeRange, BetfairDotNet.Enums.Betting.GroupByEnum?, Boolean?, Integer?, Integer?, String)
+  name.vb: ListClearedOrders(BetStatusEnum, IList(Of String), IList(Of String), IList(Of String), IList(Of RunnerId), IList(Of String), IList(Of String), IList(Of String), SideEnum?, TimeRange, GroupByEnum?, Boolean?, Integer?, Integer?, String)
+- uid: BetfairDotNet.Services.BettingService.ListCompetitions(BetfairDotNet.Models.Betting.MarketFilter,System.String)
+  commentId: M:BetfairDotNet.Services.BettingService.ListCompetitions(BetfairDotNet.Models.Betting.MarketFilter,System.String)
+  id: ListCompetitions(BetfairDotNet.Models.Betting.MarketFilter,System.String)
+  parent: BetfairDotNet.Services.BettingService
+  langs:
+  - csharp
+  - vb
+  name: ListCompetitions(MarketFilter, string?)
+  nameWithType: BettingService.ListCompetitions(MarketFilter, string?)
+  fullName: BetfairDotNet.Services.BettingService.ListCompetitions(BetfairDotNet.Models.Betting.MarketFilter, string?)
+  type: Method
+  source:
+    remote:
+      path: src/BetfairDotNet/Services/BettingService.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ListCompetitions
+    path: ../src/BetfairDotNet/Services/BettingService.cs
+    startLine: 97
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Services
+  summary: >-
+    Returns a list of Competitions (i.e., World Cup 2013) associated with the markets selected by the MarketFilter. 
+
+    Currently only Football markets have an associated competition.
+  example: []
+  syntax:
+    content: public Task<IReadOnlyList<CompetitionResult>> ListCompetitions(MarketFilter marketFilter, string? locale = null)
+    parameters:
+    - id: marketFilter
+      type: BetfairDotNet.Models.Betting.MarketFilter
+      description: The filter to select desired markets. All markets that match the criteria in the filter are selected.
+    - id: locale
+      type: System.String
+      description: The language used for the response. If not specified, the default is returned.
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{BetfairDotNet.Models.Betting.CompetitionResult}}
+      description: >-
+        A task that represents the asynchronous operation. 
+           The task result contains a list of <xref href="BetfairDotNet.Models.Betting.CompetitionResult" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function ListCompetitions(marketFilter As MarketFilter, locale As String = Nothing) As Task(Of IReadOnlyList(Of CompetitionResult))
+  overload: BetfairDotNet.Services.BettingService.ListCompetitions*
+  nameWithType.vb: BettingService.ListCompetitions(MarketFilter, String)
+  fullName.vb: BetfairDotNet.Services.BettingService.ListCompetitions(BetfairDotNet.Models.Betting.MarketFilter, String)
+  name.vb: ListCompetitions(MarketFilter, String)
+- uid: BetfairDotNet.Services.BettingService.ListCountries(BetfairDotNet.Models.Betting.MarketFilter,System.String)
+  commentId: M:BetfairDotNet.Services.BettingService.ListCountries(BetfairDotNet.Models.Betting.MarketFilter,System.String)
+  id: ListCountries(BetfairDotNet.Models.Betting.MarketFilter,System.String)
+  parent: BetfairDotNet.Services.BettingService
+  langs:
+  - csharp
+  - vb
+  name: ListCountries(MarketFilter, string?)
+  nameWithType: BettingService.ListCountries(MarketFilter, string?)
+  fullName: BetfairDotNet.Services.BettingService.ListCountries(BetfairDotNet.Models.Betting.MarketFilter, string?)
+  type: Method
+  source:
+    remote:
+      path: src/BetfairDotNet/Services/BettingService.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ListCountries
+    path: ../src/BetfairDotNet/Services/BettingService.cs
+    startLine: 119
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Services
+  summary: Returns a list of Countries associated with the markets selected by the <xref href="BetfairDotNet.Models.Betting.MarketFilter" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public Task<IReadOnlyList<CountryCodeResult>> ListCountries(MarketFilter marketFilter, string? locale = null)
+    parameters:
+    - id: marketFilter
+      type: BetfairDotNet.Models.Betting.MarketFilter
+      description: ''
+    - id: locale
+      type: System.String
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{BetfairDotNet.Models.Betting.CountryCodeResult}}
+      description: >-
+        A task that represents the asynchronous operation. 
+           The task result contains a list of <xref href="BetfairDotNet.Models.Betting.CountryCodeResult" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function ListCountries(marketFilter As MarketFilter, locale As String = Nothing) As Task(Of IReadOnlyList(Of CountryCodeResult))
+  overload: BetfairDotNet.Services.BettingService.ListCountries*
+  nameWithType.vb: BettingService.ListCountries(MarketFilter, String)
+  fullName.vb: BetfairDotNet.Services.BettingService.ListCountries(BetfairDotNet.Models.Betting.MarketFilter, String)
+  name.vb: ListCountries(MarketFilter, String)
+- uid: BetfairDotNet.Services.BettingService.ListCurrentOrders(System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Nullable{BetfairDotNet.Enums.Betting.OrderProjectionEnum},BetfairDotNet.Models.Betting.TimeRange,BetfairDotNet.Models.Betting.TimeRange,System.Nullable{BetfairDotNet.Enums.Betting.OrderByEnum},System.Nullable{BetfairDotNet.Enums.Betting.SortDirEnum},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  commentId: M:BetfairDotNet.Services.BettingService.ListCurrentOrders(System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Nullable{BetfairDotNet.Enums.Betting.OrderProjectionEnum},BetfairDotNet.Models.Betting.TimeRange,BetfairDotNet.Models.Betting.TimeRange,System.Nullable{BetfairDotNet.Enums.Betting.OrderByEnum},System.Nullable{BetfairDotNet.Enums.Betting.SortDirEnum},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  id: ListCurrentOrders(System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Nullable{BetfairDotNet.Enums.Betting.OrderProjectionEnum},BetfairDotNet.Models.Betting.TimeRange,BetfairDotNet.Models.Betting.TimeRange,System.Nullable{BetfairDotNet.Enums.Betting.OrderByEnum},System.Nullable{BetfairDotNet.Enums.Betting.SortDirEnum},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  parent: BetfairDotNet.Services.BettingService
+  langs:
+  - csharp
+  - vb
+  name: ListCurrentOrders(IList<string>?, IList<string>?, OrderProjectionEnum?, TimeRange?, TimeRange?, OrderByEnum?, SortDirEnum?, int?, int?)
+  nameWithType: BettingService.ListCurrentOrders(IList<string>?, IList<string>?, OrderProjectionEnum?, TimeRange?, TimeRange?, OrderByEnum?, SortDirEnum?, int?, int?)
+  fullName: BetfairDotNet.Services.BettingService.ListCurrentOrders(System.Collections.Generic.IList<string>?, System.Collections.Generic.IList<string>?, BetfairDotNet.Enums.Betting.OrderProjectionEnum?, BetfairDotNet.Models.Betting.TimeRange?, BetfairDotNet.Models.Betting.TimeRange?, BetfairDotNet.Enums.Betting.OrderByEnum?, BetfairDotNet.Enums.Betting.SortDirEnum?, int?, int?)
+  type: Method
+  source:
+    remote:
+      path: src/BetfairDotNet/Services/BettingService.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ListCurrentOrders
+    path: ../src/BetfairDotNet/Services/BettingService.cs
+    startLine: 152
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Services
+  summary: >-
+    Returns a list of your current orders. Optionally you can filter and sort your current orders using the various parameters, 
+
+    setting none of the parameters will return all of your current orders up to a maximum of 1000 bets, 
+
+    ordered BY_BET and sorted EARLIEST_TO_LATEST.
+
+    <p>To retrieve more than 1000 orders, you need to make use of the 
+
+    fromRecord and recordCount parameters.</p>
+  example: []
+  syntax:
+    content: public Task<CurrentOrderSummaryReport> ListCurrentOrders(IList<string>? betIds = null, IList<string>? marketIds = null, OrderProjectionEnum? orderProjection = null, TimeRange? placedDateRange = null, TimeRange? dateRange = null, OrderByEnum? orderBy = null, SortDirEnum? sortDir = null, int? fromRecord = null, int? recordCount = null)
+    parameters:
+    - id: betIds
+      type: System.Collections.Generic.IList{System.String}
+      description: Optional list of bet IDs to filter by.
+    - id: marketIds
+      type: System.Collections.Generic.IList{System.String}
+      description: Optional list of market IDs to filter by.
+    - id: orderProjection
+      type: System.Nullable{BetfairDotNet.Enums.Betting.OrderProjectionEnum}
+      description: Optional projection type for the orders.
+    - id: placedDateRange
+      type: BetfairDotNet.Models.Betting.TimeRange
+      description: Optional date range to filter by placement date.
+    - id: dateRange
+      type: BetfairDotNet.Models.Betting.TimeRange
+      description: Optional general date range to filter by.
+    - id: orderBy
+      type: System.Nullable{BetfairDotNet.Enums.Betting.OrderByEnum}
+      description: Optional order by criteria.
+    - id: sortDir
+      type: System.Nullable{BetfairDotNet.Enums.Betting.SortDirEnum}
+      description: Optional sort direction.
+    - id: fromRecord
+      type: System.Nullable{System.Int32}
+      description: Optional starting record for pagination.
+    - id: recordCount
+      type: System.Nullable{System.Int32}
+      description: Optional count of records to return for pagination.
+    return:
+      type: System.Threading.Tasks.Task{BetfairDotNet.Models.Betting.CurrentOrderSummaryReport}
+      description: >-
+        A task that represents the asynchronous operation. 
+           The task result contains a <xref href="BetfairDotNet.Models.Betting.CurrentOrderSummaryReport" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function ListCurrentOrders(betIds As IList(Of String) = Nothing, marketIds As IList(Of String) = Nothing, orderProjection As OrderProjectionEnum? = Nothing, placedDateRange As TimeRange = Nothing, dateRange As TimeRange = Nothing, orderBy As OrderByEnum? = Nothing, sortDir As SortDirEnum? = Nothing, fromRecord As Integer? = Nothing, recordCount As Integer? = Nothing) As Task(Of CurrentOrderSummaryReport)
+  overload: BetfairDotNet.Services.BettingService.ListCurrentOrders*
+  nameWithType.vb: BettingService.ListCurrentOrders(IList(Of String), IList(Of String), OrderProjectionEnum?, TimeRange, TimeRange, OrderByEnum?, SortDirEnum?, Integer?, Integer?)
+  fullName.vb: BetfairDotNet.Services.BettingService.ListCurrentOrders(System.Collections.Generic.IList(Of String), System.Collections.Generic.IList(Of String), BetfairDotNet.Enums.Betting.OrderProjectionEnum?, BetfairDotNet.Models.Betting.TimeRange, BetfairDotNet.Models.Betting.TimeRange, BetfairDotNet.Enums.Betting.OrderByEnum?, BetfairDotNet.Enums.Betting.SortDirEnum?, Integer?, Integer?)
+  name.vb: ListCurrentOrders(IList(Of String), IList(Of String), OrderProjectionEnum?, TimeRange, TimeRange, OrderByEnum?, SortDirEnum?, Integer?, Integer?)
+- uid: BetfairDotNet.Services.BettingService.ListEvents(BetfairDotNet.Models.Betting.MarketFilter,System.String)
+  commentId: M:BetfairDotNet.Services.BettingService.ListEvents(BetfairDotNet.Models.Betting.MarketFilter,System.String)
+  id: ListEvents(BetfairDotNet.Models.Betting.MarketFilter,System.String)
+  parent: BetfairDotNet.Services.BettingService
+  langs:
+  - csharp
+  - vb
+  name: ListEvents(MarketFilter, string?)
+  nameWithType: BettingService.ListEvents(MarketFilter, string?)
+  fullName: BetfairDotNet.Services.BettingService.ListEvents(BetfairDotNet.Models.Betting.MarketFilter, string?)
+  type: Method
+  source:
+    remote:
+      path: src/BetfairDotNet/Services/BettingService.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ListEvents
+    path: ../src/BetfairDotNet/Services/BettingService.cs
+    startLine: 192
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Services
+  summary: Returns a list of Events (i.e, Reading vs. Man United) associated with the markets selected by the MarketFilter.
+  example: []
+  syntax:
+    content: public Task<IReadOnlyList<EventResult>> ListEvents(MarketFilter marketFilter, string? locale = null)
+    parameters:
+    - id: marketFilter
+      type: BetfairDotNet.Models.Betting.MarketFilter
+      description: The filter to select desired markets. All markets that match the criteria in the filter are selected.
+    - id: locale
+      type: System.String
+      description: The language used for the response. If not specified, the default is returned.
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{BetfairDotNet.Models.Betting.EventResult}}
+      description: >-
+        A task that represents the asynchronous operation. 
+           The task result contains a <xref href="BetfairDotNet.Models.BetfairServerResponse%601" data-throw-if-not-resolved="false"></xref> containing the list of <xref href="BetfairDotNet.Models.Betting.EventResult" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function ListEvents(marketFilter As MarketFilter, locale As String = Nothing) As Task(Of IReadOnlyList(Of EventResult))
+  overload: BetfairDotNet.Services.BettingService.ListEvents*
+  nameWithType.vb: BettingService.ListEvents(MarketFilter, String)
+  fullName.vb: BetfairDotNet.Services.BettingService.ListEvents(BetfairDotNet.Models.Betting.MarketFilter, String)
+  name.vb: ListEvents(MarketFilter, String)
+- uid: BetfairDotNet.Services.BettingService.ListEventTypes(BetfairDotNet.Models.Betting.MarketFilter,System.String)
+  commentId: M:BetfairDotNet.Services.BettingService.ListEventTypes(BetfairDotNet.Models.Betting.MarketFilter,System.String)
+  id: ListEventTypes(BetfairDotNet.Models.Betting.MarketFilter,System.String)
+  parent: BetfairDotNet.Services.BettingService
+  langs:
+  - csharp
+  - vb
+  name: ListEventTypes(MarketFilter, string?)
+  nameWithType: BettingService.ListEventTypes(MarketFilter, string?)
+  fullName: BetfairDotNet.Services.BettingService.ListEventTypes(BetfairDotNet.Models.Betting.MarketFilter, string?)
+  type: Method
+  source:
+    remote:
+      path: src/BetfairDotNet/Services/BettingService.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ListEventTypes
+    path: ../src/BetfairDotNet/Services/BettingService.cs
+    startLine: 214
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Services
+  summary: Returns a list of Event Types (i.e. Sports) associated with the markets selected by the MarketFilter.
+  example: []
+  syntax:
+    content: public Task<IReadOnlyList<EventTypeResult>> ListEventTypes(MarketFilter marketFilter, string? locale = null)
+    parameters:
+    - id: marketFilter
+      type: BetfairDotNet.Models.Betting.MarketFilter
+      description: The filter to select desired markets. All markets that match the criteria in the filter are selected.
+    - id: locale
+      type: System.String
+      description: The language used for the response. If not specified, the default is returned.
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{BetfairDotNet.Models.Betting.EventTypeResult}}
+      description: >-
+        A task that represents the asynchronous operation. 
+           The task result contains a <xref href="BetfairDotNet.Models.BetfairServerResponse%601" data-throw-if-not-resolved="false"></xref> containing the list of <xref href="BetfairDotNet.Models.Betting.EventTypeResult" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function ListEventTypes(marketFilter As MarketFilter, locale As String = Nothing) As Task(Of IReadOnlyList(Of EventTypeResult))
+  overload: BetfairDotNet.Services.BettingService.ListEventTypes*
+  nameWithType.vb: BettingService.ListEventTypes(MarketFilter, String)
+  fullName.vb: BetfairDotNet.Services.BettingService.ListEventTypes(BetfairDotNet.Models.Betting.MarketFilter, String)
+  name.vb: ListEventTypes(MarketFilter, String)
+- uid: BetfairDotNet.Services.BettingService.ListMarketBook(System.Collections.Generic.IEnumerable{System.String},BetfairDotNet.Models.Betting.PriceProjection,System.Nullable{BetfairDotNet.Enums.Betting.OrderProjectionEnum},System.Nullable{BetfairDotNet.Enums.Betting.MatchProjectionEnum},System.Boolean,System.Boolean,System.Collections.Generic.IList{System.String},System.String,System.String,System.Nullable{System.DateTime},System.Collections.Generic.IList{System.String})
+  commentId: M:BetfairDotNet.Services.BettingService.ListMarketBook(System.Collections.Generic.IEnumerable{System.String},BetfairDotNet.Models.Betting.PriceProjection,System.Nullable{BetfairDotNet.Enums.Betting.OrderProjectionEnum},System.Nullable{BetfairDotNet.Enums.Betting.MatchProjectionEnum},System.Boolean,System.Boolean,System.Collections.Generic.IList{System.String},System.String,System.String,System.Nullable{System.DateTime},System.Collections.Generic.IList{System.String})
+  id: ListMarketBook(System.Collections.Generic.IEnumerable{System.String},BetfairDotNet.Models.Betting.PriceProjection,System.Nullable{BetfairDotNet.Enums.Betting.OrderProjectionEnum},System.Nullable{BetfairDotNet.Enums.Betting.MatchProjectionEnum},System.Boolean,System.Boolean,System.Collections.Generic.IList{System.String},System.String,System.String,System.Nullable{System.DateTime},System.Collections.Generic.IList{System.String})
+  parent: BetfairDotNet.Services.BettingService
+  langs:
+  - csharp
+  - vb
+  name: ListMarketBook(IEnumerable<string>, PriceProjection?, OrderProjectionEnum?, MatchProjectionEnum?, bool, bool, IList<string>?, string?, string?, DateTime?, IList<string>?)
+  nameWithType: BettingService.ListMarketBook(IEnumerable<string>, PriceProjection?, OrderProjectionEnum?, MatchProjectionEnum?, bool, bool, IList<string>?, string?, string?, DateTime?, IList<string>?)
+  fullName: BetfairDotNet.Services.BettingService.ListMarketBook(System.Collections.Generic.IEnumerable<string>, BetfairDotNet.Models.Betting.PriceProjection?, BetfairDotNet.Enums.Betting.OrderProjectionEnum?, BetfairDotNet.Enums.Betting.MatchProjectionEnum?, bool, bool, System.Collections.Generic.IList<string>?, string?, string?, System.DateTime?, System.Collections.Generic.IList<string>?)
+  type: Method
+  source:
+    remote:
+      path: src/BetfairDotNet/Services/BettingService.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ListMarketBook
+    path: ../src/BetfairDotNet/Services/BettingService.cs
+    startLine: 250
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Services
+  summary: >-
+    Returns a list of dynamic data about markets. Dynamic data includes prices, the status of the market, the status of selections, 
+
+    the traded volume, and the status of any orders you have placed in the market.
+  example: []
+  syntax:
+    content: public Task<IReadOnlyList<MarketBook>> ListMarketBook(IEnumerable<string> marketIds, PriceProjection? priceProjection = null, OrderProjectionEnum? orderProjection = null, MatchProjectionEnum? matchProjection = null, bool includeOverallPosition = false, bool partitionMatchedByStrategyRef = false, IList<string>? customerStrategyRefs = null, string? currencyCode = null, string? locale = null, DateTime? matchedSince = null, IList<string>? betIds = null)
+    parameters:
+    - id: marketIds
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: One or more market ids. The number of markets returned depends on the amount of data you request via the price projection.
+    - id: priceProjection
+      type: BetfairDotNet.Models.Betting.PriceProjection
+      description: The projection of price data you want to receive in the response.
+    - id: orderProjection
+      type: System.Nullable{BetfairDotNet.Enums.Betting.OrderProjectionEnum}
+      description: The orders you want to receive in the response.
+    - id: matchProjection
+      type: System.Nullable{BetfairDotNet.Enums.Betting.MatchProjectionEnum}
+      description: If you ask for orders, specifies the representation of matches.
+    - id: includeOverallPosition
+      type: System.Boolean
+      description: If you ask for orders, returns matches for each selection. Defaults to true if unspecified.
+    - id: partitionMatchedByStrategyRef
+      type: System.Boolean
+      description: If you ask for orders, returns the breakdown of matches by strategy for each selection.
+    - id: customerStrategyRefs
+      type: System.Collections.Generic.IList{System.String}
+      description: >-
+        If you ask for orders, restricts the results to orders matching any of the specified set of customer defined strategies. 
+            Also filters which matches by strategy for selections are returned, if partitionMatchedByStrategyRef is true.
+    - id: currencyCode
+      type: System.String
+      description: A Betfair standard currency code. If not specified, the default currency code is used.
+    - id: locale
+      type: System.String
+      description: The language used for the response. If not specified, the default is returned.
+    - id: matchedSince
+      type: System.Nullable{System.DateTime}
+      description: >-
+        If you ask for orders, restricts the results to orders that have at least one fragment matched since 
+            the specified date(all matched fragments of such an order will be returned even if some were matched before the specified date). 
+            All EXECUTABLE orders will be returned regardless of matched date.
+    - id: betIds
+      type: System.Collections.Generic.IList{System.String}
+      description: >-
+        If you ask for orders, restricts the results to orders with the specified bet IDs. Omitting this parameter means that all bets
+            will be included in the response. A maximum of 250 betId's can be provided at a time.
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{BetfairDotNet.Models.Betting.MarketBook}}
+      description: >-
+        A task that represents the asynchronous operation. 
+           The task result contains a <xref href="BetfairDotNet.Models.BetfairServerResponse%601" data-throw-if-not-resolved="false"></xref> containing the list of <xref href="BetfairDotNet.Models.Betting.MarketBook" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function ListMarketBook(marketIds As IEnumerable(Of String), priceProjection As PriceProjection = Nothing, orderProjection As OrderProjectionEnum? = Nothing, matchProjection As MatchProjectionEnum? = Nothing, includeOverallPosition As Boolean = False, partitionMatchedByStrategyRef As Boolean = False, customerStrategyRefs As IList(Of String) = Nothing, currencyCode As String = Nothing, locale As String = Nothing, matchedSince As Date? = Nothing, betIds As IList(Of String) = Nothing) As Task(Of IReadOnlyList(Of MarketBook))
+  overload: BetfairDotNet.Services.BettingService.ListMarketBook*
+  nameWithType.vb: BettingService.ListMarketBook(IEnumerable(Of String), PriceProjection, OrderProjectionEnum?, MatchProjectionEnum?, Boolean, Boolean, IList(Of String), String, String, Date?, IList(Of String))
+  fullName.vb: BetfairDotNet.Services.BettingService.ListMarketBook(System.Collections.Generic.IEnumerable(Of String), BetfairDotNet.Models.Betting.PriceProjection, BetfairDotNet.Enums.Betting.OrderProjectionEnum?, BetfairDotNet.Enums.Betting.MatchProjectionEnum?, Boolean, Boolean, System.Collections.Generic.IList(Of String), String, String, Date?, System.Collections.Generic.IList(Of String))
+  name.vb: ListMarketBook(IEnumerable(Of String), PriceProjection, OrderProjectionEnum?, MatchProjectionEnum?, Boolean, Boolean, IList(Of String), String, String, Date?, IList(Of String))
+- uid: BetfairDotNet.Services.BettingService.ListMarketCatalogue(BetfairDotNet.Models.Betting.MarketFilter,System.Collections.Generic.IList{BetfairDotNet.Enums.Betting.MarketProjectionEnum},System.Nullable{BetfairDotNet.Enums.Betting.MarketSortEnum},System.Int32,System.String)
+  commentId: M:BetfairDotNet.Services.BettingService.ListMarketCatalogue(BetfairDotNet.Models.Betting.MarketFilter,System.Collections.Generic.IList{BetfairDotNet.Enums.Betting.MarketProjectionEnum},System.Nullable{BetfairDotNet.Enums.Betting.MarketSortEnum},System.Int32,System.String)
+  id: ListMarketCatalogue(BetfairDotNet.Models.Betting.MarketFilter,System.Collections.Generic.IList{BetfairDotNet.Enums.Betting.MarketProjectionEnum},System.Nullable{BetfairDotNet.Enums.Betting.MarketSortEnum},System.Int32,System.String)
+  parent: BetfairDotNet.Services.BettingService
+  langs:
+  - csharp
+  - vb
+  name: ListMarketCatalogue(MarketFilter, IList<MarketProjectionEnum>?, MarketSortEnum?, int, string?)
+  nameWithType: BettingService.ListMarketCatalogue(MarketFilter, IList<MarketProjectionEnum>?, MarketSortEnum?, int, string?)
+  fullName: BetfairDotNet.Services.BettingService.ListMarketCatalogue(BetfairDotNet.Models.Betting.MarketFilter, System.Collections.Generic.IList<BetfairDotNet.Enums.Betting.MarketProjectionEnum>?, BetfairDotNet.Enums.Betting.MarketSortEnum?, int, string?)
+  type: Method
+  source:
+    remote:
+      path: src/BetfairDotNet/Services/BettingService.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ListMarketCatalogue
+    path: ../src/BetfairDotNet/Services/BettingService.cs
+    startLine: 301
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Services
+  summary: >-
+    Returns a list of information about published (ACTIVE/SUSPENDED) markets that does not change (or changes very rarely). 
+
+    Use listMarketCatalogue to retrieve the name of the market, the names of selections and other information about markets.
+
+    <p>Market Data Request Limits apply to requests made to listMarketCatalogue.</p> 
+
+    <p>listMarketCatalogue does not return markets that are CLOSED.</p>
+  example: []
+  syntax:
+    content: public Task<IReadOnlyList<MarketCatalogue>> ListMarketCatalogue(MarketFilter marketFilter, IList<MarketProjectionEnum>? marketProjections = null, MarketSortEnum? sort = null, int maxResults = 1, string? locale = null)
+    parameters:
+    - id: marketFilter
+      type: BetfairDotNet.Models.Betting.MarketFilter
+      description: The filter to select desired markets. All markets that match the criteria in the filter are selected.
+    - id: marketProjections
+      type: System.Collections.Generic.IList{BetfairDotNet.Enums.Betting.MarketProjectionEnum}
+      description: The type and amount of data returned about the market.
+    - id: sort
+      type: System.Nullable{BetfairDotNet.Enums.Betting.MarketSortEnum}
+      description: >-
+        The order of the results. Will default to RANK if not passed. RANK is an assigned priority that is determined by Betfair's 
+            Market Operations team. A result's overall rank is derived from the ranking given to the following attributes for the result:
+            EventType, Competition, StartTime, MarketType, MarketId
+    - id: maxResults
+      type: System.Int32
+      description: limit on the total number of results returned, must be greater than 0 and less than or equal to 1000
+    - id: locale
+      type: System.String
+      description: The language used for the response. If not specified, the default is returned.
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{BetfairDotNet.Models.Betting.MarketCatalogue}}
+      description: >-
+        A task that represents the asynchronous operation. 
+           The task result contains a <xref href="BetfairDotNet.Models.BetfairServerResponse%601" data-throw-if-not-resolved="false"></xref> containing the list of <xref href="BetfairDotNet.Models.Betting.MarketCatalogue" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function ListMarketCatalogue(marketFilter As MarketFilter, marketProjections As IList(Of MarketProjectionEnum) = Nothing, sort As MarketSortEnum? = Nothing, maxResults As Integer = 1, locale As String = Nothing) As Task(Of IReadOnlyList(Of MarketCatalogue))
+  overload: BetfairDotNet.Services.BettingService.ListMarketCatalogue*
+  nameWithType.vb: BettingService.ListMarketCatalogue(MarketFilter, IList(Of MarketProjectionEnum), MarketSortEnum?, Integer, String)
+  fullName.vb: BetfairDotNet.Services.BettingService.ListMarketCatalogue(BetfairDotNet.Models.Betting.MarketFilter, System.Collections.Generic.IList(Of BetfairDotNet.Enums.Betting.MarketProjectionEnum), BetfairDotNet.Enums.Betting.MarketSortEnum?, Integer, String)
+  name.vb: ListMarketCatalogue(MarketFilter, IList(Of MarketProjectionEnum), MarketSortEnum?, Integer, String)
+- uid: BetfairDotNet.Services.BettingService.ListMarketProfitAndLoss(System.Collections.Generic.IList{System.String},System.Boolean,System.Boolean,System.Boolean)
+  commentId: M:BetfairDotNet.Services.BettingService.ListMarketProfitAndLoss(System.Collections.Generic.IList{System.String},System.Boolean,System.Boolean,System.Boolean)
+  id: ListMarketProfitAndLoss(System.Collections.Generic.IList{System.String},System.Boolean,System.Boolean,System.Boolean)
+  parent: BetfairDotNet.Services.BettingService
+  langs:
+  - csharp
+  - vb
+  name: ListMarketProfitAndLoss(IList<string>, bool, bool, bool)
+  nameWithType: BettingService.ListMarketProfitAndLoss(IList<string>, bool, bool, bool)
+  fullName: BetfairDotNet.Services.BettingService.ListMarketProfitAndLoss(System.Collections.Generic.IList<string>, bool, bool, bool)
+  type: Method
+  source:
+    remote:
+      path: src/BetfairDotNet/Services/BettingService.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ListMarketProfitAndLoss
+    path: ../src/BetfairDotNet/Services/BettingService.cs
+    startLine: 335
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Services
+  summary: >-
+    Retrieve profit and loss for a given list of OPEN markets. The values are calculated using matched bets and optionally settled bets. 
+
+    <p>Only odds (MarketBettingType = ODDS) markets  are implemented, markets of other types are silently ignored.</p>
+  example: []
+  syntax:
+    content: public Task<IReadOnlyList<MarketProfitAndLoss>> ListMarketProfitAndLoss(IList<string> marketIds, bool includeSettledBets = false, bool includeBsbBets = false, bool netOfCommission = false)
+    parameters:
+    - id: marketIds
+      type: System.Collections.Generic.IList{System.String}
+      description: List of markets to calculate profit and loss
+    - id: includeSettledBets
+      type: System.Boolean
+      description: Option to include settled bets (partially settled markets only). Defaults to false if not specified.
+    - id: includeBsbBets
+      type: System.Boolean
+      description: Option to include BSP bets. Defaults to false if not specified.
+    - id: netOfCommission
+      type: System.Boolean
+      description: Option to return profit and loss net of users current commission rate for this market including any special tariffs.
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{BetfairDotNet.Models.Betting.MarketProfitAndLoss}}
+      description: >-
+        A task that represents the asynchronous operation. 
+           The task result contains a <xref href="BetfairDotNet.Models.BetfairServerResponse%601" data-throw-if-not-resolved="false"></xref> containing the list of <xref href="BetfairDotNet.Models.Betting.MarketProfitAndLoss" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function ListMarketProfitAndLoss(marketIds As IList(Of String), includeSettledBets As Boolean = False, includeBsbBets As Boolean = False, netOfCommission As Boolean = False) As Task(Of IReadOnlyList(Of MarketProfitAndLoss))
+  overload: BetfairDotNet.Services.BettingService.ListMarketProfitAndLoss*
+  nameWithType.vb: BettingService.ListMarketProfitAndLoss(IList(Of String), Boolean, Boolean, Boolean)
+  fullName.vb: BetfairDotNet.Services.BettingService.ListMarketProfitAndLoss(System.Collections.Generic.IList(Of String), Boolean, Boolean, Boolean)
+  name.vb: ListMarketProfitAndLoss(IList(Of String), Boolean, Boolean, Boolean)
+- uid: BetfairDotNet.Services.BettingService.ListMarketTypes(BetfairDotNet.Models.Betting.MarketFilter,System.String)
+  commentId: M:BetfairDotNet.Services.BettingService.ListMarketTypes(BetfairDotNet.Models.Betting.MarketFilter,System.String)
+  id: ListMarketTypes(BetfairDotNet.Models.Betting.MarketFilter,System.String)
+  parent: BetfairDotNet.Services.BettingService
+  langs:
+  - csharp
+  - vb
+  name: ListMarketTypes(MarketFilter, string?)
+  nameWithType: BettingService.ListMarketTypes(MarketFilter, string?)
+  fullName: BetfairDotNet.Services.BettingService.ListMarketTypes(BetfairDotNet.Models.Betting.MarketFilter, string?)
+  type: Method
+  source:
+    remote:
+      path: src/BetfairDotNet/Services/BettingService.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ListMarketTypes
+    path: ../src/BetfairDotNet/Services/BettingService.cs
+    startLine: 365
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Services
+  summary: >-
+    Returns a list of market types (i.e. MATCH_ODDS, NEXT_GOAL) associated with the markets selected by the MarketFilter. 
+
+    The market types are always the same, regardless of locale.
+  example: []
+  syntax:
+    content: public Task<IReadOnlyList<MarketTypeResult>> ListMarketTypes(MarketFilter marketFilter, string? locale = null)
+    parameters:
+    - id: marketFilter
+      type: BetfairDotNet.Models.Betting.MarketFilter
+      description: The filter to select desired markets. All markets that match the criteria in the filter are selected.
+    - id: locale
+      type: System.String
+      description: The language used for the response. If not specified, the default is returned.
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{BetfairDotNet.Models.Betting.MarketTypeResult}}
+      description: >-
+        A task that represents the asynchronous operation. 
+           The task result contains a <xref href="BetfairDotNet.Models.BetfairServerResponse%601" data-throw-if-not-resolved="false"></xref> containing the list of <xref href="BetfairDotNet.Models.Betting.MarketTypeResult" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function ListMarketTypes(marketFilter As MarketFilter, locale As String = Nothing) As Task(Of IReadOnlyList(Of MarketTypeResult))
+  overload: BetfairDotNet.Services.BettingService.ListMarketTypes*
+  nameWithType.vb: BettingService.ListMarketTypes(MarketFilter, String)
+  fullName.vb: BetfairDotNet.Services.BettingService.ListMarketTypes(BetfairDotNet.Models.Betting.MarketFilter, String)
+  name.vb: ListMarketTypes(MarketFilter, String)
+- uid: BetfairDotNet.Services.BettingService.ListRunnerBook(System.String,System.String,System.Nullable{System.Double},BetfairDotNet.Models.Betting.PriceProjection,System.Nullable{BetfairDotNet.Enums.Betting.OrderProjectionEnum},System.Nullable{BetfairDotNet.Enums.Betting.MatchProjectionEnum},System.Boolean,System.Boolean,System.Collections.Generic.IList{System.String},System.String,System.String,System.Nullable{System.DateTime},System.Collections.Generic.IList{System.String})
+  commentId: M:BetfairDotNet.Services.BettingService.ListRunnerBook(System.String,System.String,System.Nullable{System.Double},BetfairDotNet.Models.Betting.PriceProjection,System.Nullable{BetfairDotNet.Enums.Betting.OrderProjectionEnum},System.Nullable{BetfairDotNet.Enums.Betting.MatchProjectionEnum},System.Boolean,System.Boolean,System.Collections.Generic.IList{System.String},System.String,System.String,System.Nullable{System.DateTime},System.Collections.Generic.IList{System.String})
+  id: ListRunnerBook(System.String,System.String,System.Nullable{System.Double},BetfairDotNet.Models.Betting.PriceProjection,System.Nullable{BetfairDotNet.Enums.Betting.OrderProjectionEnum},System.Nullable{BetfairDotNet.Enums.Betting.MatchProjectionEnum},System.Boolean,System.Boolean,System.Collections.Generic.IList{System.String},System.String,System.String,System.Nullable{System.DateTime},System.Collections.Generic.IList{System.String})
+  parent: BetfairDotNet.Services.BettingService
+  langs:
+  - csharp
+  - vb
+  name: ListRunnerBook(string, string, double?, PriceProjection?, OrderProjectionEnum?, MatchProjectionEnum?, bool, bool, IList<string>?, string?, string?, DateTime?, IList<string>?)
+  nameWithType: BettingService.ListRunnerBook(string, string, double?, PriceProjection?, OrderProjectionEnum?, MatchProjectionEnum?, bool, bool, IList<string>?, string?, string?, DateTime?, IList<string>?)
+  fullName: BetfairDotNet.Services.BettingService.ListRunnerBook(string, string, double?, BetfairDotNet.Models.Betting.PriceProjection?, BetfairDotNet.Enums.Betting.OrderProjectionEnum?, BetfairDotNet.Enums.Betting.MatchProjectionEnum?, bool, bool, System.Collections.Generic.IList<string>?, string?, string?, System.DateTime?, System.Collections.Generic.IList<string>?)
+  type: Method
+  source:
+    remote:
+      path: src/BetfairDotNet/Services/BettingService.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ListRunnerBook
+    path: ../src/BetfairDotNet/Services/BettingService.cs
+    startLine: 404
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Services
+  summary: >-
+    Returns a list of dynamic data about a market and a specified runner. Dynamic data includes prices, the status of the market, 
+
+    the status of selections, the traded volume, and the status of any orders you have placed in the market.
+  example: []
+  syntax:
+    content: public Task<MarketBook> ListRunnerBook(string marketId, string selectionId, double? handicap = null, PriceProjection? priceProjection = null, OrderProjectionEnum? orderProjection = null, MatchProjectionEnum? matchProjection = null, bool includeOverallPostion = false, bool partitionMatchByStrategyRef = false, IList<string>? customerStrategyRef = null, string? currencyCode = null, string? locale = null, DateTime? matchedSince = null, IList<string>? betIds = null)
+    parameters:
+    - id: marketId
+      type: System.String
+      description: The unique id for the market.
+    - id: selectionId
+      type: System.String
+      description: The unique id for the selection in the market.
+    - id: handicap
+      type: System.Nullable{System.Double}
+      description: The handicap associated with the runner in case of Asian handicap market.
+    - id: priceProjection
+      type: BetfairDotNet.Models.Betting.PriceProjection
+      description: The projection of price data you want to receive in the response.
+    - id: orderProjection
+      type: System.Nullable{BetfairDotNet.Enums.Betting.OrderProjectionEnum}
+      description: The orders you want to receive in the response.
+    - id: matchProjection
+      type: System.Nullable{BetfairDotNet.Enums.Betting.MatchProjectionEnum}
+      description: If you ask for orders, specifies the representation of matches.
+    - id: includeOverallPostion
+      type: System.Boolean
+      description: If you ask for orders, returns matches for each selection. Defaults to true if unspecified.
+    - id: partitionMatchByStrategyRef
+      type: System.Boolean
+      description: If you ask for orders, returns the breakdown of matches by strategy for each selection.
+    - id: customerStrategyRef
+      type: System.Collections.Generic.IList{System.String}
+      description: >-
+        If you ask for orders, restricts the results to orders matching any of the specified set of customer defined strategies. 
+            Also filters which matches by strategy for selections are returned, if partitionMatchedByStrategyRef is true.
+    - id: currencyCode
+      type: System.String
+      description: A Betfair standard currency code. If not specified, the default currency code is used.
+    - id: locale
+      type: System.String
+      description: The language used for the response. If not specified, the default is returned.
+    - id: matchedSince
+      type: System.Nullable{System.DateTime}
+      description: >-
+        If you ask for orders, restricts the results to orders that have at least one fragment matched since 
+            the specified date(all matched fragments of such an order will be returned even if some were matched before the specified date). 
+            All EXECUTABLE orders will be returned regardless of matched date.
+    - id: betIds
+      type: System.Collections.Generic.IList{System.String}
+      description: >-
+        If you ask for orders, restricts the results to orders with the specified bet IDs. Omitting this parameter means that 
+            all bets will be included in the response. Please note: A maximum of 250 betId's can be provided at a time.
+    return:
+      type: System.Threading.Tasks.Task{BetfairDotNet.Models.Betting.MarketBook}
+      description: >-
+        A task that represents the asynchronous operation. 
+           The task result contains a <xref href="BetfairDotNet.Models.BetfairServerResponse%601" data-throw-if-not-resolved="false"></xref> containing the <xref href="BetfairDotNet.Models.Betting.MarketBook" data-throw-if-not-resolved="false"></xref> and the <xref href="BetfairDotNet.Models.Betting.RunnerBook" data-throw-if-not-resolved="false"></xref>
+           for the specified runner.
+    content.vb: Public Function ListRunnerBook(marketId As String, selectionId As String, handicap As Double? = Nothing, priceProjection As PriceProjection = Nothing, orderProjection As OrderProjectionEnum? = Nothing, matchProjection As MatchProjectionEnum? = Nothing, includeOverallPostion As Boolean = False, partitionMatchByStrategyRef As Boolean = False, customerStrategyRef As IList(Of String) = Nothing, currencyCode As String = Nothing, locale As String = Nothing, matchedSince As Date? = Nothing, betIds As IList(Of String) = Nothing) As Task(Of MarketBook)
+  overload: BetfairDotNet.Services.BettingService.ListRunnerBook*
+  nameWithType.vb: BettingService.ListRunnerBook(String, String, Double?, PriceProjection, OrderProjectionEnum?, MatchProjectionEnum?, Boolean, Boolean, IList(Of String), String, String, Date?, IList(Of String))
+  fullName.vb: BetfairDotNet.Services.BettingService.ListRunnerBook(String, String, Double?, BetfairDotNet.Models.Betting.PriceProjection, BetfairDotNet.Enums.Betting.OrderProjectionEnum?, BetfairDotNet.Enums.Betting.MatchProjectionEnum?, Boolean, Boolean, System.Collections.Generic.IList(Of String), String, String, Date?, System.Collections.Generic.IList(Of String))
+  name.vb: ListRunnerBook(String, String, Double?, PriceProjection, OrderProjectionEnum?, MatchProjectionEnum?, Boolean, Boolean, IList(Of String), String, String, Date?, IList(Of String))
+- uid: BetfairDotNet.Services.BettingService.ListTimeRanges(BetfairDotNet.Models.Betting.MarketFilter,BetfairDotNet.Enums.Betting.TimeGranularityEnum)
+  commentId: M:BetfairDotNet.Services.BettingService.ListTimeRanges(BetfairDotNet.Models.Betting.MarketFilter,BetfairDotNet.Enums.Betting.TimeGranularityEnum)
+  id: ListTimeRanges(BetfairDotNet.Models.Betting.MarketFilter,BetfairDotNet.Enums.Betting.TimeGranularityEnum)
+  parent: BetfairDotNet.Services.BettingService
+  langs:
+  - csharp
+  - vb
+  name: ListTimeRanges(MarketFilter, TimeGranularityEnum)
+  nameWithType: BettingService.ListTimeRanges(MarketFilter, TimeGranularityEnum)
+  fullName: BetfairDotNet.Services.BettingService.ListTimeRanges(BetfairDotNet.Models.Betting.MarketFilter, BetfairDotNet.Enums.Betting.TimeGranularityEnum)
+  type: Method
+  source:
+    remote:
+      path: src/BetfairDotNet/Services/BettingService.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ListTimeRanges
+    path: ../src/BetfairDotNet/Services/BettingService.cs
+    startLine: 454
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Services
+  summary: >-
+    Returns a list of time ranges in the granularity specified in the request (i.e. 3PM to 4PM, Aug 14th to Aug 15th) 
+
+    associated with the markets selected by the MarketFilter.
+  example: []
+  syntax:
+    content: public Task<IReadOnlyList<TimeRangeResult>> ListTimeRanges(MarketFilter marketFilter, TimeGranularityEnum timeGranularity)
+    parameters:
+    - id: marketFilter
+      type: BetfairDotNet.Models.Betting.MarketFilter
+      description: The filter to select desired markets. All markets that match the criteria in the filter are selected.
+    - id: timeGranularity
+      type: BetfairDotNet.Enums.Betting.TimeGranularityEnum
+      description: The granularity of time periods that correspond to markets selected by the market filter.
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{BetfairDotNet.Models.Betting.TimeRangeResult}}
+      description: >-
+        A task that represents the asynchronous operation. 
+           The task result contains a <xref href="BetfairDotNet.Models.BetfairServerResponse%601" data-throw-if-not-resolved="false"></xref> containing the list of <xref href="BetfairDotNet.Models.Betting.TimeRangeResult" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function ListTimeRanges(marketFilter As MarketFilter, timeGranularity As TimeGranularityEnum) As Task(Of IReadOnlyList(Of TimeRangeResult))
+  overload: BetfairDotNet.Services.BettingService.ListTimeRanges*
+- uid: BetfairDotNet.Services.BettingService.ListVenues(BetfairDotNet.Models.Betting.MarketFilter,System.String)
+  commentId: M:BetfairDotNet.Services.BettingService.ListVenues(BetfairDotNet.Models.Betting.MarketFilter,System.String)
+  id: ListVenues(BetfairDotNet.Models.Betting.MarketFilter,System.String)
+  parent: BetfairDotNet.Services.BettingService
+  langs:
+  - csharp
+  - vb
+  name: ListVenues(MarketFilter, string?)
+  nameWithType: BettingService.ListVenues(MarketFilter, string?)
+  fullName: BetfairDotNet.Services.BettingService.ListVenues(BetfairDotNet.Models.Betting.MarketFilter, string?)
+  type: Method
+  source:
+    remote:
+      path: src/BetfairDotNet/Services/BettingService.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ListVenues
+    path: ../src/BetfairDotNet/Services/BettingService.cs
+    startLine: 477
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Services
+  summary: >-
+    Returns a list of Venues (i.e. Cheltenham, Ascot) associated with the markets selected by the MarketFilter. 
+
+    Currently, only Horse Racing markets are associated with a Venue.
+  example: []
+  syntax:
+    content: public Task<IReadOnlyList<VenueResult>> ListVenues(MarketFilter marketFilter, string? locale = null)
+    parameters:
+    - id: marketFilter
+      type: BetfairDotNet.Models.Betting.MarketFilter
+      description: The filter to select desired markets. All markets that match the criteria in the filter are selected.
+    - id: locale
+      type: System.String
+      description: The language used for the response. If not specified, the default is returned.
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{BetfairDotNet.Models.Betting.VenueResult}}
+      description: >-
+        A task that represents the asynchronous operation. 
+           The task result contains a <xref href="BetfairDotNet.Models.BetfairServerResponse%601" data-throw-if-not-resolved="false"></xref> containing the list of <xref href="BetfairDotNet.Models.Betting.VenueResult" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function ListVenues(marketFilter As MarketFilter, locale As String = Nothing) As Task(Of IReadOnlyList(Of VenueResult))
+  overload: BetfairDotNet.Services.BettingService.ListVenues*
+  nameWithType.vb: BettingService.ListVenues(MarketFilter, String)
+  fullName.vb: BetfairDotNet.Services.BettingService.ListVenues(BetfairDotNet.Models.Betting.MarketFilter, String)
+  name.vb: ListVenues(MarketFilter, String)
+- uid: BetfairDotNet.Services.BettingService.PlaceOrders(System.String,System.Collections.Generic.IList{BetfairDotNet.Models.Betting.PlaceInstruction},System.String,BetfairDotNet.Models.Betting.MarketVersion,System.String,System.Boolean)
+  commentId: M:BetfairDotNet.Services.BettingService.PlaceOrders(System.String,System.Collections.Generic.IList{BetfairDotNet.Models.Betting.PlaceInstruction},System.String,BetfairDotNet.Models.Betting.MarketVersion,System.String,System.Boolean)
+  id: PlaceOrders(System.String,System.Collections.Generic.IList{BetfairDotNet.Models.Betting.PlaceInstruction},System.String,BetfairDotNet.Models.Betting.MarketVersion,System.String,System.Boolean)
+  parent: BetfairDotNet.Services.BettingService
+  langs:
+  - csharp
+  - vb
+  name: PlaceOrders(string, IList<PlaceInstruction>, string?, MarketVersion?, string?, bool)
+  nameWithType: BettingService.PlaceOrders(string, IList<PlaceInstruction>, string?, MarketVersion?, string?, bool)
+  fullName: BetfairDotNet.Services.BettingService.PlaceOrders(string, System.Collections.Generic.IList<BetfairDotNet.Models.Betting.PlaceInstruction>, string?, BetfairDotNet.Models.Betting.MarketVersion?, string?, bool)
+  type: Method
+  source:
+    remote:
+      path: src/BetfairDotNet/Services/BettingService.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: PlaceOrders
+    path: ../src/BetfairDotNet/Services/BettingService.cs
+    startLine: 515
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Services
+  summary: >-
+    Place new orders into market. Additional bet sizing rules apply to bets placed into the Italian Exchange.
+
+    <p>In normal circumstances the placeOrders is an atomic operation.PLEASE NOTE: if the 'Best Execution' features is switched off, 
+
+    placeOrders can return ‘PROCESSED_WITH_ERRORS’ meaning that some bets can be rejected and other placed when 
+
+    submitted in the same <xref href="BetfairDotNet.Models.Betting.PlaceInstruction" data-throw-if-not-resolved="false"></xref></p>
+  example: []
+  syntax:
+    content: public Task<PlaceExecutionReport> PlaceOrders(string marketId, IList<PlaceInstruction> placeInstructions, string? customerRef = null, MarketVersion? marketVersion = null, string? customerStrategyRef = null, bool async = false)
+    parameters:
+    - id: marketId
+      type: System.String
+      description: The market id these orders are to be placed on
+    - id: placeInstructions
+      type: System.Collections.Generic.IList{BetfairDotNet.Models.Betting.PlaceInstruction}
+      description: >-
+        The number of place instructions. The limit of place instructions per request is 200 for the 
+            Global Exchange and 50 for the Italian Exchange.
+    - id: customerRef
+      type: System.String
+      description: >-
+        Optional parameter allowing the client to pass a unique string (up to 32 chars) that is used to de-dupe mistaken re-submissions.   
+            customerRef can contain: upper/lower chars, digits, chars : - . _ + * : ; ~ only.  This field does not persist into the placeOrders response/Order Stream API 
+            and should not be confused with customerOrderRef, which is separate field that can be sent in the PlaceInstruction.
+    - id: marketVersion
+      type: BetfairDotNet.Models.Betting.MarketVersion
+      description: >-
+        Optional parameter allowing the client to specify which version of the market the 
+            orders should be placed on.If the current market version is higher than that sent on an order, 
+            the bet will be lapsed.
+    - id: customerStrategyRef
+      type: System.String
+      description: >-
+        An optional reference customers can use to specify which strategy has sent the order. 
+            The reference will be returned on order change messages through the stream API.The string is 
+            limited to 15 characters.
+    - id: async
+      type: System.Boolean
+      description: >-
+        An optional flag (not setting equates to false) which specifies if the orders should be placed asynchronously. 
+            Orders can be tracked via the Exchange Stream API or the API-NG by providing a customerOrderRef for each place order.
+            An order's status will be PENDING and no bet ID will be returned.
+    return:
+      type: System.Threading.Tasks.Task{BetfairDotNet.Models.Betting.PlaceExecutionReport}
+      description: >-
+        A task that represents the asynchronous operation. 
+           The task result contains a <xref href="BetfairDotNet.Models.BetfairServerResponse%601" data-throw-if-not-resolved="false"></xref> containing the <xref href="BetfairDotNet.Models.Betting.PlaceExecutionReport" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function PlaceOrders(marketId As String, placeInstructions As IList(Of PlaceInstruction), customerRef As String = Nothing, marketVersion As MarketVersion = Nothing, customerStrategyRef As String = Nothing, async As Boolean = False) As Task(Of PlaceExecutionReport)
+  overload: BetfairDotNet.Services.BettingService.PlaceOrders*
+  nameWithType.vb: BettingService.PlaceOrders(String, IList(Of PlaceInstruction), String, MarketVersion, String, Boolean)
+  fullName.vb: BetfairDotNet.Services.BettingService.PlaceOrders(String, System.Collections.Generic.IList(Of BetfairDotNet.Models.Betting.PlaceInstruction), String, BetfairDotNet.Models.Betting.MarketVersion, String, Boolean)
+  name.vb: PlaceOrders(String, IList(Of PlaceInstruction), String, MarketVersion, String, Boolean)
+- uid: BetfairDotNet.Services.BettingService.UpdateOrders(System.String,System.Collections.Generic.IList{BetfairDotNet.Models.Betting.UpdateInstruction},System.String)
+  commentId: M:BetfairDotNet.Services.BettingService.UpdateOrders(System.String,System.Collections.Generic.IList{BetfairDotNet.Models.Betting.UpdateInstruction},System.String)
+  id: UpdateOrders(System.String,System.Collections.Generic.IList{BetfairDotNet.Models.Betting.UpdateInstruction},System.String)
+  parent: BetfairDotNet.Services.BettingService
+  langs:
+  - csharp
+  - vb
+  name: UpdateOrders(string, IList<UpdateInstruction>, string?)
+  nameWithType: BettingService.UpdateOrders(string, IList<UpdateInstruction>, string?)
+  fullName: BetfairDotNet.Services.BettingService.UpdateOrders(string, System.Collections.Generic.IList<BetfairDotNet.Models.Betting.UpdateInstruction>, string?)
+  type: Method
+  source:
+    remote:
+      path: src/BetfairDotNet/Services/BettingService.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: UpdateOrders
+    path: ../src/BetfairDotNet/Services/BettingService.cs
+    startLine: 550
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Services
+  summary: Update non-exposure changing fields.
+  example: []
+  syntax:
+    content: public Task<UpdateExecutionReport> UpdateOrders(string marketId, IList<UpdateInstruction> instructions, string? customerRef = null)
+    parameters:
+    - id: marketId
+      type: System.String
+      description: The market id these orders are to be placed on.
+    - id: instructions
+      type: System.Collections.Generic.IList{BetfairDotNet.Models.Betting.UpdateInstruction}
+      description: The number of update instructions. The limit of update instructions per request is 60.
+    - id: customerRef
+      type: System.String
+      description: >-
+        Optional parameter allowing the client to pass a unique string (up to 32 chars) that is used to 
+            de-dupe mistaken re-submissions.
+    return:
+      type: System.Threading.Tasks.Task{BetfairDotNet.Models.Betting.UpdateExecutionReport}
+      description: >-
+        A task that represents the asynchronous operation. 
+           The task result contains a <xref href="BetfairDotNet.Models.BetfairServerResponse%601" data-throw-if-not-resolved="false"></xref> containing the <xref href="BetfairDotNet.Models.Betting.UpdateExecutionReport" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function UpdateOrders(marketId As String, instructions As IList(Of UpdateInstruction), customerRef As String = Nothing) As Task(Of UpdateExecutionReport)
+  overload: BetfairDotNet.Services.BettingService.UpdateOrders*
+  nameWithType.vb: BettingService.UpdateOrders(String, IList(Of UpdateInstruction), String)
+  fullName.vb: BetfairDotNet.Services.BettingService.UpdateOrders(String, System.Collections.Generic.IList(Of BetfairDotNet.Models.Betting.UpdateInstruction), String)
+  name.vb: UpdateOrders(String, IList(Of UpdateInstruction), String)
+- uid: BetfairDotNet.Services.BettingService.ReplaceOrders(System.String,System.Collections.Generic.IList{BetfairDotNet.Models.Betting.ReplaceInstruction},System.String,BetfairDotNet.Models.Betting.MarketVersion,System.Boolean)
+  commentId: M:BetfairDotNet.Services.BettingService.ReplaceOrders(System.String,System.Collections.Generic.IList{BetfairDotNet.Models.Betting.ReplaceInstruction},System.String,BetfairDotNet.Models.Betting.MarketVersion,System.Boolean)
+  id: ReplaceOrders(System.String,System.Collections.Generic.IList{BetfairDotNet.Models.Betting.ReplaceInstruction},System.String,BetfairDotNet.Models.Betting.MarketVersion,System.Boolean)
+  parent: BetfairDotNet.Services.BettingService
+  langs:
+  - csharp
+  - vb
+  name: ReplaceOrders(string, IList<ReplaceInstruction>, string?, MarketVersion?, bool)
+  nameWithType: BettingService.ReplaceOrders(string, IList<ReplaceInstruction>, string?, MarketVersion?, bool)
+  fullName: BetfairDotNet.Services.BettingService.ReplaceOrders(string, System.Collections.Generic.IList<BetfairDotNet.Models.Betting.ReplaceInstruction>, string?, BetfairDotNet.Models.Betting.MarketVersion?, bool)
+  type: Method
+  source:
+    remote:
+      path: src/BetfairDotNet/Services/BettingService.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ReplaceOrders
+    path: ../src/BetfairDotNet/Services/BettingService.cs
+    startLine: 585
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Services
+  summary: >-
+    This operation is logically a bulk cancel followed by a bulk place. The cancel is completed first then the new orders are placed. 
+
+    The new orders will be placed atomically in that they will all be placed or none will be placed. 
+
+    <p>In the case where the new orders cannot be placed the cancellations will not be rolled back.</p>
+  example: []
+  syntax:
+    content: public Task<ReplaceExecutionReport> ReplaceOrders(string marketId, IList<ReplaceInstruction> instructions, string? customerRef = null, MarketVersion? marketVersion = null, bool async = false)
+    parameters:
+    - id: marketId
+      type: System.String
+      description: The market id these orders are to be placed on.
+    - id: instructions
+      type: System.Collections.Generic.IList{BetfairDotNet.Models.Betting.ReplaceInstruction}
+      description: The number of replace instructions.  The limit of replace instructions per request is 60.
+    - id: customerRef
+      type: System.String
+      description: Optional parameter allowing the client to pass a unique string (up to 32 chars) that is used to de-dupe mistaken re-submissions.
+    - id: marketVersion
+      type: BetfairDotNet.Models.Betting.MarketVersion
+      description: >-
+        Optional parameter allowing the client to specify which version of the market the 
+            orders should be placed on.If the current market version is higher than that sent on an order, 
+            the bet will be lapsed.
+    - id: async
+      type: System.Boolean
+      description: >-
+        An optional flag (not setting equates to false) which specifies if the orders should be replaced asynchronously. 
+            Orders can be tracked via the Exchange Stream API or the API-NG by providing a customerOrderRef for each replace order.
+            Not available for MOC or LOC bets.
+    return:
+      type: System.Threading.Tasks.Task{BetfairDotNet.Models.Betting.ReplaceExecutionReport}
+      description: ''
+    content.vb: Public Function ReplaceOrders(marketId As String, instructions As IList(Of ReplaceInstruction), customerRef As String = Nothing, marketVersion As MarketVersion = Nothing, async As Boolean = False) As Task(Of ReplaceExecutionReport)
+  overload: BetfairDotNet.Services.BettingService.ReplaceOrders*
+  nameWithType.vb: BettingService.ReplaceOrders(String, IList(Of ReplaceInstruction), String, MarketVersion, Boolean)
+  fullName.vb: BetfairDotNet.Services.BettingService.ReplaceOrders(String, System.Collections.Generic.IList(Of BetfairDotNet.Models.Betting.ReplaceInstruction), String, BetfairDotNet.Models.Betting.MarketVersion, Boolean)
+  name.vb: ReplaceOrders(String, IList(Of ReplaceInstruction), String, MarketVersion, Boolean)
+references:
+- uid: BetfairDotNet.Services
+  commentId: N:BetfairDotNet.Services
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Services
+  nameWithType: BetfairDotNet.Services
+  fullName: BetfairDotNet.Services
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Services
+    name: Services
+    href: BetfairDotNet.Services.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Services
+    name: Services
+    href: BetfairDotNet.Services.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BetfairDotNet.Services.BettingService.ListClearedOrders*
+  commentId: Overload:BetfairDotNet.Services.BettingService.ListClearedOrders
+  href: BetfairDotNet.Services.BettingService.html#BetfairDotNet.Services.BettingService.ListClearedOrders(BetfairDotNet.Enums.Betting.BetStatusEnum,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{BetfairDotNet.Models.Betting.RunnerId},System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Nullable{BetfairDotNet.Enums.Betting.SideEnum},BetfairDotNet.Models.Betting.TimeRange,System.Nullable{BetfairDotNet.Enums.Betting.GroupByEnum},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)
+  name: ListClearedOrders
+  nameWithType: BettingService.ListClearedOrders
+  fullName: BetfairDotNet.Services.BettingService.ListClearedOrders
+- uid: BetfairDotNet.Enums.Betting.BetStatusEnum
+  commentId: T:BetfairDotNet.Enums.Betting.BetStatusEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.BetStatusEnum.html
+  name: BetStatusEnum
+  nameWithType: BetStatusEnum
+  fullName: BetfairDotNet.Enums.Betting.BetStatusEnum
+- uid: System.Collections.Generic.IList{System.String}
+  commentId: T:System.Collections.Generic.IList{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<string>
+  nameWithType: IList<string>
+  fullName: System.Collections.Generic.IList<string>
+  nameWithType.vb: IList(Of String)
+  fullName.vb: System.Collections.Generic.IList(Of String)
+  name.vb: IList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IList{BetfairDotNet.Models.Betting.RunnerId}
+  commentId: T:System.Collections.Generic.IList{BetfairDotNet.Models.Betting.RunnerId}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<RunnerId>
+  nameWithType: IList<RunnerId>
+  fullName: System.Collections.Generic.IList<BetfairDotNet.Models.Betting.RunnerId>
+  nameWithType.vb: IList(Of RunnerId)
+  fullName.vb: System.Collections.Generic.IList(Of BetfairDotNet.Models.Betting.RunnerId)
+  name.vb: IList(Of RunnerId)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - uid: BetfairDotNet.Models.Betting.RunnerId
+    name: RunnerId
+    href: BetfairDotNet.Models.Betting.RunnerId.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Betting.RunnerId
+    name: RunnerId
+    href: BetfairDotNet.Models.Betting.RunnerId.html
+  - name: )
+- uid: System.Nullable{BetfairDotNet.Enums.Betting.SideEnum}
+  commentId: T:System.Nullable{BetfairDotNet.Enums.Betting.SideEnum}
+  parent: System
+  definition: System.Nullable`1
+  href: BetfairDotNet.Enums.Betting.SideEnum.html
+  name: SideEnum?
+  nameWithType: SideEnum?
+  fullName: BetfairDotNet.Enums.Betting.SideEnum?
+  spec.csharp:
+  - uid: BetfairDotNet.Enums.Betting.SideEnum
+    name: SideEnum
+    href: BetfairDotNet.Enums.Betting.SideEnum.html
+  - name: '?'
+  spec.vb:
+  - uid: BetfairDotNet.Enums.Betting.SideEnum
+    name: SideEnum
+    href: BetfairDotNet.Enums.Betting.SideEnum.html
+  - name: '?'
+- uid: BetfairDotNet.Models.Betting.TimeRange
+  commentId: T:BetfairDotNet.Models.Betting.TimeRange
+  parent: BetfairDotNet.Models.Betting
+  href: BetfairDotNet.Models.Betting.TimeRange.html
+  name: TimeRange
+  nameWithType: TimeRange
+  fullName: BetfairDotNet.Models.Betting.TimeRange
+- uid: System.Nullable{BetfairDotNet.Enums.Betting.GroupByEnum}
+  commentId: T:System.Nullable{BetfairDotNet.Enums.Betting.GroupByEnum}
+  parent: System
+  definition: System.Nullable`1
+  href: BetfairDotNet.Enums.Betting.GroupByEnum.html
+  name: GroupByEnum?
+  nameWithType: GroupByEnum?
+  fullName: BetfairDotNet.Enums.Betting.GroupByEnum?
+  spec.csharp:
+  - uid: BetfairDotNet.Enums.Betting.GroupByEnum
+    name: GroupByEnum
+    href: BetfairDotNet.Enums.Betting.GroupByEnum.html
+  - name: '?'
+  spec.vb:
+  - uid: BetfairDotNet.Enums.Betting.GroupByEnum
+    name: GroupByEnum
+    href: BetfairDotNet.Enums.Betting.GroupByEnum.html
+  - name: '?'
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task{BetfairDotNet.Models.Betting.ClearedOrderSummaryReport}
+  commentId: T:System.Threading.Tasks.Task{BetfairDotNet.Models.Betting.ClearedOrderSummaryReport}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ClearedOrderSummaryReport>
+  nameWithType: Task<ClearedOrderSummaryReport>
+  fullName: System.Threading.Tasks.Task<BetfairDotNet.Models.Betting.ClearedOrderSummaryReport>
+  nameWithType.vb: Task(Of ClearedOrderSummaryReport)
+  fullName.vb: System.Threading.Tasks.Task(Of BetfairDotNet.Models.Betting.ClearedOrderSummaryReport)
+  name.vb: Task(Of ClearedOrderSummaryReport)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: BetfairDotNet.Models.Betting.ClearedOrderSummaryReport
+    name: ClearedOrderSummaryReport
+    href: BetfairDotNet.Models.Betting.ClearedOrderSummaryReport.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Betting.ClearedOrderSummaryReport
+    name: ClearedOrderSummaryReport
+    href: BetfairDotNet.Models.Betting.ClearedOrderSummaryReport.html
+  - name: )
+- uid: BetfairDotNet.Enums.Betting
+  commentId: N:BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Betting
+  nameWithType: BetfairDotNet.Enums.Betting
+  fullName: BetfairDotNet.Enums.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BetfairDotNet.Models.Betting
+  commentId: N:BetfairDotNet.Models.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Betting
+  nameWithType: BetfairDotNet.Models.Betting
+  fullName: BetfairDotNet.Models.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Betting
+    name: Betting
+    href: BetfairDotNet.Models.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Betting
+    name: Betting
+    href: BetfairDotNet.Models.Betting.html
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: BetfairDotNet.Models.Betting.CompetitionResult
+  commentId: T:BetfairDotNet.Models.Betting.CompetitionResult
+  href: BetfairDotNet.Models.Betting.CompetitionResult.html
+  name: CompetitionResult
+  nameWithType: CompetitionResult
+  fullName: BetfairDotNet.Models.Betting.CompetitionResult
+- uid: BetfairDotNet.Services.BettingService.ListCompetitions*
+  commentId: Overload:BetfairDotNet.Services.BettingService.ListCompetitions
+  href: BetfairDotNet.Services.BettingService.html#BetfairDotNet.Services.BettingService.ListCompetitions(BetfairDotNet.Models.Betting.MarketFilter,System.String)
+  name: ListCompetitions
+  nameWithType: BettingService.ListCompetitions
+  fullName: BetfairDotNet.Services.BettingService.ListCompetitions
+- uid: BetfairDotNet.Models.Betting.MarketFilter
+  commentId: T:BetfairDotNet.Models.Betting.MarketFilter
+  parent: BetfairDotNet.Models.Betting
+  href: BetfairDotNet.Models.Betting.MarketFilter.html
+  name: MarketFilter
+  nameWithType: MarketFilter
+  fullName: BetfairDotNet.Models.Betting.MarketFilter
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{BetfairDotNet.Models.Betting.CompetitionResult}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{BetfairDotNet.Models.Betting.CompetitionResult}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IReadOnlyList<CompetitionResult>>
+  nameWithType: Task<IReadOnlyList<CompetitionResult>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<BetfairDotNet.Models.Betting.CompetitionResult>>
+  nameWithType.vb: Task(Of IReadOnlyList(Of CompetitionResult))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IReadOnlyList(Of BetfairDotNet.Models.Betting.CompetitionResult))
+  name.vb: Task(Of IReadOnlyList(Of CompetitionResult))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: BetfairDotNet.Models.Betting.CompetitionResult
+    name: CompetitionResult
+    href: BetfairDotNet.Models.Betting.CompetitionResult.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Betting.CompetitionResult
+    name: CompetitionResult
+    href: BetfairDotNet.Models.Betting.CompetitionResult.html
+  - name: )
+  - name: )
+- uid: BetfairDotNet.Models.Betting.CountryCodeResult
+  commentId: T:BetfairDotNet.Models.Betting.CountryCodeResult
+  href: BetfairDotNet.Models.Betting.CountryCodeResult.html
+  name: CountryCodeResult
+  nameWithType: CountryCodeResult
+  fullName: BetfairDotNet.Models.Betting.CountryCodeResult
+- uid: BetfairDotNet.Services.BettingService.ListCountries*
+  commentId: Overload:BetfairDotNet.Services.BettingService.ListCountries
+  href: BetfairDotNet.Services.BettingService.html#BetfairDotNet.Services.BettingService.ListCountries(BetfairDotNet.Models.Betting.MarketFilter,System.String)
+  name: ListCountries
+  nameWithType: BettingService.ListCountries
+  fullName: BetfairDotNet.Services.BettingService.ListCountries
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{BetfairDotNet.Models.Betting.CountryCodeResult}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{BetfairDotNet.Models.Betting.CountryCodeResult}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IReadOnlyList<CountryCodeResult>>
+  nameWithType: Task<IReadOnlyList<CountryCodeResult>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<BetfairDotNet.Models.Betting.CountryCodeResult>>
+  nameWithType.vb: Task(Of IReadOnlyList(Of CountryCodeResult))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IReadOnlyList(Of BetfairDotNet.Models.Betting.CountryCodeResult))
+  name.vb: Task(Of IReadOnlyList(Of CountryCodeResult))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: BetfairDotNet.Models.Betting.CountryCodeResult
+    name: CountryCodeResult
+    href: BetfairDotNet.Models.Betting.CountryCodeResult.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Betting.CountryCodeResult
+    name: CountryCodeResult
+    href: BetfairDotNet.Models.Betting.CountryCodeResult.html
+  - name: )
+  - name: )
+- uid: BetfairDotNet.Models.Betting.CurrentOrderSummaryReport
+  commentId: T:BetfairDotNet.Models.Betting.CurrentOrderSummaryReport
+  href: BetfairDotNet.Models.Betting.CurrentOrderSummaryReport.html
+  name: CurrentOrderSummaryReport
+  nameWithType: CurrentOrderSummaryReport
+  fullName: BetfairDotNet.Models.Betting.CurrentOrderSummaryReport
+- uid: BetfairDotNet.Services.BettingService.ListCurrentOrders*
+  commentId: Overload:BetfairDotNet.Services.BettingService.ListCurrentOrders
+  href: BetfairDotNet.Services.BettingService.html#BetfairDotNet.Services.BettingService.ListCurrentOrders(System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Nullable{BetfairDotNet.Enums.Betting.OrderProjectionEnum},BetfairDotNet.Models.Betting.TimeRange,BetfairDotNet.Models.Betting.TimeRange,System.Nullable{BetfairDotNet.Enums.Betting.OrderByEnum},System.Nullable{BetfairDotNet.Enums.Betting.SortDirEnum},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  name: ListCurrentOrders
+  nameWithType: BettingService.ListCurrentOrders
+  fullName: BetfairDotNet.Services.BettingService.ListCurrentOrders
+- uid: System.Nullable{BetfairDotNet.Enums.Betting.OrderProjectionEnum}
+  commentId: T:System.Nullable{BetfairDotNet.Enums.Betting.OrderProjectionEnum}
+  parent: System
+  definition: System.Nullable`1
+  href: BetfairDotNet.Enums.Betting.OrderProjectionEnum.html
+  name: OrderProjectionEnum?
+  nameWithType: OrderProjectionEnum?
+  fullName: BetfairDotNet.Enums.Betting.OrderProjectionEnum?
+  spec.csharp:
+  - uid: BetfairDotNet.Enums.Betting.OrderProjectionEnum
+    name: OrderProjectionEnum
+    href: BetfairDotNet.Enums.Betting.OrderProjectionEnum.html
+  - name: '?'
+  spec.vb:
+  - uid: BetfairDotNet.Enums.Betting.OrderProjectionEnum
+    name: OrderProjectionEnum
+    href: BetfairDotNet.Enums.Betting.OrderProjectionEnum.html
+  - name: '?'
+- uid: System.Nullable{BetfairDotNet.Enums.Betting.OrderByEnum}
+  commentId: T:System.Nullable{BetfairDotNet.Enums.Betting.OrderByEnum}
+  parent: System
+  definition: System.Nullable`1
+  href: BetfairDotNet.Enums.Betting.OrderByEnum.html
+  name: OrderByEnum?
+  nameWithType: OrderByEnum?
+  fullName: BetfairDotNet.Enums.Betting.OrderByEnum?
+  spec.csharp:
+  - uid: BetfairDotNet.Enums.Betting.OrderByEnum
+    name: OrderByEnum
+    href: BetfairDotNet.Enums.Betting.OrderByEnum.html
+  - name: '?'
+  spec.vb:
+  - uid: BetfairDotNet.Enums.Betting.OrderByEnum
+    name: OrderByEnum
+    href: BetfairDotNet.Enums.Betting.OrderByEnum.html
+  - name: '?'
+- uid: System.Nullable{BetfairDotNet.Enums.Betting.SortDirEnum}
+  commentId: T:System.Nullable{BetfairDotNet.Enums.Betting.SortDirEnum}
+  parent: System
+  definition: System.Nullable`1
+  href: BetfairDotNet.Enums.Betting.SortDirEnum.html
+  name: SortDirEnum?
+  nameWithType: SortDirEnum?
+  fullName: BetfairDotNet.Enums.Betting.SortDirEnum?
+  spec.csharp:
+  - uid: BetfairDotNet.Enums.Betting.SortDirEnum
+    name: SortDirEnum
+    href: BetfairDotNet.Enums.Betting.SortDirEnum.html
+  - name: '?'
+  spec.vb:
+  - uid: BetfairDotNet.Enums.Betting.SortDirEnum
+    name: SortDirEnum
+    href: BetfairDotNet.Enums.Betting.SortDirEnum.html
+  - name: '?'
+- uid: System.Threading.Tasks.Task{BetfairDotNet.Models.Betting.CurrentOrderSummaryReport}
+  commentId: T:System.Threading.Tasks.Task{BetfairDotNet.Models.Betting.CurrentOrderSummaryReport}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<CurrentOrderSummaryReport>
+  nameWithType: Task<CurrentOrderSummaryReport>
+  fullName: System.Threading.Tasks.Task<BetfairDotNet.Models.Betting.CurrentOrderSummaryReport>
+  nameWithType.vb: Task(Of CurrentOrderSummaryReport)
+  fullName.vb: System.Threading.Tasks.Task(Of BetfairDotNet.Models.Betting.CurrentOrderSummaryReport)
+  name.vb: Task(Of CurrentOrderSummaryReport)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: BetfairDotNet.Models.Betting.CurrentOrderSummaryReport
+    name: CurrentOrderSummaryReport
+    href: BetfairDotNet.Models.Betting.CurrentOrderSummaryReport.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Betting.CurrentOrderSummaryReport
+    name: CurrentOrderSummaryReport
+    href: BetfairDotNet.Models.Betting.CurrentOrderSummaryReport.html
+  - name: )
+- uid: BetfairDotNet.Models.BetfairServerResponse`1
+  commentId: T:BetfairDotNet.Models.BetfairServerResponse`1
+  href: BetfairDotNet.Models.BetfairServerResponse-1.html
+  name: BetfairServerResponse<T>
+  nameWithType: BetfairServerResponse<T>
+  fullName: BetfairDotNet.Models.BetfairServerResponse<T>
+  nameWithType.vb: BetfairServerResponse(Of T)
+  fullName.vb: BetfairDotNet.Models.BetfairServerResponse(Of T)
+  name.vb: BetfairServerResponse(Of T)
+  spec.csharp:
+  - uid: BetfairDotNet.Models.BetfairServerResponse`1
+    name: BetfairServerResponse
+    href: BetfairDotNet.Models.BetfairServerResponse-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: BetfairDotNet.Models.BetfairServerResponse`1
+    name: BetfairServerResponse
+    href: BetfairDotNet.Models.BetfairServerResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BetfairDotNet.Models.Betting.EventResult
+  commentId: T:BetfairDotNet.Models.Betting.EventResult
+  href: BetfairDotNet.Models.Betting.EventResult.html
+  name: EventResult
+  nameWithType: EventResult
+  fullName: BetfairDotNet.Models.Betting.EventResult
+- uid: BetfairDotNet.Services.BettingService.ListEvents*
+  commentId: Overload:BetfairDotNet.Services.BettingService.ListEvents
+  href: BetfairDotNet.Services.BettingService.html#BetfairDotNet.Services.BettingService.ListEvents(BetfairDotNet.Models.Betting.MarketFilter,System.String)
+  name: ListEvents
+  nameWithType: BettingService.ListEvents
+  fullName: BetfairDotNet.Services.BettingService.ListEvents
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{BetfairDotNet.Models.Betting.EventResult}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{BetfairDotNet.Models.Betting.EventResult}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IReadOnlyList<EventResult>>
+  nameWithType: Task<IReadOnlyList<EventResult>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<BetfairDotNet.Models.Betting.EventResult>>
+  nameWithType.vb: Task(Of IReadOnlyList(Of EventResult))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IReadOnlyList(Of BetfairDotNet.Models.Betting.EventResult))
+  name.vb: Task(Of IReadOnlyList(Of EventResult))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: BetfairDotNet.Models.Betting.EventResult
+    name: EventResult
+    href: BetfairDotNet.Models.Betting.EventResult.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Betting.EventResult
+    name: EventResult
+    href: BetfairDotNet.Models.Betting.EventResult.html
+  - name: )
+  - name: )
+- uid: BetfairDotNet.Models.Betting.EventTypeResult
+  commentId: T:BetfairDotNet.Models.Betting.EventTypeResult
+  href: BetfairDotNet.Models.Betting.EventTypeResult.html
+  name: EventTypeResult
+  nameWithType: EventTypeResult
+  fullName: BetfairDotNet.Models.Betting.EventTypeResult
+- uid: BetfairDotNet.Services.BettingService.ListEventTypes*
+  commentId: Overload:BetfairDotNet.Services.BettingService.ListEventTypes
+  href: BetfairDotNet.Services.BettingService.html#BetfairDotNet.Services.BettingService.ListEventTypes(BetfairDotNet.Models.Betting.MarketFilter,System.String)
+  name: ListEventTypes
+  nameWithType: BettingService.ListEventTypes
+  fullName: BetfairDotNet.Services.BettingService.ListEventTypes
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{BetfairDotNet.Models.Betting.EventTypeResult}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{BetfairDotNet.Models.Betting.EventTypeResult}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IReadOnlyList<EventTypeResult>>
+  nameWithType: Task<IReadOnlyList<EventTypeResult>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<BetfairDotNet.Models.Betting.EventTypeResult>>
+  nameWithType.vb: Task(Of IReadOnlyList(Of EventTypeResult))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IReadOnlyList(Of BetfairDotNet.Models.Betting.EventTypeResult))
+  name.vb: Task(Of IReadOnlyList(Of EventTypeResult))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: BetfairDotNet.Models.Betting.EventTypeResult
+    name: EventTypeResult
+    href: BetfairDotNet.Models.Betting.EventTypeResult.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Betting.EventTypeResult
+    name: EventTypeResult
+    href: BetfairDotNet.Models.Betting.EventTypeResult.html
+  - name: )
+  - name: )
+- uid: BetfairDotNet.Models.Betting.MarketBook
+  commentId: T:BetfairDotNet.Models.Betting.MarketBook
+  href: BetfairDotNet.Models.Betting.MarketBook.html
+  name: MarketBook
+  nameWithType: MarketBook
+  fullName: BetfairDotNet.Models.Betting.MarketBook
+- uid: BetfairDotNet.Services.BettingService.ListMarketBook*
+  commentId: Overload:BetfairDotNet.Services.BettingService.ListMarketBook
+  href: BetfairDotNet.Services.BettingService.html#BetfairDotNet.Services.BettingService.ListMarketBook(System.Collections.Generic.IEnumerable{System.String},BetfairDotNet.Models.Betting.PriceProjection,System.Nullable{BetfairDotNet.Enums.Betting.OrderProjectionEnum},System.Nullable{BetfairDotNet.Enums.Betting.MatchProjectionEnum},System.Boolean,System.Boolean,System.Collections.Generic.IList{System.String},System.String,System.String,System.Nullable{System.DateTime},System.Collections.Generic.IList{System.String})
+  name: ListMarketBook
+  nameWithType: BettingService.ListMarketBook
+  fullName: BetfairDotNet.Services.BettingService.ListMarketBook
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<string>
+  nameWithType: IEnumerable<string>
+  fullName: System.Collections.Generic.IEnumerable<string>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: BetfairDotNet.Models.Betting.PriceProjection
+  commentId: T:BetfairDotNet.Models.Betting.PriceProjection
+  parent: BetfairDotNet.Models.Betting
+  href: BetfairDotNet.Models.Betting.PriceProjection.html
+  name: PriceProjection
+  nameWithType: PriceProjection
+  fullName: BetfairDotNet.Models.Betting.PriceProjection
+- uid: System.Nullable{BetfairDotNet.Enums.Betting.MatchProjectionEnum}
+  commentId: T:System.Nullable{BetfairDotNet.Enums.Betting.MatchProjectionEnum}
+  parent: System
+  definition: System.Nullable`1
+  href: BetfairDotNet.Enums.Betting.MatchProjectionEnum.html
+  name: MatchProjectionEnum?
+  nameWithType: MatchProjectionEnum?
+  fullName: BetfairDotNet.Enums.Betting.MatchProjectionEnum?
+  spec.csharp:
+  - uid: BetfairDotNet.Enums.Betting.MatchProjectionEnum
+    name: MatchProjectionEnum
+    href: BetfairDotNet.Enums.Betting.MatchProjectionEnum.html
+  - name: '?'
+  spec.vb:
+  - uid: BetfairDotNet.Enums.Betting.MatchProjectionEnum
+    name: MatchProjectionEnum
+    href: BetfairDotNet.Enums.Betting.MatchProjectionEnum.html
+  - name: '?'
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime?
+  nameWithType: DateTime?
+  fullName: System.DateTime?
+  nameWithType.vb: Date?
+  fullName.vb: Date?
+  name.vb: Date?
+  spec.csharp:
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+  spec.vb:
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{BetfairDotNet.Models.Betting.MarketBook}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{BetfairDotNet.Models.Betting.MarketBook}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IReadOnlyList<MarketBook>>
+  nameWithType: Task<IReadOnlyList<MarketBook>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<BetfairDotNet.Models.Betting.MarketBook>>
+  nameWithType.vb: Task(Of IReadOnlyList(Of MarketBook))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IReadOnlyList(Of BetfairDotNet.Models.Betting.MarketBook))
+  name.vb: Task(Of IReadOnlyList(Of MarketBook))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: BetfairDotNet.Models.Betting.MarketBook
+    name: MarketBook
+    href: BetfairDotNet.Models.Betting.MarketBook.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Betting.MarketBook
+    name: MarketBook
+    href: BetfairDotNet.Models.Betting.MarketBook.html
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BetfairDotNet.Models.Betting.MarketCatalogue
+  commentId: T:BetfairDotNet.Models.Betting.MarketCatalogue
+  href: BetfairDotNet.Models.Betting.MarketCatalogue.html
+  name: MarketCatalogue
+  nameWithType: MarketCatalogue
+  fullName: BetfairDotNet.Models.Betting.MarketCatalogue
+- uid: BetfairDotNet.Services.BettingService.ListMarketCatalogue*
+  commentId: Overload:BetfairDotNet.Services.BettingService.ListMarketCatalogue
+  href: BetfairDotNet.Services.BettingService.html#BetfairDotNet.Services.BettingService.ListMarketCatalogue(BetfairDotNet.Models.Betting.MarketFilter,System.Collections.Generic.IList{BetfairDotNet.Enums.Betting.MarketProjectionEnum},System.Nullable{BetfairDotNet.Enums.Betting.MarketSortEnum},System.Int32,System.String)
+  name: ListMarketCatalogue
+  nameWithType: BettingService.ListMarketCatalogue
+  fullName: BetfairDotNet.Services.BettingService.ListMarketCatalogue
+- uid: System.Collections.Generic.IList{BetfairDotNet.Enums.Betting.MarketProjectionEnum}
+  commentId: T:System.Collections.Generic.IList{BetfairDotNet.Enums.Betting.MarketProjectionEnum}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<MarketProjectionEnum>
+  nameWithType: IList<MarketProjectionEnum>
+  fullName: System.Collections.Generic.IList<BetfairDotNet.Enums.Betting.MarketProjectionEnum>
+  nameWithType.vb: IList(Of MarketProjectionEnum)
+  fullName.vb: System.Collections.Generic.IList(Of BetfairDotNet.Enums.Betting.MarketProjectionEnum)
+  name.vb: IList(Of MarketProjectionEnum)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - uid: BetfairDotNet.Enums.Betting.MarketProjectionEnum
+    name: MarketProjectionEnum
+    href: BetfairDotNet.Enums.Betting.MarketProjectionEnum.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Enums.Betting.MarketProjectionEnum
+    name: MarketProjectionEnum
+    href: BetfairDotNet.Enums.Betting.MarketProjectionEnum.html
+  - name: )
+- uid: System.Nullable{BetfairDotNet.Enums.Betting.MarketSortEnum}
+  commentId: T:System.Nullable{BetfairDotNet.Enums.Betting.MarketSortEnum}
+  parent: System
+  definition: System.Nullable`1
+  href: BetfairDotNet.Enums.Betting.MarketSortEnum.html
+  name: MarketSortEnum?
+  nameWithType: MarketSortEnum?
+  fullName: BetfairDotNet.Enums.Betting.MarketSortEnum?
+  spec.csharp:
+  - uid: BetfairDotNet.Enums.Betting.MarketSortEnum
+    name: MarketSortEnum
+    href: BetfairDotNet.Enums.Betting.MarketSortEnum.html
+  - name: '?'
+  spec.vb:
+  - uid: BetfairDotNet.Enums.Betting.MarketSortEnum
+    name: MarketSortEnum
+    href: BetfairDotNet.Enums.Betting.MarketSortEnum.html
+  - name: '?'
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{BetfairDotNet.Models.Betting.MarketCatalogue}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{BetfairDotNet.Models.Betting.MarketCatalogue}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IReadOnlyList<MarketCatalogue>>
+  nameWithType: Task<IReadOnlyList<MarketCatalogue>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<BetfairDotNet.Models.Betting.MarketCatalogue>>
+  nameWithType.vb: Task(Of IReadOnlyList(Of MarketCatalogue))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IReadOnlyList(Of BetfairDotNet.Models.Betting.MarketCatalogue))
+  name.vb: Task(Of IReadOnlyList(Of MarketCatalogue))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: BetfairDotNet.Models.Betting.MarketCatalogue
+    name: MarketCatalogue
+    href: BetfairDotNet.Models.Betting.MarketCatalogue.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Betting.MarketCatalogue
+    name: MarketCatalogue
+    href: BetfairDotNet.Models.Betting.MarketCatalogue.html
+  - name: )
+  - name: )
+- uid: BetfairDotNet.Models.Betting.MarketProfitAndLoss
+  commentId: T:BetfairDotNet.Models.Betting.MarketProfitAndLoss
+  href: BetfairDotNet.Models.Betting.MarketProfitAndLoss.html
+  name: MarketProfitAndLoss
+  nameWithType: MarketProfitAndLoss
+  fullName: BetfairDotNet.Models.Betting.MarketProfitAndLoss
+- uid: BetfairDotNet.Services.BettingService.ListMarketProfitAndLoss*
+  commentId: Overload:BetfairDotNet.Services.BettingService.ListMarketProfitAndLoss
+  href: BetfairDotNet.Services.BettingService.html#BetfairDotNet.Services.BettingService.ListMarketProfitAndLoss(System.Collections.Generic.IList{System.String},System.Boolean,System.Boolean,System.Boolean)
+  name: ListMarketProfitAndLoss
+  nameWithType: BettingService.ListMarketProfitAndLoss
+  fullName: BetfairDotNet.Services.BettingService.ListMarketProfitAndLoss
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{BetfairDotNet.Models.Betting.MarketProfitAndLoss}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{BetfairDotNet.Models.Betting.MarketProfitAndLoss}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IReadOnlyList<MarketProfitAndLoss>>
+  nameWithType: Task<IReadOnlyList<MarketProfitAndLoss>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<BetfairDotNet.Models.Betting.MarketProfitAndLoss>>
+  nameWithType.vb: Task(Of IReadOnlyList(Of MarketProfitAndLoss))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IReadOnlyList(Of BetfairDotNet.Models.Betting.MarketProfitAndLoss))
+  name.vb: Task(Of IReadOnlyList(Of MarketProfitAndLoss))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: BetfairDotNet.Models.Betting.MarketProfitAndLoss
+    name: MarketProfitAndLoss
+    href: BetfairDotNet.Models.Betting.MarketProfitAndLoss.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Betting.MarketProfitAndLoss
+    name: MarketProfitAndLoss
+    href: BetfairDotNet.Models.Betting.MarketProfitAndLoss.html
+  - name: )
+  - name: )
+- uid: BetfairDotNet.Models.Betting.MarketTypeResult
+  commentId: T:BetfairDotNet.Models.Betting.MarketTypeResult
+  href: BetfairDotNet.Models.Betting.MarketTypeResult.html
+  name: MarketTypeResult
+  nameWithType: MarketTypeResult
+  fullName: BetfairDotNet.Models.Betting.MarketTypeResult
+- uid: BetfairDotNet.Services.BettingService.ListMarketTypes*
+  commentId: Overload:BetfairDotNet.Services.BettingService.ListMarketTypes
+  href: BetfairDotNet.Services.BettingService.html#BetfairDotNet.Services.BettingService.ListMarketTypes(BetfairDotNet.Models.Betting.MarketFilter,System.String)
+  name: ListMarketTypes
+  nameWithType: BettingService.ListMarketTypes
+  fullName: BetfairDotNet.Services.BettingService.ListMarketTypes
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{BetfairDotNet.Models.Betting.MarketTypeResult}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{BetfairDotNet.Models.Betting.MarketTypeResult}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IReadOnlyList<MarketTypeResult>>
+  nameWithType: Task<IReadOnlyList<MarketTypeResult>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<BetfairDotNet.Models.Betting.MarketTypeResult>>
+  nameWithType.vb: Task(Of IReadOnlyList(Of MarketTypeResult))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IReadOnlyList(Of BetfairDotNet.Models.Betting.MarketTypeResult))
+  name.vb: Task(Of IReadOnlyList(Of MarketTypeResult))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: BetfairDotNet.Models.Betting.MarketTypeResult
+    name: MarketTypeResult
+    href: BetfairDotNet.Models.Betting.MarketTypeResult.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Betting.MarketTypeResult
+    name: MarketTypeResult
+    href: BetfairDotNet.Models.Betting.MarketTypeResult.html
+  - name: )
+  - name: )
+- uid: BetfairDotNet.Models.Betting.RunnerBook
+  commentId: T:BetfairDotNet.Models.Betting.RunnerBook
+  href: BetfairDotNet.Models.Betting.RunnerBook.html
+  name: RunnerBook
+  nameWithType: RunnerBook
+  fullName: BetfairDotNet.Models.Betting.RunnerBook
+- uid: BetfairDotNet.Services.BettingService.ListRunnerBook*
+  commentId: Overload:BetfairDotNet.Services.BettingService.ListRunnerBook
+  href: BetfairDotNet.Services.BettingService.html#BetfairDotNet.Services.BettingService.ListRunnerBook(System.String,System.String,System.Nullable{System.Double},BetfairDotNet.Models.Betting.PriceProjection,System.Nullable{BetfairDotNet.Enums.Betting.OrderProjectionEnum},System.Nullable{BetfairDotNet.Enums.Betting.MatchProjectionEnum},System.Boolean,System.Boolean,System.Collections.Generic.IList{System.String},System.String,System.String,System.Nullable{System.DateTime},System.Collections.Generic.IList{System.String})
+  name: ListRunnerBook
+  nameWithType: BettingService.ListRunnerBook
+  fullName: BetfairDotNet.Services.BettingService.ListRunnerBook
+- uid: System.Nullable{System.Double}
+  commentId: T:System.Nullable{System.Double}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double?
+  nameWithType: double?
+  fullName: double?
+  nameWithType.vb: Double?
+  fullName.vb: Double?
+  name.vb: Double?
+  spec.csharp:
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+  spec.vb:
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+- uid: System.Threading.Tasks.Task{BetfairDotNet.Models.Betting.MarketBook}
+  commentId: T:System.Threading.Tasks.Task{BetfairDotNet.Models.Betting.MarketBook}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<MarketBook>
+  nameWithType: Task<MarketBook>
+  fullName: System.Threading.Tasks.Task<BetfairDotNet.Models.Betting.MarketBook>
+  nameWithType.vb: Task(Of MarketBook)
+  fullName.vb: System.Threading.Tasks.Task(Of BetfairDotNet.Models.Betting.MarketBook)
+  name.vb: Task(Of MarketBook)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: BetfairDotNet.Models.Betting.MarketBook
+    name: MarketBook
+    href: BetfairDotNet.Models.Betting.MarketBook.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Betting.MarketBook
+    name: MarketBook
+    href: BetfairDotNet.Models.Betting.MarketBook.html
+  - name: )
+- uid: BetfairDotNet.Models.Betting.TimeRangeResult
+  commentId: T:BetfairDotNet.Models.Betting.TimeRangeResult
+  href: BetfairDotNet.Models.Betting.TimeRangeResult.html
+  name: TimeRangeResult
+  nameWithType: TimeRangeResult
+  fullName: BetfairDotNet.Models.Betting.TimeRangeResult
+- uid: BetfairDotNet.Services.BettingService.ListTimeRanges*
+  commentId: Overload:BetfairDotNet.Services.BettingService.ListTimeRanges
+  href: BetfairDotNet.Services.BettingService.html#BetfairDotNet.Services.BettingService.ListTimeRanges(BetfairDotNet.Models.Betting.MarketFilter,BetfairDotNet.Enums.Betting.TimeGranularityEnum)
+  name: ListTimeRanges
+  nameWithType: BettingService.ListTimeRanges
+  fullName: BetfairDotNet.Services.BettingService.ListTimeRanges
+- uid: BetfairDotNet.Enums.Betting.TimeGranularityEnum
+  commentId: T:BetfairDotNet.Enums.Betting.TimeGranularityEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.TimeGranularityEnum.html
+  name: TimeGranularityEnum
+  nameWithType: TimeGranularityEnum
+  fullName: BetfairDotNet.Enums.Betting.TimeGranularityEnum
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{BetfairDotNet.Models.Betting.TimeRangeResult}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{BetfairDotNet.Models.Betting.TimeRangeResult}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IReadOnlyList<TimeRangeResult>>
+  nameWithType: Task<IReadOnlyList<TimeRangeResult>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<BetfairDotNet.Models.Betting.TimeRangeResult>>
+  nameWithType.vb: Task(Of IReadOnlyList(Of TimeRangeResult))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IReadOnlyList(Of BetfairDotNet.Models.Betting.TimeRangeResult))
+  name.vb: Task(Of IReadOnlyList(Of TimeRangeResult))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: BetfairDotNet.Models.Betting.TimeRangeResult
+    name: TimeRangeResult
+    href: BetfairDotNet.Models.Betting.TimeRangeResult.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Betting.TimeRangeResult
+    name: TimeRangeResult
+    href: BetfairDotNet.Models.Betting.TimeRangeResult.html
+  - name: )
+  - name: )
+- uid: BetfairDotNet.Models.Betting.VenueResult
+  commentId: T:BetfairDotNet.Models.Betting.VenueResult
+  href: BetfairDotNet.Models.Betting.VenueResult.html
+  name: VenueResult
+  nameWithType: VenueResult
+  fullName: BetfairDotNet.Models.Betting.VenueResult
+- uid: BetfairDotNet.Services.BettingService.ListVenues*
+  commentId: Overload:BetfairDotNet.Services.BettingService.ListVenues
+  href: BetfairDotNet.Services.BettingService.html#BetfairDotNet.Services.BettingService.ListVenues(BetfairDotNet.Models.Betting.MarketFilter,System.String)
+  name: ListVenues
+  nameWithType: BettingService.ListVenues
+  fullName: BetfairDotNet.Services.BettingService.ListVenues
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{BetfairDotNet.Models.Betting.VenueResult}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IReadOnlyList{BetfairDotNet.Models.Betting.VenueResult}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IReadOnlyList<VenueResult>>
+  nameWithType: Task<IReadOnlyList<VenueResult>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IReadOnlyList<BetfairDotNet.Models.Betting.VenueResult>>
+  nameWithType.vb: Task(Of IReadOnlyList(Of VenueResult))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IReadOnlyList(Of BetfairDotNet.Models.Betting.VenueResult))
+  name.vb: Task(Of IReadOnlyList(Of VenueResult))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: BetfairDotNet.Models.Betting.VenueResult
+    name: VenueResult
+    href: BetfairDotNet.Models.Betting.VenueResult.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Betting.VenueResult
+    name: VenueResult
+    href: BetfairDotNet.Models.Betting.VenueResult.html
+  - name: )
+  - name: )
+- uid: BetfairDotNet.Models.Betting.PlaceInstruction
+  commentId: T:BetfairDotNet.Models.Betting.PlaceInstruction
+  parent: BetfairDotNet.Models.Betting
+  href: BetfairDotNet.Models.Betting.PlaceInstruction.html
+  name: PlaceInstruction
+  nameWithType: PlaceInstruction
+  fullName: BetfairDotNet.Models.Betting.PlaceInstruction
+- uid: BetfairDotNet.Models.Betting.PlaceExecutionReport
+  commentId: T:BetfairDotNet.Models.Betting.PlaceExecutionReport
+  href: BetfairDotNet.Models.Betting.PlaceExecutionReport.html
+  name: PlaceExecutionReport
+  nameWithType: PlaceExecutionReport
+  fullName: BetfairDotNet.Models.Betting.PlaceExecutionReport
+- uid: BetfairDotNet.Services.BettingService.PlaceOrders*
+  commentId: Overload:BetfairDotNet.Services.BettingService.PlaceOrders
+  href: BetfairDotNet.Services.BettingService.html#BetfairDotNet.Services.BettingService.PlaceOrders(System.String,System.Collections.Generic.IList{BetfairDotNet.Models.Betting.PlaceInstruction},System.String,BetfairDotNet.Models.Betting.MarketVersion,System.String,System.Boolean)
+  name: PlaceOrders
+  nameWithType: BettingService.PlaceOrders
+  fullName: BetfairDotNet.Services.BettingService.PlaceOrders
+- uid: System.Collections.Generic.IList{BetfairDotNet.Models.Betting.PlaceInstruction}
+  commentId: T:System.Collections.Generic.IList{BetfairDotNet.Models.Betting.PlaceInstruction}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<PlaceInstruction>
+  nameWithType: IList<PlaceInstruction>
+  fullName: System.Collections.Generic.IList<BetfairDotNet.Models.Betting.PlaceInstruction>
+  nameWithType.vb: IList(Of PlaceInstruction)
+  fullName.vb: System.Collections.Generic.IList(Of BetfairDotNet.Models.Betting.PlaceInstruction)
+  name.vb: IList(Of PlaceInstruction)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - uid: BetfairDotNet.Models.Betting.PlaceInstruction
+    name: PlaceInstruction
+    href: BetfairDotNet.Models.Betting.PlaceInstruction.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Betting.PlaceInstruction
+    name: PlaceInstruction
+    href: BetfairDotNet.Models.Betting.PlaceInstruction.html
+  - name: )
+- uid: BetfairDotNet.Models.Betting.MarketVersion
+  commentId: T:BetfairDotNet.Models.Betting.MarketVersion
+  parent: BetfairDotNet.Models.Betting
+  href: BetfairDotNet.Models.Betting.MarketVersion.html
+  name: MarketVersion
+  nameWithType: MarketVersion
+  fullName: BetfairDotNet.Models.Betting.MarketVersion
+- uid: System.Threading.Tasks.Task{BetfairDotNet.Models.Betting.PlaceExecutionReport}
+  commentId: T:System.Threading.Tasks.Task{BetfairDotNet.Models.Betting.PlaceExecutionReport}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<PlaceExecutionReport>
+  nameWithType: Task<PlaceExecutionReport>
+  fullName: System.Threading.Tasks.Task<BetfairDotNet.Models.Betting.PlaceExecutionReport>
+  nameWithType.vb: Task(Of PlaceExecutionReport)
+  fullName.vb: System.Threading.Tasks.Task(Of BetfairDotNet.Models.Betting.PlaceExecutionReport)
+  name.vb: Task(Of PlaceExecutionReport)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: BetfairDotNet.Models.Betting.PlaceExecutionReport
+    name: PlaceExecutionReport
+    href: BetfairDotNet.Models.Betting.PlaceExecutionReport.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Betting.PlaceExecutionReport
+    name: PlaceExecutionReport
+    href: BetfairDotNet.Models.Betting.PlaceExecutionReport.html
+  - name: )
+- uid: BetfairDotNet.Models.Betting.UpdateExecutionReport
+  commentId: T:BetfairDotNet.Models.Betting.UpdateExecutionReport
+  href: BetfairDotNet.Models.Betting.UpdateExecutionReport.html
+  name: UpdateExecutionReport
+  nameWithType: UpdateExecutionReport
+  fullName: BetfairDotNet.Models.Betting.UpdateExecutionReport
+- uid: BetfairDotNet.Services.BettingService.UpdateOrders*
+  commentId: Overload:BetfairDotNet.Services.BettingService.UpdateOrders
+  href: BetfairDotNet.Services.BettingService.html#BetfairDotNet.Services.BettingService.UpdateOrders(System.String,System.Collections.Generic.IList{BetfairDotNet.Models.Betting.UpdateInstruction},System.String)
+  name: UpdateOrders
+  nameWithType: BettingService.UpdateOrders
+  fullName: BetfairDotNet.Services.BettingService.UpdateOrders
+- uid: System.Collections.Generic.IList{BetfairDotNet.Models.Betting.UpdateInstruction}
+  commentId: T:System.Collections.Generic.IList{BetfairDotNet.Models.Betting.UpdateInstruction}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<UpdateInstruction>
+  nameWithType: IList<UpdateInstruction>
+  fullName: System.Collections.Generic.IList<BetfairDotNet.Models.Betting.UpdateInstruction>
+  nameWithType.vb: IList(Of UpdateInstruction)
+  fullName.vb: System.Collections.Generic.IList(Of BetfairDotNet.Models.Betting.UpdateInstruction)
+  name.vb: IList(Of UpdateInstruction)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - uid: BetfairDotNet.Models.Betting.UpdateInstruction
+    name: UpdateInstruction
+    href: BetfairDotNet.Models.Betting.UpdateInstruction.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Betting.UpdateInstruction
+    name: UpdateInstruction
+    href: BetfairDotNet.Models.Betting.UpdateInstruction.html
+  - name: )
+- uid: System.Threading.Tasks.Task{BetfairDotNet.Models.Betting.UpdateExecutionReport}
+  commentId: T:System.Threading.Tasks.Task{BetfairDotNet.Models.Betting.UpdateExecutionReport}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<UpdateExecutionReport>
+  nameWithType: Task<UpdateExecutionReport>
+  fullName: System.Threading.Tasks.Task<BetfairDotNet.Models.Betting.UpdateExecutionReport>
+  nameWithType.vb: Task(Of UpdateExecutionReport)
+  fullName.vb: System.Threading.Tasks.Task(Of BetfairDotNet.Models.Betting.UpdateExecutionReport)
+  name.vb: Task(Of UpdateExecutionReport)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: BetfairDotNet.Models.Betting.UpdateExecutionReport
+    name: UpdateExecutionReport
+    href: BetfairDotNet.Models.Betting.UpdateExecutionReport.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Betting.UpdateExecutionReport
+    name: UpdateExecutionReport
+    href: BetfairDotNet.Models.Betting.UpdateExecutionReport.html
+  - name: )
+- uid: BetfairDotNet.Services.BettingService.ReplaceOrders*
+  commentId: Overload:BetfairDotNet.Services.BettingService.ReplaceOrders
+  href: BetfairDotNet.Services.BettingService.html#BetfairDotNet.Services.BettingService.ReplaceOrders(System.String,System.Collections.Generic.IList{BetfairDotNet.Models.Betting.ReplaceInstruction},System.String,BetfairDotNet.Models.Betting.MarketVersion,System.Boolean)
+  name: ReplaceOrders
+  nameWithType: BettingService.ReplaceOrders
+  fullName: BetfairDotNet.Services.BettingService.ReplaceOrders
+- uid: System.Collections.Generic.IList{BetfairDotNet.Models.Betting.ReplaceInstruction}
+  commentId: T:System.Collections.Generic.IList{BetfairDotNet.Models.Betting.ReplaceInstruction}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<ReplaceInstruction>
+  nameWithType: IList<ReplaceInstruction>
+  fullName: System.Collections.Generic.IList<BetfairDotNet.Models.Betting.ReplaceInstruction>
+  nameWithType.vb: IList(Of ReplaceInstruction)
+  fullName.vb: System.Collections.Generic.IList(Of BetfairDotNet.Models.Betting.ReplaceInstruction)
+  name.vb: IList(Of ReplaceInstruction)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - uid: BetfairDotNet.Models.Betting.ReplaceInstruction
+    name: ReplaceInstruction
+    href: BetfairDotNet.Models.Betting.ReplaceInstruction.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Betting.ReplaceInstruction
+    name: ReplaceInstruction
+    href: BetfairDotNet.Models.Betting.ReplaceInstruction.html
+  - name: )
+- uid: System.Threading.Tasks.Task{BetfairDotNet.Models.Betting.ReplaceExecutionReport}
+  commentId: T:System.Threading.Tasks.Task{BetfairDotNet.Models.Betting.ReplaceExecutionReport}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ReplaceExecutionReport>
+  nameWithType: Task<ReplaceExecutionReport>
+  fullName: System.Threading.Tasks.Task<BetfairDotNet.Models.Betting.ReplaceExecutionReport>
+  nameWithType.vb: Task(Of ReplaceExecutionReport)
+  fullName.vb: System.Threading.Tasks.Task(Of BetfairDotNet.Models.Betting.ReplaceExecutionReport)
+  name.vb: Task(Of ReplaceExecutionReport)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: BetfairDotNet.Models.Betting.ReplaceExecutionReport
+    name: ReplaceExecutionReport
+    href: BetfairDotNet.Models.Betting.ReplaceExecutionReport.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Betting.ReplaceExecutionReport
+    name: ReplaceExecutionReport
+    href: BetfairDotNet.Models.Betting.ReplaceExecutionReport.html
+  - name: )

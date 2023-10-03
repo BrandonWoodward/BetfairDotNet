@@ -1,0 +1,79 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Account
+  commentId: N:BetfairDotNet.Enums.Account
+  id: Account
+  parent: BetfairDotNet.Enums
+  children:
+  - BetfairDotNet.Enums.Account.IncludeItemEnum
+  - BetfairDotNet.Enums.Account.ItemClassEnum
+  - BetfairDotNet.Enums.Account.LoginStatusEnum
+  - BetfairDotNet.Enums.Account.WalletEnum
+  langs:
+  - csharp
+  - vb
+  name: BetfairDotNet.Enums.Account
+  nameWithType: BetfairDotNet.Enums.Account
+  fullName: BetfairDotNet.Enums.Account
+  type: Namespace
+  assemblies:
+  - BetfairDotNet
+references:
+- uid: BetfairDotNet.Enums.Account.IncludeItemEnum
+  commentId: T:BetfairDotNet.Enums.Account.IncludeItemEnum
+  parent: BetfairDotNet.Enums.Account
+  href: BetfairDotNet.Enums.Account.IncludeItemEnum.html
+  name: IncludeItemEnum
+  nameWithType: IncludeItemEnum
+  fullName: BetfairDotNet.Enums.Account.IncludeItemEnum
+- uid: BetfairDotNet.Enums.Account.ItemClassEnum
+  commentId: T:BetfairDotNet.Enums.Account.ItemClassEnum
+  parent: BetfairDotNet.Enums.Account
+  href: BetfairDotNet.Enums.Account.ItemClassEnum.html
+  name: ItemClassEnum
+  nameWithType: ItemClassEnum
+  fullName: BetfairDotNet.Enums.Account.ItemClassEnum
+- uid: BetfairDotNet.Enums.Account.LoginStatusEnum
+  commentId: T:BetfairDotNet.Enums.Account.LoginStatusEnum
+  parent: BetfairDotNet.Enums.Account
+  href: BetfairDotNet.Enums.Account.LoginStatusEnum.html
+  name: LoginStatusEnum
+  nameWithType: LoginStatusEnum
+  fullName: BetfairDotNet.Enums.Account.LoginStatusEnum
+- uid: BetfairDotNet.Enums.Account.WalletEnum
+  commentId: T:BetfairDotNet.Enums.Account.WalletEnum
+  parent: BetfairDotNet.Enums.Account
+  href: BetfairDotNet.Enums.Account.WalletEnum.html
+  name: WalletEnum
+  nameWithType: WalletEnum
+  fullName: BetfairDotNet.Enums.Account.WalletEnum
+- uid: BetfairDotNet.Enums.Account
+  commentId: N:BetfairDotNet.Enums.Account
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Account
+  nameWithType: BetfairDotNet.Enums.Account
+  fullName: BetfairDotNet.Enums.Account
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Account
+    name: Account
+    href: BetfairDotNet.Enums.Account.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Account
+    name: Account
+    href: BetfairDotNet.Enums.Account.html

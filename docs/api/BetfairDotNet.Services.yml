@@ -1,0 +1,87 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Services
+  commentId: N:BetfairDotNet.Services
+  id: Services
+  parent: BetfairDotNet
+  children:
+  - BetfairDotNet.Services.AccountService
+  - BetfairDotNet.Services.BettingService
+  - BetfairDotNet.Services.HeartbeatService
+  - BetfairDotNet.Services.LoginService
+  - BetfairDotNet.Services.NavigationService
+  - BetfairDotNet.Services.StreamingService
+  langs:
+  - csharp
+  - vb
+  name: BetfairDotNet.Services
+  nameWithType: BetfairDotNet.Services
+  fullName: BetfairDotNet.Services
+  type: Namespace
+  assemblies:
+  - BetfairDotNet
+references:
+- uid: BetfairDotNet.Services.AccountService
+  commentId: T:BetfairDotNet.Services.AccountService
+  parent: BetfairDotNet.Services
+  href: BetfairDotNet.Services.AccountService.html
+  name: AccountService
+  nameWithType: AccountService
+  fullName: BetfairDotNet.Services.AccountService
+- uid: BetfairDotNet.Services.BettingService
+  commentId: T:BetfairDotNet.Services.BettingService
+  parent: BetfairDotNet.Services
+  href: BetfairDotNet.Services.BettingService.html
+  name: BettingService
+  nameWithType: BettingService
+  fullName: BetfairDotNet.Services.BettingService
+- uid: BetfairDotNet.Services.HeartbeatService
+  commentId: T:BetfairDotNet.Services.HeartbeatService
+  parent: BetfairDotNet.Services
+  href: BetfairDotNet.Services.HeartbeatService.html
+  name: HeartbeatService
+  nameWithType: HeartbeatService
+  fullName: BetfairDotNet.Services.HeartbeatService
+- uid: BetfairDotNet.Services.LoginService
+  commentId: T:BetfairDotNet.Services.LoginService
+  parent: BetfairDotNet.Services
+  href: BetfairDotNet.Services.LoginService.html
+  name: LoginService
+  nameWithType: LoginService
+  fullName: BetfairDotNet.Services.LoginService
+- uid: BetfairDotNet.Services.NavigationService
+  commentId: T:BetfairDotNet.Services.NavigationService
+  parent: BetfairDotNet.Services
+  href: BetfairDotNet.Services.NavigationService.html
+  name: NavigationService
+  nameWithType: NavigationService
+  fullName: BetfairDotNet.Services.NavigationService
+- uid: BetfairDotNet.Services.StreamingService
+  commentId: T:BetfairDotNet.Services.StreamingService
+  parent: BetfairDotNet.Services
+  href: BetfairDotNet.Services.StreamingService.html
+  name: StreamingService
+  nameWithType: StreamingService
+  fullName: BetfairDotNet.Services.StreamingService
+- uid: BetfairDotNet.Services
+  commentId: N:BetfairDotNet.Services
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Services
+  nameWithType: BetfairDotNet.Services
+  fullName: BetfairDotNet.Services
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Services
+    name: Services
+    href: BetfairDotNet.Services.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Services
+    name: Services
+    href: BetfairDotNet.Services.html

@@ -1,0 +1,748 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Models.Streaming.OrderSubscription
+  commentId: T:BetfairDotNet.Models.Streaming.OrderSubscription
+  id: OrderSubscription
+  parent: BetfairDotNet.Models.Streaming
+  children:
+  - BetfairDotNet.Models.Streaming.OrderSubscription.#ctor(BetfairDotNet.Models.Streaming.OrderFilter,System.Int64)
+  - BetfairDotNet.Models.Streaming.OrderSubscription.Clk
+  - BetfairDotNet.Models.Streaming.OrderSubscription.ConflateMs
+  - BetfairDotNet.Models.Streaming.OrderSubscription.HeartbeatMs
+  - BetfairDotNet.Models.Streaming.OrderSubscription.InitialClk
+  - BetfairDotNet.Models.Streaming.OrderSubscription.OrderFilter
+  langs:
+  - csharp
+  - vb
+  name: OrderSubscription
+  nameWithType: OrderSubscription
+  fullName: BetfairDotNet.Models.Streaming.OrderSubscription
+  type: Class
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/OrderSubscription.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: OrderSubscription
+    path: ../src/BetfairDotNet/Models/Streaming/OrderSubscription.cs
+    startLine: 7
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: Message sent for Betfair ESA order subscription operation.
+  example: []
+  syntax:
+    content: 'public sealed record OrderSubscription : BaseMessage, IEquatable<BaseMessage>, IEquatable<OrderSubscription>'
+    content.vb: Public NotInheritable Class OrderSubscription Inherits BaseMessage Implements IEquatable(Of BaseMessage), IEquatable(Of OrderSubscription)
+  inheritance:
+  - System.Object
+  - BetfairDotNet.Models.Streaming.BaseMessage
+  implements:
+  - System.IEquatable{BetfairDotNet.Models.Streaming.BaseMessage}
+  - System.IEquatable{BetfairDotNet.Models.Streaming.OrderSubscription}
+  inheritedMembers:
+  - BetfairDotNet.Models.Streaming.BaseMessage.Operation
+  - BetfairDotNet.Models.Streaming.BaseMessage.Id
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BetfairDotNet.Models.Streaming.OrderSubscription.OrderFilter
+  commentId: P:BetfairDotNet.Models.Streaming.OrderSubscription.OrderFilter
+  id: OrderFilter
+  parent: BetfairDotNet.Models.Streaming.OrderSubscription
+  langs:
+  - csharp
+  - vb
+  name: OrderFilter
+  nameWithType: OrderSubscription.OrderFilter
+  fullName: BetfairDotNet.Models.Streaming.OrderSubscription.OrderFilter
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/OrderSubscription.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: OrderFilter
+    path: ../src/BetfairDotNet/Models/Streaming/OrderSubscription.cs
+    startLine: 12
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: Gets or Sets OrderFilter
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("orderFilter")]
+
+      public OrderFilter OrderFilter { get; set; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Models.Streaming.OrderFilter
+    content.vb: >-
+      <JsonPropertyName("orderFilter")>
+
+      Public Property OrderFilter As OrderFilter
+  overload: BetfairDotNet.Models.Streaming.OrderSubscription.OrderFilter*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: orderFilter
+- uid: BetfairDotNet.Models.Streaming.OrderSubscription.Clk
+  commentId: P:BetfairDotNet.Models.Streaming.OrderSubscription.Clk
+  id: Clk
+  parent: BetfairDotNet.Models.Streaming.OrderSubscription
+  langs:
+  - csharp
+  - vb
+  name: Clk
+  nameWithType: OrderSubscription.Clk
+  fullName: BetfairDotNet.Models.Streaming.OrderSubscription.Clk
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/OrderSubscription.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Clk
+    path: ../src/BetfairDotNet/Models/Streaming/OrderSubscription.cs
+    startLine: 18
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: Token value delta (received in MarketChangeMessage) that should be passed to resume a subscription
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("clk")]
+
+      public string? Clk { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("clk")>
+
+      Public Property Clk As String
+  overload: BetfairDotNet.Models.Streaming.OrderSubscription.Clk*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: clk
+- uid: BetfairDotNet.Models.Streaming.OrderSubscription.HeartbeatMs
+  commentId: P:BetfairDotNet.Models.Streaming.OrderSubscription.HeartbeatMs
+  id: HeartbeatMs
+  parent: BetfairDotNet.Models.Streaming.OrderSubscription
+  langs:
+  - csharp
+  - vb
+  name: HeartbeatMs
+  nameWithType: OrderSubscription.HeartbeatMs
+  fullName: BetfairDotNet.Models.Streaming.OrderSubscription.HeartbeatMs
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/OrderSubscription.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: HeartbeatMs
+    path: ../src/BetfairDotNet/Models/Streaming/OrderSubscription.cs
+    startLine: 25
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: >-
+    The heartbeat rate (looped back on initial image after validation: bounds are 500 to 30000)
+
+    Internal use only
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("heartbeatMs")]
+
+      [JsonRequired]
+
+      public int HeartbeatMs { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <JsonPropertyName("heartbeatMs")>
+
+      <JsonRequired>
+
+      Public Property HeartbeatMs As Integer
+  overload: BetfairDotNet.Models.Streaming.OrderSubscription.HeartbeatMs*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: heartbeatMs
+  - type: System.Text.Json.Serialization.JsonRequiredAttribute
+    ctor: System.Text.Json.Serialization.JsonRequiredAttribute.#ctor
+    arguments: []
+- uid: BetfairDotNet.Models.Streaming.OrderSubscription.InitialClk
+  commentId: P:BetfairDotNet.Models.Streaming.OrderSubscription.InitialClk
+  id: InitialClk
+  parent: BetfairDotNet.Models.Streaming.OrderSubscription
+  langs:
+  - csharp
+  - vb
+  name: InitialClk
+  nameWithType: OrderSubscription.InitialClk
+  fullName: BetfairDotNet.Models.Streaming.OrderSubscription.InitialClk
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/OrderSubscription.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: InitialClk
+    path: ../src/BetfairDotNet/Models/Streaming/OrderSubscription.cs
+    startLine: 31
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: Token value (received in initial MarketChangeMessage) that should be passed to resume a subscription
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("initialClk")]
+
+      public string? InitialClk { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("initialClk")>
+
+      Public Property InitialClk As String
+  overload: BetfairDotNet.Models.Streaming.OrderSubscription.InitialClk*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: initialClk
+- uid: BetfairDotNet.Models.Streaming.OrderSubscription.ConflateMs
+  commentId: P:BetfairDotNet.Models.Streaming.OrderSubscription.ConflateMs
+  id: ConflateMs
+  parent: BetfairDotNet.Models.Streaming.OrderSubscription
+  langs:
+  - csharp
+  - vb
+  name: ConflateMs
+  nameWithType: OrderSubscription.ConflateMs
+  fullName: BetfairDotNet.Models.Streaming.OrderSubscription.ConflateMs
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/OrderSubscription.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ConflateMs
+    path: ../src/BetfairDotNet/Models/Streaming/OrderSubscription.cs
+    startLine: 37
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: 'The conflation rate (looped back on initial image after validation: bounds are 0 to 120000)'
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("conflateMs")]
+
+      public long ConflateMs { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: >-
+      <JsonPropertyName("conflateMs")>
+
+      Public Property ConflateMs As Long
+  overload: BetfairDotNet.Models.Streaming.OrderSubscription.ConflateMs*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: conflateMs
+- uid: BetfairDotNet.Models.Streaming.OrderSubscription.#ctor(BetfairDotNet.Models.Streaming.OrderFilter,System.Int64)
+  commentId: M:BetfairDotNet.Models.Streaming.OrderSubscription.#ctor(BetfairDotNet.Models.Streaming.OrderFilter,System.Int64)
+  id: '#ctor(BetfairDotNet.Models.Streaming.OrderFilter,System.Int64)'
+  parent: BetfairDotNet.Models.Streaming.OrderSubscription
+  langs:
+  - csharp
+  - vb
+  name: OrderSubscription(OrderFilter, long)
+  nameWithType: OrderSubscription.OrderSubscription(OrderFilter, long)
+  fullName: BetfairDotNet.Models.Streaming.OrderSubscription.OrderSubscription(BetfairDotNet.Models.Streaming.OrderFilter, long)
+  type: Constructor
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/OrderSubscription.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: .ctor
+    path: ../src/BetfairDotNet/Models/Streaming/OrderSubscription.cs
+    startLine: 41
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  syntax:
+    content: public OrderSubscription(OrderFilter orderFilter, long conflateMs = 0)
+    parameters:
+    - id: orderFilter
+      type: BetfairDotNet.Models.Streaming.OrderFilter
+    - id: conflateMs
+      type: System.Int64
+    content.vb: Public Sub New(orderFilter As OrderFilter, conflateMs As Long = 0)
+  overload: BetfairDotNet.Models.Streaming.OrderSubscription.#ctor*
+  nameWithType.vb: OrderSubscription.New(OrderFilter, Long)
+  fullName.vb: BetfairDotNet.Models.Streaming.OrderSubscription.New(BetfairDotNet.Models.Streaming.OrderFilter, Long)
+  name.vb: New(OrderFilter, Long)
+references:
+- uid: BetfairDotNet.Models.Streaming
+  commentId: N:BetfairDotNet.Models.Streaming
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Streaming
+  nameWithType: BetfairDotNet.Models.Streaming
+  fullName: BetfairDotNet.Models.Streaming
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Streaming
+    name: Streaming
+    href: BetfairDotNet.Models.Streaming.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Streaming
+    name: Streaming
+    href: BetfairDotNet.Models.Streaming.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: BetfairDotNet.Models.Streaming.BaseMessage
+  commentId: T:BetfairDotNet.Models.Streaming.BaseMessage
+  parent: BetfairDotNet.Models.Streaming
+  href: BetfairDotNet.Models.Streaming.BaseMessage.html
+  name: BaseMessage
+  nameWithType: BaseMessage
+  fullName: BetfairDotNet.Models.Streaming.BaseMessage
+- uid: System.IEquatable{BetfairDotNet.Models.Streaming.BaseMessage}
+  commentId: T:System.IEquatable{BetfairDotNet.Models.Streaming.BaseMessage}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<BaseMessage>
+  nameWithType: IEquatable<BaseMessage>
+  fullName: System.IEquatable<BetfairDotNet.Models.Streaming.BaseMessage>
+  nameWithType.vb: IEquatable(Of BaseMessage)
+  fullName.vb: System.IEquatable(Of BetfairDotNet.Models.Streaming.BaseMessage)
+  name.vb: IEquatable(Of BaseMessage)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: BetfairDotNet.Models.Streaming.BaseMessage
+    name: BaseMessage
+    href: BetfairDotNet.Models.Streaming.BaseMessage.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Streaming.BaseMessage
+    name: BaseMessage
+    href: BetfairDotNet.Models.Streaming.BaseMessage.html
+  - name: )
+- uid: System.IEquatable{BetfairDotNet.Models.Streaming.OrderSubscription}
+  commentId: T:System.IEquatable{BetfairDotNet.Models.Streaming.OrderSubscription}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<OrderSubscription>
+  nameWithType: IEquatable<OrderSubscription>
+  fullName: System.IEquatable<BetfairDotNet.Models.Streaming.OrderSubscription>
+  nameWithType.vb: IEquatable(Of OrderSubscription)
+  fullName.vb: System.IEquatable(Of BetfairDotNet.Models.Streaming.OrderSubscription)
+  name.vb: IEquatable(Of OrderSubscription)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: BetfairDotNet.Models.Streaming.OrderSubscription
+    name: OrderSubscription
+    href: BetfairDotNet.Models.Streaming.OrderSubscription.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Streaming.OrderSubscription
+    name: OrderSubscription
+    href: BetfairDotNet.Models.Streaming.OrderSubscription.html
+  - name: )
+- uid: BetfairDotNet.Models.Streaming.BaseMessage.Operation
+  commentId: P:BetfairDotNet.Models.Streaming.BaseMessage.Operation
+  parent: BetfairDotNet.Models.Streaming.BaseMessage
+  href: BetfairDotNet.Models.Streaming.BaseMessage.html#BetfairDotNet.Models.Streaming.BaseMessage.Operation
+  name: Operation
+  nameWithType: BaseMessage.Operation
+  fullName: BetfairDotNet.Models.Streaming.BaseMessage.Operation
+- uid: BetfairDotNet.Models.Streaming.BaseMessage.Id
+  commentId: P:BetfairDotNet.Models.Streaming.BaseMessage.Id
+  parent: BetfairDotNet.Models.Streaming.BaseMessage
+  href: BetfairDotNet.Models.Streaming.BaseMessage.html#BetfairDotNet.Models.Streaming.BaseMessage.Id
+  name: Id
+  nameWithType: BaseMessage.Id
+  fullName: BetfairDotNet.Models.Streaming.BaseMessage.Id
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BetfairDotNet.Models.Streaming.OrderSubscription.OrderFilter*
+  commentId: Overload:BetfairDotNet.Models.Streaming.OrderSubscription.OrderFilter
+  href: BetfairDotNet.Models.Streaming.OrderSubscription.html#BetfairDotNet.Models.Streaming.OrderSubscription.OrderFilter
+  name: OrderFilter
+  nameWithType: OrderSubscription.OrderFilter
+  fullName: BetfairDotNet.Models.Streaming.OrderSubscription.OrderFilter
+- uid: BetfairDotNet.Models.Streaming.OrderFilter
+  commentId: T:BetfairDotNet.Models.Streaming.OrderFilter
+  parent: BetfairDotNet.Models.Streaming
+  href: BetfairDotNet.Models.Streaming.OrderFilter.html
+  name: OrderFilter
+  nameWithType: OrderFilter
+  fullName: BetfairDotNet.Models.Streaming.OrderFilter
+- uid: BetfairDotNet.Models.Streaming.OrderSubscription.Clk*
+  commentId: Overload:BetfairDotNet.Models.Streaming.OrderSubscription.Clk
+  href: BetfairDotNet.Models.Streaming.OrderSubscription.html#BetfairDotNet.Models.Streaming.OrderSubscription.Clk
+  name: Clk
+  nameWithType: OrderSubscription.Clk
+  fullName: BetfairDotNet.Models.Streaming.OrderSubscription.Clk
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BetfairDotNet.Models.Streaming.OrderSubscription.HeartbeatMs*
+  commentId: Overload:BetfairDotNet.Models.Streaming.OrderSubscription.HeartbeatMs
+  href: BetfairDotNet.Models.Streaming.OrderSubscription.html#BetfairDotNet.Models.Streaming.OrderSubscription.HeartbeatMs
+  name: HeartbeatMs
+  nameWithType: OrderSubscription.HeartbeatMs
+  fullName: BetfairDotNet.Models.Streaming.OrderSubscription.HeartbeatMs
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: BetfairDotNet.Models.Streaming.OrderSubscription.InitialClk*
+  commentId: Overload:BetfairDotNet.Models.Streaming.OrderSubscription.InitialClk
+  href: BetfairDotNet.Models.Streaming.OrderSubscription.html#BetfairDotNet.Models.Streaming.OrderSubscription.InitialClk
+  name: InitialClk
+  nameWithType: OrderSubscription.InitialClk
+  fullName: BetfairDotNet.Models.Streaming.OrderSubscription.InitialClk
+- uid: BetfairDotNet.Models.Streaming.OrderSubscription.ConflateMs*
+  commentId: Overload:BetfairDotNet.Models.Streaming.OrderSubscription.ConflateMs
+  href: BetfairDotNet.Models.Streaming.OrderSubscription.html#BetfairDotNet.Models.Streaming.OrderSubscription.ConflateMs
+  name: ConflateMs
+  nameWithType: OrderSubscription.ConflateMs
+  fullName: BetfairDotNet.Models.Streaming.OrderSubscription.ConflateMs
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: BetfairDotNet.Models.Streaming.OrderSubscription.#ctor*
+  commentId: Overload:BetfairDotNet.Models.Streaming.OrderSubscription.#ctor
+  href: BetfairDotNet.Models.Streaming.OrderSubscription.html#BetfairDotNet.Models.Streaming.OrderSubscription.#ctor(BetfairDotNet.Models.Streaming.OrderFilter,System.Int64)
+  name: OrderSubscription
+  nameWithType: OrderSubscription.OrderSubscription
+  fullName: BetfairDotNet.Models.Streaming.OrderSubscription.OrderSubscription
+  nameWithType.vb: OrderSubscription.New
+  fullName.vb: BetfairDotNet.Models.Streaming.OrderSubscription.New
+  name.vb: New

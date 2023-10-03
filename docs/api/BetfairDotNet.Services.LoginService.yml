@@ -1,0 +1,541 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Services.LoginService
+  commentId: T:BetfairDotNet.Services.LoginService
+  id: LoginService
+  parent: BetfairDotNet.Services
+  children:
+  - BetfairDotNet.Services.LoginService.CertificateLogin(System.String,System.String,System.String)
+  - BetfairDotNet.Services.LoginService.InteractiveLogin(System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: LoginService
+  nameWithType: LoginService
+  fullName: BetfairDotNet.Services.LoginService
+  type: Class
+  source:
+    remote:
+      path: src/BetfairDotNet/Services/LoginService.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: LoginService
+    path: ../src/BetfairDotNet/Services/LoginService.cs
+    startLine: 11
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Services
+  summary: A service that provides functionalities for user authentication.
+  example: []
+  syntax:
+    content: public sealed class LoginService
+    content.vb: Public NotInheritable Class LoginService
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BetfairDotNet.Services.LoginService.CertificateLogin(System.String,System.String,System.String)
+  commentId: M:BetfairDotNet.Services.LoginService.CertificateLogin(System.String,System.String,System.String)
+  id: CertificateLogin(System.String,System.String,System.String)
+  parent: BetfairDotNet.Services.LoginService
+  langs:
+  - csharp
+  - vb
+  name: CertificateLogin(string, string, string)
+  nameWithType: LoginService.CertificateLogin(string, string, string)
+  fullName: BetfairDotNet.Services.LoginService.CertificateLogin(string, string, string)
+  type: Method
+  source:
+    remote:
+      path: src/BetfairDotNet/Services/LoginService.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: CertificateLogin
+    path: ../src/BetfairDotNet/Services/LoginService.cs
+    startLine: 31
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Services
+  summary: >-
+    Asynchronously attempts to authenticate a user using the provided credentials.
+
+    This is the recommended way to login for automated bots.
+  example: []
+  syntax:
+    content: public Task<CertificateLoginResponse> CertificateLogin(string username, string password, string certPath)
+    parameters:
+    - id: username
+      type: System.String
+    - id: password
+      type: System.String
+    - id: certPath
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{BetfairDotNet.Models.Login.CertificateLoginResponse}
+      description: >-
+        A task that represents the asynchronous operation. The result contains 
+
+        the <xref href="BetfairDotNet.Models.Login.CertificateLoginResponse" data-throw-if-not-resolved="false"></xref> if the login was successful.
+    content.vb: Public Function CertificateLogin(username As String, password As String, certPath As String) As Task(Of CertificateLoginResponse)
+  overload: BetfairDotNet.Services.LoginService.CertificateLogin*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if any of the arguments are null, empty, or if the certificate is not in the expected format.
+  nameWithType.vb: LoginService.CertificateLogin(String, String, String)
+  fullName.vb: BetfairDotNet.Services.LoginService.CertificateLogin(String, String, String)
+  name.vb: CertificateLogin(String, String, String)
+- uid: BetfairDotNet.Services.LoginService.InteractiveLogin(System.String,System.String)
+  commentId: M:BetfairDotNet.Services.LoginService.InteractiveLogin(System.String,System.String)
+  id: InteractiveLogin(System.String,System.String)
+  parent: BetfairDotNet.Services.LoginService
+  langs:
+  - csharp
+  - vb
+  name: InteractiveLogin(string, string)
+  nameWithType: LoginService.InteractiveLogin(string, string)
+  fullName: BetfairDotNet.Services.LoginService.InteractiveLogin(string, string)
+  type: Method
+  source:
+    remote:
+      path: src/BetfairDotNet/Services/LoginService.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: InteractiveLogin
+    path: ../src/BetfairDotNet/Services/LoginService.cs
+    startLine: 60
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Services
+  summary: >-
+    Asynchronously attempts to authenticate a user using the provided credentials.
+
+    This is the recommended approach if you are creating a login form.
+  example: []
+  syntax:
+    content: public Task<InteractiveLoginResponse> InteractiveLogin(string username, string password)
+    parameters:
+    - id: username
+      type: System.String
+    - id: password
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{BetfairDotNet.Models.Login.InteractiveLoginResponse}
+      description: ''
+    content.vb: Public Function InteractiveLogin(username As String, password As String) As Task(Of InteractiveLoginResponse)
+  overload: BetfairDotNet.Services.LoginService.InteractiveLogin*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: ''
+  nameWithType.vb: LoginService.InteractiveLogin(String, String)
+  fullName.vb: BetfairDotNet.Services.LoginService.InteractiveLogin(String, String)
+  name.vb: InteractiveLogin(String, String)
+references:
+- uid: BetfairDotNet.Services
+  commentId: N:BetfairDotNet.Services
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Services
+  nameWithType: BetfairDotNet.Services
+  fullName: BetfairDotNet.Services
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Services
+    name: Services
+    href: BetfairDotNet.Services.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Services
+    name: Services
+    href: BetfairDotNet.Services.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BetfairDotNet.Models.Login.CertificateLoginResponse
+  commentId: T:BetfairDotNet.Models.Login.CertificateLoginResponse
+  href: BetfairDotNet.Models.Login.CertificateLoginResponse.html
+  name: CertificateLoginResponse
+  nameWithType: CertificateLoginResponse
+  fullName: BetfairDotNet.Models.Login.CertificateLoginResponse
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: BetfairDotNet.Services.LoginService.CertificateLogin*
+  commentId: Overload:BetfairDotNet.Services.LoginService.CertificateLogin
+  href: BetfairDotNet.Services.LoginService.html#BetfairDotNet.Services.LoginService.CertificateLogin(System.String,System.String,System.String)
+  name: CertificateLogin
+  nameWithType: LoginService.CertificateLogin
+  fullName: BetfairDotNet.Services.LoginService.CertificateLogin
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task{BetfairDotNet.Models.Login.CertificateLoginResponse}
+  commentId: T:System.Threading.Tasks.Task{BetfairDotNet.Models.Login.CertificateLoginResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<CertificateLoginResponse>
+  nameWithType: Task<CertificateLoginResponse>
+  fullName: System.Threading.Tasks.Task<BetfairDotNet.Models.Login.CertificateLoginResponse>
+  nameWithType.vb: Task(Of CertificateLoginResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of BetfairDotNet.Models.Login.CertificateLoginResponse)
+  name.vb: Task(Of CertificateLoginResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: BetfairDotNet.Models.Login.CertificateLoginResponse
+    name: CertificateLoginResponse
+    href: BetfairDotNet.Models.Login.CertificateLoginResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Login.CertificateLoginResponse
+    name: CertificateLoginResponse
+    href: BetfairDotNet.Models.Login.CertificateLoginResponse.html
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: BetfairDotNet.Services.LoginService.InteractiveLogin*
+  commentId: Overload:BetfairDotNet.Services.LoginService.InteractiveLogin
+  href: BetfairDotNet.Services.LoginService.html#BetfairDotNet.Services.LoginService.InteractiveLogin(System.String,System.String)
+  name: InteractiveLogin
+  nameWithType: LoginService.InteractiveLogin
+  fullName: BetfairDotNet.Services.LoginService.InteractiveLogin
+- uid: System.Threading.Tasks.Task{BetfairDotNet.Models.Login.InteractiveLoginResponse}
+  commentId: T:System.Threading.Tasks.Task{BetfairDotNet.Models.Login.InteractiveLoginResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<InteractiveLoginResponse>
+  nameWithType: Task<InteractiveLoginResponse>
+  fullName: System.Threading.Tasks.Task<BetfairDotNet.Models.Login.InteractiveLoginResponse>
+  nameWithType.vb: Task(Of InteractiveLoginResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of BetfairDotNet.Models.Login.InteractiveLoginResponse)
+  name.vb: Task(Of InteractiveLoginResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: BetfairDotNet.Models.Login.InteractiveLoginResponse
+    name: InteractiveLoginResponse
+    href: BetfairDotNet.Models.Login.InteractiveLoginResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Login.InteractiveLoginResponse
+    name: InteractiveLoginResponse
+    href: BetfairDotNet.Models.Login.InteractiveLoginResponse.html
+  - name: )

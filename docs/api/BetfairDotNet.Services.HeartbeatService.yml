@@ -1,0 +1,566 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Services.HeartbeatService
+  commentId: T:BetfairDotNet.Services.HeartbeatService
+  id: HeartbeatService
+  parent: BetfairDotNet.Services
+  children:
+  - BetfairDotNet.Services.HeartbeatService.Heartbeat(System.Int32)
+  - BetfairDotNet.Services.HeartbeatService.KeepAlive
+  langs:
+  - csharp
+  - vb
+  name: HeartbeatService
+  nameWithType: HeartbeatService
+  fullName: BetfairDotNet.Services.HeartbeatService
+  type: Class
+  source:
+    remote:
+      path: src/BetfairDotNet/Services/HeartbeatService.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: HeartbeatService
+    path: ../src/BetfairDotNet/Services/HeartbeatService.cs
+    startLine: 10
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Services
+  summary: A service that provides functionalities for sending heartbeat messages.
+  example: []
+  syntax:
+    content: public sealed class HeartbeatService
+    content.vb: Public NotInheritable Class HeartbeatService
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BetfairDotNet.Services.HeartbeatService.Heartbeat(System.Int32)
+  commentId: M:BetfairDotNet.Services.HeartbeatService.Heartbeat(System.Int32)
+  id: Heartbeat(System.Int32)
+  parent: BetfairDotNet.Services.HeartbeatService
+  langs:
+  - csharp
+  - vb
+  name: Heartbeat(int)
+  nameWithType: HeartbeatService.Heartbeat(int)
+  fullName: BetfairDotNet.Services.HeartbeatService.Heartbeat(int)
+  type: Method
+  source:
+    remote:
+      path: src/BetfairDotNet/Services/HeartbeatService.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Heartbeat
+    path: ../src/BetfairDotNet/Services/HeartbeatService.cs
+    startLine: 43
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Services
+  summary: Sends a heartbeat to manage positions automatically in case of lost connectivity to the Betfair API.
+  remarks: >-
+    The heartbeat operation helps customers manage their positions if their API clients lose connectivity. 
+
+    If a heartbeat is missed within a specific time frame, Betfair will try to cancel all 'LIMIT' type bets 
+
+    for the given customer on the exchange. However, there's no guarantee all bets will be cancelled, 
+
+    as certain circumstances might prevent cancellation.
+
+
+    Manual intervention is strongly advised if connectivity is lost to ensure positions are managed correctly. 
+
+    If the heartbeat service becomes unavailable, the heartbeat will be unregistered automatically. In this case, 
+
+    positions should be managed manually until the service resumes. Note: heartbeat data might be lost if node failures occur, 
+
+    potentially leading to unmanaged positions until the next heartbeat.
+  example: []
+  syntax:
+    content: public Task<HeartbeatReport> Heartbeat(int preferredTimeoutSeconds)
+    parameters:
+    - id: preferredTimeoutSeconds
+      type: System.Int32
+      description: >-
+        The maximum allowed period (in seconds) without a heartbeat before an automatic cancellation request is submitted. 
+
+        Passing a value of 0 unregisters your heartbeat (or ignores if none is registered)
+
+        Errors during registration result in an UNEXPECTED_ERROR. If the timeout is outside the min-max range, it will default to the closest boundary. 
+
+        Timeouts might change, so clients should use the returned actualTimeoutSeconds for subsequent heartbeats.
+    return:
+      type: System.Threading.Tasks.Task{BetfairDotNet.Models.Heartbeat.HeartbeatReport}
+      description: >-
+        A task that represents the asynchronous operation. The task result contains a <xref href="BetfairDotNet.Models.BetfairServerResponse%601" data-throw-if-not-resolved="false"></xref> 
+            with the <xref href="BetfairDotNet.Models.Heartbeat.HeartbeatReport" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function Heartbeat(preferredTimeoutSeconds As Integer) As Task(Of HeartbeatReport)
+  overload: BetfairDotNet.Services.HeartbeatService.Heartbeat*
+  nameWithType.vb: HeartbeatService.Heartbeat(Integer)
+  fullName.vb: BetfairDotNet.Services.HeartbeatService.Heartbeat(Integer)
+  name.vb: Heartbeat(Integer)
+- uid: BetfairDotNet.Services.HeartbeatService.KeepAlive
+  commentId: M:BetfairDotNet.Services.HeartbeatService.KeepAlive
+  id: KeepAlive
+  parent: BetfairDotNet.Services.HeartbeatService
+  langs:
+  - csharp
+  - vb
+  name: KeepAlive()
+  nameWithType: HeartbeatService.KeepAlive()
+  fullName: BetfairDotNet.Services.HeartbeatService.KeepAlive()
+  type: Method
+  source:
+    remote:
+      path: src/BetfairDotNet/Services/HeartbeatService.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: KeepAlive
+    path: ../src/BetfairDotNet/Services/HeartbeatService.cs
+    startLine: 63
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Services
+  summary: >-
+    You can use Keep Alive to extend the session timeout period. 
+
+    On the international (.com) Exchange the current session time is 12 hours. 
+
+    You should request Keep Alive within this time to prevent session expiry. 
+
+    If you don't call Keep Alive within the specified timeout period, the session will expire. 
+
+    Please note:  Session times aren't determined or extended based on API activity.
+  example: []
+  syntax:
+    content: public Task<KeepAliveResponse> KeepAlive()
+    return:
+      type: System.Threading.Tasks.Task{BetfairDotNet.Models.Heartbeat.KeepAliveResponse}
+      description: ''
+    content.vb: Public Function KeepAlive() As Task(Of KeepAliveResponse)
+  overload: BetfairDotNet.Services.HeartbeatService.KeepAlive*
+references:
+- uid: BetfairDotNet.Services
+  commentId: N:BetfairDotNet.Services
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Services
+  nameWithType: BetfairDotNet.Services
+  fullName: BetfairDotNet.Services
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Services
+    name: Services
+    href: BetfairDotNet.Services.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Services
+    name: Services
+    href: BetfairDotNet.Services.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BetfairDotNet.Models.BetfairServerResponse`1
+  commentId: T:BetfairDotNet.Models.BetfairServerResponse`1
+  href: BetfairDotNet.Models.BetfairServerResponse-1.html
+  name: BetfairServerResponse<T>
+  nameWithType: BetfairServerResponse<T>
+  fullName: BetfairDotNet.Models.BetfairServerResponse<T>
+  nameWithType.vb: BetfairServerResponse(Of T)
+  fullName.vb: BetfairDotNet.Models.BetfairServerResponse(Of T)
+  name.vb: BetfairServerResponse(Of T)
+  spec.csharp:
+  - uid: BetfairDotNet.Models.BetfairServerResponse`1
+    name: BetfairServerResponse
+    href: BetfairDotNet.Models.BetfairServerResponse-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: BetfairDotNet.Models.BetfairServerResponse`1
+    name: BetfairServerResponse
+    href: BetfairDotNet.Models.BetfairServerResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BetfairDotNet.Models.Heartbeat.HeartbeatReport
+  commentId: T:BetfairDotNet.Models.Heartbeat.HeartbeatReport
+  href: BetfairDotNet.Models.Heartbeat.HeartbeatReport.html
+  name: HeartbeatReport
+  nameWithType: HeartbeatReport
+  fullName: BetfairDotNet.Models.Heartbeat.HeartbeatReport
+- uid: BetfairDotNet.Services.HeartbeatService.Heartbeat*
+  commentId: Overload:BetfairDotNet.Services.HeartbeatService.Heartbeat
+  href: BetfairDotNet.Services.HeartbeatService.html#BetfairDotNet.Services.HeartbeatService.Heartbeat(System.Int32)
+  name: Heartbeat
+  nameWithType: HeartbeatService.Heartbeat
+  fullName: BetfairDotNet.Services.HeartbeatService.Heartbeat
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Threading.Tasks.Task{BetfairDotNet.Models.Heartbeat.HeartbeatReport}
+  commentId: T:System.Threading.Tasks.Task{BetfairDotNet.Models.Heartbeat.HeartbeatReport}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<HeartbeatReport>
+  nameWithType: Task<HeartbeatReport>
+  fullName: System.Threading.Tasks.Task<BetfairDotNet.Models.Heartbeat.HeartbeatReport>
+  nameWithType.vb: Task(Of HeartbeatReport)
+  fullName.vb: System.Threading.Tasks.Task(Of BetfairDotNet.Models.Heartbeat.HeartbeatReport)
+  name.vb: Task(Of HeartbeatReport)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: BetfairDotNet.Models.Heartbeat.HeartbeatReport
+    name: HeartbeatReport
+    href: BetfairDotNet.Models.Heartbeat.HeartbeatReport.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Heartbeat.HeartbeatReport
+    name: HeartbeatReport
+    href: BetfairDotNet.Models.Heartbeat.HeartbeatReport.html
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: BetfairDotNet.Services.HeartbeatService.KeepAlive*
+  commentId: Overload:BetfairDotNet.Services.HeartbeatService.KeepAlive
+  href: BetfairDotNet.Services.HeartbeatService.html#BetfairDotNet.Services.HeartbeatService.KeepAlive
+  name: KeepAlive
+  nameWithType: HeartbeatService.KeepAlive
+  fullName: BetfairDotNet.Services.HeartbeatService.KeepAlive
+- uid: System.Threading.Tasks.Task{BetfairDotNet.Models.Heartbeat.KeepAliveResponse}
+  commentId: T:System.Threading.Tasks.Task{BetfairDotNet.Models.Heartbeat.KeepAliveResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<KeepAliveResponse>
+  nameWithType: Task<KeepAliveResponse>
+  fullName: System.Threading.Tasks.Task<BetfairDotNet.Models.Heartbeat.KeepAliveResponse>
+  nameWithType.vb: Task(Of KeepAliveResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of BetfairDotNet.Models.Heartbeat.KeepAliveResponse)
+  name.vb: Task(Of KeepAliveResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: BetfairDotNet.Models.Heartbeat.KeepAliveResponse
+    name: KeepAliveResponse
+    href: BetfairDotNet.Models.Heartbeat.KeepAliveResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Heartbeat.KeepAliveResponse
+    name: KeepAliveResponse
+    href: BetfairDotNet.Models.Heartbeat.KeepAliveResponse.html
+  - name: )

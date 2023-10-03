@@ -1,0 +1,291 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Betting.RunnerStatusEnum
+  commentId: T:BetfairDotNet.Enums.Betting.RunnerStatusEnum
+  id: RunnerStatusEnum
+  parent: BetfairDotNet.Enums.Betting
+  children:
+  - BetfairDotNet.Enums.Betting.RunnerStatusEnum.ACTIVE
+  - BetfairDotNet.Enums.Betting.RunnerStatusEnum.HIDDEN
+  - BetfairDotNet.Enums.Betting.RunnerStatusEnum.LOSER
+  - BetfairDotNet.Enums.Betting.RunnerStatusEnum.PLACED
+  - BetfairDotNet.Enums.Betting.RunnerStatusEnum.REMOVED
+  - BetfairDotNet.Enums.Betting.RunnerStatusEnum.REMOVED_VACANT
+  - BetfairDotNet.Enums.Betting.RunnerStatusEnum.WINNER
+  langs:
+  - csharp
+  - vb
+  name: RunnerStatusEnum
+  nameWithType: RunnerStatusEnum
+  fullName: BetfairDotNet.Enums.Betting.RunnerStatusEnum
+  type: Enum
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/RunnerStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: RunnerStatusEnum
+    path: ../src/BetfairDotNet/Enums/Betting/RunnerStatusEnum.cs
+    startLine: 6
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EmptyStringToEnumConverter<RunnerStatusEnum>))]
+
+      public enum RunnerStatusEnum
+    content.vb: >-
+      <JsonConverter(GetType(EmptyStringToEnumConverter(Of RunnerStatusEnum)))>
+
+      Public Enum RunnerStatusEnum
+- uid: BetfairDotNet.Enums.Betting.RunnerStatusEnum.ACTIVE
+  commentId: F:BetfairDotNet.Enums.Betting.RunnerStatusEnum.ACTIVE
+  id: ACTIVE
+  parent: BetfairDotNet.Enums.Betting.RunnerStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: ACTIVE
+  nameWithType: RunnerStatusEnum.ACTIVE
+  fullName: BetfairDotNet.Enums.Betting.RunnerStatusEnum.ACTIVE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/RunnerStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ACTIVE
+    path: ../src/BetfairDotNet/Enums/Betting/RunnerStatusEnum.cs
+    startLine: 12
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Active.
+  example: []
+  syntax:
+    content: ACTIVE = 0
+    return:
+      type: BetfairDotNet.Enums.Betting.RunnerStatusEnum
+- uid: BetfairDotNet.Enums.Betting.RunnerStatusEnum.WINNER
+  commentId: F:BetfairDotNet.Enums.Betting.RunnerStatusEnum.WINNER
+  id: WINNER
+  parent: BetfairDotNet.Enums.Betting.RunnerStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: WINNER
+  nameWithType: RunnerStatusEnum.WINNER
+  fullName: BetfairDotNet.Enums.Betting.RunnerStatusEnum.WINNER
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/RunnerStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: WINNER
+    path: ../src/BetfairDotNet/Enums/Betting/RunnerStatusEnum.cs
+    startLine: 17
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Winner.
+  example: []
+  syntax:
+    content: WINNER = 1
+    return:
+      type: BetfairDotNet.Enums.Betting.RunnerStatusEnum
+- uid: BetfairDotNet.Enums.Betting.RunnerStatusEnum.LOSER
+  commentId: F:BetfairDotNet.Enums.Betting.RunnerStatusEnum.LOSER
+  id: LOSER
+  parent: BetfairDotNet.Enums.Betting.RunnerStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: LOSER
+  nameWithType: RunnerStatusEnum.LOSER
+  fullName: BetfairDotNet.Enums.Betting.RunnerStatusEnum.LOSER
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/RunnerStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: LOSER
+    path: ../src/BetfairDotNet/Enums/Betting/RunnerStatusEnum.cs
+    startLine: 22
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Loser.
+  example: []
+  syntax:
+    content: LOSER = 2
+    return:
+      type: BetfairDotNet.Enums.Betting.RunnerStatusEnum
+- uid: BetfairDotNet.Enums.Betting.RunnerStatusEnum.PLACED
+  commentId: F:BetfairDotNet.Enums.Betting.RunnerStatusEnum.PLACED
+  id: PLACED
+  parent: BetfairDotNet.Enums.Betting.RunnerStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: PLACED
+  nameWithType: RunnerStatusEnum.PLACED
+  fullName: BetfairDotNet.Enums.Betting.RunnerStatusEnum.PLACED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/RunnerStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: PLACED
+    path: ../src/BetfairDotNet/Enums/Betting/RunnerStatusEnum.cs
+    startLine: 27
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: The runner was placed, applies to EACH_WAY marketTypes only.
+  example: []
+  syntax:
+    content: PLACED = 3
+    return:
+      type: BetfairDotNet.Enums.Betting.RunnerStatusEnum
+- uid: BetfairDotNet.Enums.Betting.RunnerStatusEnum.REMOVED_VACANT
+  commentId: F:BetfairDotNet.Enums.Betting.RunnerStatusEnum.REMOVED_VACANT
+  id: REMOVED_VACANT
+  parent: BetfairDotNet.Enums.Betting.RunnerStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: REMOVED_VACANT
+  nameWithType: RunnerStatusEnum.REMOVED_VACANT
+  fullName: BetfairDotNet.Enums.Betting.RunnerStatusEnum.REMOVED_VACANT
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/RunnerStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: REMOVED_VACANT
+    path: ../src/BetfairDotNet/Enums/Betting/RunnerStatusEnum.cs
+    startLine: 34
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: >-
+    REMOVED_VACANT applies to Greyhounds. 
+
+    Greyhound markets always return a fixed number of runners (traps). 
+
+    If a dog has been removed, the trap is shown as vacant.
+  example: []
+  syntax:
+    content: REMOVED_VACANT = 4
+    return:
+      type: BetfairDotNet.Enums.Betting.RunnerStatusEnum
+- uid: BetfairDotNet.Enums.Betting.RunnerStatusEnum.REMOVED
+  commentId: F:BetfairDotNet.Enums.Betting.RunnerStatusEnum.REMOVED
+  id: REMOVED
+  parent: BetfairDotNet.Enums.Betting.RunnerStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: REMOVED
+  nameWithType: RunnerStatusEnum.REMOVED
+  fullName: BetfairDotNet.Enums.Betting.RunnerStatusEnum.REMOVED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/RunnerStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: REMOVED
+    path: ../src/BetfairDotNet/Enums/Betting/RunnerStatusEnum.cs
+    startLine: 39
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Removed.
+  example: []
+  syntax:
+    content: REMOVED = 5
+    return:
+      type: BetfairDotNet.Enums.Betting.RunnerStatusEnum
+- uid: BetfairDotNet.Enums.Betting.RunnerStatusEnum.HIDDEN
+  commentId: F:BetfairDotNet.Enums.Betting.RunnerStatusEnum.HIDDEN
+  id: HIDDEN
+  parent: BetfairDotNet.Enums.Betting.RunnerStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: HIDDEN
+  nameWithType: RunnerStatusEnum.HIDDEN
+  fullName: BetfairDotNet.Enums.Betting.RunnerStatusEnum.HIDDEN
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/RunnerStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: HIDDEN
+    path: ../src/BetfairDotNet/Enums/Betting/RunnerStatusEnum.cs
+    startLine: 49
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: >-
+    The selection is hidden from the market.  
+
+    This occurs in Horse Racing markets were runners is hidden when it is doesn’t hold an official entry following an entry stage. 
+
+    This could be because the horse was never entered or because they have been scratched from a race at a declaration stage. 
+
+    All matched customer bet prices are set to 1.0 even if there are later supplementary stages. 
+
+    Should it appear likely that a specific runner may actually be supplemented into the race this runner will be 
+
+    reinstated with all matched customer bets set back to the original prices.
+  example: []
+  syntax:
+    content: HIDDEN = 6
+    return:
+      type: BetfairDotNet.Enums.Betting.RunnerStatusEnum
+references:
+- uid: BetfairDotNet.Enums.Betting
+  commentId: N:BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Betting
+  nameWithType: BetfairDotNet.Enums.Betting
+  fullName: BetfairDotNet.Enums.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+- uid: BetfairDotNet.Enums.Betting.RunnerStatusEnum
+  commentId: T:BetfairDotNet.Enums.Betting.RunnerStatusEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.RunnerStatusEnum.html
+  name: RunnerStatusEnum
+  nameWithType: RunnerStatusEnum
+  fullName: BetfairDotNet.Enums.Betting.RunnerStatusEnum

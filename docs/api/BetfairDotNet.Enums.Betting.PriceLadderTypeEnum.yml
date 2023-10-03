@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Betting.PriceLadderTypeEnum
+  commentId: T:BetfairDotNet.Enums.Betting.PriceLadderTypeEnum
+  id: PriceLadderTypeEnum
+  parent: BetfairDotNet.Enums.Betting
+  children:
+  - BetfairDotNet.Enums.Betting.PriceLadderTypeEnum.CLASSIC
+  - BetfairDotNet.Enums.Betting.PriceLadderTypeEnum.FINEST
+  - BetfairDotNet.Enums.Betting.PriceLadderTypeEnum.LINE_RANGE
+  langs:
+  - csharp
+  - vb
+  name: PriceLadderTypeEnum
+  nameWithType: PriceLadderTypeEnum
+  fullName: BetfairDotNet.Enums.Betting.PriceLadderTypeEnum
+  type: Enum
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/PriceLadderTypeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: PriceLadderTypeEnum
+    path: ../src/BetfairDotNet/Enums/Betting/PriceLadderTypeEnum.cs
+    startLine: 6
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EmptyStringToEnumConverter<PriceLadderTypeEnum>))]
+
+      public enum PriceLadderTypeEnum
+    content.vb: >-
+      <JsonConverter(GetType(EmptyStringToEnumConverter(Of PriceLadderTypeEnum)))>
+
+      Public Enum PriceLadderTypeEnum
+- uid: BetfairDotNet.Enums.Betting.PriceLadderTypeEnum.CLASSIC
+  commentId: F:BetfairDotNet.Enums.Betting.PriceLadderTypeEnum.CLASSIC
+  id: CLASSIC
+  parent: BetfairDotNet.Enums.Betting.PriceLadderTypeEnum
+  langs:
+  - csharp
+  - vb
+  name: CLASSIC
+  nameWithType: PriceLadderTypeEnum.CLASSIC
+  fullName: BetfairDotNet.Enums.Betting.PriceLadderTypeEnum.CLASSIC
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/PriceLadderTypeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: CLASSIC
+    path: ../src/BetfairDotNet/Enums/Betting/PriceLadderTypeEnum.cs
+    startLine: 12
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Price ladder increments traditionally used for Odds Markets.
+  example: []
+  syntax:
+    content: CLASSIC = 0
+    return:
+      type: BetfairDotNet.Enums.Betting.PriceLadderTypeEnum
+- uid: BetfairDotNet.Enums.Betting.PriceLadderTypeEnum.FINEST
+  commentId: F:BetfairDotNet.Enums.Betting.PriceLadderTypeEnum.FINEST
+  id: FINEST
+  parent: BetfairDotNet.Enums.Betting.PriceLadderTypeEnum
+  langs:
+  - csharp
+  - vb
+  name: FINEST
+  nameWithType: PriceLadderTypeEnum.FINEST
+  fullName: BetfairDotNet.Enums.Betting.PriceLadderTypeEnum.FINEST
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/PriceLadderTypeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: FINEST
+    path: ../src/BetfairDotNet/Enums/Betting/PriceLadderTypeEnum.cs
+    startLine: 18
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: >-
+    Price ladder with the finest available increment, traditionally used for 
+
+    Asian Handicap markets.
+  example: []
+  syntax:
+    content: FINEST = 1
+    return:
+      type: BetfairDotNet.Enums.Betting.PriceLadderTypeEnum
+- uid: BetfairDotNet.Enums.Betting.PriceLadderTypeEnum.LINE_RANGE
+  commentId: F:BetfairDotNet.Enums.Betting.PriceLadderTypeEnum.LINE_RANGE
+  id: LINE_RANGE
+  parent: BetfairDotNet.Enums.Betting.PriceLadderTypeEnum
+  langs:
+  - csharp
+  - vb
+  name: LINE_RANGE
+  nameWithType: PriceLadderTypeEnum.LINE_RANGE
+  fullName: BetfairDotNet.Enums.Betting.PriceLadderTypeEnum.LINE_RANGE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/PriceLadderTypeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: LINE_RANGE
+    path: ../src/BetfairDotNet/Enums/Betting/PriceLadderTypeEnum.cs
+    startLine: 23
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Price ladder used for LINE markets. Refer to MarketLineRangeInfo for more details.
+  example: []
+  syntax:
+    content: LINE_RANGE = 2
+    return:
+      type: BetfairDotNet.Enums.Betting.PriceLadderTypeEnum
+references:
+- uid: BetfairDotNet.Enums.Betting
+  commentId: N:BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Betting
+  nameWithType: BetfairDotNet.Enums.Betting
+  fullName: BetfairDotNet.Enums.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+- uid: BetfairDotNet.Enums.Betting.PriceLadderTypeEnum
+  commentId: T:BetfairDotNet.Enums.Betting.PriceLadderTypeEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.PriceLadderTypeEnum.html
+  name: PriceLadderTypeEnum
+  nameWithType: PriceLadderTypeEnum
+  fullName: BetfairDotNet.Enums.Betting.PriceLadderTypeEnum

@@ -1,0 +1,449 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails
+  commentId: T:BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails
+  id: BetfairServerExceptionDetails
+  parent: BetfairDotNet.Models.Exceptions
+  children:
+  - BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.ErrorCode
+  - BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.ErrorDetails
+  - BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.RequestUUID
+  langs:
+  - csharp
+  - vb
+  name: BetfairServerExceptionDetails
+  nameWithType: BetfairServerExceptionDetails
+  fullName: BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails
+  type: Class
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Exceptions/BetfairServerExceptionDetails.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: BetfairServerExceptionDetails
+    path: ../src/BetfairDotNet/Models/Exceptions/BetfairServerExceptionDetails.cs
+    startLine: 7
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Exceptions
+  summary: The details for the <xref href="BetfairDotNet.Models.Exceptions.BetfairServerExceptionData" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public sealed class BetfairServerExceptionDetails
+    content.vb: Public NotInheritable Class BetfairServerExceptionDetails
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.RequestUUID
+  commentId: P:BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.RequestUUID
+  id: RequestUUID
+  parent: BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails
+  langs:
+  - csharp
+  - vb
+  name: RequestUUID
+  nameWithType: BetfairServerExceptionDetails.RequestUUID
+  fullName: BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.RequestUUID
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Exceptions/BetfairServerExceptionDetails.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: RequestUUID
+    path: ../src/BetfairDotNet/Models/Exceptions/BetfairServerExceptionDetails.cs
+    startLine: 10
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Exceptions
+  syntax:
+    content: >-
+      [JsonPropertyName("requestUUID")]
+
+      public string? RequestUUID { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("requestUUID")>
+
+      Public Property RequestUUID As String
+  overload: BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.RequestUUID*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: requestUUID
+- uid: BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.ErrorCode
+  commentId: P:BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.ErrorCode
+  id: ErrorCode
+  parent: BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails
+  langs:
+  - csharp
+  - vb
+  name: ErrorCode
+  nameWithType: BetfairServerExceptionDetails.ErrorCode
+  fullName: BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.ErrorCode
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Exceptions/BetfairServerExceptionDetails.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ErrorCode
+    path: ../src/BetfairDotNet/Models/Exceptions/BetfairServerExceptionDetails.cs
+    startLine: 16
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Exceptions
+  summary: The error code.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("errorCode")]
+
+      public string? ErrorCode { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("errorCode")>
+
+      Public Property ErrorCode As String
+  overload: BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.ErrorCode*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: errorCode
+- uid: BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.ErrorDetails
+  commentId: P:BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.ErrorDetails
+  id: ErrorDetails
+  parent: BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails
+  langs:
+  - csharp
+  - vb
+  name: ErrorDetails
+  nameWithType: BetfairServerExceptionDetails.ErrorDetails
+  fullName: BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.ErrorDetails
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Exceptions/BetfairServerExceptionDetails.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ErrorDetails
+    path: ../src/BetfairDotNet/Models/Exceptions/BetfairServerExceptionDetails.cs
+    startLine: 22
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Exceptions
+  summary: The stack trace of the error.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("errorDetails")]
+
+      public string? ErrorDetails { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("errorDetails")>
+
+      Public Property ErrorDetails As String
+  overload: BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.ErrorDetails*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: errorDetails
+references:
+- uid: BetfairDotNet.Models.Exceptions.BetfairServerExceptionData
+  commentId: T:BetfairDotNet.Models.Exceptions.BetfairServerExceptionData
+  parent: BetfairDotNet.Models.Exceptions
+  href: BetfairDotNet.Models.Exceptions.BetfairServerExceptionData.html
+  name: BetfairServerExceptionData
+  nameWithType: BetfairServerExceptionData
+  fullName: BetfairDotNet.Models.Exceptions.BetfairServerExceptionData
+- uid: BetfairDotNet.Models.Exceptions
+  commentId: N:BetfairDotNet.Models.Exceptions
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Exceptions
+  nameWithType: BetfairDotNet.Models.Exceptions
+  fullName: BetfairDotNet.Models.Exceptions
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Exceptions
+    name: Exceptions
+    href: BetfairDotNet.Models.Exceptions.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Exceptions
+    name: Exceptions
+    href: BetfairDotNet.Models.Exceptions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.RequestUUID*
+  commentId: Overload:BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.RequestUUID
+  href: BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.html#BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.RequestUUID
+  name: RequestUUID
+  nameWithType: BetfairServerExceptionDetails.RequestUUID
+  fullName: BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.RequestUUID
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.ErrorCode*
+  commentId: Overload:BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.ErrorCode
+  href: BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.html#BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.ErrorCode
+  name: ErrorCode
+  nameWithType: BetfairServerExceptionDetails.ErrorCode
+  fullName: BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.ErrorCode
+- uid: BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.ErrorDetails*
+  commentId: Overload:BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.ErrorDetails
+  href: BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.html#BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.ErrorDetails
+  name: ErrorDetails
+  nameWithType: BetfairServerExceptionDetails.ErrorDetails
+  fullName: BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.ErrorDetails

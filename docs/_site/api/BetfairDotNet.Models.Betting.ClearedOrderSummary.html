@@ -1,0 +1,1001 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ClearedOrderSummary
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ClearedOrderSummary
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BrandonWoodward/BetfairDotNet/new/master/apiSpec/new?filename=BetfairDotNet_Models_Betting_ClearedOrderSummary.md&amp;value=---%0Auid%3A%20BetfairDotNet.Models.Betting.ClearedOrderSummary%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary">
+
+
+
+  <h1 id="BetfairDotNet_Models_Betting_ClearedOrderSummary" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary" class="text-break">
+    Class ClearedOrderSummary
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Betting/ClearedOrderSummary.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="BetfairDotNet.html">BetfairDotNet</a>.<a class="xref" href="BetfairDotNet.Models.html">Models</a>.<a class="xref" href="BetfairDotNet.Models.Betting.html">Betting</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>BetfairDotNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Summary of a cleared order (settled, voided, cancelled etc)</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed record ClearedOrderSummary : IEquatable&lt;ClearedOrderSummary&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ClearedOrderSummary</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="BetfairDotNet.Models.Betting.ClearedOrderSummary.html">ClearedOrderSummary</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="BetfairDotNet_Models_Betting_ClearedOrderSummary_BetCount_" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.BetCount*"></a>
+
+  <h3 id="BetfairDotNet_Models_Betting_ClearedOrderSummary_BetCount" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.BetCount">
+  BetCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Betting/ClearedOrderSummary.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The number of actual bets within this grouping (will be 1 for BET groupBy)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;betCount&quot;)]
+public int BetCount { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Betting_ClearedOrderSummary_BetId_" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.BetId*"></a>
+
+  <h3 id="BetfairDotNet_Models_Betting_ClearedOrderSummary_BetId" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.BetId">
+  BetId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Betting/ClearedOrderSummary.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The id of the bet.
+Available at BET groupBy level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;betId&quot;)]
+public string BetId { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Betting_ClearedOrderSummary_BetOutcome_" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.BetOutcome*"></a>
+
+  <h3 id="BetfairDotNet_Models_Betting_ClearedOrderSummary_BetOutcome" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.BetOutcome">
+  BetOutcome
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Betting/ClearedOrderSummary.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The settlement outcome of the bet.
+Tri-state (WIN/LOSE/PLACE) to account for Each Way bets where the place portion
+of the bet won but the win portion lost. The profit/loss amount in this case could
+be positive or negative depending on the price matched at. Only available at BET groupBy level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;betOutcome&quot;)]
+public string BetOutcome { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Betting_ClearedOrderSummary_Commission_" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.Commission*"></a>
+
+  <h3 id="BetfairDotNet_Models_Betting_ClearedOrderSummary_Commission" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.Commission">
+  Commission
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Betting/ClearedOrderSummary.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The cumulative amount of commission paid by the customer across all bets under this Item,
+in the account currency. Available at EXCHANGE, EVENT_TYPE, EVENT and MARKET level groupings only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;commission&quot;)]
+public double Commission { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Betting_ClearedOrderSummary_CustomerOrderRef_" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.CustomerOrderRef*"></a>
+
+  <h3 id="BetfairDotNet_Models_Betting_ClearedOrderSummary_CustomerOrderRef" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.CustomerOrderRef">
+  CustomerOrderRef
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Betting/ClearedOrderSummary.cs/#L172"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The order reference defined by the customer for the bet order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;customerOrderRef&quot;)]
+public string CustomerOrderRef { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Betting_ClearedOrderSummary_CustomerStrategyRef_" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.CustomerStrategyRef*"></a>
+
+  <h3 id="BetfairDotNet_Models_Betting_ClearedOrderSummary_CustomerStrategyRef" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.CustomerStrategyRef">
+  CustomerStrategyRef
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Betting/ClearedOrderSummary.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The strategy reference defined by the customer for the bet order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;customerStrategyRef&quot;)]
+public string CustomerStrategyRef { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Betting_ClearedOrderSummary_EventType_" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.EventType*"></a>
+
+  <h3 id="BetfairDotNet_Models_Betting_ClearedOrderSummary_EventType" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.EventType">
+  EventType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Betting/ClearedOrderSummary.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The id of the event bet on.
+Available at EVENT groupBy level or lower.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;eventId&quot;)]
+public string EventType { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Betting_ClearedOrderSummary_EventTypeId_" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.EventTypeId*"></a>
+
+  <h3 id="BetfairDotNet_Models_Betting_ClearedOrderSummary_EventTypeId" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.EventTypeId">
+  EventTypeId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Betting/ClearedOrderSummary.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The id of the event type bet on.
+Available at EVENT_TYPE groupBy level or lower.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;eventTypeId&quot;)]
+public string EventTypeId { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Betting_ClearedOrderSummary_Handicap_" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.Handicap*"></a>
+
+  <h3 id="BetfairDotNet_Models_Betting_ClearedOrderSummary_Handicap" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.Handicap">
+  Handicap
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Betting/ClearedOrderSummary.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The handicap.<br>
+Enter the specific handicap value (returned by RUNNER in listMaketBook)
+if the market is an Asian handicap market.
+Available at MARKET groupBy level or lower.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;handicap&quot;)]
+public double Handicap { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Betting_ClearedOrderSummary_ItemDescription_" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.ItemDescription*"></a>
+
+  <h3 id="BetfairDotNet_Models_Betting_ClearedOrderSummary_ItemDescription" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.ItemDescription">
+  ItemDescription
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Betting/ClearedOrderSummary.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A container for all the ancillary data and localised text valid for this Item</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;itemDescription&quot;)]
+public ItemDescription? ItemDescription { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BetfairDotNet.Models.Betting.ItemDescription.html">ItemDescription</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Betting_ClearedOrderSummary_LastMatchedDate_" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.LastMatchedDate*"></a>
+
+  <h3 id="BetfairDotNet_Models_Betting_ClearedOrderSummary_LastMatchedDate" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.LastMatchedDate">
+  LastMatchedDate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Betting/ClearedOrderSummary.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The date and time the last bet order was matched by Betfair. Available on Settled orders only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;lastMatchedDate&quot;)]
+public DateTime? LastMatchedDate { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Betting_ClearedOrderSummary_MarketId_" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.MarketId*"></a>
+
+  <h3 id="BetfairDotNet_Models_Betting_ClearedOrderSummary_MarketId" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.MarketId">
+  MarketId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Betting/ClearedOrderSummary.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The id of the market bet on.
+Available at MARKET groupBy level or lower.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;marketId&quot;)]
+public string MarketId { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Betting_ClearedOrderSummary_OrderType_" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.OrderType*"></a>
+
+  <h3 id="BetfairDotNet_Models_Betting_ClearedOrderSummary_OrderType" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.OrderType">
+  OrderType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Betting/ClearedOrderSummary.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The type of bet (e.g standard limited-liability Exchange bet (LIMIT),
+a standard BSP bet (MARKET_ON_CLOSE), or a minimum-accepted-price BSP bet
+(LIMIT_ON_CLOSE)). If the bet has a OrderType of MARKET_ON_CLOSE and a
+persistenceType of MARKET_ON_CLOSE then it is a bet which has transitioned
+from LIMIT to MARKET_ON_CLOSE. Only available at BET groupBy level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;orderType&quot;)]
+public OrderTypeEnum OrderType { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BetfairDotNet.Enums.Betting.OrderTypeEnum.html">OrderTypeEnum</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Betting_ClearedOrderSummary_PersistenceType_" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.PersistenceType*"></a>
+
+  <h3 id="BetfairDotNet_Models_Betting_ClearedOrderSummary_PersistenceType" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.PersistenceType">
+  PersistenceType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Betting/ClearedOrderSummary.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The turn in play persistence state of the order at bet placement time.
+This field will be empty or omitted on true SP bets. Only available at BET groupBy level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;persistenceType&quot;)]
+public PersistenceTypeEnum PersistenceType { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BetfairDotNet.Enums.Betting.PersistenceTypeEnum.html">PersistenceTypeEnum</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Betting_ClearedOrderSummary_PlacedDate_" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.PlacedDate*"></a>
+
+  <h3 id="BetfairDotNet_Models_Betting_ClearedOrderSummary_PlacedDate" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.PlacedDate">
+  PlacedDate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Betting/ClearedOrderSummary.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The date the bet order was placed by the customer.
+Only available at BET groupBy level.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;placedDate&quot;)]
+public DateTime? PlacedDate { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Betting_ClearedOrderSummary_Price_" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.Price*"></a>
+
+  <h3 id="BetfairDotNet_Models_Betting_ClearedOrderSummary_Price" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.Price">
+  Price
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Betting/ClearedOrderSummary.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The average requested price across all settled bet orders under this Item. Available at SIDE
+groupBy level or lower. For LINE markets this is the line position requested. For LINE markets
+this is the line position requested.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;priceRequested&quot;)]
+public double Price { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Betting_ClearedOrderSummary_PriceMatched_" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.PriceMatched*"></a>
+
+  <h3 id="BetfairDotNet_Models_Betting_ClearedOrderSummary_PriceMatched" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.PriceMatched">
+  PriceMatched
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Betting/ClearedOrderSummary.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The average matched price across all settled bets or bet fragments under this Item.
+Available at SIDE groupBy level or lower. For LINE markets this is the line position matched at.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;priceMatched&quot;)]
+public double PriceMatched { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Betting_ClearedOrderSummary_PriceReduced_" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.PriceReduced*"></a>
+
+  <h3 id="BetfairDotNet_Models_Betting_ClearedOrderSummary_PriceReduced" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.PriceReduced">
+  PriceReduced
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Betting/ClearedOrderSummary.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If true, then the matched price was affected by a reduction factor due to of a runner
+removal from this Horse Racing market.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;priceReduced&quot;)]
+public bool PriceReduced { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Betting_ClearedOrderSummary_Profit_" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.Profit*"></a>
+
+  <h3 id="BetfairDotNet_Models_Betting_ClearedOrderSummary_Profit" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.Profit">
+  Profit
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Betting/ClearedOrderSummary.cs/#L160"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The profit or loss (negative profit) gained on this line, in the account currency</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;profit&quot;)]
+public double Profit { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Betting_ClearedOrderSummary_SelectionId_" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.SelectionId*"></a>
+
+  <h3 id="BetfairDotNet_Models_Betting_ClearedOrderSummary_SelectionId" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.SelectionId">
+  SelectionId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Betting/ClearedOrderSummary.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The id of the selection bet on.
+Available at RUNNER groupBy level or lower.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;selectionId&quot;)]
+public long SelectionId { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Betting_ClearedOrderSummary_SettledDate_" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.SettledDate*"></a>
+
+  <h3 id="BetfairDotNet_Models_Betting_ClearedOrderSummary_SettledDate" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.SettledDate">
+  SettledDate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Betting/ClearedOrderSummary.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The date and time the bet order was settled by Betfair.
+Available at SIDE groupBy level or lower.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;settledDate&quot;)]
+public DateTime? SettledDate { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Betting_ClearedOrderSummary_Side_" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.Side*"></a>
+
+  <h3 id="BetfairDotNet_Models_Betting_ClearedOrderSummary_Side" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.Side">
+  Side
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Betting/ClearedOrderSummary.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the bet was a back or lay bet.
+Available at SIDE groupBy level or lower.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;side&quot;)]
+public SideEnum Side { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BetfairDotNet.Enums.Betting.SideEnum.html">SideEnum</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Betting_ClearedOrderSummary_SizeCancelled_" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.SizeCancelled*"></a>
+
+  <h3 id="BetfairDotNet_Models_Betting_ClearedOrderSummary_SizeCancelled" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.SizeCancelled">
+  SizeCancelled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Betting/ClearedOrderSummary.cs/#L166"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The amount of the bet that was available to be matched, before cancellation or lapsing, in the account currency.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;sizeCancelled&quot;)]
+public double SizeCancelled { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Models_Betting_ClearedOrderSummary_SizeSettled_" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.SizeSettled*"></a>
+
+  <h3 id="BetfairDotNet_Models_Betting_ClearedOrderSummary_SizeSettled" data-uid="BetfairDotNet.Models.Betting.ClearedOrderSummary.SizeSettled">
+  SizeSettled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Betting/ClearedOrderSummary.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The cumulative bet size that was settled as matched or voided under this Item,
+in the account currency. Available at SIDE groupBy level or lower.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;sizeSettled&quot;)]
+public double SizeSettled { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Betting/ClearedOrderSummary.cs/#L10" class="edit-link">Edit this page</a>
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

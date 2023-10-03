@@ -1,0 +1,731 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Models.Navigation.NavigationMarket
+  commentId: T:BetfairDotNet.Models.Navigation.NavigationMarket
+  id: NavigationMarket
+  parent: BetfairDotNet.Models.Navigation
+  children:
+  - BetfairDotNet.Models.Navigation.NavigationMarket.ExchangeId
+  - BetfairDotNet.Models.Navigation.NavigationMarket.MarketStartTime
+  - BetfairDotNet.Models.Navigation.NavigationMarket.MarketType
+  - BetfairDotNet.Models.Navigation.NavigationMarket.NumberOfWinners
+  - BetfairDotNet.Models.Navigation.NavigationMarket.Type
+  langs:
+  - csharp
+  - vb
+  name: NavigationMarket
+  nameWithType: NavigationMarket
+  fullName: BetfairDotNet.Models.Navigation.NavigationMarket
+  type: Class
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Navigation/NavigationMarket.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: NavigationMarket
+    path: ../src/BetfairDotNet/Models/Navigation/NavigationMarket.cs
+    startLine: 5
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Navigation
+  syntax:
+    content: 'public sealed record NavigationMarket : NavigationItem, IEquatable<NavigationItem>, IEquatable<NavigationMarket>'
+    content.vb: Public NotInheritable Class NavigationMarket Inherits NavigationItem Implements IEquatable(Of NavigationItem), IEquatable(Of NavigationMarket)
+  inheritance:
+  - System.Object
+  - BetfairDotNet.Models.Navigation.NavigationItem
+  implements:
+  - System.IEquatable{BetfairDotNet.Models.Navigation.NavigationItem}
+  - System.IEquatable{BetfairDotNet.Models.Navigation.NavigationMarket}
+  inheritedMembers:
+  - BetfairDotNet.Models.Navigation.NavigationItem.Id
+  - BetfairDotNet.Models.Navigation.NavigationItem.Name
+  - BetfairDotNet.Models.Navigation.NavigationItem.Children
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BetfairDotNet.Models.Navigation.NavigationMarket.ExchangeId
+  commentId: P:BetfairDotNet.Models.Navigation.NavigationMarket.ExchangeId
+  id: ExchangeId
+  parent: BetfairDotNet.Models.Navigation.NavigationMarket
+  langs:
+  - csharp
+  - vb
+  name: ExchangeId
+  nameWithType: NavigationMarket.ExchangeId
+  fullName: BetfairDotNet.Models.Navigation.NavigationMarket.ExchangeId
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Navigation/NavigationMarket.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ExchangeId
+    path: ../src/BetfairDotNet/Models/Navigation/NavigationMarket.cs
+    startLine: 7
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Navigation
+  syntax:
+    content: >-
+      [JsonPropertyName("exchangeId")]
+
+      [JsonRequired]
+
+      public string ExchangeId { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("exchangeId")>
+
+      <JsonRequired>
+
+      Public Property ExchangeId As String
+  overload: BetfairDotNet.Models.Navigation.NavigationMarket.ExchangeId*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: exchangeId
+  - type: System.Text.Json.Serialization.JsonRequiredAttribute
+    ctor: System.Text.Json.Serialization.JsonRequiredAttribute.#ctor
+    arguments: []
+- uid: BetfairDotNet.Models.Navigation.NavigationMarket.MarketStartTime
+  commentId: P:BetfairDotNet.Models.Navigation.NavigationMarket.MarketStartTime
+  id: MarketStartTime
+  parent: BetfairDotNet.Models.Navigation.NavigationMarket
+  langs:
+  - csharp
+  - vb
+  name: MarketStartTime
+  nameWithType: NavigationMarket.MarketStartTime
+  fullName: BetfairDotNet.Models.Navigation.NavigationMarket.MarketStartTime
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Navigation/NavigationMarket.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MarketStartTime
+    path: ../src/BetfairDotNet/Models/Navigation/NavigationMarket.cs
+    startLine: 10
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Navigation
+  syntax:
+    content: >-
+      [JsonPropertyName("marketStartTime")]
+
+      public DateTime? MarketStartTime { get; init; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: >-
+      <JsonPropertyName("marketStartTime")>
+
+      Public Property MarketStartTime As Date?
+  overload: BetfairDotNet.Models.Navigation.NavigationMarket.MarketStartTime*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: marketStartTime
+- uid: BetfairDotNet.Models.Navigation.NavigationMarket.MarketType
+  commentId: P:BetfairDotNet.Models.Navigation.NavigationMarket.MarketType
+  id: MarketType
+  parent: BetfairDotNet.Models.Navigation.NavigationMarket
+  langs:
+  - csharp
+  - vb
+  name: MarketType
+  nameWithType: NavigationMarket.MarketType
+  fullName: BetfairDotNet.Models.Navigation.NavigationMarket.MarketType
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Navigation/NavigationMarket.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MarketType
+    path: ../src/BetfairDotNet/Models/Navigation/NavigationMarket.cs
+    startLine: 13
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Navigation
+  syntax:
+    content: >-
+      [JsonPropertyName("marketType")]
+
+      public string MarketType { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("marketType")>
+
+      Public Property MarketType As String
+  overload: BetfairDotNet.Models.Navigation.NavigationMarket.MarketType*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: marketType
+- uid: BetfairDotNet.Models.Navigation.NavigationMarket.NumberOfWinners
+  commentId: P:BetfairDotNet.Models.Navigation.NavigationMarket.NumberOfWinners
+  id: NumberOfWinners
+  parent: BetfairDotNet.Models.Navigation.NavigationMarket
+  langs:
+  - csharp
+  - vb
+  name: NumberOfWinners
+  nameWithType: NavigationMarket.NumberOfWinners
+  fullName: BetfairDotNet.Models.Navigation.NavigationMarket.NumberOfWinners
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Navigation/NavigationMarket.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: NumberOfWinners
+    path: ../src/BetfairDotNet/Models/Navigation/NavigationMarket.cs
+    startLine: 16
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Navigation
+  syntax:
+    content: >-
+      [JsonPropertyName("numberOfWinners")]
+
+      [JsonConverter(typeof(NumberOrEmptyStringConverter))]
+
+      public int NumberOfWinners { get; init; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <JsonPropertyName("numberOfWinners")>
+
+      <JsonConverter(GetType(NumberOrEmptyStringConverter))>
+
+      Public Property NumberOfWinners As Integer
+  overload: BetfairDotNet.Models.Navigation.NavigationMarket.NumberOfWinners*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: numberOfWinners
+- uid: BetfairDotNet.Models.Navigation.NavigationMarket.Type
+  commentId: P:BetfairDotNet.Models.Navigation.NavigationMarket.Type
+  id: Type
+  parent: BetfairDotNet.Models.Navigation.NavigationMarket
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: NavigationMarket.Type
+  fullName: BetfairDotNet.Models.Navigation.NavigationMarket.Type
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Navigation/NavigationMarket.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Type
+    path: ../src/BetfairDotNet/Models/Navigation/NavigationMarket.cs
+    startLine: 20
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Navigation
+  example: []
+  syntax:
+    content: public override string Type { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overrides ReadOnly Property Type As String
+  overridden: BetfairDotNet.Models.Navigation.NavigationItem.Type
+  overload: BetfairDotNet.Models.Navigation.NavigationMarket.Type*
+references:
+- uid: BetfairDotNet.Models.Navigation
+  commentId: N:BetfairDotNet.Models.Navigation
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Navigation
+  nameWithType: BetfairDotNet.Models.Navigation
+  fullName: BetfairDotNet.Models.Navigation
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Navigation
+    name: Navigation
+    href: BetfairDotNet.Models.Navigation.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Navigation
+    name: Navigation
+    href: BetfairDotNet.Models.Navigation.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: BetfairDotNet.Models.Navigation.NavigationItem
+  commentId: T:BetfairDotNet.Models.Navigation.NavigationItem
+  parent: BetfairDotNet.Models.Navigation
+  href: BetfairDotNet.Models.Navigation.NavigationItem.html
+  name: NavigationItem
+  nameWithType: NavigationItem
+  fullName: BetfairDotNet.Models.Navigation.NavigationItem
+- uid: System.IEquatable{BetfairDotNet.Models.Navigation.NavigationItem}
+  commentId: T:System.IEquatable{BetfairDotNet.Models.Navigation.NavigationItem}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<NavigationItem>
+  nameWithType: IEquatable<NavigationItem>
+  fullName: System.IEquatable<BetfairDotNet.Models.Navigation.NavigationItem>
+  nameWithType.vb: IEquatable(Of NavigationItem)
+  fullName.vb: System.IEquatable(Of BetfairDotNet.Models.Navigation.NavigationItem)
+  name.vb: IEquatable(Of NavigationItem)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: BetfairDotNet.Models.Navigation.NavigationItem
+    name: NavigationItem
+    href: BetfairDotNet.Models.Navigation.NavigationItem.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Navigation.NavigationItem
+    name: NavigationItem
+    href: BetfairDotNet.Models.Navigation.NavigationItem.html
+  - name: )
+- uid: System.IEquatable{BetfairDotNet.Models.Navigation.NavigationMarket}
+  commentId: T:System.IEquatable{BetfairDotNet.Models.Navigation.NavigationMarket}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<NavigationMarket>
+  nameWithType: IEquatable<NavigationMarket>
+  fullName: System.IEquatable<BetfairDotNet.Models.Navigation.NavigationMarket>
+  nameWithType.vb: IEquatable(Of NavigationMarket)
+  fullName.vb: System.IEquatable(Of BetfairDotNet.Models.Navigation.NavigationMarket)
+  name.vb: IEquatable(Of NavigationMarket)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: BetfairDotNet.Models.Navigation.NavigationMarket
+    name: NavigationMarket
+    href: BetfairDotNet.Models.Navigation.NavigationMarket.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Navigation.NavigationMarket
+    name: NavigationMarket
+    href: BetfairDotNet.Models.Navigation.NavigationMarket.html
+  - name: )
+- uid: BetfairDotNet.Models.Navigation.NavigationItem.Id
+  commentId: P:BetfairDotNet.Models.Navigation.NavigationItem.Id
+  parent: BetfairDotNet.Models.Navigation.NavigationItem
+  href: BetfairDotNet.Models.Navigation.NavigationItem.html#BetfairDotNet.Models.Navigation.NavigationItem.Id
+  name: Id
+  nameWithType: NavigationItem.Id
+  fullName: BetfairDotNet.Models.Navigation.NavigationItem.Id
+- uid: BetfairDotNet.Models.Navigation.NavigationItem.Name
+  commentId: P:BetfairDotNet.Models.Navigation.NavigationItem.Name
+  parent: BetfairDotNet.Models.Navigation.NavigationItem
+  href: BetfairDotNet.Models.Navigation.NavigationItem.html#BetfairDotNet.Models.Navigation.NavigationItem.Name
+  name: Name
+  nameWithType: NavigationItem.Name
+  fullName: BetfairDotNet.Models.Navigation.NavigationItem.Name
+- uid: BetfairDotNet.Models.Navigation.NavigationItem.Children
+  commentId: P:BetfairDotNet.Models.Navigation.NavigationItem.Children
+  parent: BetfairDotNet.Models.Navigation.NavigationItem
+  href: BetfairDotNet.Models.Navigation.NavigationItem.html#BetfairDotNet.Models.Navigation.NavigationItem.Children
+  name: Children
+  nameWithType: NavigationItem.Children
+  fullName: BetfairDotNet.Models.Navigation.NavigationItem.Children
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BetfairDotNet.Models.Navigation.NavigationMarket.ExchangeId*
+  commentId: Overload:BetfairDotNet.Models.Navigation.NavigationMarket.ExchangeId
+  href: BetfairDotNet.Models.Navigation.NavigationMarket.html#BetfairDotNet.Models.Navigation.NavigationMarket.ExchangeId
+  name: ExchangeId
+  nameWithType: NavigationMarket.ExchangeId
+  fullName: BetfairDotNet.Models.Navigation.NavigationMarket.ExchangeId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BetfairDotNet.Models.Navigation.NavigationMarket.MarketStartTime*
+  commentId: Overload:BetfairDotNet.Models.Navigation.NavigationMarket.MarketStartTime
+  href: BetfairDotNet.Models.Navigation.NavigationMarket.html#BetfairDotNet.Models.Navigation.NavigationMarket.MarketStartTime
+  name: MarketStartTime
+  nameWithType: NavigationMarket.MarketStartTime
+  fullName: BetfairDotNet.Models.Navigation.NavigationMarket.MarketStartTime
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime?
+  nameWithType: DateTime?
+  fullName: System.DateTime?
+  nameWithType.vb: Date?
+  fullName.vb: Date?
+  name.vb: Date?
+  spec.csharp:
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+  spec.vb:
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BetfairDotNet.Models.Navigation.NavigationMarket.MarketType*
+  commentId: Overload:BetfairDotNet.Models.Navigation.NavigationMarket.MarketType
+  href: BetfairDotNet.Models.Navigation.NavigationMarket.html#BetfairDotNet.Models.Navigation.NavigationMarket.MarketType
+  name: MarketType
+  nameWithType: NavigationMarket.MarketType
+  fullName: BetfairDotNet.Models.Navigation.NavigationMarket.MarketType
+- uid: BetfairDotNet.Models.Navigation.NavigationMarket.NumberOfWinners*
+  commentId: Overload:BetfairDotNet.Models.Navigation.NavigationMarket.NumberOfWinners
+  href: BetfairDotNet.Models.Navigation.NavigationMarket.html#BetfairDotNet.Models.Navigation.NavigationMarket.NumberOfWinners
+  name: NumberOfWinners
+  nameWithType: NavigationMarket.NumberOfWinners
+  fullName: BetfairDotNet.Models.Navigation.NavigationMarket.NumberOfWinners
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: BetfairDotNet.Models.Navigation.NavigationItem.Type
+  commentId: P:BetfairDotNet.Models.Navigation.NavigationItem.Type
+  parent: BetfairDotNet.Models.Navigation.NavigationItem
+  href: BetfairDotNet.Models.Navigation.NavigationItem.html#BetfairDotNet.Models.Navigation.NavigationItem.Type
+  name: Type
+  nameWithType: NavigationItem.Type
+  fullName: BetfairDotNet.Models.Navigation.NavigationItem.Type
+- uid: BetfairDotNet.Models.Navigation.NavigationMarket.Type*
+  commentId: Overload:BetfairDotNet.Models.Navigation.NavigationMarket.Type
+  href: BetfairDotNet.Models.Navigation.NavigationMarket.html#BetfairDotNet.Models.Navigation.NavigationMarket.Type
+  name: Type
+  nameWithType: NavigationMarket.Type
+  fullName: BetfairDotNet.Models.Navigation.NavigationMarket.Type

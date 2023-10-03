@@ -1,0 +1,905 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  commentId: T:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  id: InstructionReportErrorCodeEnum
+  parent: BetfairDotNet.Enums.Betting
+  children:
+  - BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.BET_IN_PROGRESS
+  - BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.BET_LAPSED_PRICE_IMPROVEMENT_TOO_LARGE
+  - BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.BET_TAKEN_OR_LAPSED
+  - BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.CANCELLED_NOT_PLACED
+  - BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.ERROR_IN_MATCHER
+  - BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.ERROR_IN_ORDER
+  - BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INSUFFICIENT_FUNDS
+  - BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_BACK_LAY_COMBINATION
+  - BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_BET_ID
+  - BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_BET_SIZE
+  - BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_BID_TYPE
+  - BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_CUSTOMER_ORDER_REF
+  - BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_MIN_FILL_SIZE
+  - BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_ODDS
+  - BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_ORDER_TYPE
+  - BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_PERSISTENCE_TYPE
+  - BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_PRICE_EDIT
+  - BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_RUNNER
+  - BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.LOSS_LIMIT_EXCEEDED
+  - BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.MARKET_NOT_OPEN_FOR_BETTING
+  - BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.MARKET_NOT_OPEN_FOR_BSP_BETTING
+  - BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.NONE
+  - BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.NO_ACTION_REQUIRED
+  - BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.RELATED_ACTION_FAILED
+  - BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.RUNNER_REMOVED
+  - BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.TIME_IN_FORCE_CONFLICT
+  - BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.UNEXPECTED_MIN_FILL_SIZE
+  - BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.UNEXPECTED_PERSISTENCE_TYPE
+  langs:
+  - csharp
+  - vb
+  name: InstructionReportErrorCodeEnum
+  nameWithType: InstructionReportErrorCodeEnum
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  type: Enum
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: InstructionReportErrorCodeEnum
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+    startLine: 6
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EmptyStringToEnumConverter<InstructionReportErrorCodeEnum>))]
+
+      public enum InstructionReportErrorCodeEnum
+    content.vb: >-
+      <JsonConverter(GetType(EmptyStringToEnumConverter(Of InstructionReportErrorCodeEnum)))>
+
+      Public Enum InstructionReportErrorCodeEnum
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.NONE
+  commentId: F:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.NONE
+  id: NONE
+  parent: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  langs:
+  - csharp
+  - vb
+  name: NONE
+  nameWithType: InstructionReportErrorCodeEnum.NONE
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.NONE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: NONE
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+    startLine: 12
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: The bet placed succesfully.
+  example: []
+  syntax:
+    content: NONE = 0
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_BET_SIZE
+  commentId: F:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_BET_SIZE
+  id: INVALID_BET_SIZE
+  parent: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  langs:
+  - csharp
+  - vb
+  name: INVALID_BET_SIZE
+  nameWithType: InstructionReportErrorCodeEnum.INVALID_BET_SIZE
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_BET_SIZE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: INVALID_BET_SIZE
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+    startLine: 17
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: The bet size was invalid.
+  example: []
+  syntax:
+    content: INVALID_BET_SIZE = 1
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_RUNNER
+  commentId: F:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_RUNNER
+  id: INVALID_RUNNER
+  parent: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  langs:
+  - csharp
+  - vb
+  name: INVALID_RUNNER
+  nameWithType: InstructionReportErrorCodeEnum.INVALID_RUNNER
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_RUNNER
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: INVALID_RUNNER
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+    startLine: 22
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: The specified runner does not exist or is no longer applicable for the market.
+  example: []
+  syntax:
+    content: INVALID_RUNNER = 2
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.BET_TAKEN_OR_LAPSED
+  commentId: F:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.BET_TAKEN_OR_LAPSED
+  id: BET_TAKEN_OR_LAPSED
+  parent: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  langs:
+  - csharp
+  - vb
+  name: BET_TAKEN_OR_LAPSED
+  nameWithType: InstructionReportErrorCodeEnum.BET_TAKEN_OR_LAPSED
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.BET_TAKEN_OR_LAPSED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: BET_TAKEN_OR_LAPSED
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+    startLine: 27
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: The bet has been taken or has lapsed.
+  example: []
+  syntax:
+    content: BET_TAKEN_OR_LAPSED = 3
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.BET_IN_PROGRESS
+  commentId: F:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.BET_IN_PROGRESS
+  id: BET_IN_PROGRESS
+  parent: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  langs:
+  - csharp
+  - vb
+  name: BET_IN_PROGRESS
+  nameWithType: InstructionReportErrorCodeEnum.BET_IN_PROGRESS
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.BET_IN_PROGRESS
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: BET_IN_PROGRESS
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+    startLine: 32
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: The bet is in progress.
+  example: []
+  syntax:
+    content: BET_IN_PROGRESS = 4
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.RUNNER_REMOVED
+  commentId: F:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.RUNNER_REMOVED
+  id: RUNNER_REMOVED
+  parent: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  langs:
+  - csharp
+  - vb
+  name: RUNNER_REMOVED
+  nameWithType: InstructionReportErrorCodeEnum.RUNNER_REMOVED
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.RUNNER_REMOVED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: RUNNER_REMOVED
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+    startLine: 37
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: The runner has been removed from the market.
+  example: []
+  syntax:
+    content: RUNNER_REMOVED = 5
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.MARKET_NOT_OPEN_FOR_BETTING
+  commentId: F:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.MARKET_NOT_OPEN_FOR_BETTING
+  id: MARKET_NOT_OPEN_FOR_BETTING
+  parent: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  langs:
+  - csharp
+  - vb
+  name: MARKET_NOT_OPEN_FOR_BETTING
+  nameWithType: InstructionReportErrorCodeEnum.MARKET_NOT_OPEN_FOR_BETTING
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.MARKET_NOT_OPEN_FOR_BETTING
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MARKET_NOT_OPEN_FOR_BETTING
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+    startLine: 42
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: The market is not currently open for betting.
+  example: []
+  syntax:
+    content: MARKET_NOT_OPEN_FOR_BETTING = 6
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.LOSS_LIMIT_EXCEEDED
+  commentId: F:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.LOSS_LIMIT_EXCEEDED
+  id: LOSS_LIMIT_EXCEEDED
+  parent: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  langs:
+  - csharp
+  - vb
+  name: LOSS_LIMIT_EXCEEDED
+  nameWithType: InstructionReportErrorCodeEnum.LOSS_LIMIT_EXCEEDED
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.LOSS_LIMIT_EXCEEDED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: LOSS_LIMIT_EXCEEDED
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+    startLine: 47
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: The requested action would exceed the user's loss limit.
+  example: []
+  syntax:
+    content: LOSS_LIMIT_EXCEEDED = 7
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.MARKET_NOT_OPEN_FOR_BSP_BETTING
+  commentId: F:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.MARKET_NOT_OPEN_FOR_BSP_BETTING
+  id: MARKET_NOT_OPEN_FOR_BSP_BETTING
+  parent: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  langs:
+  - csharp
+  - vb
+  name: MARKET_NOT_OPEN_FOR_BSP_BETTING
+  nameWithType: InstructionReportErrorCodeEnum.MARKET_NOT_OPEN_FOR_BSP_BETTING
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.MARKET_NOT_OPEN_FOR_BSP_BETTING
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MARKET_NOT_OPEN_FOR_BSP_BETTING
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+    startLine: 52
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: The market is not open for BSP betting.
+  example: []
+  syntax:
+    content: MARKET_NOT_OPEN_FOR_BSP_BETTING = 8
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_PRICE_EDIT
+  commentId: F:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_PRICE_EDIT
+  id: INVALID_PRICE_EDIT
+  parent: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  langs:
+  - csharp
+  - vb
+  name: INVALID_PRICE_EDIT
+  nameWithType: InstructionReportErrorCodeEnum.INVALID_PRICE_EDIT
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_PRICE_EDIT
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: INVALID_PRICE_EDIT
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+    startLine: 57
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Attempt to edit a bet with an invalid price.
+  example: []
+  syntax:
+    content: INVALID_PRICE_EDIT = 9
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_ODDS
+  commentId: F:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_ODDS
+  id: INVALID_ODDS
+  parent: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  langs:
+  - csharp
+  - vb
+  name: INVALID_ODDS
+  nameWithType: InstructionReportErrorCodeEnum.INVALID_ODDS
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_ODDS
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: INVALID_ODDS
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+    startLine: 62
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: The odds are invalid.
+  example: []
+  syntax:
+    content: INVALID_ODDS = 10
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INSUFFICIENT_FUNDS
+  commentId: F:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INSUFFICIENT_FUNDS
+  id: INSUFFICIENT_FUNDS
+  parent: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  langs:
+  - csharp
+  - vb
+  name: INSUFFICIENT_FUNDS
+  nameWithType: InstructionReportErrorCodeEnum.INSUFFICIENT_FUNDS
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INSUFFICIENT_FUNDS
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: INSUFFICIENT_FUNDS
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+    startLine: 67
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: The account has insufficient funds.
+  example: []
+  syntax:
+    content: INSUFFICIENT_FUNDS = 11
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_PERSISTENCE_TYPE
+  commentId: F:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_PERSISTENCE_TYPE
+  id: INVALID_PERSISTENCE_TYPE
+  parent: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  langs:
+  - csharp
+  - vb
+  name: INVALID_PERSISTENCE_TYPE
+  nameWithType: InstructionReportErrorCodeEnum.INVALID_PERSISTENCE_TYPE
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_PERSISTENCE_TYPE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: INVALID_PERSISTENCE_TYPE
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+    startLine: 72
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: The persistence type is invalid.
+  example: []
+  syntax:
+    content: INVALID_PERSISTENCE_TYPE = 12
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.ERROR_IN_MATCHER
+  commentId: F:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.ERROR_IN_MATCHER
+  id: ERROR_IN_MATCHER
+  parent: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  langs:
+  - csharp
+  - vb
+  name: ERROR_IN_MATCHER
+  nameWithType: InstructionReportErrorCodeEnum.ERROR_IN_MATCHER
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.ERROR_IN_MATCHER
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ERROR_IN_MATCHER
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+    startLine: 77
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: There was an error in the matcher component.
+  example: []
+  syntax:
+    content: ERROR_IN_MATCHER = 13
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_BACK_LAY_COMBINATION
+  commentId: F:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_BACK_LAY_COMBINATION
+  id: INVALID_BACK_LAY_COMBINATION
+  parent: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  langs:
+  - csharp
+  - vb
+  name: INVALID_BACK_LAY_COMBINATION
+  nameWithType: InstructionReportErrorCodeEnum.INVALID_BACK_LAY_COMBINATION
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_BACK_LAY_COMBINATION
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: INVALID_BACK_LAY_COMBINATION
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+    startLine: 82
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Invalid combination of back and lay.
+  example: []
+  syntax:
+    content: INVALID_BACK_LAY_COMBINATION = 14
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.ERROR_IN_ORDER
+  commentId: F:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.ERROR_IN_ORDER
+  id: ERROR_IN_ORDER
+  parent: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  langs:
+  - csharp
+  - vb
+  name: ERROR_IN_ORDER
+  nameWithType: InstructionReportErrorCodeEnum.ERROR_IN_ORDER
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.ERROR_IN_ORDER
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ERROR_IN_ORDER
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+    startLine: 87
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: There was an error with the order.
+  example: []
+  syntax:
+    content: ERROR_IN_ORDER = 15
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_BID_TYPE
+  commentId: F:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_BID_TYPE
+  id: INVALID_BID_TYPE
+  parent: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  langs:
+  - csharp
+  - vb
+  name: INVALID_BID_TYPE
+  nameWithType: InstructionReportErrorCodeEnum.INVALID_BID_TYPE
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_BID_TYPE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: INVALID_BID_TYPE
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+    startLine: 92
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: The bid type was invalid.
+  example: []
+  syntax:
+    content: INVALID_BID_TYPE = 16
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_BET_ID
+  commentId: F:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_BET_ID
+  id: INVALID_BET_ID
+  parent: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  langs:
+  - csharp
+  - vb
+  name: INVALID_BET_ID
+  nameWithType: InstructionReportErrorCodeEnum.INVALID_BET_ID
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_BET_ID
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: INVALID_BET_ID
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+    startLine: 97
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: The bet ID was invalid.
+  example: []
+  syntax:
+    content: INVALID_BET_ID = 17
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.CANCELLED_NOT_PLACED
+  commentId: F:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.CANCELLED_NOT_PLACED
+  id: CANCELLED_NOT_PLACED
+  parent: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  langs:
+  - csharp
+  - vb
+  name: CANCELLED_NOT_PLACED
+  nameWithType: InstructionReportErrorCodeEnum.CANCELLED_NOT_PLACED
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.CANCELLED_NOT_PLACED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: CANCELLED_NOT_PLACED
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+    startLine: 102
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: The bet was cancelled; it was not placed.
+  example: []
+  syntax:
+    content: CANCELLED_NOT_PLACED = 18
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.RELATED_ACTION_FAILED
+  commentId: F:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.RELATED_ACTION_FAILED
+  id: RELATED_ACTION_FAILED
+  parent: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  langs:
+  - csharp
+  - vb
+  name: RELATED_ACTION_FAILED
+  nameWithType: InstructionReportErrorCodeEnum.RELATED_ACTION_FAILED
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.RELATED_ACTION_FAILED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: RELATED_ACTION_FAILED
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+    startLine: 107
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: A related action, such as an order, failed.
+  example: []
+  syntax:
+    content: RELATED_ACTION_FAILED = 19
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.NO_ACTION_REQUIRED
+  commentId: F:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.NO_ACTION_REQUIRED
+  id: NO_ACTION_REQUIRED
+  parent: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  langs:
+  - csharp
+  - vb
+  name: NO_ACTION_REQUIRED
+  nameWithType: InstructionReportErrorCodeEnum.NO_ACTION_REQUIRED
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.NO_ACTION_REQUIRED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: NO_ACTION_REQUIRED
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+    startLine: 112
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: No action was required.
+  example: []
+  syntax:
+    content: NO_ACTION_REQUIRED = 20
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.TIME_IN_FORCE_CONFLICT
+  commentId: F:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.TIME_IN_FORCE_CONFLICT
+  id: TIME_IN_FORCE_CONFLICT
+  parent: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  langs:
+  - csharp
+  - vb
+  name: TIME_IN_FORCE_CONFLICT
+  nameWithType: InstructionReportErrorCodeEnum.TIME_IN_FORCE_CONFLICT
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.TIME_IN_FORCE_CONFLICT
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: TIME_IN_FORCE_CONFLICT
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+    startLine: 119
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: >-
+    You may only specify a time in force on either the place request 
+
+    OR on individual limit order instructions (not both), 
+
+    since the implied behaviors are incompatible.
+  example: []
+  syntax:
+    content: TIME_IN_FORCE_CONFLICT = 21
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.UNEXPECTED_PERSISTENCE_TYPE
+  commentId: F:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.UNEXPECTED_PERSISTENCE_TYPE
+  id: UNEXPECTED_PERSISTENCE_TYPE
+  parent: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  langs:
+  - csharp
+  - vb
+  name: UNEXPECTED_PERSISTENCE_TYPE
+  nameWithType: InstructionReportErrorCodeEnum.UNEXPECTED_PERSISTENCE_TYPE
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.UNEXPECTED_PERSISTENCE_TYPE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: UNEXPECTED_PERSISTENCE_TYPE
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+    startLine: 126
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: >-
+    You have specified a persistence type for a FILL_OR_KILL order,
+
+    which is nonsensical because no umatched portion 
+
+    can remain after the order has been placed.
+  example: []
+  syntax:
+    content: UNEXPECTED_PERSISTENCE_TYPE = 22
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_ORDER_TYPE
+  commentId: F:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_ORDER_TYPE
+  id: INVALID_ORDER_TYPE
+  parent: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  langs:
+  - csharp
+  - vb
+  name: INVALID_ORDER_TYPE
+  nameWithType: InstructionReportErrorCodeEnum.INVALID_ORDER_TYPE
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_ORDER_TYPE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: INVALID_ORDER_TYPE
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+    startLine: 131
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: You have specified a time in force of FILL_OR_KILL, but have included a non-LIMIT order type.
+  example: []
+  syntax:
+    content: INVALID_ORDER_TYPE = 23
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.UNEXPECTED_MIN_FILL_SIZE
+  commentId: F:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.UNEXPECTED_MIN_FILL_SIZE
+  id: UNEXPECTED_MIN_FILL_SIZE
+  parent: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  langs:
+  - csharp
+  - vb
+  name: UNEXPECTED_MIN_FILL_SIZE
+  nameWithType: InstructionReportErrorCodeEnum.UNEXPECTED_MIN_FILL_SIZE
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.UNEXPECTED_MIN_FILL_SIZE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: UNEXPECTED_MIN_FILL_SIZE
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+    startLine: 137
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: >-
+    You have specified a minFillSize on a limit order, where the limit order's time in force is not FILL_OR_KILL. 
+
+    Using minFillSize is not supported where the time in force of the request (as opposed to an order) is FILL_OR_KILL.
+  example: []
+  syntax:
+    content: UNEXPECTED_MIN_FILL_SIZE = 24
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_CUSTOMER_ORDER_REF
+  commentId: F:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_CUSTOMER_ORDER_REF
+  id: INVALID_CUSTOMER_ORDER_REF
+  parent: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  langs:
+  - csharp
+  - vb
+  name: INVALID_CUSTOMER_ORDER_REF
+  nameWithType: InstructionReportErrorCodeEnum.INVALID_CUSTOMER_ORDER_REF
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_CUSTOMER_ORDER_REF
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: INVALID_CUSTOMER_ORDER_REF
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+    startLine: 142
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: The supplied customer order reference is too long.
+  example: []
+  syntax:
+    content: INVALID_CUSTOMER_ORDER_REF = 25
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_MIN_FILL_SIZE
+  commentId: F:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_MIN_FILL_SIZE
+  id: INVALID_MIN_FILL_SIZE
+  parent: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  langs:
+  - csharp
+  - vb
+  name: INVALID_MIN_FILL_SIZE
+  nameWithType: InstructionReportErrorCodeEnum.INVALID_MIN_FILL_SIZE
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.INVALID_MIN_FILL_SIZE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: INVALID_MIN_FILL_SIZE
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+    startLine: 148
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: >-
+    The minFillSize must be greater than zero and less than or equal to the order's size. 
+
+    The minFillSize cannot be less than the minimum bet size for your currency
+  example: []
+  syntax:
+    content: INVALID_MIN_FILL_SIZE = 26
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.BET_LAPSED_PRICE_IMPROVEMENT_TOO_LARGE
+  commentId: F:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.BET_LAPSED_PRICE_IMPROVEMENT_TOO_LARGE
+  id: BET_LAPSED_PRICE_IMPROVEMENT_TOO_LARGE
+  parent: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  langs:
+  - csharp
+  - vb
+  name: BET_LAPSED_PRICE_IMPROVEMENT_TOO_LARGE
+  nameWithType: InstructionReportErrorCodeEnum.BET_LAPSED_PRICE_IMPROVEMENT_TOO_LARGE
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.BET_LAPSED_PRICE_IMPROVEMENT_TOO_LARGE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: BET_LAPSED_PRICE_IMPROVEMENT_TOO_LARGE
+    path: ../src/BetfairDotNet/Enums/Betting/InstructionReportErrorCodeEnum.cs
+    startLine: 155
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: >-
+    Your bet is lapsed. There is better odds than requested available in the market, but your 
+
+    preferences don't allow the system to match your bet against better odds. Change your betting 
+
+    preferences to accept better odds if you don't want to receive this error.
+  example: []
+  syntax:
+    content: BET_LAPSED_PRICE_IMPROVEMENT_TOO_LARGE = 27
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+references:
+- uid: BetfairDotNet.Enums.Betting
+  commentId: N:BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Betting
+  nameWithType: BetfairDotNet.Enums.Betting
+  fullName: BetfairDotNet.Enums.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  commentId: T:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.html
+  name: InstructionReportErrorCodeEnum
+  nameWithType: InstructionReportErrorCodeEnum
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum

@@ -1,0 +1,199 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Betting.RollupModelEnum
+  commentId: T:BetfairDotNet.Enums.Betting.RollupModelEnum
+  id: RollupModelEnum
+  parent: BetfairDotNet.Enums.Betting
+  children:
+  - BetfairDotNet.Enums.Betting.RollupModelEnum.MANAGED_LIABILITY
+  - BetfairDotNet.Enums.Betting.RollupModelEnum.NONE
+  - BetfairDotNet.Enums.Betting.RollupModelEnum.PAYOUT
+  - BetfairDotNet.Enums.Betting.RollupModelEnum.STAKE
+  langs:
+  - csharp
+  - vb
+  name: RollupModelEnum
+  nameWithType: RollupModelEnum
+  fullName: BetfairDotNet.Enums.Betting.RollupModelEnum
+  type: Enum
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/RollupModelEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: RollupModelEnum
+    path: ../src/BetfairDotNet/Enums/Betting/RollupModelEnum.cs
+    startLine: 6
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EmptyStringToEnumConverter<RollupModelEnum>))]
+
+      public enum RollupModelEnum
+    content.vb: >-
+      <JsonConverter(GetType(EmptyStringToEnumConverter(Of RollupModelEnum)))>
+
+      Public Enum RollupModelEnum
+- uid: BetfairDotNet.Enums.Betting.RollupModelEnum.STAKE
+  commentId: F:BetfairDotNet.Enums.Betting.RollupModelEnum.STAKE
+  id: STAKE
+  parent: BetfairDotNet.Enums.Betting.RollupModelEnum
+  langs:
+  - csharp
+  - vb
+  name: STAKE
+  nameWithType: RollupModelEnum.STAKE
+  fullName: BetfairDotNet.Enums.Betting.RollupModelEnum.STAKE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/RollupModelEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: STAKE
+    path: ../src/BetfairDotNet/Enums/Betting/RollupModelEnum.cs
+    startLine: 12
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: The volumes will be rolled up to the minimum value which is &gt;= rollupLimit.
+  example: []
+  syntax:
+    content: STAKE = 0
+    return:
+      type: BetfairDotNet.Enums.Betting.RollupModelEnum
+- uid: BetfairDotNet.Enums.Betting.RollupModelEnum.PAYOUT
+  commentId: F:BetfairDotNet.Enums.Betting.RollupModelEnum.PAYOUT
+  id: PAYOUT
+  parent: BetfairDotNet.Enums.Betting.RollupModelEnum
+  langs:
+  - csharp
+  - vb
+  name: PAYOUT
+  nameWithType: RollupModelEnum.PAYOUT
+  fullName: BetfairDotNet.Enums.Betting.RollupModelEnum.PAYOUT
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/RollupModelEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: PAYOUT
+    path: ../src/BetfairDotNet/Enums/Betting/RollupModelEnum.cs
+    startLine: 18
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: >-
+    The volumes will be rolled up to the minimum value where the payout( price * volume ) is &gt;= rollupLimit. 
+
+    On a LINE market, volumes will be rolled up where payout( 2.0 * volume ) is &gt;= rollupLimit
+  example: []
+  syntax:
+    content: PAYOUT = 1
+    return:
+      type: BetfairDotNet.Enums.Betting.RollupModelEnum
+- uid: BetfairDotNet.Enums.Betting.RollupModelEnum.MANAGED_LIABILITY
+  commentId: F:BetfairDotNet.Enums.Betting.RollupModelEnum.MANAGED_LIABILITY
+  id: MANAGED_LIABILITY
+  parent: BetfairDotNet.Enums.Betting.RollupModelEnum
+  langs:
+  - csharp
+  - vb
+  name: MANAGED_LIABILITY
+  nameWithType: RollupModelEnum.MANAGED_LIABILITY
+  fullName: BetfairDotNet.Enums.Betting.RollupModelEnum.MANAGED_LIABILITY
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/RollupModelEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MANAGED_LIABILITY
+    path: ../src/BetfairDotNet/Enums/Betting/RollupModelEnum.cs
+    startLine: 25
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: >-
+    The volumes will be rolled up to the minimum value which is &gt;= rollupLimit, until a lay price threshold. 
+
+    There after, the volumes will be rolled up to the minimum value such that the liability &gt;= a minimum liability. 
+
+    Not supported as yet.
+  example: []
+  syntax:
+    content: MANAGED_LIABILITY = 2
+    return:
+      type: BetfairDotNet.Enums.Betting.RollupModelEnum
+- uid: BetfairDotNet.Enums.Betting.RollupModelEnum.NONE
+  commentId: F:BetfairDotNet.Enums.Betting.RollupModelEnum.NONE
+  id: NONE
+  parent: BetfairDotNet.Enums.Betting.RollupModelEnum
+  langs:
+  - csharp
+  - vb
+  name: NONE
+  nameWithType: RollupModelEnum.NONE
+  fullName: BetfairDotNet.Enums.Betting.RollupModelEnum.NONE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/RollupModelEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: NONE
+    path: ../src/BetfairDotNet/Enums/Betting/RollupModelEnum.cs
+    startLine: 31
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: >-
+    No rollup will be applied. However the volumes will be filtered by currency specific 
+
+    minimum stake unless overridden specifically for the channel.
+  example: []
+  syntax:
+    content: NONE = 3
+    return:
+      type: BetfairDotNet.Enums.Betting.RollupModelEnum
+references:
+- uid: BetfairDotNet.Enums.Betting
+  commentId: N:BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Betting
+  nameWithType: BetfairDotNet.Enums.Betting
+  fullName: BetfairDotNet.Enums.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+- uid: BetfairDotNet.Enums.Betting.RollupModelEnum
+  commentId: T:BetfairDotNet.Enums.Betting.RollupModelEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.RollupModelEnum.html
+  name: RollupModelEnum
+  nameWithType: RollupModelEnum
+  fullName: BetfairDotNet.Enums.Betting.RollupModelEnum

@@ -1,0 +1,217 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Betting.BetStatusEnum
+  commentId: T:BetfairDotNet.Enums.Betting.BetStatusEnum
+  id: BetStatusEnum
+  parent: BetfairDotNet.Enums.Betting
+  children:
+  - BetfairDotNet.Enums.Betting.BetStatusEnum.ACTIVE
+  - BetfairDotNet.Enums.Betting.BetStatusEnum.CANCELLED
+  - BetfairDotNet.Enums.Betting.BetStatusEnum.LAPSED
+  - BetfairDotNet.Enums.Betting.BetStatusEnum.SETTLED
+  - BetfairDotNet.Enums.Betting.BetStatusEnum.VOIDED
+  langs:
+  - csharp
+  - vb
+  name: BetStatusEnum
+  nameWithType: BetStatusEnum
+  fullName: BetfairDotNet.Enums.Betting.BetStatusEnum
+  type: Enum
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/BetStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: BetStatusEnum
+    path: ../src/BetfairDotNet/Enums/Betting/BetStatusEnum.cs
+    startLine: 6
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EmptyStringToEnumConverter<BetStatusEnum>))]
+
+      public enum BetStatusEnum
+    content.vb: >-
+      <JsonConverter(GetType(EmptyStringToEnumConverter(Of BetStatusEnum)))>
+
+      Public Enum BetStatusEnum
+- uid: BetfairDotNet.Enums.Betting.BetStatusEnum.ACTIVE
+  commentId: F:BetfairDotNet.Enums.Betting.BetStatusEnum.ACTIVE
+  id: ACTIVE
+  parent: BetfairDotNet.Enums.Betting.BetStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: ACTIVE
+  nameWithType: BetStatusEnum.ACTIVE
+  fullName: BetfairDotNet.Enums.Betting.BetStatusEnum.ACTIVE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/BetStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ACTIVE
+    path: ../src/BetfairDotNet/Enums/Betting/BetStatusEnum.cs
+    startLine: 12
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: The bet is still active and has not been settled.
+  example: []
+  syntax:
+    content: ACTIVE = 0
+    return:
+      type: BetfairDotNet.Enums.Betting.BetStatusEnum
+- uid: BetfairDotNet.Enums.Betting.BetStatusEnum.SETTLED
+  commentId: F:BetfairDotNet.Enums.Betting.BetStatusEnum.SETTLED
+  id: SETTLED
+  parent: BetfairDotNet.Enums.Betting.BetStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: SETTLED
+  nameWithType: BetStatusEnum.SETTLED
+  fullName: BetfairDotNet.Enums.Betting.BetStatusEnum.SETTLED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/BetStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SETTLED
+    path: ../src/BetfairDotNet/Enums/Betting/BetStatusEnum.cs
+    startLine: 17
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: A matched bet that was settled normally.
+  example: []
+  syntax:
+    content: SETTLED = 1
+    return:
+      type: BetfairDotNet.Enums.Betting.BetStatusEnum
+- uid: BetfairDotNet.Enums.Betting.BetStatusEnum.VOIDED
+  commentId: F:BetfairDotNet.Enums.Betting.BetStatusEnum.VOIDED
+  id: VOIDED
+  parent: BetfairDotNet.Enums.Betting.BetStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: VOIDED
+  nameWithType: BetStatusEnum.VOIDED
+  fullName: BetfairDotNet.Enums.Betting.BetStatusEnum.VOIDED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/BetStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: VOIDED
+    path: ../src/BetfairDotNet/Enums/Betting/BetStatusEnum.cs
+    startLine: 22
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: A matched bet that was subsequently voided by Betfair, before, during or after settlement.
+  example: []
+  syntax:
+    content: VOIDED = 2
+    return:
+      type: BetfairDotNet.Enums.Betting.BetStatusEnum
+- uid: BetfairDotNet.Enums.Betting.BetStatusEnum.LAPSED
+  commentId: F:BetfairDotNet.Enums.Betting.BetStatusEnum.LAPSED
+  id: LAPSED
+  parent: BetfairDotNet.Enums.Betting.BetStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: LAPSED
+  nameWithType: BetStatusEnum.LAPSED
+  fullName: BetfairDotNet.Enums.Betting.BetStatusEnum.LAPSED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/BetStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: LAPSED
+    path: ../src/BetfairDotNet/Enums/Betting/BetStatusEnum.cs
+    startLine: 27
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Unmatched bet that was cancelled by Betfair (for example at turn in play).
+  example: []
+  syntax:
+    content: LAPSED = 3
+    return:
+      type: BetfairDotNet.Enums.Betting.BetStatusEnum
+- uid: BetfairDotNet.Enums.Betting.BetStatusEnum.CANCELLED
+  commentId: F:BetfairDotNet.Enums.Betting.BetStatusEnum.CANCELLED
+  id: CANCELLED
+  parent: BetfairDotNet.Enums.Betting.BetStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: CANCELLED
+  nameWithType: BetStatusEnum.CANCELLED
+  fullName: BetfairDotNet.Enums.Betting.BetStatusEnum.CANCELLED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/BetStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: CANCELLED
+    path: ../src/BetfairDotNet/Enums/Betting/BetStatusEnum.cs
+    startLine: 32
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Unmatched bet that was cancelled by an explicit customer action.
+  example: []
+  syntax:
+    content: CANCELLED = 4
+    return:
+      type: BetfairDotNet.Enums.Betting.BetStatusEnum
+references:
+- uid: BetfairDotNet.Enums.Betting
+  commentId: N:BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Betting
+  nameWithType: BetfairDotNet.Enums.Betting
+  fullName: BetfairDotNet.Enums.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+- uid: BetfairDotNet.Enums.Betting.BetStatusEnum
+  commentId: T:BetfairDotNet.Enums.Betting.BetStatusEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.BetStatusEnum.html
+  name: BetStatusEnum
+  nameWithType: BetStatusEnum
+  fullName: BetfairDotNet.Enums.Betting.BetStatusEnum

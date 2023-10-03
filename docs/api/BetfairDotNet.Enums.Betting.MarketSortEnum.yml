@@ -1,0 +1,246 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Betting.MarketSortEnum
+  commentId: T:BetfairDotNet.Enums.Betting.MarketSortEnum
+  id: MarketSortEnum
+  parent: BetfairDotNet.Enums.Betting
+  children:
+  - BetfairDotNet.Enums.Betting.MarketSortEnum.FIRST_TO_START
+  - BetfairDotNet.Enums.Betting.MarketSortEnum.LAST_TO_START
+  - BetfairDotNet.Enums.Betting.MarketSortEnum.MAXIMUM_AVAILABLE
+  - BetfairDotNet.Enums.Betting.MarketSortEnum.MAXIMUM_TRADED
+  - BetfairDotNet.Enums.Betting.MarketSortEnum.MINIMUM_AVAILABLE
+  - BetfairDotNet.Enums.Betting.MarketSortEnum.MINIMUM_TRADED
+  langs:
+  - csharp
+  - vb
+  name: MarketSortEnum
+  nameWithType: MarketSortEnum
+  fullName: BetfairDotNet.Enums.Betting.MarketSortEnum
+  type: Enum
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/MarketSortEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MarketSortEnum
+    path: ../src/BetfairDotNet/Enums/Betting/MarketSortEnum.cs
+    startLine: 6
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EmptyStringToEnumConverter<MarketSortEnum>))]
+
+      public enum MarketSortEnum
+    content.vb: >-
+      <JsonConverter(GetType(EmptyStringToEnumConverter(Of MarketSortEnum)))>
+
+      Public Enum MarketSortEnum
+- uid: BetfairDotNet.Enums.Betting.MarketSortEnum.MINIMUM_TRADED
+  commentId: F:BetfairDotNet.Enums.Betting.MarketSortEnum.MINIMUM_TRADED
+  id: MINIMUM_TRADED
+  parent: BetfairDotNet.Enums.Betting.MarketSortEnum
+  langs:
+  - csharp
+  - vb
+  name: MINIMUM_TRADED
+  nameWithType: MarketSortEnum.MINIMUM_TRADED
+  fullName: BetfairDotNet.Enums.Betting.MarketSortEnum.MINIMUM_TRADED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/MarketSortEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MINIMUM_TRADED
+    path: ../src/BetfairDotNet/Enums/Betting/MarketSortEnum.cs
+    startLine: 12
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Minimum traded volume.
+  example: []
+  syntax:
+    content: MINIMUM_TRADED = 0
+    return:
+      type: BetfairDotNet.Enums.Betting.MarketSortEnum
+- uid: BetfairDotNet.Enums.Betting.MarketSortEnum.MAXIMUM_TRADED
+  commentId: F:BetfairDotNet.Enums.Betting.MarketSortEnum.MAXIMUM_TRADED
+  id: MAXIMUM_TRADED
+  parent: BetfairDotNet.Enums.Betting.MarketSortEnum
+  langs:
+  - csharp
+  - vb
+  name: MAXIMUM_TRADED
+  nameWithType: MarketSortEnum.MAXIMUM_TRADED
+  fullName: BetfairDotNet.Enums.Betting.MarketSortEnum.MAXIMUM_TRADED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/MarketSortEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MAXIMUM_TRADED
+    path: ../src/BetfairDotNet/Enums/Betting/MarketSortEnum.cs
+    startLine: 17
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Maximum traded volume.
+  example: []
+  syntax:
+    content: MAXIMUM_TRADED = 1
+    return:
+      type: BetfairDotNet.Enums.Betting.MarketSortEnum
+- uid: BetfairDotNet.Enums.Betting.MarketSortEnum.MINIMUM_AVAILABLE
+  commentId: F:BetfairDotNet.Enums.Betting.MarketSortEnum.MINIMUM_AVAILABLE
+  id: MINIMUM_AVAILABLE
+  parent: BetfairDotNet.Enums.Betting.MarketSortEnum
+  langs:
+  - csharp
+  - vb
+  name: MINIMUM_AVAILABLE
+  nameWithType: MarketSortEnum.MINIMUM_AVAILABLE
+  fullName: BetfairDotNet.Enums.Betting.MarketSortEnum.MINIMUM_AVAILABLE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/MarketSortEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MINIMUM_AVAILABLE
+    path: ../src/BetfairDotNet/Enums/Betting/MarketSortEnum.cs
+    startLine: 22
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Minimum available to match.
+  example: []
+  syntax:
+    content: MINIMUM_AVAILABLE = 2
+    return:
+      type: BetfairDotNet.Enums.Betting.MarketSortEnum
+- uid: BetfairDotNet.Enums.Betting.MarketSortEnum.MAXIMUM_AVAILABLE
+  commentId: F:BetfairDotNet.Enums.Betting.MarketSortEnum.MAXIMUM_AVAILABLE
+  id: MAXIMUM_AVAILABLE
+  parent: BetfairDotNet.Enums.Betting.MarketSortEnum
+  langs:
+  - csharp
+  - vb
+  name: MAXIMUM_AVAILABLE
+  nameWithType: MarketSortEnum.MAXIMUM_AVAILABLE
+  fullName: BetfairDotNet.Enums.Betting.MarketSortEnum.MAXIMUM_AVAILABLE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/MarketSortEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MAXIMUM_AVAILABLE
+    path: ../src/BetfairDotNet/Enums/Betting/MarketSortEnum.cs
+    startLine: 27
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Maximum available to match.
+  example: []
+  syntax:
+    content: MAXIMUM_AVAILABLE = 3
+    return:
+      type: BetfairDotNet.Enums.Betting.MarketSortEnum
+- uid: BetfairDotNet.Enums.Betting.MarketSortEnum.FIRST_TO_START
+  commentId: F:BetfairDotNet.Enums.Betting.MarketSortEnum.FIRST_TO_START
+  id: FIRST_TO_START
+  parent: BetfairDotNet.Enums.Betting.MarketSortEnum
+  langs:
+  - csharp
+  - vb
+  name: FIRST_TO_START
+  nameWithType: MarketSortEnum.FIRST_TO_START
+  fullName: BetfairDotNet.Enums.Betting.MarketSortEnum.FIRST_TO_START
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/MarketSortEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: FIRST_TO_START
+    path: ../src/BetfairDotNet/Enums/Betting/MarketSortEnum.cs
+    startLine: 32
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: The closest markets based on their expected start time.
+  example: []
+  syntax:
+    content: FIRST_TO_START = 4
+    return:
+      type: BetfairDotNet.Enums.Betting.MarketSortEnum
+- uid: BetfairDotNet.Enums.Betting.MarketSortEnum.LAST_TO_START
+  commentId: F:BetfairDotNet.Enums.Betting.MarketSortEnum.LAST_TO_START
+  id: LAST_TO_START
+  parent: BetfairDotNet.Enums.Betting.MarketSortEnum
+  langs:
+  - csharp
+  - vb
+  name: LAST_TO_START
+  nameWithType: MarketSortEnum.LAST_TO_START
+  fullName: BetfairDotNet.Enums.Betting.MarketSortEnum.LAST_TO_START
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/MarketSortEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: LAST_TO_START
+    path: ../src/BetfairDotNet/Enums/Betting/MarketSortEnum.cs
+    startLine: 37
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: The most distant markets based on their expected start time.
+  example: []
+  syntax:
+    content: LAST_TO_START = 5
+    return:
+      type: BetfairDotNet.Enums.Betting.MarketSortEnum
+references:
+- uid: BetfairDotNet.Enums.Betting
+  commentId: N:BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Betting
+  nameWithType: BetfairDotNet.Enums.Betting
+  fullName: BetfairDotNet.Enums.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+- uid: BetfairDotNet.Enums.Betting.MarketSortEnum
+  commentId: T:BetfairDotNet.Enums.Betting.MarketSortEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.MarketSortEnum.html
+  name: MarketSortEnum
+  nameWithType: MarketSortEnum
+  fullName: BetfairDotNet.Enums.Betting.MarketSortEnum

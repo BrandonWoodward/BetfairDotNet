@@ -1,0 +1,130 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Betting.SortDirEnum
+  commentId: T:BetfairDotNet.Enums.Betting.SortDirEnum
+  id: SortDirEnum
+  parent: BetfairDotNet.Enums.Betting
+  children:
+  - BetfairDotNet.Enums.Betting.SortDirEnum.EARLIEST_TO_LATEST
+  - BetfairDotNet.Enums.Betting.SortDirEnum.LATEST_TO_EARLIEST
+  langs:
+  - csharp
+  - vb
+  name: SortDirEnum
+  nameWithType: SortDirEnum
+  fullName: BetfairDotNet.Enums.Betting.SortDirEnum
+  type: Enum
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/SortDirEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SortDirEnum
+    path: ../src/BetfairDotNet/Enums/Betting/SortDirEnum.cs
+    startLine: 6
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EmptyStringToEnumConverter<SortDirEnum>))]
+
+      public enum SortDirEnum
+    content.vb: >-
+      <JsonConverter(GetType(EmptyStringToEnumConverter(Of SortDirEnum)))>
+
+      Public Enum SortDirEnum
+- uid: BetfairDotNet.Enums.Betting.SortDirEnum.EARLIEST_TO_LATEST
+  commentId: F:BetfairDotNet.Enums.Betting.SortDirEnum.EARLIEST_TO_LATEST
+  id: EARLIEST_TO_LATEST
+  parent: BetfairDotNet.Enums.Betting.SortDirEnum
+  langs:
+  - csharp
+  - vb
+  name: EARLIEST_TO_LATEST
+  nameWithType: SortDirEnum.EARLIEST_TO_LATEST
+  fullName: BetfairDotNet.Enums.Betting.SortDirEnum.EARLIEST_TO_LATEST
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/SortDirEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: EARLIEST_TO_LATEST
+    path: ../src/BetfairDotNet/Enums/Betting/SortDirEnum.cs
+    startLine: 12
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Order from earliest value to latest e.g. lowest betId is first in the results.
+  example: []
+  syntax:
+    content: EARLIEST_TO_LATEST = 0
+    return:
+      type: BetfairDotNet.Enums.Betting.SortDirEnum
+- uid: BetfairDotNet.Enums.Betting.SortDirEnum.LATEST_TO_EARLIEST
+  commentId: F:BetfairDotNet.Enums.Betting.SortDirEnum.LATEST_TO_EARLIEST
+  id: LATEST_TO_EARLIEST
+  parent: BetfairDotNet.Enums.Betting.SortDirEnum
+  langs:
+  - csharp
+  - vb
+  name: LATEST_TO_EARLIEST
+  nameWithType: SortDirEnum.LATEST_TO_EARLIEST
+  fullName: BetfairDotNet.Enums.Betting.SortDirEnum.LATEST_TO_EARLIEST
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/SortDirEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: LATEST_TO_EARLIEST
+    path: ../src/BetfairDotNet/Enums/Betting/SortDirEnum.cs
+    startLine: 17
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Order from the latest value to the earliest e.g. highest betId is first in the results.
+  example: []
+  syntax:
+    content: LATEST_TO_EARLIEST = 1
+    return:
+      type: BetfairDotNet.Enums.Betting.SortDirEnum
+references:
+- uid: BetfairDotNet.Enums.Betting
+  commentId: N:BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Betting
+  nameWithType: BetfairDotNet.Enums.Betting
+  fullName: BetfairDotNet.Enums.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+- uid: BetfairDotNet.Enums.Betting.SortDirEnum
+  commentId: T:BetfairDotNet.Enums.Betting.SortDirEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.SortDirEnum.html
+  name: SortDirEnum
+  nameWithType: SortDirEnum
+  fullName: BetfairDotNet.Enums.Betting.SortDirEnum

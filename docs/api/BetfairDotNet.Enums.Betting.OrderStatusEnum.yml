@@ -1,0 +1,200 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Betting.OrderStatusEnum
+  commentId: T:BetfairDotNet.Enums.Betting.OrderStatusEnum
+  id: OrderStatusEnum
+  parent: BetfairDotNet.Enums.Betting
+  children:
+  - BetfairDotNet.Enums.Betting.OrderStatusEnum.EXECUTABLE
+  - BetfairDotNet.Enums.Betting.OrderStatusEnum.EXECUTION_COMPLETE
+  - BetfairDotNet.Enums.Betting.OrderStatusEnum.EXPIRED
+  - BetfairDotNet.Enums.Betting.OrderStatusEnum.PENDING
+  langs:
+  - csharp
+  - vb
+  name: OrderStatusEnum
+  nameWithType: OrderStatusEnum
+  fullName: BetfairDotNet.Enums.Betting.OrderStatusEnum
+  type: Enum
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/OrderStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: OrderStatusEnum
+    path: ../src/BetfairDotNet/Enums/Betting/OrderStatusEnum.cs
+    startLine: 6
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EmptyStringToEnumConverter<OrderStatusEnum>))]
+
+      public enum OrderStatusEnum
+    content.vb: >-
+      <JsonConverter(GetType(EmptyStringToEnumConverter(Of OrderStatusEnum)))>
+
+      Public Enum OrderStatusEnum
+- uid: BetfairDotNet.Enums.Betting.OrderStatusEnum.PENDING
+  commentId: F:BetfairDotNet.Enums.Betting.OrderStatusEnum.PENDING
+  id: PENDING
+  parent: BetfairDotNet.Enums.Betting.OrderStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: PENDING
+  nameWithType: OrderStatusEnum.PENDING
+  fullName: BetfairDotNet.Enums.Betting.OrderStatusEnum.PENDING
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/OrderStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: PENDING
+    path: ../src/BetfairDotNet/Enums/Betting/OrderStatusEnum.cs
+    startLine: 15
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: >-
+    An asynchronous order is yet to be processed. Once the bet has been processed by the exchange 
+
+    (including waiting for any in-play delay), the result will be reported and available on the
+
+    Exchange Stream API and API NG. 
+
+    Not a valid search criteria on MarketFilter
+  example: []
+  syntax:
+    content: PENDING = 0
+    return:
+      type: BetfairDotNet.Enums.Betting.OrderStatusEnum
+- uid: BetfairDotNet.Enums.Betting.OrderStatusEnum.EXECUTION_COMPLETE
+  commentId: F:BetfairDotNet.Enums.Betting.OrderStatusEnum.EXECUTION_COMPLETE
+  id: EXECUTION_COMPLETE
+  parent: BetfairDotNet.Enums.Betting.OrderStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: EXECUTION_COMPLETE
+  nameWithType: OrderStatusEnum.EXECUTION_COMPLETE
+  fullName: BetfairDotNet.Enums.Betting.OrderStatusEnum.EXECUTION_COMPLETE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/OrderStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: EXECUTION_COMPLETE
+    path: ../src/BetfairDotNet/Enums/Betting/OrderStatusEnum.cs
+    startLine: 20
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: An order that does not have any remaining unmatched portion.
+  example: []
+  syntax:
+    content: EXECUTION_COMPLETE = 1
+    return:
+      type: BetfairDotNet.Enums.Betting.OrderStatusEnum
+- uid: BetfairDotNet.Enums.Betting.OrderStatusEnum.EXECUTABLE
+  commentId: F:BetfairDotNet.Enums.Betting.OrderStatusEnum.EXECUTABLE
+  id: EXECUTABLE
+  parent: BetfairDotNet.Enums.Betting.OrderStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: EXECUTABLE
+  nameWithType: OrderStatusEnum.EXECUTABLE
+  fullName: BetfairDotNet.Enums.Betting.OrderStatusEnum.EXECUTABLE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/OrderStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: EXECUTABLE
+    path: ../src/BetfairDotNet/Enums/Betting/OrderStatusEnum.cs
+    startLine: 25
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: An order that has a remaining unmatched portion.
+  example: []
+  syntax:
+    content: EXECUTABLE = 2
+    return:
+      type: BetfairDotNet.Enums.Betting.OrderStatusEnum
+- uid: BetfairDotNet.Enums.Betting.OrderStatusEnum.EXPIRED
+  commentId: F:BetfairDotNet.Enums.Betting.OrderStatusEnum.EXPIRED
+  id: EXPIRED
+  parent: BetfairDotNet.Enums.Betting.OrderStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: EXPIRED
+  nameWithType: OrderStatusEnum.EXPIRED
+  fullName: BetfairDotNet.Enums.Betting.OrderStatusEnum.EXPIRED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/OrderStatusEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: EXPIRED
+    path: ../src/BetfairDotNet/Enums/Betting/OrderStatusEnum.cs
+    startLine: 32
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: >-
+    The order is no longer available for execution due to its time in force constraint. 
+
+    In the case of FILL_OR_KILL orders, this means the order has been killed because it could not be filled to your specifications. 
+
+    Not a valid search criteria on MarketFilter
+  example: []
+  syntax:
+    content: EXPIRED = 3
+    return:
+      type: BetfairDotNet.Enums.Betting.OrderStatusEnum
+references:
+- uid: BetfairDotNet.Enums.Betting
+  commentId: N:BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Betting
+  nameWithType: BetfairDotNet.Enums.Betting
+  fullName: BetfairDotNet.Enums.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+- uid: BetfairDotNet.Enums.Betting.OrderStatusEnum
+  commentId: T:BetfairDotNet.Enums.Betting.OrderStatusEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.OrderStatusEnum.html
+  name: OrderStatusEnum
+  nameWithType: OrderStatusEnum
+  fullName: BetfairDotNet.Enums.Betting.OrderStatusEnum

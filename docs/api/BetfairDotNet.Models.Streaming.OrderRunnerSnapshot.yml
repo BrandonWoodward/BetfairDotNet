@@ -1,0 +1,674 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot
+  commentId: T:BetfairDotNet.Models.Streaming.OrderRunnerSnapshot
+  id: OrderRunnerSnapshot
+  parent: BetfairDotNet.Models.Streaming
+  children:
+  - BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.#ctor(System.Int64)
+  - BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.MatchedBacks
+  - BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.MatchedLays
+  - BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.SelectionId
+  - BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.UnmatchedOrders
+  langs:
+  - csharp
+  - vb
+  name: OrderRunnerSnapshot
+  nameWithType: OrderRunnerSnapshot
+  fullName: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot
+  type: Class
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/OrderRunnerSnapshot.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: OrderRunnerSnapshot
+    path: ../src/BetfairDotNet/Models/Streaming/OrderRunnerSnapshot.cs
+    startLine: 8
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: An immutable atomic snapshot of orders for a given runner.
+  example: []
+  syntax:
+    content: 'public sealed record OrderRunnerSnapshot : IEquatable<OrderRunnerSnapshot>'
+    content.vb: Public NotInheritable Class OrderRunnerSnapshot Implements IEquatable(Of OrderRunnerSnapshot)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{BetfairDotNet.Models.Streaming.OrderRunnerSnapshot}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.SelectionId
+  commentId: P:BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.SelectionId
+  id: SelectionId
+  parent: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot
+  langs:
+  - csharp
+  - vb
+  name: SelectionId
+  nameWithType: OrderRunnerSnapshot.SelectionId
+  fullName: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.SelectionId
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/OrderRunnerSnapshot.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SelectionId
+    path: ../src/BetfairDotNet/Models/Streaming/OrderRunnerSnapshot.cs
+    startLine: 13
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: The unique id of the runner or selection.
+  example: []
+  syntax:
+    content: public long SelectionId { get; init; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property SelectionId As Long
+  overload: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.SelectionId*
+- uid: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.MatchedBacks
+  commentId: P:BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.MatchedBacks
+  id: MatchedBacks
+  parent: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot
+  langs:
+  - csharp
+  - vb
+  name: MatchedBacks
+  nameWithType: OrderRunnerSnapshot.MatchedBacks
+  fullName: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.MatchedBacks
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/OrderRunnerSnapshot.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MatchedBacks
+    path: ../src/BetfairDotNet/Models/Streaming/OrderRunnerSnapshot.cs
+    startLine: 18
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: The matched backs on this runner including partially matched orders.
+  example: []
+  syntax:
+    content: public PriceLadder MatchedBacks { get; init; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Models.Streaming.PriceLadder
+    content.vb: Public Property MatchedBacks As PriceLadder
+  overload: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.MatchedBacks*
+- uid: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.MatchedLays
+  commentId: P:BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.MatchedLays
+  id: MatchedLays
+  parent: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot
+  langs:
+  - csharp
+  - vb
+  name: MatchedLays
+  nameWithType: OrderRunnerSnapshot.MatchedLays
+  fullName: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.MatchedLays
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/OrderRunnerSnapshot.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MatchedLays
+    path: ../src/BetfairDotNet/Models/Streaming/OrderRunnerSnapshot.cs
+    startLine: 23
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: The matched lays on this runner including partially matched orders.
+  example: []
+  syntax:
+    content: public PriceLadder MatchedLays { get; init; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Models.Streaming.PriceLadder
+    content.vb: Public Property MatchedLays As PriceLadder
+  overload: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.MatchedLays*
+- uid: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.UnmatchedOrders
+  commentId: P:BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.UnmatchedOrders
+  id: UnmatchedOrders
+  parent: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot
+  langs:
+  - csharp
+  - vb
+  name: UnmatchedOrders
+  nameWithType: OrderRunnerSnapshot.UnmatchedOrders
+  fullName: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.UnmatchedOrders
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/OrderRunnerSnapshot.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: UnmatchedOrders
+    path: ../src/BetfairDotNet/Models/Streaming/OrderRunnerSnapshot.cs
+    startLine: 28
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: The orders that are yet to be matched on this runner.
+  example: []
+  syntax:
+    content: public Dictionary<string, ESAOrder> UnmatchedOrders { get; init; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,BetfairDotNet.Models.Streaming.ESAOrder}
+    content.vb: Public Property UnmatchedOrders As Dictionary(Of String, ESAOrder)
+  overload: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.UnmatchedOrders*
+- uid: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.#ctor(System.Int64)
+  commentId: M:BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.#ctor(System.Int64)
+  id: '#ctor(System.Int64)'
+  parent: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot
+  langs:
+  - csharp
+  - vb
+  name: OrderRunnerSnapshot(long)
+  nameWithType: OrderRunnerSnapshot.OrderRunnerSnapshot(long)
+  fullName: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.OrderRunnerSnapshot(long)
+  type: Constructor
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/OrderRunnerSnapshot.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: .ctor
+    path: ../src/BetfairDotNet/Models/Streaming/OrderRunnerSnapshot.cs
+    startLine: 31
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  syntax:
+    content: public OrderRunnerSnapshot(long selectionId)
+    parameters:
+    - id: selectionId
+      type: System.Int64
+    content.vb: Public Sub New(selectionId As Long)
+  overload: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.#ctor*
+  nameWithType.vb: OrderRunnerSnapshot.New(Long)
+  fullName.vb: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.New(Long)
+  name.vb: New(Long)
+references:
+- uid: BetfairDotNet.Models.Streaming
+  commentId: N:BetfairDotNet.Models.Streaming
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Streaming
+  nameWithType: BetfairDotNet.Models.Streaming
+  fullName: BetfairDotNet.Models.Streaming
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Streaming
+    name: Streaming
+    href: BetfairDotNet.Models.Streaming.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Streaming
+    name: Streaming
+    href: BetfairDotNet.Models.Streaming.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{BetfairDotNet.Models.Streaming.OrderRunnerSnapshot}
+  commentId: T:System.IEquatable{BetfairDotNet.Models.Streaming.OrderRunnerSnapshot}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<OrderRunnerSnapshot>
+  nameWithType: IEquatable<OrderRunnerSnapshot>
+  fullName: System.IEquatable<BetfairDotNet.Models.Streaming.OrderRunnerSnapshot>
+  nameWithType.vb: IEquatable(Of OrderRunnerSnapshot)
+  fullName.vb: System.IEquatable(Of BetfairDotNet.Models.Streaming.OrderRunnerSnapshot)
+  name.vb: IEquatable(Of OrderRunnerSnapshot)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot
+    name: OrderRunnerSnapshot
+    href: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot
+    name: OrderRunnerSnapshot
+    href: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.SelectionId*
+  commentId: Overload:BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.SelectionId
+  href: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.html#BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.SelectionId
+  name: SelectionId
+  nameWithType: OrderRunnerSnapshot.SelectionId
+  fullName: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.SelectionId
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.MatchedBacks*
+  commentId: Overload:BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.MatchedBacks
+  href: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.html#BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.MatchedBacks
+  name: MatchedBacks
+  nameWithType: OrderRunnerSnapshot.MatchedBacks
+  fullName: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.MatchedBacks
+- uid: BetfairDotNet.Models.Streaming.PriceLadder
+  commentId: T:BetfairDotNet.Models.Streaming.PriceLadder
+  parent: BetfairDotNet.Models.Streaming
+  href: BetfairDotNet.Models.Streaming.PriceLadder.html
+  name: PriceLadder
+  nameWithType: PriceLadder
+  fullName: BetfairDotNet.Models.Streaming.PriceLadder
+- uid: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.MatchedLays*
+  commentId: Overload:BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.MatchedLays
+  href: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.html#BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.MatchedLays
+  name: MatchedLays
+  nameWithType: OrderRunnerSnapshot.MatchedLays
+  fullName: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.MatchedLays
+- uid: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.UnmatchedOrders*
+  commentId: Overload:BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.UnmatchedOrders
+  href: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.html#BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.UnmatchedOrders
+  name: UnmatchedOrders
+  nameWithType: OrderRunnerSnapshot.UnmatchedOrders
+  fullName: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.UnmatchedOrders
+- uid: System.Collections.Generic.Dictionary{System.String,BetfairDotNet.Models.Streaming.ESAOrder}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,BetfairDotNet.Models.Streaming.ESAOrder}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, ESAOrder>
+  nameWithType: Dictionary<string, ESAOrder>
+  fullName: System.Collections.Generic.Dictionary<string, BetfairDotNet.Models.Streaming.ESAOrder>
+  nameWithType.vb: Dictionary(Of String, ESAOrder)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, BetfairDotNet.Models.Streaming.ESAOrder)
+  name.vb: Dictionary(Of String, ESAOrder)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: BetfairDotNet.Models.Streaming.ESAOrder
+    name: ESAOrder
+    href: BetfairDotNet.Models.Streaming.ESAOrder.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: BetfairDotNet.Models.Streaming.ESAOrder
+    name: ESAOrder
+    href: BetfairDotNet.Models.Streaming.ESAOrder.html
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.#ctor*
+  commentId: Overload:BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.#ctor
+  href: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.html#BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.#ctor(System.Int64)
+  name: OrderRunnerSnapshot
+  nameWithType: OrderRunnerSnapshot.OrderRunnerSnapshot
+  fullName: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.OrderRunnerSnapshot
+  nameWithType.vb: OrderRunnerSnapshot.New
+  fullName.vb: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.New
+  name.vb: New

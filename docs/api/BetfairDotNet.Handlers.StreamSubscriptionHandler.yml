@@ -1,0 +1,584 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Handlers.StreamSubscriptionHandler
+  commentId: T:BetfairDotNet.Handlers.StreamSubscriptionHandler
+  id: StreamSubscriptionHandler
+  parent: BetfairDotNet.Handlers
+  children:
+  - BetfairDotNet.Handlers.StreamSubscriptionHandler.Subscribe(BetfairDotNet.Models.Streaming.StreamConfiguration,BetfairDotNet.Models.Streaming.MarketSubscription,BetfairDotNet.Models.Streaming.OrderSubscription,System.Action{BetfairDotNet.Models.Streaming.MarketSnapshot},System.Action{BetfairDotNet.Models.Streaming.OrderMarketSnapshot},System.Action{BetfairDotNet.Models.Exceptions.BetfairESAException})
+  - BetfairDotNet.Handlers.StreamSubscriptionHandler.Unsubscribe
+  langs:
+  - csharp
+  - vb
+  name: StreamSubscriptionHandler
+  nameWithType: StreamSubscriptionHandler
+  fullName: BetfairDotNet.Handlers.StreamSubscriptionHandler
+  type: Class
+  source:
+    remote:
+      path: src/BetfairDotNet/Handlers/StreamSubscriptionHandler.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: StreamSubscriptionHandler
+    path: ../src/BetfairDotNet/Handlers/StreamSubscriptionHandler.cs
+    startLine: 11
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Handlers
+  summary: Handles subscriptions to the Betfair Streaming API.
+  example: []
+  syntax:
+    content: public sealed class StreamSubscriptionHandler
+    content.vb: Public NotInheritable Class StreamSubscriptionHandler
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BetfairDotNet.Handlers.StreamSubscriptionHandler.Subscribe(BetfairDotNet.Models.Streaming.StreamConfiguration,BetfairDotNet.Models.Streaming.MarketSubscription,BetfairDotNet.Models.Streaming.OrderSubscription,System.Action{BetfairDotNet.Models.Streaming.MarketSnapshot},System.Action{BetfairDotNet.Models.Streaming.OrderMarketSnapshot},System.Action{BetfairDotNet.Models.Exceptions.BetfairESAException})
+  commentId: M:BetfairDotNet.Handlers.StreamSubscriptionHandler.Subscribe(BetfairDotNet.Models.Streaming.StreamConfiguration,BetfairDotNet.Models.Streaming.MarketSubscription,BetfairDotNet.Models.Streaming.OrderSubscription,System.Action{BetfairDotNet.Models.Streaming.MarketSnapshot},System.Action{BetfairDotNet.Models.Streaming.OrderMarketSnapshot},System.Action{BetfairDotNet.Models.Exceptions.BetfairESAException})
+  id: Subscribe(BetfairDotNet.Models.Streaming.StreamConfiguration,BetfairDotNet.Models.Streaming.MarketSubscription,BetfairDotNet.Models.Streaming.OrderSubscription,System.Action{BetfairDotNet.Models.Streaming.MarketSnapshot},System.Action{BetfairDotNet.Models.Streaming.OrderMarketSnapshot},System.Action{BetfairDotNet.Models.Exceptions.BetfairESAException})
+  parent: BetfairDotNet.Handlers.StreamSubscriptionHandler
+  langs:
+  - csharp
+  - vb
+  name: Subscribe(StreamConfiguration, MarketSubscription?, OrderSubscription?, Action<MarketSnapshot>?, Action<OrderMarketSnapshot>?, Action<BetfairESAException>?)
+  nameWithType: StreamSubscriptionHandler.Subscribe(StreamConfiguration, MarketSubscription?, OrderSubscription?, Action<MarketSnapshot>?, Action<OrderMarketSnapshot>?, Action<BetfairESAException>?)
+  fullName: BetfairDotNet.Handlers.StreamSubscriptionHandler.Subscribe(BetfairDotNet.Models.Streaming.StreamConfiguration, BetfairDotNet.Models.Streaming.MarketSubscription?, BetfairDotNet.Models.Streaming.OrderSubscription?, System.Action<BetfairDotNet.Models.Streaming.MarketSnapshot>?, System.Action<BetfairDotNet.Models.Streaming.OrderMarketSnapshot>?, System.Action<BetfairDotNet.Models.Exceptions.BetfairESAException>?)
+  type: Method
+  source:
+    remote:
+      path: src/BetfairDotNet/Handlers/StreamSubscriptionHandler.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Subscribe
+    path: ../src/BetfairDotNet/Handlers/StreamSubscriptionHandler.cs
+    startLine: 46
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Handlers
+  example: []
+  syntax:
+    content: public Task Subscribe(StreamConfiguration streamConfiguration, MarketSubscription? marketSubscription = null, OrderSubscription? orderSubscription = null, Action<MarketSnapshot>? onMarketChange = null, Action<OrderMarketSnapshot>? onOrderChange = null, Action<BetfairESAException>? onException = null)
+    parameters:
+    - id: streamConfiguration
+      type: BetfairDotNet.Models.Streaming.StreamConfiguration
+    - id: marketSubscription
+      type: BetfairDotNet.Models.Streaming.MarketSubscription
+    - id: orderSubscription
+      type: BetfairDotNet.Models.Streaming.OrderSubscription
+    - id: onMarketChange
+      type: System.Action{BetfairDotNet.Models.Streaming.MarketSnapshot}
+    - id: onOrderChange
+      type: System.Action{BetfairDotNet.Models.Streaming.OrderMarketSnapshot}
+    - id: onException
+      type: System.Action{BetfairDotNet.Models.Exceptions.BetfairESAException}
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function Subscribe(streamConfiguration As StreamConfiguration, marketSubscription As MarketSubscription = Nothing, orderSubscription As OrderSubscription = Nothing, onMarketChange As Action(Of MarketSnapshot) = Nothing, onOrderChange As Action(Of OrderMarketSnapshot) = Nothing, onException As Action(Of BetfairESAException) = Nothing) As Task
+  overload: BetfairDotNet.Handlers.StreamSubscriptionHandler.Subscribe*
+  nameWithType.vb: StreamSubscriptionHandler.Subscribe(StreamConfiguration, MarketSubscription, OrderSubscription, Action(Of MarketSnapshot), Action(Of OrderMarketSnapshot), Action(Of BetfairESAException))
+  fullName.vb: BetfairDotNet.Handlers.StreamSubscriptionHandler.Subscribe(BetfairDotNet.Models.Streaming.StreamConfiguration, BetfairDotNet.Models.Streaming.MarketSubscription, BetfairDotNet.Models.Streaming.OrderSubscription, System.Action(Of BetfairDotNet.Models.Streaming.MarketSnapshot), System.Action(Of BetfairDotNet.Models.Streaming.OrderMarketSnapshot), System.Action(Of BetfairDotNet.Models.Exceptions.BetfairESAException))
+  name.vb: Subscribe(StreamConfiguration, MarketSubscription, OrderSubscription, Action(Of MarketSnapshot), Action(Of OrderMarketSnapshot), Action(Of BetfairESAException))
+- uid: BetfairDotNet.Handlers.StreamSubscriptionHandler.Unsubscribe
+  commentId: M:BetfairDotNet.Handlers.StreamSubscriptionHandler.Unsubscribe
+  id: Unsubscribe
+  parent: BetfairDotNet.Handlers.StreamSubscriptionHandler
+  langs:
+  - csharp
+  - vb
+  name: Unsubscribe()
+  nameWithType: StreamSubscriptionHandler.Unsubscribe()
+  fullName: BetfairDotNet.Handlers.StreamSubscriptionHandler.Unsubscribe()
+  type: Method
+  source:
+    remote:
+      path: src/BetfairDotNet/Handlers/StreamSubscriptionHandler.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Unsubscribe
+    path: ../src/BetfairDotNet/Handlers/StreamSubscriptionHandler.cs
+    startLine: 72
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Handlers
+  example: []
+  syntax:
+    content: public void Unsubscribe()
+    content.vb: Public Sub Unsubscribe()
+  overload: BetfairDotNet.Handlers.StreamSubscriptionHandler.Unsubscribe*
+references:
+- uid: BetfairDotNet.Handlers
+  commentId: N:BetfairDotNet.Handlers
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Handlers
+  nameWithType: BetfairDotNet.Handlers
+  fullName: BetfairDotNet.Handlers
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Handlers
+    name: Handlers
+    href: BetfairDotNet.Handlers.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Handlers
+    name: Handlers
+    href: BetfairDotNet.Handlers.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BetfairDotNet.Handlers.StreamSubscriptionHandler.Subscribe*
+  commentId: Overload:BetfairDotNet.Handlers.StreamSubscriptionHandler.Subscribe
+  href: BetfairDotNet.Handlers.StreamSubscriptionHandler.html#BetfairDotNet.Handlers.StreamSubscriptionHandler.Subscribe(BetfairDotNet.Models.Streaming.StreamConfiguration,BetfairDotNet.Models.Streaming.MarketSubscription,BetfairDotNet.Models.Streaming.OrderSubscription,System.Action{BetfairDotNet.Models.Streaming.MarketSnapshot},System.Action{BetfairDotNet.Models.Streaming.OrderMarketSnapshot},System.Action{BetfairDotNet.Models.Exceptions.BetfairESAException})
+  name: Subscribe
+  nameWithType: StreamSubscriptionHandler.Subscribe
+  fullName: BetfairDotNet.Handlers.StreamSubscriptionHandler.Subscribe
+- uid: BetfairDotNet.Models.Streaming.StreamConfiguration
+  commentId: T:BetfairDotNet.Models.Streaming.StreamConfiguration
+  parent: BetfairDotNet.Models.Streaming
+  href: BetfairDotNet.Models.Streaming.StreamConfiguration.html
+  name: StreamConfiguration
+  nameWithType: StreamConfiguration
+  fullName: BetfairDotNet.Models.Streaming.StreamConfiguration
+- uid: BetfairDotNet.Models.Streaming.MarketSubscription
+  commentId: T:BetfairDotNet.Models.Streaming.MarketSubscription
+  parent: BetfairDotNet.Models.Streaming
+  href: BetfairDotNet.Models.Streaming.MarketSubscription.html
+  name: MarketSubscription
+  nameWithType: MarketSubscription
+  fullName: BetfairDotNet.Models.Streaming.MarketSubscription
+- uid: BetfairDotNet.Models.Streaming.OrderSubscription
+  commentId: T:BetfairDotNet.Models.Streaming.OrderSubscription
+  parent: BetfairDotNet.Models.Streaming
+  href: BetfairDotNet.Models.Streaming.OrderSubscription.html
+  name: OrderSubscription
+  nameWithType: OrderSubscription
+  fullName: BetfairDotNet.Models.Streaming.OrderSubscription
+- uid: System.Action{BetfairDotNet.Models.Streaming.MarketSnapshot}
+  commentId: T:System.Action{BetfairDotNet.Models.Streaming.MarketSnapshot}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<MarketSnapshot>
+  nameWithType: Action<MarketSnapshot>
+  fullName: System.Action<BetfairDotNet.Models.Streaming.MarketSnapshot>
+  nameWithType.vb: Action(Of MarketSnapshot)
+  fullName.vb: System.Action(Of BetfairDotNet.Models.Streaming.MarketSnapshot)
+  name.vb: Action(Of MarketSnapshot)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: BetfairDotNet.Models.Streaming.MarketSnapshot
+    name: MarketSnapshot
+    href: BetfairDotNet.Models.Streaming.MarketSnapshot.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Streaming.MarketSnapshot
+    name: MarketSnapshot
+    href: BetfairDotNet.Models.Streaming.MarketSnapshot.html
+  - name: )
+- uid: System.Action{BetfairDotNet.Models.Streaming.OrderMarketSnapshot}
+  commentId: T:System.Action{BetfairDotNet.Models.Streaming.OrderMarketSnapshot}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<OrderMarketSnapshot>
+  nameWithType: Action<OrderMarketSnapshot>
+  fullName: System.Action<BetfairDotNet.Models.Streaming.OrderMarketSnapshot>
+  nameWithType.vb: Action(Of OrderMarketSnapshot)
+  fullName.vb: System.Action(Of BetfairDotNet.Models.Streaming.OrderMarketSnapshot)
+  name.vb: Action(Of OrderMarketSnapshot)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: BetfairDotNet.Models.Streaming.OrderMarketSnapshot
+    name: OrderMarketSnapshot
+    href: BetfairDotNet.Models.Streaming.OrderMarketSnapshot.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Streaming.OrderMarketSnapshot
+    name: OrderMarketSnapshot
+    href: BetfairDotNet.Models.Streaming.OrderMarketSnapshot.html
+  - name: )
+- uid: System.Action{BetfairDotNet.Models.Exceptions.BetfairESAException}
+  commentId: T:System.Action{BetfairDotNet.Models.Exceptions.BetfairESAException}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<BetfairESAException>
+  nameWithType: Action<BetfairESAException>
+  fullName: System.Action<BetfairDotNet.Models.Exceptions.BetfairESAException>
+  nameWithType.vb: Action(Of BetfairESAException)
+  fullName.vb: System.Action(Of BetfairDotNet.Models.Exceptions.BetfairESAException)
+  name.vb: Action(Of BetfairESAException)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: BetfairDotNet.Models.Exceptions.BetfairESAException
+    name: BetfairESAException
+    href: BetfairDotNet.Models.Exceptions.BetfairESAException.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Exceptions.BetfairESAException
+    name: BetfairESAException
+    href: BetfairDotNet.Models.Exceptions.BetfairESAException.html
+  - name: )
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: BetfairDotNet.Models.Streaming
+  commentId: N:BetfairDotNet.Models.Streaming
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Streaming
+  nameWithType: BetfairDotNet.Models.Streaming
+  fullName: BetfairDotNet.Models.Streaming
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Streaming
+    name: Streaming
+    href: BetfairDotNet.Models.Streaming.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Streaming
+    name: Streaming
+    href: BetfairDotNet.Models.Streaming.html
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: BetfairDotNet.Handlers.StreamSubscriptionHandler.Unsubscribe*
+  commentId: Overload:BetfairDotNet.Handlers.StreamSubscriptionHandler.Unsubscribe
+  href: BetfairDotNet.Handlers.StreamSubscriptionHandler.html#BetfairDotNet.Handlers.StreamSubscriptionHandler.Unsubscribe
+  name: Unsubscribe
+  nameWithType: StreamSubscriptionHandler.Unsubscribe
+  fullName: BetfairDotNet.Handlers.StreamSubscriptionHandler.Unsubscribe

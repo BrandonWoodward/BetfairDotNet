@@ -1,0 +1,106 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Account.ItemClassEnum
+  commentId: T:BetfairDotNet.Enums.Account.ItemClassEnum
+  id: ItemClassEnum
+  parent: BetfairDotNet.Enums.Account
+  children:
+  - BetfairDotNet.Enums.Account.ItemClassEnum.UNKNOWN
+  langs:
+  - csharp
+  - vb
+  name: ItemClassEnum
+  nameWithType: ItemClassEnum
+  fullName: BetfairDotNet.Enums.Account.ItemClassEnum
+  type: Enum
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/ItemClassEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ItemClassEnum
+    path: ../src/BetfairDotNet/Enums/Account/ItemClassEnum.cs
+    startLine: 6
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EmptyStringToEnumConverter<ItemClassEnum>))]
+
+      public enum ItemClassEnum
+    content.vb: >-
+      <JsonConverter(GetType(EmptyStringToEnumConverter(Of ItemClassEnum)))>
+
+      Public Enum ItemClassEnum
+- uid: BetfairDotNet.Enums.Account.ItemClassEnum.UNKNOWN
+  commentId: F:BetfairDotNet.Enums.Account.ItemClassEnum.UNKNOWN
+  id: UNKNOWN
+  parent: BetfairDotNet.Enums.Account.ItemClassEnum
+  langs:
+  - csharp
+  - vb
+  name: UNKNOWN
+  nameWithType: ItemClassEnum.UNKNOWN
+  fullName: BetfairDotNet.Enums.Account.ItemClassEnum.UNKNOWN
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/ItemClassEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: UNKNOWN
+    path: ../src/BetfairDotNet/Enums/Account/ItemClassEnum.cs
+    startLine: 14
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: >-
+    Statement item not mapped to a specific class. All values will be concatenated into a single key/value pair. 
+
+    The key will be 'unknownStatementItem' and the value will be a comma separated string. 
+
+    This is used to represent commission payment items.
+  example: []
+  syntax:
+    content: UNKNOWN = 0
+    return:
+      type: BetfairDotNet.Enums.Account.ItemClassEnum
+references:
+- uid: BetfairDotNet.Enums.Account
+  commentId: N:BetfairDotNet.Enums.Account
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Account
+  nameWithType: BetfairDotNet.Enums.Account
+  fullName: BetfairDotNet.Enums.Account
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Account
+    name: Account
+    href: BetfairDotNet.Enums.Account.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Account
+    name: Account
+    href: BetfairDotNet.Enums.Account.html
+- uid: BetfairDotNet.Enums.Account.ItemClassEnum
+  commentId: T:BetfairDotNet.Enums.Account.ItemClassEnum
+  parent: BetfairDotNet.Enums.Account
+  href: BetfairDotNet.Enums.Account.ItemClassEnum.html
+  name: ItemClassEnum
+  nameWithType: ItemClassEnum
+  fullName: BetfairDotNet.Enums.Account.ItemClassEnum

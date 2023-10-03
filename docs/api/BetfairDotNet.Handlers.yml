@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Handlers
+  commentId: N:BetfairDotNet.Handlers
+  id: Handlers
+  parent: BetfairDotNet
+  children:
+  - BetfairDotNet.Handlers.StreamSubscriptionHandler
+  langs:
+  - csharp
+  - vb
+  name: BetfairDotNet.Handlers
+  nameWithType: BetfairDotNet.Handlers
+  fullName: BetfairDotNet.Handlers
+  type: Namespace
+  assemblies:
+  - BetfairDotNet
+references:
+- uid: BetfairDotNet.Handlers.StreamSubscriptionHandler
+  commentId: T:BetfairDotNet.Handlers.StreamSubscriptionHandler
+  href: BetfairDotNet.Handlers.StreamSubscriptionHandler.html
+  name: StreamSubscriptionHandler
+  nameWithType: StreamSubscriptionHandler
+  fullName: BetfairDotNet.Handlers.StreamSubscriptionHandler

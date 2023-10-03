@@ -1,0 +1,1461 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Models.Streaming.ESAOrder
+  commentId: T:BetfairDotNet.Models.Streaming.ESAOrder
+  id: ESAOrder
+  parent: BetfairDotNet.Models.Streaming
+  children:
+  - BetfairDotNet.Models.Streaming.ESAOrder.AveragePriceMatched
+  - BetfairDotNet.Models.Streaming.ESAOrder.Bsp
+  - BetfairDotNet.Models.Streaming.ESAOrder.CancelledDate
+  - BetfairDotNet.Models.Streaming.ESAOrder.Id
+  - BetfairDotNet.Models.Streaming.ESAOrder.MatchedDate
+  - BetfairDotNet.Models.Streaming.ESAOrder.OrderType
+  - BetfairDotNet.Models.Streaming.ESAOrder.PersistenceType
+  - BetfairDotNet.Models.Streaming.ESAOrder.PlacedDate
+  - BetfairDotNet.Models.Streaming.ESAOrder.Price
+  - BetfairDotNet.Models.Streaming.ESAOrder.Regulator
+  - BetfairDotNet.Models.Streaming.ESAOrder.RegulatorAuthCode
+  - BetfairDotNet.Models.Streaming.ESAOrder.Side
+  - BetfairDotNet.Models.Streaming.ESAOrder.Size
+  - BetfairDotNet.Models.Streaming.ESAOrder.SizeCancelled
+  - BetfairDotNet.Models.Streaming.ESAOrder.SizeLapsed
+  - BetfairDotNet.Models.Streaming.ESAOrder.SizeMatched
+  - BetfairDotNet.Models.Streaming.ESAOrder.SizeRemaining
+  - BetfairDotNet.Models.Streaming.ESAOrder.SizeVoided
+  - BetfairDotNet.Models.Streaming.ESAOrder.Status
+  langs:
+  - csharp
+  - vb
+  name: ESAOrder
+  nameWithType: ESAOrder
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder
+  type: Class
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ESAOrder
+    path: ../src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+    startLine: 9
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: ''
+  example: []
+  syntax:
+    content: 'public sealed record ESAOrder : IEquatable<ESAOrder>'
+    content.vb: Public NotInheritable Class ESAOrder Implements IEquatable(Of ESAOrder)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{BetfairDotNet.Models.Streaming.ESAOrder}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.Side
+  commentId: P:BetfairDotNet.Models.Streaming.ESAOrder.Side
+  id: Side
+  parent: BetfairDotNet.Models.Streaming.ESAOrder
+  langs:
+  - csharp
+  - vb
+  name: Side
+  nameWithType: ESAOrder.Side
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.Side
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Side
+    path: ../src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+    startLine: 14
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: BACK or LAY
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("side")]
+
+      public SideEnum Side { get; init; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Enums.Betting.SideEnum
+    content.vb: >-
+      <JsonPropertyName("side")>
+
+      Public Property Side As SideEnum
+  overload: BetfairDotNet.Models.Streaming.ESAOrder.Side*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: side
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.PersistenceType
+  commentId: P:BetfairDotNet.Models.Streaming.ESAOrder.PersistenceType
+  id: PersistenceType
+  parent: BetfairDotNet.Models.Streaming.ESAOrder
+  langs:
+  - csharp
+  - vb
+  name: PersistenceType
+  nameWithType: ESAOrder.PersistenceType
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.PersistenceType
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: PersistenceType
+    path: ../src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+    startLine: 20
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: Persistence Type - whether the order will persist at in play or not (L = LAPSE, P = PERSIST, MOC = Market On Close)
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("pt")]
+
+      public PersistenceTypeEnum PersistenceType { get; init; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Enums.Betting.PersistenceTypeEnum
+    content.vb: >-
+      <JsonPropertyName("pt")>
+
+      Public Property PersistenceType As PersistenceTypeEnum
+  overload: BetfairDotNet.Models.Streaming.ESAOrder.PersistenceType*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: pt
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.OrderType
+  commentId: P:BetfairDotNet.Models.Streaming.ESAOrder.OrderType
+  id: OrderType
+  parent: BetfairDotNet.Models.Streaming.ESAOrder
+  langs:
+  - csharp
+  - vb
+  name: OrderType
+  nameWithType: ESAOrder.OrderType
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.OrderType
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: OrderType
+    path: ../src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+    startLine: 26
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: Order Type - the type of the order (L = LIMIT, MOC = MARKET_ON_CLOSE, LOC = LIMIT_ON_CLOSE)
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("ot")]
+
+      public OrderTypeEnum OrderType { get; init; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Enums.Betting.OrderTypeEnum
+    content.vb: >-
+      <JsonPropertyName("ot")>
+
+      Public Property OrderType As OrderTypeEnum
+  overload: BetfairDotNet.Models.Streaming.ESAOrder.OrderType*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: ot
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.Status
+  commentId: P:BetfairDotNet.Models.Streaming.ESAOrder.Status
+  id: Status
+  parent: BetfairDotNet.Models.Streaming.ESAOrder
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: ESAOrder.Status
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.Status
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Status
+    path: ../src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+    startLine: 32
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: The status of the order (E = EXECUTABLE, EC = EXECUTION_COMPLETE)
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("status")]
+
+      public OrderStatusEnum Status { get; init; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Enums.Betting.OrderStatusEnum
+    content.vb: >-
+      <JsonPropertyName("status")>
+
+      Public Property Status As OrderStatusEnum
+  overload: BetfairDotNet.Models.Streaming.ESAOrder.Status*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: status
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.SizeVoided
+  commentId: P:BetfairDotNet.Models.Streaming.ESAOrder.SizeVoided
+  id: SizeVoided
+  parent: BetfairDotNet.Models.Streaming.ESAOrder
+  langs:
+  - csharp
+  - vb
+  name: SizeVoided
+  nameWithType: ESAOrder.SizeVoided
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.SizeVoided
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SizeVoided
+    path: ../src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+    startLine: 38
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: The amount of the order that has been voided
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("sv")]
+
+      public double SizeVoided { get; init; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonPropertyName("sv")>
+
+      Public Property SizeVoided As Double
+  overload: BetfairDotNet.Models.Streaming.ESAOrder.SizeVoided*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: sv
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.Price
+  commentId: P:BetfairDotNet.Models.Streaming.ESAOrder.Price
+  id: Price
+  parent: BetfairDotNet.Models.Streaming.ESAOrder
+  langs:
+  - csharp
+  - vb
+  name: Price
+  nameWithType: ESAOrder.Price
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.Price
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Price
+    path: ../src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+    startLine: 44
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: The original placed price of the order
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("p")]
+
+      public double Price { get; init; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonPropertyName("p")>
+
+      Public Property Price As Double
+  overload: BetfairDotNet.Models.Streaming.ESAOrder.Price*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: p
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.SizeCancelled
+  commentId: P:BetfairDotNet.Models.Streaming.ESAOrder.SizeCancelled
+  id: SizeCancelled
+  parent: BetfairDotNet.Models.Streaming.ESAOrder
+  langs:
+  - csharp
+  - vb
+  name: SizeCancelled
+  nameWithType: ESAOrder.SizeCancelled
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.SizeCancelled
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SizeCancelled
+    path: ../src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+    startLine: 50
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: The amount of the order that has been cancelled
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("sc")]
+
+      public double? SizeCancelled { get; init; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: >-
+      <JsonPropertyName("sc")>
+
+      Public Property SizeCancelled As Double?
+  overload: BetfairDotNet.Models.Streaming.ESAOrder.SizeCancelled*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: sc
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.Regulator
+  commentId: P:BetfairDotNet.Models.Streaming.ESAOrder.Regulator
+  id: Regulator
+  parent: BetfairDotNet.Models.Streaming.ESAOrder
+  langs:
+  - csharp
+  - vb
+  name: Regulator
+  nameWithType: ESAOrder.Regulator
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.Regulator
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Regulator
+    path: ../src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+    startLine: 56
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: The regulator of the order
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("rc")]
+
+      public string Regulator { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("rc")>
+
+      Public Property Regulator As String
+  overload: BetfairDotNet.Models.Streaming.ESAOrder.Regulator*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: rc
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.Size
+  commentId: P:BetfairDotNet.Models.Streaming.ESAOrder.Size
+  id: Size
+  parent: BetfairDotNet.Models.Streaming.ESAOrder
+  langs:
+  - csharp
+  - vb
+  name: Size
+  nameWithType: ESAOrder.Size
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.Size
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Size
+    path: ../src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+    startLine: 62
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: The original placed size of the order
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("s")]
+
+      public double Size { get; init; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonPropertyName("s")>
+
+      Public Property Size As Double
+  overload: BetfairDotNet.Models.Streaming.ESAOrder.Size*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: s
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.PlacedDate
+  commentId: P:BetfairDotNet.Models.Streaming.ESAOrder.PlacedDate
+  id: PlacedDate
+  parent: BetfairDotNet.Models.Streaming.ESAOrder
+  langs:
+  - csharp
+  - vb
+  name: PlacedDate
+  nameWithType: ESAOrder.PlacedDate
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.PlacedDate
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: PlacedDate
+    path: ../src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+    startLine: 68
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: The date the order was placed, returned in ms since epoch
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("pd")]
+
+      public long PlacedDate { get; init; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: >-
+      <JsonPropertyName("pd")>
+
+      Public Property PlacedDate As Long
+  overload: BetfairDotNet.Models.Streaming.ESAOrder.PlacedDate*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: pd
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.RegulatorAuthCode
+  commentId: P:BetfairDotNet.Models.Streaming.ESAOrder.RegulatorAuthCode
+  id: RegulatorAuthCode
+  parent: BetfairDotNet.Models.Streaming.ESAOrder
+  langs:
+  - csharp
+  - vb
+  name: RegulatorAuthCode
+  nameWithType: ESAOrder.RegulatorAuthCode
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.RegulatorAuthCode
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: RegulatorAuthCode
+    path: ../src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+    startLine: 74
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: The auth code returned by the regulator
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("rac")]
+
+      public string RegulatorAuthCode { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("rac")>
+
+      Public Property RegulatorAuthCode As String
+  overload: BetfairDotNet.Models.Streaming.ESAOrder.RegulatorAuthCode*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: rac
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.MatchedDate
+  commentId: P:BetfairDotNet.Models.Streaming.ESAOrder.MatchedDate
+  id: MatchedDate
+  parent: BetfairDotNet.Models.Streaming.ESAOrder
+  langs:
+  - csharp
+  - vb
+  name: MatchedDate
+  nameWithType: ESAOrder.MatchedDate
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.MatchedDate
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MatchedDate
+    path: ../src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+    startLine: 80
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: The date the order was matched (null if the order is not matched)
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("md")]
+
+      public long? MatchedDate { get; init; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int64}
+    content.vb: >-
+      <JsonPropertyName("md")>
+
+      Public Property MatchedDate As Long?
+  overload: BetfairDotNet.Models.Streaming.ESAOrder.MatchedDate*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: md
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.SizeLapsed
+  commentId: P:BetfairDotNet.Models.Streaming.ESAOrder.SizeLapsed
+  id: SizeLapsed
+  parent: BetfairDotNet.Models.Streaming.ESAOrder
+  langs:
+  - csharp
+  - vb
+  name: SizeLapsed
+  nameWithType: ESAOrder.SizeLapsed
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.SizeLapsed
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SizeLapsed
+    path: ../src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+    startLine: 86
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: The amount of the order that has been lapsed
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("sl")]
+
+      public double? SizeLapsed { get; init; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: >-
+      <JsonPropertyName("sl")>
+
+      Public Property SizeLapsed As Double?
+  overload: BetfairDotNet.Models.Streaming.ESAOrder.SizeLapsed*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: sl
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.AveragePriceMatched
+  commentId: P:BetfairDotNet.Models.Streaming.ESAOrder.AveragePriceMatched
+  id: AveragePriceMatched
+  parent: BetfairDotNet.Models.Streaming.ESAOrder
+  langs:
+  - csharp
+  - vb
+  name: AveragePriceMatched
+  nameWithType: ESAOrder.AveragePriceMatched
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.AveragePriceMatched
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: AveragePriceMatched
+    path: ../src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+    startLine: 92
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: The average price the order was matched at (null if the order is not matched)
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("avp")]
+
+      public double? AveragePriceMatched { get; init; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: >-
+      <JsonPropertyName("avp")>
+
+      Public Property AveragePriceMatched As Double?
+  overload: BetfairDotNet.Models.Streaming.ESAOrder.AveragePriceMatched*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: avp
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.SizeMatched
+  commentId: P:BetfairDotNet.Models.Streaming.ESAOrder.SizeMatched
+  id: SizeMatched
+  parent: BetfairDotNet.Models.Streaming.ESAOrder
+  langs:
+  - csharp
+  - vb
+  name: SizeMatched
+  nameWithType: ESAOrder.SizeMatched
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.SizeMatched
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SizeMatched
+    path: ../src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+    startLine: 98
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: The amount of the order that has been matched
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("sm")]
+
+      public double? SizeMatched { get; init; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: >-
+      <JsonPropertyName("sm")>
+
+      Public Property SizeMatched As Double?
+  overload: BetfairDotNet.Models.Streaming.ESAOrder.SizeMatched*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: sm
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.Id
+  commentId: P:BetfairDotNet.Models.Streaming.ESAOrder.Id
+  id: Id
+  parent: BetfairDotNet.Models.Streaming.ESAOrder
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: ESAOrder.Id
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.Id
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Id
+    path: ../src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+    startLine: 104
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: The id of the order
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("id")]
+
+      public string Id { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("id")>
+
+      Public Property Id As String
+  overload: BetfairDotNet.Models.Streaming.ESAOrder.Id*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: id
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.Bsp
+  commentId: P:BetfairDotNet.Models.Streaming.ESAOrder.Bsp
+  id: Bsp
+  parent: BetfairDotNet.Models.Streaming.ESAOrder
+  langs:
+  - csharp
+  - vb
+  name: Bsp
+  nameWithType: ESAOrder.Bsp
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.Bsp
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Bsp
+    path: ../src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+    startLine: 110
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: The BSP liability of the order (null if the order is not a BSP order)
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("bsp")]
+
+      public double? Bsp { get; init; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: >-
+      <JsonPropertyName("bsp")>
+
+      Public Property Bsp As Double?
+  overload: BetfairDotNet.Models.Streaming.ESAOrder.Bsp*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: bsp
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.SizeRemaining
+  commentId: P:BetfairDotNet.Models.Streaming.ESAOrder.SizeRemaining
+  id: SizeRemaining
+  parent: BetfairDotNet.Models.Streaming.ESAOrder
+  langs:
+  - csharp
+  - vb
+  name: SizeRemaining
+  nameWithType: ESAOrder.SizeRemaining
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.SizeRemaining
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SizeRemaining
+    path: ../src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+    startLine: 116
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: The amount of the order that is remaining unmatched
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("sr")]
+
+      public double? SizeRemaining { get; init; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: >-
+      <JsonPropertyName("sr")>
+
+      Public Property SizeRemaining As Double?
+  overload: BetfairDotNet.Models.Streaming.ESAOrder.SizeRemaining*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: sr
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.CancelledDate
+  commentId: P:BetfairDotNet.Models.Streaming.ESAOrder.CancelledDate
+  id: CancelledDate
+  parent: BetfairDotNet.Models.Streaming.ESAOrder
+  langs:
+  - csharp
+  - vb
+  name: CancelledDate
+  nameWithType: ESAOrder.CancelledDate
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.CancelledDate
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: CancelledDate
+    path: ../src/BetfairDotNet/Models/Streaming/ESAOrder.cs
+    startLine: 122
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Streaming
+  summary: The date the order was cancelled (null if the order is not cancelled)
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("cd")]
+
+      public long? CancelledDate { get; init; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int64}
+    content.vb: >-
+      <JsonPropertyName("cd")>
+
+      Public Property CancelledDate As Long?
+  overload: BetfairDotNet.Models.Streaming.ESAOrder.CancelledDate*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: cd
+references:
+- uid: BetfairDotNet.Models.Streaming
+  commentId: N:BetfairDotNet.Models.Streaming
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Streaming
+  nameWithType: BetfairDotNet.Models.Streaming
+  fullName: BetfairDotNet.Models.Streaming
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Streaming
+    name: Streaming
+    href: BetfairDotNet.Models.Streaming.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Streaming
+    name: Streaming
+    href: BetfairDotNet.Models.Streaming.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{BetfairDotNet.Models.Streaming.ESAOrder}
+  commentId: T:System.IEquatable{BetfairDotNet.Models.Streaming.ESAOrder}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<ESAOrder>
+  nameWithType: IEquatable<ESAOrder>
+  fullName: System.IEquatable<BetfairDotNet.Models.Streaming.ESAOrder>
+  nameWithType.vb: IEquatable(Of ESAOrder)
+  fullName.vb: System.IEquatable(Of BetfairDotNet.Models.Streaming.ESAOrder)
+  name.vb: IEquatable(Of ESAOrder)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: BetfairDotNet.Models.Streaming.ESAOrder
+    name: ESAOrder
+    href: BetfairDotNet.Models.Streaming.ESAOrder.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Streaming.ESAOrder
+    name: ESAOrder
+    href: BetfairDotNet.Models.Streaming.ESAOrder.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.Side*
+  commentId: Overload:BetfairDotNet.Models.Streaming.ESAOrder.Side
+  href: BetfairDotNet.Models.Streaming.ESAOrder.html#BetfairDotNet.Models.Streaming.ESAOrder.Side
+  name: Side
+  nameWithType: ESAOrder.Side
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.Side
+- uid: BetfairDotNet.Enums.Betting.SideEnum
+  commentId: T:BetfairDotNet.Enums.Betting.SideEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.SideEnum.html
+  name: SideEnum
+  nameWithType: SideEnum
+  fullName: BetfairDotNet.Enums.Betting.SideEnum
+- uid: BetfairDotNet.Enums.Betting
+  commentId: N:BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Betting
+  nameWithType: BetfairDotNet.Enums.Betting
+  fullName: BetfairDotNet.Enums.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.PersistenceType*
+  commentId: Overload:BetfairDotNet.Models.Streaming.ESAOrder.PersistenceType
+  href: BetfairDotNet.Models.Streaming.ESAOrder.html#BetfairDotNet.Models.Streaming.ESAOrder.PersistenceType
+  name: PersistenceType
+  nameWithType: ESAOrder.PersistenceType
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.PersistenceType
+- uid: BetfairDotNet.Enums.Betting.PersistenceTypeEnum
+  commentId: T:BetfairDotNet.Enums.Betting.PersistenceTypeEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.PersistenceTypeEnum.html
+  name: PersistenceTypeEnum
+  nameWithType: PersistenceTypeEnum
+  fullName: BetfairDotNet.Enums.Betting.PersistenceTypeEnum
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.OrderType*
+  commentId: Overload:BetfairDotNet.Models.Streaming.ESAOrder.OrderType
+  href: BetfairDotNet.Models.Streaming.ESAOrder.html#BetfairDotNet.Models.Streaming.ESAOrder.OrderType
+  name: OrderType
+  nameWithType: ESAOrder.OrderType
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.OrderType
+- uid: BetfairDotNet.Enums.Betting.OrderTypeEnum
+  commentId: T:BetfairDotNet.Enums.Betting.OrderTypeEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.OrderTypeEnum.html
+  name: OrderTypeEnum
+  nameWithType: OrderTypeEnum
+  fullName: BetfairDotNet.Enums.Betting.OrderTypeEnum
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.Status*
+  commentId: Overload:BetfairDotNet.Models.Streaming.ESAOrder.Status
+  href: BetfairDotNet.Models.Streaming.ESAOrder.html#BetfairDotNet.Models.Streaming.ESAOrder.Status
+  name: Status
+  nameWithType: ESAOrder.Status
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.Status
+- uid: BetfairDotNet.Enums.Betting.OrderStatusEnum
+  commentId: T:BetfairDotNet.Enums.Betting.OrderStatusEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.OrderStatusEnum.html
+  name: OrderStatusEnum
+  nameWithType: OrderStatusEnum
+  fullName: BetfairDotNet.Enums.Betting.OrderStatusEnum
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.SizeVoided*
+  commentId: Overload:BetfairDotNet.Models.Streaming.ESAOrder.SizeVoided
+  href: BetfairDotNet.Models.Streaming.ESAOrder.html#BetfairDotNet.Models.Streaming.ESAOrder.SizeVoided
+  name: SizeVoided
+  nameWithType: ESAOrder.SizeVoided
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.SizeVoided
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.Price*
+  commentId: Overload:BetfairDotNet.Models.Streaming.ESAOrder.Price
+  href: BetfairDotNet.Models.Streaming.ESAOrder.html#BetfairDotNet.Models.Streaming.ESAOrder.Price
+  name: Price
+  nameWithType: ESAOrder.Price
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.Price
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.SizeCancelled*
+  commentId: Overload:BetfairDotNet.Models.Streaming.ESAOrder.SizeCancelled
+  href: BetfairDotNet.Models.Streaming.ESAOrder.html#BetfairDotNet.Models.Streaming.ESAOrder.SizeCancelled
+  name: SizeCancelled
+  nameWithType: ESAOrder.SizeCancelled
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.SizeCancelled
+- uid: System.Nullable{System.Double}
+  commentId: T:System.Nullable{System.Double}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double?
+  nameWithType: double?
+  fullName: double?
+  nameWithType.vb: Double?
+  fullName.vb: Double?
+  name.vb: Double?
+  spec.csharp:
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+  spec.vb:
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.Regulator*
+  commentId: Overload:BetfairDotNet.Models.Streaming.ESAOrder.Regulator
+  href: BetfairDotNet.Models.Streaming.ESAOrder.html#BetfairDotNet.Models.Streaming.ESAOrder.Regulator
+  name: Regulator
+  nameWithType: ESAOrder.Regulator
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.Regulator
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.Size*
+  commentId: Overload:BetfairDotNet.Models.Streaming.ESAOrder.Size
+  href: BetfairDotNet.Models.Streaming.ESAOrder.html#BetfairDotNet.Models.Streaming.ESAOrder.Size
+  name: Size
+  nameWithType: ESAOrder.Size
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.Size
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.PlacedDate*
+  commentId: Overload:BetfairDotNet.Models.Streaming.ESAOrder.PlacedDate
+  href: BetfairDotNet.Models.Streaming.ESAOrder.html#BetfairDotNet.Models.Streaming.ESAOrder.PlacedDate
+  name: PlacedDate
+  nameWithType: ESAOrder.PlacedDate
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.PlacedDate
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.RegulatorAuthCode*
+  commentId: Overload:BetfairDotNet.Models.Streaming.ESAOrder.RegulatorAuthCode
+  href: BetfairDotNet.Models.Streaming.ESAOrder.html#BetfairDotNet.Models.Streaming.ESAOrder.RegulatorAuthCode
+  name: RegulatorAuthCode
+  nameWithType: ESAOrder.RegulatorAuthCode
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.RegulatorAuthCode
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.MatchedDate*
+  commentId: Overload:BetfairDotNet.Models.Streaming.ESAOrder.MatchedDate
+  href: BetfairDotNet.Models.Streaming.ESAOrder.html#BetfairDotNet.Models.Streaming.ESAOrder.MatchedDate
+  name: MatchedDate
+  nameWithType: ESAOrder.MatchedDate
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.MatchedDate
+- uid: System.Nullable{System.Int64}
+  commentId: T:System.Nullable{System.Int64}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long?
+  nameWithType: long?
+  fullName: long?
+  nameWithType.vb: Long?
+  fullName.vb: Long?
+  name.vb: Long?
+  spec.csharp:
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '?'
+  spec.vb:
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '?'
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.SizeLapsed*
+  commentId: Overload:BetfairDotNet.Models.Streaming.ESAOrder.SizeLapsed
+  href: BetfairDotNet.Models.Streaming.ESAOrder.html#BetfairDotNet.Models.Streaming.ESAOrder.SizeLapsed
+  name: SizeLapsed
+  nameWithType: ESAOrder.SizeLapsed
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.SizeLapsed
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.AveragePriceMatched*
+  commentId: Overload:BetfairDotNet.Models.Streaming.ESAOrder.AveragePriceMatched
+  href: BetfairDotNet.Models.Streaming.ESAOrder.html#BetfairDotNet.Models.Streaming.ESAOrder.AveragePriceMatched
+  name: AveragePriceMatched
+  nameWithType: ESAOrder.AveragePriceMatched
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.AveragePriceMatched
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.SizeMatched*
+  commentId: Overload:BetfairDotNet.Models.Streaming.ESAOrder.SizeMatched
+  href: BetfairDotNet.Models.Streaming.ESAOrder.html#BetfairDotNet.Models.Streaming.ESAOrder.SizeMatched
+  name: SizeMatched
+  nameWithType: ESAOrder.SizeMatched
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.SizeMatched
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.Id*
+  commentId: Overload:BetfairDotNet.Models.Streaming.ESAOrder.Id
+  href: BetfairDotNet.Models.Streaming.ESAOrder.html#BetfairDotNet.Models.Streaming.ESAOrder.Id
+  name: Id
+  nameWithType: ESAOrder.Id
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.Id
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.Bsp*
+  commentId: Overload:BetfairDotNet.Models.Streaming.ESAOrder.Bsp
+  href: BetfairDotNet.Models.Streaming.ESAOrder.html#BetfairDotNet.Models.Streaming.ESAOrder.Bsp
+  name: Bsp
+  nameWithType: ESAOrder.Bsp
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.Bsp
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.SizeRemaining*
+  commentId: Overload:BetfairDotNet.Models.Streaming.ESAOrder.SizeRemaining
+  href: BetfairDotNet.Models.Streaming.ESAOrder.html#BetfairDotNet.Models.Streaming.ESAOrder.SizeRemaining
+  name: SizeRemaining
+  nameWithType: ESAOrder.SizeRemaining
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.SizeRemaining
+- uid: BetfairDotNet.Models.Streaming.ESAOrder.CancelledDate*
+  commentId: Overload:BetfairDotNet.Models.Streaming.ESAOrder.CancelledDate
+  href: BetfairDotNet.Models.Streaming.ESAOrder.html#BetfairDotNet.Models.Streaming.ESAOrder.CancelledDate
+  name: CancelledDate
+  nameWithType: ESAOrder.CancelledDate
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder.CancelledDate

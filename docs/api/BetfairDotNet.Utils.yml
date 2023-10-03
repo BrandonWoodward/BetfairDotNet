@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Utils
+  commentId: N:BetfairDotNet.Utils
+  id: Utils
+  parent: BetfairDotNet
+  children:
+  - BetfairDotNet.Utils.PriceHelpers
+  langs:
+  - csharp
+  - vb
+  name: BetfairDotNet.Utils
+  nameWithType: BetfairDotNet.Utils
+  fullName: BetfairDotNet.Utils
+  type: Namespace
+  assemblies:
+  - BetfairDotNet
+references:
+- uid: BetfairDotNet.Utils.PriceHelpers
+  commentId: T:BetfairDotNet.Utils.PriceHelpers
+  href: BetfairDotNet.Utils.PriceHelpers.html
+  name: PriceHelpers
+  nameWithType: PriceHelpers
+  fullName: BetfairDotNet.Utils.PriceHelpers

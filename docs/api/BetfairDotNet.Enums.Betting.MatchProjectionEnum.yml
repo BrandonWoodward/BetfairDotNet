@@ -1,0 +1,159 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Betting.MatchProjectionEnum
+  commentId: T:BetfairDotNet.Enums.Betting.MatchProjectionEnum
+  id: MatchProjectionEnum
+  parent: BetfairDotNet.Enums.Betting
+  children:
+  - BetfairDotNet.Enums.Betting.MatchProjectionEnum.NO_ROLLUP
+  - BetfairDotNet.Enums.Betting.MatchProjectionEnum.ROLLED_UP_BY_AVG_PRICE
+  - BetfairDotNet.Enums.Betting.MatchProjectionEnum.ROLLED_UP_BY_PRICE
+  langs:
+  - csharp
+  - vb
+  name: MatchProjectionEnum
+  nameWithType: MatchProjectionEnum
+  fullName: BetfairDotNet.Enums.Betting.MatchProjectionEnum
+  type: Enum
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/MatchProjectionEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MatchProjectionEnum
+    path: ../src/BetfairDotNet/Enums/Betting/MatchProjectionEnum.cs
+    startLine: 6
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EmptyStringToEnumConverter<MatchProjectionEnum>))]
+
+      public enum MatchProjectionEnum
+    content.vb: >-
+      <JsonConverter(GetType(EmptyStringToEnumConverter(Of MatchProjectionEnum)))>
+
+      Public Enum MatchProjectionEnum
+- uid: BetfairDotNet.Enums.Betting.MatchProjectionEnum.NO_ROLLUP
+  commentId: F:BetfairDotNet.Enums.Betting.MatchProjectionEnum.NO_ROLLUP
+  id: NO_ROLLUP
+  parent: BetfairDotNet.Enums.Betting.MatchProjectionEnum
+  langs:
+  - csharp
+  - vb
+  name: NO_ROLLUP
+  nameWithType: MatchProjectionEnum.NO_ROLLUP
+  fullName: BetfairDotNet.Enums.Betting.MatchProjectionEnum.NO_ROLLUP
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/MatchProjectionEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: NO_ROLLUP
+    path: ../src/BetfairDotNet/Enums/Betting/MatchProjectionEnum.cs
+    startLine: 12
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: No rollup, return raw fragments
+  example: []
+  syntax:
+    content: NO_ROLLUP = 0
+    return:
+      type: BetfairDotNet.Enums.Betting.MatchProjectionEnum
+- uid: BetfairDotNet.Enums.Betting.MatchProjectionEnum.ROLLED_UP_BY_PRICE
+  commentId: F:BetfairDotNet.Enums.Betting.MatchProjectionEnum.ROLLED_UP_BY_PRICE
+  id: ROLLED_UP_BY_PRICE
+  parent: BetfairDotNet.Enums.Betting.MatchProjectionEnum
+  langs:
+  - csharp
+  - vb
+  name: ROLLED_UP_BY_PRICE
+  nameWithType: MatchProjectionEnum.ROLLED_UP_BY_PRICE
+  fullName: BetfairDotNet.Enums.Betting.MatchProjectionEnum.ROLLED_UP_BY_PRICE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/MatchProjectionEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ROLLED_UP_BY_PRICE
+    path: ../src/BetfairDotNet/Enums/Betting/MatchProjectionEnum.cs
+    startLine: 17
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Rollup matched amounts by distinct matched prices per side.
+  example: []
+  syntax:
+    content: ROLLED_UP_BY_PRICE = 1
+    return:
+      type: BetfairDotNet.Enums.Betting.MatchProjectionEnum
+- uid: BetfairDotNet.Enums.Betting.MatchProjectionEnum.ROLLED_UP_BY_AVG_PRICE
+  commentId: F:BetfairDotNet.Enums.Betting.MatchProjectionEnum.ROLLED_UP_BY_AVG_PRICE
+  id: ROLLED_UP_BY_AVG_PRICE
+  parent: BetfairDotNet.Enums.Betting.MatchProjectionEnum
+  langs:
+  - csharp
+  - vb
+  name: ROLLED_UP_BY_AVG_PRICE
+  nameWithType: MatchProjectionEnum.ROLLED_UP_BY_AVG_PRICE
+  fullName: BetfairDotNet.Enums.Betting.MatchProjectionEnum.ROLLED_UP_BY_AVG_PRICE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/MatchProjectionEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ROLLED_UP_BY_AVG_PRICE
+    path: ../src/BetfairDotNet/Enums/Betting/MatchProjectionEnum.cs
+    startLine: 22
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Rollup matched amounts by average matched price per side
+  example: []
+  syntax:
+    content: ROLLED_UP_BY_AVG_PRICE = 2
+    return:
+      type: BetfairDotNet.Enums.Betting.MatchProjectionEnum
+references:
+- uid: BetfairDotNet.Enums.Betting
+  commentId: N:BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Betting
+  nameWithType: BetfairDotNet.Enums.Betting
+  fullName: BetfairDotNet.Enums.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+- uid: BetfairDotNet.Enums.Betting.MatchProjectionEnum
+  commentId: T:BetfairDotNet.Enums.Betting.MatchProjectionEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.MatchProjectionEnum.html
+  name: MatchProjectionEnum
+  nameWithType: MatchProjectionEnum
+  fullName: BetfairDotNet.Enums.Betting.MatchProjectionEnum

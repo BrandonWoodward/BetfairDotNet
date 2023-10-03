@@ -1,0 +1,805 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Models.Betting.ItemDescription
+  commentId: T:BetfairDotNet.Models.Betting.ItemDescription
+  id: ItemDescription
+  parent: BetfairDotNet.Models.Betting
+  children:
+  - BetfairDotNet.Models.Betting.ItemDescription.EachWayDivisor
+  - BetfairDotNet.Models.Betting.ItemDescription.EventDesc
+  - BetfairDotNet.Models.Betting.ItemDescription.EventTypeDesc
+  - BetfairDotNet.Models.Betting.ItemDescription.MarketDesc
+  - BetfairDotNet.Models.Betting.ItemDescription.MarketStartTime
+  - BetfairDotNet.Models.Betting.ItemDescription.MarketType
+  - BetfairDotNet.Models.Betting.ItemDescription.NumberOfWinners
+  - BetfairDotNet.Models.Betting.ItemDescription.RunnerDesc
+  langs:
+  - csharp
+  - vb
+  name: ItemDescription
+  nameWithType: ItemDescription
+  fullName: BetfairDotNet.Models.Betting.ItemDescription
+  type: Class
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/ItemDescription.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ItemDescription
+    path: ../src/BetfairDotNet/Models/Betting/ItemDescription.cs
+    startLine: 9
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: >-
+    Contains some text which may be useful to render a betting history view. 
+
+    It offers no long-term warranty as to the correctness of the text.
+  example: []
+  syntax:
+    content: 'public sealed record ItemDescription : IEquatable<ItemDescription>'
+    content.vb: Public NotInheritable Class ItemDescription Implements IEquatable(Of ItemDescription)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{BetfairDotNet.Models.Betting.ItemDescription}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BetfairDotNet.Models.Betting.ItemDescription.EventTypeDesc
+  commentId: P:BetfairDotNet.Models.Betting.ItemDescription.EventTypeDesc
+  id: EventTypeDesc
+  parent: BetfairDotNet.Models.Betting.ItemDescription
+  langs:
+  - csharp
+  - vb
+  name: EventTypeDesc
+  nameWithType: ItemDescription.EventTypeDesc
+  fullName: BetfairDotNet.Models.Betting.ItemDescription.EventTypeDesc
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/ItemDescription.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: EventTypeDesc
+    path: ../src/BetfairDotNet/Models/Betting/ItemDescription.cs
+    startLine: 14
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The event type name, translated into the requested locale. Available at EVENT_TYPE groupBy or lower.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("eventTypeDesc")]
+
+      public string EventTypeDesc { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("eventTypeDesc")>
+
+      Public Property EventTypeDesc As String
+  overload: BetfairDotNet.Models.Betting.ItemDescription.EventTypeDesc*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: eventTypeDesc
+- uid: BetfairDotNet.Models.Betting.ItemDescription.EventDesc
+  commentId: P:BetfairDotNet.Models.Betting.ItemDescription.EventDesc
+  id: EventDesc
+  parent: BetfairDotNet.Models.Betting.ItemDescription
+  langs:
+  - csharp
+  - vb
+  name: EventDesc
+  nameWithType: ItemDescription.EventDesc
+  fullName: BetfairDotNet.Models.Betting.ItemDescription.EventDesc
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/ItemDescription.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: EventDesc
+    path: ../src/BetfairDotNet/Models/Betting/ItemDescription.cs
+    startLine: 20
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The eventName, or openDate + venue, translated into the requested locale. Available at EVENT groupBy or lower.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("eventDesc")]
+
+      public string EventDesc { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("eventDesc")>
+
+      Public Property EventDesc As String
+  overload: BetfairDotNet.Models.Betting.ItemDescription.EventDesc*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: eventDesc
+- uid: BetfairDotNet.Models.Betting.ItemDescription.MarketDesc
+  commentId: P:BetfairDotNet.Models.Betting.ItemDescription.MarketDesc
+  id: MarketDesc
+  parent: BetfairDotNet.Models.Betting.ItemDescription
+  langs:
+  - csharp
+  - vb
+  name: MarketDesc
+  nameWithType: ItemDescription.MarketDesc
+  fullName: BetfairDotNet.Models.Betting.ItemDescription.MarketDesc
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/ItemDescription.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MarketDesc
+    path: ../src/BetfairDotNet/Models/Betting/ItemDescription.cs
+    startLine: 27
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: >-
+    The market name or racing market type ("Win", "To Be Placed (2 places)", "To Be Placed (5 places)" etc) 
+
+    translated into the requested locale. Available at MARKET groupBy or lower.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("marketDesc")]
+
+      public string MarketDesc { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("marketDesc")>
+
+      Public Property MarketDesc As String
+  overload: BetfairDotNet.Models.Betting.ItemDescription.MarketDesc*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: marketDesc
+- uid: BetfairDotNet.Models.Betting.ItemDescription.MarketType
+  commentId: P:BetfairDotNet.Models.Betting.ItemDescription.MarketType
+  id: MarketType
+  parent: BetfairDotNet.Models.Betting.ItemDescription
+  langs:
+  - csharp
+  - vb
+  name: MarketType
+  nameWithType: ItemDescription.MarketType
+  fullName: BetfairDotNet.Models.Betting.ItemDescription.MarketType
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/ItemDescription.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MarketType
+    path: ../src/BetfairDotNet/Models/Betting/ItemDescription.cs
+    startLine: 33
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The market type e.g. MATCH_ODDS, PLACE, WIN etc.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("marketType")]
+
+      public string MarketType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("marketType")>
+
+      Public Property MarketType As String
+  overload: BetfairDotNet.Models.Betting.ItemDescription.MarketType*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: marketType
+- uid: BetfairDotNet.Models.Betting.ItemDescription.MarketStartTime
+  commentId: P:BetfairDotNet.Models.Betting.ItemDescription.MarketStartTime
+  id: MarketStartTime
+  parent: BetfairDotNet.Models.Betting.ItemDescription
+  langs:
+  - csharp
+  - vb
+  name: MarketStartTime
+  nameWithType: ItemDescription.MarketStartTime
+  fullName: BetfairDotNet.Models.Betting.ItemDescription.MarketStartTime
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/ItemDescription.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MarketStartTime
+    path: ../src/BetfairDotNet/Models/Betting/ItemDescription.cs
+    startLine: 40
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: >-
+    The start time of the market (in ISO-8601 format, not translated).
+
+    Available at MARKET groupBy or lower.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("marketStartTime")]
+
+      public DateTime MarketStartTime { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: >-
+      <JsonPropertyName("marketStartTime")>
+
+      Public Property MarketStartTime As Date
+  overload: BetfairDotNet.Models.Betting.ItemDescription.MarketStartTime*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: marketStartTime
+- uid: BetfairDotNet.Models.Betting.ItemDescription.RunnerDesc
+  commentId: P:BetfairDotNet.Models.Betting.ItemDescription.RunnerDesc
+  id: RunnerDesc
+  parent: BetfairDotNet.Models.Betting.ItemDescription
+  langs:
+  - csharp
+  - vb
+  name: RunnerDesc
+  nameWithType: ItemDescription.RunnerDesc
+  fullName: BetfairDotNet.Models.Betting.ItemDescription.RunnerDesc
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/ItemDescription.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: RunnerDesc
+    path: ../src/BetfairDotNet/Models/Betting/ItemDescription.cs
+    startLine: 47
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: >-
+    The runner name, maybe including the handicap, translated into the requested locale.
+
+    Available at BET groupBy.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("runnerDesc")]
+
+      public string RunnerDesc { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("runnerDesc")>
+
+      Public Property RunnerDesc As String
+  overload: BetfairDotNet.Models.Betting.ItemDescription.RunnerDesc*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: runnerDesc
+- uid: BetfairDotNet.Models.Betting.ItemDescription.NumberOfWinners
+  commentId: P:BetfairDotNet.Models.Betting.ItemDescription.NumberOfWinners
+  id: NumberOfWinners
+  parent: BetfairDotNet.Models.Betting.ItemDescription
+  langs:
+  - csharp
+  - vb
+  name: NumberOfWinners
+  nameWithType: ItemDescription.NumberOfWinners
+  fullName: BetfairDotNet.Models.Betting.ItemDescription.NumberOfWinners
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/ItemDescription.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: NumberOfWinners
+    path: ../src/BetfairDotNet/Models/Betting/ItemDescription.cs
+    startLine: 53
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The number of winners on a market. Available at BET groupBy.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("numberOfWinners")]
+
+      public int NumberOfWinners { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <JsonPropertyName("numberOfWinners")>
+
+      Public Property NumberOfWinners As Integer
+  overload: BetfairDotNet.Models.Betting.ItemDescription.NumberOfWinners*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: numberOfWinners
+- uid: BetfairDotNet.Models.Betting.ItemDescription.EachWayDivisor
+  commentId: P:BetfairDotNet.Models.Betting.ItemDescription.EachWayDivisor
+  id: EachWayDivisor
+  parent: BetfairDotNet.Models.Betting.ItemDescription
+  langs:
+  - csharp
+  - vb
+  name: EachWayDivisor
+  nameWithType: ItemDescription.EachWayDivisor
+  fullName: BetfairDotNet.Models.Betting.ItemDescription.EachWayDivisor
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/ItemDescription.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: EachWayDivisor
+    path: ../src/BetfairDotNet/Models/Betting/ItemDescription.cs
+    startLine: 60
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: >-
+    The divisor is returned for the marketType EACH_WAY only and refers to the fraction of the 
+
+    win odds at which the place portion of an each way bet is settled
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("eachWayDivisor")]
+
+      public double EachWayDivisor { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonPropertyName("eachWayDivisor")>
+
+      Public Property EachWayDivisor As Double
+  overload: BetfairDotNet.Models.Betting.ItemDescription.EachWayDivisor*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: eachWayDivisor
+references:
+- uid: BetfairDotNet.Models.Betting
+  commentId: N:BetfairDotNet.Models.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Betting
+  nameWithType: BetfairDotNet.Models.Betting
+  fullName: BetfairDotNet.Models.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Betting
+    name: Betting
+    href: BetfairDotNet.Models.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Betting
+    name: Betting
+    href: BetfairDotNet.Models.Betting.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{BetfairDotNet.Models.Betting.ItemDescription}
+  commentId: T:System.IEquatable{BetfairDotNet.Models.Betting.ItemDescription}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<ItemDescription>
+  nameWithType: IEquatable<ItemDescription>
+  fullName: System.IEquatable<BetfairDotNet.Models.Betting.ItemDescription>
+  nameWithType.vb: IEquatable(Of ItemDescription)
+  fullName.vb: System.IEquatable(Of BetfairDotNet.Models.Betting.ItemDescription)
+  name.vb: IEquatable(Of ItemDescription)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: BetfairDotNet.Models.Betting.ItemDescription
+    name: ItemDescription
+    href: BetfairDotNet.Models.Betting.ItemDescription.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Betting.ItemDescription
+    name: ItemDescription
+    href: BetfairDotNet.Models.Betting.ItemDescription.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BetfairDotNet.Models.Betting.ItemDescription.EventTypeDesc*
+  commentId: Overload:BetfairDotNet.Models.Betting.ItemDescription.EventTypeDesc
+  href: BetfairDotNet.Models.Betting.ItemDescription.html#BetfairDotNet.Models.Betting.ItemDescription.EventTypeDesc
+  name: EventTypeDesc
+  nameWithType: ItemDescription.EventTypeDesc
+  fullName: BetfairDotNet.Models.Betting.ItemDescription.EventTypeDesc
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BetfairDotNet.Models.Betting.ItemDescription.EventDesc*
+  commentId: Overload:BetfairDotNet.Models.Betting.ItemDescription.EventDesc
+  href: BetfairDotNet.Models.Betting.ItemDescription.html#BetfairDotNet.Models.Betting.ItemDescription.EventDesc
+  name: EventDesc
+  nameWithType: ItemDescription.EventDesc
+  fullName: BetfairDotNet.Models.Betting.ItemDescription.EventDesc
+- uid: BetfairDotNet.Models.Betting.ItemDescription.MarketDesc*
+  commentId: Overload:BetfairDotNet.Models.Betting.ItemDescription.MarketDesc
+  href: BetfairDotNet.Models.Betting.ItemDescription.html#BetfairDotNet.Models.Betting.ItemDescription.MarketDesc
+  name: MarketDesc
+  nameWithType: ItemDescription.MarketDesc
+  fullName: BetfairDotNet.Models.Betting.ItemDescription.MarketDesc
+- uid: BetfairDotNet.Models.Betting.ItemDescription.MarketType*
+  commentId: Overload:BetfairDotNet.Models.Betting.ItemDescription.MarketType
+  href: BetfairDotNet.Models.Betting.ItemDescription.html#BetfairDotNet.Models.Betting.ItemDescription.MarketType
+  name: MarketType
+  nameWithType: ItemDescription.MarketType
+  fullName: BetfairDotNet.Models.Betting.ItemDescription.MarketType
+- uid: BetfairDotNet.Models.Betting.ItemDescription.MarketStartTime*
+  commentId: Overload:BetfairDotNet.Models.Betting.ItemDescription.MarketStartTime
+  href: BetfairDotNet.Models.Betting.ItemDescription.html#BetfairDotNet.Models.Betting.ItemDescription.MarketStartTime
+  name: MarketStartTime
+  nameWithType: ItemDescription.MarketStartTime
+  fullName: BetfairDotNet.Models.Betting.ItemDescription.MarketStartTime
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: BetfairDotNet.Models.Betting.ItemDescription.RunnerDesc*
+  commentId: Overload:BetfairDotNet.Models.Betting.ItemDescription.RunnerDesc
+  href: BetfairDotNet.Models.Betting.ItemDescription.html#BetfairDotNet.Models.Betting.ItemDescription.RunnerDesc
+  name: RunnerDesc
+  nameWithType: ItemDescription.RunnerDesc
+  fullName: BetfairDotNet.Models.Betting.ItemDescription.RunnerDesc
+- uid: BetfairDotNet.Models.Betting.ItemDescription.NumberOfWinners*
+  commentId: Overload:BetfairDotNet.Models.Betting.ItemDescription.NumberOfWinners
+  href: BetfairDotNet.Models.Betting.ItemDescription.html#BetfairDotNet.Models.Betting.ItemDescription.NumberOfWinners
+  name: NumberOfWinners
+  nameWithType: ItemDescription.NumberOfWinners
+  fullName: BetfairDotNet.Models.Betting.ItemDescription.NumberOfWinners
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: BetfairDotNet.Models.Betting.ItemDescription.EachWayDivisor*
+  commentId: Overload:BetfairDotNet.Models.Betting.ItemDescription.EachWayDivisor
+  href: BetfairDotNet.Models.Betting.ItemDescription.html#BetfairDotNet.Models.Betting.ItemDescription.EachWayDivisor
+  name: EachWayDivisor
+  nameWithType: ItemDescription.EachWayDivisor
+  fullName: BetfairDotNet.Models.Betting.ItemDescription.EachWayDivisor
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double

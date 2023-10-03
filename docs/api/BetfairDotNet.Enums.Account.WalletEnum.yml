@@ -1,0 +1,101 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Account.WalletEnum
+  commentId: T:BetfairDotNet.Enums.Account.WalletEnum
+  id: WalletEnum
+  parent: BetfairDotNet.Enums.Account
+  children:
+  - BetfairDotNet.Enums.Account.WalletEnum.UK
+  langs:
+  - csharp
+  - vb
+  name: WalletEnum
+  nameWithType: WalletEnum
+  fullName: BetfairDotNet.Enums.Account.WalletEnum
+  type: Enum
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/WalletEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: WalletEnum
+    path: ../src/BetfairDotNet/Enums/Account/WalletEnum.cs
+    startLine: 6
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EmptyStringToEnumConverter<WalletEnum>))]
+
+      public enum WalletEnum
+    content.vb: >-
+      <JsonConverter(GetType(EmptyStringToEnumConverter(Of WalletEnum)))>
+
+      Public Enum WalletEnum
+- uid: BetfairDotNet.Enums.Account.WalletEnum.UK
+  commentId: F:BetfairDotNet.Enums.Account.WalletEnum.UK
+  id: UK
+  parent: BetfairDotNet.Enums.Account.WalletEnum
+  langs:
+  - csharp
+  - vb
+  name: UK
+  nameWithType: WalletEnum.UK
+  fullName: BetfairDotNet.Enums.Account.WalletEnum.UK
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Account/WalletEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: UK
+    path: ../src/BetfairDotNet/Enums/Account/WalletEnum.cs
+    startLine: 12
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Account
+  summary: The Global Exchange wallet.
+  example: []
+  syntax:
+    content: UK = 0
+    return:
+      type: BetfairDotNet.Enums.Account.WalletEnum
+references:
+- uid: BetfairDotNet.Enums.Account
+  commentId: N:BetfairDotNet.Enums.Account
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Account
+  nameWithType: BetfairDotNet.Enums.Account
+  fullName: BetfairDotNet.Enums.Account
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Account
+    name: Account
+    href: BetfairDotNet.Enums.Account.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Account
+    name: Account
+    href: BetfairDotNet.Enums.Account.html
+- uid: BetfairDotNet.Enums.Account.WalletEnum
+  commentId: T:BetfairDotNet.Enums.Account.WalletEnum
+  parent: BetfairDotNet.Enums.Account
+  href: BetfairDotNet.Enums.Account.WalletEnum.html
+  name: WalletEnum
+  nameWithType: WalletEnum
+  fullName: BetfairDotNet.Enums.Account.WalletEnum

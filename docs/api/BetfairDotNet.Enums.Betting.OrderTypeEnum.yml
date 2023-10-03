@@ -1,0 +1,159 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Betting.OrderTypeEnum
+  commentId: T:BetfairDotNet.Enums.Betting.OrderTypeEnum
+  id: OrderTypeEnum
+  parent: BetfairDotNet.Enums.Betting
+  children:
+  - BetfairDotNet.Enums.Betting.OrderTypeEnum.LIMIT
+  - BetfairDotNet.Enums.Betting.OrderTypeEnum.LIMIT_ON_CLOSE
+  - BetfairDotNet.Enums.Betting.OrderTypeEnum.MARKET_ON_CLOSE
+  langs:
+  - csharp
+  - vb
+  name: OrderTypeEnum
+  nameWithType: OrderTypeEnum
+  fullName: BetfairDotNet.Enums.Betting.OrderTypeEnum
+  type: Enum
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/OrderTypeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: OrderTypeEnum
+    path: ../src/BetfairDotNet/Enums/Betting/OrderTypeEnum.cs
+    startLine: 6
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EmptyStringToEnumConverter<OrderTypeEnum>))]
+
+      public enum OrderTypeEnum
+    content.vb: >-
+      <JsonConverter(GetType(EmptyStringToEnumConverter(Of OrderTypeEnum)))>
+
+      Public Enum OrderTypeEnum
+- uid: BetfairDotNet.Enums.Betting.OrderTypeEnum.LIMIT
+  commentId: F:BetfairDotNet.Enums.Betting.OrderTypeEnum.LIMIT
+  id: LIMIT
+  parent: BetfairDotNet.Enums.Betting.OrderTypeEnum
+  langs:
+  - csharp
+  - vb
+  name: LIMIT
+  nameWithType: OrderTypeEnum.LIMIT
+  fullName: BetfairDotNet.Enums.Betting.OrderTypeEnum.LIMIT
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/OrderTypeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: LIMIT
+    path: ../src/BetfairDotNet/Enums/Betting/OrderTypeEnum.cs
+    startLine: 12
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: A normal exchange limit order for immediate execution.
+  example: []
+  syntax:
+    content: LIMIT = 0
+    return:
+      type: BetfairDotNet.Enums.Betting.OrderTypeEnum
+- uid: BetfairDotNet.Enums.Betting.OrderTypeEnum.LIMIT_ON_CLOSE
+  commentId: F:BetfairDotNet.Enums.Betting.OrderTypeEnum.LIMIT_ON_CLOSE
+  id: LIMIT_ON_CLOSE
+  parent: BetfairDotNet.Enums.Betting.OrderTypeEnum
+  langs:
+  - csharp
+  - vb
+  name: LIMIT_ON_CLOSE
+  nameWithType: OrderTypeEnum.LIMIT_ON_CLOSE
+  fullName: BetfairDotNet.Enums.Betting.OrderTypeEnum.LIMIT_ON_CLOSE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/OrderTypeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: LIMIT_ON_CLOSE
+    path: ../src/BetfairDotNet/Enums/Betting/OrderTypeEnum.cs
+    startLine: 17
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Limit order for the auction (SP)
+  example: []
+  syntax:
+    content: LIMIT_ON_CLOSE = 1
+    return:
+      type: BetfairDotNet.Enums.Betting.OrderTypeEnum
+- uid: BetfairDotNet.Enums.Betting.OrderTypeEnum.MARKET_ON_CLOSE
+  commentId: F:BetfairDotNet.Enums.Betting.OrderTypeEnum.MARKET_ON_CLOSE
+  id: MARKET_ON_CLOSE
+  parent: BetfairDotNet.Enums.Betting.OrderTypeEnum
+  langs:
+  - csharp
+  - vb
+  name: MARKET_ON_CLOSE
+  nameWithType: OrderTypeEnum.MARKET_ON_CLOSE
+  fullName: BetfairDotNet.Enums.Betting.OrderTypeEnum.MARKET_ON_CLOSE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/OrderTypeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MARKET_ON_CLOSE
+    path: ../src/BetfairDotNet/Enums/Betting/OrderTypeEnum.cs
+    startLine: 22
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Market order for the auction (SP)
+  example: []
+  syntax:
+    content: MARKET_ON_CLOSE = 2
+    return:
+      type: BetfairDotNet.Enums.Betting.OrderTypeEnum
+references:
+- uid: BetfairDotNet.Enums.Betting
+  commentId: N:BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Betting
+  nameWithType: BetfairDotNet.Enums.Betting
+  fullName: BetfairDotNet.Enums.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+- uid: BetfairDotNet.Enums.Betting.OrderTypeEnum
+  commentId: T:BetfairDotNet.Enums.Betting.OrderTypeEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.OrderTypeEnum.html
+  name: OrderTypeEnum
+  nameWithType: OrderTypeEnum
+  fullName: BetfairDotNet.Enums.Betting.OrderTypeEnum

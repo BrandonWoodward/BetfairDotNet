@@ -1,0 +1,835 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Models.Account.AccountDetailsResponse
+  commentId: T:BetfairDotNet.Models.Account.AccountDetailsResponse
+  id: AccountDetailsResponse
+  parent: BetfairDotNet.Models.Account
+  children:
+  - BetfairDotNet.Models.Account.AccountDetailsResponse.CountryCode
+  - BetfairDotNet.Models.Account.AccountDetailsResponse.CurrencyCode
+  - BetfairDotNet.Models.Account.AccountDetailsResponse.DiscountRate
+  - BetfairDotNet.Models.Account.AccountDetailsResponse.FirstName
+  - BetfairDotNet.Models.Account.AccountDetailsResponse.LastName
+  - BetfairDotNet.Models.Account.AccountDetailsResponse.LocaleCode
+  - BetfairDotNet.Models.Account.AccountDetailsResponse.PointsBalance
+  - BetfairDotNet.Models.Account.AccountDetailsResponse.Region
+  - BetfairDotNet.Models.Account.AccountDetailsResponse.Timezone
+  langs:
+  - csharp
+  - vb
+  name: AccountDetailsResponse
+  nameWithType: AccountDetailsResponse
+  fullName: BetfairDotNet.Models.Account.AccountDetailsResponse
+  type: Class
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Account/AccountDetailsResponse.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: AccountDetailsResponse
+    path: ../src/BetfairDotNet/Models/Account/AccountDetailsResponse.cs
+    startLine: 5
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Account
+  syntax:
+    content: 'public sealed record AccountDetailsResponse : IEquatable<AccountDetailsResponse>'
+    content.vb: Public NotInheritable Class AccountDetailsResponse Implements IEquatable(Of AccountDetailsResponse)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{BetfairDotNet.Models.Account.AccountDetailsResponse}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BetfairDotNet.Models.Account.AccountDetailsResponse.CurrencyCode
+  commentId: P:BetfairDotNet.Models.Account.AccountDetailsResponse.CurrencyCode
+  id: CurrencyCode
+  parent: BetfairDotNet.Models.Account.AccountDetailsResponse
+  langs:
+  - csharp
+  - vb
+  name: CurrencyCode
+  nameWithType: AccountDetailsResponse.CurrencyCode
+  fullName: BetfairDotNet.Models.Account.AccountDetailsResponse.CurrencyCode
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Account/AccountDetailsResponse.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: CurrencyCode
+    path: ../src/BetfairDotNet/Models/Account/AccountDetailsResponse.cs
+    startLine: 10
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Account
+  summary: Default user currency Code. See Currency Parameters for minimum bet sizes relating to each currency.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("currencyCode")]
+
+      public string CurrencyCode { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("currencyCode")>
+
+      Public Property CurrencyCode As String
+  overload: BetfairDotNet.Models.Account.AccountDetailsResponse.CurrencyCode*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: currencyCode
+- uid: BetfairDotNet.Models.Account.AccountDetailsResponse.FirstName
+  commentId: P:BetfairDotNet.Models.Account.AccountDetailsResponse.FirstName
+  id: FirstName
+  parent: BetfairDotNet.Models.Account.AccountDetailsResponse
+  langs:
+  - csharp
+  - vb
+  name: FirstName
+  nameWithType: AccountDetailsResponse.FirstName
+  fullName: BetfairDotNet.Models.Account.AccountDetailsResponse.FirstName
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Account/AccountDetailsResponse.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: FirstName
+    path: ../src/BetfairDotNet/Models/Account/AccountDetailsResponse.cs
+    startLine: 16
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Account
+  summary: First Name.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("firstName")]
+
+      public string FirstName { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("firstName")>
+
+      Public Property FirstName As String
+  overload: BetfairDotNet.Models.Account.AccountDetailsResponse.FirstName*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: firstName
+- uid: BetfairDotNet.Models.Account.AccountDetailsResponse.LastName
+  commentId: P:BetfairDotNet.Models.Account.AccountDetailsResponse.LastName
+  id: LastName
+  parent: BetfairDotNet.Models.Account.AccountDetailsResponse
+  langs:
+  - csharp
+  - vb
+  name: LastName
+  nameWithType: AccountDetailsResponse.LastName
+  fullName: BetfairDotNet.Models.Account.AccountDetailsResponse.LastName
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Account/AccountDetailsResponse.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: LastName
+    path: ../src/BetfairDotNet/Models/Account/AccountDetailsResponse.cs
+    startLine: 22
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Account
+  summary: Last name.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("lastName")]
+
+      public string LastName { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("lastName")>
+
+      Public Property LastName As String
+  overload: BetfairDotNet.Models.Account.AccountDetailsResponse.LastName*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: lastName
+- uid: BetfairDotNet.Models.Account.AccountDetailsResponse.LocaleCode
+  commentId: P:BetfairDotNet.Models.Account.AccountDetailsResponse.LocaleCode
+  id: LocaleCode
+  parent: BetfairDotNet.Models.Account.AccountDetailsResponse
+  langs:
+  - csharp
+  - vb
+  name: LocaleCode
+  nameWithType: AccountDetailsResponse.LocaleCode
+  fullName: BetfairDotNet.Models.Account.AccountDetailsResponse.LocaleCode
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Account/AccountDetailsResponse.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: LocaleCode
+    path: ../src/BetfairDotNet/Models/Account/AccountDetailsResponse.cs
+    startLine: 28
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Account
+  summary: Locale code.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("localeCode")]
+
+      public string LocaleCode { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("localeCode")>
+
+      Public Property LocaleCode As String
+  overload: BetfairDotNet.Models.Account.AccountDetailsResponse.LocaleCode*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: localeCode
+- uid: BetfairDotNet.Models.Account.AccountDetailsResponse.Region
+  commentId: P:BetfairDotNet.Models.Account.AccountDetailsResponse.Region
+  id: Region
+  parent: BetfairDotNet.Models.Account.AccountDetailsResponse
+  langs:
+  - csharp
+  - vb
+  name: Region
+  nameWithType: AccountDetailsResponse.Region
+  fullName: BetfairDotNet.Models.Account.AccountDetailsResponse.Region
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Account/AccountDetailsResponse.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Region
+    path: ../src/BetfairDotNet/Models/Account/AccountDetailsResponse.cs
+    startLine: 35
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Account
+  summary: >-
+    Region based on users zip/postcode (ISO 3166-1 alpha-3 format). 
+
+    Defaults to GBR if zip/postcode cannot be identified.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("region")]
+
+      public string Region { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("region")>
+
+      Public Property Region As String
+  overload: BetfairDotNet.Models.Account.AccountDetailsResponse.Region*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: region
+- uid: BetfairDotNet.Models.Account.AccountDetailsResponse.Timezone
+  commentId: P:BetfairDotNet.Models.Account.AccountDetailsResponse.Timezone
+  id: Timezone
+  parent: BetfairDotNet.Models.Account.AccountDetailsResponse
+  langs:
+  - csharp
+  - vb
+  name: Timezone
+  nameWithType: AccountDetailsResponse.Timezone
+  fullName: BetfairDotNet.Models.Account.AccountDetailsResponse.Timezone
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Account/AccountDetailsResponse.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Timezone
+    path: ../src/BetfairDotNet/Models/Account/AccountDetailsResponse.cs
+    startLine: 41
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Account
+  summary: User Time Zone.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("timezone")]
+
+      public string Timezone { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("timezone")>
+
+      Public Property Timezone As String
+  overload: BetfairDotNet.Models.Account.AccountDetailsResponse.Timezone*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: timezone
+- uid: BetfairDotNet.Models.Account.AccountDetailsResponse.DiscountRate
+  commentId: P:BetfairDotNet.Models.Account.AccountDetailsResponse.DiscountRate
+  id: DiscountRate
+  parent: BetfairDotNet.Models.Account.AccountDetailsResponse
+  langs:
+  - csharp
+  - vb
+  name: DiscountRate
+  nameWithType: AccountDetailsResponse.DiscountRate
+  fullName: BetfairDotNet.Models.Account.AccountDetailsResponse.DiscountRate
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Account/AccountDetailsResponse.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: DiscountRate
+    path: ../src/BetfairDotNet/Models/Account/AccountDetailsResponse.cs
+    startLine: 49
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Account
+  summary: >-
+    User Discount Rate. 
+
+    Betfair AUS/NZ customers should not rely on this to determine their
+
+    discount rates which are now applied at the account level.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("discountRate")]
+
+      public double DiscountRate { get; init; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonPropertyName("discountRate")>
+
+      Public Property DiscountRate As Double
+  overload: BetfairDotNet.Models.Account.AccountDetailsResponse.DiscountRate*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: discountRate
+- uid: BetfairDotNet.Models.Account.AccountDetailsResponse.PointsBalance
+  commentId: P:BetfairDotNet.Models.Account.AccountDetailsResponse.PointsBalance
+  id: PointsBalance
+  parent: BetfairDotNet.Models.Account.AccountDetailsResponse
+  langs:
+  - csharp
+  - vb
+  name: PointsBalance
+  nameWithType: AccountDetailsResponse.PointsBalance
+  fullName: BetfairDotNet.Models.Account.AccountDetailsResponse.PointsBalance
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Account/AccountDetailsResponse.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: PointsBalance
+    path: ../src/BetfairDotNet/Models/Account/AccountDetailsResponse.cs
+    startLine: 55
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Account
+  summary: The Betfair points balance.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("pointsBalance")]
+
+      public int PointsBalance { get; init; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <JsonPropertyName("pointsBalance")>
+
+      Public Property PointsBalance As Integer
+  overload: BetfairDotNet.Models.Account.AccountDetailsResponse.PointsBalance*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: pointsBalance
+- uid: BetfairDotNet.Models.Account.AccountDetailsResponse.CountryCode
+  commentId: P:BetfairDotNet.Models.Account.AccountDetailsResponse.CountryCode
+  id: CountryCode
+  parent: BetfairDotNet.Models.Account.AccountDetailsResponse
+  langs:
+  - csharp
+  - vb
+  name: CountryCode
+  nameWithType: AccountDetailsResponse.CountryCode
+  fullName: BetfairDotNet.Models.Account.AccountDetailsResponse.CountryCode
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Account/AccountDetailsResponse.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: CountryCode
+    path: ../src/BetfairDotNet/Models/Account/AccountDetailsResponse.cs
+    startLine: 61
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Account
+  summary: The customer's country of residence (ISO 2 Char format)
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("countryCode")]
+
+      public string CountryCode { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("countryCode")>
+
+      Public Property CountryCode As String
+  overload: BetfairDotNet.Models.Account.AccountDetailsResponse.CountryCode*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: countryCode
+references:
+- uid: BetfairDotNet.Models.Account
+  commentId: N:BetfairDotNet.Models.Account
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Account
+  nameWithType: BetfairDotNet.Models.Account
+  fullName: BetfairDotNet.Models.Account
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Account
+    name: Account
+    href: BetfairDotNet.Models.Account.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Account
+    name: Account
+    href: BetfairDotNet.Models.Account.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{BetfairDotNet.Models.Account.AccountDetailsResponse}
+  commentId: T:System.IEquatable{BetfairDotNet.Models.Account.AccountDetailsResponse}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<AccountDetailsResponse>
+  nameWithType: IEquatable<AccountDetailsResponse>
+  fullName: System.IEquatable<BetfairDotNet.Models.Account.AccountDetailsResponse>
+  nameWithType.vb: IEquatable(Of AccountDetailsResponse)
+  fullName.vb: System.IEquatable(Of BetfairDotNet.Models.Account.AccountDetailsResponse)
+  name.vb: IEquatable(Of AccountDetailsResponse)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: BetfairDotNet.Models.Account.AccountDetailsResponse
+    name: AccountDetailsResponse
+    href: BetfairDotNet.Models.Account.AccountDetailsResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Account.AccountDetailsResponse
+    name: AccountDetailsResponse
+    href: BetfairDotNet.Models.Account.AccountDetailsResponse.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BetfairDotNet.Models.Account.AccountDetailsResponse.CurrencyCode*
+  commentId: Overload:BetfairDotNet.Models.Account.AccountDetailsResponse.CurrencyCode
+  href: BetfairDotNet.Models.Account.AccountDetailsResponse.html#BetfairDotNet.Models.Account.AccountDetailsResponse.CurrencyCode
+  name: CurrencyCode
+  nameWithType: AccountDetailsResponse.CurrencyCode
+  fullName: BetfairDotNet.Models.Account.AccountDetailsResponse.CurrencyCode
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BetfairDotNet.Models.Account.AccountDetailsResponse.FirstName*
+  commentId: Overload:BetfairDotNet.Models.Account.AccountDetailsResponse.FirstName
+  href: BetfairDotNet.Models.Account.AccountDetailsResponse.html#BetfairDotNet.Models.Account.AccountDetailsResponse.FirstName
+  name: FirstName
+  nameWithType: AccountDetailsResponse.FirstName
+  fullName: BetfairDotNet.Models.Account.AccountDetailsResponse.FirstName
+- uid: BetfairDotNet.Models.Account.AccountDetailsResponse.LastName*
+  commentId: Overload:BetfairDotNet.Models.Account.AccountDetailsResponse.LastName
+  href: BetfairDotNet.Models.Account.AccountDetailsResponse.html#BetfairDotNet.Models.Account.AccountDetailsResponse.LastName
+  name: LastName
+  nameWithType: AccountDetailsResponse.LastName
+  fullName: BetfairDotNet.Models.Account.AccountDetailsResponse.LastName
+- uid: BetfairDotNet.Models.Account.AccountDetailsResponse.LocaleCode*
+  commentId: Overload:BetfairDotNet.Models.Account.AccountDetailsResponse.LocaleCode
+  href: BetfairDotNet.Models.Account.AccountDetailsResponse.html#BetfairDotNet.Models.Account.AccountDetailsResponse.LocaleCode
+  name: LocaleCode
+  nameWithType: AccountDetailsResponse.LocaleCode
+  fullName: BetfairDotNet.Models.Account.AccountDetailsResponse.LocaleCode
+- uid: BetfairDotNet.Models.Account.AccountDetailsResponse.Region*
+  commentId: Overload:BetfairDotNet.Models.Account.AccountDetailsResponse.Region
+  href: BetfairDotNet.Models.Account.AccountDetailsResponse.html#BetfairDotNet.Models.Account.AccountDetailsResponse.Region
+  name: Region
+  nameWithType: AccountDetailsResponse.Region
+  fullName: BetfairDotNet.Models.Account.AccountDetailsResponse.Region
+- uid: BetfairDotNet.Models.Account.AccountDetailsResponse.Timezone*
+  commentId: Overload:BetfairDotNet.Models.Account.AccountDetailsResponse.Timezone
+  href: BetfairDotNet.Models.Account.AccountDetailsResponse.html#BetfairDotNet.Models.Account.AccountDetailsResponse.Timezone
+  name: Timezone
+  nameWithType: AccountDetailsResponse.Timezone
+  fullName: BetfairDotNet.Models.Account.AccountDetailsResponse.Timezone
+- uid: BetfairDotNet.Models.Account.AccountDetailsResponse.DiscountRate*
+  commentId: Overload:BetfairDotNet.Models.Account.AccountDetailsResponse.DiscountRate
+  href: BetfairDotNet.Models.Account.AccountDetailsResponse.html#BetfairDotNet.Models.Account.AccountDetailsResponse.DiscountRate
+  name: DiscountRate
+  nameWithType: AccountDetailsResponse.DiscountRate
+  fullName: BetfairDotNet.Models.Account.AccountDetailsResponse.DiscountRate
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: BetfairDotNet.Models.Account.AccountDetailsResponse.PointsBalance*
+  commentId: Overload:BetfairDotNet.Models.Account.AccountDetailsResponse.PointsBalance
+  href: BetfairDotNet.Models.Account.AccountDetailsResponse.html#BetfairDotNet.Models.Account.AccountDetailsResponse.PointsBalance
+  name: PointsBalance
+  nameWithType: AccountDetailsResponse.PointsBalance
+  fullName: BetfairDotNet.Models.Account.AccountDetailsResponse.PointsBalance
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: BetfairDotNet.Models.Account.AccountDetailsResponse.CountryCode*
+  commentId: Overload:BetfairDotNet.Models.Account.AccountDetailsResponse.CountryCode
+  href: BetfairDotNet.Models.Account.AccountDetailsResponse.html#BetfairDotNet.Models.Account.AccountDetailsResponse.CountryCode
+  name: CountryCode
+  nameWithType: AccountDetailsResponse.CountryCode
+  fullName: BetfairDotNet.Models.Account.AccountDetailsResponse.CountryCode

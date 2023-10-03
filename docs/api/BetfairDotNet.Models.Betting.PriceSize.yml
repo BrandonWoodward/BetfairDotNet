@@ -1,0 +1,515 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Models.Betting.PriceSize
+  commentId: T:BetfairDotNet.Models.Betting.PriceSize
+  id: PriceSize
+  parent: BetfairDotNet.Models.Betting
+  children:
+  - BetfairDotNet.Models.Betting.PriceSize.#ctor(System.Double,System.Double)
+  - BetfairDotNet.Models.Betting.PriceSize.Price
+  - BetfairDotNet.Models.Betting.PriceSize.Size
+  langs:
+  - csharp
+  - vb
+  name: PriceSize
+  nameWithType: PriceSize
+  fullName: BetfairDotNet.Models.Betting.PriceSize
+  type: Class
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/PriceSize.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: PriceSize
+    path: ../src/BetfairDotNet/Models/Betting/PriceSize.cs
+    startLine: 8
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: Price and volume.
+  example: []
+  syntax:
+    content: 'public sealed record PriceSize : IEquatable<PriceSize>'
+    content.vb: Public NotInheritable Class PriceSize Implements IEquatable(Of PriceSize)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{BetfairDotNet.Models.Betting.PriceSize}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BetfairDotNet.Models.Betting.PriceSize.Price
+  commentId: P:BetfairDotNet.Models.Betting.PriceSize.Price
+  id: Price
+  parent: BetfairDotNet.Models.Betting.PriceSize
+  langs:
+  - csharp
+  - vb
+  name: Price
+  nameWithType: PriceSize.Price
+  fullName: BetfairDotNet.Models.Betting.PriceSize.Price
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/PriceSize.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Price
+    path: ../src/BetfairDotNet/Models/Betting/PriceSize.cs
+    startLine: 13
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The price available.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("price")]
+
+      [JsonRequired]
+
+      public double Price { get; init; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonPropertyName("price")>
+
+      <JsonRequired>
+
+      Public Property Price As Double
+  overload: BetfairDotNet.Models.Betting.PriceSize.Price*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: price
+  - type: System.Text.Json.Serialization.JsonRequiredAttribute
+    ctor: System.Text.Json.Serialization.JsonRequiredAttribute.#ctor
+    arguments: []
+- uid: BetfairDotNet.Models.Betting.PriceSize.Size
+  commentId: P:BetfairDotNet.Models.Betting.PriceSize.Size
+  id: Size
+  parent: BetfairDotNet.Models.Betting.PriceSize
+  langs:
+  - csharp
+  - vb
+  name: Size
+  nameWithType: PriceSize.Size
+  fullName: BetfairDotNet.Models.Betting.PriceSize.Size
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/PriceSize.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Size
+    path: ../src/BetfairDotNet/Models/Betting/PriceSize.cs
+    startLine: 19
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The stake available.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("size")]
+
+      [JsonRequired]
+
+      public double Size { get; init; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonPropertyName("size")>
+
+      <JsonRequired>
+
+      Public Property Size As Double
+  overload: BetfairDotNet.Models.Betting.PriceSize.Size*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: size
+  - type: System.Text.Json.Serialization.JsonRequiredAttribute
+    ctor: System.Text.Json.Serialization.JsonRequiredAttribute.#ctor
+    arguments: []
+- uid: BetfairDotNet.Models.Betting.PriceSize.#ctor(System.Double,System.Double)
+  commentId: M:BetfairDotNet.Models.Betting.PriceSize.#ctor(System.Double,System.Double)
+  id: '#ctor(System.Double,System.Double)'
+  parent: BetfairDotNet.Models.Betting.PriceSize
+  langs:
+  - csharp
+  - vb
+  name: PriceSize(double, double)
+  nameWithType: PriceSize.PriceSize(double, double)
+  fullName: BetfairDotNet.Models.Betting.PriceSize.PriceSize(double, double)
+  type: Constructor
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/PriceSize.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: .ctor
+    path: ../src/BetfairDotNet/Models/Betting/PriceSize.cs
+    startLine: 23
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  syntax:
+    content: public PriceSize(double price, double size)
+    parameters:
+    - id: price
+      type: System.Double
+    - id: size
+      type: System.Double
+    content.vb: Public Sub New(price As Double, size As Double)
+  overload: BetfairDotNet.Models.Betting.PriceSize.#ctor*
+  nameWithType.vb: PriceSize.New(Double, Double)
+  fullName.vb: BetfairDotNet.Models.Betting.PriceSize.New(Double, Double)
+  name.vb: New(Double, Double)
+references:
+- uid: BetfairDotNet.Models.Betting
+  commentId: N:BetfairDotNet.Models.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Betting
+  nameWithType: BetfairDotNet.Models.Betting
+  fullName: BetfairDotNet.Models.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Betting
+    name: Betting
+    href: BetfairDotNet.Models.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Betting
+    name: Betting
+    href: BetfairDotNet.Models.Betting.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{BetfairDotNet.Models.Betting.PriceSize}
+  commentId: T:System.IEquatable{BetfairDotNet.Models.Betting.PriceSize}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<PriceSize>
+  nameWithType: IEquatable<PriceSize>
+  fullName: System.IEquatable<BetfairDotNet.Models.Betting.PriceSize>
+  nameWithType.vb: IEquatable(Of PriceSize)
+  fullName.vb: System.IEquatable(Of BetfairDotNet.Models.Betting.PriceSize)
+  name.vb: IEquatable(Of PriceSize)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: BetfairDotNet.Models.Betting.PriceSize
+    name: PriceSize
+    href: BetfairDotNet.Models.Betting.PriceSize.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Betting.PriceSize
+    name: PriceSize
+    href: BetfairDotNet.Models.Betting.PriceSize.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BetfairDotNet.Models.Betting.PriceSize.Price*
+  commentId: Overload:BetfairDotNet.Models.Betting.PriceSize.Price
+  href: BetfairDotNet.Models.Betting.PriceSize.html#BetfairDotNet.Models.Betting.PriceSize.Price
+  name: Price
+  nameWithType: PriceSize.Price
+  fullName: BetfairDotNet.Models.Betting.PriceSize.Price
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: BetfairDotNet.Models.Betting.PriceSize.Size*
+  commentId: Overload:BetfairDotNet.Models.Betting.PriceSize.Size
+  href: BetfairDotNet.Models.Betting.PriceSize.html#BetfairDotNet.Models.Betting.PriceSize.Size
+  name: Size
+  nameWithType: PriceSize.Size
+  fullName: BetfairDotNet.Models.Betting.PriceSize.Size
+- uid: BetfairDotNet.Models.Betting.PriceSize.#ctor*
+  commentId: Overload:BetfairDotNet.Models.Betting.PriceSize.#ctor
+  href: BetfairDotNet.Models.Betting.PriceSize.html#BetfairDotNet.Models.Betting.PriceSize.#ctor(System.Double,System.Double)
+  name: PriceSize
+  nameWithType: PriceSize.PriceSize
+  fullName: BetfairDotNet.Models.Betting.PriceSize.PriceSize
+  nameWithType.vb: PriceSize.New
+  fullName.vb: BetfairDotNet.Models.Betting.PriceSize.New
+  name.vb: New

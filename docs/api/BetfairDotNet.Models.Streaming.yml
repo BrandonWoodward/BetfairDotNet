@@ -1,0 +1,169 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Models.Streaming
+  commentId: N:BetfairDotNet.Models.Streaming
+  id: Streaming
+  parent: BetfairDotNet.Models
+  children:
+  - BetfairDotNet.Models.Streaming.AuthenticationMessage
+  - BetfairDotNet.Models.Streaming.BaseMessage
+  - BetfairDotNet.Models.Streaming.ESAOrder
+  - BetfairDotNet.Models.Streaming.MarketDefinition
+  - BetfairDotNet.Models.Streaming.MarketSnapshot
+  - BetfairDotNet.Models.Streaming.MarketSubscription
+  - BetfairDotNet.Models.Streaming.OrderFilter
+  - BetfairDotNet.Models.Streaming.OrderMarketSnapshot
+  - BetfairDotNet.Models.Streaming.OrderRunnerSnapshot
+  - BetfairDotNet.Models.Streaming.OrderSubscription
+  - BetfairDotNet.Models.Streaming.PriceLadder
+  - BetfairDotNet.Models.Streaming.RunnerDefinition
+  - BetfairDotNet.Models.Streaming.RunnerSnapshot
+  - BetfairDotNet.Models.Streaming.StreamConfiguration
+  - BetfairDotNet.Models.Streaming.StreamingMarketDataFilter
+  - BetfairDotNet.Models.Streaming.StreamingMarketFilter
+  langs:
+  - csharp
+  - vb
+  name: BetfairDotNet.Models.Streaming
+  nameWithType: BetfairDotNet.Models.Streaming
+  fullName: BetfairDotNet.Models.Streaming
+  type: Namespace
+  assemblies:
+  - BetfairDotNet
+references:
+- uid: BetfairDotNet.Models.Streaming.AuthenticationMessage
+  commentId: T:BetfairDotNet.Models.Streaming.AuthenticationMessage
+  href: BetfairDotNet.Models.Streaming.AuthenticationMessage.html
+  name: AuthenticationMessage
+  nameWithType: AuthenticationMessage
+  fullName: BetfairDotNet.Models.Streaming.AuthenticationMessage
+- uid: BetfairDotNet.Models.Streaming.BaseMessage
+  commentId: T:BetfairDotNet.Models.Streaming.BaseMessage
+  parent: BetfairDotNet.Models.Streaming
+  href: BetfairDotNet.Models.Streaming.BaseMessage.html
+  name: BaseMessage
+  nameWithType: BaseMessage
+  fullName: BetfairDotNet.Models.Streaming.BaseMessage
+- uid: BetfairDotNet.Models.Streaming.ESAOrder
+  commentId: T:BetfairDotNet.Models.Streaming.ESAOrder
+  href: BetfairDotNet.Models.Streaming.ESAOrder.html
+  name: ESAOrder
+  nameWithType: ESAOrder
+  fullName: BetfairDotNet.Models.Streaming.ESAOrder
+- uid: BetfairDotNet.Models.Streaming.MarketDefinition
+  commentId: T:BetfairDotNet.Models.Streaming.MarketDefinition
+  parent: BetfairDotNet.Models.Streaming
+  href: BetfairDotNet.Models.Streaming.MarketDefinition.html
+  name: MarketDefinition
+  nameWithType: MarketDefinition
+  fullName: BetfairDotNet.Models.Streaming.MarketDefinition
+- uid: BetfairDotNet.Models.Streaming.MarketSnapshot
+  commentId: T:BetfairDotNet.Models.Streaming.MarketSnapshot
+  href: BetfairDotNet.Models.Streaming.MarketSnapshot.html
+  name: MarketSnapshot
+  nameWithType: MarketSnapshot
+  fullName: BetfairDotNet.Models.Streaming.MarketSnapshot
+- uid: BetfairDotNet.Models.Streaming.MarketSubscription
+  commentId: T:BetfairDotNet.Models.Streaming.MarketSubscription
+  parent: BetfairDotNet.Models.Streaming
+  href: BetfairDotNet.Models.Streaming.MarketSubscription.html
+  name: MarketSubscription
+  nameWithType: MarketSubscription
+  fullName: BetfairDotNet.Models.Streaming.MarketSubscription
+- uid: BetfairDotNet.Models.Streaming.OrderFilter
+  commentId: T:BetfairDotNet.Models.Streaming.OrderFilter
+  parent: BetfairDotNet.Models.Streaming
+  href: BetfairDotNet.Models.Streaming.OrderFilter.html
+  name: OrderFilter
+  nameWithType: OrderFilter
+  fullName: BetfairDotNet.Models.Streaming.OrderFilter
+- uid: BetfairDotNet.Models.Streaming.OrderMarketSnapshot
+  commentId: T:BetfairDotNet.Models.Streaming.OrderMarketSnapshot
+  href: BetfairDotNet.Models.Streaming.OrderMarketSnapshot.html
+  name: OrderMarketSnapshot
+  nameWithType: OrderMarketSnapshot
+  fullName: BetfairDotNet.Models.Streaming.OrderMarketSnapshot
+- uid: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot
+  commentId: T:BetfairDotNet.Models.Streaming.OrderRunnerSnapshot
+  href: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.html
+  name: OrderRunnerSnapshot
+  nameWithType: OrderRunnerSnapshot
+  fullName: BetfairDotNet.Models.Streaming.OrderRunnerSnapshot
+- uid: BetfairDotNet.Models.Streaming.OrderSubscription
+  commentId: T:BetfairDotNet.Models.Streaming.OrderSubscription
+  parent: BetfairDotNet.Models.Streaming
+  href: BetfairDotNet.Models.Streaming.OrderSubscription.html
+  name: OrderSubscription
+  nameWithType: OrderSubscription
+  fullName: BetfairDotNet.Models.Streaming.OrderSubscription
+- uid: BetfairDotNet.Models.Streaming.PriceLadder
+  commentId: T:BetfairDotNet.Models.Streaming.PriceLadder
+  parent: BetfairDotNet.Models.Streaming
+  href: BetfairDotNet.Models.Streaming.PriceLadder.html
+  name: PriceLadder
+  nameWithType: PriceLadder
+  fullName: BetfairDotNet.Models.Streaming.PriceLadder
+- uid: BetfairDotNet.Models.Streaming.RunnerDefinition
+  commentId: T:BetfairDotNet.Models.Streaming.RunnerDefinition
+  parent: BetfairDotNet.Models.Streaming
+  href: BetfairDotNet.Models.Streaming.RunnerDefinition.html
+  name: RunnerDefinition
+  nameWithType: RunnerDefinition
+  fullName: BetfairDotNet.Models.Streaming.RunnerDefinition
+- uid: BetfairDotNet.Models.Streaming.RunnerSnapshot
+  commentId: T:BetfairDotNet.Models.Streaming.RunnerSnapshot
+  href: BetfairDotNet.Models.Streaming.RunnerSnapshot.html
+  name: RunnerSnapshot
+  nameWithType: RunnerSnapshot
+  fullName: BetfairDotNet.Models.Streaming.RunnerSnapshot
+- uid: BetfairDotNet.Models.Streaming.StreamConfiguration
+  commentId: T:BetfairDotNet.Models.Streaming.StreamConfiguration
+  parent: BetfairDotNet.Models.Streaming
+  href: BetfairDotNet.Models.Streaming.StreamConfiguration.html
+  name: StreamConfiguration
+  nameWithType: StreamConfiguration
+  fullName: BetfairDotNet.Models.Streaming.StreamConfiguration
+- uid: BetfairDotNet.Models.Streaming.StreamingMarketDataFilter
+  commentId: T:BetfairDotNet.Models.Streaming.StreamingMarketDataFilter
+  parent: BetfairDotNet.Models.Streaming
+  href: BetfairDotNet.Models.Streaming.StreamingMarketDataFilter.html
+  name: StreamingMarketDataFilter
+  nameWithType: StreamingMarketDataFilter
+  fullName: BetfairDotNet.Models.Streaming.StreamingMarketDataFilter
+- uid: BetfairDotNet.Models.Streaming.StreamingMarketFilter
+  commentId: T:BetfairDotNet.Models.Streaming.StreamingMarketFilter
+  parent: BetfairDotNet.Models.Streaming
+  href: BetfairDotNet.Models.Streaming.StreamingMarketFilter.html
+  name: StreamingMarketFilter
+  nameWithType: StreamingMarketFilter
+  fullName: BetfairDotNet.Models.Streaming.StreamingMarketFilter
+- uid: BetfairDotNet.Models.Streaming
+  commentId: N:BetfairDotNet.Models.Streaming
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Streaming
+  nameWithType: BetfairDotNet.Models.Streaming
+  fullName: BetfairDotNet.Models.Streaming
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Streaming
+    name: Streaming
+    href: BetfairDotNet.Models.Streaming.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Streaming
+    name: Streaming
+    href: BetfairDotNet.Models.Streaming.html

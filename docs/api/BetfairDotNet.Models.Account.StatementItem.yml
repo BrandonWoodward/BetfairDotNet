@@ -1,0 +1,841 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Models.Account.StatementItem
+  commentId: T:BetfairDotNet.Models.Account.StatementItem
+  id: StatementItem
+  parent: BetfairDotNet.Models.Account
+  children:
+  - BetfairDotNet.Models.Account.StatementItem.Amount
+  - BetfairDotNet.Models.Account.StatementItem.Balance
+  - BetfairDotNet.Models.Account.StatementItem.ItemClass
+  - BetfairDotNet.Models.Account.StatementItem.ItemClassData
+  - BetfairDotNet.Models.Account.StatementItem.ItemDate
+  - BetfairDotNet.Models.Account.StatementItem.RefId
+  langs:
+  - csharp
+  - vb
+  name: StatementItem
+  nameWithType: StatementItem
+  fullName: BetfairDotNet.Models.Account.StatementItem
+  type: Class
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Account/StatementItem.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: StatementItem
+    path: ../src/BetfairDotNet/Models/Account/StatementItem.cs
+    startLine: 9
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Account
+  summary: A item returned in the AccountStatementReport.
+  example: []
+  syntax:
+    content: 'public sealed record StatementItem : IEquatable<StatementItem>'
+    content.vb: Public NotInheritable Class StatementItem Implements IEquatable(Of StatementItem)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{BetfairDotNet.Models.Account.StatementItem}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BetfairDotNet.Models.Account.StatementItem.RefId
+  commentId: P:BetfairDotNet.Models.Account.StatementItem.RefId
+  id: RefId
+  parent: BetfairDotNet.Models.Account.StatementItem
+  langs:
+  - csharp
+  - vb
+  name: RefId
+  nameWithType: StatementItem.RefId
+  fullName: BetfairDotNet.Models.Account.StatementItem.RefId
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Account/StatementItem.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: RefId
+    path: ../src/BetfairDotNet/Models/Account/StatementItem.cs
+    startLine: 14
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Account
+  summary: An external reference, eg. equivalent to betId in the case of an exchange bet statement item.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("refId")]
+
+      public string RefId { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("refId")>
+
+      Public Property RefId As String
+  overload: BetfairDotNet.Models.Account.StatementItem.RefId*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: refId
+- uid: BetfairDotNet.Models.Account.StatementItem.ItemDate
+  commentId: P:BetfairDotNet.Models.Account.StatementItem.ItemDate
+  id: ItemDate
+  parent: BetfairDotNet.Models.Account.StatementItem
+  langs:
+  - csharp
+  - vb
+  name: ItemDate
+  nameWithType: StatementItem.ItemDate
+  fullName: BetfairDotNet.Models.Account.StatementItem.ItemDate
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Account/StatementItem.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ItemDate
+    path: ../src/BetfairDotNet/Models/Account/StatementItem.cs
+    startLine: 20
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Account
+  summary: The date and time of the statement item, eg. equivalent to settledData for an exchange bet statement item.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("itemDate")]
+
+      [JsonRequired]
+
+      public required DateTime ItemDate { get; init; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: >-
+      <JsonPropertyName("itemDate")>
+
+      <JsonRequired>
+
+      Public Property ItemDate As Date
+  overload: BetfairDotNet.Models.Account.StatementItem.ItemDate*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: itemDate
+  - type: System.Text.Json.Serialization.JsonRequiredAttribute
+    ctor: System.Text.Json.Serialization.JsonRequiredAttribute.#ctor
+    arguments: []
+- uid: BetfairDotNet.Models.Account.StatementItem.Amount
+  commentId: P:BetfairDotNet.Models.Account.StatementItem.Amount
+  id: Amount
+  parent: BetfairDotNet.Models.Account.StatementItem
+  langs:
+  - csharp
+  - vb
+  name: Amount
+  nameWithType: StatementItem.Amount
+  fullName: BetfairDotNet.Models.Account.StatementItem.Amount
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Account/StatementItem.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Amount
+    path: ../src/BetfairDotNet/Models/Account/StatementItem.cs
+    startLine: 26
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Account
+  summary: The amount of money the balance is adjusted by.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("amount")]
+
+      public double Amount { get; init; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonPropertyName("amount")>
+
+      Public Property Amount As Double
+  overload: BetfairDotNet.Models.Account.StatementItem.Amount*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: amount
+- uid: BetfairDotNet.Models.Account.StatementItem.Balance
+  commentId: P:BetfairDotNet.Models.Account.StatementItem.Balance
+  id: Balance
+  parent: BetfairDotNet.Models.Account.StatementItem
+  langs:
+  - csharp
+  - vb
+  name: Balance
+  nameWithType: StatementItem.Balance
+  fullName: BetfairDotNet.Models.Account.StatementItem.Balance
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Account/StatementItem.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Balance
+    path: ../src/BetfairDotNet/Models/Account/StatementItem.cs
+    startLine: 32
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Account
+  summary: Account balance.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("balance")]
+
+      public double Balance { get; init; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonPropertyName("balance")>
+
+      Public Property Balance As Double
+  overload: BetfairDotNet.Models.Account.StatementItem.Balance*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: balance
+- uid: BetfairDotNet.Models.Account.StatementItem.ItemClass
+  commentId: P:BetfairDotNet.Models.Account.StatementItem.ItemClass
+  id: ItemClass
+  parent: BetfairDotNet.Models.Account.StatementItem
+  langs:
+  - csharp
+  - vb
+  name: ItemClass
+  nameWithType: StatementItem.ItemClass
+  fullName: BetfairDotNet.Models.Account.StatementItem.ItemClass
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Account/StatementItem.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ItemClass
+    path: ../src/BetfairDotNet/Models/Account/StatementItem.cs
+    startLine: 38
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Account
+  summary: Class of statement item. This value will determine which set of keys will be included in itemClassData.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("itemClass")]
+
+      public ItemClassEnum ItemClass { get; init; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Enums.Account.ItemClassEnum
+    content.vb: >-
+      <JsonPropertyName("itemClass")>
+
+      Public Property ItemClass As ItemClassEnum
+  overload: BetfairDotNet.Models.Account.StatementItem.ItemClass*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: itemClass
+- uid: BetfairDotNet.Models.Account.StatementItem.ItemClassData
+  commentId: P:BetfairDotNet.Models.Account.StatementItem.ItemClassData
+  id: ItemClassData
+  parent: BetfairDotNet.Models.Account.StatementItem
+  langs:
+  - csharp
+  - vb
+  name: ItemClassData
+  nameWithType: StatementItem.ItemClassData
+  fullName: BetfairDotNet.Models.Account.StatementItem.ItemClassData
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Account/StatementItem.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ItemClassData
+    path: ../src/BetfairDotNet/Models/Account/StatementItem.cs
+    startLine: 44
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Account
+  summary: Key value pairs describing the current statement item. The set of keys will be determined by the itemClass
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("itemClassData")]
+
+      public Dictionary<string, string> ItemClassData { get; init; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.String}
+    content.vb: >-
+      <JsonPropertyName("itemClassData")>
+
+      Public Property ItemClassData As Dictionary(Of String, String)
+  overload: BetfairDotNet.Models.Account.StatementItem.ItemClassData*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: itemClassData
+references:
+- uid: BetfairDotNet.Models.Account
+  commentId: N:BetfairDotNet.Models.Account
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Account
+  nameWithType: BetfairDotNet.Models.Account
+  fullName: BetfairDotNet.Models.Account
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Account
+    name: Account
+    href: BetfairDotNet.Models.Account.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Account
+    name: Account
+    href: BetfairDotNet.Models.Account.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{BetfairDotNet.Models.Account.StatementItem}
+  commentId: T:System.IEquatable{BetfairDotNet.Models.Account.StatementItem}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<StatementItem>
+  nameWithType: IEquatable<StatementItem>
+  fullName: System.IEquatable<BetfairDotNet.Models.Account.StatementItem>
+  nameWithType.vb: IEquatable(Of StatementItem)
+  fullName.vb: System.IEquatable(Of BetfairDotNet.Models.Account.StatementItem)
+  name.vb: IEquatable(Of StatementItem)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: BetfairDotNet.Models.Account.StatementItem
+    name: StatementItem
+    href: BetfairDotNet.Models.Account.StatementItem.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Account.StatementItem
+    name: StatementItem
+    href: BetfairDotNet.Models.Account.StatementItem.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BetfairDotNet.Models.Account.StatementItem.RefId*
+  commentId: Overload:BetfairDotNet.Models.Account.StatementItem.RefId
+  href: BetfairDotNet.Models.Account.StatementItem.html#BetfairDotNet.Models.Account.StatementItem.RefId
+  name: RefId
+  nameWithType: StatementItem.RefId
+  fullName: BetfairDotNet.Models.Account.StatementItem.RefId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BetfairDotNet.Models.Account.StatementItem.ItemDate*
+  commentId: Overload:BetfairDotNet.Models.Account.StatementItem.ItemDate
+  href: BetfairDotNet.Models.Account.StatementItem.html#BetfairDotNet.Models.Account.StatementItem.ItemDate
+  name: ItemDate
+  nameWithType: StatementItem.ItemDate
+  fullName: BetfairDotNet.Models.Account.StatementItem.ItemDate
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: BetfairDotNet.Models.Account.StatementItem.Amount*
+  commentId: Overload:BetfairDotNet.Models.Account.StatementItem.Amount
+  href: BetfairDotNet.Models.Account.StatementItem.html#BetfairDotNet.Models.Account.StatementItem.Amount
+  name: Amount
+  nameWithType: StatementItem.Amount
+  fullName: BetfairDotNet.Models.Account.StatementItem.Amount
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: BetfairDotNet.Models.Account.StatementItem.Balance*
+  commentId: Overload:BetfairDotNet.Models.Account.StatementItem.Balance
+  href: BetfairDotNet.Models.Account.StatementItem.html#BetfairDotNet.Models.Account.StatementItem.Balance
+  name: Balance
+  nameWithType: StatementItem.Balance
+  fullName: BetfairDotNet.Models.Account.StatementItem.Balance
+- uid: BetfairDotNet.Models.Account.StatementItem.ItemClass*
+  commentId: Overload:BetfairDotNet.Models.Account.StatementItem.ItemClass
+  href: BetfairDotNet.Models.Account.StatementItem.html#BetfairDotNet.Models.Account.StatementItem.ItemClass
+  name: ItemClass
+  nameWithType: StatementItem.ItemClass
+  fullName: BetfairDotNet.Models.Account.StatementItem.ItemClass
+- uid: BetfairDotNet.Enums.Account.ItemClassEnum
+  commentId: T:BetfairDotNet.Enums.Account.ItemClassEnum
+  parent: BetfairDotNet.Enums.Account
+  href: BetfairDotNet.Enums.Account.ItemClassEnum.html
+  name: ItemClassEnum
+  nameWithType: ItemClassEnum
+  fullName: BetfairDotNet.Enums.Account.ItemClassEnum
+- uid: BetfairDotNet.Enums.Account
+  commentId: N:BetfairDotNet.Enums.Account
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Account
+  nameWithType: BetfairDotNet.Enums.Account
+  fullName: BetfairDotNet.Enums.Account
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Account
+    name: Account
+    href: BetfairDotNet.Enums.Account.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Account
+    name: Account
+    href: BetfairDotNet.Enums.Account.html
+- uid: BetfairDotNet.Models.Account.StatementItem.ItemClassData*
+  commentId: Overload:BetfairDotNet.Models.Account.StatementItem.ItemClassData
+  href: BetfairDotNet.Models.Account.StatementItem.html#BetfairDotNet.Models.Account.StatementItem.ItemClassData
+  name: ItemClassData
+  nameWithType: StatementItem.ItemClassData
+  fullName: BetfairDotNet.Models.Account.StatementItem.ItemClassData
+- uid: System.Collections.Generic.Dictionary{System.String,System.String}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, string>
+  nameWithType: Dictionary<string, string>
+  fullName: System.Collections.Generic.Dictionary<string, string>
+  nameWithType.vb: Dictionary(Of String, String)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, String)
+  name.vb: Dictionary(Of String, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

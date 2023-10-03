@@ -1,0 +1,140 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Betting.SideEnum
+  commentId: T:BetfairDotNet.Enums.Betting.SideEnum
+  id: SideEnum
+  parent: BetfairDotNet.Enums.Betting
+  children:
+  - BetfairDotNet.Enums.Betting.SideEnum.BACK
+  - BetfairDotNet.Enums.Betting.SideEnum.LAY
+  langs:
+  - csharp
+  - vb
+  name: SideEnum
+  nameWithType: SideEnum
+  fullName: BetfairDotNet.Enums.Betting.SideEnum
+  type: Enum
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/SideEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SideEnum
+    path: ../src/BetfairDotNet/Enums/Betting/SideEnum.cs
+    startLine: 6
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EmptyStringToEnumConverter<SideEnum>))]
+
+      public enum SideEnum
+    content.vb: >-
+      <JsonConverter(GetType(EmptyStringToEnumConverter(Of SideEnum)))>
+
+      Public Enum SideEnum
+- uid: BetfairDotNet.Enums.Betting.SideEnum.BACK
+  commentId: F:BetfairDotNet.Enums.Betting.SideEnum.BACK
+  id: BACK
+  parent: BetfairDotNet.Enums.Betting.SideEnum
+  langs:
+  - csharp
+  - vb
+  name: BACK
+  nameWithType: SideEnum.BACK
+  fullName: BetfairDotNet.Enums.Betting.SideEnum.BACK
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/SideEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: BACK
+    path: ../src/BetfairDotNet/Enums/Betting/SideEnum.cs
+    startLine: 14
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: >-
+    To back a team, horse or outcome is to bet on the selection to win. 
+
+    For LINE markets a Back bet refers to a SELL line. 
+
+    A SELL line will win if the outcome is LESS THAN the taken line (price)
+  example: []
+  syntax:
+    content: BACK = 0
+    return:
+      type: BetfairDotNet.Enums.Betting.SideEnum
+- uid: BetfairDotNet.Enums.Betting.SideEnum.LAY
+  commentId: F:BetfairDotNet.Enums.Betting.SideEnum.LAY
+  id: LAY
+  parent: BetfairDotNet.Enums.Betting.SideEnum
+  langs:
+  - csharp
+  - vb
+  name: LAY
+  nameWithType: SideEnum.LAY
+  fullName: BetfairDotNet.Enums.Betting.SideEnum.LAY
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/SideEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: LAY
+    path: ../src/BetfairDotNet/Enums/Betting/SideEnum.cs
+    startLine: 21
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: >-
+    To lay a team, horse, or outcome is to bet on the selection to lose. 
+
+    For LINE markets a Lay bet refers to a BUY line. 
+
+    A BUY line will win if the outcome is MORE THAN the taken line (price)
+  example: []
+  syntax:
+    content: LAY = 1
+    return:
+      type: BetfairDotNet.Enums.Betting.SideEnum
+references:
+- uid: BetfairDotNet.Enums.Betting
+  commentId: N:BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Betting
+  nameWithType: BetfairDotNet.Enums.Betting
+  fullName: BetfairDotNet.Enums.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+- uid: BetfairDotNet.Enums.Betting.SideEnum
+  commentId: T:BetfairDotNet.Enums.Betting.SideEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.SideEnum.html
+  name: SideEnum
+  nameWithType: SideEnum
+  fullName: BetfairDotNet.Enums.Betting.SideEnum

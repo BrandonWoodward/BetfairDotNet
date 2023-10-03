@@ -1,0 +1,84 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Models.Exceptions
+  commentId: N:BetfairDotNet.Models.Exceptions
+  id: Exceptions
+  parent: BetfairDotNet.Models
+  children:
+  - BetfairDotNet.Models.Exceptions.BetfairESAException
+  - BetfairDotNet.Models.Exceptions.BetfairNGException
+  - BetfairDotNet.Models.Exceptions.BetfairServerException
+  - BetfairDotNet.Models.Exceptions.BetfairServerExceptionData
+  - BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails
+  langs:
+  - csharp
+  - vb
+  name: BetfairDotNet.Models.Exceptions
+  nameWithType: BetfairDotNet.Models.Exceptions
+  fullName: BetfairDotNet.Models.Exceptions
+  type: Namespace
+  assemblies:
+  - BetfairDotNet
+references:
+- uid: BetfairDotNet.Models.Exceptions.BetfairESAException
+  commentId: T:BetfairDotNet.Models.Exceptions.BetfairESAException
+  href: BetfairDotNet.Models.Exceptions.BetfairESAException.html
+  name: BetfairESAException
+  nameWithType: BetfairESAException
+  fullName: BetfairDotNet.Models.Exceptions.BetfairESAException
+- uid: BetfairDotNet.Models.Exceptions.BetfairNGException
+  commentId: T:BetfairDotNet.Models.Exceptions.BetfairNGException
+  href: BetfairDotNet.Models.Exceptions.BetfairNGException.html
+  name: BetfairNGException
+  nameWithType: BetfairNGException
+  fullName: BetfairDotNet.Models.Exceptions.BetfairNGException
+- uid: BetfairDotNet.Models.Exceptions.BetfairServerException
+  commentId: T:BetfairDotNet.Models.Exceptions.BetfairServerException
+  href: BetfairDotNet.Models.Exceptions.BetfairServerException.html
+  name: BetfairServerException
+  nameWithType: BetfairServerException
+  fullName: BetfairDotNet.Models.Exceptions.BetfairServerException
+- uid: BetfairDotNet.Models.Exceptions.BetfairServerExceptionData
+  commentId: T:BetfairDotNet.Models.Exceptions.BetfairServerExceptionData
+  parent: BetfairDotNet.Models.Exceptions
+  href: BetfairDotNet.Models.Exceptions.BetfairServerExceptionData.html
+  name: BetfairServerExceptionData
+  nameWithType: BetfairServerExceptionData
+  fullName: BetfairDotNet.Models.Exceptions.BetfairServerExceptionData
+- uid: BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails
+  commentId: T:BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails
+  parent: BetfairDotNet.Models.Exceptions
+  href: BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.html
+  name: BetfairServerExceptionDetails
+  nameWithType: BetfairServerExceptionDetails
+  fullName: BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails
+- uid: BetfairDotNet.Models.Exceptions
+  commentId: N:BetfairDotNet.Models.Exceptions
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Exceptions
+  nameWithType: BetfairDotNet.Models.Exceptions
+  fullName: BetfairDotNet.Models.Exceptions
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Exceptions
+    name: Exceptions
+    href: BetfairDotNet.Models.Exceptions.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Exceptions
+    name: Exceptions
+    href: BetfairDotNet.Models.Exceptions.html

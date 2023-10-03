@@ -1,0 +1,47 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Interfaces
+  commentId: N:BetfairDotNet.Interfaces
+  id: Interfaces
+  parent: BetfairDotNet
+  children:
+  - BetfairDotNet.Interfaces.IBetfairClient
+  langs:
+  - csharp
+  - vb
+  name: BetfairDotNet.Interfaces
+  nameWithType: BetfairDotNet.Interfaces
+  fullName: BetfairDotNet.Interfaces
+  type: Namespace
+  assemblies:
+  - BetfairDotNet
+references:
+- uid: BetfairDotNet.Interfaces.IBetfairClient
+  commentId: T:BetfairDotNet.Interfaces.IBetfairClient
+  parent: BetfairDotNet.Interfaces
+  href: BetfairDotNet.Interfaces.IBetfairClient.html
+  name: IBetfairClient
+  nameWithType: IBetfairClient
+  fullName: BetfairDotNet.Interfaces.IBetfairClient
+- uid: BetfairDotNet.Interfaces
+  commentId: N:BetfairDotNet.Interfaces
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Interfaces
+  nameWithType: BetfairDotNet.Interfaces
+  fullName: BetfairDotNet.Interfaces
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Interfaces
+    name: Interfaces
+    href: BetfairDotNet.Interfaces.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Interfaces
+    name: Interfaces
+    href: BetfairDotNet.Interfaces.html

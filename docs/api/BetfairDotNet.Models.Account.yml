@@ -1,0 +1,52 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Models.Account
+  commentId: N:BetfairDotNet.Models.Account
+  id: Account
+  parent: BetfairDotNet.Models
+  children:
+  - BetfairDotNet.Models.Account.AccountDetailsResponse
+  - BetfairDotNet.Models.Account.AccountFundsResponse
+  - BetfairDotNet.Models.Account.AccountStatementReport
+  - BetfairDotNet.Models.Account.CurrencyRate
+  - BetfairDotNet.Models.Account.StatementItem
+  langs:
+  - csharp
+  - vb
+  name: BetfairDotNet.Models.Account
+  nameWithType: BetfairDotNet.Models.Account
+  fullName: BetfairDotNet.Models.Account
+  type: Namespace
+  assemblies:
+  - BetfairDotNet
+references:
+- uid: BetfairDotNet.Models.Account.AccountDetailsResponse
+  commentId: T:BetfairDotNet.Models.Account.AccountDetailsResponse
+  href: BetfairDotNet.Models.Account.AccountDetailsResponse.html
+  name: AccountDetailsResponse
+  nameWithType: AccountDetailsResponse
+  fullName: BetfairDotNet.Models.Account.AccountDetailsResponse
+- uid: BetfairDotNet.Models.Account.AccountFundsResponse
+  commentId: T:BetfairDotNet.Models.Account.AccountFundsResponse
+  href: BetfairDotNet.Models.Account.AccountFundsResponse.html
+  name: AccountFundsResponse
+  nameWithType: AccountFundsResponse
+  fullName: BetfairDotNet.Models.Account.AccountFundsResponse
+- uid: BetfairDotNet.Models.Account.AccountStatementReport
+  commentId: T:BetfairDotNet.Models.Account.AccountStatementReport
+  href: BetfairDotNet.Models.Account.AccountStatementReport.html
+  name: AccountStatementReport
+  nameWithType: AccountStatementReport
+  fullName: BetfairDotNet.Models.Account.AccountStatementReport
+- uid: BetfairDotNet.Models.Account.CurrencyRate
+  commentId: T:BetfairDotNet.Models.Account.CurrencyRate
+  href: BetfairDotNet.Models.Account.CurrencyRate.html
+  name: CurrencyRate
+  nameWithType: CurrencyRate
+  fullName: BetfairDotNet.Models.Account.CurrencyRate
+- uid: BetfairDotNet.Models.Account.StatementItem
+  commentId: T:BetfairDotNet.Models.Account.StatementItem
+  href: BetfairDotNet.Models.Account.StatementItem.html
+  name: StatementItem
+  nameWithType: StatementItem
+  fullName: BetfairDotNet.Models.Account.StatementItem

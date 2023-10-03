@@ -1,0 +1,931 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Models.Betting.PlaceInstructionReport
+  commentId: T:BetfairDotNet.Models.Betting.PlaceInstructionReport
+  id: PlaceInstructionReport
+  parent: BetfairDotNet.Models.Betting
+  children:
+  - BetfairDotNet.Models.Betting.PlaceInstructionReport.AveragePriceMatched
+  - BetfairDotNet.Models.Betting.PlaceInstructionReport.BetId
+  - BetfairDotNet.Models.Betting.PlaceInstructionReport.ErrorCode
+  - BetfairDotNet.Models.Betting.PlaceInstructionReport.Instruction
+  - BetfairDotNet.Models.Betting.PlaceInstructionReport.OrderStatus
+  - BetfairDotNet.Models.Betting.PlaceInstructionReport.PlacedDate
+  - BetfairDotNet.Models.Betting.PlaceInstructionReport.SizeMatched
+  - BetfairDotNet.Models.Betting.PlaceInstructionReport.Status
+  langs:
+  - csharp
+  - vb
+  name: PlaceInstructionReport
+  nameWithType: PlaceInstructionReport
+  fullName: BetfairDotNet.Models.Betting.PlaceInstructionReport
+  type: Class
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/PlaceInstructionReport.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: PlaceInstructionReport
+    path: ../src/BetfairDotNet/Models/Betting/PlaceInstructionReport.cs
+    startLine: 9
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: Response to a PlaceInstruction
+  example: []
+  syntax:
+    content: 'public sealed record PlaceInstructionReport : IEquatable<PlaceInstructionReport>'
+    content.vb: Public NotInheritable Class PlaceInstructionReport Implements IEquatable(Of PlaceInstructionReport)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{BetfairDotNet.Models.Betting.PlaceInstructionReport}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BetfairDotNet.Models.Betting.PlaceInstructionReport.Status
+  commentId: P:BetfairDotNet.Models.Betting.PlaceInstructionReport.Status
+  id: Status
+  parent: BetfairDotNet.Models.Betting.PlaceInstructionReport
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: PlaceInstructionReport.Status
+  fullName: BetfairDotNet.Models.Betting.PlaceInstructionReport.Status
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/PlaceInstructionReport.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Status
+    path: ../src/BetfairDotNet/Models/Betting/PlaceInstructionReport.cs
+    startLine: 14
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: Whether the command succeeded or failed.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("status")]
+
+      [JsonRequired]
+
+      public required InstructionReportStatusEnum Status { get; init; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportStatusEnum
+    content.vb: >-
+      <JsonPropertyName("status")>
+
+      <JsonRequired>
+
+      Public Property Status As InstructionReportStatusEnum
+  overload: BetfairDotNet.Models.Betting.PlaceInstructionReport.Status*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: status
+  - type: System.Text.Json.Serialization.JsonRequiredAttribute
+    ctor: System.Text.Json.Serialization.JsonRequiredAttribute.#ctor
+    arguments: []
+- uid: BetfairDotNet.Models.Betting.PlaceInstructionReport.ErrorCode
+  commentId: P:BetfairDotNet.Models.Betting.PlaceInstructionReport.ErrorCode
+  id: ErrorCode
+  parent: BetfairDotNet.Models.Betting.PlaceInstructionReport
+  langs:
+  - csharp
+  - vb
+  name: ErrorCode
+  nameWithType: PlaceInstructionReport.ErrorCode
+  fullName: BetfairDotNet.Models.Betting.PlaceInstructionReport.ErrorCode
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/PlaceInstructionReport.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ErrorCode
+    path: ../src/BetfairDotNet/Models/Betting/PlaceInstructionReport.cs
+    startLine: 20
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: Cause of failure, or null if command succeeds.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("errorCode")]
+
+      public InstructionReportErrorCodeEnum ErrorCode { get; init; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+    content.vb: >-
+      <JsonPropertyName("errorCode")>
+
+      Public Property ErrorCode As InstructionReportErrorCodeEnum
+  overload: BetfairDotNet.Models.Betting.PlaceInstructionReport.ErrorCode*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: errorCode
+- uid: BetfairDotNet.Models.Betting.PlaceInstructionReport.OrderStatus
+  commentId: P:BetfairDotNet.Models.Betting.PlaceInstructionReport.OrderStatus
+  id: OrderStatus
+  parent: BetfairDotNet.Models.Betting.PlaceInstructionReport
+  langs:
+  - csharp
+  - vb
+  name: OrderStatus
+  nameWithType: PlaceInstructionReport.OrderStatus
+  fullName: BetfairDotNet.Models.Betting.PlaceInstructionReport.OrderStatus
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/PlaceInstructionReport.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: OrderStatus
+    path: ../src/BetfairDotNet/Models/Betting/PlaceInstructionReport.cs
+    startLine: 27
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: >-
+    The status of the order, if the instruction succeeded. 
+
+    If the instruction was unsuccessful, no value is provided.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("orderStatus")]
+
+      public OrderStatusEnum? OrderStatus { get; init; }
+    parameters: []
+    return:
+      type: System.Nullable{BetfairDotNet.Enums.Betting.OrderStatusEnum}
+    content.vb: >-
+      <JsonPropertyName("orderStatus")>
+
+      Public Property OrderStatus As OrderStatusEnum?
+  overload: BetfairDotNet.Models.Betting.PlaceInstructionReport.OrderStatus*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: orderStatus
+- uid: BetfairDotNet.Models.Betting.PlaceInstructionReport.Instruction
+  commentId: P:BetfairDotNet.Models.Betting.PlaceInstructionReport.Instruction
+  id: Instruction
+  parent: BetfairDotNet.Models.Betting.PlaceInstructionReport
+  langs:
+  - csharp
+  - vb
+  name: Instruction
+  nameWithType: PlaceInstructionReport.Instruction
+  fullName: BetfairDotNet.Models.Betting.PlaceInstructionReport.Instruction
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/PlaceInstructionReport.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Instruction
+    path: ../src/BetfairDotNet/Models/Betting/PlaceInstructionReport.cs
+    startLine: 33
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The instruction that was requested.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("instruction")]
+
+      [JsonRequired]
+
+      public required PlaceInstruction Instruction { get; init; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Models.Betting.PlaceInstruction
+    content.vb: >-
+      <JsonPropertyName("instruction")>
+
+      <JsonRequired>
+
+      Public Property Instruction As PlaceInstruction
+  overload: BetfairDotNet.Models.Betting.PlaceInstructionReport.Instruction*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: instruction
+  - type: System.Text.Json.Serialization.JsonRequiredAttribute
+    ctor: System.Text.Json.Serialization.JsonRequiredAttribute.#ctor
+    arguments: []
+- uid: BetfairDotNet.Models.Betting.PlaceInstructionReport.BetId
+  commentId: P:BetfairDotNet.Models.Betting.PlaceInstructionReport.BetId
+  id: BetId
+  parent: BetfairDotNet.Models.Betting.PlaceInstructionReport
+  langs:
+  - csharp
+  - vb
+  name: BetId
+  nameWithType: PlaceInstructionReport.BetId
+  fullName: BetfairDotNet.Models.Betting.PlaceInstructionReport.BetId
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/PlaceInstructionReport.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: BetId
+    path: ../src/BetfairDotNet/Models/Betting/PlaceInstructionReport.cs
+    startLine: 39
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The bet ID of the new bet. Will be null on failure or if order was placed asynchronously.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("betId")]
+
+      public string? BetId { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("betId")>
+
+      Public Property BetId As String
+  overload: BetfairDotNet.Models.Betting.PlaceInstructionReport.BetId*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: betId
+- uid: BetfairDotNet.Models.Betting.PlaceInstructionReport.PlacedDate
+  commentId: P:BetfairDotNet.Models.Betting.PlaceInstructionReport.PlacedDate
+  id: PlacedDate
+  parent: BetfairDotNet.Models.Betting.PlaceInstructionReport
+  langs:
+  - csharp
+  - vb
+  name: PlacedDate
+  nameWithType: PlaceInstructionReport.PlacedDate
+  fullName: BetfairDotNet.Models.Betting.PlaceInstructionReport.PlacedDate
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/PlaceInstructionReport.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: PlacedDate
+    path: ../src/BetfairDotNet/Models/Betting/PlaceInstructionReport.cs
+    startLine: 45
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: Will be null if order was placed asynchronously.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("placedDate")]
+
+      public DateTime? PlacedDate { get; init; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: >-
+      <JsonPropertyName("placedDate")>
+
+      Public Property PlacedDate As Date?
+  overload: BetfairDotNet.Models.Betting.PlaceInstructionReport.PlacedDate*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: placedDate
+- uid: BetfairDotNet.Models.Betting.PlaceInstructionReport.AveragePriceMatched
+  commentId: P:BetfairDotNet.Models.Betting.PlaceInstructionReport.AveragePriceMatched
+  id: AveragePriceMatched
+  parent: BetfairDotNet.Models.Betting.PlaceInstructionReport
+  langs:
+  - csharp
+  - vb
+  name: AveragePriceMatched
+  nameWithType: PlaceInstructionReport.AveragePriceMatched
+  fullName: BetfairDotNet.Models.Betting.PlaceInstructionReport.AveragePriceMatched
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/PlaceInstructionReport.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: AveragePriceMatched
+    path: ../src/BetfairDotNet/Models/Betting/PlaceInstructionReport.cs
+    startLine: 52
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: >-
+    Will be null if order was placed asynchronously. 
+
+    This value is not meaningful for activity on LINE markets and is not guaranteed to be returned or maintained for these markets.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("averagePriceMatched")]
+
+      public double? AveragePriceMatched { get; init; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: >-
+      <JsonPropertyName("averagePriceMatched")>
+
+      Public Property AveragePriceMatched As Double?
+  overload: BetfairDotNet.Models.Betting.PlaceInstructionReport.AveragePriceMatched*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: averagePriceMatched
+- uid: BetfairDotNet.Models.Betting.PlaceInstructionReport.SizeMatched
+  commentId: P:BetfairDotNet.Models.Betting.PlaceInstructionReport.SizeMatched
+  id: SizeMatched
+  parent: BetfairDotNet.Models.Betting.PlaceInstructionReport
+  langs:
+  - csharp
+  - vb
+  name: SizeMatched
+  nameWithType: PlaceInstructionReport.SizeMatched
+  fullName: BetfairDotNet.Models.Betting.PlaceInstructionReport.SizeMatched
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/PlaceInstructionReport.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SizeMatched
+    path: ../src/BetfairDotNet/Models/Betting/PlaceInstructionReport.cs
+    startLine: 58
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: Will be null if order was placed asynchronously.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("sizeMatched")]
+
+      public double SizeMatched { get; init; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonPropertyName("sizeMatched")>
+
+      Public Property SizeMatched As Double
+  overload: BetfairDotNet.Models.Betting.PlaceInstructionReport.SizeMatched*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: sizeMatched
+references:
+- uid: BetfairDotNet.Models.Betting
+  commentId: N:BetfairDotNet.Models.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Betting
+  nameWithType: BetfairDotNet.Models.Betting
+  fullName: BetfairDotNet.Models.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Betting
+    name: Betting
+    href: BetfairDotNet.Models.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Betting
+    name: Betting
+    href: BetfairDotNet.Models.Betting.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{BetfairDotNet.Models.Betting.PlaceInstructionReport}
+  commentId: T:System.IEquatable{BetfairDotNet.Models.Betting.PlaceInstructionReport}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<PlaceInstructionReport>
+  nameWithType: IEquatable<PlaceInstructionReport>
+  fullName: System.IEquatable<BetfairDotNet.Models.Betting.PlaceInstructionReport>
+  nameWithType.vb: IEquatable(Of PlaceInstructionReport)
+  fullName.vb: System.IEquatable(Of BetfairDotNet.Models.Betting.PlaceInstructionReport)
+  name.vb: IEquatable(Of PlaceInstructionReport)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: BetfairDotNet.Models.Betting.PlaceInstructionReport
+    name: PlaceInstructionReport
+    href: BetfairDotNet.Models.Betting.PlaceInstructionReport.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Betting.PlaceInstructionReport
+    name: PlaceInstructionReport
+    href: BetfairDotNet.Models.Betting.PlaceInstructionReport.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BetfairDotNet.Models.Betting.PlaceInstructionReport.Status*
+  commentId: Overload:BetfairDotNet.Models.Betting.PlaceInstructionReport.Status
+  href: BetfairDotNet.Models.Betting.PlaceInstructionReport.html#BetfairDotNet.Models.Betting.PlaceInstructionReport.Status
+  name: Status
+  nameWithType: PlaceInstructionReport.Status
+  fullName: BetfairDotNet.Models.Betting.PlaceInstructionReport.Status
+- uid: BetfairDotNet.Enums.Betting.InstructionReportStatusEnum
+  commentId: T:BetfairDotNet.Enums.Betting.InstructionReportStatusEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.InstructionReportStatusEnum.html
+  name: InstructionReportStatusEnum
+  nameWithType: InstructionReportStatusEnum
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportStatusEnum
+- uid: BetfairDotNet.Enums.Betting
+  commentId: N:BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Betting
+  nameWithType: BetfairDotNet.Enums.Betting
+  fullName: BetfairDotNet.Enums.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+- uid: BetfairDotNet.Models.Betting.PlaceInstructionReport.ErrorCode*
+  commentId: Overload:BetfairDotNet.Models.Betting.PlaceInstructionReport.ErrorCode
+  href: BetfairDotNet.Models.Betting.PlaceInstructionReport.html#BetfairDotNet.Models.Betting.PlaceInstructionReport.ErrorCode
+  name: ErrorCode
+  nameWithType: PlaceInstructionReport.ErrorCode
+  fullName: BetfairDotNet.Models.Betting.PlaceInstructionReport.ErrorCode
+- uid: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  commentId: T:BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.html
+  name: InstructionReportErrorCodeEnum
+  nameWithType: InstructionReportErrorCodeEnum
+  fullName: BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum
+- uid: BetfairDotNet.Models.Betting.PlaceInstructionReport.OrderStatus*
+  commentId: Overload:BetfairDotNet.Models.Betting.PlaceInstructionReport.OrderStatus
+  href: BetfairDotNet.Models.Betting.PlaceInstructionReport.html#BetfairDotNet.Models.Betting.PlaceInstructionReport.OrderStatus
+  name: OrderStatus
+  nameWithType: PlaceInstructionReport.OrderStatus
+  fullName: BetfairDotNet.Models.Betting.PlaceInstructionReport.OrderStatus
+- uid: System.Nullable{BetfairDotNet.Enums.Betting.OrderStatusEnum}
+  commentId: T:System.Nullable{BetfairDotNet.Enums.Betting.OrderStatusEnum}
+  parent: System
+  definition: System.Nullable`1
+  href: BetfairDotNet.Enums.Betting.OrderStatusEnum.html
+  name: OrderStatusEnum?
+  nameWithType: OrderStatusEnum?
+  fullName: BetfairDotNet.Enums.Betting.OrderStatusEnum?
+  spec.csharp:
+  - uid: BetfairDotNet.Enums.Betting.OrderStatusEnum
+    name: OrderStatusEnum
+    href: BetfairDotNet.Enums.Betting.OrderStatusEnum.html
+  - name: '?'
+  spec.vb:
+  - uid: BetfairDotNet.Enums.Betting.OrderStatusEnum
+    name: OrderStatusEnum
+    href: BetfairDotNet.Enums.Betting.OrderStatusEnum.html
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BetfairDotNet.Models.Betting.PlaceInstructionReport.Instruction*
+  commentId: Overload:BetfairDotNet.Models.Betting.PlaceInstructionReport.Instruction
+  href: BetfairDotNet.Models.Betting.PlaceInstructionReport.html#BetfairDotNet.Models.Betting.PlaceInstructionReport.Instruction
+  name: Instruction
+  nameWithType: PlaceInstructionReport.Instruction
+  fullName: BetfairDotNet.Models.Betting.PlaceInstructionReport.Instruction
+- uid: BetfairDotNet.Models.Betting.PlaceInstruction
+  commentId: T:BetfairDotNet.Models.Betting.PlaceInstruction
+  parent: BetfairDotNet.Models.Betting
+  href: BetfairDotNet.Models.Betting.PlaceInstruction.html
+  name: PlaceInstruction
+  nameWithType: PlaceInstruction
+  fullName: BetfairDotNet.Models.Betting.PlaceInstruction
+- uid: BetfairDotNet.Models.Betting.PlaceInstructionReport.BetId*
+  commentId: Overload:BetfairDotNet.Models.Betting.PlaceInstructionReport.BetId
+  href: BetfairDotNet.Models.Betting.PlaceInstructionReport.html#BetfairDotNet.Models.Betting.PlaceInstructionReport.BetId
+  name: BetId
+  nameWithType: PlaceInstructionReport.BetId
+  fullName: BetfairDotNet.Models.Betting.PlaceInstructionReport.BetId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BetfairDotNet.Models.Betting.PlaceInstructionReport.PlacedDate*
+  commentId: Overload:BetfairDotNet.Models.Betting.PlaceInstructionReport.PlacedDate
+  href: BetfairDotNet.Models.Betting.PlaceInstructionReport.html#BetfairDotNet.Models.Betting.PlaceInstructionReport.PlacedDate
+  name: PlacedDate
+  nameWithType: PlaceInstructionReport.PlacedDate
+  fullName: BetfairDotNet.Models.Betting.PlaceInstructionReport.PlacedDate
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime?
+  nameWithType: DateTime?
+  fullName: System.DateTime?
+  nameWithType.vb: Date?
+  fullName.vb: Date?
+  name.vb: Date?
+  spec.csharp:
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+  spec.vb:
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+- uid: BetfairDotNet.Models.Betting.PlaceInstructionReport.AveragePriceMatched*
+  commentId: Overload:BetfairDotNet.Models.Betting.PlaceInstructionReport.AveragePriceMatched
+  href: BetfairDotNet.Models.Betting.PlaceInstructionReport.html#BetfairDotNet.Models.Betting.PlaceInstructionReport.AveragePriceMatched
+  name: AveragePriceMatched
+  nameWithType: PlaceInstructionReport.AveragePriceMatched
+  fullName: BetfairDotNet.Models.Betting.PlaceInstructionReport.AveragePriceMatched
+- uid: System.Nullable{System.Double}
+  commentId: T:System.Nullable{System.Double}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double?
+  nameWithType: double?
+  fullName: double?
+  nameWithType.vb: Double?
+  fullName.vb: Double?
+  name.vb: Double?
+  spec.csharp:
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+  spec.vb:
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+- uid: BetfairDotNet.Models.Betting.PlaceInstructionReport.SizeMatched*
+  commentId: Overload:BetfairDotNet.Models.Betting.PlaceInstructionReport.SizeMatched
+  href: BetfairDotNet.Models.Betting.PlaceInstructionReport.html#BetfairDotNet.Models.Betting.PlaceInstructionReport.SizeMatched
+  name: SizeMatched
+  nameWithType: PlaceInstructionReport.SizeMatched
+  fullName: BetfairDotNet.Models.Betting.PlaceInstructionReport.SizeMatched
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double

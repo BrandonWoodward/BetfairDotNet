@@ -1,0 +1,31 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Models.Login
+  commentId: N:BetfairDotNet.Models.Login
+  id: Login
+  parent: BetfairDotNet.Models
+  children:
+  - BetfairDotNet.Models.Login.CertificateLoginResponse
+  - BetfairDotNet.Models.Login.InteractiveLoginResponse
+  langs:
+  - csharp
+  - vb
+  name: BetfairDotNet.Models.Login
+  nameWithType: BetfairDotNet.Models.Login
+  fullName: BetfairDotNet.Models.Login
+  type: Namespace
+  assemblies:
+  - BetfairDotNet
+references:
+- uid: BetfairDotNet.Models.Login.CertificateLoginResponse
+  commentId: T:BetfairDotNet.Models.Login.CertificateLoginResponse
+  href: BetfairDotNet.Models.Login.CertificateLoginResponse.html
+  name: CertificateLoginResponse
+  nameWithType: CertificateLoginResponse
+  fullName: BetfairDotNet.Models.Login.CertificateLoginResponse
+- uid: BetfairDotNet.Models.Login.InteractiveLoginResponse
+  commentId: T:BetfairDotNet.Models.Login.InteractiveLoginResponse
+  href: BetfairDotNet.Models.Login.InteractiveLoginResponse.html
+  name: InteractiveLoginResponse
+  nameWithType: InteractiveLoginResponse
+  fullName: BetfairDotNet.Models.Login.InteractiveLoginResponse

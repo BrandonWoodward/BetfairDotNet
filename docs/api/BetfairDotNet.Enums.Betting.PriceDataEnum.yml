@@ -1,0 +1,217 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Betting.PriceDataEnum
+  commentId: T:BetfairDotNet.Enums.Betting.PriceDataEnum
+  id: PriceDataEnum
+  parent: BetfairDotNet.Enums.Betting
+  children:
+  - BetfairDotNet.Enums.Betting.PriceDataEnum.EX_ALL_OFFERS
+  - BetfairDotNet.Enums.Betting.PriceDataEnum.EX_BEST_OFFERS
+  - BetfairDotNet.Enums.Betting.PriceDataEnum.EX_TRADED
+  - BetfairDotNet.Enums.Betting.PriceDataEnum.SP_AVAILABLE
+  - BetfairDotNet.Enums.Betting.PriceDataEnum.SP_TRADED
+  langs:
+  - csharp
+  - vb
+  name: PriceDataEnum
+  nameWithType: PriceDataEnum
+  fullName: BetfairDotNet.Enums.Betting.PriceDataEnum
+  type: Enum
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/PriceDataEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: PriceDataEnum
+    path: ../src/BetfairDotNet/Enums/Betting/PriceDataEnum.cs
+    startLine: 6
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EmptyStringToEnumConverter<PriceDataEnum>))]
+
+      public enum PriceDataEnum
+    content.vb: >-
+      <JsonConverter(GetType(EmptyStringToEnumConverter(Of PriceDataEnum)))>
+
+      Public Enum PriceDataEnum
+- uid: BetfairDotNet.Enums.Betting.PriceDataEnum.SP_AVAILABLE
+  commentId: F:BetfairDotNet.Enums.Betting.PriceDataEnum.SP_AVAILABLE
+  id: SP_AVAILABLE
+  parent: BetfairDotNet.Enums.Betting.PriceDataEnum
+  langs:
+  - csharp
+  - vb
+  name: SP_AVAILABLE
+  nameWithType: PriceDataEnum.SP_AVAILABLE
+  fullName: BetfairDotNet.Enums.Betting.PriceDataEnum.SP_AVAILABLE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/PriceDataEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SP_AVAILABLE
+    path: ../src/BetfairDotNet/Enums/Betting/PriceDataEnum.cs
+    startLine: 12
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Amount available for the BSP auction.
+  example: []
+  syntax:
+    content: SP_AVAILABLE = 0
+    return:
+      type: BetfairDotNet.Enums.Betting.PriceDataEnum
+- uid: BetfairDotNet.Enums.Betting.PriceDataEnum.SP_TRADED
+  commentId: F:BetfairDotNet.Enums.Betting.PriceDataEnum.SP_TRADED
+  id: SP_TRADED
+  parent: BetfairDotNet.Enums.Betting.PriceDataEnum
+  langs:
+  - csharp
+  - vb
+  name: SP_TRADED
+  nameWithType: PriceDataEnum.SP_TRADED
+  fullName: BetfairDotNet.Enums.Betting.PriceDataEnum.SP_TRADED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/PriceDataEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SP_TRADED
+    path: ../src/BetfairDotNet/Enums/Betting/PriceDataEnum.cs
+    startLine: 17
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Amount traded in the BSP auction.
+  example: []
+  syntax:
+    content: SP_TRADED = 1
+    return:
+      type: BetfairDotNet.Enums.Betting.PriceDataEnum
+- uid: BetfairDotNet.Enums.Betting.PriceDataEnum.EX_BEST_OFFERS
+  commentId: F:BetfairDotNet.Enums.Betting.PriceDataEnum.EX_BEST_OFFERS
+  id: EX_BEST_OFFERS
+  parent: BetfairDotNet.Enums.Betting.PriceDataEnum
+  langs:
+  - csharp
+  - vb
+  name: EX_BEST_OFFERS
+  nameWithType: PriceDataEnum.EX_BEST_OFFERS
+  fullName: BetfairDotNet.Enums.Betting.PriceDataEnum.EX_BEST_OFFERS
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/PriceDataEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: EX_BEST_OFFERS
+    path: ../src/BetfairDotNet/Enums/Betting/PriceDataEnum.cs
+    startLine: 22
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Only the best prices available for each runner, to requested price depth.
+  example: []
+  syntax:
+    content: EX_BEST_OFFERS = 2
+    return:
+      type: BetfairDotNet.Enums.Betting.PriceDataEnum
+- uid: BetfairDotNet.Enums.Betting.PriceDataEnum.EX_ALL_OFFERS
+  commentId: F:BetfairDotNet.Enums.Betting.PriceDataEnum.EX_ALL_OFFERS
+  id: EX_ALL_OFFERS
+  parent: BetfairDotNet.Enums.Betting.PriceDataEnum
+  langs:
+  - csharp
+  - vb
+  name: EX_ALL_OFFERS
+  nameWithType: PriceDataEnum.EX_ALL_OFFERS
+  fullName: BetfairDotNet.Enums.Betting.PriceDataEnum.EX_ALL_OFFERS
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/PriceDataEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: EX_ALL_OFFERS
+    path: ../src/BetfairDotNet/Enums/Betting/PriceDataEnum.cs
+    startLine: 27
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: EX_ALL_OFFERS trumps EX_BEST_OFFERS if both settings are present.
+  example: []
+  syntax:
+    content: EX_ALL_OFFERS = 3
+    return:
+      type: BetfairDotNet.Enums.Betting.PriceDataEnum
+- uid: BetfairDotNet.Enums.Betting.PriceDataEnum.EX_TRADED
+  commentId: F:BetfairDotNet.Enums.Betting.PriceDataEnum.EX_TRADED
+  id: EX_TRADED
+  parent: BetfairDotNet.Enums.Betting.PriceDataEnum
+  langs:
+  - csharp
+  - vb
+  name: EX_TRADED
+  nameWithType: PriceDataEnum.EX_TRADED
+  fullName: BetfairDotNet.Enums.Betting.PriceDataEnum.EX_TRADED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/PriceDataEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: EX_TRADED
+    path: ../src/BetfairDotNet/Enums/Betting/PriceDataEnum.cs
+    startLine: 32
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Amount traded on the exchange.
+  example: []
+  syntax:
+    content: EX_TRADED = 4
+    return:
+      type: BetfairDotNet.Enums.Betting.PriceDataEnum
+references:
+- uid: BetfairDotNet.Enums.Betting
+  commentId: N:BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Betting
+  nameWithType: BetfairDotNet.Enums.Betting
+  fullName: BetfairDotNet.Enums.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+- uid: BetfairDotNet.Enums.Betting.PriceDataEnum
+  commentId: T:BetfairDotNet.Enums.Betting.PriceDataEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.PriceDataEnum.html
+  name: PriceDataEnum
+  nameWithType: PriceDataEnum
+  fullName: BetfairDotNet.Enums.Betting.PriceDataEnum

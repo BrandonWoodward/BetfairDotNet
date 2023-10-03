@@ -1,0 +1,31 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Models.Heartbeat
+  commentId: N:BetfairDotNet.Models.Heartbeat
+  id: Heartbeat
+  parent: BetfairDotNet.Models
+  children:
+  - BetfairDotNet.Models.Heartbeat.HeartbeatReport
+  - BetfairDotNet.Models.Heartbeat.KeepAliveResponse
+  langs:
+  - csharp
+  - vb
+  name: BetfairDotNet.Models.Heartbeat
+  nameWithType: BetfairDotNet.Models.Heartbeat
+  fullName: BetfairDotNet.Models.Heartbeat
+  type: Namespace
+  assemblies:
+  - BetfairDotNet
+references:
+- uid: BetfairDotNet.Models.Heartbeat.HeartbeatReport
+  commentId: T:BetfairDotNet.Models.Heartbeat.HeartbeatReport
+  href: BetfairDotNet.Models.Heartbeat.HeartbeatReport.html
+  name: HeartbeatReport
+  nameWithType: HeartbeatReport
+  fullName: BetfairDotNet.Models.Heartbeat.HeartbeatReport
+- uid: BetfairDotNet.Models.Heartbeat.KeepAliveResponse
+  commentId: T:BetfairDotNet.Models.Heartbeat.KeepAliveResponse
+  href: BetfairDotNet.Models.Heartbeat.KeepAliveResponse.html
+  name: KeepAliveResponse
+  nameWithType: KeepAliveResponse
+  fullName: BetfairDotNet.Models.Heartbeat.KeepAliveResponse

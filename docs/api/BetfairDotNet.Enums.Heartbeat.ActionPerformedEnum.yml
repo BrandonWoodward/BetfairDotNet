@@ -1,0 +1,246 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum
+  commentId: T:BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum
+  id: ActionPerformedEnum
+  parent: BetfairDotNet.Enums.Heartbeat
+  children:
+  - BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum.ALL_BETS_CANCELLED
+  - BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum.CANCELLATION_REQUEST_ERROR
+  - BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum.CANCELLATION_REQUEST_SUBMITTED
+  - BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum.CANCELLATION_STATUS_UNKNOWN
+  - BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum.NONE
+  - BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum.SOME_BETS_NOT_CANCELLED
+  langs:
+  - csharp
+  - vb
+  name: ActionPerformedEnum
+  nameWithType: ActionPerformedEnum
+  fullName: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum
+  type: Enum
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Heartbeat/ActionPerformedEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ActionPerformedEnum
+    path: ../src/BetfairDotNet/Enums/Heartbeat/ActionPerformedEnum.cs
+    startLine: 6
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Heartbeat
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EmptyStringToEnumConverter<ActionPerformedEnum>))]
+
+      public enum ActionPerformedEnum
+    content.vb: >-
+      <JsonConverter(GetType(EmptyStringToEnumConverter(Of ActionPerformedEnum)))>
+
+      Public Enum ActionPerformedEnum
+- uid: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum.NONE
+  commentId: F:BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum.NONE
+  id: NONE
+  parent: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum
+  langs:
+  - csharp
+  - vb
+  name: NONE
+  nameWithType: ActionPerformedEnum.NONE
+  fullName: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum.NONE
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Heartbeat/ActionPerformedEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: NONE
+    path: ../src/BetfairDotNet/Enums/Heartbeat/ActionPerformedEnum.cs
+    startLine: 12
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Heartbeat
+  summary: No action was performed since last heartbeat, or this is the first heartbeat.
+  example: []
+  syntax:
+    content: NONE = 0
+    return:
+      type: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum
+- uid: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum.CANCELLATION_REQUEST_SUBMITTED
+  commentId: F:BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum.CANCELLATION_REQUEST_SUBMITTED
+  id: CANCELLATION_REQUEST_SUBMITTED
+  parent: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum
+  langs:
+  - csharp
+  - vb
+  name: CANCELLATION_REQUEST_SUBMITTED
+  nameWithType: ActionPerformedEnum.CANCELLATION_REQUEST_SUBMITTED
+  fullName: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum.CANCELLATION_REQUEST_SUBMITTED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Heartbeat/ActionPerformedEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: CANCELLATION_REQUEST_SUBMITTED
+    path: ../src/BetfairDotNet/Enums/Heartbeat/ActionPerformedEnum.cs
+    startLine: 17
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Heartbeat
+  summary: A request to cancel all unmatched bets was submitted since last heartbeat.
+  example: []
+  syntax:
+    content: CANCELLATION_REQUEST_SUBMITTED = 1
+    return:
+      type: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum
+- uid: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum.ALL_BETS_CANCELLED
+  commentId: F:BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum.ALL_BETS_CANCELLED
+  id: ALL_BETS_CANCELLED
+  parent: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum
+  langs:
+  - csharp
+  - vb
+  name: ALL_BETS_CANCELLED
+  nameWithType: ActionPerformedEnum.ALL_BETS_CANCELLED
+  fullName: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum.ALL_BETS_CANCELLED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Heartbeat/ActionPerformedEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ALL_BETS_CANCELLED
+    path: ../src/BetfairDotNet/Enums/Heartbeat/ActionPerformedEnum.cs
+    startLine: 22
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Heartbeat
+  summary: All unmatched bets were cancelled since last heartbeat.
+  example: []
+  syntax:
+    content: ALL_BETS_CANCELLED = 2
+    return:
+      type: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum
+- uid: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum.SOME_BETS_NOT_CANCELLED
+  commentId: F:BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum.SOME_BETS_NOT_CANCELLED
+  id: SOME_BETS_NOT_CANCELLED
+  parent: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum
+  langs:
+  - csharp
+  - vb
+  name: SOME_BETS_NOT_CANCELLED
+  nameWithType: ActionPerformedEnum.SOME_BETS_NOT_CANCELLED
+  fullName: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum.SOME_BETS_NOT_CANCELLED
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Heartbeat/ActionPerformedEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: SOME_BETS_NOT_CANCELLED
+    path: ../src/BetfairDotNet/Enums/Heartbeat/ActionPerformedEnum.cs
+    startLine: 27
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Heartbeat
+  summary: Not all unmatched bets were cancelled since last heartbeat
+  example: []
+  syntax:
+    content: SOME_BETS_NOT_CANCELLED = 3
+    return:
+      type: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum
+- uid: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum.CANCELLATION_REQUEST_ERROR
+  commentId: F:BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum.CANCELLATION_REQUEST_ERROR
+  id: CANCELLATION_REQUEST_ERROR
+  parent: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum
+  langs:
+  - csharp
+  - vb
+  name: CANCELLATION_REQUEST_ERROR
+  nameWithType: ActionPerformedEnum.CANCELLATION_REQUEST_ERROR
+  fullName: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum.CANCELLATION_REQUEST_ERROR
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Heartbeat/ActionPerformedEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: CANCELLATION_REQUEST_ERROR
+    path: ../src/BetfairDotNet/Enums/Heartbeat/ActionPerformedEnum.cs
+    startLine: 32
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Heartbeat
+  summary: There was an error requesting cancellation, no bets have been cancelled.
+  example: []
+  syntax:
+    content: CANCELLATION_REQUEST_ERROR = 4
+    return:
+      type: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum
+- uid: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum.CANCELLATION_STATUS_UNKNOWN
+  commentId: F:BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum.CANCELLATION_STATUS_UNKNOWN
+  id: CANCELLATION_STATUS_UNKNOWN
+  parent: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum
+  langs:
+  - csharp
+  - vb
+  name: CANCELLATION_STATUS_UNKNOWN
+  nameWithType: ActionPerformedEnum.CANCELLATION_STATUS_UNKNOWN
+  fullName: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum.CANCELLATION_STATUS_UNKNOWN
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Heartbeat/ActionPerformedEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: CANCELLATION_STATUS_UNKNOWN
+    path: ../src/BetfairDotNet/Enums/Heartbeat/ActionPerformedEnum.cs
+    startLine: 37
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Heartbeat
+  summary: There was no response from requesting cancellation, cancellation status unknown.
+  example: []
+  syntax:
+    content: CANCELLATION_STATUS_UNKNOWN = 5
+    return:
+      type: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum
+references:
+- uid: BetfairDotNet.Enums.Heartbeat
+  commentId: N:BetfairDotNet.Enums.Heartbeat
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Heartbeat
+  nameWithType: BetfairDotNet.Enums.Heartbeat
+  fullName: BetfairDotNet.Enums.Heartbeat
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Heartbeat
+    name: Heartbeat
+    href: BetfairDotNet.Enums.Heartbeat.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Heartbeat
+    name: Heartbeat
+    href: BetfairDotNet.Enums.Heartbeat.html
+- uid: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum
+  commentId: T:BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum
+  parent: BetfairDotNet.Enums.Heartbeat
+  href: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum.html
+  name: ActionPerformedEnum
+  nameWithType: ActionPerformedEnum
+  fullName: BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum

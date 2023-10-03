@@ -1,0 +1,614 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Models.Betting.MarketProfitAndLoss
+  commentId: T:BetfairDotNet.Models.Betting.MarketProfitAndLoss
+  id: MarketProfitAndLoss
+  parent: BetfairDotNet.Models.Betting
+  children:
+  - BetfairDotNet.Models.Betting.MarketProfitAndLoss.CommissionApplied
+  - BetfairDotNet.Models.Betting.MarketProfitAndLoss.MarketId
+  - BetfairDotNet.Models.Betting.MarketProfitAndLoss.ProfitAndLosses
+  langs:
+  - csharp
+  - vb
+  name: MarketProfitAndLoss
+  nameWithType: MarketProfitAndLoss
+  fullName: BetfairDotNet.Models.Betting.MarketProfitAndLoss
+  type: Class
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/MarketProfitAndLoss.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MarketProfitAndLoss
+    path: ../src/BetfairDotNet/Models/Betting/MarketProfitAndLoss.cs
+    startLine: 8
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: Profit and loss in a market.
+  example: []
+  syntax:
+    content: 'public sealed record MarketProfitAndLoss : IEquatable<MarketProfitAndLoss>'
+    content.vb: Public NotInheritable Class MarketProfitAndLoss Implements IEquatable(Of MarketProfitAndLoss)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{BetfairDotNet.Models.Betting.MarketProfitAndLoss}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BetfairDotNet.Models.Betting.MarketProfitAndLoss.MarketId
+  commentId: P:BetfairDotNet.Models.Betting.MarketProfitAndLoss.MarketId
+  id: MarketId
+  parent: BetfairDotNet.Models.Betting.MarketProfitAndLoss
+  langs:
+  - csharp
+  - vb
+  name: MarketId
+  nameWithType: MarketProfitAndLoss.MarketId
+  fullName: BetfairDotNet.Models.Betting.MarketProfitAndLoss.MarketId
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/MarketProfitAndLoss.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MarketId
+    path: ../src/BetfairDotNet/Models/Betting/MarketProfitAndLoss.cs
+    startLine: 13
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: The unique identifier for the market.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("marketId")]
+
+      public string MarketId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("marketId")>
+
+      Public Property MarketId As String
+  overload: BetfairDotNet.Models.Betting.MarketProfitAndLoss.MarketId*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: marketId
+- uid: BetfairDotNet.Models.Betting.MarketProfitAndLoss.CommissionApplied
+  commentId: P:BetfairDotNet.Models.Betting.MarketProfitAndLoss.CommissionApplied
+  id: CommissionApplied
+  parent: BetfairDotNet.Models.Betting.MarketProfitAndLoss
+  langs:
+  - csharp
+  - vb
+  name: CommissionApplied
+  nameWithType: MarketProfitAndLoss.CommissionApplied
+  fullName: BetfairDotNet.Models.Betting.MarketProfitAndLoss.CommissionApplied
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/MarketProfitAndLoss.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: CommissionApplied
+    path: ../src/BetfairDotNet/Models/Betting/MarketProfitAndLoss.cs
+    startLine: 19
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  syntax:
+    content: >-
+      [JsonPropertyName("commissionApplied")]
+
+      public double CommissionApplied { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonPropertyName("commissionApplied")>
+
+      Public Property CommissionApplied As Double
+  overload: BetfairDotNet.Models.Betting.MarketProfitAndLoss.CommissionApplied*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: commissionApplied
+- uid: BetfairDotNet.Models.Betting.MarketProfitAndLoss.ProfitAndLosses
+  commentId: P:BetfairDotNet.Models.Betting.MarketProfitAndLoss.ProfitAndLosses
+  id: ProfitAndLosses
+  parent: BetfairDotNet.Models.Betting.MarketProfitAndLoss
+  langs:
+  - csharp
+  - vb
+  name: ProfitAndLosses
+  nameWithType: MarketProfitAndLoss.ProfitAndLosses
+  fullName: BetfairDotNet.Models.Betting.MarketProfitAndLoss.ProfitAndLosses
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/MarketProfitAndLoss.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: ProfitAndLosses
+    path: ../src/BetfairDotNet/Models/Betting/MarketProfitAndLoss.cs
+    startLine: 25
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: Calculated profit and loss data.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("profitAndLosses")]
+
+      public List<RunnerProfitAndLoss> ProfitAndLosses { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{BetfairDotNet.Models.Betting.RunnerProfitAndLoss}
+    content.vb: >-
+      <JsonPropertyName("profitAndLosses")>
+
+      Public Property ProfitAndLosses As List(Of RunnerProfitAndLoss)
+  overload: BetfairDotNet.Models.Betting.MarketProfitAndLoss.ProfitAndLosses*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: profitAndLosses
+references:
+- uid: BetfairDotNet.Models.Betting
+  commentId: N:BetfairDotNet.Models.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Betting
+  nameWithType: BetfairDotNet.Models.Betting
+  fullName: BetfairDotNet.Models.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Betting
+    name: Betting
+    href: BetfairDotNet.Models.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Betting
+    name: Betting
+    href: BetfairDotNet.Models.Betting.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{BetfairDotNet.Models.Betting.MarketProfitAndLoss}
+  commentId: T:System.IEquatable{BetfairDotNet.Models.Betting.MarketProfitAndLoss}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<MarketProfitAndLoss>
+  nameWithType: IEquatable<MarketProfitAndLoss>
+  fullName: System.IEquatable<BetfairDotNet.Models.Betting.MarketProfitAndLoss>
+  nameWithType.vb: IEquatable(Of MarketProfitAndLoss)
+  fullName.vb: System.IEquatable(Of BetfairDotNet.Models.Betting.MarketProfitAndLoss)
+  name.vb: IEquatable(Of MarketProfitAndLoss)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: BetfairDotNet.Models.Betting.MarketProfitAndLoss
+    name: MarketProfitAndLoss
+    href: BetfairDotNet.Models.Betting.MarketProfitAndLoss.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Betting.MarketProfitAndLoss
+    name: MarketProfitAndLoss
+    href: BetfairDotNet.Models.Betting.MarketProfitAndLoss.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BetfairDotNet.Models.Betting.MarketProfitAndLoss.MarketId*
+  commentId: Overload:BetfairDotNet.Models.Betting.MarketProfitAndLoss.MarketId
+  href: BetfairDotNet.Models.Betting.MarketProfitAndLoss.html#BetfairDotNet.Models.Betting.MarketProfitAndLoss.MarketId
+  name: MarketId
+  nameWithType: MarketProfitAndLoss.MarketId
+  fullName: BetfairDotNet.Models.Betting.MarketProfitAndLoss.MarketId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: BetfairDotNet.Models.Betting.MarketProfitAndLoss.CommissionApplied*
+  commentId: Overload:BetfairDotNet.Models.Betting.MarketProfitAndLoss.CommissionApplied
+  href: BetfairDotNet.Models.Betting.MarketProfitAndLoss.html#BetfairDotNet.Models.Betting.MarketProfitAndLoss.CommissionApplied
+  name: CommissionApplied
+  nameWithType: MarketProfitAndLoss.CommissionApplied
+  fullName: BetfairDotNet.Models.Betting.MarketProfitAndLoss.CommissionApplied
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: BetfairDotNet.Models.Betting.MarketProfitAndLoss.ProfitAndLosses*
+  commentId: Overload:BetfairDotNet.Models.Betting.MarketProfitAndLoss.ProfitAndLosses
+  href: BetfairDotNet.Models.Betting.MarketProfitAndLoss.html#BetfairDotNet.Models.Betting.MarketProfitAndLoss.ProfitAndLosses
+  name: ProfitAndLosses
+  nameWithType: MarketProfitAndLoss.ProfitAndLosses
+  fullName: BetfairDotNet.Models.Betting.MarketProfitAndLoss.ProfitAndLosses
+- uid: System.Collections.Generic.List{BetfairDotNet.Models.Betting.RunnerProfitAndLoss}
+  commentId: T:System.Collections.Generic.List{BetfairDotNet.Models.Betting.RunnerProfitAndLoss}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<RunnerProfitAndLoss>
+  nameWithType: List<RunnerProfitAndLoss>
+  fullName: System.Collections.Generic.List<BetfairDotNet.Models.Betting.RunnerProfitAndLoss>
+  nameWithType.vb: List(Of RunnerProfitAndLoss)
+  fullName.vb: System.Collections.Generic.List(Of BetfairDotNet.Models.Betting.RunnerProfitAndLoss)
+  name.vb: List(Of RunnerProfitAndLoss)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: BetfairDotNet.Models.Betting.RunnerProfitAndLoss
+    name: RunnerProfitAndLoss
+    href: BetfairDotNet.Models.Betting.RunnerProfitAndLoss.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: BetfairDotNet.Models.Betting.RunnerProfitAndLoss
+    name: RunnerProfitAndLoss
+    href: BetfairDotNet.Models.Betting.RunnerProfitAndLoss.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

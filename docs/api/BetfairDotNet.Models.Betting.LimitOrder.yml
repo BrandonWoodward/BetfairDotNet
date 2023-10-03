@@ -1,0 +1,827 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Models.Betting.LimitOrder
+  commentId: T:BetfairDotNet.Models.Betting.LimitOrder
+  id: LimitOrder
+  parent: BetfairDotNet.Models.Betting
+  children:
+  - BetfairDotNet.Models.Betting.LimitOrder.BetTargetSize
+  - BetfairDotNet.Models.Betting.LimitOrder.BetTargetType
+  - BetfairDotNet.Models.Betting.LimitOrder.MinFillSize
+  - BetfairDotNet.Models.Betting.LimitOrder.PersistenceType
+  - BetfairDotNet.Models.Betting.LimitOrder.Price
+  - BetfairDotNet.Models.Betting.LimitOrder.Size
+  - BetfairDotNet.Models.Betting.LimitOrder.TimeInForce
+  langs:
+  - csharp
+  - vb
+  name: LimitOrder
+  nameWithType: LimitOrder
+  fullName: BetfairDotNet.Models.Betting.LimitOrder
+  type: Class
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/LimitOrder.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: LimitOrder
+    path: ../src/BetfairDotNet/Models/Betting/LimitOrder.cs
+    startLine: 9
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: Place a new LIMIT order (simple exchange bet for immediate execution)
+  example: []
+  syntax:
+    content: public sealed class LimitOrder
+    content.vb: Public NotInheritable Class LimitOrder
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BetfairDotNet.Models.Betting.LimitOrder.Size
+  commentId: P:BetfairDotNet.Models.Betting.LimitOrder.Size
+  id: Size
+  parent: BetfairDotNet.Models.Betting.LimitOrder
+  langs:
+  - csharp
+  - vb
+  name: Size
+  nameWithType: LimitOrder.Size
+  fullName: BetfairDotNet.Models.Betting.LimitOrder.Size
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/LimitOrder.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Size
+    path: ../src/BetfairDotNet/Models/Betting/LimitOrder.cs
+    startLine: 15
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: >-
+    The size of the bet. 
+
+    For market type EACH_WAY. The total stake = size x 2
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("size")]
+
+      [JsonRequired]
+
+      public required double Size { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonPropertyName("size")>
+
+      <JsonRequired>
+
+      Public Property Size As Double
+  overload: BetfairDotNet.Models.Betting.LimitOrder.Size*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: size
+  - type: System.Text.Json.Serialization.JsonRequiredAttribute
+    ctor: System.Text.Json.Serialization.JsonRequiredAttribute.#ctor
+    arguments: []
+- uid: BetfairDotNet.Models.Betting.LimitOrder.Price
+  commentId: P:BetfairDotNet.Models.Betting.LimitOrder.Price
+  id: Price
+  parent: BetfairDotNet.Models.Betting.LimitOrder
+  langs:
+  - csharp
+  - vb
+  name: Price
+  nameWithType: LimitOrder.Price
+  fullName: BetfairDotNet.Models.Betting.LimitOrder.Price
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/LimitOrder.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: Price
+    path: ../src/BetfairDotNet/Models/Betting/LimitOrder.cs
+    startLine: 23
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: >-
+    The limit price. 
+
+    <p>For LINE markets, the price at which the bet is settled and struck will always be 2.0 (Evens). 
+
+    On these bets, the Price field is used to indicate the line value which is being bought or sold.</p>
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("price")]
+
+      [JsonRequired]
+
+      public required double Price { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonPropertyName("price")>
+
+      <JsonRequired>
+
+      Public Property Price As Double
+  overload: BetfairDotNet.Models.Betting.LimitOrder.Price*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: price
+  - type: System.Text.Json.Serialization.JsonRequiredAttribute
+    ctor: System.Text.Json.Serialization.JsonRequiredAttribute.#ctor
+    arguments: []
+- uid: BetfairDotNet.Models.Betting.LimitOrder.PersistenceType
+  commentId: P:BetfairDotNet.Models.Betting.LimitOrder.PersistenceType
+  id: PersistenceType
+  parent: BetfairDotNet.Models.Betting.LimitOrder
+  langs:
+  - csharp
+  - vb
+  name: PersistenceType
+  nameWithType: LimitOrder.PersistenceType
+  fullName: BetfairDotNet.Models.Betting.LimitOrder.PersistenceType
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/LimitOrder.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: PersistenceType
+    path: ../src/BetfairDotNet/Models/Betting/LimitOrder.cs
+    startLine: 29
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: What to do with the order at turn-in-play.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("persistenceType")]
+
+      [JsonRequired]
+
+      public required PersistenceTypeEnum PersistenceType { get; set; }
+    parameters: []
+    return:
+      type: BetfairDotNet.Enums.Betting.PersistenceTypeEnum
+    content.vb: >-
+      <JsonPropertyName("persistenceType")>
+
+      <JsonRequired>
+
+      Public Property PersistenceType As PersistenceTypeEnum
+  overload: BetfairDotNet.Models.Betting.LimitOrder.PersistenceType*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: persistenceType
+  - type: System.Text.Json.Serialization.JsonRequiredAttribute
+    ctor: System.Text.Json.Serialization.JsonRequiredAttribute.#ctor
+    arguments: []
+- uid: BetfairDotNet.Models.Betting.LimitOrder.TimeInForce
+  commentId: P:BetfairDotNet.Models.Betting.LimitOrder.TimeInForce
+  id: TimeInForce
+  parent: BetfairDotNet.Models.Betting.LimitOrder
+  langs:
+  - csharp
+  - vb
+  name: TimeInForce
+  nameWithType: LimitOrder.TimeInForce
+  fullName: BetfairDotNet.Models.Betting.LimitOrder.TimeInForce
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/LimitOrder.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: TimeInForce
+    path: ../src/BetfairDotNet/Models/Betting/LimitOrder.cs
+    startLine: 37
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: >-
+    The type of TimeInForce value to use. This value takes precedence over any PersistenceType value chosen. 
+
+    <p> If this attribute is populated along with the PersistenceType field, then the PersistenceType will be ignored.</p> 
+
+    <p> When using FILL_OR_KILL for a Line market the Volume Weighted Average Price(VWAP) functionality is disabled. </p>
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("timeInForce")]
+
+      public TimeInForceEnum? TimeInForce { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{BetfairDotNet.Enums.Betting.TimeInForceEnum}
+    content.vb: >-
+      <JsonPropertyName("timeInForce")>
+
+      Public Property TimeInForce As TimeInForceEnum?
+  overload: BetfairDotNet.Models.Betting.LimitOrder.TimeInForce*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: timeInForce
+- uid: BetfairDotNet.Models.Betting.LimitOrder.MinFillSize
+  commentId: P:BetfairDotNet.Models.Betting.LimitOrder.MinFillSize
+  id: MinFillSize
+  parent: BetfairDotNet.Models.Betting.LimitOrder
+  langs:
+  - csharp
+  - vb
+  name: MinFillSize
+  nameWithType: LimitOrder.MinFillSize
+  fullName: BetfairDotNet.Models.Betting.LimitOrder.MinFillSize
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/LimitOrder.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: MinFillSize
+    path: ../src/BetfairDotNet/Models/Betting/LimitOrder.cs
+    startLine: 48
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: >-
+    An optional field used if the TimeInForce attribute is populated.
+
+    If specified without TimeInForce then this field is ignored.
+
+    <p>If no minFillSize is specified, the order is killed unless the entire size can be matched. </p>
+
+    <p>If minFillSize is specified, the order is killed unless at least the minFillSize can be matched.
+
+    The minFillSize cannot be greater than the order's size. </p> 
+
+    <p>If specified for a BetTargetType and FILL_OR_KILL order, then this value will be ignored</p>
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("minFillSize")]
+
+      public double? MinFillSize { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: >-
+      <JsonPropertyName("minFillSize")>
+
+      Public Property MinFillSize As Double?
+  overload: BetfairDotNet.Models.Betting.LimitOrder.MinFillSize*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: minFillSize
+- uid: BetfairDotNet.Models.Betting.LimitOrder.BetTargetType
+  commentId: P:BetfairDotNet.Models.Betting.LimitOrder.BetTargetType
+  id: BetTargetType
+  parent: BetfairDotNet.Models.Betting.LimitOrder
+  langs:
+  - csharp
+  - vb
+  name: BetTargetType
+  nameWithType: LimitOrder.BetTargetType
+  fullName: BetfairDotNet.Models.Betting.LimitOrder.BetTargetType
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/LimitOrder.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: BetTargetType
+    path: ../src/BetfairDotNet/Models/Betting/LimitOrder.cs
+    startLine: 58
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: >-
+    An optional field to allow betting to a targeted PAYOUT or BACKERS_PROFIT. 
+
+    It's invalid to specify both a Size and BetTargetType 
+
+    <p>Matching provides best execution at the requested price or better up to the payout or profit.
+
+    If the bet is not matched completely and immediately, the remaining portion enters the unmatched pool of bets on the exchange.</p>
+
+    BetTargetType bets are invalid for LINE markets
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("betTargetType")]
+
+      public BetTargetTypeEnum? BetTargetType { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{BetfairDotNet.Enums.Betting.BetTargetTypeEnum}
+    content.vb: >-
+      <JsonPropertyName("betTargetType")>
+
+      Public Property BetTargetType As BetTargetTypeEnum?
+  overload: BetfairDotNet.Models.Betting.LimitOrder.BetTargetType*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: betTargetType
+- uid: BetfairDotNet.Models.Betting.LimitOrder.BetTargetSize
+  commentId: P:BetfairDotNet.Models.Betting.LimitOrder.BetTargetSize
+  id: BetTargetSize
+  parent: BetfairDotNet.Models.Betting.LimitOrder
+  langs:
+  - csharp
+  - vb
+  name: BetTargetSize
+  nameWithType: LimitOrder.BetTargetSize
+  fullName: BetfairDotNet.Models.Betting.LimitOrder.BetTargetSize
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Betting/LimitOrder.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: BetTargetSize
+    path: ../src/BetfairDotNet/Models/Betting/LimitOrder.cs
+    startLine: 66
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Betting
+  summary: >-
+    An optional field which MUST be specified if BetTargetType is specified for this order 
+
+    <p> The requested outcome size of either the payout or profit.
+
+    This is named from the backer's perspective. For Lay bets the profit represents the bet's liability.</p>
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("betTargetSize")]
+
+      public double? BetTargetSize { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: >-
+      <JsonPropertyName("betTargetSize")>
+
+      Public Property BetTargetSize As Double?
+  overload: BetfairDotNet.Models.Betting.LimitOrder.BetTargetSize*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: betTargetSize
+references:
+- uid: BetfairDotNet.Models.Betting
+  commentId: N:BetfairDotNet.Models.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Models.Betting
+  nameWithType: BetfairDotNet.Models.Betting
+  fullName: BetfairDotNet.Models.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Betting
+    name: Betting
+    href: BetfairDotNet.Models.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Models
+    name: Models
+    href: BetfairDotNet.Models.html
+  - name: .
+  - uid: BetfairDotNet.Models.Betting
+    name: Betting
+    href: BetfairDotNet.Models.Betting.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BetfairDotNet.Models.Betting.LimitOrder.Size*
+  commentId: Overload:BetfairDotNet.Models.Betting.LimitOrder.Size
+  href: BetfairDotNet.Models.Betting.LimitOrder.html#BetfairDotNet.Models.Betting.LimitOrder.Size
+  name: Size
+  nameWithType: LimitOrder.Size
+  fullName: BetfairDotNet.Models.Betting.LimitOrder.Size
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: BetfairDotNet.Models.Betting.LimitOrder.Price*
+  commentId: Overload:BetfairDotNet.Models.Betting.LimitOrder.Price
+  href: BetfairDotNet.Models.Betting.LimitOrder.html#BetfairDotNet.Models.Betting.LimitOrder.Price
+  name: Price
+  nameWithType: LimitOrder.Price
+  fullName: BetfairDotNet.Models.Betting.LimitOrder.Price
+- uid: BetfairDotNet.Models.Betting.LimitOrder.PersistenceType*
+  commentId: Overload:BetfairDotNet.Models.Betting.LimitOrder.PersistenceType
+  href: BetfairDotNet.Models.Betting.LimitOrder.html#BetfairDotNet.Models.Betting.LimitOrder.PersistenceType
+  name: PersistenceType
+  nameWithType: LimitOrder.PersistenceType
+  fullName: BetfairDotNet.Models.Betting.LimitOrder.PersistenceType
+- uid: BetfairDotNet.Enums.Betting.PersistenceTypeEnum
+  commentId: T:BetfairDotNet.Enums.Betting.PersistenceTypeEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.PersistenceTypeEnum.html
+  name: PersistenceTypeEnum
+  nameWithType: PersistenceTypeEnum
+  fullName: BetfairDotNet.Enums.Betting.PersistenceTypeEnum
+- uid: BetfairDotNet.Enums.Betting
+  commentId: N:BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Betting
+  nameWithType: BetfairDotNet.Enums.Betting
+  fullName: BetfairDotNet.Enums.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+- uid: BetfairDotNet.Models.Betting.LimitOrder.TimeInForce*
+  commentId: Overload:BetfairDotNet.Models.Betting.LimitOrder.TimeInForce
+  href: BetfairDotNet.Models.Betting.LimitOrder.html#BetfairDotNet.Models.Betting.LimitOrder.TimeInForce
+  name: TimeInForce
+  nameWithType: LimitOrder.TimeInForce
+  fullName: BetfairDotNet.Models.Betting.LimitOrder.TimeInForce
+- uid: System.Nullable{BetfairDotNet.Enums.Betting.TimeInForceEnum}
+  commentId: T:System.Nullable{BetfairDotNet.Enums.Betting.TimeInForceEnum}
+  parent: System
+  definition: System.Nullable`1
+  href: BetfairDotNet.Enums.Betting.TimeInForceEnum.html
+  name: TimeInForceEnum?
+  nameWithType: TimeInForceEnum?
+  fullName: BetfairDotNet.Enums.Betting.TimeInForceEnum?
+  spec.csharp:
+  - uid: BetfairDotNet.Enums.Betting.TimeInForceEnum
+    name: TimeInForceEnum
+    href: BetfairDotNet.Enums.Betting.TimeInForceEnum.html
+  - name: '?'
+  spec.vb:
+  - uid: BetfairDotNet.Enums.Betting.TimeInForceEnum
+    name: TimeInForceEnum
+    href: BetfairDotNet.Enums.Betting.TimeInForceEnum.html
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: BetfairDotNet.Models.Betting.LimitOrder.MinFillSize*
+  commentId: Overload:BetfairDotNet.Models.Betting.LimitOrder.MinFillSize
+  href: BetfairDotNet.Models.Betting.LimitOrder.html#BetfairDotNet.Models.Betting.LimitOrder.MinFillSize
+  name: MinFillSize
+  nameWithType: LimitOrder.MinFillSize
+  fullName: BetfairDotNet.Models.Betting.LimitOrder.MinFillSize
+- uid: System.Nullable{System.Double}
+  commentId: T:System.Nullable{System.Double}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double?
+  nameWithType: double?
+  fullName: double?
+  nameWithType.vb: Double?
+  fullName.vb: Double?
+  name.vb: Double?
+  spec.csharp:
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+  spec.vb:
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+- uid: BetfairDotNet.Models.Betting.LimitOrder.BetTargetType*
+  commentId: Overload:BetfairDotNet.Models.Betting.LimitOrder.BetTargetType
+  href: BetfairDotNet.Models.Betting.LimitOrder.html#BetfairDotNet.Models.Betting.LimitOrder.BetTargetType
+  name: BetTargetType
+  nameWithType: LimitOrder.BetTargetType
+  fullName: BetfairDotNet.Models.Betting.LimitOrder.BetTargetType
+- uid: System.Nullable{BetfairDotNet.Enums.Betting.BetTargetTypeEnum}
+  commentId: T:System.Nullable{BetfairDotNet.Enums.Betting.BetTargetTypeEnum}
+  parent: System
+  definition: System.Nullable`1
+  href: BetfairDotNet.Enums.Betting.BetTargetTypeEnum.html
+  name: BetTargetTypeEnum?
+  nameWithType: BetTargetTypeEnum?
+  fullName: BetfairDotNet.Enums.Betting.BetTargetTypeEnum?
+  spec.csharp:
+  - uid: BetfairDotNet.Enums.Betting.BetTargetTypeEnum
+    name: BetTargetTypeEnum
+    href: BetfairDotNet.Enums.Betting.BetTargetTypeEnum.html
+  - name: '?'
+  spec.vb:
+  - uid: BetfairDotNet.Enums.Betting.BetTargetTypeEnum
+    name: BetTargetTypeEnum
+    href: BetfairDotNet.Enums.Betting.BetTargetTypeEnum.html
+  - name: '?'
+- uid: BetfairDotNet.Models.Betting.LimitOrder.BetTargetSize*
+  commentId: Overload:BetfairDotNet.Models.Betting.LimitOrder.BetTargetSize
+  href: BetfairDotNet.Models.Betting.LimitOrder.html#BetfairDotNet.Models.Betting.LimitOrder.BetTargetSize
+  name: BetTargetSize
+  nameWithType: LimitOrder.BetTargetSize
+  fullName: BetfairDotNet.Models.Betting.LimitOrder.BetTargetSize

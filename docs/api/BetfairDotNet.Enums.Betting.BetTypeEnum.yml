@@ -1,0 +1,239 @@
+### YamlMime:ManagedReference
+items:
+- uid: BetfairDotNet.Enums.Betting.BetTypeEnum
+  commentId: T:BetfairDotNet.Enums.Betting.BetTypeEnum
+  id: BetTypeEnum
+  parent: BetfairDotNet.Enums.Betting
+  children:
+  - BetfairDotNet.Enums.Betting.BetTypeEnum.BY_MARKET
+  - BetfairDotNet.Enums.Betting.BetTypeEnum.BY_MATCH_TIME
+  - BetfairDotNet.Enums.Betting.BetTypeEnum.BY_PLACE_TIME
+  - BetfairDotNet.Enums.Betting.BetTypeEnum.BY_SETTLED_TIME
+  - BetfairDotNet.Enums.Betting.BetTypeEnum.BY_VOID_TIME
+  langs:
+  - csharp
+  - vb
+  name: BetTypeEnum
+  nameWithType: BetTypeEnum
+  fullName: BetfairDotNet.Enums.Betting.BetTypeEnum
+  type: Enum
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/BetTypeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: BetTypeEnum
+    path: ../src/BetfairDotNet/Enums/Betting/BetTypeEnum.cs
+    startLine: 6
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  syntax:
+    content: >-
+      [JsonConverter(typeof(EmptyStringToEnumConverter<BetTypeEnum>))]
+
+      public enum BetTypeEnum
+    content.vb: >-
+      <JsonConverter(GetType(EmptyStringToEnumConverter(Of BetTypeEnum)))>
+
+      Public Enum BetTypeEnum
+- uid: BetfairDotNet.Enums.Betting.BetTypeEnum.BY_MARKET
+  commentId: F:BetfairDotNet.Enums.Betting.BetTypeEnum.BY_MARKET
+  id: BY_MARKET
+  parent: BetfairDotNet.Enums.Betting.BetTypeEnum
+  langs:
+  - csharp
+  - vb
+  name: BY_MARKET
+  nameWithType: BetTypeEnum.BY_MARKET
+  fullName: BetfairDotNet.Enums.Betting.BetTypeEnum.BY_MARKET
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/BetTypeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: BY_MARKET
+    path: ../src/BetfairDotNet/Enums/Betting/BetTypeEnum.cs
+    startLine: 11
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: Order by market id, then placed time, then bet id.
+  example: []
+  syntax:
+    content: BY_MARKET = 0
+    return:
+      type: BetfairDotNet.Enums.Betting.BetTypeEnum
+- uid: BetfairDotNet.Enums.Betting.BetTypeEnum.BY_MATCH_TIME
+  commentId: F:BetfairDotNet.Enums.Betting.BetTypeEnum.BY_MATCH_TIME
+  id: BY_MATCH_TIME
+  parent: BetfairDotNet.Enums.Betting.BetTypeEnum
+  langs:
+  - csharp
+  - vb
+  name: BY_MATCH_TIME
+  nameWithType: BetTypeEnum.BY_MATCH_TIME
+  fullName: BetfairDotNet.Enums.Betting.BetTypeEnum.BY_MATCH_TIME
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/BetTypeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: BY_MATCH_TIME
+    path: ../src/BetfairDotNet/Enums/Betting/BetTypeEnum.cs
+    startLine: 18
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: >-
+    Order by time of last matched fragment (if any), then placed time, then bet id. 
+
+    Filters out orders which have no matched date. 
+
+    The dateRange filter (if specified) is applied to the matched date.
+  example: []
+  syntax:
+    content: BY_MATCH_TIME = 1
+    return:
+      type: BetfairDotNet.Enums.Betting.BetTypeEnum
+- uid: BetfairDotNet.Enums.Betting.BetTypeEnum.BY_PLACE_TIME
+  commentId: F:BetfairDotNet.Enums.Betting.BetTypeEnum.BY_PLACE_TIME
+  id: BY_PLACE_TIME
+  parent: BetfairDotNet.Enums.Betting.BetTypeEnum
+  langs:
+  - csharp
+  - vb
+  name: BY_PLACE_TIME
+  nameWithType: BetTypeEnum.BY_PLACE_TIME
+  fullName: BetfairDotNet.Enums.Betting.BetTypeEnum.BY_PLACE_TIME
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/BetTypeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: BY_PLACE_TIME
+    path: ../src/BetfairDotNet/Enums/Betting/BetTypeEnum.cs
+    startLine: 25
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: >-
+    Order by placed time, then bet id. 
+
+    This is an alias of to be deprecated BY_BET. 
+
+    The dateRange filter (if specified) is applied to the placed date.
+  example: []
+  syntax:
+    content: BY_PLACE_TIME = 2
+    return:
+      type: BetfairDotNet.Enums.Betting.BetTypeEnum
+- uid: BetfairDotNet.Enums.Betting.BetTypeEnum.BY_SETTLED_TIME
+  commentId: F:BetfairDotNet.Enums.Betting.BetTypeEnum.BY_SETTLED_TIME
+  id: BY_SETTLED_TIME
+  parent: BetfairDotNet.Enums.Betting.BetTypeEnum
+  langs:
+  - csharp
+  - vb
+  name: BY_SETTLED_TIME
+  nameWithType: BetTypeEnum.BY_SETTLED_TIME
+  fullName: BetfairDotNet.Enums.Betting.BetTypeEnum.BY_SETTLED_TIME
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/BetTypeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: BY_SETTLED_TIME
+    path: ../src/BetfairDotNet/Enums/Betting/BetTypeEnum.cs
+    startLine: 33
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: >-
+    Order by time of last settled fragment (if any due to partial market settlement), 
+
+    then by last match time, then placed time, then bet id.
+
+    Filters out orders which have not been settled. 
+
+    The dateRange filter (if specified) is applied to the settled date.
+  example: []
+  syntax:
+    content: BY_SETTLED_TIME = 3
+    return:
+      type: BetfairDotNet.Enums.Betting.BetTypeEnum
+- uid: BetfairDotNet.Enums.Betting.BetTypeEnum.BY_VOID_TIME
+  commentId: F:BetfairDotNet.Enums.Betting.BetTypeEnum.BY_VOID_TIME
+  id: BY_VOID_TIME
+  parent: BetfairDotNet.Enums.Betting.BetTypeEnum
+  langs:
+  - csharp
+  - vb
+  name: BY_VOID_TIME
+  nameWithType: BetTypeEnum.BY_VOID_TIME
+  fullName: BetfairDotNet.Enums.Betting.BetTypeEnum.BY_VOID_TIME
+  type: Field
+  source:
+    remote:
+      path: src/BetfairDotNet/Enums/Betting/BetTypeEnum.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: BY_VOID_TIME
+    path: ../src/BetfairDotNet/Enums/Betting/BetTypeEnum.cs
+    startLine: 40
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Enums.Betting
+  summary: >-
+    Order by time of last voided fragment (if any), then by last match time, then placed time, then bet id. 
+
+    Filters out orders which have not been voided. 
+
+    The dateRange filter (if specified) is applied to the voided date.
+  example: []
+  syntax:
+    content: BY_VOID_TIME = 4
+    return:
+      type: BetfairDotNet.Enums.Betting.BetTypeEnum
+references:
+- uid: BetfairDotNet.Enums.Betting
+  commentId: N:BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.html
+  name: BetfairDotNet.Enums.Betting
+  nameWithType: BetfairDotNet.Enums.Betting
+  fullName: BetfairDotNet.Enums.Betting
+  spec.csharp:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+  spec.vb:
+  - uid: BetfairDotNet
+    name: BetfairDotNet
+    href: BetfairDotNet.html
+  - name: .
+  - uid: BetfairDotNet.Enums
+    name: Enums
+    href: BetfairDotNet.Enums.html
+  - name: .
+  - uid: BetfairDotNet.Enums.Betting
+    name: Betting
+    href: BetfairDotNet.Enums.Betting.html
+- uid: BetfairDotNet.Enums.Betting.BetTypeEnum
+  commentId: T:BetfairDotNet.Enums.Betting.BetTypeEnum
+  parent: BetfairDotNet.Enums.Betting
+  href: BetfairDotNet.Enums.Betting.BetTypeEnum.html
+  name: BetTypeEnum
+  nameWithType: BetTypeEnum
+  fullName: BetfairDotNet.Enums.Betting.BetTypeEnum

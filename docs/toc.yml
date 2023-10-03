@@ -9,4 +9,4 @@ items:
     href: articles/useful-snippets.md
   - name: API Documentation
     href: api/
-    homepage: api/index.md
+    homepage: api/BetfairDotNet.html

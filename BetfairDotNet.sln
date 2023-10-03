@@ -191,7 +191,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api", "api", "{13E4ED38-624
 		docs\api\BetfairDotNet.Utils.PriceHelpers.yml = docs\api\BetfairDotNet.Utils.PriceHelpers.yml
 		docs\api\BetfairDotNet.Utils.yml = docs\api\BetfairDotNet.Utils.yml
 		docs\api\BetfairDotNet.yml = docs\api\BetfairDotNet.yml
-		docs\api\index.md = docs\api\index.md
 		docs\api\toc.yml = docs\api\toc.yml
 	EndProjectSection
 EndProject

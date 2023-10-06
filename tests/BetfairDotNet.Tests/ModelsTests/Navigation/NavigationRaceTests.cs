@@ -19,6 +19,7 @@ public class NavigationRaceTests
             Venue = "SomeVenue",
             RaceNumber = "2",
             Children = new() { new NavigationGroup { Id = "1", Name = "Child1" } },
+            CountryCode = "GB"
         };
 
         // Act

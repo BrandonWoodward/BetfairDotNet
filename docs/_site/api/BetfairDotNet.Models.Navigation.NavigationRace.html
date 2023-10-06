@@ -90,7 +90,7 @@
 
   <h1 id="BetfairDotNet_Models_Navigation_NavigationRace" data-uid="BetfairDotNet.Models.Navigation.NavigationRace" class="text-break">
     Class NavigationRace
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Navigation/NavigationRace.cs/#L5"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Navigation/NavigationRace.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -98,7 +98,8 @@
   <dl><dt>Assembly</dt><dd>BetfairDotNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Only applies to Horse Racing and Greyhound Racing.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -167,14 +168,48 @@
 </h2>
 
 
+  <a id="BetfairDotNet_Models_Navigation_NavigationRace_CountryCode_" data-uid="BetfairDotNet.Models.Navigation.NavigationRace.CountryCode*"></a>
+
+  <h3 id="BetfairDotNet_Models_Navigation_NavigationRace_CountryCode" data-uid="BetfairDotNet.Models.Navigation.NavigationRace.CountryCode">
+  CountryCode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Navigation/NavigationRace.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The country in which the event is taking place.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;countryCode&quot;)]
+public string CountryCode { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="BetfairDotNet_Models_Navigation_NavigationRace_RaceNumber_" data-uid="BetfairDotNet.Models.Navigation.NavigationRace.RaceNumber*"></a>
 
   <h3 id="BetfairDotNet_Models_Navigation_NavigationRace_RaceNumber" data-uid="BetfairDotNet.Models.Navigation.NavigationRace.RaceNumber">
   RaceNumber
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Navigation/NavigationRace.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Navigation/NavigationRace.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>US specific information about race numbers.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -203,10 +238,11 @@ public string RaceNumber { get; init; }</code></pre>
 
   <h3 id="BetfairDotNet_Models_Navigation_NavigationRace_StartTime" data-uid="BetfairDotNet.Models.Navigation.NavigationRace.StartTime">
   StartTime
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Navigation/NavigationRace.cs/#L7"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Navigation/NavigationRace.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The scheduled start time of the event.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -235,10 +271,11 @@ public DateTime? StartTime { get; init; }</code></pre>
 
   <h3 id="BetfairDotNet_Models_Navigation_NavigationRace_Type" data-uid="BetfairDotNet.Models.Navigation.NavigationRace.Type">
   Type
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Navigation/NavigationRace.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Navigation/NavigationRace.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Always RACE</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -267,10 +304,11 @@ public override string Type { get; }</code></pre>
 
   <h3 id="BetfairDotNet_Models_Navigation_NavigationRace_Venue" data-uid="BetfairDotNet.Models.Navigation.NavigationRace.Venue">
   Venue
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Navigation/NavigationRace.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Navigation/NavigationRace.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The course or track.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -299,7 +337,7 @@ public string Venue { get; init; }</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Navigation/NavigationRace.cs/#L5" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Models/Navigation/NavigationRace.cs/#L8" class="edit-link">Edit this page</a>
         </div>
 
         

@@ -703,6 +703,7 @@
   "BetfairDotNet.Models.Navigation.NavigationMarket.NumberOfWinners": "BetfairDotNet.Models.Navigation.NavigationMarket.yml",
   "BetfairDotNet.Models.Navigation.NavigationMarket.Type": "BetfairDotNet.Models.Navigation.NavigationMarket.yml",
   "BetfairDotNet.Models.Navigation.NavigationRace": "BetfairDotNet.Models.Navigation.NavigationRace.yml",
+  "BetfairDotNet.Models.Navigation.NavigationRace.CountryCode": "BetfairDotNet.Models.Navigation.NavigationRace.yml",
   "BetfairDotNet.Models.Navigation.NavigationRace.RaceNumber": "BetfairDotNet.Models.Navigation.NavigationRace.yml",
   "BetfairDotNet.Models.Navigation.NavigationRace.StartTime": "BetfairDotNet.Models.Navigation.NavigationRace.yml",
   "BetfairDotNet.Models.Navigation.NavigationRace.Type": "BetfairDotNet.Models.Navigation.NavigationRace.yml",

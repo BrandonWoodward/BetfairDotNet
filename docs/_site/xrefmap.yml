@@ -6836,6 +6836,19 @@ references:
   commentId: T:BetfairDotNet.Models.Navigation.NavigationRace
   fullName: BetfairDotNet.Models.Navigation.NavigationRace
   nameWithType: NavigationRace
+- uid: BetfairDotNet.Models.Navigation.NavigationRace.CountryCode
+  name: CountryCode
+  href: api/BetfairDotNet.Models.Navigation.NavigationRace.html#BetfairDotNet_Models_Navigation_NavigationRace_CountryCode
+  commentId: P:BetfairDotNet.Models.Navigation.NavigationRace.CountryCode
+  fullName: BetfairDotNet.Models.Navigation.NavigationRace.CountryCode
+  nameWithType: NavigationRace.CountryCode
+- uid: BetfairDotNet.Models.Navigation.NavigationRace.CountryCode*
+  name: CountryCode
+  href: api/BetfairDotNet.Models.Navigation.NavigationRace.html#BetfairDotNet_Models_Navigation_NavigationRace_CountryCode_
+  commentId: Overload:BetfairDotNet.Models.Navigation.NavigationRace.CountryCode
+  isSpec: "True"
+  fullName: BetfairDotNet.Models.Navigation.NavigationRace.CountryCode
+  nameWithType: NavigationRace.CountryCode
 - uid: BetfairDotNet.Models.Navigation.NavigationRace.RaceNumber
   name: RaceNumber
   href: api/BetfairDotNet.Models.Navigation.NavigationRace.html#BetfairDotNet_Models_Navigation_NavigationRace_RaceNumber

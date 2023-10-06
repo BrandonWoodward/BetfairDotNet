@@ -5,6 +5,7 @@ items:
   id: NavigationRace
   parent: BetfairDotNet.Models.Navigation
   children:
+  - BetfairDotNet.Models.Navigation.NavigationRace.CountryCode
   - BetfairDotNet.Models.Navigation.NavigationRace.RaceNumber
   - BetfairDotNet.Models.Navigation.NavigationRace.StartTime
   - BetfairDotNet.Models.Navigation.NavigationRace.Type
@@ -23,10 +24,12 @@ items:
       repo: https://github.com/BrandonWoodward/BetfairDotNet.git
     id: NavigationRace
     path: ../src/BetfairDotNet/Models/Navigation/NavigationRace.cs
-    startLine: 4
+    startLine: 7
   assemblies:
   - BetfairDotNet
   namespace: BetfairDotNet.Models.Navigation
+  summary: Only applies to Horse Racing and Greyhound Racing.
+  example: []
   syntax:
     content: 'public sealed record NavigationRace : NavigationItem, IEquatable<NavigationItem>, IEquatable<NavigationRace>'
     content.vb: Public NotInheritable Class NavigationRace Inherits NavigationItem Implements IEquatable(Of NavigationItem), IEquatable(Of NavigationRace)
@@ -64,10 +67,12 @@ items:
       repo: https://github.com/BrandonWoodward/BetfairDotNet.git
     id: StartTime
     path: ../src/BetfairDotNet/Models/Navigation/NavigationRace.cs
-    startLine: 6
+    startLine: 12
   assemblies:
   - BetfairDotNet
   namespace: BetfairDotNet.Models.Navigation
+  summary: The scheduled start time of the event.
+  example: []
   syntax:
     content: >-
       [JsonPropertyName("startTime")]
@@ -105,10 +110,12 @@ items:
       repo: https://github.com/BrandonWoodward/BetfairDotNet.git
     id: Venue
     path: ../src/BetfairDotNet/Models/Navigation/NavigationRace.cs
-    startLine: 9
+    startLine: 18
   assemblies:
   - BetfairDotNet
   namespace: BetfairDotNet.Models.Navigation
+  summary: The course or track.
+  example: []
   syntax:
     content: >-
       [JsonPropertyName("venue")]
@@ -146,10 +153,12 @@ items:
       repo: https://github.com/BrandonWoodward/BetfairDotNet.git
     id: RaceNumber
     path: ../src/BetfairDotNet/Models/Navigation/NavigationRace.cs
-    startLine: 12
+    startLine: 24
   assemblies:
   - BetfairDotNet
   namespace: BetfairDotNet.Models.Navigation
+  summary: US specific information about race numbers.
+  example: []
   syntax:
     content: >-
       [JsonPropertyName("raceNumber")]
@@ -187,10 +196,11 @@ items:
       repo: https://github.com/BrandonWoodward/BetfairDotNet.git
     id: Type
     path: ../src/BetfairDotNet/Models/Navigation/NavigationRace.cs
-    startLine: 15
+    startLine: 30
   assemblies:
   - BetfairDotNet
   namespace: BetfairDotNet.Models.Navigation
+  summary: Always RACE
   example: []
   syntax:
     content: >-
@@ -212,6 +222,49 @@ items:
     arguments:
     - type: System.String
       value: type
+- uid: BetfairDotNet.Models.Navigation.NavigationRace.CountryCode
+  commentId: P:BetfairDotNet.Models.Navigation.NavigationRace.CountryCode
+  id: CountryCode
+  parent: BetfairDotNet.Models.Navigation.NavigationRace
+  langs:
+  - csharp
+  - vb
+  name: CountryCode
+  nameWithType: NavigationRace.CountryCode
+  fullName: BetfairDotNet.Models.Navigation.NavigationRace.CountryCode
+  type: Property
+  source:
+    remote:
+      path: src/BetfairDotNet/Models/Navigation/NavigationRace.cs
+      branch: master
+      repo: https://github.com/BrandonWoodward/BetfairDotNet.git
+    id: CountryCode
+    path: ../src/BetfairDotNet/Models/Navigation/NavigationRace.cs
+    startLine: 36
+  assemblies:
+  - BetfairDotNet
+  namespace: BetfairDotNet.Models.Navigation
+  summary: The country in which the event is taking place.
+  example: []
+  syntax:
+    content: >-
+      [JsonPropertyName("countryCode")]
+
+      public string CountryCode { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonPropertyName("countryCode")>
+
+      Public Property CountryCode As String
+  overload: BetfairDotNet.Models.Navigation.NavigationRace.CountryCode*
+  attributes:
+  - type: System.Text.Json.Serialization.JsonPropertyNameAttribute
+    ctor: System.Text.Json.Serialization.JsonPropertyNameAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: countryCode
 references:
 - uid: BetfairDotNet.Models.Navigation
   commentId: N:BetfairDotNet.Models.Navigation
@@ -671,3 +724,9 @@ references:
   name: Type
   nameWithType: NavigationRace.Type
   fullName: BetfairDotNet.Models.Navigation.NavigationRace.Type
+- uid: BetfairDotNet.Models.Navigation.NavigationRace.CountryCode*
+  commentId: Overload:BetfairDotNet.Models.Navigation.NavigationRace.CountryCode
+  href: BetfairDotNet.Models.Navigation.NavigationRace.html#BetfairDotNet.Models.Navigation.NavigationRace.CountryCode
+  name: CountryCode
+  nameWithType: NavigationRace.CountryCode
+  fullName: BetfairDotNet.Models.Navigation.NavigationRace.CountryCode

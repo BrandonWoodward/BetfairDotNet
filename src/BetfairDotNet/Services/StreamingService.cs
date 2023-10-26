@@ -30,7 +30,7 @@ public sealed class StreamingService {
     /// <summary>
     /// Create a stream. Sets the authentication message.
     /// </summary>
-    /// <param name="sessionToken"></param>
+    /// <param name="streamConfiguration"></param>
     /// <returns></returns>
     public StreamingService CreateStream(StreamConfiguration streamConfiguration) {
         if(streamConfiguration is null) throw new ArgumentNullException(nameof(streamConfiguration));

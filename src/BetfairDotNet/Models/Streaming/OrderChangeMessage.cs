@@ -35,7 +35,7 @@ internal sealed record OrderChangeMessage : BaseMessage {
     /// Publish Time (in millis since epoch) that the changes were generated
     /// </summary>
     [JsonPropertyName("pt")]
-    public long? PublishTime { get; init; }
+    public long PublishTime { get; init; }
 
     /// <summary>
     /// OrderMarketChanges - the modifications to orders for given account (will be null on a heartbeat)

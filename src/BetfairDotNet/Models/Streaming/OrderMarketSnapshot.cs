@@ -5,6 +5,11 @@
 /// An immutable, atomic snapshot of orders for a given market.
 /// </summary>
 public record OrderMarketSnapshot {
+    
+    /// <summary>
+    /// The time the update was sent, according to Betfair.
+    /// </summary>
+    public long Timestamp { get; init; }
 
     /// <summary>
     /// The id of this market.

@@ -38,7 +38,7 @@ internal sealed record MarketChangeMessage : BaseMessage {
     /// Publish Time (in millis since epoch) that the changes were generated
     /// </summary>
     [JsonPropertyName("pt")]
-    public long? PublishTime { get; init; }
+    public long PublishTime { get; init; }
 
     /// <summary>
     /// Token value (non-null) should be stored and passed in a MarketSubscriptionMessage to resume subscription (in case of disconnect)

@@ -5,6 +5,11 @@
 /// An immutable atomic snapshot of a given market.
 /// </summary>
 public sealed record MarketSnapshot {
+    
+    /// <summary>
+    /// The time the update was sent, according to Betfair.
+    /// </summary>
+    public long Timestamp { get; init; }
 
     /// <summary>
     /// The unique identifier for the market.

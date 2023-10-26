@@ -27,16 +27,17 @@ internal class MarketSnapshotFactory : IMarketSnapshotFactory {
         }
         foreach(var change in changeMessage.MarketChanges) { // ignore settled markets
             var snapshot = change.IsImage
-                ? ProcessImage(change)
-                : ProcessDelta(change);
+                ? ProcessImage(change, changeMessage.PublishTime)
+                : ProcessDelta(change, changeMessage.PublishTime);
             _marketCache[snapshot.MarketId] = snapshot; // Update cache
             yield return snapshot;
         }
     }
 
 
-    private static MarketSnapshot ProcessImage(MarketChange changeMessage) {
-        return new MarketSnapshot() {
+    private static MarketSnapshot ProcessImage(MarketChange changeMessage, long timestamp) {
+        return new() {
+            Timestamp = timestamp,
             MarketId = changeMessage.Id,
             MarketDefinition = changeMessage.MarketDefinition,
             RunnerSnapshots = ProcessRunnersImage(changeMessage)
@@ -63,9 +64,10 @@ internal class MarketSnapshotFactory : IMarketSnapshotFactory {
     }
 
 
-    private MarketSnapshot ProcessDelta(MarketChange mc) {
+    private MarketSnapshot ProcessDelta(MarketChange mc, long timestamp) {
         var cachedMarket = _marketCache[mc.Id];
         return cachedMarket with {
+            Timestamp = timestamp,
             MarketDefinition = mc.MarketDefinition ?? cachedMarket.MarketDefinition, // Sent in full if changed
             RunnerSnapshots = ProcessRunnersDelta(mc, cachedMarket.RunnerSnapshots)
         };

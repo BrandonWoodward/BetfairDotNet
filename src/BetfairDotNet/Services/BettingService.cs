@@ -537,6 +537,39 @@ public class BettingService
             args
         );
     }
+    
+    /// <summary>
+    /// Cancel orders.
+    /// </summary>
+    /// <param name="marketId">
+    /// If marketId and betId aren't supplied all bets are cancelled.
+    /// </param>
+    /// <param name="instructions">
+    /// All instructions need to be on the same market.
+    /// If not supplied all unmatched bets on the market (if market id is passed) are fully cancelled.
+    /// The limit of cancel instructions per request is 60
+    /// </param>
+    /// <param name="customerRef">
+    /// Optional parameter allowing the client to pass a unique string (up to 32 chars) that is used to de-dupe mistaken re-submissions.
+    /// </param>
+    /// <returns></returns>
+    public Task<CancelExecutionReport> CancelOrders(
+        string marketId,
+        IList<CancelInstruction> instructions,
+        string? customerRef = null)
+    {
+        var args = new Dictionary<string, object?>
+        {
+            ["marketId"] = marketId,
+            ["instructions"] = instructions,
+            ["customerRef"] = customerRef
+        };
+        return _networkService.Request<CancelExecutionReport>(
+            BettingEndpoints.BaseUrl,
+            BettingEndpoints.CancelOrders,
+            args
+        );
+    }
 
 
     /// <summary>

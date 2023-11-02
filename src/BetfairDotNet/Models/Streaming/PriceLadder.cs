@@ -6,7 +6,7 @@ using BetfairDotNet.Utils;
 namespace BetfairDotNet.Models.Streaming;
 
 
-public class PriceLadder : IEnumerable<PriceSize>
+public sealed class PriceLadder
 {
     // Maintaining two collections,
     // but it offers O(1) lookups for price-based access and O(log n) for rank-based access
@@ -90,15 +90,5 @@ public class PriceLadder : IEnumerable<PriceSize>
 
     public int GetDepth() {
         return _byRank.Count;
-    }
-
-    public IEnumerator<PriceSize> GetEnumerator()
-    {
-        return _byRank.Values.GetEnumerator();
-    }
-
-    IEnumerator IEnumerable.GetEnumerator()
-    {
-        return GetEnumerator();
     }
 }

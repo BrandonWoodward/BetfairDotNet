@@ -14,7 +14,7 @@ public sealed class LimitOrder {
     /// For market type EACH_WAY. The total stake = size x 2
     /// </summary>
     [JsonPropertyName("size"), JsonRequired]
-    public required double Size { get; set; }
+    public double Size { get; set; }
 
     /// <summary>
     /// The limit price. 
@@ -22,13 +22,13 @@ public sealed class LimitOrder {
     /// On these bets, the Price field is used to indicate the line value which is being bought or sold.</para>
     /// </summary>
     [JsonPropertyName("price"), JsonRequired]
-    public required double Price { get; set; }
+    public double Price { get; set; }
 
     /// <summary>
     /// What to do with the order at turn-in-play.
     /// </summary>
     [JsonPropertyName("persistenceType"), JsonRequired]
-    public required PersistenceTypeEnum PersistenceType { get; set; }
+    public PersistenceTypeEnum PersistenceType { get; set; }
 
     /// <summary>
     /// The type of TimeInForce value to use. This value takes precedence over any PersistenceType value chosen. 

@@ -13,13 +13,13 @@ public sealed class PlaceInstruction {
     /// See <see cref="OrderTypeEnum"/> for valid values."/>
     /// </summary>
     [JsonPropertyName("orderType"), JsonRequired]
-    public required OrderTypeEnum OrderType { get; set; }
+    public OrderTypeEnum OrderType { get; set; }
 
     /// <summary>
     /// The selection id to place the bet on.
     /// </summary>
     [JsonPropertyName("selectionId"), JsonRequired]
-    public required long SelectionId { get; set; }
+    public long SelectionId { get; set; }
 
     /// <summary>
     /// The handicap associated with the runner in case of Asian handicap markets 
@@ -32,7 +32,7 @@ public sealed class PlaceInstruction {
     /// BACK or LAY
     /// </summary>
     [JsonPropertyName("side"), JsonRequired]
-    public required SideEnum Side { get; set; }
+    public SideEnum Side { get; set; }
 
     /// <summary>
     /// A simple exchange bet for immediate execution.

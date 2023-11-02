@@ -14,7 +14,7 @@ public sealed class LimitOrder {
     /// For market type EACH_WAY. The total stake = size x 2
     /// </summary>
     [JsonPropertyName("size"), JsonRequired]
-    public double Size { get; set; }
+    public double? Size { get; set; }
 
     /// <summary>
     /// The limit price. 

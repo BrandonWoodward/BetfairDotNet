@@ -62,7 +62,10 @@ internal class OrderSnapshotFactory : IOrderSnapshotFactory {
         var updatedRunnerSnaps = new Dictionary<long, OrderRunnerSnapshot>(cachedMarket.OrderRunnerSnapshots);
         foreach(var runnerChange in changeMessage.OrderRunnerChanges)
         {
-            updatedRunnerSnaps[runnerChange.Id] = ProcessRunnerDelta(runnerChange, cachedMarket.OrderRunnerSnapshots[runnerChange.Id]);
+            cachedMarket.OrderRunnerSnapshots.TryGetValue(runnerChange.Id, out var runnerSnap);
+            runnerSnap ??= new (runnerChange.Id);
+            
+            updatedRunnerSnaps[runnerChange.Id] = ProcessRunnerDelta(runnerChange, runnerSnap);
         }
 
         return _orderCache[changeMessage.Id] = cachedMarket with

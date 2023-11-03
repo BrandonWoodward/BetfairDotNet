@@ -13,7 +13,7 @@ public sealed class LimitOrder {
     /// The size of the bet. 
     /// For market type EACH_WAY. The total stake = size x 2
     /// </summary>
-    [JsonPropertyName("size"), JsonRequired]
+    [JsonPropertyName("size")]
     public double? Size { get; set; }
 
     /// <summary>

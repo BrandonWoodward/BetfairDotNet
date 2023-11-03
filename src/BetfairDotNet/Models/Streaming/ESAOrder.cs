@@ -7,8 +7,8 @@ namespace BetfairDotNet.Models.Streaming;
 /// <summary>
 /// 
 /// </summary>
-public sealed record ESAOrder {
-
+public sealed record ESAOrder 
+{
     /// <summary>
     /// BACK or LAY
     /// </summary>
@@ -109,7 +109,7 @@ public sealed record ESAOrder {
     /// The BSP liability of the order (null if the order is not a BSP order)
     /// </summary>
     [JsonPropertyName("bsp")]
-    public double? Bsp { get; init; }
+    public double? BspLiability { get; init; }
 
     /// <summary>
     /// The amount of the order that is remaining unmatched
@@ -122,4 +122,16 @@ public sealed record ESAOrder {
     /// </summary>
     [JsonPropertyName("cd")]
     public long? CancelledDate { get; init; }
+    
+    /// <summary>
+    /// The customer supplied strategy reference used to group orders together.
+    /// </summary>
+    [JsonPropertyName("rfs")]
+    public string CustomerRefStrategy { get; init; } = string.Empty;
+    
+    /// <summary>
+    /// The customer supplied reference used to identify Order. 
+    /// </summary>
+    [JsonPropertyName("rfo")]
+    public string CustomerOrderReference { get; init; } = string.Empty;
 }

@@ -54,20 +54,22 @@ internal class OrderSnapshotFactory : IOrderSnapshotFactory {
     }
 
 
-    private OrderMarketSnapshot ProcessDelta(OrderMarketChange changeMessage, long timestamp) {
-        var cachedMarket = _orderCache[changeMessage.Id];
+    private OrderMarketSnapshot ProcessDelta(OrderMarketChange changeMessage, long timestamp) 
+    {
+        _orderCache.TryGetValue(changeMessage.Id, out var cachedMarket);
+        cachedMarket ??= new() { MarketId = changeMessage.Id };
+
         var updatedRunnerSnaps = new Dictionary<long, OrderRunnerSnapshot>(cachedMarket.OrderRunnerSnapshots);
-        foreach(var runnerChange in changeMessage.OrderRunnerChanges) {
-            var cachedRunner = cachedMarket.OrderRunnerSnapshots[runnerChange.Id];
-            updatedRunnerSnaps[runnerChange.Id] = ProcessRunnerDelta(runnerChange, cachedRunner);
+        foreach(var runnerChange in changeMessage.OrderRunnerChanges)
+        {
+            updatedRunnerSnaps[runnerChange.Id] = ProcessRunnerDelta(runnerChange, cachedMarket.OrderRunnerSnapshots[runnerChange.Id]);
         }
-        var updatedMarketSnapshot = cachedMarket with
+
+        return _orderCache[changeMessage.Id] = cachedMarket with
         {
             Timestamp = timestamp,
             OrderRunnerSnapshots = updatedRunnerSnaps
         };
-        _orderCache[changeMessage.Id] = updatedMarketSnapshot; // Update cache
-        return updatedMarketSnapshot;
     }
 
 

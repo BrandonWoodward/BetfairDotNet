@@ -3,10 +3,12 @@ using System.Text.Json.Serialization;
 
 namespace BetfairDotNet.Enums.Betting;
 
-
-[JsonConverter(typeof(EmptyStringToEnumConverter<SideEnum>))]
-public enum SideEnum {
-
+/// <summary>
+/// BACK or LAY.
+/// </summary>
+[JsonConverter(typeof(OrderSideEnumConverter))]
+public enum SideEnum 
+{
     /// <summary>
     /// To back a team, horse or outcome is to bet on the selection to win. 
     /// For LINE markets a Back bet refers to a SELL line. 

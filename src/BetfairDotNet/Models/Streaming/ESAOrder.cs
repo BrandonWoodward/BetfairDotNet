@@ -1,5 +1,6 @@
 ﻿using BetfairDotNet.Enums.Betting;
 using System.Text.Json.Serialization;
+using BetfairDotNet.Converters;
 
 namespace BetfairDotNet.Models.Streaming;
 

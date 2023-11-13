@@ -98,12 +98,12 @@ internal class MarketSnapshotFactory : IMarketSnapshotFactory
             var cached = cachedRunners[rnr.Id];
             var updatedRunnerSnapshot = cached with
             {
-                RunnerDefinition = mc.MarketDefinition?.Runners.First(r => r.Id == rnr.Id) ?? cached.RunnerDefinition,
-                LastTradedPrice = rnr.LastTradedPrice ?? cached.LastTradedPrice,
-                StartingPriceNear = rnr.StartingPriceNear ?? cached.StartingPriceNear,
-                StartingPriceFar = rnr.StartingPriceFar ?? cached.StartingPriceFar,
-                ToBack = UpdateLadder(rnr.AvailableToBack ?? rnr.BestAvailableToBack, cached.ToBack),
-                ToLay = UpdateLadder(rnr.AvailableToLay ?? rnr.BestAvailableToLay, cached.ToLay),
+                //RunnerDefinition = mc.MarketDefinition?.Runners.First(r => r.Id == rnr.Id) ?? cached.RunnerDefinition,
+                //LastTradedPrice = rnr.LastTradedPrice ?? cached.LastTradedPrice,
+                //StartingPriceNear = rnr.StartingPriceNear ?? cached.StartingPriceNear,
+                //StartingPriceFar = rnr.StartingPriceFar ?? cached.StartingPriceFar,
+                //ToBack = UpdateLadder(rnr.AvailableToBack ?? rnr.BestAvailableToBack, cached.ToBack),
+                //ToLay = UpdateLadder(rnr.AvailableToLay ?? rnr.BestAvailableToLay, cached.ToLay),
                 Traded = UpdateLadder(rnr.TradedVolume, cached.Traded),
                 TradedVolume = rnr.TotalVolume ?? cached.TradedVolume
             };

@@ -4,9 +4,9 @@ using System.Text.Json.Serialization;
 namespace BetfairDotNet.Enums.Betting;
 
 
-[JsonConverter(typeof(EmptyStringToEnumConverter<OrderTypeEnum>))]
-public enum OrderTypeEnum {
-
+[JsonConverter(typeof(OrderTypeEnumConverter))]
+public enum OrderTypeEnum 
+{
     /// <summary>
     /// A normal exchange limit order for immediate execution.
     /// </summary>

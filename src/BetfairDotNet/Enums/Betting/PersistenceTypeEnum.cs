@@ -4,9 +4,9 @@ using System.Text.Json.Serialization;
 namespace BetfairDotNet.Enums.Betting;
 
 
-[JsonConverter(typeof(EmptyStringToEnumConverter<PersistenceTypeEnum>))]
-public enum PersistenceTypeEnum {
-
+[JsonConverter(typeof(PersistenceTypeEnumConverter))]
+public enum PersistenceTypeEnum 
+{
     /// <summary>
     /// Lapse (cancel) the order automatically when the market is turned in play if the bet is unmatched.
     /// </summary>

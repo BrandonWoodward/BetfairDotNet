@@ -4,9 +4,9 @@ using System.Text.Json.Serialization;
 namespace BetfairDotNet.Enums.Betting;
 
 
-[JsonConverter(typeof(EmptyStringToEnumConverter<OrderStatusEnum>))]
-public enum OrderStatusEnum {
-
+[JsonConverter(typeof(OrderStatusEnumConverter))]
+public enum OrderStatusEnum 
+{
     /// <summary>
     /// An asynchronous order is yet to be processed. Once the bet has been processed by the exchange 
     /// (including waiting for any in-play delay), the result will be reported and available on the

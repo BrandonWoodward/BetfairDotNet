@@ -1,6 +1,4 @@
-﻿
-using BetfairDotNet.Enums.Betting;
-using BetfairDotNet.Enums.Streaming;
+﻿using BetfairDotNet.Enums.Streaming;
 using BetfairDotNet.Interfaces;
 using BetfairDotNet.Models.Betting;
 using BetfairDotNet.Models.Streaming;
@@ -9,52 +7,57 @@ using System.Collections.Concurrent;
 namespace BetfairDotNet.Factories;
 
 
-internal class OrderSnapshotFactory : IOrderSnapshotFactory {
-
-
+internal class OrderSnapshotFactory : IOrderSnapshotFactory
+{
     private readonly ConcurrentDictionary<string, OrderMarketSnapshot> _orderCache;
 
-
-    public OrderSnapshotFactory(ConcurrentDictionary<string, OrderMarketSnapshot> orderCache) {
+    public OrderSnapshotFactory(ConcurrentDictionary<string, OrderMarketSnapshot> orderCache)
+    {
         _orderCache = orderCache;
     }
 
-
-    public IEnumerable<OrderMarketSnapshot> GetSnapshots(OrderChangeMessage changeMessage) {
-        if(changeMessage.ChangeType == ChangeTypeEnum.HEARTBEAT) {
+    public IEnumerable<OrderMarketSnapshot> GetSnapshots(OrderChangeMessage changeMessage)
+    {
+        if(changeMessage.ChangeType == ChangeTypeEnum.HEARTBEAT)
+        {
             yield break; // Swallow heartbeat
         }
-        if(changeMessage.ChangeType == ChangeTypeEnum.SUB_IMAGE) { // New sub
+
+        if(changeMessage.ChangeType == ChangeTypeEnum.SUB_IMAGE)
+        {
             _orderCache.Clear();
         }
-        foreach(var change in changeMessage.OrderChanges) {
+
+        foreach(var change in changeMessage.OrderChanges)
+        {
             yield return change.IsImage
                 ? ProcessImage(change, changeMessage.PublishTime) // Replace in cache
                 : ProcessDelta(change, changeMessage.PublishTime); // Merge with cache
         }
     }
 
-
-    private static OrderMarketSnapshot ProcessImage(OrderMarketChange changeMessage, long timestamp) {
+    private static OrderMarketSnapshot ProcessImage(OrderMarketChange changeMessage, long timestamp)
+    {
         var rnrSnaps = changeMessage.OrderRunnerChanges.ToDictionary(rnr => rnr.Id, ProcessRunnerImage);
-        return new OrderMarketSnapshot {
+        return new OrderMarketSnapshot
+        {
             Timestamp = timestamp,
             MarketId = changeMessage.Id,
             OrderRunnerSnapshots = rnrSnaps
         };
     }
 
-
-    private static OrderRunnerSnapshot ProcessRunnerImage(OrderRunnerChange omc) {
+    private static OrderRunnerSnapshot ProcessRunnerImage(OrderRunnerChange omc)
+    {
         var orderRunnerSnapshot = new OrderRunnerSnapshot(omc.Id);
-        foreach(var order in omc.UnmatchedOrders) {
+        foreach(var order in omc.UnmatchedOrders)
+        {
             orderRunnerSnapshot.UnmatchedOrders[order.Id] = order;
         }
         return orderRunnerSnapshot;
     }
 
-
-    private OrderMarketSnapshot ProcessDelta(OrderMarketChange changeMessage, long timestamp) 
+    private OrderMarketSnapshot ProcessDelta(OrderMarketChange changeMessage, long timestamp)
     {
         _orderCache.TryGetValue(changeMessage.Id, out var cachedMarket);
         cachedMarket ??= new() { MarketId = changeMessage.Id };
@@ -63,8 +66,8 @@ internal class OrderSnapshotFactory : IOrderSnapshotFactory {
         foreach(var runnerChange in changeMessage.OrderRunnerChanges)
         {
             cachedMarket.OrderRunnerSnapshots.TryGetValue(runnerChange.Id, out var runnerSnap);
-            runnerSnap ??= new (runnerChange.Id);
-            
+            runnerSnap ??= new(runnerChange.Id);
+
             updatedRunnerSnaps[runnerChange.Id] = ProcessRunnerDelta(runnerChange, runnerSnap);
         }
 
@@ -75,33 +78,35 @@ internal class OrderSnapshotFactory : IOrderSnapshotFactory {
         };
     }
 
-
-    private static OrderRunnerSnapshot ProcessRunnerDelta(OrderRunnerChange orc, OrderRunnerSnapshot cachedRunner) {
+    private static OrderRunnerSnapshot ProcessRunnerDelta(OrderRunnerChange orc, OrderRunnerSnapshot cachedRunner)
+    {
         var newUnmatchedOrders = new Dictionary<string, ESAOrder>(cachedRunner.UnmatchedOrders);
-        foreach(var order in orc.UnmatchedOrders) {
-            if(order.Status == OrderStatusEnum.EXECUTION_COMPLETE) {
-                newUnmatchedOrders.Remove(order.Id);
-            }
-            else {
-                newUnmatchedOrders[order.Id] = order;
-            }
+
+        foreach(var order in orc.UnmatchedOrders)
+        {
+            newUnmatchedOrders[order.Id] = order;
         }
-        return cachedRunner with {
+
+        return cachedRunner with
+        {
             MatchedBacks = UpdateLadder(orc.MatchedBacks, cachedRunner.MatchedBacks),
             MatchedLays = UpdateLadder(orc.MatchedLays, cachedRunner.MatchedBacks),
             UnmatchedOrders = newUnmatchedOrders
         };
     }
 
-
-    private static PriceLadder UpdateLadder(List<List<double>>? levels, PriceLadder ladder) {
-        foreach(var level in levels ?? Enumerable.Empty<List<double>>()) {
+    private static PriceLadder UpdateLadder(List<List<double>>? levels, PriceLadder ladder)
+    {
+        foreach(var level in levels ?? Enumerable.Empty<List<double>>())
+        {
             var price = level[0];
             var size = level[1];
-            if(size == 0) {
+            if(size == 0)
+            {
                 ladder.RemoveLevelByPrice(price);
             }
-            else {
+            else
+            {
                 ladder.AddOrUpdateLevelByPrice(price, new PriceSize(price, size));
             }
         }

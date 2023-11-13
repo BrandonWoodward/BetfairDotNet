@@ -30,6 +30,11 @@ public sealed record RunnerSnapshot {
     /// The traded volume by distinct price, if requested. See <see cref="StreamingMarketDataFilter"/>
     /// </summary>
     public PriceLadder Traded { get; init; }
+    
+    /// <summary>
+    /// Total traded on this runner.
+    /// </summary>
+    public double TradedVolume { get; init; }
 
     /// <summary>
     /// Last price traded on this selection. Only returned if requested with <see cref="StreamingMarketDataFilter"/>

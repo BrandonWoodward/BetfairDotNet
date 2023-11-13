@@ -93,20 +93,21 @@ internal class MarketSnapshotFactory : IMarketSnapshotFactory
     {
 
         var rnrSnaps = new Dictionary<long, RunnerSnapshot>(cachedRunners);
-        foreach(var runner in mc.RunnerChanges)
+        foreach(var rnr in mc.RunnerChanges)
         {
-            var cachedRunner = cachedRunners[runner.Id];
-            var updatedRunnerSnapshot = cachedRunner with
+            var cached = cachedRunners[rnr.Id];
+            var updatedRunnerSnapshot = cached with
             {
-                RunnerDefinition = mc.MarketDefinition?.Runners.First(r => r.Id == runner.Id) ?? cachedRunner.RunnerDefinition,
-                LastTradedPrice = runner.LastTradedPrice ?? cachedRunner.LastTradedPrice,
-                StartingPriceNear = runner.StartingPriceNear ?? cachedRunner.StartingPriceNear,
-                StartingPriceFar = runner.StartingPriceFar ?? cachedRunner.StartingPriceFar,
-                ToBack = UpdateLadder(runner.AvailableToBack ?? runner.BestAvailableToBack, cachedRunner.ToBack),
-                ToLay = UpdateLadder(runner.AvailableToLay ?? runner.BestAvailableToLay, cachedRunner.ToLay),
-                Traded = UpdateLadder(runner.TradedVolume, cachedRunner.Traded),
+                RunnerDefinition = mc.MarketDefinition?.Runners.First(r => r.Id == rnr.Id) ?? cached.RunnerDefinition,
+                LastTradedPrice = rnr.LastTradedPrice ?? cached.LastTradedPrice,
+                StartingPriceNear = rnr.StartingPriceNear ?? cached.StartingPriceNear,
+                StartingPriceFar = rnr.StartingPriceFar ?? cached.StartingPriceFar,
+                ToBack = UpdateLadder(rnr.AvailableToBack ?? rnr.BestAvailableToBack, cached.ToBack),
+                ToLay = UpdateLadder(rnr.AvailableToLay ?? rnr.BestAvailableToLay, cached.ToLay),
+                Traded = UpdateLadder(rnr.TradedVolume, cached.Traded),
+                TradedVolume = rnr.TotalVolume ?? cached.TradedVolume
             };
-            rnrSnaps[runner.Id] = updatedRunnerSnapshot;
+            rnrSnaps[rnr.Id] = updatedRunnerSnapshot;
         }
         return rnrSnaps;
     }

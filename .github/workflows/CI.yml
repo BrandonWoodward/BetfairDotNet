@@ -21,13 +21,11 @@ jobs:
       run: |
         dotnet restore src/BetfairDotNet/BetfairDotNet.csproj
         dotnet restore tests/BetfairDotNet.Tests/BetfairDotNet.Tests.csproj
-        dotnet restore demos/BetfairDotNet.Demo.StreamingAPI/BetfairDotNet.Demos.csproj
       
     - name: Build
       run: |
         dotnet build ./src/BetfairDotNet/BetfairDotNet.csproj --no-restore
         dotnet build ./tests/BetfairDotNet.Tests/BetfairDotNet.Tests.csproj --no-restore
-        dotnet build ./demos/BetfairDotNet.Demo.StreamingAPI/BetfairDotNet.Demos.csproj --no-restore
       
     - name: Test and collect coverage
       run: dotnet test --collect:"XPlat Code Coverage" --no-build

@@ -13,6 +13,8 @@ public sealed class PriceLadder
     private readonly SortedList<double, PriceSize> _byRank = new(new ReverseComparer());
     private readonly Dictionary<double, PriceSize> _byPrice = new();
 
+    public static PriceLadder Empty
+        => new(SideEnum.BACK);
 
     public PriceSize? this[int index]
         => index >= 0 && index < _byRank.Values.Count
@@ -23,7 +25,8 @@ public sealed class PriceLadder
         => _byPrice.TryGetValue(price, out var value) ? value : default;
 
 
-    internal PriceLadder(SideEnum side) {
+    internal PriceLadder(SideEnum side) 
+    {
         _byRank = side == SideEnum.BACK
             ? new(new ReverseComparer())
             : new();
@@ -31,7 +34,8 @@ public sealed class PriceLadder
     }
 
 
-    internal PriceLadder(SideEnum side, List<PriceSize> initialLevels) {
+    internal PriceLadder(SideEnum side, List<PriceSize> initialLevels) 
+    {
         _byRank = side == SideEnum.BACK
             ? new(new ReverseComparer())
             : new();
@@ -49,22 +53,24 @@ public sealed class PriceLadder
     }
 
 
-    internal void RemoveLevelByPrice(double price) {
+    internal void RemoveLevelByPrice(double price) 
+    {
         _byPrice.Remove(price);
         _byRank.Remove(price);
     }
 
 
-    internal void RemoveLevelByDepth(int depth) {
-        if(depth >= 0 && depth < _byRank.Count) {
-            var price = _byRank.Keys[depth];
-            _byRank.RemoveAt(depth);
-            _byPrice.Remove(price);
-        }
+    internal void RemoveLevelByDepth(int depth)
+    {
+        if (depth < 0 || depth >= _byRank.Count) return;
+        var price = _byRank.Keys[depth];
+        _byRank.RemoveAt(depth);
+        _byPrice.Remove(price);
     }
 
 
-    internal void AddOrUpdateLevelByPrice(double price, PriceSize level) {
+    internal void AddOrUpdateLevelByPrice(double price, PriceSize level) 
+    {
         if(_byPrice.ContainsKey(price)) {
             _byPrice[price] = level;
             _byRank[price] = level;
@@ -75,7 +81,8 @@ public sealed class PriceLadder
     }
 
 
-    internal void AddOrUpdateLevelByDepth(int depth, PriceSize level) {
+    internal void AddOrUpdateLevelByDepth(int depth, PriceSize level) 
+    {
         if(depth >= 0 && depth < _byRank.Count) {
             var price = _byRank.Keys[depth];
             _byPrice[price] = level;

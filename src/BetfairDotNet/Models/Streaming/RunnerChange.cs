@@ -32,6 +32,12 @@ internal sealed record RunnerChange {
     /// </summary>
     [JsonPropertyName("bdatl")]
     public List<List<double>>? BestAvailableToLayVirtual { get; init; }
+    
+    /// <summary>
+    /// Best Display Available To Back (includes virtual prices)- LevelPriceVol triple delta of price changes, keyed by level (0 vol is remove)
+    /// </summary>
+    [JsonPropertyName("bdatb")]
+    public List<List<double>>? BestAvailableToBackVirtual { get; init; }
 
     /// <summary>
     /// Traded - PriceVol tuple delta of price changes (0 vol is remove)
@@ -96,10 +102,4 @@ internal sealed record RunnerChange {
     /// </summary>
     [JsonPropertyName("hc")]
     public double? Handicap { get; init; }
-
-    /// <summary>
-    /// Best Display Available To Back (includes virtual prices)- LevelPriceVol triple delta of price changes, keyed by level (0 vol is remove)
-    /// </summary>
-    [JsonPropertyName("bdatb")]
-    public List<List<double>>? BestAvailableToBackVirtual { get; init; }
 }

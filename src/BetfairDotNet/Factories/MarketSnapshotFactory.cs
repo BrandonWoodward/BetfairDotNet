@@ -56,20 +56,22 @@ internal class MarketSnapshotFactory : IMarketSnapshotFactory
     private static Dictionary<long, RunnerSnapshot> ProcessRunnersImage(MarketChange changeMessage)
     {
         var snapshots = new Dictionary<long, RunnerSnapshot>();
-        foreach(var runner in changeMessage.RunnerChanges)
+        foreach(var r in changeMessage.RunnerChanges)
         {
             var runnerSnapshot = new RunnerSnapshot
             {
-                SelectionId = runner.Id,
-                RunnerDefinition = changeMessage.MarketDefinition?.Runners.First(r => r.Id == runner.Id),
-                LastTradedPrice = runner.LastTradedPrice.GetValueOrDefault(),
-                StartingPriceNear = runner.StartingPriceNear.GetValueOrDefault(),
-                StartingPriceFar = runner.StartingPriceFar.GetValueOrDefault(),
-                ToBack = CreateLadder(runner.AvailableToBack ?? runner.BestAvailableToBack, SideEnum.BACK),
-                ToLay = CreateLadder(runner.AvailableToLay ?? runner.BestAvailableToLay, SideEnum.LAY),
-                Traded = CreateLadder(runner.TradedVolume, SideEnum.BACK), // Side doesn't matter here
+                SelectionId = r.Id,
+                RunnerDefinition = changeMessage.MarketDefinition?.Runners.First(sr => sr.Id == r.Id),
+                LastTradedPrice = r.LastTradedPrice.GetValueOrDefault(),
+                StartingPriceNear = r.StartingPriceNear.GetValueOrDefault(),
+                StartingPriceFar = r.StartingPriceFar.GetValueOrDefault(),
+                ToBack = CreateLadder(r.AvailableToBack ?? r.BestAvailableToBack, SideEnum.BACK),
+                ToLay = CreateLadder(r.AvailableToLay ?? r.BestAvailableToLay, SideEnum.LAY),
+                ToBackVirtual = CreateLadder(r.BestAvailableToBackVirtual, SideEnum.BACK),
+                ToLayVirtual = CreateLadder(r.BestAvailableToLayVirtual, SideEnum.LAY),
+                Traded = CreateLadder(r.TradedVolume, SideEnum.BACK), // Side doesn't matter here
             };
-            snapshots[runner.Id] = runnerSnapshot;
+            snapshots[r.Id] = runnerSnapshot;
         }
         return snapshots;
     }
@@ -104,6 +106,8 @@ internal class MarketSnapshotFactory : IMarketSnapshotFactory
                 StartingPriceFar = rnr.StartingPriceFar ?? cached.StartingPriceFar,
                 ToBack = UpdateLadder(rnr.AvailableToBack ?? rnr.BestAvailableToBack, cached.ToBack),
                 ToLay = UpdateLadder(rnr.AvailableToLay ?? rnr.BestAvailableToLay, cached.ToLay),
+                ToBackVirtual = UpdateLadder(rnr.BestAvailableToBackVirtual, cached.ToBackVirtual),
+                ToLayVirtual = UpdateLadder(rnr.BestAvailableToLayVirtual, cached.ToLayVirtual),
                 Traded = UpdateLadder(rnr.TradedVolume, cached.Traded),
                 TradedVolume = rnr.TotalVolume ?? cached.TradedVolume
             };
@@ -125,7 +129,7 @@ internal class MarketSnapshotFactory : IMarketSnapshotFactory
                 var size = level[2];
                 if(price > 0 && size > 0)
                 {
-                    ladder.AddLevel(ladderLevel, new PriceSize(price, size));
+                    ladder.AddLevel(ladderLevel, new(price, size));
                 }
             }
             else if(level.Count == 2)
@@ -134,7 +138,7 @@ internal class MarketSnapshotFactory : IMarketSnapshotFactory
                 var size = level[1];
                 if(price > 0 && size > 0)
                 {
-                    ladder.AddLevel(price, new PriceSize(price, size));
+                    ladder.AddLevel(price, new(price, size));
                 }
             }
         }
@@ -157,7 +161,7 @@ internal class MarketSnapshotFactory : IMarketSnapshotFactory
                 }
                 else
                 {
-                    ladder.AddOrUpdateLevelByDepth(ladderLevel, new PriceSize(price, size));
+                    ladder.AddOrUpdateLevelByDepth(ladderLevel, new(price, size));
                 }
             }
             else if(level.Count == 2)
@@ -170,7 +174,7 @@ internal class MarketSnapshotFactory : IMarketSnapshotFactory
                 }
                 else
                 {
-                    ladder.AddOrUpdateLevelByPrice(price, new PriceSize(price, size));
+                    ladder.AddOrUpdateLevelByPrice(price, new(price, size));
                 }
             }
         }

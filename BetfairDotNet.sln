@@ -448,6 +448,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "public", "public", "{E99D09
 		docs\_site\public\timeline-definition-1a90b03d-HQU2RWXG.min.js.map = docs\_site\public\timeline-definition-1a90b03d-HQU2RWXG.min.js.map
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "demo", "demo", "{4AB7CE8E-5AD8-4429-85AC-A6792216C6B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetfairDotNet.Demos", "demos\BetfairDotNet.Demo.StreamingAPI\BetfairDotNet.Demos.csproj", "{2D702E3F-CFB8-4063-84E5-7487C14270E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -462,6 +466,10 @@ Global
 		{F369E322-2317-4FA3-86C6-FA92A2B2EEF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F369E322-2317-4FA3-86C6-FA92A2B2EEF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F369E322-2317-4FA3-86C6-FA92A2B2EEF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D702E3F-CFB8-4063-84E5-7487C14270E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D702E3F-CFB8-4063-84E5-7487C14270E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D702E3F-CFB8-4063-84E5-7487C14270E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D702E3F-CFB8-4063-84E5-7487C14270E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -478,6 +486,8 @@ Global
 		{F237A012-CC0C-4F5B-A866-A045163D894C} = {DEBAB036-7728-4741-A792-E212BC6C5125}
 		{1B65F6FE-5959-4C68-B942-67D7F7D5F3D1} = {DEBAB036-7728-4741-A792-E212BC6C5125}
 		{E99D096F-7B7B-495E-AA2F-8E8BF6D0A2E9} = {DEBAB036-7728-4741-A792-E212BC6C5125}
+		{4AB7CE8E-5AD8-4429-85AC-A6792216C6B5} = {2FE436FB-5886-49B9-A4E8-122EEA3B774C}
+		{2D702E3F-CFB8-4063-84E5-7487C14270E7} = {4AB7CE8E-5AD8-4429-85AC-A6792216C6B5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {92D2D7D9-E337-4ACF-A1F5-C5858BB82C20}

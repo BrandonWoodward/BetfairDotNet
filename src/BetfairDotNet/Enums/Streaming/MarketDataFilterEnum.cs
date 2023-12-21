@@ -4,8 +4,8 @@ using System.Text.Json.Serialization;
 namespace BetfairDotNet.Enums.Streaming;
 
 
-[JsonConverter(typeof(EmptyStringToEnumConverter<MarketPriceFilterEnum>))]
-public enum MarketPriceFilterEnum {
+[JsonConverter(typeof(EmptyStringToEnumConverter<MarketDataFilterEnum>))]
+public enum MarketDataFilterEnum {
 
     /// <summary>
     /// Depth based ladders, including virtual prices. This is what you will see on the exchange website.

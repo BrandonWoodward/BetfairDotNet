@@ -6,8 +6,8 @@ namespace BetfairDotNet.Models.Streaming;
 /// <summary>
 /// The base response message type.
 /// </summary>
-public abstract record BaseMessage {
-
+public abstract record BaseMessage 
+{
     /// <summary>
     /// The operation type
     /// </summary>
@@ -20,8 +20,8 @@ public abstract record BaseMessage {
     [JsonPropertyName("id")]
     public int? Id { get; set; }
 
-
-    public BaseMessage(string operation) {
+    internal BaseMessage(string operation) 
+    {
         Operation = operation;
     }
 }

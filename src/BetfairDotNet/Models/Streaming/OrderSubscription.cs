@@ -5,13 +5,14 @@ namespace BetfairDotNet.Models.Streaming;
 /// <summary>
 /// Message sent for Betfair ESA order subscription operation.
 /// </summary>
-public sealed record OrderSubscription : BaseMessage {
+public sealed record OrderSubscription : BaseMessage
+{
 
     /// <summary>
     /// Gets or Sets OrderFilter
     /// </summary>
     [JsonPropertyName("orderFilter")]
-    public OrderFilter OrderFilter { get; set; }
+    public StreamingOrderFilter StreamingOrderFilter { get; set; } = new();
 
     /// <summary>
     /// Token value delta (received in MarketChangeMessage) that should be passed to resume a subscription
@@ -39,11 +40,5 @@ public sealed record OrderSubscription : BaseMessage {
     public long ConflateMs { get; set; }
 
 
-    public OrderSubscription(
-        OrderFilter orderFilter,
-        long conflateMs = 0) : base("orderSubscription") {
-
-        OrderFilter = orderFilter;
-        ConflateMs = conflateMs;
-    }
+    public OrderSubscription() : base("orderSubscription") { }
 }

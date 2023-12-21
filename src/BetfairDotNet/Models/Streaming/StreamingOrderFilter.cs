@@ -6,14 +6,13 @@ namespace BetfairDotNet.Models.Streaming;
 /// <summary>
 /// Filter orders by accounts.
 /// </summary>
-public sealed class OrderFilter {
-
+public sealed record StreamingOrderFilter 
+{
     /// <summary>
     /// Returns overall / net position
     /// </summary>
     [JsonPropertyName("includeOverallPosition")]
     public bool IncludeOverallPosition { get; set; }
-
 
     /// <summary>
     /// Restricts to specified customerStrategyRefs (specified in placeOrders).
@@ -21,7 +20,6 @@ public sealed class OrderFilter {
     /// </summary>
     [JsonPropertyName("customerStrategyRefs")]
     public List<string>? CustomerStrategyRefs { get; set; }
-
 
     /// <summary>
     /// Returns strategy positions

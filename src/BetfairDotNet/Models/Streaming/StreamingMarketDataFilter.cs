@@ -19,5 +19,5 @@ public sealed class StreamingMarketDataFilter {
     /// The price filter fields.
     /// </summary>
     [JsonPropertyName("fields")]
-    public List<MarketPriceFilterEnum>? Fields { get; set; }
+    public List<MarketDataFilterEnum>? Fields { get; set; }
 }

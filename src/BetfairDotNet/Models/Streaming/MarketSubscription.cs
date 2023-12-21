@@ -4,7 +4,8 @@ using System.Text.Json.Serialization;
 namespace BetfairDotNet.Models.Streaming;
 
 
-public sealed record MarketSubscription : BaseMessage {
+public sealed record MarketSubscription : BaseMessage 
+{
 
     /// <summary>
     /// Token value delta (received in MarketChangeMessage) that should be passed to resume a subscription
@@ -29,7 +30,7 @@ public sealed record MarketSubscription : BaseMessage {
     /// Gets or Sets MarketFilter
     /// </summary>
     [JsonPropertyName("marketFilter"), JsonRequired]
-    public StreamingMarketFilter MarketFilter { get; set; }
+    public StreamingMarketFilter MarketFilter { get; set; } = new();
 
     /// <summary>
     /// The conflation rate (looped back on initial image after validation: bounds are 0 to 120000)
@@ -41,16 +42,8 @@ public sealed record MarketSubscription : BaseMessage {
     /// Filter for fields to include
     /// </summary>
     [JsonPropertyName("marketDataFilter"), JsonRequired]
-    public StreamingMarketDataFilter MarketDataFilter { get; set; }
+    public StreamingMarketDataFilter MarketDataFilter { get; set; } = new();
 
 
-    public MarketSubscription(
-        StreamingMarketFilter marketFilter,
-        StreamingMarketDataFilter marketDataFilter,
-        long conflateMs = 0) : base("marketSubscription") {
-
-        MarketFilter = marketFilter;
-        MarketDataFilter = marketDataFilter;
-        ConflateMs = conflateMs;
-    }
+    public MarketSubscription() : base("marketSubscription") { }
 }

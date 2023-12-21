@@ -5,12 +5,12 @@ using Xunit;
 
 namespace BetfairDotNet.Tests.ModelsTests.Streaming;
 
-public class OrderFilterTests {
+public class StreamingOrderFilterTests {
 
     [Fact]
     public void OrderFilter_ShouldSerializeCorrectly() {
         // Arrange
-        var orderFilter = new OrderFilter {
+        var orderFilter = new StreamingOrderFilter {
             IncludeOverallPosition = true,
             CustomerStrategyRefs = new List<string> { "strategy1", "strategy2" },
             PartitionMatchedByStrategyRef = false
@@ -18,7 +18,7 @@ public class OrderFilterTests {
 
         // Act
         var json = JsonConvert.Serialize(orderFilter);
-        var result = JsonConvert.Deserialize<OrderFilter>(json);
+        var result = JsonConvert.Deserialize<StreamingOrderFilter>(json);
 
         // Assert
         result.Should().BeEquivalentTo(orderFilter);

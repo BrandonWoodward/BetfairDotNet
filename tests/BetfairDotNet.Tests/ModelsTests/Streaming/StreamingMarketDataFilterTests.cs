@@ -13,7 +13,7 @@ public class StreamingMarketDataFilterTests {
         // Arrange
         var streamingMarketDataFilter = new StreamingMarketDataFilter {
             LadderLevels = 3,
-            Fields = new List<MarketPriceFilterEnum> { MarketPriceFilterEnum.SP_TRADED, MarketPriceFilterEnum.EX_BEST_OFFERS_DISP }
+            Fields = new List<MarketDataFilterEnum> { MarketDataFilterEnum.SP_TRADED, MarketDataFilterEnum.EX_BEST_OFFERS_DISP }
         };
 
         // Act

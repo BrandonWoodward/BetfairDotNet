@@ -120,27 +120,12 @@ internal class MarketSnapshotFactory : IMarketSnapshotFactory
     private static PriceLadder CreateLadder(List<List<double>>? levels, SideEnum side)
     {
         var ladder = new PriceLadder(side);
-        foreach(var level in levels ?? Enumerable.Empty<List<double>>())
+        foreach (var level in levels ?? Enumerable.Empty<List<double>>())
         {
-            if(level.Count == 3)
-            {
-                var ladderLevel = (int)level[0];
-                var price = level[1];
-                var size = level[2];
-                if(price > 0 && size > 0)
-                {
-                    ladder.AddLevel(ladderLevel, new(price, size));
-                }
-            }
-            else if(level.Count == 2)
-            {
-                var price = level[0];
-                var size = level[1];
-                if(price > 0 && size > 0)
-                {
-                    ladder.AddLevel(price, new(price, size));
-                }
-            }
+            var price = level[^2];
+            var size = level[^1];
+            if (price > 0 && size > 0) continue;
+            ladder.AddOrUpdateLevel(new(price, size));
         }
         return ladder;
     }
@@ -150,32 +135,15 @@ internal class MarketSnapshotFactory : IMarketSnapshotFactory
     {
         foreach(var level in levels ?? Enumerable.Empty<List<double>>())
         {
-            if(level.Count == 3)
-            { // Depth based ladders
-                var ladderLevel = (int)level[0];
-                var price = level[1];
-                var size = level[2];
-                if(size == 0)
-                {
-                    ladder.RemoveLevelByDepth(ladderLevel);
-                }
-                else
-                {
-                    ladder.AddOrUpdateLevelByDepth(ladderLevel, new(price, size));
-                }
+            var price = level[^2];
+            var size = level[^1];
+            if(size == 0)
+            {
+                ladder.RemoveLevel(price);
             }
-            else if(level.Count == 2)
-            { // Full-depth ladders
-                var price = level[0];
-                var size = level[1];
-                if(size == 0)
-                {
-                    ladder.RemoveLevelByPrice(price);
-                }
-                else
-                {
-                    ladder.AddOrUpdateLevelByPrice(price, new(price, size));
-                }
+            else
+            {
+                ladder.AddOrUpdateLevel(new(price, size));
             }
         }
         return ladder;

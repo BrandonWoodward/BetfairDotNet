@@ -103,11 +103,11 @@ internal class OrderSnapshotFactory : IOrderSnapshotFactory
             var size = level[1];
             if(size == 0)
             {
-                ladder.RemoveLevelByPrice(price);
+                ladder.RemoveLevel(price);
             }
             else
             {
-                ladder.AddOrUpdateLevelByPrice(price, new PriceSize(price, size));
+                ladder.AddOrUpdateLevel(new(price, size));
             }
         }
         return ladder;

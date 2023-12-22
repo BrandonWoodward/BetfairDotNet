@@ -1,0 +1,468 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PriceHelpers
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PriceHelpers
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BrandonWoodward/BetfairDotNet/new/master/apiSpec/new?filename=BetfairDotNet_Utils_PriceHelpers.md&amp;value=---%0Auid%3A%20BetfairDotNet.Utils.PriceHelpers%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="BetfairDotNet.Utils.PriceHelpers">
+
+
+
+  <h1 id="BetfairDotNet_Utils_PriceHelpers" data-uid="BetfairDotNet.Utils.PriceHelpers" class="text-break">
+    Class PriceHelpers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Utils/PriceHelpers.cs/#L7"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="BetfairDotNet.html">BetfairDotNet</a>.<a class="xref" href="BetfairDotNet.Utils.html">Utils</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>BetfairDotNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A collection of helper methods for working with Betfair prices.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class PriceHelpers</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">PriceHelpers</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="BetfairDotNet_Utils_PriceHelpers_PriceLadder" data-uid="BetfairDotNet.Utils.PriceHelpers.PriceLadder">
+  PriceLadder
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Utils/PriceHelpers.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>An array representing the price ladder used by Betfair.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double[] PriceLadder</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="BetfairDotNet_Utils_PriceHelpers_AddTick_" data-uid="BetfairDotNet.Utils.PriceHelpers.AddTick*"></a>
+
+  <h3 id="BetfairDotNet_Utils_PriceHelpers_AddTick_System_Double_" data-uid="BetfairDotNet.Utils.PriceHelpers.AddTick(System.Double)">
+  AddTick(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Utils/PriceHelpers.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a pip to the given price.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double AddTick(double price)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>price</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The base price.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The next price in the PriceLadder; if the given price is the highest, returns the highest price.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown when the provided price is not valid.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="BetfairDotNet_Utils_PriceHelpers_AddTicks_" data-uid="BetfairDotNet.Utils.PriceHelpers.AddTicks*"></a>
+
+  <h3 id="BetfairDotNet_Utils_PriceHelpers_AddTicks_System_Double_System_Int32_" data-uid="BetfairDotNet.Utils.PriceHelpers.AddTicks(System.Double,System.Int32)">
+  AddTicks(double, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Utils/PriceHelpers.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a specified number of pips to the given price.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double AddTicks(double price, int num)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>price</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The base price.</p>
+</dd>
+    <dt><code>num</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of pips to add.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The price in the PriceLadder that is 'num' steps away from the given price; if it exceeds the ladder length, returns the highest price.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown when the provided price is not valid.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="BetfairDotNet_Utils_PriceHelpers_IsValidPrice_" data-uid="BetfairDotNet.Utils.PriceHelpers.IsValidPrice*"></a>
+
+  <h3 id="BetfairDotNet_Utils_PriceHelpers_IsValidPrice_System_Double_" data-uid="BetfairDotNet.Utils.PriceHelpers.IsValidPrice(System.Double)">
+  IsValidPrice(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Utils/PriceHelpers.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks if the given price is valid by determining if it's present in the PriceLadder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsValidPrice(double price)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>price</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The price to validate.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the price is present in the PriceLadder; otherwise, False.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Utils_PriceHelpers_RoundToNearestBetfairPrice_" data-uid="BetfairDotNet.Utils.PriceHelpers.RoundToNearestBetfairPrice*"></a>
+
+  <h3 id="BetfairDotNet_Utils_PriceHelpers_RoundToNearestBetfairPrice_System_Double_" data-uid="BetfairDotNet.Utils.PriceHelpers.RoundToNearestBetfairPrice(System.Double)">
+  RoundToNearestBetfairPrice(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Utils/PriceHelpers.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Rounds the given price to the nearest valid price in the PriceLadder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double RoundToNearestBetfairPrice(double price)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>price</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The price to round.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The nearest valid price from the PriceLadder.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Utils_PriceHelpers_SubtractTick_" data-uid="BetfairDotNet.Utils.PriceHelpers.SubtractTick*"></a>
+
+  <h3 id="BetfairDotNet_Utils_PriceHelpers_SubtractTick_System_Double_" data-uid="BetfairDotNet.Utils.PriceHelpers.SubtractTick(System.Double)">
+  SubtractTick(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Utils/PriceHelpers.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Subtracts a pip from the given price.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double SubtractTick(double price)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>price</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The base price.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The previous price in the PriceLadder; if the given price is the lowest, returns the lowest price.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Utils_PriceHelpers_SubtractTicks_" data-uid="BetfairDotNet.Utils.PriceHelpers.SubtractTicks*"></a>
+
+  <h3 id="BetfairDotNet_Utils_PriceHelpers_SubtractTicks_System_Double_System_Int32_" data-uid="BetfairDotNet.Utils.PriceHelpers.SubtractTicks(System.Double,System.Int32)">
+  SubtractTicks(double, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Utils/PriceHelpers.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Subtracts a specified number of pips from the given price.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double SubtractTicks(double price, int num)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>price</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The base price.</p>
+</dd>
+    <dt><code>num</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of pips to subtract.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The price in the PriceLadder that is 'num' steps away from the given price in the negative direction; if it goes below the ladder length, returns the lowest price.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Utils/PriceHelpers.cs/#L7" class="edit-link">Edit this page</a>
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

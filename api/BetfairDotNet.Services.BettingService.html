@@ -1,0 +1,1049 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class BettingService
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class BettingService
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BrandonWoodward/BetfairDotNet/new/master/apiSpec/new?filename=BetfairDotNet_Services_BettingService.md&amp;value=---%0Auid%3A%20BetfairDotNet.Services.BettingService%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="BetfairDotNet.Services.BettingService">
+
+
+
+  <h1 id="BetfairDotNet_Services_BettingService" data-uid="BetfairDotNet.Services.BettingService" class="text-break">
+    Class BettingService
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Services/BettingService.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="BetfairDotNet.html">BetfairDotNet</a>.<a class="xref" href="BetfairDotNet.Services.html">Services</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>BetfairDotNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class BettingService</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">BettingService</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="BetfairDotNet_Services_BettingService_ListClearedOrders_" data-uid="BetfairDotNet.Services.BettingService.ListClearedOrders*"></a>
+
+  <h3 id="BetfairDotNet_Services_BettingService_ListClearedOrders_BetfairDotNet_Enums_Betting_BetStatusEnum_System_Collections_Generic_IList_System_String__System_Collections_Generic_IList_System_String__System_Collections_Generic_IList_System_String__System_Collections_Generic_IList_BetfairDotNet_Models_Betting_RunnerId__System_Collections_Generic_IList_System_String__System_Collections_Generic_IList_System_String__System_Collections_Generic_IList_System_String__System_Nullable_BetfairDotNet_Enums_Betting_SideEnum__BetfairDotNet_Models_Betting_TimeRange_System_Nullable_BetfairDotNet_Enums_Betting_GroupByEnum__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_" data-uid="BetfairDotNet.Services.BettingService.ListClearedOrders(BetfairDotNet.Enums.Betting.BetStatusEnum,System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{BetfairDotNet.Models.Betting.RunnerId},System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Nullable{BetfairDotNet.Enums.Betting.SideEnum},BetfairDotNet.Models.Betting.TimeRange,System.Nullable{BetfairDotNet.Enums.Betting.GroupByEnum},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+  ListClearedOrders(BetStatusEnum, IList&lt;string&gt;?, IList&lt;string&gt;?, IList&lt;string&gt;?, IList&lt;RunnerId&gt;?, IList&lt;string&gt;?, IList&lt;string&gt;?, IList&lt;string&gt;?, SideEnum?, TimeRange?, GroupByEnum?, bool?, int?, int?, string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Services/BettingService.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ClearedOrderSummaryReport&gt; ListClearedOrders(BetStatusEnum betStatus, IList&lt;string&gt;? eventTypeIds = null, IList&lt;string&gt;? eventIds = null, IList&lt;string&gt;? marketIds = null, IList&lt;RunnerId&gt;? runnerIds = null, IList&lt;string&gt;? betIds = null, IList&lt;string&gt;? customerOrderRefs = null, IList&lt;string&gt;? customerStrategyRefs = null, SideEnum? side = null, TimeRange? settledDateRange = null, GroupByEnum? groupBy = null, bool? includeItemDescription = null, int? fromRecord = null, int? recordCount = null, string? locale = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>betStatus</code> <a class="xref" href="BetfairDotNet.Enums.Betting.BetStatusEnum.html">BetStatusEnum</a></dt>
+    <dd></dd>
+    <dt><code>eventTypeIds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>eventIds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>marketIds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>runnerIds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="BetfairDotNet.Models.Betting.RunnerId.html">RunnerId</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>betIds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>customerOrderRefs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>customerStrategyRefs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>side</code> <a class="xref" href="BetfairDotNet.Enums.Betting.SideEnum.html">SideEnum</a>?</dt>
+    <dd></dd>
+    <dt><code>settledDateRange</code> <a class="xref" href="BetfairDotNet.Models.Betting.TimeRange.html">TimeRange</a></dt>
+    <dd></dd>
+    <dt><code>groupBy</code> <a class="xref" href="BetfairDotNet.Enums.Betting.GroupByEnum.html">GroupByEnum</a>?</dt>
+    <dd></dd>
+    <dt><code>includeItemDescription</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+    <dt><code>fromRecord</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+    <dt><code>recordCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+    <dt><code>locale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="BetfairDotNet.Models.Betting.ClearedOrderSummaryReport.html">ClearedOrderSummaryReport</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Services_BettingService_ListCompetitions_" data-uid="BetfairDotNet.Services.BettingService.ListCompetitions*"></a>
+
+  <h3 id="BetfairDotNet_Services_BettingService_ListCompetitions_BetfairDotNet_Models_Betting_MarketFilter_System_String_" data-uid="BetfairDotNet.Services.BettingService.ListCompetitions(BetfairDotNet.Models.Betting.MarketFilter,System.String)">
+  ListCompetitions(MarketFilter, string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Services/BettingService.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a list of Competitions (i.e., World Cup 2013) associated with the markets selected by the MarketFilter.
+Currently only Football markets have an associated competition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyList&lt;CompetitionResult&gt;&gt; ListCompetitions(MarketFilter marketFilter, string? locale = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>marketFilter</code> <a class="xref" href="BetfairDotNet.Models.Betting.MarketFilter.html">MarketFilter</a></dt>
+    <dd><p>The filter to select desired markets. All markets that match the criteria in the filter are selected.</p>
+</dd>
+    <dt><code>locale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The language used for the response. If not specified, the default is returned.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="BetfairDotNet.Models.Betting.CompetitionResult.html">CompetitionResult</a>&gt;&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation.
+The task result contains a list of <a class="xref" href="BetfairDotNet.Models.Betting.CompetitionResult.html">CompetitionResult</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Services_BettingService_ListCountries_" data-uid="BetfairDotNet.Services.BettingService.ListCountries*"></a>
+
+  <h3 id="BetfairDotNet_Services_BettingService_ListCountries_BetfairDotNet_Models_Betting_MarketFilter_System_String_" data-uid="BetfairDotNet.Services.BettingService.ListCountries(BetfairDotNet.Models.Betting.MarketFilter,System.String)">
+  ListCountries(MarketFilter, string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Services/BettingService.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a list of Countries associated with the markets selected by the <a class="xref" href="BetfairDotNet.Models.Betting.MarketFilter.html">MarketFilter</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyList&lt;CountryCodeResult&gt;&gt; ListCountries(MarketFilter marketFilter, string? locale = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>marketFilter</code> <a class="xref" href="BetfairDotNet.Models.Betting.MarketFilter.html">MarketFilter</a></dt>
+    <dd></dd>
+    <dt><code>locale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="BetfairDotNet.Models.Betting.CountryCodeResult.html">CountryCodeResult</a>&gt;&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation.
+The task result contains a list of <a class="xref" href="BetfairDotNet.Models.Betting.CountryCodeResult.html">CountryCodeResult</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Services_BettingService_ListCurrentOrders_" data-uid="BetfairDotNet.Services.BettingService.ListCurrentOrders*"></a>
+
+  <h3 id="BetfairDotNet_Services_BettingService_ListCurrentOrders_System_Collections_Generic_IList_System_String__System_Collections_Generic_IList_System_String__System_Nullable_BetfairDotNet_Enums_Betting_OrderProjectionEnum__BetfairDotNet_Models_Betting_TimeRange_BetfairDotNet_Models_Betting_TimeRange_System_Nullable_BetfairDotNet_Enums_Betting_OrderByEnum__System_Nullable_BetfairDotNet_Enums_Betting_SortDirEnum__System_Nullable_System_Int32__System_Nullable_System_Int32__" data-uid="BetfairDotNet.Services.BettingService.ListCurrentOrders(System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Nullable{BetfairDotNet.Enums.Betting.OrderProjectionEnum},BetfairDotNet.Models.Betting.TimeRange,BetfairDotNet.Models.Betting.TimeRange,System.Nullable{BetfairDotNet.Enums.Betting.OrderByEnum},System.Nullable{BetfairDotNet.Enums.Betting.SortDirEnum},System.Nullable{System.Int32},System.Nullable{System.Int32})">
+  ListCurrentOrders(IList&lt;string&gt;?, IList&lt;string&gt;?, OrderProjectionEnum?, TimeRange?, TimeRange?, OrderByEnum?, SortDirEnum?, int?, int?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Services/BettingService.cs/#L153"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a list of your current orders. Optionally you can filter and sort your current orders using the various parameters,
+setting none of the parameters will return all of your current orders up to a maximum of 1000 bets,
+ordered BY_BET and sorted EARLIEST_TO_LATEST.</p>
+<p>To retrieve more than 1000 orders, you need to make use of the 
+fromRecord and recordCount parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;CurrentOrderSummaryReport&gt; ListCurrentOrders(IList&lt;string&gt;? betIds = null, IList&lt;string&gt;? marketIds = null, OrderProjectionEnum? orderProjection = null, TimeRange? placedDateRange = null, TimeRange? dateRange = null, OrderByEnum? orderBy = null, SortDirEnum? sortDir = null, int? fromRecord = null, int? recordCount = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>betIds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>Optional list of bet IDs to filter by.</p>
+</dd>
+    <dt><code>marketIds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>Optional list of market IDs to filter by.</p>
+</dd>
+    <dt><code>orderProjection</code> <a class="xref" href="BetfairDotNet.Enums.Betting.OrderProjectionEnum.html">OrderProjectionEnum</a>?</dt>
+    <dd><p>Optional projection type for the orders.</p>
+</dd>
+    <dt><code>placedDateRange</code> <a class="xref" href="BetfairDotNet.Models.Betting.TimeRange.html">TimeRange</a></dt>
+    <dd><p>Optional date range to filter by placement date.</p>
+</dd>
+    <dt><code>dateRange</code> <a class="xref" href="BetfairDotNet.Models.Betting.TimeRange.html">TimeRange</a></dt>
+    <dd><p>Optional general date range to filter by.</p>
+</dd>
+    <dt><code>orderBy</code> <a class="xref" href="BetfairDotNet.Enums.Betting.OrderByEnum.html">OrderByEnum</a>?</dt>
+    <dd><p>Optional order by criteria.</p>
+</dd>
+    <dt><code>sortDir</code> <a class="xref" href="BetfairDotNet.Enums.Betting.SortDirEnum.html">SortDirEnum</a>?</dt>
+    <dd><p>Optional sort direction.</p>
+</dd>
+    <dt><code>fromRecord</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p>Optional starting record for pagination.</p>
+</dd>
+    <dt><code>recordCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p>Optional count of records to return for pagination.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="BetfairDotNet.Models.Betting.CurrentOrderSummaryReport.html">CurrentOrderSummaryReport</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation.
+The task result contains a <a class="xref" href="BetfairDotNet.Models.Betting.CurrentOrderSummaryReport.html">CurrentOrderSummaryReport</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Services_BettingService_ListEventTypes_" data-uid="BetfairDotNet.Services.BettingService.ListEventTypes*"></a>
+
+  <h3 id="BetfairDotNet_Services_BettingService_ListEventTypes_BetfairDotNet_Models_Betting_MarketFilter_System_String_" data-uid="BetfairDotNet.Services.BettingService.ListEventTypes(BetfairDotNet.Models.Betting.MarketFilter,System.String)">
+  ListEventTypes(MarketFilter, string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Services/BettingService.cs/#L215"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a list of Event Types (i.e. Sports) associated with the markets selected by the MarketFilter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyList&lt;EventTypeResult&gt;&gt; ListEventTypes(MarketFilter marketFilter, string? locale = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>marketFilter</code> <a class="xref" href="BetfairDotNet.Models.Betting.MarketFilter.html">MarketFilter</a></dt>
+    <dd><p>The filter to select desired markets. All markets that match the criteria in the filter are selected.</p>
+</dd>
+    <dt><code>locale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The language used for the response. If not specified, the default is returned.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="BetfairDotNet.Models.Betting.EventTypeResult.html">EventTypeResult</a>&gt;&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation.
+The task result contains a <a class="xref" href="BetfairDotNet.Models.BetfairServerResponse-1.html">BetfairServerResponse&lt;T&gt;</a> containing the list of <a class="xref" href="BetfairDotNet.Models.Betting.EventTypeResult.html">EventTypeResult</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Services_BettingService_ListEvents_" data-uid="BetfairDotNet.Services.BettingService.ListEvents*"></a>
+
+  <h3 id="BetfairDotNet_Services_BettingService_ListEvents_BetfairDotNet_Models_Betting_MarketFilter_System_String_" data-uid="BetfairDotNet.Services.BettingService.ListEvents(BetfairDotNet.Models.Betting.MarketFilter,System.String)">
+  ListEvents(MarketFilter, string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Services/BettingService.cs/#L193"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a list of Events (i.e, Reading vs. Man United) associated with the markets selected by the MarketFilter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyList&lt;EventResult&gt;&gt; ListEvents(MarketFilter marketFilter, string? locale = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>marketFilter</code> <a class="xref" href="BetfairDotNet.Models.Betting.MarketFilter.html">MarketFilter</a></dt>
+    <dd><p>The filter to select desired markets. All markets that match the criteria in the filter are selected.</p>
+</dd>
+    <dt><code>locale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The language used for the response. If not specified, the default is returned.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="BetfairDotNet.Models.Betting.EventResult.html">EventResult</a>&gt;&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation.
+The task result contains a <a class="xref" href="BetfairDotNet.Models.BetfairServerResponse-1.html">BetfairServerResponse&lt;T&gt;</a> containing the list of <a class="xref" href="BetfairDotNet.Models.Betting.EventResult.html">EventResult</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Services_BettingService_ListMarketBook_" data-uid="BetfairDotNet.Services.BettingService.ListMarketBook*"></a>
+
+  <h3 id="BetfairDotNet_Services_BettingService_ListMarketBook_System_Collections_Generic_IEnumerable_System_String__BetfairDotNet_Models_Betting_PriceProjection_System_Nullable_BetfairDotNet_Enums_Betting_OrderProjectionEnum__System_Nullable_BetfairDotNet_Enums_Betting_MatchProjectionEnum__System_Boolean_System_Boolean_System_Collections_Generic_IList_System_String__System_String_System_String_System_Nullable_System_DateTime__System_Collections_Generic_IList_System_String__" data-uid="BetfairDotNet.Services.BettingService.ListMarketBook(System.Collections.Generic.IEnumerable{System.String},BetfairDotNet.Models.Betting.PriceProjection,System.Nullable{BetfairDotNet.Enums.Betting.OrderProjectionEnum},System.Nullable{BetfairDotNet.Enums.Betting.MatchProjectionEnum},System.Boolean,System.Boolean,System.Collections.Generic.IList{System.String},System.String,System.String,System.Nullable{System.DateTime},System.Collections.Generic.IList{System.String})">
+  ListMarketBook(IEnumerable&lt;string&gt;, PriceProjection?, OrderProjectionEnum?, MatchProjectionEnum?, bool, bool, IList&lt;string&gt;?, string?, string?, DateTime?, IList&lt;string&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Services/BettingService.cs/#L251"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a list of dynamic data about markets. Dynamic data includes prices, the status of the market, the status of selections,
+the traded volume, and the status of any orders you have placed in the market.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyList&lt;MarketBook&gt;&gt; ListMarketBook(IEnumerable&lt;string&gt; marketIds, PriceProjection? priceProjection = null, OrderProjectionEnum? orderProjection = null, MatchProjectionEnum? matchProjection = null, bool includeOverallPosition = false, bool partitionMatchedByStrategyRef = false, IList&lt;string&gt;? customerStrategyRefs = null, string? currencyCode = null, string? locale = null, DateTime? matchedSince = null, IList&lt;string&gt;? betIds = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>marketIds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>One or more market ids. The number of markets returned depends on the amount of data you request via the price projection.</p>
+</dd>
+    <dt><code>priceProjection</code> <a class="xref" href="BetfairDotNet.Models.Betting.PriceProjection.html">PriceProjection</a></dt>
+    <dd><p>The projection of price data you want to receive in the response.</p>
+</dd>
+    <dt><code>orderProjection</code> <a class="xref" href="BetfairDotNet.Enums.Betting.OrderProjectionEnum.html">OrderProjectionEnum</a>?</dt>
+    <dd><p>The orders you want to receive in the response.</p>
+</dd>
+    <dt><code>matchProjection</code> <a class="xref" href="BetfairDotNet.Enums.Betting.MatchProjectionEnum.html">MatchProjectionEnum</a>?</dt>
+    <dd><p>If you ask for orders, specifies the representation of matches.</p>
+</dd>
+    <dt><code>includeOverallPosition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If you ask for orders, returns matches for each selection. Defaults to true if unspecified.</p>
+</dd>
+    <dt><code>partitionMatchedByStrategyRef</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If you ask for orders, returns the breakdown of matches by strategy for each selection.</p>
+</dd>
+    <dt><code>customerStrategyRefs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>If you ask for orders, restricts the results to orders matching any of the specified set of customer defined strategies.
+Also filters which matches by strategy for selections are returned, if partitionMatchedByStrategyRef is true.</p>
+</dd>
+    <dt><code>currencyCode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A Betfair standard currency code. If not specified, the default currency code is used.</p>
+</dd>
+    <dt><code>locale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The language used for the response. If not specified, the default is returned.</p>
+</dd>
+    <dt><code>matchedSince</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
+    <dd><p>If you ask for orders, restricts the results to orders that have at least one fragment matched since
+the specified date(all matched fragments of such an order will be returned even if some were matched before the specified date).
+All EXECUTABLE orders will be returned regardless of matched date.</p>
+</dd>
+    <dt><code>betIds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>If you ask for orders, restricts the results to orders with the specified bet IDs. Omitting this parameter means that all bets
+will be included in the response. A maximum of 250 betId's can be provided at a time.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="BetfairDotNet.Models.Betting.MarketBook.html">MarketBook</a>&gt;&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation.
+The task result contains a <a class="xref" href="BetfairDotNet.Models.BetfairServerResponse-1.html">BetfairServerResponse&lt;T&gt;</a> containing the list of <a class="xref" href="BetfairDotNet.Models.Betting.MarketBook.html">MarketBook</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Services_BettingService_ListMarketCatalogue_" data-uid="BetfairDotNet.Services.BettingService.ListMarketCatalogue*"></a>
+
+  <h3 id="BetfairDotNet_Services_BettingService_ListMarketCatalogue_BetfairDotNet_Models_Betting_MarketFilter_System_Collections_Generic_IList_BetfairDotNet_Enums_Betting_MarketProjectionEnum__System_Nullable_BetfairDotNet_Enums_Betting_MarketSortEnum__System_Int32_System_String_" data-uid="BetfairDotNet.Services.BettingService.ListMarketCatalogue(BetfairDotNet.Models.Betting.MarketFilter,System.Collections.Generic.IList{BetfairDotNet.Enums.Betting.MarketProjectionEnum},System.Nullable{BetfairDotNet.Enums.Betting.MarketSortEnum},System.Int32,System.String)">
+  ListMarketCatalogue(MarketFilter, IList&lt;MarketProjectionEnum&gt;?, MarketSortEnum?, int, string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Services/BettingService.cs/#L302"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a list of information about published (ACTIVE/SUSPENDED) markets that does not change (or changes very rarely).
+Use listMarketCatalogue to retrieve the name of the market, the names of selections and other information about markets.</p>
+<p>Market Data Request Limits apply to requests made to listMarketCatalogue.</p> 
+<p>listMarketCatalogue does not return markets that are CLOSED.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyList&lt;MarketCatalogue&gt;&gt; ListMarketCatalogue(MarketFilter marketFilter, IList&lt;MarketProjectionEnum&gt;? marketProjections = null, MarketSortEnum? sort = null, int maxResults = 1, string? locale = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>marketFilter</code> <a class="xref" href="BetfairDotNet.Models.Betting.MarketFilter.html">MarketFilter</a></dt>
+    <dd><p>The filter to select desired markets. All markets that match the criteria in the filter are selected.</p>
+</dd>
+    <dt><code>marketProjections</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="BetfairDotNet.Enums.Betting.MarketProjectionEnum.html">MarketProjectionEnum</a>&gt;</dt>
+    <dd><p>The type and amount of data returned about the market.</p>
+</dd>
+    <dt><code>sort</code> <a class="xref" href="BetfairDotNet.Enums.Betting.MarketSortEnum.html">MarketSortEnum</a>?</dt>
+    <dd><p>The order of the results. Will default to RANK if not passed. RANK is an assigned priority that is determined by Betfair's
+Market Operations team. A result's overall rank is derived from the ranking given to the following attributes for the result:
+EventType, Competition, StartTime, MarketType, MarketId</p>
+</dd>
+    <dt><code>maxResults</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>limit on the total number of results returned, must be greater than 0 and less than or equal to 1000</p>
+</dd>
+    <dt><code>locale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The language used for the response. If not specified, the default is returned.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="BetfairDotNet.Models.Betting.MarketCatalogue.html">MarketCatalogue</a>&gt;&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation.
+The task result contains a <a class="xref" href="BetfairDotNet.Models.BetfairServerResponse-1.html">BetfairServerResponse&lt;T&gt;</a> containing the list of <a class="xref" href="BetfairDotNet.Models.Betting.MarketCatalogue.html">MarketCatalogue</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Services_BettingService_ListMarketProfitAndLoss_" data-uid="BetfairDotNet.Services.BettingService.ListMarketProfitAndLoss*"></a>
+
+  <h3 id="BetfairDotNet_Services_BettingService_ListMarketProfitAndLoss_System_Collections_Generic_IList_System_String__System_Boolean_System_Boolean_System_Boolean_" data-uid="BetfairDotNet.Services.BettingService.ListMarketProfitAndLoss(System.Collections.Generic.IList{System.String},System.Boolean,System.Boolean,System.Boolean)">
+  ListMarketProfitAndLoss(IList&lt;string&gt;, bool, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Services/BettingService.cs/#L336"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve profit and loss for a given list of OPEN markets. The values are calculated using matched bets and optionally settled bets.</p>
+<p>Only odds (MarketBettingType = ODDS) markets  are implemented, markets of other types are silently ignored.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyList&lt;MarketProfitAndLoss&gt;&gt; ListMarketProfitAndLoss(IList&lt;string&gt; marketIds, bool includeSettledBets = false, bool includeBsbBets = false, bool netOfCommission = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>marketIds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>List of markets to calculate profit and loss</p>
+</dd>
+    <dt><code>includeSettledBets</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Option to include settled bets (partially settled markets only). Defaults to false if not specified.</p>
+</dd>
+    <dt><code>includeBsbBets</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Option to include BSP bets. Defaults to false if not specified.</p>
+</dd>
+    <dt><code>netOfCommission</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Option to return profit and loss net of users current commission rate for this market including any special tariffs.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="BetfairDotNet.Models.Betting.MarketProfitAndLoss.html">MarketProfitAndLoss</a>&gt;&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation.
+The task result contains a <a class="xref" href="BetfairDotNet.Models.BetfairServerResponse-1.html">BetfairServerResponse&lt;T&gt;</a> containing the list of <a class="xref" href="BetfairDotNet.Models.Betting.MarketProfitAndLoss.html">MarketProfitAndLoss</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Services_BettingService_ListMarketTypes_" data-uid="BetfairDotNet.Services.BettingService.ListMarketTypes*"></a>
+
+  <h3 id="BetfairDotNet_Services_BettingService_ListMarketTypes_BetfairDotNet_Models_Betting_MarketFilter_System_String_" data-uid="BetfairDotNet.Services.BettingService.ListMarketTypes(BetfairDotNet.Models.Betting.MarketFilter,System.String)">
+  ListMarketTypes(MarketFilter, string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Services/BettingService.cs/#L366"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a list of market types (i.e. MATCH_ODDS, NEXT_GOAL) associated with the markets selected by the MarketFilter.
+The market types are always the same, regardless of locale.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyList&lt;MarketTypeResult&gt;&gt; ListMarketTypes(MarketFilter marketFilter, string? locale = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>marketFilter</code> <a class="xref" href="BetfairDotNet.Models.Betting.MarketFilter.html">MarketFilter</a></dt>
+    <dd><p>The filter to select desired markets. All markets that match the criteria in the filter are selected.</p>
+</dd>
+    <dt><code>locale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The language used for the response. If not specified, the default is returned.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="BetfairDotNet.Models.Betting.MarketTypeResult.html">MarketTypeResult</a>&gt;&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation.
+The task result contains a <a class="xref" href="BetfairDotNet.Models.BetfairServerResponse-1.html">BetfairServerResponse&lt;T&gt;</a> containing the list of <a class="xref" href="BetfairDotNet.Models.Betting.MarketTypeResult.html">MarketTypeResult</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Services_BettingService_ListRunnerBook_" data-uid="BetfairDotNet.Services.BettingService.ListRunnerBook*"></a>
+
+  <h3 id="BetfairDotNet_Services_BettingService_ListRunnerBook_System_String_System_String_System_Nullable_System_Double__BetfairDotNet_Models_Betting_PriceProjection_System_Nullable_BetfairDotNet_Enums_Betting_OrderProjectionEnum__System_Nullable_BetfairDotNet_Enums_Betting_MatchProjectionEnum__System_Boolean_System_Boolean_System_Collections_Generic_IList_System_String__System_String_System_String_System_Nullable_System_DateTime__System_Collections_Generic_IList_System_String__" data-uid="BetfairDotNet.Services.BettingService.ListRunnerBook(System.String,System.String,System.Nullable{System.Double},BetfairDotNet.Models.Betting.PriceProjection,System.Nullable{BetfairDotNet.Enums.Betting.OrderProjectionEnum},System.Nullable{BetfairDotNet.Enums.Betting.MatchProjectionEnum},System.Boolean,System.Boolean,System.Collections.Generic.IList{System.String},System.String,System.String,System.Nullable{System.DateTime},System.Collections.Generic.IList{System.String})">
+  ListRunnerBook(string, string, double?, PriceProjection?, OrderProjectionEnum?, MatchProjectionEnum?, bool, bool, IList&lt;string&gt;?, string?, string?, DateTime?, IList&lt;string&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Services/BettingService.cs/#L405"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a list of dynamic data about a market and a specified runner. Dynamic data includes prices, the status of the market,
+the status of selections, the traded volume, and the status of any orders you have placed in the market.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;MarketBook&gt; ListRunnerBook(string marketId, string selectionId, double? handicap = null, PriceProjection? priceProjection = null, OrderProjectionEnum? orderProjection = null, MatchProjectionEnum? matchProjection = null, bool includeOverallPostion = false, bool partitionMatchByStrategyRef = false, IList&lt;string&gt;? customerStrategyRef = null, string? currencyCode = null, string? locale = null, DateTime? matchedSince = null, IList&lt;string&gt;? betIds = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>marketId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The unique id for the market.</p>
+</dd>
+    <dt><code>selectionId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The unique id for the selection in the market.</p>
+</dd>
+    <dt><code>handicap</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>?</dt>
+    <dd><p>The handicap associated with the runner in case of Asian handicap market.</p>
+</dd>
+    <dt><code>priceProjection</code> <a class="xref" href="BetfairDotNet.Models.Betting.PriceProjection.html">PriceProjection</a></dt>
+    <dd><p>The projection of price data you want to receive in the response.</p>
+</dd>
+    <dt><code>orderProjection</code> <a class="xref" href="BetfairDotNet.Enums.Betting.OrderProjectionEnum.html">OrderProjectionEnum</a>?</dt>
+    <dd><p>The orders you want to receive in the response.</p>
+</dd>
+    <dt><code>matchProjection</code> <a class="xref" href="BetfairDotNet.Enums.Betting.MatchProjectionEnum.html">MatchProjectionEnum</a>?</dt>
+    <dd><p>If you ask for orders, specifies the representation of matches.</p>
+</dd>
+    <dt><code>includeOverallPostion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If you ask for orders, returns matches for each selection. Defaults to true if unspecified.</p>
+</dd>
+    <dt><code>partitionMatchByStrategyRef</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If you ask for orders, returns the breakdown of matches by strategy for each selection.</p>
+</dd>
+    <dt><code>customerStrategyRef</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>If you ask for orders, restricts the results to orders matching any of the specified set of customer defined strategies.
+Also filters which matches by strategy for selections are returned, if partitionMatchedByStrategyRef is true.</p>
+</dd>
+    <dt><code>currencyCode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A Betfair standard currency code. If not specified, the default currency code is used.</p>
+</dd>
+    <dt><code>locale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The language used for the response. If not specified, the default is returned.</p>
+</dd>
+    <dt><code>matchedSince</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
+    <dd><p>If you ask for orders, restricts the results to orders that have at least one fragment matched since
+the specified date(all matched fragments of such an order will be returned even if some were matched before the specified date).
+All EXECUTABLE orders will be returned regardless of matched date.</p>
+</dd>
+    <dt><code>betIds</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>If you ask for orders, restricts the results to orders with the specified bet IDs. Omitting this parameter means that
+all bets will be included in the response. Please note: A maximum of 250 betId's can be provided at a time.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="BetfairDotNet.Models.Betting.MarketBook.html">MarketBook</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation.
+The task result contains a <a class="xref" href="BetfairDotNet.Models.BetfairServerResponse-1.html">BetfairServerResponse&lt;T&gt;</a> containing the <a class="xref" href="BetfairDotNet.Models.Betting.MarketBook.html">MarketBook</a> and the <a class="xref" href="BetfairDotNet.Models.Betting.RunnerBook.html">RunnerBook</a>
+for the specified runner.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Services_BettingService_ListTimeRanges_" data-uid="BetfairDotNet.Services.BettingService.ListTimeRanges*"></a>
+
+  <h3 id="BetfairDotNet_Services_BettingService_ListTimeRanges_BetfairDotNet_Models_Betting_MarketFilter_BetfairDotNet_Enums_Betting_TimeGranularityEnum_" data-uid="BetfairDotNet.Services.BettingService.ListTimeRanges(BetfairDotNet.Models.Betting.MarketFilter,BetfairDotNet.Enums.Betting.TimeGranularityEnum)">
+  ListTimeRanges(MarketFilter, TimeGranularityEnum)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Services/BettingService.cs/#L455"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a list of time ranges in the granularity specified in the request (i.e. 3PM to 4PM, Aug 14th to Aug 15th)
+associated with the markets selected by the MarketFilter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyList&lt;TimeRangeResult&gt;&gt; ListTimeRanges(MarketFilter marketFilter, TimeGranularityEnum timeGranularity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>marketFilter</code> <a class="xref" href="BetfairDotNet.Models.Betting.MarketFilter.html">MarketFilter</a></dt>
+    <dd><p>The filter to select desired markets. All markets that match the criteria in the filter are selected.</p>
+</dd>
+    <dt><code>timeGranularity</code> <a class="xref" href="BetfairDotNet.Enums.Betting.TimeGranularityEnum.html">TimeGranularityEnum</a></dt>
+    <dd><p>The granularity of time periods that correspond to markets selected by the market filter.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="BetfairDotNet.Models.Betting.TimeRangeResult.html">TimeRangeResult</a>&gt;&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation.
+The task result contains a <a class="xref" href="BetfairDotNet.Models.BetfairServerResponse-1.html">BetfairServerResponse&lt;T&gt;</a> containing the list of <a class="xref" href="BetfairDotNet.Models.Betting.TimeRangeResult.html">TimeRangeResult</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Services_BettingService_ListVenues_" data-uid="BetfairDotNet.Services.BettingService.ListVenues*"></a>
+
+  <h3 id="BetfairDotNet_Services_BettingService_ListVenues_BetfairDotNet_Models_Betting_MarketFilter_System_String_" data-uid="BetfairDotNet.Services.BettingService.ListVenues(BetfairDotNet.Models.Betting.MarketFilter,System.String)">
+  ListVenues(MarketFilter, string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Services/BettingService.cs/#L478"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a list of Venues (i.e. Cheltenham, Ascot) associated with the markets selected by the MarketFilter.
+Currently, only Horse Racing markets are associated with a Venue.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyList&lt;VenueResult&gt;&gt; ListVenues(MarketFilter marketFilter, string? locale = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>marketFilter</code> <a class="xref" href="BetfairDotNet.Models.Betting.MarketFilter.html">MarketFilter</a></dt>
+    <dd><p>The filter to select desired markets. All markets that match the criteria in the filter are selected.</p>
+</dd>
+    <dt><code>locale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The language used for the response. If not specified, the default is returned.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="BetfairDotNet.Models.Betting.VenueResult.html">VenueResult</a>&gt;&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation.
+The task result contains a <a class="xref" href="BetfairDotNet.Models.BetfairServerResponse-1.html">BetfairServerResponse&lt;T&gt;</a> containing the list of <a class="xref" href="BetfairDotNet.Models.Betting.VenueResult.html">VenueResult</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Services_BettingService_PlaceOrders_" data-uid="BetfairDotNet.Services.BettingService.PlaceOrders*"></a>
+
+  <h3 id="BetfairDotNet_Services_BettingService_PlaceOrders_System_String_System_Collections_Generic_IList_BetfairDotNet_Models_Betting_PlaceInstruction__System_String_BetfairDotNet_Models_Betting_MarketVersion_System_String_System_Boolean_" data-uid="BetfairDotNet.Services.BettingService.PlaceOrders(System.String,System.Collections.Generic.IList{BetfairDotNet.Models.Betting.PlaceInstruction},System.String,BetfairDotNet.Models.Betting.MarketVersion,System.String,System.Boolean)">
+  PlaceOrders(string, IList&lt;PlaceInstruction&gt;, string?, MarketVersion?, string?, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Services/BettingService.cs/#L516"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Place new orders into market. Additional bet sizing rules apply to bets placed into the Italian Exchange.</p>
+<p>In normal circumstances the placeOrders is an atomic operation.PLEASE NOTE: if the 'Best Execution' features is switched off, 
+placeOrders can return ‘PROCESSED_WITH_ERRORS’ meaning that some bets can be rejected and other placed when 
+submitted in the same <a class="xref" href="BetfairDotNet.Models.Betting.PlaceInstruction.html">PlaceInstruction</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PlaceExecutionReport&gt; PlaceOrders(string marketId, IList&lt;PlaceInstruction&gt; placeInstructions, string? customerRef = null, MarketVersion? marketVersion = null, string? customerStrategyRef = null, bool async = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>marketId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The market id these orders are to be placed on</p>
+</dd>
+    <dt><code>placeInstructions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="BetfairDotNet.Models.Betting.PlaceInstruction.html">PlaceInstruction</a>&gt;</dt>
+    <dd><p>The number of place instructions. The limit of place instructions per request is 200 for the
+Global Exchange and 50 for the Italian Exchange.</p>
+</dd>
+    <dt><code>customerRef</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional parameter allowing the client to pass a unique string (up to 32 chars) that is used to de-dupe mistaken re-submissions.<br>
+customerRef can contain: upper/lower chars, digits, chars : - . _ + * : ; ~ only.  This field does not persist into the placeOrders response/Order Stream API
+and should not be confused with customerOrderRef, which is separate field that can be sent in the PlaceInstruction.</p>
+</dd>
+    <dt><code>marketVersion</code> <a class="xref" href="BetfairDotNet.Models.Betting.MarketVersion.html">MarketVersion</a></dt>
+    <dd><p>Optional parameter allowing the client to specify which version of the market the
+orders should be placed on.If the current market version is higher than that sent on an order,
+the bet will be lapsed.</p>
+</dd>
+    <dt><code>customerStrategyRef</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>An optional reference customers can use to specify which strategy has sent the order.
+The reference will be returned on order change messages through the stream API.The string is
+limited to 15 characters.</p>
+</dd>
+    <dt><code>async</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>An optional flag (not setting equates to false) which specifies if the orders should be placed asynchronously.
+Orders can be tracked via the Exchange Stream API or the API-NG by providing a customerOrderRef for each place order.
+An order's status will be PENDING and no bet ID will be returned.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="BetfairDotNet.Models.Betting.PlaceExecutionReport.html">PlaceExecutionReport</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation.
+The task result contains a <a class="xref" href="BetfairDotNet.Models.BetfairServerResponse-1.html">BetfairServerResponse&lt;T&gt;</a> containing the <a class="xref" href="BetfairDotNet.Models.Betting.PlaceExecutionReport.html">PlaceExecutionReport</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Services_BettingService_ReplaceOrders_" data-uid="BetfairDotNet.Services.BettingService.ReplaceOrders*"></a>
+
+  <h3 id="BetfairDotNet_Services_BettingService_ReplaceOrders_System_String_System_Collections_Generic_IList_BetfairDotNet_Models_Betting_ReplaceInstruction__System_String_BetfairDotNet_Models_Betting_MarketVersion_System_Boolean_" data-uid="BetfairDotNet.Services.BettingService.ReplaceOrders(System.String,System.Collections.Generic.IList{BetfairDotNet.Models.Betting.ReplaceInstruction},System.String,BetfairDotNet.Models.Betting.MarketVersion,System.Boolean)">
+  ReplaceOrders(string, IList&lt;ReplaceInstruction&gt;, string?, MarketVersion?, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Services/BettingService.cs/#L586"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This operation is logically a bulk cancel followed by a bulk place. The cancel is completed first then the new orders are placed.
+The new orders will be placed atomically in that they will all be placed or none will be placed.</p>
+<p>In the case where the new orders cannot be placed the cancellations will not be rolled back.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ReplaceExecutionReport&gt; ReplaceOrders(string marketId, IList&lt;ReplaceInstruction&gt; instructions, string? customerRef = null, MarketVersion? marketVersion = null, bool async = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>marketId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The market id these orders are to be placed on.</p>
+</dd>
+    <dt><code>instructions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="BetfairDotNet.Models.Betting.ReplaceInstruction.html">ReplaceInstruction</a>&gt;</dt>
+    <dd><p>The number of replace instructions.  The limit of replace instructions per request is 60.</p>
+</dd>
+    <dt><code>customerRef</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional parameter allowing the client to pass a unique string (up to 32 chars) that is used to de-dupe mistaken re-submissions.</p>
+</dd>
+    <dt><code>marketVersion</code> <a class="xref" href="BetfairDotNet.Models.Betting.MarketVersion.html">MarketVersion</a></dt>
+    <dd><p>Optional parameter allowing the client to specify which version of the market the
+orders should be placed on.If the current market version is higher than that sent on an order,
+the bet will be lapsed.</p>
+</dd>
+    <dt><code>async</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>An optional flag (not setting equates to false) which specifies if the orders should be replaced asynchronously.
+Orders can be tracked via the Exchange Stream API or the API-NG by providing a customerOrderRef for each replace order.
+Not available for MOC or LOC bets.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="BetfairDotNet.Models.Betting.ReplaceExecutionReport.html">ReplaceExecutionReport</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BetfairDotNet_Services_BettingService_UpdateOrders_" data-uid="BetfairDotNet.Services.BettingService.UpdateOrders*"></a>
+
+  <h3 id="BetfairDotNet_Services_BettingService_UpdateOrders_System_String_System_Collections_Generic_IList_BetfairDotNet_Models_Betting_UpdateInstruction__System_String_" data-uid="BetfairDotNet.Services.BettingService.UpdateOrders(System.String,System.Collections.Generic.IList{BetfairDotNet.Models.Betting.UpdateInstruction},System.String)">
+  UpdateOrders(string, IList&lt;UpdateInstruction&gt;, string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Services/BettingService.cs/#L551"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Update non-exposure changing fields.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;UpdateExecutionReport&gt; UpdateOrders(string marketId, IList&lt;UpdateInstruction&gt; instructions, string? customerRef = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>marketId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The market id these orders are to be placed on.</p>
+</dd>
+    <dt><code>instructions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="BetfairDotNet.Models.Betting.UpdateInstruction.html">UpdateInstruction</a>&gt;</dt>
+    <dd><p>The number of update instructions. The limit of update instructions per request is 60.</p>
+</dd>
+    <dt><code>customerRef</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Optional parameter allowing the client to pass a unique string (up to 32 chars) that is used to
+de-dupe mistaken re-submissions.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="BetfairDotNet.Models.Betting.UpdateExecutionReport.html">UpdateExecutionReport</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous operation.
+The task result contains a <a class="xref" href="BetfairDotNet.Models.BetfairServerResponse-1.html">BetfairServerResponse&lt;T&gt;</a> containing the <a class="xref" href="BetfairDotNet.Models.Betting.UpdateExecutionReport.html">UpdateExecutionReport</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BrandonWoodward/BetfairDotNet/blob/master/src/BetfairDotNet/Services/BettingService.cs/#L10" class="edit-link">Edit this page</a>
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

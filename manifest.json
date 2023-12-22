@@ -1,0 +1,1621 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/Coding/projects/BetfairDotNet/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.BetfairClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.BetfairClient.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Account.IncludeItemEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Account.IncludeItemEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Account.ItemClassEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Account.ItemClassEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Account.LoginStatusEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Account.LoginStatusEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Account.WalletEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Account.WalletEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Account.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Account.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Betting.BetStatusEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Betting.BetStatusEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Betting.BetTargetTypeEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Betting.BetTargetTypeEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Betting.BetTypeEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Betting.BetTypeEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Betting.ExecutionReportErrorCodeEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Betting.ExecutionReportErrorCodeEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Betting.ExecutionReportStatusEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Betting.GroupByEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Betting.GroupByEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Betting.InstructionReportErrorCodeEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Betting.InstructionReportStatusEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Betting.InstructionReportStatusEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Betting.MarketBettingTypeEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Betting.MarketBettingTypeEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Betting.MarketProjectionEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Betting.MarketProjectionEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Betting.MarketSortEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Betting.MarketSortEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Betting.MarketStatusEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Betting.MarketStatusEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Betting.MatchProjectionEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Betting.MatchProjectionEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Betting.OrderByEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Betting.OrderByEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Betting.OrderProjectionEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Betting.OrderProjectionEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Betting.OrderStatusEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Betting.OrderStatusEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Betting.OrderTypeEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Betting.OrderTypeEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Betting.PersistenceTypeEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Betting.PersistenceTypeEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Betting.PriceDataEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Betting.PriceDataEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Betting.PriceLadderTypeEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Betting.PriceLadderTypeEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Betting.RollupModelEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Betting.RollupModelEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Betting.RunnerStatusEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Betting.RunnerStatusEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Betting.SideEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Betting.SideEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Betting.SortDirEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Betting.SortDirEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Betting.TimeGranularityEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Betting.TimeGranularityEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Betting.TimeInForceEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Betting.TimeInForceEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Betting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Betting.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Heartbeat.ActionPerformedEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Heartbeat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Heartbeat.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Streaming.MarketPriceFilterEnum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.Streaming.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.Streaming.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Enums.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Handlers.StreamSubscriptionHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Handlers.StreamSubscriptionHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Handlers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Handlers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Interfaces.IBetfairClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Interfaces.IBetfairClient.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Interfaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Account.AccountDetailsResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Account.AccountDetailsResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Account.AccountFundsResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Account.AccountFundsResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Account.AccountStatementReport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Account.AccountStatementReport.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Account.CurrencyRate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Account.CurrencyRate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Account.StatementItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Account.StatementItem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Account.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Account.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.BetfairServerRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.BetfairServerRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.CancelExecutionReport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.CancelExecutionReport.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.CancelInstruction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.CancelInstruction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.CancelInstructionReport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.CancelInstructionReport.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.ClearedOrderSummary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.ClearedOrderSummary.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.ClearedOrderSummaryReport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.ClearedOrderSummaryReport.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.Competition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.Competition.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.CompetitionResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.CompetitionResult.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.CountryCodeResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.CountryCodeResult.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.CurrentOrderSummary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.CurrentOrderSummary.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.CurrentOrderSummaryReport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.CurrentOrderSummaryReport.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.Event.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.Event.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.EventResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.EventResult.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.EventType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.EventType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.EventTypeResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.EventTypeResult.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.ExBestOffersOverrides.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.ExBestOffersOverrides.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.ExchangePrices.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.ExchangePrices.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.ItemDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.ItemDescription.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.KeyLineDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.KeyLineDescription.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.KeyLineSelection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.KeyLineSelection.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.LimitOnCloseOrder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.LimitOnCloseOrder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.LimitOrder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.LimitOrder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.MarketBook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.MarketBook.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.MarketCatalogue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.MarketCatalogue.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.MarketDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.MarketDescription.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.MarketFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.MarketFilter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.MarketLineRangeInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.MarketLineRangeInfo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.MarketOnCloseOrder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.MarketOnCloseOrder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.MarketProfitAndLoss.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.MarketProfitAndLoss.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.MarketRates.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.MarketRates.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.MarketTypeResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.MarketTypeResult.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.MarketVersion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.MarketVersion.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.Match.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.Match.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.Order.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.Order.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.PlaceExecutionReport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.PlaceExecutionReport.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.PlaceInstruction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.PlaceInstruction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.PlaceInstructionReport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.PlaceInstructionReport.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.PriceLadderDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.PriceLadderDescription.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.PriceProjection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.PriceProjection.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.PriceSize.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.PriceSize.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.ReplaceExecutionReport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.ReplaceExecutionReport.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.ReplaceInstruction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.ReplaceInstruction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.ReplaceInstructionReport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.ReplaceInstructionReport.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.RunnerBook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.RunnerBook.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.RunnerCatalog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.RunnerCatalog.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.RunnerId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.RunnerId.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.RunnerProfitAndLoss.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.RunnerProfitAndLoss.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.StartingPrices.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.StartingPrices.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.TimeRange.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.TimeRange.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.TimeRangeResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.TimeRangeResult.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.UpdateExecutionReport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.UpdateExecutionReport.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.UpdateInstruction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.UpdateInstruction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.UpdateInstructionReport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.UpdateInstructionReport.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.VenueResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.VenueResult.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Betting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Betting.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Exceptions.BetfairESAException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Exceptions.BetfairESAException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Exceptions.BetfairNGException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Exceptions.BetfairNGException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Exceptions.BetfairServerException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Exceptions.BetfairServerException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Exceptions.BetfairServerExceptionData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Exceptions.BetfairServerExceptionData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Exceptions.BetfairServerExceptionDetails.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Exceptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Heartbeat.HeartbeatReport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Heartbeat.HeartbeatReport.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Heartbeat.KeepAliveResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Heartbeat.KeepAliveResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Heartbeat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Heartbeat.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Login.CertificateLoginResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Login.CertificateLoginResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Login.InteractiveLoginResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Login.InteractiveLoginResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Login.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Login.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Navigation.NavigationEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Navigation.NavigationEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Navigation.NavigationEventType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Navigation.NavigationEventType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Navigation.NavigationGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Navigation.NavigationGroup.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Navigation.NavigationItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Navigation.NavigationItem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Navigation.NavigationMarket.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Navigation.NavigationMarket.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Navigation.NavigationRace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Navigation.NavigationRace.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Navigation.NavigationRoot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Navigation.NavigationRoot.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Navigation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Navigation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Streaming.AuthenticationMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Streaming.AuthenticationMessage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Streaming.BaseMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Streaming.BaseMessage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Streaming.ESAOrder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Streaming.ESAOrder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Streaming.MarketDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Streaming.MarketDefinition.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Streaming.MarketSnapshot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Streaming.MarketSnapshot.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Streaming.MarketSubscription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Streaming.MarketSubscription.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Streaming.OrderFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Streaming.OrderFilter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Streaming.OrderMarketSnapshot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Streaming.OrderMarketSnapshot.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Streaming.OrderRunnerSnapshot.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Streaming.OrderSubscription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Streaming.OrderSubscription.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Streaming.PriceLadder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Streaming.PriceLadder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Streaming.RunnerDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Streaming.RunnerDefinition.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Streaming.RunnerSnapshot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Streaming.RunnerSnapshot.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Streaming.StreamConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Streaming.StreamConfiguration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Streaming.StreamingMarketDataFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Streaming.StreamingMarketDataFilter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Streaming.StreamingMarketFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Streaming.StreamingMarketFilter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.Streaming.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.Streaming.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Models.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Services.AccountService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Services.AccountService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Services.BettingService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Services.BettingService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Services.HeartbeatService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Services.HeartbeatService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Services.LoginService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Services.LoginService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Services.NavigationService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Services.NavigationService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Services.StreamingService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Services.StreamingService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Services.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Utils.PriceHelpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Utils.PriceHelpers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.Utils.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BetfairDotNet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BetfairDotNet.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/login-guide.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/login-guide.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/ng-guide.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/ng-guide.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/stream-guide.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/stream-guide.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html"
+        },
+        ".json": {
+          "relative_path": "articles/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/useful-snippets.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/useful-snippets.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

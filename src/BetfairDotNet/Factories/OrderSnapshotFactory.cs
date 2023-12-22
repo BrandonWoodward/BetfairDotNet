@@ -99,16 +99,7 @@ internal class OrderSnapshotFactory : IOrderSnapshotFactory
     {
         foreach(var level in levels ?? Enumerable.Empty<List<double>>())
         {
-            var price = level[0];
-            var size = level[1];
-            if(size == 0)
-            {
-                ladder.RemoveLevel(price);
-            }
-            else
-            {
-                ladder.AddOrUpdateLevel(new(price, size));
-            }
+            ladder[level[0]] = new(level[0], level[1]);
         }
         return ladder;
     }

@@ -12,19 +12,7 @@ public sealed class PriceLadder
     // but it offers O(1) lookups for price-based access and O(log n) for rank-based access
     private readonly SortedList<double, PriceSize> _byRank;
     private readonly Dictionary<double, PriceSize> _byPrice;
-
-    public static PriceLadder Empty
-        => new(SideEnum.BACK);
-
-    public PriceSize? this[int index]
-        => index >= 0 && index < _byRank.Values.Count
-            ? _byRank.Values.ElementAt(index)
-            : default;
-
-    public PriceSize? this[double price]
-        => _byPrice.GetValueOrDefault(price);
-
-
+    
     internal PriceLadder(SideEnum side) 
     {
         _byRank = side == SideEnum.BACK ? new(new ReverseComparer()) : new();
@@ -36,25 +24,82 @@ public sealed class PriceLadder
         _byRank = side == SideEnum.BACK ? new(new ReverseComparer()) : new();
         _byPrice = new();
 
-        foreach(var level in initialLevels) 
+        foreach(var level in initialLevels)
         {
-            AddOrUpdateLevel(level);
+            _byRank[level.Price] = level;
+            _byPrice[level.Price] = level;
         }
     }
-    internal void AddOrUpdateLevel(PriceSize level) 
+
+    /// <summary>
+    /// Access the <see cref="PriceSize"/> at the given index, where index 0
+    /// represents the best price.
+    /// </summary>
+    public PriceSize? this[int index]
     {
-        _byRank[level.Price] = level;
-        _byPrice[level.Price] = level;
+        get
+        {
+            return index >= 0 && index < _byRank.Values.Count
+                ? _byRank.Values.ElementAt(index)
+                : default;
+        }
+        internal set
+        {
+            if (value != null && (value.Price == 0 || value.Size == 0) && (index < _byRank.Values.Count))
+            {
+                var key = _byRank.Keys.ElementAt(index);
+                _byRank.RemoveAt(index);
+                _byPrice.Remove(key);
+            }
+            else if(value != null && _byRank.ContainsKey(value.Price))
+            {
+                var key = _byRank.Keys.ElementAt(index);
+                _byRank[key] = value;
+                _byPrice[key] = value;
+            }
+            else if (value is { Price: > 0, Size: > 0 })
+            {
+                _byRank[value.Price] = value;
+                _byPrice[value.Price] = value;
+            }
+        }
     }
 
-    internal void RemoveLevel(double price) 
+    /// <summary>
+    /// Access the <see cref="PriceSize"/> at the given price, where the index
+    /// given represents a valid Betfair price.
+    /// </summary>
+    public PriceSize? this[double price]
     {
-        _byPrice.Remove(price);
-        _byRank.Remove(price);
+        get
+        {
+            return _byPrice.GetValueOrDefault(price);
+        }
+        internal set
+        {
+            if (value != null && (value.Price == 0 || value.Size == 0))
+            {
+                _byRank.Remove(price);
+                _byPrice.Remove(price);
+            }
+            else if(value != null)
+            {
+                _byRank[price] = value;
+                _byPrice[price] = value;
+            }
+        }
     }
     
-    public int GetDepth() 
+    /// <summary>
+    /// Get the count of prices in the ladder.
+    /// </summary>
+    public int Depth
     {
-        return _byRank.Count;
+        get { return _byRank.Count; }
+    }
+    
+    internal static PriceLadder Empty
+    {
+        get { return new(SideEnum.BACK); }
     }
 }

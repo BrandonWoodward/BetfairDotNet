@@ -9,16 +9,12 @@ namespace BetfairDotNet.Factories;
 
 internal class MarketSnapshotFactory : IMarketSnapshotFactory
 {
-
-
     private readonly ConcurrentDictionary<string, MarketSnapshot> _marketCache;
-
 
     public MarketSnapshotFactory(ConcurrentDictionary<string, MarketSnapshot> marketCache)
     {
         _marketCache = marketCache;
     }
-
 
     public IEnumerable<MarketSnapshot> GetSnapshots(MarketChangeMessage changeMessage)
     {
@@ -40,7 +36,6 @@ internal class MarketSnapshotFactory : IMarketSnapshotFactory
         }
     }
 
-
     private static MarketSnapshot ProcessImage(MarketChange changeMessage, long timestamp)
     {
         return new()
@@ -51,7 +46,6 @@ internal class MarketSnapshotFactory : IMarketSnapshotFactory
             RunnerSnapshots = ProcessRunnersImage(changeMessage)
         };
     }
-
 
     private static Dictionary<long, RunnerSnapshot> ProcessRunnersImage(MarketChange changeMessage)
     {
@@ -65,17 +59,16 @@ internal class MarketSnapshotFactory : IMarketSnapshotFactory
                 LastTradedPrice = r.LastTradedPrice.GetValueOrDefault(),
                 StartingPriceNear = r.StartingPriceNear.GetValueOrDefault(),
                 StartingPriceFar = r.StartingPriceFar.GetValueOrDefault(),
-                ToBack = CreateLadder(r.AvailableToBack ?? r.BestAvailableToBack, SideEnum.BACK),
-                ToLay = CreateLadder(r.AvailableToLay ?? r.BestAvailableToLay, SideEnum.LAY),
-                ToBackVirtual = CreateLadder(r.BestAvailableToBackVirtual, SideEnum.BACK),
-                ToLayVirtual = CreateLadder(r.BestAvailableToLayVirtual, SideEnum.LAY),
-                Traded = CreateLadder(r.TradedVolume, SideEnum.BACK), // Side doesn't matter here
+                ToBack = UpdateLadder(r.AvailableToBack ?? r.BestAvailableToBack, new(SideEnum.BACK)),
+                ToLay = UpdateLadder(r.AvailableToLay ?? r.BestAvailableToLay, new(SideEnum.LAY)),
+                ToBackVirtual = UpdateLadder(r.BestAvailableToBackVirtual, new(SideEnum.BACK)),
+                ToLayVirtual = UpdateLadder(r.BestAvailableToLayVirtual, new(SideEnum.LAY)),
+                Traded = UpdateLadder(r.TradedVolume, new(SideEnum.BACK)),
             };
             snapshots[r.Id] = runnerSnapshot;
         }
         return snapshots;
     }
-
 
     private MarketSnapshot ProcessDelta(MarketChange mc, long timestamp)
     {
@@ -87,8 +80,7 @@ internal class MarketSnapshotFactory : IMarketSnapshotFactory
             RunnerSnapshots = ProcessRunnersDelta(mc, cachedMarket.RunnerSnapshots)
         };
     }
-
-
+    
     private static Dictionary<long, RunnerSnapshot> ProcessRunnersDelta(
         MarketChange mc,
         IDictionary<long, RunnerSnapshot> cachedRunners)
@@ -116,36 +108,29 @@ internal class MarketSnapshotFactory : IMarketSnapshotFactory
         return rnrSnaps;
     }
 
-
-    private static PriceLadder CreateLadder(List<List<double>>? levels, SideEnum side)
-    {
-        var ladder = new PriceLadder(side);
-        foreach (var level in levels ?? Enumerable.Empty<List<double>>())
-        {
-            var price = level[^2];
-            var size = level[^1];
-            if (price > 0 && size > 0) continue;
-            ladder.AddOrUpdateLevel(new(price, size));
-        }
-        return ladder;
-    }
-
-
     private static PriceLadder UpdateLadder(List<List<double>>? levels, PriceLadder ladder)
     {
-        foreach(var level in levels ?? Enumerable.Empty<List<double>>())
+        if (levels is null || levels.Count == 0)
         {
-            var price = level[^2];
-            var size = level[^1];
-            if(size == 0)
+            return ladder;
+        }
+
+        if (levels[0].Count == 2)
+        {
+            foreach (var level in levels)
             {
-                ladder.RemoveLevel(price);
-            }
-            else
-            {
-                ladder.AddOrUpdateLevel(new(price, size));
+                ladder[level[0]] = new(level[0], level[1]);
             }
         }
+
+        if (levels[0].Count == 3)
+        {
+            foreach (var level in levels.OrderBy(l => l[0]).ToList())
+            {
+                ladder[(int)level[0]] = new(level[1], level[2]);
+            }
+        }
+
         return ladder;
     }
 }
